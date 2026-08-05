@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ethiopian_food",
+    "name_en": "Ethiopian Food",
+    "sort_order": 10,
+    "active": true
+  },
+  {
+    "id": "everyday_life",
+    "name_en": "Everyday Life",
+    "sort_order": 20,
+    "active": true
+  },
+  {
+    "id": "places",
+    "name_en": "Places",
+    "sort_order": 30,
+    "active": true
+  },
+  {
+    "id": "music_and_entertainment",
+    "name_en": "Music and Entertainment",
+    "sort_order": 40,
+    "active": true
+  },
+  {
+    "id": "school",
+    "name_en": "School",
+    "sort_order": 50,
+    "active": true
+  },
+  {
+    "id": "jobs",
+    "name_en": "Jobs",
+    "sort_order": 60,
+    "active": true
+  },
+  {
+    "id": "animals",
+    "name_en": "Animals",
+    "sort_order": 70,
+    "active": true
+  },
+  {
+    "id": "sports",
+    "name_en": "Sports",
+    "sort_order": 80,
+    "active": true
+  },
+  {
+    "id": "general_words",
+    "name_en": "General Words",
+    "sort_order": 90,
+    "active": true
+  }
+]

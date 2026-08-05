@@ -1,0 +1,56 @@
+[
+  {
+    "id": "food",
+    "name_en": "Food",
+    "sort_order": 10,
+    "active": true
+  },
+  {
+    "id": "addis_life",
+    "name_en": "Addis Life",
+    "sort_order": 20,
+    "active": true
+  },
+  {
+    "id": "friends",
+    "name_en": "Friends",
+    "sort_order": 30,
+    "active": true
+  },
+  {
+    "id": "school_and_university",
+    "name_en": "School and University",
+    "sort_order": 40,
+    "active": true
+  },
+  {
+    "id": "family",
+    "name_en": "Family",
+    "sort_order": 50,
+    "active": true
+  },
+  {
+    "id": "music_and_entertainment",
+    "name_en": "Music and Entertainment",
+    "sort_order": 60,
+    "active": true
+  },
+  {
+    "id": "travel",
+    "name_en": "Travel",
+    "sort_order": 70,
+    "active": true
+  },
+  {
+    "id": "relationships",
+    "name_en": "Relationships",
+    "sort_order": 80,
+    "active": true
+  },
+  {
+    "id": "everyday_preferences",
+    "name_en": "Everyday Preferences",
+    "sort_order": 90,
+    "active": true
+  }
+]

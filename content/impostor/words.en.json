@@ -1,0 +1,1739 @@
+[
+  {
+    "id": "imp_food_001",
+    "word_en": "Coffee",
+    "category_id": "food_and_drink",
+    "hint_en": "Morning drink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_002",
+    "word_en": "Injera",
+    "category_id": "food_and_drink",
+    "hint_en": "Ethiopian staple",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_003",
+    "word_en": "Sambusa",
+    "category_id": "food_and_drink",
+    "hint_en": "Fried snack",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_004",
+    "word_en": "Kitfo",
+    "category_id": "food_and_drink",
+    "hint_en": "Traditional food",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_005",
+    "word_en": "Shiro",
+    "category_id": "food_and_drink",
+    "hint_en": "Chickpea stew",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_001",
+    "word_en": "Umbrella",
+    "category_id": "everyday_objects",
+    "hint_en": "Rainy day",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_002",
+    "word_en": "Phone charger",
+    "category_id": "everyday_objects",
+    "hint_en": "Always missing",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_003",
+    "word_en": "Toothbrush",
+    "category_id": "everyday_objects",
+    "hint_en": "Bathroom",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_004",
+    "word_en": "Key",
+    "category_id": "everyday_objects",
+    "hint_en": "Opens doors",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_005",
+    "word_en": "Mirror",
+    "category_id": "everyday_objects",
+    "hint_en": "Reflection",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_001",
+    "word_en": "Mercato",
+    "category_id": "places",
+    "hint_en": "Busy market",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_002",
+    "word_en": "Bole",
+    "category_id": "places",
+    "hint_en": "Addis area",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_003",
+    "word_en": "Airport",
+    "category_id": "places",
+    "hint_en": "Travel",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_004",
+    "word_en": "Library",
+    "category_id": "places",
+    "hint_en": "Quiet books",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_005",
+    "word_en": "Stadium",
+    "category_id": "places",
+    "hint_en": "Sports crowd",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_001",
+    "word_en": "Karaoke",
+    "category_id": "entertainment",
+    "hint_en": "Singing",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_002",
+    "word_en": "Football",
+    "category_id": "entertainment",
+    "hint_en": "Popular sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_003",
+    "word_en": "Concert",
+    "category_id": "entertainment",
+    "hint_en": "Live music",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_004",
+    "word_en": "Cinema",
+    "category_id": "entertainment",
+    "hint_en": "Movies",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_005",
+    "word_en": "Playlist",
+    "category_id": "entertainment",
+    "hint_en": "Music list",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_001",
+    "word_en": "Exam",
+    "category_id": "school_and_work",
+    "hint_en": "Test day",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_002",
+    "word_en": "Deadline",
+    "category_id": "school_and_work",
+    "hint_en": "Due date",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_003",
+    "word_en": "Internship",
+    "category_id": "school_and_work",
+    "hint_en": "Work experience",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_004",
+    "word_en": "Whiteboard",
+    "category_id": "school_and_work",
+    "hint_en": "Classroom tool",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_005",
+    "word_en": "Meeting",
+    "category_id": "school_and_work",
+    "hint_en": "Office gather",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_001",
+    "word_en": "Gossip",
+    "category_id": "people_and_personality",
+    "hint_en": "Talk about others",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_002",
+    "word_en": "Introvert",
+    "category_id": "people_and_personality",
+    "hint_en": "Quiet energy",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_003",
+    "word_en": "Best friend",
+    "category_id": "people_and_personality",
+    "hint_en": "Closest person",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_004",
+    "word_en": "Neighbor",
+    "category_id": "people_and_personality",
+    "hint_en": "Lives nearby",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_005",
+    "word_en": "Class clown",
+    "category_id": "people_and_personality",
+    "hint_en": "Funny student",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_001",
+    "word_en": "Ex",
+    "category_id": "people_and_personality",
+    "hint_en": "Past romance",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_002",
+    "word_en": "Flirting",
+    "category_id": "people_and_personality",
+    "hint_en": "Playful interest",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_003",
+    "word_en": "Crush",
+    "category_id": "people_and_personality",
+    "hint_en": "Secret liking",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_food_006",
+    "word_en": "Tibs",
+    "category_id": "food_and_drink",
+    "hint_en": "Sautéed meat",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_007",
+    "word_en": "Doro wat",
+    "category_id": "food_and_drink",
+    "hint_en": "Spicy chicken stew",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_008",
+    "word_en": "Tej",
+    "category_id": "food_and_drink",
+    "hint_en": "Honey wine",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_food_009",
+    "word_en": "Pasta",
+    "category_id": "food_and_drink",
+    "hint_en": "Italian classic",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_010",
+    "word_en": "Pizza",
+    "category_id": "food_and_drink",
+    "hint_en": "Shared slices",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_011",
+    "word_en": "Burger",
+    "category_id": "food_and_drink",
+    "hint_en": "Fast food",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_012",
+    "word_en": "Mango",
+    "category_id": "food_and_drink",
+    "hint_en": "Sweet fruit",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_013",
+    "word_en": "Avocado",
+    "category_id": "food_and_drink",
+    "hint_en": "Green and creamy",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_014",
+    "word_en": "Popcorn",
+    "category_id": "food_and_drink",
+    "hint_en": "Movie snack",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_015",
+    "word_en": "Ice cream",
+    "category_id": "food_and_drink",
+    "hint_en": "Cold dessert",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_016",
+    "word_en": "Chapati",
+    "category_id": "food_and_drink",
+    "hint_en": "Flat bread",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_017",
+    "word_en": "Smoothie",
+    "category_id": "food_and_drink",
+    "hint_en": "Blended drink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_018",
+    "word_en": "Chocolate",
+    "category_id": "food_and_drink",
+    "hint_en": "Sweet treat",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_019",
+    "word_en": "Lemonade",
+    "category_id": "food_and_drink",
+    "hint_en": "Sour drink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_020",
+    "word_en": "Sushi",
+    "category_id": "food_and_drink",
+    "hint_en": "Rice and fish",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_food_021",
+    "word_en": "Biryani",
+    "category_id": "food_and_drink",
+    "hint_en": "Spiced rice",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_022",
+    "word_en": "Croissant",
+    "category_id": "food_and_drink",
+    "hint_en": "Flaky pastry",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_023",
+    "word_en": "Hot sauce",
+    "category_id": "food_and_drink",
+    "hint_en": "Extra heat",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_food_024",
+    "word_en": "Breakfast",
+    "category_id": "food_and_drink",
+    "hint_en": "Morning meal",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_025",
+    "word_en": "Barbecue",
+    "category_id": "food_and_drink",
+    "hint_en": "Outdoor grill",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_026",
+    "word_en": "Waffle",
+    "category_id": "food_and_drink",
+    "hint_en": "Breakfast grid",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_027",
+    "word_en": "Milkshake",
+    "category_id": "food_and_drink",
+    "hint_en": "Thick drink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_028",
+    "word_en": "Garlic",
+    "category_id": "food_and_drink",
+    "hint_en": "Strong flavor",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_029",
+    "word_en": "Honey",
+    "category_id": "food_and_drink",
+    "hint_en": "Bee sweet",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_030",
+    "word_en": "Tea",
+    "category_id": "food_and_drink",
+    "hint_en": "Hot cup",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_food_031",
+    "word_en": "Juice",
+    "category_id": "food_and_drink",
+    "hint_en": "Fruit drink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_006",
+    "word_en": "Headphones",
+    "category_id": "everyday_objects",
+    "hint_en": "Private music",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_007",
+    "word_en": "Backpack",
+    "category_id": "everyday_objects",
+    "hint_en": "School bag",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_008",
+    "word_en": "Sunglasses",
+    "category_id": "everyday_objects",
+    "hint_en": "Bright days",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_009",
+    "word_en": "Water bottle",
+    "category_id": "everyday_objects",
+    "hint_en": "Stay hydrated",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_010",
+    "word_en": "Remote",
+    "category_id": "everyday_objects",
+    "hint_en": "TV control",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_011",
+    "word_en": "Pillow",
+    "category_id": "everyday_objects",
+    "hint_en": "Sleep soft",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_012",
+    "word_en": "Candle",
+    "category_id": "everyday_objects",
+    "hint_en": "Soft light",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_013",
+    "word_en": "Scissors",
+    "category_id": "everyday_objects",
+    "hint_en": "Cut paper",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_014",
+    "word_en": "Wallet",
+    "category_id": "everyday_objects",
+    "hint_en": "Holds money",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_015",
+    "word_en": "Alarm clock",
+    "category_id": "everyday_objects",
+    "hint_en": "Wakes you up",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_016",
+    "word_en": "Notebook",
+    "category_id": "everyday_objects",
+    "hint_en": "Write things down",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_017",
+    "word_en": "Pen",
+    "category_id": "everyday_objects",
+    "hint_en": "Writes ink",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_018",
+    "word_en": "Socks",
+    "category_id": "everyday_objects",
+    "hint_en": "Foot covers",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_019",
+    "word_en": "Jacket",
+    "category_id": "everyday_objects",
+    "hint_en": "Keeps warm",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_020",
+    "word_en": "Flashlight",
+    "category_id": "everyday_objects",
+    "hint_en": "Dark helper",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_021",
+    "word_en": "Charger cable",
+    "category_id": "everyday_objects",
+    "hint_en": "Power cord",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_022",
+    "word_en": "Laptop",
+    "category_id": "everyday_objects",
+    "hint_en": "Portable computer",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_023",
+    "word_en": "Keyboard",
+    "category_id": "everyday_objects",
+    "hint_en": "Typing board",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_024",
+    "word_en": "Mouse",
+    "category_id": "everyday_objects",
+    "hint_en": "Computer pointer",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_025",
+    "word_en": "Tissue",
+    "category_id": "everyday_objects",
+    "hint_en": "Sneeze helper",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_026",
+    "word_en": "Soap",
+    "category_id": "everyday_objects",
+    "hint_en": "Wash hands",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_027",
+    "word_en": "Towel",
+    "category_id": "everyday_objects",
+    "hint_en": "Dry off",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_028",
+    "word_en": "Suitcase",
+    "category_id": "everyday_objects",
+    "hint_en": "Travel bag",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_029",
+    "word_en": "Helmet",
+    "category_id": "everyday_objects",
+    "hint_en": "Head safety",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_030",
+    "word_en": "Bicycle",
+    "category_id": "everyday_objects",
+    "hint_en": "Two wheels",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_obj_031",
+    "word_en": "Camera",
+    "category_id": "everyday_objects",
+    "hint_en": "Takes photos",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_006",
+    "word_en": "Cafe",
+    "category_id": "places",
+    "hint_en": "Coffee stop",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_007",
+    "word_en": "Park",
+    "category_id": "places",
+    "hint_en": "Green space",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_008",
+    "word_en": "Beach",
+    "category_id": "places",
+    "hint_en": "Sand and sea",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_009",
+    "word_en": "Hospital",
+    "category_id": "places",
+    "hint_en": "Get better",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_010",
+    "word_en": "School",
+    "category_id": "places",
+    "hint_en": "Learn here",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_011",
+    "word_en": "Mosque",
+    "category_id": "places",
+    "hint_en": "Prayer place",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_012",
+    "word_en": "Church",
+    "category_id": "places",
+    "hint_en": "Sunday place",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_013",
+    "word_en": "Mall",
+    "category_id": "places",
+    "hint_en": "Shopping center",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_014",
+    "word_en": "Gym",
+    "category_id": "places",
+    "hint_en": "Workout spot",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_place_015",
+    "word_en": "Kitchen",
+    "category_id": "places",
+    "hint_en": "Cooking room",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_016",
+    "word_en": "Bathroom",
+    "category_id": "places",
+    "hint_en": "Mirror room",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_017",
+    "word_en": "Balcony",
+    "category_id": "places",
+    "hint_en": "Outside ledge",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_018",
+    "word_en": "Elevator",
+    "category_id": "places",
+    "hint_en": "Up and down",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_019",
+    "word_en": "Taxi",
+    "category_id": "places",
+    "hint_en": "Paid ride",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_020",
+    "word_en": "Bus stop",
+    "category_id": "places",
+    "hint_en": "Waiting spot",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_021",
+    "word_en": "Supermarket",
+    "category_id": "places",
+    "hint_en": "Grocery store",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_022",
+    "word_en": "Museum",
+    "category_id": "places",
+    "hint_en": "Art and history",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_023",
+    "word_en": "Zoo",
+    "category_id": "places",
+    "hint_en": "Animals visit",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_024",
+    "word_en": "Hotel",
+    "category_id": "places",
+    "hint_en": "Travel sleep",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_025",
+    "word_en": "Office",
+    "category_id": "places",
+    "hint_en": "Work desks",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_026",
+    "word_en": "Farm",
+    "category_id": "places",
+    "hint_en": "Crops and animals",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_027",
+    "word_en": "Mountain",
+    "category_id": "places",
+    "hint_en": "High ground",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_028",
+    "word_en": "River",
+    "category_id": "places",
+    "hint_en": "Flowing water",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_place_029",
+    "word_en": "Rooftop",
+    "category_id": "places",
+    "hint_en": "Top of building",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_place_030",
+    "word_en": "Nightclub",
+    "category_id": "places",
+    "hint_en": "Loud dancing",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_place_031",
+    "word_en": "Wedding",
+    "category_id": "places",
+    "hint_en": "Big celebration",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_006",
+    "word_en": "Netflix",
+    "category_id": "entertainment",
+    "hint_en": "Streaming show",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_007",
+    "word_en": "TikTok",
+    "category_id": "entertainment",
+    "hint_en": "Short videos",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_008",
+    "word_en": "Board game",
+    "category_id": "entertainment",
+    "hint_en": "Table fun",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_009",
+    "word_en": "Puzzle",
+    "category_id": "entertainment",
+    "hint_en": "Fit the pieces",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_010",
+    "word_en": "Dance",
+    "category_id": "entertainment",
+    "hint_en": "Move to music",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_011",
+    "word_en": "Comedy",
+    "category_id": "entertainment",
+    "hint_en": "Makes you laugh",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_012",
+    "word_en": "Podcast",
+    "category_id": "entertainment",
+    "hint_en": "Audio show",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_013",
+    "word_en": "Video game",
+    "category_id": "entertainment",
+    "hint_en": "Controller fun",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_014",
+    "word_en": "YouTube",
+    "category_id": "entertainment",
+    "hint_en": "Online videos",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_015",
+    "word_en": "Selfie",
+    "category_id": "entertainment",
+    "hint_en": "Phone photo",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_016",
+    "word_en": "Memes",
+    "category_id": "entertainment",
+    "hint_en": "Internet jokes",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_017",
+    "word_en": "Drama",
+    "category_id": "entertainment",
+    "hint_en": "Emotional story",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_018",
+    "word_en": "Talent show",
+    "category_id": "entertainment",
+    "hint_en": "Perform on stage",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_019",
+    "word_en": "Carnival",
+    "category_id": "entertainment",
+    "hint_en": "Rides and lights",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_020",
+    "word_en": "Circus",
+    "category_id": "entertainment",
+    "hint_en": "Tents and tricks",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_021",
+    "word_en": "Magic trick",
+    "category_id": "entertainment",
+    "hint_en": "Illusion",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_022",
+    "word_en": "DJ",
+    "category_id": "entertainment",
+    "hint_en": "Spins tracks",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_ent_023",
+    "word_en": "Festival",
+    "category_id": "entertainment",
+    "hint_en": "Big event",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_024",
+    "word_en": "Soccer match",
+    "category_id": "entertainment",
+    "hint_en": "Stadium game",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_025",
+    "word_en": "Basketball",
+    "category_id": "entertainment",
+    "hint_en": "Hoop sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_026",
+    "word_en": "Tennis",
+    "category_id": "entertainment",
+    "hint_en": "Racket sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_027",
+    "word_en": "Swimming",
+    "category_id": "entertainment",
+    "hint_en": "In the water",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_028",
+    "word_en": "Camping",
+    "category_id": "entertainment",
+    "hint_en": "Sleep outdoors",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_029",
+    "word_en": "Picnic",
+    "category_id": "entertainment",
+    "hint_en": "Outdoor meal",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_030",
+    "word_en": "Bowling",
+    "category_id": "entertainment",
+    "hint_en": "Knock pins",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_ent_031",
+    "word_en": "Escape room",
+    "category_id": "entertainment",
+    "hint_en": "Puzzle room",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_006",
+    "word_en": "Homework",
+    "category_id": "school_and_work",
+    "hint_en": "After class",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_007",
+    "word_en": "Teacher",
+    "category_id": "school_and_work",
+    "hint_en": "Classroom lead",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_008",
+    "word_en": "Boss",
+    "category_id": "school_and_work",
+    "hint_en": "Work leader",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_009",
+    "word_en": "Salary",
+    "category_id": "school_and_work",
+    "hint_en": "Monthly pay",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_010",
+    "word_en": "Resume",
+    "category_id": "school_and_work",
+    "hint_en": "Job paper",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_011",
+    "word_en": "Interview",
+    "category_id": "school_and_work",
+    "hint_en": "Job questions",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_012",
+    "word_en": "Presentation",
+    "category_id": "school_and_work",
+    "hint_en": "Talk with slides",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_013",
+    "word_en": "Email",
+    "category_id": "school_and_work",
+    "hint_en": "Work message",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_014",
+    "word_en": "Calendar",
+    "category_id": "school_and_work",
+    "hint_en": "Schedule days",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_015",
+    "word_en": "Password",
+    "category_id": "school_and_work",
+    "hint_en": "Secret login",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_016",
+    "word_en": "Zoom call",
+    "category_id": "school_and_work",
+    "hint_en": "Video meeting",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_017",
+    "word_en": "Coffee break",
+    "category_id": "school_and_work",
+    "hint_en": "Short pause",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_018",
+    "word_en": "Uniform",
+    "category_id": "school_and_work",
+    "hint_en": "School clothes",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_019",
+    "word_en": "Locker",
+    "category_id": "school_and_work",
+    "hint_en": "School storage",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_020",
+    "word_en": "Cafeteria",
+    "category_id": "school_and_work",
+    "hint_en": "School lunch",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_021",
+    "word_en": "Graduation",
+    "category_id": "school_and_work",
+    "hint_en": "Finish school",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_022",
+    "word_en": "Diploma",
+    "category_id": "school_and_work",
+    "hint_en": "Degree paper",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_023",
+    "word_en": "Project",
+    "category_id": "school_and_work",
+    "hint_en": "Group work",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_024",
+    "word_en": "Overtime",
+    "category_id": "school_and_work",
+    "hint_en": "Extra hours",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_025",
+    "word_en": "Promotion",
+    "category_id": "school_and_work",
+    "hint_en": "Job level up",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_026",
+    "word_en": "Coworker",
+    "category_id": "school_and_work",
+    "hint_en": "Desk neighbor",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_school_027",
+    "word_en": "Clipboard",
+    "category_id": "school_and_work",
+    "hint_en": "Paper holder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_028",
+    "word_en": "Calculator",
+    "category_id": "school_and_work",
+    "hint_en": "Math helper",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_029",
+    "word_en": "Textbook",
+    "category_id": "school_and_work",
+    "hint_en": "Heavy reading",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_030",
+    "word_en": "Printer",
+    "category_id": "school_and_work",
+    "hint_en": "Paper machine",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_school_031",
+    "word_en": "Stapler",
+    "category_id": "school_and_work",
+    "hint_en": "Clips papers",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_006",
+    "word_en": "Leader",
+    "category_id": "people_and_personality",
+    "hint_en": "Takes charge",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_007",
+    "word_en": "Joker",
+    "category_id": "people_and_personality",
+    "hint_en": "Always joking",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_008",
+    "word_en": "Shy",
+    "category_id": "people_and_personality",
+    "hint_en": "Quiet around people",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_009",
+    "word_en": "Brave",
+    "category_id": "people_and_personality",
+    "hint_en": "Faces fear",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_010",
+    "word_en": "Generous",
+    "category_id": "people_and_personality",
+    "hint_en": "Shares freely",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_011",
+    "word_en": "Stubborn",
+    "category_id": "people_and_personality",
+    "hint_en": "Hard to change",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_012",
+    "word_en": "Curious",
+    "category_id": "people_and_personality",
+    "hint_en": "Asks why",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_013",
+    "word_en": "Lazy",
+    "category_id": "people_and_personality",
+    "hint_en": "Avoids effort",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_014",
+    "word_en": "Ambitious",
+    "category_id": "people_and_personality",
+    "hint_en": "Wants more",
+    "difficulty": "medium",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_015",
+    "word_en": "Loyal",
+    "category_id": "people_and_personality",
+    "hint_en": "Stays true",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_016",
+    "word_en": "Dramatic",
+    "category_id": "people_and_personality",
+    "hint_en": "Big reactions",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_017",
+    "word_en": "Competitive",
+    "category_id": "people_and_personality",
+    "hint_en": "Wants to win",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_018",
+    "word_en": "Romantic",
+    "category_id": "people_and_personality",
+    "hint_en": "Loves love",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_019",
+    "word_en": "Sibling",
+    "category_id": "people_and_personality",
+    "hint_en": "Brother or sister",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_020",
+    "word_en": "Cousin",
+    "category_id": "people_and_personality",
+    "hint_en": "Family relative",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_021",
+    "word_en": "Grandparent",
+    "category_id": "people_and_personality",
+    "hint_en": "Older family",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_022",
+    "word_en": "Roommate",
+    "category_id": "people_and_personality",
+    "hint_en": "Shares a home",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_023",
+    "word_en": "Teammate",
+    "category_id": "people_and_personality",
+    "hint_en": "Same side",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_024",
+    "word_en": "Stranger",
+    "category_id": "people_and_personality",
+    "hint_en": "Someone new",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_025",
+    "word_en": "Celebrity",
+    "category_id": "people_and_personality",
+    "hint_en": "Famous face",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_026",
+    "word_en": "Influencer",
+    "category_id": "people_and_personality",
+    "hint_en": "Online fame",
+    "difficulty": "easy",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_people_027",
+    "word_en": "Coach",
+    "category_id": "people_and_personality",
+    "hint_en": "Trains the team",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_028",
+    "word_en": "Doctor",
+    "category_id": "people_and_personality",
+    "hint_en": "Helps patients",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_029",
+    "word_en": "Pilot",
+    "category_id": "people_and_personality",
+    "hint_en": "Flies planes",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_people_030",
+    "word_en": "Artist",
+    "category_id": "people_and_personality",
+    "hint_en": "Makes art",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_031",
+    "word_en": "Date night",
+    "category_id": "people_and_personality",
+    "hint_en": "Planned romance",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_032",
+    "word_en": "Jealousy",
+    "category_id": "people_and_personality",
+    "hint_en": "Green feeling",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_033",
+    "word_en": "Kiss",
+    "category_id": "people_and_personality",
+    "hint_en": "Lips meet",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_034",
+    "word_en": "Breakup",
+    "category_id": "people_and_personality",
+    "hint_en": "Romance ends",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  },
+  {
+    "id": "imp_spicy_035",
+    "word_en": "Secret admirer",
+    "category_id": "people_and_personality",
+    "hint_en": "Hidden crush",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true
+  }
+]

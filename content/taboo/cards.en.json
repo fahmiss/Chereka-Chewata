@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "taboo_ethiopian_food_001",
+    "target_en": "Coffee",
+    "forbidden_en": [
+      "Jebena",
+      "Cup",
+      "Drink",
+      "Black",
+      "Morning"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_002",
+    "target_en": "Injera",
+    "forbidden_en": [
+      "Teff",
+      "Bread",
+      "Sponge",
+      "Ethiopian",
+      "Plate"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_003",
+    "target_en": "Doro Wat",
+    "forbidden_en": [
+      "Chicken",
+      "Spice",
+      "Stew",
+      "Egg",
+      "Berbere"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_004",
+    "target_en": "Tibs",
+    "forbidden_en": [
+      "Meat",
+      "Fried",
+      "Sauté",
+      "Beef",
+      "Onion"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_005",
+    "target_en": "Shiro",
+    "forbidden_en": [
+      "Chickpea",
+      "Powder",
+      "Stew",
+      "Vegetarian",
+      "Sauce"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_006",
+    "target_en": "Kitfo",
+    "forbidden_en": [
+      "Raw",
+      "Beef",
+      "Butter",
+      "Minced",
+      "Mitmita"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_007",
+    "target_en": "Tej",
+    "forbidden_en": [
+      "Honey",
+      "Wine",
+      "Alcohol",
+      "Drink",
+      "Sweet"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_008",
+    "target_en": "Berbere",
+    "forbidden_en": [
+      "Spice",
+      "Red",
+      "Hot",
+      "Powder",
+      "Pepper"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_009",
+    "target_en": "Ayib",
+    "forbidden_en": [
+      "Cheese",
+      "White",
+      "Fresh",
+      "Cottage",
+      "Mild"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_010",
+    "target_en": "Firfir",
+    "forbidden_en": [
+      "Injera",
+      "Torn",
+      "Breakfast",
+      "Sauce",
+      "Leftover"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_011",
+    "target_en": "Kategna",
+    "forbidden_en": [
+      "Injera",
+      "Butter",
+      "Berbere",
+      "Snack",
+      "Rolled"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_012",
+    "target_en": "Dulet",
+    "forbidden_en": [
+      "Organ",
+      "Meat",
+      "Spicy",
+      "Minced",
+      "Breakfast"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_013",
+    "target_en": "Ambasha",
+    "forbidden_en": [
+      "Bread",
+      "Round",
+      "Holiday",
+      "Sweet",
+      "Celebration"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_014",
+    "target_en": "Genfo",
+    "forbidden_en": [
+      "Porridge",
+      "Breakfast",
+      "Barley",
+      "Hole",
+      "Butter"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_015",
+    "target_en": "Tella",
+    "forbidden_en": [
+      "Beer",
+      "Home",
+      "Grain",
+      "Drink",
+      "Traditional"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_016",
+    "target_en": "Beso",
+    "forbidden_en": [
+      "Barley",
+      "Snack",
+      "Powder",
+      "Travel",
+      "Dry"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopian_food_017",
+    "target_en": "Mitmita",
+    "forbidden_en": [
+      "Chili",
+      "Spice",
+      "Hot",
+      "Powder",
+      "Red"
+    ],
+    "category_id": "ethiopian_food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_018",
+    "target_en": "Umbrella",
+    "forbidden_en": [
+      "Rain",
+      "Wet",
+      "Open",
+      "Sun",
+      "Cover"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_019",
+    "target_en": "Phone",
+    "forbidden_en": [
+      "Call",
+      "Screen",
+      "Mobile",
+      "Text",
+      "App"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_020",
+    "target_en": "Key",
+    "forbidden_en": [
+      "Lock",
+      "Door",
+      "Metal",
+      "Open",
+      "Ring"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_021",
+    "target_en": "Mirror",
+    "forbidden_en": [
+      "Reflect",
+      "Glass",
+      "Face",
+      "Look",
+      "Bathroom"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_022",
+    "target_en": "Candle",
+    "forbidden_en": [
+      "Wax",
+      "Flame",
+      "Light",
+      "Birthday",
+      "Dark"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_023",
+    "target_en": "Soap",
+    "forbidden_en": [
+      "Wash",
+      "Clean",
+      "Bubbles",
+      "Bath",
+      "Hand"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_024",
+    "target_en": "Pillow",
+    "forbidden_en": [
+      "Sleep",
+      "Bed",
+      "Soft",
+      "Head",
+      "Night"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_025",
+    "target_en": "Clock",
+    "forbidden_en": [
+      "Time",
+      "Watch",
+      "Hour",
+      "Tick",
+      "Wall"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_026",
+    "target_en": "Wallet",
+    "forbidden_en": [
+      "Money",
+      "Pocket",
+      "Cards",
+      "Leather",
+      "Pay"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_027",
+    "target_en": "Backpack",
+    "forbidden_en": [
+      "Bag",
+      "School",
+      "Carry",
+      "Shoulder",
+      "Zip"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_028",
+    "target_en": "Scissors",
+    "forbidden_en": [
+      "Cut",
+      "Paper",
+      "Sharp",
+      "Blade",
+      "Craft"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_029",
+    "target_en": "Toothbrush",
+    "forbidden_en": [
+      "Teeth",
+      "Morning",
+      "Paste",
+      "Brush",
+      "Clean"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_030",
+    "target_en": "Remote",
+    "forbidden_en": [
+      "TV",
+      "Button",
+      "Channel",
+      "Control",
+      "Click"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_031",
+    "target_en": "Charger",
+    "forbidden_en": [
+      "Battery",
+      "Plug",
+      "Phone",
+      "Cable",
+      "Power"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_032",
+    "target_en": "Laundry",
+    "forbidden_en": [
+      "Clothes",
+      "Wash",
+      "Dirty",
+      "Machine",
+      "Dry"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_033",
+    "target_en": "Queue",
+    "forbidden_en": [
+      "Line",
+      "Wait",
+      "Order",
+      "Turn",
+      "Stand"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_everyday_life_034",
+    "target_en": "Password",
+    "forbidden_en": [
+      "Secret",
+      "Login",
+      "Code",
+      "Safe",
+      "Account"
+    ],
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_035",
+    "target_en": "Addis Ababa",
+    "forbidden_en": [
+      "Capital",
+      "Ethiopia",
+      "City",
+      "Merkato",
+      "Bole"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_036",
+    "target_en": "Airport",
+    "forbidden_en": [
+      "Plane",
+      "Fly",
+      "Gate",
+      "Travel",
+      "Luggage"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_037",
+    "target_en": "Market",
+    "forbidden_en": [
+      "Buy",
+      "Sell",
+      "Shop",
+      "Food",
+      "Crowd"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_038",
+    "target_en": "Church",
+    "forbidden_en": [
+      "Pray",
+      "Sunday",
+      "Cross",
+      "Priest",
+      "Holy"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_039",
+    "target_en": "Mosque",
+    "forbidden_en": [
+      "Pray",
+      "Islam",
+      "Friday",
+      "Minaret",
+      "Imam"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_040",
+    "target_en": "School",
+    "forbidden_en": [
+      "Teacher",
+      "Student",
+      "Class",
+      "Learn",
+      "Book"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_041",
+    "target_en": "Hospital",
+    "forbidden_en": [
+      "Doctor",
+      "Sick",
+      "Nurse",
+      "Medicine",
+      "Bed"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_042",
+    "target_en": "Library",
+    "forbidden_en": [
+      "Book",
+      "Quiet",
+      "Read",
+      "Shelf",
+      "Study"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_043",
+    "target_en": "Stadium",
+    "forbidden_en": [
+      "Sport",
+      "Crowd",
+      "Game",
+      "Seat",
+      "Field"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_044",
+    "target_en": "Beach",
+    "forbidden_en": [
+      "Sand",
+      "Ocean",
+      "Swim",
+      "Sun",
+      "Wave"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_045",
+    "target_en": "Mountain",
+    "forbidden_en": [
+      "Climb",
+      "High",
+      "Peak",
+      "Hike",
+      "Rock"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_046",
+    "target_en": "Café",
+    "forbidden_en": [
+      "Coffee",
+      "Sit",
+      "Wifi",
+      "Drink",
+      "Meet"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_047",
+    "target_en": "Cinema",
+    "forbidden_en": [
+      "Movie",
+      "Screen",
+      "Popcorn",
+      "Ticket",
+      "Dark"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_places_048",
+    "target_en": "Museum",
+    "forbidden_en": [
+      "Art",
+      "History",
+      "Exhibit",
+      "Tour",
+      "Quiet"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_places_049",
+    "target_en": "Embassy",
+    "forbidden_en": [
+      "Visa",
+      "Passport",
+      "Country",
+      "Diplomat",
+      "Gate"
+    ],
+    "category_id": "places",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_places_050",
+    "target_en": "Lalibela",
+    "forbidden_en": [
+      "Churches",
+      "Rock",
+      "UNESCO",
+      "Pilgrim",
+      "Ethiopia"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_places_051",
+    "target_en": "Axum",
+    "forbidden_en": [
+      "Obelisk",
+      "History",
+      "Ancient",
+      "North",
+      "Kingdom"
+    ],
+    "category_id": "places",
+    "content_level": "family",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_052",
+    "target_en": "Guitar",
+    "forbidden_en": [
+      "String",
+      "Music",
+      "Play",
+      "Acoustic",
+      "Song"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_053",
+    "target_en": "Drum",
+    "forbidden_en": [
+      "Beat",
+      "Hit",
+      "Music",
+      "Rhythm",
+      "Stick"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_054",
+    "target_en": "Karaoke",
+    "forbidden_en": [
+      "Sing",
+      "Microphone",
+      "Lyrics",
+      "Fun",
+      "Stage"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_055",
+    "target_en": "Podcast",
+    "forbidden_en": [
+      "Listen",
+      "Talk",
+      "Episode",
+      "Audio",
+      "Host"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_056",
+    "target_en": "Playlist",
+    "forbidden_en": [
+      "Songs",
+      "Spotify",
+      "Order",
+      "Music",
+      "Shuffle"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_057",
+    "target_en": "Concert",
+    "forbidden_en": [
+      "Live",
+      "Stage",
+      "Crowd",
+      "Ticket",
+      "Band"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_058",
+    "target_en": "Comedy",
+    "forbidden_en": [
+      "Laugh",
+      "Joke",
+      "Funny",
+      "Standup",
+      "Humor"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_059",
+    "target_en": "Netflix",
+    "forbidden_en": [
+      "Stream",
+      "Show",
+      "Watch",
+      "Series",
+      "Movie"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_060",
+    "target_en": "Dance",
+    "forbidden_en": [
+      "Move",
+      "Music",
+      "Feet",
+      "Party",
+      "Rhythm"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_061",
+    "target_en": "Piano",
+    "forbidden_en": [
+      "Keys",
+      "Music",
+      "Play",
+      "Black",
+      "White"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_062",
+    "target_en": "Actor",
+    "forbidden_en": [
+      "Movie",
+      "Role",
+      "Film",
+      "Stage",
+      "Famous"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_063",
+    "target_en": "Director",
+    "forbidden_en": [
+      "Film",
+      "Camera",
+      "Movie",
+      "Crew",
+      "Scene"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_064",
+    "target_en": "Festival",
+    "forbidden_en": [
+      "Music",
+      "Crowd",
+      "Outdoor",
+      "Stage",
+      "Summer"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_065",
+    "target_en": "TikTok",
+    "forbidden_en": [
+      "Video",
+      "Short",
+      "App",
+      "Scroll",
+      "Trend"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_066",
+    "target_en": "Headline",
+    "forbidden_en": [
+      "News",
+      "Title",
+      "Paper",
+      "Story",
+      "Top"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_067",
+    "target_en": "Soundtrack",
+    "forbidden_en": [
+      "Movie",
+      "Music",
+      "Song",
+      "Film",
+      "Score"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_music_and_entertainment_068",
+    "target_en": "Encore",
+    "forbidden_en": [
+      "Again",
+      "Concert",
+      "Crowd",
+      "Sing",
+      "Extra"
+    ],
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_school_069",
+    "target_en": "Homework",
+    "forbidden_en": [
+      "School",
+      "Assignment",
+      "Teacher",
+      "Due",
+      "Study"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_070",
+    "target_en": "Exam",
+    "forbidden_en": [
+      "Test",
+      "Grade",
+      "Study",
+      "Paper",
+      "Score"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_071",
+    "target_en": "Teacher",
+    "forbidden_en": [
+      "School",
+      "Class",
+      "Lesson",
+      "Student",
+      "Teach"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_072",
+    "target_en": "Notebook",
+    "forbidden_en": [
+      "Write",
+      "Paper",
+      "School",
+      "Pen",
+      "Page"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_073",
+    "target_en": "Calculator",
+    "forbidden_en": [
+      "Math",
+      "Numbers",
+      "Button",
+      "Solve",
+      "School"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_074",
+    "target_en": "Uniform",
+    "forbidden_en": [
+      "Clothes",
+      "School",
+      "Same",
+      "Wear",
+      "Dress"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_075",
+    "target_en": "Diploma",
+    "forbidden_en": [
+      "Graduate",
+      "Certificate",
+      "Degree",
+      "Finish",
+      "School"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_076",
+    "target_en": "Lecture",
+    "forbidden_en": [
+      "University",
+      "Talk",
+      "Professor",
+      "Class",
+      "Notes"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_077",
+    "target_en": "Library card",
+    "forbidden_en": [
+      "Borrow",
+      "Book",
+      "Student",
+      "ID",
+      "Checkout"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_078",
+    "target_en": "Recess",
+    "forbidden_en": [
+      "Break",
+      "Play",
+      "School",
+      "Outside",
+      "Fun"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_079",
+    "target_en": "Chalkboard",
+    "forbidden_en": [
+      "Write",
+      "Class",
+      "Dust",
+      "Teacher",
+      "Black"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_080",
+    "target_en": "Scholarship",
+    "forbidden_en": [
+      "Money",
+      "Study",
+      "Award",
+      "University",
+      "Merit"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_081",
+    "target_en": "Thesis",
+    "forbidden_en": [
+      "Research",
+      "University",
+      "Paper",
+      "Graduate",
+      "Write"
+    ],
+    "category_id": "school",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_school_082",
+    "target_en": "Detention",
+    "forbidden_en": [
+      "Punish",
+      "After",
+      "School",
+      "Stay",
+      "Rule"
+    ],
+    "category_id": "school",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_083",
+    "target_en": "Backpack",
+    "forbidden_en": [
+      "Bag",
+      "Carry",
+      "School",
+      "Books",
+      "Zip"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_school_084",
+    "target_en": "Semester",
+    "forbidden_en": [
+      "Term",
+      "Year",
+      "University",
+      "Half",
+      "Classes"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_school_085",
+    "target_en": "Lab",
+    "forbidden_en": [
+      "Science",
+      "Experiment",
+      "Class",
+      "Coat",
+      "Chem"
+    ],
+    "category_id": "school",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_086",
+    "target_en": "Doctor",
+    "forbidden_en": [
+      "Hospital",
+      "Patient",
+      "Medicine",
+      "Sick",
+      "White"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_087",
+    "target_en": "Teacher",
+    "forbidden_en": [
+      "School",
+      "Student",
+      "Lesson",
+      "Class",
+      "Educate"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_088",
+    "target_en": "Pilot",
+    "forbidden_en": [
+      "Plane",
+      "Fly",
+      "Cockpit",
+      "Airport",
+      "Captain"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_089",
+    "target_en": "Chef",
+    "forbidden_en": [
+      "Cook",
+      "Kitchen",
+      "Food",
+      "Restaurant",
+      "Knife"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_090",
+    "target_en": "Driver",
+    "forbidden_en": [
+      "Car",
+      "Road",
+      "Steering",
+      "Taxi",
+      "Travel"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_091",
+    "target_en": "Nurse",
+    "forbidden_en": [
+      "Hospital",
+      "Care",
+      "Patient",
+      "Doctor",
+      "Medicine"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_092",
+    "target_en": "Engineer",
+    "forbidden_en": [
+      "Build",
+      "Design",
+      "Math",
+      "Tech",
+      "Project"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_093",
+    "target_en": "Lawyer",
+    "forbidden_en": [
+      "Court",
+      "Law",
+      "Case",
+      "Judge",
+      "Argue"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_094",
+    "target_en": "Farmer",
+    "forbidden_en": [
+      "Farm",
+      "Crop",
+      "Land",
+      "Grow",
+      "Animals"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_095",
+    "target_en": "Journalist",
+    "forbidden_en": [
+      "News",
+      "Write",
+      "Report",
+      "Story",
+      "Interview"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_096",
+    "target_en": "Barista",
+    "forbidden_en": [
+      "Coffee",
+      "Café",
+      "Drink",
+      "Foam",
+      "Order"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_097",
+    "target_en": "Firefighter",
+    "forbidden_en": [
+      "Fire",
+      "Hose",
+      "Rescue",
+      "Truck",
+      "Brave"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_098",
+    "target_en": "Dentist",
+    "forbidden_en": [
+      "Teeth",
+      "Clinic",
+      "Drill",
+      "Smile",
+      "Clean"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_099",
+    "target_en": "Architect",
+    "forbidden_en": [
+      "Building",
+      "Design",
+      "Plan",
+      "Draw",
+      "House"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_100",
+    "target_en": "Cashier",
+    "forbidden_en": [
+      "Money",
+      "Store",
+      "Pay",
+      "Register",
+      "Receipt"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_101",
+    "target_en": "Translator",
+    "forbidden_en": [
+      "Language",
+      "Words",
+      "Speak",
+      "Convert",
+      "Meaning"
+    ],
+    "category_id": "jobs",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_jobs_102",
+    "target_en": "Influencer",
+    "forbidden_en": [
+      "Social",
+      "Followers",
+      "Content",
+      "Online",
+      "Brand"
+    ],
+    "category_id": "jobs",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_103",
+    "target_en": "Lion",
+    "forbidden_en": [
+      "King",
+      "Mane",
+      "Roar",
+      "Cat",
+      "Africa"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_104",
+    "target_en": "Elephant",
+    "forbidden_en": [
+      "Trunk",
+      "Ivory",
+      "Large",
+      "Tusk",
+      "Africa"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_105",
+    "target_en": "Giraffe",
+    "forbidden_en": [
+      "Neck",
+      "Tall",
+      "Spots",
+      "Africa",
+      "Zoo"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_106",
+    "target_en": "Dog",
+    "forbidden_en": [
+      "Bark",
+      "Pet",
+      "Walk",
+      "Loyal",
+      "Bone"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_107",
+    "target_en": "Cat",
+    "forbidden_en": [
+      "Meow",
+      "Pet",
+      "Purr",
+      "Whiskers",
+      "Litter"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_108",
+    "target_en": "Chicken",
+    "forbidden_en": [
+      "Egg",
+      "Farm",
+      "Cluck",
+      "Bird",
+      "Wing"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_109",
+    "target_en": "Fish",
+    "forbidden_en": [
+      "Water",
+      "Swim",
+      "Scale",
+      "Gill",
+      "Ocean"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_110",
+    "target_en": "Horse",
+    "forbidden_en": [
+      "Ride",
+      "Stable",
+      "Gallop",
+      "Saddle",
+      "Mane"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_111",
+    "target_en": "Monkey",
+    "forbidden_en": [
+      "Banana",
+      "Tree",
+      "Swing",
+      "Primate",
+      "Zoo"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_112",
+    "target_en": "Eagle",
+    "forbidden_en": [
+      "Bird",
+      "Fly",
+      "Nest",
+      "Prey",
+      "Wings"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_113",
+    "target_en": "Snake",
+    "forbidden_en": [
+      "Slither",
+      "Venom",
+      "Scale",
+      "Hiss",
+      "Long"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_114",
+    "target_en": "Camel",
+    "forbidden_en": [
+      "Desert",
+      "Hump",
+      "Sand",
+      "Water",
+      "Ride"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_115",
+    "target_en": "Bee",
+    "forbidden_en": [
+      "Honey",
+      "Sting",
+      "Hive",
+      "Buzz",
+      "Flower"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_116",
+    "target_en": "Owl",
+    "forbidden_en": [
+      "Night",
+      "Hoot",
+      "Wise",
+      "Bird",
+      "Eyes"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_117",
+    "target_en": "Crocodile",
+    "forbidden_en": [
+      "River",
+      "Teeth",
+      "Reptile",
+      "Snap",
+      "Africa"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_animals_118",
+    "target_en": "Butterfly",
+    "forbidden_en": [
+      "Wings",
+      "Flower",
+      "Cocoon",
+      "Color",
+      "Fly"
+    ],
+    "category_id": "animals",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_119",
+    "target_en": "Football",
+    "forbidden_en": [
+      "Goal",
+      "Kick",
+      "Ball",
+      "Team",
+      "Soccer"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_120",
+    "target_en": "Basketball",
+    "forbidden_en": [
+      "Hoop",
+      "Dribble",
+      "Court",
+      "Ball",
+      "Shoot"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_121",
+    "target_en": "Running",
+    "forbidden_en": [
+      "Race",
+      "Speed",
+      "Track",
+      "Shoes",
+      "Marathon"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_122",
+    "target_en": "Swimming",
+    "forbidden_en": [
+      "Water",
+      "Pool",
+      "Stroke",
+      "Lane",
+      "Dive"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_123",
+    "target_en": "Tennis",
+    "forbidden_en": [
+      "Racket",
+      "Court",
+      "Net",
+      "Serve",
+      "Ball"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_124",
+    "target_en": "Cycling",
+    "forbidden_en": [
+      "Bike",
+      "Pedal",
+      "Helmet",
+      "Wheel",
+      "Road"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_125",
+    "target_en": "Boxing",
+    "forbidden_en": [
+      "Punch",
+      "Ring",
+      "Gloves",
+      "Fight",
+      "Round"
+    ],
+    "category_id": "sports",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_126",
+    "target_en": "Volleyball",
+    "forbidden_en": [
+      "Net",
+      "Spike",
+      "Beach",
+      "Serve",
+      "Team"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_127",
+    "target_en": "Olympics",
+    "forbidden_en": [
+      "Medal",
+      "Games",
+      "Athlete",
+      "Torch",
+      "World"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_128",
+    "target_en": "Referee",
+    "forbidden_en": [
+      "Whistle",
+      "Foul",
+      "Judge",
+      "Rules",
+      "Game"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_129",
+    "target_en": "Trophy",
+    "forbidden_en": [
+      "Win",
+      "Cup",
+      "Prize",
+      "Gold",
+      "Champion"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_130",
+    "target_en": "Coach",
+    "forbidden_en": [
+      "Train",
+      "Team",
+      "Strategy",
+      "Player",
+      "Practice"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_131",
+    "target_en": "Penalty",
+    "forbidden_en": [
+      "Foul",
+      "Kick",
+      "Card",
+      "Rule",
+      "Free"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_132",
+    "target_en": "Stadium",
+    "forbidden_en": [
+      "Crowd",
+      "Field",
+      "Seats",
+      "Game",
+      "Cheer"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_133",
+    "target_en": "Jersey",
+    "forbidden_en": [
+      "Shirt",
+      "Number",
+      "Team",
+      "Wear",
+      "Kit"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_134",
+    "target_en": "Marathon",
+    "forbidden_en": [
+      "Long",
+      "Run",
+      "Race",
+      "Endurance",
+      "42"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_135",
+    "target_en": "Friendship",
+    "forbidden_en": [
+      "Friend",
+      "Trust",
+      "Bond",
+      "People",
+      "Close"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_136",
+    "target_en": "Secret",
+    "forbidden_en": [
+      "Hide",
+      "Tell",
+      "Whisper",
+      "Private",
+      "Know"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_137",
+    "target_en": "Promise",
+    "forbidden_en": [
+      "Keep",
+      "Word",
+      "Vow",
+      "Break",
+      "Agree"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_138",
+    "target_en": "Shadow",
+    "forbidden_en": [
+      "Dark",
+      "Light",
+      "Follow",
+      "Shape",
+      "Sun"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_139",
+    "target_en": "Memory",
+    "forbidden_en": [
+      "Remember",
+      "Past",
+      "Mind",
+      "Forget",
+      "Think"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_140",
+    "target_en": "Courage",
+    "forbidden_en": [
+      "Brave",
+      "Fear",
+      "Strong",
+      "Heart",
+      "Dare"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_141",
+    "target_en": "Patience",
+    "forbidden_en": [
+      "Wait",
+      "Calm",
+      "Time",
+      "Slow",
+      "Tolerate"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_142",
+    "target_en": "Rumor",
+    "forbidden_en": [
+      "Gossip",
+      "Hear",
+      "Talk",
+      "False",
+      "Spread"
+    ],
+    "category_id": "general_words",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_143",
+    "target_en": "Deadline",
+    "forbidden_en": [
+      "Due",
+      "Time",
+      "Late",
+      "Finish",
+      "Date"
+    ],
+    "category_id": "general_words",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_144",
+    "target_en": "Habit",
+    "forbidden_en": [
+      "Routine",
+      "Daily",
+      "Repeat",
+      "Hard",
+      "Change"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_145",
+    "target_en": "Luck",
+    "forbidden_en": [
+      "Chance",
+      "Fortune",
+      "Lucky",
+      "Fate",
+      "Win"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_146",
+    "target_en": "Silence",
+    "forbidden_en": [
+      "Quiet",
+      "Noise",
+      "Mute",
+      "Still",
+      "Sound"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_147",
+    "target_en": "Adventure",
+    "forbidden_en": [
+      "Travel",
+      "Risk",
+      "Explore",
+      "Journey",
+      "Exciting"
+    ],
+    "category_id": "general_words",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_148",
+    "target_en": "Excuse",
+    "forbidden_en": [
+      "Sorry",
+      "Reason",
+      "Late",
+      "Blame",
+      "Apology"
+    ],
+    "category_id": "general_words",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_149",
+    "target_en": "Trend",
+    "forbidden_en": [
+      "Popular",
+      "Fashion",
+      "Viral",
+      "Now",
+      "Style"
+    ],
+    "category_id": "general_words",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_general_words_150",
+    "target_en": "Legacy",
+    "forbidden_en": [
+      "Leave",
+      "History",
+      "Remember",
+      "Past",
+      "Impact"
+    ],
+    "category_id": "general_words",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  }
+]

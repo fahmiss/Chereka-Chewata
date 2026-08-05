@@ -1,0 +1,38 @@
+[
+  {
+    "id": "everyday_objects",
+    "name_en": "Everyday Objects",
+    "sort_order": 10,
+    "active": true
+  },
+  {
+    "id": "food_and_drink",
+    "name_en": "Food and Drink",
+    "sort_order": 20,
+    "active": true
+  },
+  {
+    "id": "places",
+    "name_en": "Places",
+    "sort_order": 30,
+    "active": true
+  },
+  {
+    "id": "entertainment",
+    "name_en": "Entertainment",
+    "sort_order": 40,
+    "active": true
+  },
+  {
+    "id": "school_and_work",
+    "name_en": "School and Work",
+    "sort_order": 50,
+    "active": true
+  },
+  {
+    "id": "people_and_personality",
+    "name_en": "People and Personality",
+    "sort_order": 60,
+    "active": true
+  }
+]
