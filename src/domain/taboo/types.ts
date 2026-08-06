@@ -62,6 +62,12 @@ export type TabooSession = {
   turnViolations: number;
   turnScore: number;
   excludedCardIds: string[];
+  /**
+   * Set once the deck has been recycled. Spec §2.6 allows repeats only when
+   * the deck is exhausted, so this spends that allowance exactly once and
+   * tells `applyTurnAndAdvance` to close the match at the next equal turn.
+   */
+  deckExhausted: boolean;
   isSuddenDeath: boolean;
   winner: TeamId | 'tie' | null;
 };

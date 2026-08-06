@@ -146,6 +146,20 @@ export function nextAnswerOrDiscuss(session: LiarSession): LiarSession {
 export function startVoting(session: LiarSession): LiarSession {
   if (session.phase !== 'discussion') return session;
 
+  if (session.setup.votingMode === 'group') {
+    return {
+      ...session,
+      phase: 'group_accuse',
+      voteOrder: [],
+      voteIndex: 0,
+      votes: {},
+      eligibleSuspectIds: null,
+      runoffRound: 0,
+      accusedPlayerId: null,
+      winner: null,
+    };
+  }
+
   const voteOrder = shuffle(session.setup.players.map((player) => player.id));
   return {
     ...session,
@@ -157,6 +171,31 @@ export function startVoting(session: LiarSession): LiarSession {
     runoffRound: 0,
     accusedPlayerId: null,
     winner: null,
+  };
+}
+
+/** Group mode: table already decided — record who they think is the Liar. */
+export function accusePlayer(session: LiarSession, playerId: string): LiarSession {
+  if (session.phase !== 'group_accuse') return session;
+  if (!session.setup.players.some((player) => player.id === playerId)) return session;
+
+  const caught = playerId === session.liarPlayerId;
+  return {
+    ...session,
+    phase: 'result',
+    accusedPlayerId: playerId,
+    winner: caught ? 'group' : 'liar',
+  };
+}
+
+/** Group mode: table cannot agree — Liar gets away. */
+export function resolveGroupDeadlock(session: LiarSession): LiarSession {
+  if (session.phase !== 'group_accuse') return session;
+  return {
+    ...session,
+    phase: 'result',
+    winner: 'liar',
+    accusedPlayerId: null,
   };
 }
 

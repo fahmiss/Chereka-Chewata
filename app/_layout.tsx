@@ -25,7 +25,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import * as SystemUI from 'expo-system-ui';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SessionProvider } from '../src/domain/impostor/SessionContext';
@@ -40,6 +40,7 @@ import { TabooSetupProvider } from '../src/domain/taboo/SetupContext';
 import { WouldRatherSessionProvider } from '../src/domain/wouldRather/SessionContext';
 import { WouldRatherSetupProvider } from '../src/domain/wouldRather/SetupContext';
 import { color } from '../src/theme/tokens';
+import { hydrateContentHistory } from '../src/storage/contentHistory';
 
 SystemUI.setBackgroundColorAsync(color.background);
 void SplashScreen.preventAutoHideAsync();
@@ -66,8 +67,17 @@ export default function RootLayout() {
     NotoSansEthiopic_700Bold,
     NotoSansEthiopic_900Black,
   });
+  const [contentReady, setContentReady] = useState(false);
 
-  const ready = fontsLoaded || !!fontError;
+  const ready = (fontsLoaded || !!fontError) && contentReady;
+
+  useEffect(() => {
+    let active = true;
+    void hydrateContentHistory().finally(() => {
+      if (active) setContentReady(true);
+    });
+    return () => { active = false; };
+  }, []);
 
   useEffect(() => {
     if (ready) void SplashScreen.hideAsync();
@@ -100,7 +110,7 @@ export default function RootLayout() {
                           <Stack.Screen name="language" options={{ animation: 'fade' }} />
                           <Stack.Screen
                             name="session/[sessionId]"
-                            options={{ animation: 'fade' }}
+                            options={{ animation: 'fade', gestureEnabled: false }}
                           />
                         </Stack>
                           </WouldRatherSessionProvider>

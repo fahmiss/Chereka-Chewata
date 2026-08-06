@@ -8,7 +8,7 @@ import { SecondaryButton } from '../src/components/ui/SecondaryButton';
 import { Segmented, Toggle } from '../src/components/ui/Selectable';
 import { Surface } from '../src/components/ui/Surface';
 import { useSettings } from '../src/domain/settings/SettingsContext';
-import type { InterfaceLanguage } from '../src/domain/settings/types';
+import type { ContentLanguage, InterfaceLanguage } from '../src/domain/settings/types';
 import { useT } from '../src/i18n';
 import { color, space } from '../src/theme/tokens';
 import { family, type } from '../src/theme/typography';
@@ -22,11 +22,14 @@ export default function SettingsScreen() {
     setVibrationEnabled,
     setReduceMotion,
     setInterfaceLanguage,
+    setContentLanguage,
     resetCardHistory,
   } = useSettings();
   const { t, uiFont } = useT();
   const [resetVisible, setResetVisible] = useState(false);
   const [resetDone, setResetDone] = useState(false);
+  const [privacyVisible, setPrivacyVisible] = useState(false);
+  const [termsVisible, setTermsVisible] = useState(false);
   const font = uiFont ? { fontFamily: uiFont } : null;
 
   return (
@@ -50,6 +53,19 @@ export default function SettingsScreen() {
             options={[
               { value: 'en', label: t('language.english') },
               { value: 'am', label: t('language.amharic') },
+            ]}
+          />
+          <Text style={[type.bodySm, styles.cardBody, font]}>
+            {t('settings.contentLanguage')}
+          </Text>
+          <Segmented<ContentLanguage>
+            accent={color.gameImpostor}
+            value={settings.contentLanguage}
+            onChange={setContentLanguage}
+            options={[
+              { value: 'en', label: t('language.english') },
+              { value: 'am', label: t('language.amharic') },
+              { value: 'mixed', label: t('language.mixed') },
             ]}
           />
           <Text style={[type.bodySm, styles.cardBody, font]}>{t('settings.contentNote')}</Text>
@@ -90,10 +106,20 @@ export default function SettingsScreen() {
         </Surface>
 
         <Surface contentStyle={styles.card}>
-          <Text style={[type.eyebrow, styles.cardLabel, font]}>{t('settings.comingLater')}</Text>
-          <Text style={[type.bodySm, styles.cardBody, font]}>
-            {t('settings.comingLaterBody')}
-          </Text>
+          <Text style={[type.eyebrow, styles.cardLabel, font]}>{t('settings.about')}</Text>
+          <SecondaryButton
+            label={t('settings.privacy')}
+            icon="eye"
+            onPress={() => setPrivacyVisible(true)}
+          />
+          <Text style={[type.bodySm, styles.cardBody, font]}>{t('settings.privacyHint')}</Text>
+          <View style={styles.divider} />
+          <SecondaryButton
+            label={t('settings.terms')}
+            icon="layers"
+            onPress={() => setTermsVisible(true)}
+          />
+          <Text style={[type.bodySm, styles.cardBody, font]}>{t('settings.termsHint')}</Text>
         </Surface>
 
         <View style={styles.brand}>
@@ -131,6 +157,28 @@ export default function SettingsScreen() {
         confirmLabel={t('common.gotIt')}
         confirmTone="honey"
         onConfirm={() => setResetDone(false)}
+      />
+
+      <Dialog
+        visible={privacyVisible}
+        moon="ready"
+        accent={color.brandPrimary}
+        title={t('settings.privacyTitle')}
+        message={t('settings.privacyMessage')}
+        confirmLabel={t('common.gotIt')}
+        confirmTone="honey"
+        onConfirm={() => setPrivacyVisible(false)}
+      />
+
+      <Dialog
+        visible={termsVisible}
+        moon="ready"
+        accent={color.brandPrimary}
+        title={t('settings.termsTitle')}
+        message={t('settings.termsMessage')}
+        confirmLabel={t('common.gotIt')}
+        confirmTone="honey"
+        onConfirm={() => setTermsVisible(false)}
       />
     </Screen>
   );

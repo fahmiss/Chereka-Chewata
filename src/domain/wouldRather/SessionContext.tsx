@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
-import { beginCountdown, createWouldRatherSession, endSession, nextDilemma, rematchSession, skipDilemma, tickCountdown } from './machine';
-import type { WouldRatherSession, WouldRatherSetup } from './types';
+import { chooseSide, createWouldRatherSession, endSession, nextDilemma, rematchSession, skipDilemma } from './machine';
+import type { WouldRatherSession, WouldRatherSetup, WouldRatherSide } from './types';
 
 type Value = {
   session: WouldRatherSession | null;
@@ -8,7 +8,7 @@ type Value = {
   startSession: (setup: WouldRatherSetup) => { session: WouldRatherSession } | { error: string };
   clearSession: () => void;
   clearError: () => void;
-  dispatch: { beginCountdown: () => void; tickCountdown: () => void; nextDilemma: () => void; skipDilemma: () => void; endSession: () => void; rematch: () => WouldRatherSession | null };
+  dispatch: { chooseSide: (side: WouldRatherSide) => void; nextDilemma: () => void; skipDilemma: () => void; endSession: () => void; rematch: () => WouldRatherSession | null };
 };
 
 const Context = createContext<Value | null>(null);
@@ -20,7 +20,7 @@ export function WouldRatherSessionProvider({ children }: { children: ReactNode }
   const clearSession = useCallback(() => { setSession(null); setError(null); }, []);
   const clearError = useCallback(() => setError(null), []);
   const update = useCallback((fn: (value: WouldRatherSession) => WouldRatherSession) => setSession((value) => value ? fn(value) : value), []);
-  const dispatch = useMemo(() => ({ beginCountdown: () => update(beginCountdown), tickCountdown: () => update(tickCountdown), nextDilemma: () => update(nextDilemma), skipDilemma: () => update(skipDilemma), endSession: () => update(endSession), rematch: () => { if (!session) return null; const created = rematchSession(session); if ('error' in created) { setError(created.error); return null; } setSession(created); return created; } }), [session, update]);
+  const dispatch = useMemo(() => ({ chooseSide: (side: WouldRatherSide) => update((value) => chooseSide(value, side)), nextDilemma: () => update(nextDilemma), skipDilemma: () => update(skipDilemma), endSession: () => update(endSession), rematch: () => { if (!session) return null; const created = rematchSession(session); if ('error' in created) { setError(created.error); return null; } setSession(created); return created; } }), [session, update]);
   const value = useMemo(() => ({ session, error, startSession, clearSession, clearError, dispatch }), [session, error, startSession, clearSession, clearError, dispatch]);
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }

@@ -18,11 +18,8 @@ type RowProps = {
   index: number;
   name: string;
   accent: string;
-  isFirst: boolean;
-  isLast: boolean;
   canRemove: boolean;
   onChange: (text: string) => void;
-  onMove: (direction: -1 | 1) => void;
   onRemove: () => void;
 };
 
@@ -30,11 +27,8 @@ function PlayerRow({
   index,
   name,
   accent,
-  isFirst,
-  isLast,
   canRemove,
   onChange,
-  onMove,
   onRemove,
 }: RowProps) {
   const [focused, setFocused] = useState(false);
@@ -65,6 +59,7 @@ function PlayerRow({
         onBlur={() => setFocused(false)}
         placeholder={`Player ${index + 1}`}
         placeholderTextColor={color.textMuted}
+        selectTextOnFocus
         style={[type.titleMd, styles.input]}
         autoCapitalize="words"
         maxLength={24}
@@ -72,18 +67,6 @@ function PlayerRow({
       />
 
       <View style={styles.rowActions}>
-        <MiniButton
-          icon="chevronUp"
-          label="Move up"
-          disabled={isFirst}
-          onPress={() => onMove(-1)}
-        />
-        <MiniButton
-          icon="chevronDown"
-          label="Move down"
-          disabled={isLast}
-          onPress={() => onMove(1)}
-        />
         <MiniButton
           icon="close"
           label={`Remove player ${index + 1}`}
@@ -103,7 +86,7 @@ function MiniButton({
   disabled,
   tint,
 }: {
-  icon: 'chevronUp' | 'chevronDown' | 'close';
+  icon: 'close';
   label: string;
   onPress: () => void;
   disabled?: boolean;
@@ -133,7 +116,6 @@ export default function PlayerSetupScreen() {
     addPlayer,
     removePlayer,
     renamePlayer,
-    movePlayer,
     fillDefaultNames,
     useLastGroup,
     validation,
@@ -156,7 +138,6 @@ export default function PlayerSetupScreen() {
 
   return (
     <SetupScreen
-      step={1}
       stepLabel={t('setup.players')}
       title={t('setup.playersTitle')}
       subtitle={
@@ -165,7 +146,7 @@ export default function PlayerSetupScreen() {
           : t('setup.playersSubtitle', { min: MIN, max: MAX })
       }
       accent={accent}
-      primaryLabel={t('common.continue')}
+      primaryLabel="Done"
       primaryDisabled={!validation.playersOk}
       footerNote={
         !validation.playersOk
@@ -178,7 +159,7 @@ export default function PlayerSetupScreen() {
               ? 'You can continue without names.'
               : undefined
       }
-      onPrimary={() => router.push(`/game/${gameId}/setup/categories`)}
+      onPrimary={() => router.back()}
     >
       <View style={styles.quickRow}>
         <SecondaryButton
@@ -210,11 +191,8 @@ export default function PlayerSetupScreen() {
           index={index}
           accent={accent}
           name={player.displayName}
-          isFirst={index === 0}
-          isLast={index === setup.players.length - 1}
           canRemove={isMostLikely ? setup.players.length > 0 : setup.players.length > MIN}
           onChange={(text) => renamePlayer(player.id, text)}
-          onMove={(direction) => movePlayer(player.id, direction)}
           onRemove={() => removePlayer(player.id)}
         />
       ))}

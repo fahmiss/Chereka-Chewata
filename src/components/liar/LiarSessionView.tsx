@@ -14,7 +14,6 @@ import {
 } from '../../domain/liar/machine';
 import { useLiarSession } from '../../domain/liar/SessionContext';
 import type { LiarSession } from '../../domain/liar/types';
-import { useSecretScreenProtection } from '../../privacy/useSecretScreenProtection';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import {
   duration,
@@ -25,19 +24,21 @@ import {
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
+import { MoonFace } from '../brand/MoonFace';
+import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
 import { Icon, type IconName } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { ReportCardButton } from '../session/ReportCardButton';
 
 const ACCENT = color.gameLiar;
-const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
 function endGame(clearSession: () => void) {
-  clearSession();
   router.replace('/home');
+  clearSession();
 }
 
 function Brief({ icon, children }: { icon: IconName; children: ReactNode }) {
@@ -135,8 +136,6 @@ function HandoffPhase({
   const total =
     kind === 'reveal' ? session.setup.players.length : session.voteOrder.length;
   const index = (kind === 'reveal' ? session.revealIndex : session.voteIndex) + 1;
-  const initial = name.trim().charAt(0).toUpperCase() || '?';
-
   return (
     <SessionShell
       eyebrow={kind === 'reveal' ? 'Pass the phone' : 'Private vote'}
@@ -154,18 +153,14 @@ function HandoffPhase({
       }
     >
       <Animated.View style={[styles.handoff, enter]}>
+        <MoonFace expression="secret" size={72} glow={false} />
         <Text style={[type.numeric, styles.handoffCount]}>
           {String(index).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </Text>
         <Text style={[type.eyebrow, styles.handoffLabel]}>Hand the phone to</Text>
-        <View style={styles.handoffIdentity}>
-          <View style={styles.handoffAvatar}>
-            <Text style={[type.displayMd, { color: ACCENT }]}>{initial}</Text>
-          </View>
-          <Text style={styles.handoffName} numberOfLines={2} adjustsFontSizeToFit>
-            {name}
-          </Text>
-        </View>
+        <Text style={styles.handoffName} numberOfLines={2} adjustsFontSizeToFit>
+          {name}
+        </Text>
         <View style={styles.handoffNote}>
           <Icon name="eye" size={16} color={color.textMuted} />
           <Text style={[type.bodySm, styles.handoffNoteText]}>
@@ -177,13 +172,12 @@ function HandoffPhase({
   );
 }
 
-const HOLD_RING = 88;
-const HOLD_STROKE = 5;
+const HOLD_RING = 168;
+const HOLD_STROKE = 7;
 const HOLD_RADIUS = (HOLD_RING - HOLD_STROKE) / 2;
 const HOLD_CIRC = 2 * Math.PI * HOLD_RADIUS;
 
 function RevealPhase({ session }: { session: LiarSession }) {
-  useSecretScreenProtection('liar-reveal');
   const { dispatch, clearSession } = useLiarSession();
   const [unlocked, setUnlocked] = useState(false);
   const playerId = currentRevealPlayerId(session);
@@ -339,7 +333,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
                   strokeWidth={HOLD_STROKE}
                   fill="none"
                 />
-                <AnimatedCircle
+                <AnimatedSvgCircle
                   cx={HOLD_RING / 2}
                   cy={HOLD_RING / 2}
                   r={HOLD_RADIUS}
@@ -356,9 +350,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
                 />
               </Svg>
               <View style={styles.holdCoreCenter} pointerEvents="none">
-                <View style={[styles.holdCore, { borderColor: alpha(ACCENT, 0.5) }]}>
-                  <Icon name="lock" size={26} color={ACCENT} strokeWidth={1.8} />
-                </View>
+                <MoonFace expression="secret" size={110} />
               </View>
             </View>
             <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
@@ -488,6 +480,8 @@ function AnswersPhase({ session }: { session: LiarSession }) {
 
 function DiscussionPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const privateVotes = session.setup.votingMode === 'private';
+  const nextLabel = privateVotes ? 'Start private voting' : 'Choose the Liar';
 
   return (
     <SessionShell
@@ -499,7 +493,7 @@ function DiscussionPhase({ session }: { session: LiarSession }) {
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label="Start private voting"
+          label={nextLabel}
           icon="target"
           onPress={() => dispatch.startVoting()}
         />
@@ -507,15 +501,61 @@ function DiscussionPhase({ session }: { session: LiarSession }) {
     >
       <Brief icon="users">
         <Text style={[type.body, styles.briefBody]}>
-          Talk it out, then vote privately.
+          {privateVotes
+            ? 'Talk it out, then vote privately on this phone.'
+            : 'Argue in the room. When the group agrees, tap who you think is the Liar.'}
         </Text>
       </Brief>
     </SessionShell>
   );
 }
 
+function GroupAccusePhase({ session }: { session: LiarSession }) {
+  const { dispatch, clearSession } = useLiarSession();
+  const [selected, setSelected] = useState<string | null>(null);
+
+  return (
+    <SessionShell
+      eyebrow="Group decision"
+      stage="vote"
+      title="Who is the group accusing?"
+      subtitle="Tap the player your group chose."
+      accent={ACCENT}
+      onEndGame={() => endGame(clearSession)}
+      footer={
+        <>
+          <PrimaryButton
+            label="Accuse this player"
+            icon="target"
+            disabled={!selected}
+            onPress={() => {
+              if (selected) dispatch.accusePlayer(selected);
+            }}
+          />
+          <SecondaryButton
+            label="Deadlock — Liar wins"
+            quiet
+            onPress={() => dispatch.resolveGroupDeadlock()}
+          />
+        </>
+      }
+    >
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.choiceList}>
+        {session.setup.players.map((player, index) => (
+          <PlayerChoice
+            key={player.id}
+            index={index}
+            name={player.displayName}
+            selected={selected === player.id}
+            onPress={() => setSelected(player.id)}
+          />
+        ))}
+      </ScrollView>
+    </SessionShell>
+  );
+}
+
 function VotingSelectPhase({ session }: { session: LiarSession }) {
-  useSecretScreenProtection('liar-vote');
   const { dispatch, clearSession } = useLiarSession();
   const [selected, setSelected] = useState<string | null>(null);
   const voterId = currentVoterId(session);
@@ -593,7 +633,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
               label="Change setup"
               onPress={() => {
                 clearSession();
-                router.replace('/game/whos_the_liar/setup/players');
+                router.replace('/game/whos_the_liar/setup/review');
               }}
               style={styles.half}
             />
@@ -611,15 +651,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
         <Animated.View style={[styles.winnerBlock, enter]}>
-          <View
-            style={[
-              styles.verdictBadge,
-              { backgroundColor: alpha(accent, 0.14), borderColor: alpha(accent, 0.4) },
-              glow(accent, 0.35, 24),
-            ]}
-          >
-            <Icon name={groupWon ? 'trophy' : 'eye'} size={34} color={accent} strokeWidth={1.8} />
-          </View>
+          <MoonFace expression={groupWon ? 'delighted' : 'secret'} size={96} />
           <Text style={[type.displayLg, { color: color.textPrimary }]}>
             {groupWon ? 'Group wins' : 'Liar wins'}
           </Text>
@@ -637,6 +669,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
           <Text style={[type.eyebrow, { color: ACCENT }]}>Liar’s question</Text>
           <Text style={[type.titleMd, styles.questionText]}>{session.pair.liar_question_en}</Text>
         </Surface>
+        <ReportCardButton game="whos_the_liar" cardId={session.pair.id} />
 
         {summary.length > 0 ? (
           <Surface contentStyle={styles.votesCard}>
@@ -667,7 +700,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
       <Dialog
         visible={deckExhausted}
-        icon="layers"
+        moon="caught"
         accent={color.brandPrimary}
         title="Deck exhausted"
         message="Every card in this deck has been used. Change categories or content level to keep playing."
@@ -691,6 +724,8 @@ export function LiarSessionView({ session }: { session: LiarSession }) {
       return <AnswersPhase session={session} />;
     case 'discussion':
       return <DiscussionPhase session={session} />;
+    case 'group_accuse':
+      return <GroupAccusePhase session={session} />;
     case 'voting_handoff':
       return <HandoffPhase session={session} kind="vote" />;
     case 'voting_select':
@@ -766,17 +801,19 @@ const styles = StyleSheet.create({
   },
   secretCard: {
     flex: 1,
-    borderRadius: radius.large,
+    minHeight: 360,
+    borderRadius: radius.extraLarge,
     borderWidth: 1,
     overflow: 'hidden',
-    minHeight: 280,
+    marginBottom: space[2],
   },
   secretInner: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     padding: space[6],
-    gap: space[3],
+    gap: space[5],
+    width: '100%',
   },
   holdWrap: {
     width: HOLD_RING,
@@ -789,18 +826,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  holdCore: {
-    width: 52,
-    height: 52,
-    borderRadius: radius.pill,
-    borderWidth: 1,
-    backgroundColor: alpha(color.void, 0.55),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   secretEyebrow: {
     color: color.textMuted,
     marginTop: space[2],
+    fontSize: 13,
+    letterSpacing: 2,
   },
   secretQuestion: {
     color: color.textPrimary,
@@ -883,14 +913,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: space[3],
     paddingTop: space[2],
-  },
-  verdictBadge: {
-    width: 72,
-    height: 72,
-    borderRadius: radius.large,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   winnerSub: {
     color: color.textSecondary,

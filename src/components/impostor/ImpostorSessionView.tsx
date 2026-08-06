@@ -4,8 +4,8 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Animated, AppState, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { getCategoryName } from '../../content/categories';
+import { localizeText } from '../../content/localize';
 import {
-  currentCluePlayerId,
   currentRevealPlayerId,
   currentVoterId,
   getPlayerName,
@@ -16,7 +16,6 @@ import {
 } from '../../domain/impostor/machine';
 import { useSession } from '../../domain/impostor/SessionContext';
 import type { ImpostorSession } from '../../domain/impostor/types';
-import { useSecretScreenProtection } from '../../privacy/useSecretScreenProtection';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import {
   duration,
@@ -26,6 +25,10 @@ import {
 } from '../../theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { MoonFace } from '../brand/MoonFace';
+import { ReportCardButton } from '../session/ReportCardButton';
+import { SessionShell } from '../session/SessionShell';
+import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { MetaChip } from '../ui/Chip';
 import { Dialog } from '../ui/Dialog';
 import { Icon, type IconName } from '../ui/Icon';
@@ -33,14 +36,15 @@ import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
-import { SessionShell } from '../session/SessionShell';
 
 const ACCENT = color.gameImpostor;
 
 /** Every phase hands this to SessionShell, which confirms before calling it. */
 function endGame(clearSession: () => void) {
-  clearSession();
+  // Navigate first — clearing session while still on `/session/[id]` flashes
+  // the "unavailable" error screen before replace runs.
   router.replace('/home');
+  clearSession();
 }
 
 /* ------------------------------------------------------------------ *
@@ -141,7 +145,6 @@ function PlayerChoice({
  * Discussion timer — ring + digits
  * ------------------------------------------------------------------ */
 
-const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const RING = 168;
 const STROKE = 8;
 const RADIUS = (RING - STROKE) / 2;
@@ -195,7 +198,7 @@ function DiscussionTimer({
             strokeWidth={STROKE}
             fill="none"
           />
-          <AnimatedCircle
+          <AnimatedSvgCircle
             cx={RING / 2}
             cy={RING / 2}
             r={RADIUS}
@@ -217,6 +220,7 @@ function DiscussionTimer({
           />
         </Svg>
         <View style={styles.ringCenter} pointerEvents="none">
+          <MoonFace expression="timer" size={56} />
           <Text style={[styles.timerDigits, { color: tint }]}>
             {mm}:{ss}
           </Text>
@@ -254,8 +258,6 @@ function HandoffPhase({
     kind === 'reveal'
       ? session.revealIndex + 1
       : session.voteIndex + 1;
-  const initial = name.trim().charAt(0).toUpperCase() || '?';
-
   return (
     <SessionShell
       eyebrow={kind === 'reveal' ? 'Pass the phone' : 'Private vote'}
@@ -272,18 +274,14 @@ function HandoffPhase({
       }
     >
       <Animated.View style={[styles.handoff, enter]}>
+        <MoonFace expression="secret" size={72} glow={false} />
         <Text style={[type.numeric, styles.handoffCount]}>
           {String(index).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </Text>
         <Text style={[type.eyebrow, styles.handoffLabel]}>Hand the phone to</Text>
-        <View style={styles.handoffIdentity}>
-          <View style={styles.handoffAvatar}>
-            <Text style={[type.displayMd, { color: ACCENT }]}>{initial}</Text>
-          </View>
-          <Text style={styles.handoffName} numberOfLines={2} adjustsFontSizeToFit>
-            {name}
-          </Text>
-        </View>
+        <Text style={styles.handoffName} numberOfLines={2} adjustsFontSizeToFit>
+          {name}
+        </Text>
         <View style={styles.handoffNote}>
           <Icon name="eye" size={16} color={color.textMuted} />
           <Text style={[type.bodySm, styles.handoffNoteText]}>
@@ -295,19 +293,28 @@ function HandoffPhase({
   );
 }
 
-const HOLD_RING = 88;
-const HOLD_STROKE = 5;
+const HOLD_RING = 168;
+const HOLD_STROKE = 7;
 const HOLD_RADIUS = (HOLD_RING - HOLD_STROKE) / 2;
 const HOLD_CIRC = 2 * Math.PI * HOLD_RADIUS;
 
 function RevealPhase({ session }: { session: ImpostorSession }) {
-  useSecretScreenProtection('impostor-reveal');
   const { dispatch, clearSession } = useSession();
   const [unlocked, setUnlocked] = useState(false);
   const playerId = currentRevealPlayerId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
   const role = playerId ? getRole(session, playerId) : null;
-  const categoryName = getCategoryName(session.word.category_id);
+  const categoryName = getCategoryName(session.word.category_id, session.contentLanguage);
+  const secretWord = localizeText(session.contentLanguage, {
+    en: session.word.word_en,
+    am: session.word.word_am,
+  });
+  const secretHint = localizeText(session.contentLanguage, {
+    en: session.word.hint_en,
+    am: session.word.hint_am,
+  });
+  const secretFont =
+    session.contentLanguage === 'en' ? undefined : { fontFamily: family.ethiopic.bold };
   const total = session.setup.players.length;
 
   const hold = useRef(new Animated.Value(0)).current;
@@ -465,7 +472,7 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
                   strokeWidth={HOLD_STROKE}
                   fill="none"
                 />
-                <AnimatedCircle
+                <AnimatedSvgCircle
                   cx={HOLD_RING / 2}
                   cy={HOLD_RING / 2}
                   r={HOLD_RADIUS}
@@ -482,9 +489,7 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
                 />
               </Svg>
               <View style={styles.holdCoreCenter} pointerEvents="none">
-                <View style={[styles.holdCore, { borderColor: alpha(ACCENT, 0.5) }]}>
-                  <Icon name="lock" size={26} color={ACCENT} strokeWidth={1.8} />
-                </View>
+                <MoonFace expression="secret" size={110} />
               </View>
             </View>
             <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
@@ -509,18 +514,18 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
               {impostor ? 'You are the' : 'Secret word'}
             </Text>
             <Text
-              style={[styles.secretWord, { color: color.textPrimary }]}
+              style={[styles.secretWord, { color: color.textPrimary }, !impostor && secretFont]}
               numberOfLines={2}
               adjustsFontSizeToFit
             >
-              {impostor ? 'IMPOSTOR' : session.word.word_en}
+              {impostor ? 'IMPOSTOR' : secretWord}
             </Text>
-            <Text style={[type.body, styles.secretHint]}>
+            <Text style={[type.body, styles.secretHint, !impostor && secretFont]}>
               {impostor
                 ? session.setup.showCategoryToImpostor
                   ? `Category: ${categoryName}`
                   : 'Blend in. Find the word.'
-                : session.word.hint_en}
+                : secretHint}
             </Text>
           </Animated.View>
         )}
@@ -529,121 +534,47 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
   );
 }
 
-function StartingPlayerPhase({ session }: { session: ImpostorSession }) {
+function CluesPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
   const firstId = session.clueOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
 
   return (
     <SessionShell
-      eyebrow="Clue order"
-      stage="clues"
-      title={`${name} goes first`}
-      subtitle="Everyone can look at the screen again."
-      onEndGame={() => endGame(clearSession)}
-      footer={
-        <PrimaryButton
-          label="Begin clues"
-          icon="megaphone"
-          onPress={() => dispatch.beginClues()}
-        />
-      }
-    >
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.orderList}>
-        {session.clueOrder.map((playerId, index) => (
-          <OrderRow
-            key={playerId}
-            index={index}
-            name={getPlayerName(session, playerId)}
-            first={index === 0}
-          />
-        ))}
-      </ScrollView>
-    </SessionShell>
-  );
-}
-
-function OrderRow({
-  index,
-  name,
-  first,
-}: {
-  index: number;
-  name: string;
-  first: boolean;
-}) {
-  const enter = useEnterAnimation(index);
-
-  return (
-    <Animated.View
-      style={[
-        styles.orderRow,
-        enter,
-        first && {
-          borderColor: alpha(ACCENT, 0.5),
-          backgroundColor: alpha(ACCENT, 0.1),
-        },
-      ]}
-    >
-      <Text style={[type.numeric, { color: first ? ACCENT : color.textMuted }]}>
-        {String(index + 1).padStart(2, '0')}
-      </Text>
-      <Text style={[type.titleMd, styles.orderName]} numberOfLines={1}>
-        {name}
-      </Text>
-      {first ? <Icon name="chevronRight" size={18} color={ACCENT} strokeWidth={2.4} /> : null}
-    </Animated.View>
-  );
-}
-
-function CluesPhase({ session }: { session: ImpostorSession }) {
-  const { dispatch, clearSession } = useSession();
-  const playerId = currentCluePlayerId(session);
-  const name = playerId ? getPlayerName(session, playerId) : 'Player';
-  const total = session.clueOrder.length;
-  const remaining = total - session.clueIndex;
-
-  return (
-    <SessionShell
       eyebrow="Clues"
       stage="clues"
-      title={`${name}'s turn`}
+      title={`${name} starts`}
+      subtitle="One short clue each, in order. Leave the phone on the table."
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label={remaining <= 1 ? 'Start discussion' : 'Next player'}
-          icon={remaining <= 1 ? 'megaphone' : 'chevronRight'}
+          label="Start discussion"
+          icon="megaphone"
           onPress={() => dispatch.nextClueOrDiscuss()}
         />
       }
     >
-      <Brief icon="megaphone">
-        <Text style={[type.body, styles.briefText]}>
-          Give one short clue. Don’t say the secret word, spell it, translate it, or
-          rhyme with it.
-        </Text>
-        <View style={styles.clueProgress}>
-          {Array.from({ length: total }, (_, index) => (
-            <View
-              key={index}
-              style={[
-                styles.clueDot,
-                {
-                  backgroundColor:
-                    index < session.clueIndex
-                      ? alpha(ACCENT, 0.4)
-                      : index === session.clueIndex
-                        ? ACCENT
-                        : alpha(color.textPrimary, 0.12),
-                },
-              ]}
-            />
-          ))}
-        </View>
-        <Text style={[type.mono, styles.briefMeta]}>
-          {remaining} clue{remaining === 1 ? '' : 's'} left
-        </Text>
-      </Brief>
+      <Text style={[type.body, styles.clueRule]}>
+        Don’t say the secret word, spell it, translate it, or rhyme with it.
+      </Text>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.orderList}>
+        {session.clueOrder.map((playerId, index) => (
+          <View
+            key={playerId}
+            style={[styles.orderRow, index === 0 && styles.orderRowFirst]}
+          >
+            <Text style={[type.numeric, { color: index === 0 ? ACCENT : color.textMuted }]}>
+              {String(index + 1).padStart(2, '0')}
+            </Text>
+            <Text style={[type.titleMd, styles.orderName]} numberOfLines={1}>
+              {getPlayerName(session, playerId)}
+            </Text>
+            {index === 0 ? (
+              <Icon name="chevronRight" size={18} color={ACCENT} strokeWidth={2.4} />
+            ) : null}
+          </View>
+        ))}
+      </ScrollView>
     </SessionShell>
   );
 }
@@ -737,7 +668,6 @@ function GroupAccusePhase({ session }: { session: ImpostorSession }) {
 }
 
 function VotingSelectPhase({ session }: { session: ImpostorSession }) {
-  useSecretScreenProtection('impostor-vote');
   const { dispatch, clearSession } = useSession();
   const voterId = currentVoterId(session);
   const name = voterId ? getPlayerName(session, voterId) : 'Player';
@@ -809,15 +739,7 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
       }
     >
       <Animated.View style={[styles.verdict, enter]}>
-        <View
-          style={[
-            styles.verdictBadge,
-            { backgroundColor: alpha(accent, 0.14), borderColor: alpha(accent, 0.4) },
-            glow(accent, 0.3, 22),
-          ]}
-        >
-          <Icon name={caught ? 'mask' : 'close'} size={34} color={accent} strokeWidth={1.8} />
-        </View>
+        <MoonFace expression={caught ? 'caught' : 'secret'} size={88} />
         <Text style={[styles.verdictText, { color: accent }]} adjustsFontSizeToFit numberOfLines={2}>
           {caught ? 'IMPOSTOR' : 'NOT THE IMPOSTOR'}
         </Text>
@@ -836,7 +758,7 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
   const name = session.accusedPlayerId
     ? getPlayerName(session, session.accusedPlayerId)
     : 'Impostor';
-  const categoryName = getCategoryName(session.word.category_id);
+  const categoryName = getCategoryName(session.word.category_id, session.contentLanguage);
 
   return (
     <SessionShell
@@ -905,7 +827,7 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
               label="Change setup"
               onPress={() => {
                 clearSession();
-                router.replace('/game/impostor/setup/players');
+                router.replace('/game/impostor/setup/review');
               }}
               style={styles.half}
             />
@@ -923,15 +845,7 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
         <Animated.View style={[styles.winnerBlock, enter]}>
-          <View
-            style={[
-              styles.verdictBadge,
-              { backgroundColor: alpha(accent, 0.14), borderColor: alpha(accent, 0.4) },
-              glow(accent, 0.35, 24),
-            ]}
-          >
-            <Icon name={crewWon ? 'trophy' : 'mask'} size={34} color={accent} strokeWidth={1.8} />
-          </View>
+          <MoonFace expression={crewWon ? 'delighted' : 'secret'} size={96} />
           <Text style={[type.displayLg, { color: color.textPrimary }]}>
             {crewWon ? 'Crew wins' : 'Impostor wins'}
           </Text>
@@ -943,13 +857,20 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
         <Surface accent={color.brandPrimary} active contentStyle={styles.wordCard}>
           <Text style={[type.eyebrow, { color: color.brandPrimary }]}>Secret word</Text>
           <Text
-            style={[styles.resultWord]}
+            style={[
+              styles.resultWord,
+              session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
+            ]}
             numberOfLines={2}
             adjustsFontSizeToFit
           >
-            {session.word.word_en}
+            {localizeText(session.contentLanguage, {
+              en: session.word.word_en,
+              am: session.word.word_am,
+            })}
           </Text>
         </Surface>
+        <ReportCardButton game="impostor" cardId={session.word.id} />
 
         {summary.length > 0 ? (
           <Surface contentStyle={styles.votesCard}>
@@ -980,7 +901,7 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
 
       <Dialog
         visible={deckExhausted}
-        icon="layers"
+        moon="caught"
         accent={color.brandPrimary}
         title="Deck exhausted"
         message="Every card in this deck has been used. Change categories or content level to keep playing."
@@ -999,7 +920,6 @@ export function ImpostorSessionView({ session }: { session: ImpostorSession }) {
     case 'reveal':
       return <RevealPhase session={session} />;
     case 'starting_player':
-      return <StartingPlayerPhase session={session} />;
     case 'clues':
       return <CluesPhase session={session} />;
     case 'discussion':
@@ -1085,34 +1005,31 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 27,
   },
-  briefMeta: {
-    color: color.textMuted,
-  },
-  clueProgress: {
-    flexDirection: 'row',
-    gap: 6,
-    marginTop: space[2],
-  },
-  clueDot: {
-    width: 10,
-    height: 10,
-    borderRadius: radius.pill,
+  clueRule: {
+    color: color.textSecondary,
+    fontSize: 16,
+    lineHeight: 24,
+    marginBottom: space[2],
   },
 
   /* reveal */
   secretCard: {
     flex: 1,
-    maxHeight: 440,
+    minHeight: 360,
     borderRadius: radius.extraLarge,
     borderWidth: 1,
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
     padding: space[6],
+    marginBottom: space[2],
   },
   secretInner: {
     alignItems: 'center',
-    gap: space[3],
+    justifyContent: 'center',
+    gap: space[5],
+    flex: 1,
+    width: '100%',
   },
   holdWrap: {
     width: HOLD_RING,
@@ -1129,18 +1046,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  holdCore: {
-    width: 68,
-    height: 68,
-    borderRadius: radius.pill,
-    borderWidth: 1,
-    backgroundColor: alpha(color.brandMystery, 0.12),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   secretEyebrow: {
     color: color.textMuted,
     marginTop: space[2],
+    fontSize: 13,
+    letterSpacing: 2,
   },
   secretWord: {
     fontFamily: family.display.black,
@@ -1164,9 +1074,9 @@ const styles = StyleSheet.create({
     color: color.textMuted,
   },
 
-  /* clue order */
   orderList: {
     gap: space[2],
+    paddingTop: space[4],
     paddingBottom: space[4],
   },
   orderRow: {
@@ -1179,6 +1089,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: color.borderSubtle,
     backgroundColor: overlay.glass,
+  },
+  orderRowFirst: {
+    borderColor: alpha(ACCENT, 0.5),
+    backgroundColor: alpha(ACCENT, 0.1),
   },
   orderName: {
     color: color.textPrimary,
@@ -1219,7 +1133,7 @@ const styles = StyleSheet.create({
   },
   timerDigits: {
     fontFamily: family.mono.bold,
-    fontSize: 40,
+    fontSize: 32,
     letterSpacing: -1,
   },
   timerCaption: {
@@ -1265,34 +1179,31 @@ const styles = StyleSheet.create({
   verdict: {
     flex: 1,
     justifyContent: 'center',
-    gap: space[4],
-  },
-  verdictBadge: {
-    width: 72,
-    height: 72,
-    borderRadius: radius.large,
-    borderWidth: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    gap: space[4],
   },
   verdictText: {
     fontFamily: family.display.black,
     fontSize: 40,
     lineHeight: 44,
     letterSpacing: -1.6,
+    textAlign: 'center',
   },
   verdictBody: {
     color: color.textSecondary,
+    textAlign: 'center',
   },
   resultScroll: {
     gap: space[4],
     paddingBottom: space[4],
   },
   winnerBlock: {
+    alignItems: 'center',
     gap: space[3],
   },
   winnerSub: {
     color: color.textSecondary,
+    textAlign: 'center',
   },
   wordCard: {
     padding: space[5],

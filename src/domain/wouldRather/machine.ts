@@ -1,5 +1,11 @@
 import { pickWouldRatherDeck } from '../../content/wouldRather';
-import { createId, type WouldRatherSession, type WouldRatherSetup } from './types';
+import {
+  createId,
+  type WouldRatherSession,
+  type WouldRatherSetup,
+  type WouldRatherSide,
+} from './types';
+import { recordPlayed } from '../../storage/contentHistory';
 
 export function currentDilemma(session: WouldRatherSession) {
   return session.deck[session.index] ?? null;
@@ -10,25 +16,27 @@ export function createWouldRatherSession(setup: WouldRatherSetup): WouldRatherSe
   if (!setup.contentLevels.length) return { error: 'Pick at least one content level.' };
   const deck = pickWouldRatherDeck({ ...setup, count: Math.max(1, setup.cardCount) });
   if (!deck.length) return { error: 'No dilemmas available for these filters.' };
-  return { sessionId: createId('sess'), setup, phase: 'choice', deck, index: 0, playedCount: 0, countdownValue: null };
+  recordPlayed('would_you_rather', deck[0]!.id);
+  return { sessionId: createId('sess'), setup, phase: 'choice', deck, index: 0, playedCount: 0, chosen: null };
 }
 
-export function beginCountdown(session: WouldRatherSession): WouldRatherSession {
-  return session.phase === 'choice' ? { ...session, phase: 'countdown', countdownValue: 3 } : session;
-}
-
-export function tickCountdown(session: WouldRatherSession): WouldRatherSession {
-  if (session.phase !== 'countdown' || session.countdownValue === null) return session;
-  if (session.countdownValue === 0) return { ...session, phase: 'discuss', countdownValue: null };
-  return { ...session, countdownValue: (session.countdownValue - 1) as 2 | 1 | 0 };
+/**
+ * Records the option the room agreed on. Re-tapping the other side changes the
+ * verdict, so a misread of the table is one tap to fix rather than a dead end.
+ */
+export function chooseSide(session: WouldRatherSession, side: WouldRatherSide): WouldRatherSession {
+  if (session.phase !== 'choice' && session.phase !== 'discuss') return session;
+  return { ...session, phase: 'discuss', chosen: side };
 }
 
 function advance(session: WouldRatherSession, played: boolean): WouldRatherSession {
   const index = session.index + 1;
   const playedCount = session.playedCount + (played ? 1 : 0);
-  return index >= session.deck.length
-    ? { ...session, phase: 'ended', index, playedCount, countdownValue: null }
-    : { ...session, phase: 'choice', index, playedCount, countdownValue: null };
+  if (index >= session.deck.length) {
+    return { ...session, phase: 'ended', index, playedCount, chosen: null };
+  }
+  recordPlayed('would_you_rather', session.deck[index]!.id);
+  return { ...session, phase: 'choice', index, playedCount, chosen: null };
 }
 
 export function skipDilemma(session: WouldRatherSession) {
@@ -40,7 +48,7 @@ export function nextDilemma(session: WouldRatherSession) {
 }
 
 export function endSession(session: WouldRatherSession): WouldRatherSession {
-  return { ...session, phase: 'ended', countdownValue: null };
+  return { ...session, phase: 'ended', chosen: null };
 }
 
 export function rematchSession(session: WouldRatherSession): WouldRatherSession | { error: string } {

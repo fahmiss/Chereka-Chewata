@@ -22,6 +22,7 @@ import {
   startVoting,
 } from './machine';
 import type { ImpostorSession, ImpostorSetup } from './types';
+import { useSettings } from '../settings/SettingsContext';
 
 type SessionContextValue = {
   session: ImpostorSession | null;
@@ -48,19 +49,23 @@ type SessionContextValue = {
 const SessionContext = createContext<SessionContextValue | null>(null);
 
 export function SessionProvider({ children }: { children: ReactNode }) {
+  const { settings } = useSettings();
   const [session, setSession] = useState<ImpostorSession | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const startSession = useCallback((setup: ImpostorSetup) => {
-    const created = createImpostorSession(setup);
-    if ('error' in created) {
-      setError(created.error);
-      return { error: created.error };
-    }
-    setError(null);
-    setSession(created);
-    return { session: created };
-  }, []);
+  const startSession = useCallback(
+    (setup: ImpostorSetup) => {
+      const created = createImpostorSession(setup, [], settings.contentLanguage);
+      if ('error' in created) {
+        setError(created.error);
+        return { error: created.error };
+      }
+      setError(null);
+      setSession(created);
+      return { session: created };
+    },
+    [settings.contentLanguage],
+  );
 
   const clearSession = useCallback(() => {
     setSession(null);

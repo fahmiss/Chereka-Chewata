@@ -1,7 +1,8 @@
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { useEnterAnimation } from '../../theme/motion';
-import { alpha, color, radius, space } from '../../theme/tokens';
+import { color, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { MoonFace } from '../brand/MoonFace';
 import { Icon } from '../ui/Icon';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SessionShell } from './SessionShell';
@@ -35,7 +36,6 @@ export function PassPhoneHandoff({
   onEndGame,
 }: Props) {
   const enter = useEnterAnimation(1, 20);
-  const initial = name.trim().charAt(0).toUpperCase() || '?';
 
   return (
     <SessionShell
@@ -47,26 +47,14 @@ export function PassPhoneHandoff({
       footer={<PrimaryButton label={readyLabel} icon="checkCircle" onPress={onReady} />}
     >
       <Animated.View style={[styles.handoff, enter]}>
+        <MoonFace expression="secret" size={72} glow={false} />
         <Text style={[type.numeric, { color: accent, marginBottom: space[2] }]}>
           {String(index).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </Text>
         <Text style={[type.eyebrow, styles.label]}>Hand the phone to</Text>
-        <View style={styles.identity}>
-          <View
-            style={[
-              styles.avatar,
-              {
-                borderColor: alpha(accent, 0.4),
-                backgroundColor: alpha(accent, 0.14),
-              },
-            ]}
-          >
-            <Text style={[type.displayMd, { color: accent }]}>{initial}</Text>
-          </View>
-          <Text style={styles.name} numberOfLines={2} adjustsFontSizeToFit>
-            {name}
-          </Text>
-        </View>
+        <Text style={styles.name} numberOfLines={2} adjustsFontSizeToFit>
+          {name}
+        </Text>
         <View style={styles.note}>
           <Icon name="eye" size={16} color={color.textMuted} />
           <Text style={[type.bodySm, styles.noteText]}>{note}</Text>
@@ -80,21 +68,11 @@ const styles = StyleSheet.create({
   handoff: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'flex-start',
     gap: space[3],
   },
   label: {
     color: color.textMuted,
-  },
-  identity: {
-    gap: space[4],
-  },
-  avatar: {
-    width: 64,
-    height: 64,
-    borderRadius: radius.pill,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   name: {
     color: color.textPrimary,

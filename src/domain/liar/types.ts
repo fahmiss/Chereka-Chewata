@@ -25,14 +25,15 @@ export type Player = {
   displayName: string;
 };
 
+export type VotingMode = 'group' | 'private';
+
 export type LiarSetup = {
   players: Player[];
   categoryIds: string[];
   contentLevels: ContentLevel[];
   randomAnswerOrder: boolean;
-  answerTimerSeconds: number | null;
-  discussionTimerSeconds: number | null;
-  scoringEnabled: boolean;
+  /** Default group decides in the room; private pass-the-phone is optional. */
+  votingMode: VotingMode;
   spicyAcknowledged: boolean;
 };
 
@@ -42,6 +43,7 @@ export type LiarPhase =
   | 'answer_order'
   | 'answers'
   | 'discussion'
+  | 'group_accuse'
   | 'voting_handoff'
   | 'voting_select'
   | 'result';
@@ -77,9 +79,7 @@ export function defaultLiarSetup(players?: Player[]): LiarSetup {
     categoryIds: [],
     contentLevels: ['family'],
     randomAnswerOrder: true,
-    answerTimerSeconds: null,
-    discussionTimerSeconds: null,
-    scoringEnabled: false,
+    votingMode: 'group',
     spicyAcknowledged: false,
   };
 }

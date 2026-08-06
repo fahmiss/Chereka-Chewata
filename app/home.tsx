@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { MoonMark } from '../src/components/brand/MoonMark';
+import { MoonFace } from '../src/components/brand/MoonFace';
 import { GameTile } from '../src/components/ui/GameTile';
 import { Screen, IconButton } from '../src/components/ui/Screen';
 import { GAMES } from '../src/domain/games';
@@ -30,7 +30,7 @@ export default function HomeScreen() {
         </View>
 
         <Animated.View style={[styles.brand, brand]}>
-          <MoonMark size={64} orbit />
+          <MoonFace expression="ready" size={88} />
           <Text style={styles.wordmark}>CHEREKA CHEWATA</Text>
           <Text style={styles.amharic}>{AMHARIC}</Text>
           <Text style={[type.body, styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>

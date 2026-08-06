@@ -16,8 +16,10 @@ import {
 import { countTabooCards, getTabooCategories } from '../../../../src/content/taboo';
 import { countWouldRatherDilemmas, getWouldRatherCategories } from '../../../../src/content/wouldRather';
 import { useGameSetup } from '../../../../src/domain/useGameSetup';
+import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import type { ContentLevel } from '../../../../src/domain/impostor/types';
 import { useT } from '../../../../src/i18n';
+import { localizeText } from '../../../../src/content/localize';
 import { useEnterAnimation } from '../../../../src/theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../../../src/theme/tokens';
 import { type } from '../../../../src/theme/typography';
@@ -29,6 +31,7 @@ const IMPOSTOR_ICONS: Record<string, IconName> = {
   entertainment: 'film',
   school_and_work: 'book',
   people_and_personality: 'smile',
+  football: 'target',
 };
 
 const LIAR_ICONS: Record<string, IconName> = {
@@ -69,7 +72,7 @@ const LIKELY_ICONS: Record<string, IconName> = {
 
 export default function CategoriesScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
-  const { t } = useT();
+  const { t, isAmharic } = useT();
   const {
     setup,
     toggleCategory,
@@ -81,6 +84,7 @@ export default function CategoriesScreen() {
     isMostLikely,
     isWouldRather,
   } = useGameSetup(gameId);
+  const { settings } = useSettings();
 
   const categories = isWouldRather
     ? getWouldRatherCategories()
@@ -111,21 +115,29 @@ export default function CategoriesScreen() {
         ? countTabooCards({ categoryIds, contentLevels: levels })
         : isLiar
           ? countLiarPairs({ categoryIds, contentLevels: levels })
-          : countImpostorWords({ categoryIds, contentLevels: levels });
+          : countImpostorWords({
+              categoryIds,
+              contentLevels: levels,
+              contentLanguage: settings.contentLanguage,
+            });
 
   const totalCards = countFor(setup.categoryIds);
+  const categoryLabel = (category: { name_en: string; name_am?: string }) =>
+    localizeText(isAmharic ? 'am' : 'en', {
+      en: category.name_en,
+      am: category.name_am,
+    });
 
   return (
     <SetupScreen
-      step={2}
       stepLabel={t('setup.categories')}
       title={t('setup.categoriesTitle')}
       subtitle={t('setup.categoriesSubtitle')}
       accent={accent}
-      primaryLabel={t('common.continue')}
+      primaryLabel="Done"
       primaryDisabled={!validation.categoriesOk}
       footerNote={!validation.categoriesOk ? 'Select at least one category.' : undefined}
-      onPrimary={() => router.push(`/game/${gameId}/setup/content-level`)}
+      onPrimary={() => router.back()}
     >
       <View style={styles.topRow}>
         <View style={styles.tally}>
@@ -146,7 +158,7 @@ export default function CategoriesScreen() {
             <CategoryCard
               key={category.id}
               index={index}
-              name={category.name_en}
+              name={categoryLabel(category)}
               accent={accent}
               icon={icons[category.id] ?? 'layers'}
               count={count}

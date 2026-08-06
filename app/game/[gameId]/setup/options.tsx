@@ -1,4 +1,4 @@
-import { router, useLocalSearchParams } from 'expo-router';
+import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import type { ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Segmented, Toggle } from '../../../../src/components/ui/Selectable';
@@ -6,10 +6,7 @@ import { SetupScreen } from '../../../../src/components/ui/SetupScreen';
 import { Surface } from '../../../../src/components/ui/Surface';
 import { getGame } from '../../../../src/domain/games';
 import { useSetup } from '../../../../src/domain/impostor/SetupContext';
-import { useLiarSetup } from '../../../../src/domain/liar/SetupContext';
-import { useMostLikelySetup } from '../../../../src/domain/mostLikely/SetupContext';
 import { useTabooSetup } from '../../../../src/domain/taboo/SetupContext';
-import { useWouldRatherSetup } from '../../../../src/domain/wouldRather/SetupContext';
 import { color, overlay, space } from '../../../../src/theme/tokens';
 import { type } from '../../../../src/theme/typography';
 
@@ -30,89 +27,33 @@ function Note({ text }: { text: string }) {
   );
 }
 
+/**
+ * Advanced settings only. Everything a table changes between rounds now lives
+ * inline on the quick-setup overview — Who's the Liar?, Who's Most Likely To
+ * and Would You Rather have nothing left here, so they bounce back.
+ */
 export default function OptionsScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
-  const game = getGame(String(gameId));
-  const accent = game?.accent ?? color.gameImpostor;
-  if (gameId === 'whos_the_liar') {
-    return <LiarOptions gameId={String(gameId)} accent={accent} />;
-  }
-  if (gameId === 'taboo') {
-    return <TabooOptions gameId={String(gameId)} accent={accent} />;
-  }
-  if (gameId === 'most_likely') {
-    return <MostLikelyOptions gameId={String(gameId)} accent={accent} />;
-  }
-  if (gameId === 'would_you_rather') return <WouldRatherOptions gameId={String(gameId)} accent={accent} />;
+  const id = String(gameId);
+  const accent = getGame(id)?.accent ?? color.gameImpostor;
 
-  return <ImpostorOptions gameId={String(gameId)} accent={accent} />;
+  if (id === 'taboo') return <TabooOptions accent={accent} />;
+  if (id === 'impostor') return <ImpostorOptions accent={accent} />;
+  return <Redirect href={`/game/${id}/setup/review`} />;
 }
 
-function WouldRatherOptions({ gameId, accent }: { gameId: string; accent: string }) {
-  const { setup, patchOptions } = useWouldRatherSetup();
-  return <SetupScreen step={4} stepLabel="Options" title="How many dilemmas?" accent={accent} primaryLabel="Review" onPrimary={() => router.push(`/game/${gameId}/setup/review`)}>
-    <Group label="Session length"><Segmented<number> accent={accent} value={setup.cardCount} onChange={(cardCount) => patchOptions({ cardCount })} options={[{value:10,label:'10'},{value:20,label:'20'},{value:30,label:'30'}]} /><Note text="Point left for A, right for B." /></Group>
-  </SetupScreen>;
-}
-
-function MostLikelyOptions({ gameId, accent }: { gameId: string; accent: string }) {
-  const { setup, patchOptions } = useMostLikelySetup();
-
-  return (
-    <SetupScreen
-      step={4}
-      stepLabel="Options"
-      title="How many prompts?"
-      accent={accent}
-      primaryLabel="Review"
-      onPrimary={() => router.push(`/game/${gameId}/setup/review`)}
-    >
-      <Group label="Session length">
-        <Segmented<number>
-          accent={accent}
-          value={setup.cardCount}
-          onChange={(cardCount) => patchOptions({ cardCount })}
-          options={[
-            { value: 10, label: '10' },
-            { value: 20, label: '20' },
-            { value: 30, label: '30' },
-          ]}
-        />
-        <Note text="Point together. No scores." />
-      </Group>
-    </SetupScreen>
-  );
-}
-
-function ImpostorOptions({ gameId, accent }: { gameId: string; accent: string }) {
+function ImpostorOptions({ accent }: { accent: string }) {
   const { setup, patchOptions } = useSetup();
-  const twoImpostorsLocked = setup.players.length < 8;
 
   return (
     <SetupScreen
-      step={4}
-      stepLabel="Options"
-      title="Game options"
-      subtitle="Keep it simple, or make the vote private."
+      stepLabel="More options"
+      title="Advanced"
+      subtitle="Impostor count and the round basics live on the overview."
       accent={accent}
-      primaryLabel="Review"
-      onPrimary={() => router.push(`/game/${gameId}/setup/review`)}
+      primaryLabel="Done"
+      onPrimary={() => router.back()}
     >
-      <Group label="Impostors">
-        <Segmented<1 | 2>
-          accent={accent}
-          value={setup.impostorCount}
-          onChange={(impostorCount) => patchOptions({ impostorCount })}
-          options={[
-            { value: 1, label: '1 Impostor' },
-            { value: 2, label: '2 · needs 8+', disabled: twoImpostorsLocked },
-          ]}
-        />
-        {setup.impostorCount === 2 ? (
-          <Note text="Advanced mode. Two Impostors win and lose as a team." />
-        ) : null}
-      </Group>
-
       <Group label="Voting">
         <Segmented<'group' | 'private'>
           accent={accent}
@@ -135,86 +76,27 @@ function ImpostorOptions({ gameId, accent }: { gameId: string; accent: string })
       <Group label="Round">
         <Toggle
           accent={accent}
-          label="Show category to Impostor"
-          hint="No direct word hint — category only."
-          value={setup.showCategoryToImpostor}
-          onPress={() =>
-            patchOptions({ showCategoryToImpostor: !setup.showCategoryToImpostor })
-          }
-        />
-        <View style={styles.divider} />
-        <Toggle
-          accent={accent}
           label="Random starting player"
           value={setup.randomStartPlayer}
           onPress={() => patchOptions({ randomStartPlayer: !setup.randomStartPlayer })}
-        />
-        <View style={styles.divider} />
-        <Toggle
-          accent={accent}
-          label="2-minute discussion timer"
-          hint="Off by default."
-          value={setup.discussionTimerSeconds === 120}
-          onPress={() =>
-            patchOptions({
-              discussionTimerSeconds: setup.discussionTimerSeconds === 120 ? null : 120,
-            })
-          }
-        />
-        <View style={styles.divider} />
-        <Toggle
-          accent={accent}
-          label="Scoring"
-          hint="Off for casual play."
-          value={setup.scoringEnabled}
-          onPress={() => patchOptions({ scoringEnabled: !setup.scoringEnabled })}
         />
       </Group>
     </SetupScreen>
   );
 }
 
-function TabooOptions({ gameId, accent }: { gameId: string; accent: string }) {
+function TabooOptions({ accent }: { accent: string }) {
   const { setup, patchOptions } = useTabooSetup();
 
   return (
     <SetupScreen
-      step={4}
-      stepLabel="Options"
-      title="Game options"
-      subtitle="Two teams. Describe without forbidden words."
+      stepLabel="More options"
+      title="Advanced"
+      subtitle="Turn length and target score live on the overview."
       accent={accent}
-      primaryLabel="Review"
-      onPrimary={() => router.push(`/game/${gameId}/setup/review`)}
+      primaryLabel="Done"
+      onPrimary={() => router.back()}
     >
-      <Group label="Round">
-        <Segmented<number>
-          accent={accent}
-          value={setup.roundSeconds}
-          onChange={(roundSeconds) => patchOptions({ roundSeconds })}
-          options={[
-            { value: 45, label: '45s' },
-            { value: 60, label: '60s' },
-            { value: 90, label: '90s' },
-          ]}
-        />
-        <Note text="Sudden-death turns always use 30 seconds." />
-      </Group>
-
-      <Group label="Win">
-        <Segmented<number>
-          accent={accent}
-          value={setup.pointsToWin}
-          onChange={(pointsToWin) => patchOptions({ pointsToWin })}
-          options={[
-            { value: 10, label: '10 pts' },
-            { value: 15, label: '15 pts' },
-            { value: 25, label: '25 pts' },
-          ]}
-        />
-        <Note text="Both teams get the same number of turns before a winner is declared." />
-      </Group>
-
       <Group label="Rules">
         <Toggle
           accent={accent}
@@ -223,68 +105,8 @@ function TabooOptions({ gameId, accent }: { gameId: string; accent: string }) {
           value={setup.skipPenalty}
           onPress={() => patchOptions({ skipPenalty: !setup.skipPenalty })}
         />
+        <View style={styles.divider} />
         <Note text="Max 3 skips per turn. Violation always costs 1. Teams are randomly balanced." />
-      </Group>
-    </SetupScreen>
-  );
-}
-
-function LiarOptions({ gameId, accent }: { gameId: string; accent: string }) {
-  const { setup, patchOptions } = useLiarSetup();
-
-  return (
-    <SetupScreen
-      step={4}
-      stepLabel="Options"
-      title="Game options"
-      subtitle="Set the pace for answers and discussion."
-      accent={accent}
-      primaryLabel="Review"
-      onPrimary={() => router.push(`/game/${gameId}/setup/review`)}
-    >
-      <Group label="Answers">
-        <Toggle
-          accent={accent}
-          label="Random answer order"
-          hint="On by default. The Liar may go first."
-          value={setup.randomAnswerOrder}
-          onPress={() => patchOptions({ randomAnswerOrder: !setup.randomAnswerOrder })}
-        />
-        <View style={styles.divider} />
-        <Toggle
-          accent={accent}
-          label="20-second answer timer"
-          hint="Off by default."
-          value={setup.answerTimerSeconds === 20}
-          onPress={() =>
-            patchOptions({
-              answerTimerSeconds: setup.answerTimerSeconds === 20 ? null : 20,
-            })
-          }
-        />
-      </Group>
-
-      <Group label="Round">
-        <Toggle
-          accent={accent}
-          label="2-minute discussion timer"
-          hint="Off by default."
-          value={setup.discussionTimerSeconds === 120}
-          onPress={() =>
-            patchOptions({
-              discussionTimerSeconds: setup.discussionTimerSeconds === 120 ? null : 120,
-            })
-          }
-        />
-        <View style={styles.divider} />
-        <Toggle
-          accent={accent}
-          label="Scoring"
-          hint="Off for casual play."
-          value={setup.scoringEnabled}
-          onPress={() => patchOptions({ scoringEnabled: !setup.scoringEnabled })}
-        />
-        <Note text="Voting is always private pass-the-phone. Ties runoff once, then the Liar wins." />
       </Group>
     </SetupScreen>
   );

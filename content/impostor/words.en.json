@@ -6,7 +6,9 @@
     "hint_en": "Morning drink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቡና",
+    "hint_am": "የጠዋት መጠጥ"
   },
   {
     "id": "imp_food_002",
@@ -15,7 +17,9 @@
     "hint_en": "Ethiopian staple",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "እንጀራ",
+    "hint_am": "የኢትዮጵያ ዋና ምግብ"
   },
   {
     "id": "imp_food_003",
@@ -24,7 +28,9 @@
     "hint_en": "Fried snack",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሳምቡሳ",
+    "hint_am": "የተጠበሰ ቁርስ"
   },
   {
     "id": "imp_food_004",
@@ -33,7 +39,9 @@
     "hint_en": "Traditional food",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ክትፎ",
+    "hint_am": "ባህላዊ ምግብ"
   },
   {
     "id": "imp_food_005",
@@ -42,7 +50,9 @@
     "hint_en": "Chickpea stew",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሽሮ",
+    "hint_am": "የሽምብራ ወጥ"
   },
   {
     "id": "imp_obj_001",
@@ -51,7 +61,9 @@
     "hint_en": "Rainy day",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጃንጥላ",
+    "hint_am": "የዝናብ ቀን"
   },
   {
     "id": "imp_obj_002",
@@ -60,7 +72,9 @@
     "hint_en": "Always missing",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የስልክ ቻርጀር",
+    "hint_am": "ሁልጊዜ የሚጠፋ"
   },
   {
     "id": "imp_obj_003",
@@ -69,7 +83,9 @@
     "hint_en": "Bathroom",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የጥርስ ብሩሽ",
+    "hint_am": "መታጠቢያ"
   },
   {
     "id": "imp_obj_004",
@@ -78,7 +94,9 @@
     "hint_en": "Opens doors",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቁልፍ",
+    "hint_am": "በር ይከፍታል"
   },
   {
     "id": "imp_obj_005",
@@ -87,7 +105,9 @@
     "hint_en": "Reflection",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መስታወት",
+    "hint_am": "ነጸብራቅ"
   },
   {
     "id": "imp_place_001",
@@ -96,7 +116,9 @@
     "hint_en": "Busy market",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መርካቶ",
+    "hint_am": "ሕዝብ የበዛ ገበያ"
   },
   {
     "id": "imp_place_002",
@@ -105,7 +127,9 @@
     "hint_en": "Addis area",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቦሌ",
+    "hint_am": "የአዲስ አበባ አካባቢ"
   },
   {
     "id": "imp_place_003",
@@ -114,7 +138,9 @@
     "hint_en": "Travel",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አውሮፕላን ማረፊያ",
+    "hint_am": "ጉዞ"
   },
   {
     "id": "imp_place_004",
@@ -123,7 +149,9 @@
     "hint_en": "Quiet books",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቤተ መጻሕፍት",
+    "hint_am": "ጸጥ ያሉ መጻሕፍት"
   },
   {
     "id": "imp_place_005",
@@ -132,7 +160,9 @@
     "hint_en": "Sports crowd",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ስታዲየም",
+    "hint_am": "የስፖርት ሕዝብ"
   },
   {
     "id": "imp_ent_001",
@@ -141,7 +171,9 @@
     "hint_en": "Singing",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ካራኦኬ",
+    "hint_am": "መዘመር"
   },
   {
     "id": "imp_ent_002",
@@ -150,7 +182,9 @@
     "hint_en": "Popular sport",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "እግር ኳስ",
+    "hint_am": "ታዋቂ ስፖርት"
   },
   {
     "id": "imp_ent_003",
@@ -159,7 +193,9 @@
     "hint_en": "Live music",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኮንሰርት",
+    "hint_am": "ቀጥታ ሙዚቃ"
   },
   {
     "id": "imp_ent_004",
@@ -168,7 +204,9 @@
     "hint_en": "Movies",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሲኒማ",
+    "hint_am": "ፊልሞች"
   },
   {
     "id": "imp_ent_005",
@@ -177,7 +215,9 @@
     "hint_en": "Music list",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የሙዚቃ ዝርዝር",
+    "hint_am": "የሙዚቃ ስብስብ"
   },
   {
     "id": "imp_school_001",
@@ -186,7 +226,9 @@
     "hint_en": "Test day",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፈተና",
+    "hint_am": "የፈተና ቀን"
   },
   {
     "id": "imp_school_002",
@@ -195,7 +237,9 @@
     "hint_en": "Due date",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የመጨረሻ ቀን",
+    "hint_am": "መሰጠት ያለበት ጊዜ"
   },
   {
     "id": "imp_school_003",
@@ -204,7 +248,9 @@
     "hint_en": "Work experience",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ልምምድ ሥራ",
+    "hint_am": "የሥራ ልምድ"
   },
   {
     "id": "imp_school_004",
@@ -213,7 +259,9 @@
     "hint_en": "Classroom tool",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ነጭ ሰሌዳ",
+    "hint_am": "የክፍል መሣሪያ"
   },
   {
     "id": "imp_school_005",
@@ -222,7 +270,9 @@
     "hint_en": "Office gather",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ስብሰባ",
+    "hint_am": "የቢሮ መሰብሰብ"
   },
   {
     "id": "imp_people_001",
@@ -231,7 +281,9 @@
     "hint_en": "Talk about others",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሐሜት",
+    "hint_am": "ስለ ሌሎች መናገር"
   },
   {
     "id": "imp_people_002",
@@ -240,7 +292,9 @@
     "hint_en": "Quiet energy",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ውስጠኛ",
+    "hint_am": "ጸጥ ያለ ኃይል"
   },
   {
     "id": "imp_people_003",
@@ -249,7 +303,9 @@
     "hint_en": "Closest person",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቅርብ ጓደኛ",
+    "hint_am": "በጣም ቅርብ ሰው"
   },
   {
     "id": "imp_people_004",
@@ -258,7 +314,9 @@
     "hint_en": "Lives nearby",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጎረቤት",
+    "hint_am": "በአቅራቢያ የሚኖር"
   },
   {
     "id": "imp_people_005",
@@ -267,7 +325,9 @@
     "hint_en": "Funny student",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የክፍል አስቂኝ",
+    "hint_am": "አስቂኝ ተማሪ"
   },
   {
     "id": "imp_spicy_001",
@@ -276,7 +336,9 @@
     "hint_en": "Past romance",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "ቀድሞ ያጋረጠ/ች",
+    "hint_am": "ያለፈ ፍቅር"
   },
   {
     "id": "imp_spicy_002",
@@ -285,7 +347,9 @@
     "hint_en": "Playful interest",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "ፍቅር መሳሳት",
+    "hint_am": "አጫዋች ፍላጎት"
   },
   {
     "id": "imp_spicy_003",
@@ -294,7 +358,9 @@
     "hint_en": "Secret liking",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "የልብ ምኞት",
+    "hint_am": "ምስጢር ፍቅር"
   },
   {
     "id": "imp_food_006",
@@ -303,7 +369,9 @@
     "hint_en": "Sautéed meat",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጥብስ",
+    "hint_am": "የተጠበሰ ሥጋ"
   },
   {
     "id": "imp_food_007",
@@ -312,7 +380,9 @@
     "hint_en": "Spicy chicken stew",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ዶሮ ወጥ",
+    "hint_am": "በርበሬ ያለው ዶሮ"
   },
   {
     "id": "imp_food_008",
@@ -321,7 +391,9 @@
     "hint_en": "Honey wine",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ጠጅ",
+    "hint_am": "የማር ወይን"
   },
   {
     "id": "imp_food_009",
@@ -330,7 +402,9 @@
     "hint_en": "Italian classic",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፓስታ",
+    "hint_am": "ጣሊያናዊ ምግብ"
   },
   {
     "id": "imp_food_010",
@@ -339,7 +413,9 @@
     "hint_en": "Shared slices",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፒዛ",
+    "hint_am": "የሚጋራ ቁራጭ"
   },
   {
     "id": "imp_food_011",
@@ -348,7 +424,9 @@
     "hint_en": "Fast food",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "በርገር",
+    "hint_am": "ፈጣን ምግብ"
   },
   {
     "id": "imp_food_012",
@@ -357,7 +435,9 @@
     "hint_en": "Sweet fruit",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ማንጎ",
+    "hint_am": "ጣፋጭ ፍሬ"
   },
   {
     "id": "imp_food_013",
@@ -366,7 +446,9 @@
     "hint_en": "Green and creamy",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አቮካዶ",
+    "hint_am": "አረንጓዴ እና ለስላሳ"
   },
   {
     "id": "imp_food_014",
@@ -375,7 +457,9 @@
     "hint_en": "Movie snack",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፖፕኮርን",
+    "hint_am": "የፊልም መክሰስ"
   },
   {
     "id": "imp_food_015",
@@ -384,7 +468,9 @@
     "hint_en": "Cold dessert",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አይስ ክሬም",
+    "hint_am": "ቀዝቃዛ ጣፋጭ"
   },
   {
     "id": "imp_food_016",
@@ -393,7 +479,9 @@
     "hint_en": "Flat bread",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቻፓቲ",
+    "hint_am": "ጠፍጣፋ እንጀራ"
   },
   {
     "id": "imp_food_017",
@@ -402,7 +490,9 @@
     "hint_en": "Blended drink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ስሙዚ",
+    "hint_am": "የተደባለቀ መጠጥ"
   },
   {
     "id": "imp_food_018",
@@ -411,7 +501,9 @@
     "hint_en": "Sweet treat",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቸኮሌት",
+    "hint_am": "ጣፋጭ ነገር"
   },
   {
     "id": "imp_food_019",
@@ -420,7 +512,9 @@
     "hint_en": "Sour drink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሎሚ ጭማቂ",
+    "hint_am": "ጣፋጭ አሞለኛ"
   },
   {
     "id": "imp_food_020",
@@ -429,7 +523,9 @@
     "hint_en": "Rice and fish",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሱሺ",
+    "hint_am": "ሩዝ እና ዓሳ"
   },
   {
     "id": "imp_food_021",
@@ -438,7 +534,9 @@
     "hint_en": "Spiced rice",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቢርያኒ",
+    "hint_am": "ቅመም ያለው ሩዝ"
   },
   {
     "id": "imp_food_022",
@@ -447,7 +545,9 @@
     "hint_en": "Flaky pastry",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ክሮዋሳን",
+    "hint_am": "ለስላሳ ቂጣ"
   },
   {
     "id": "imp_food_023",
@@ -456,7 +556,9 @@
     "hint_en": "Extra heat",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "በርበሬ ሶስ",
+    "hint_am": "ተጨማሪ ሙቀት"
   },
   {
     "id": "imp_food_024",
@@ -465,7 +567,9 @@
     "hint_en": "Morning meal",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቁርስ",
+    "hint_am": "የጠዋት ምግብ"
   },
   {
     "id": "imp_food_025",
@@ -474,7 +578,9 @@
     "hint_en": "Outdoor grill",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ባርቤኪው",
+    "hint_am": "ውጭ ማብሰያ"
   },
   {
     "id": "imp_food_026",
@@ -483,7 +589,9 @@
     "hint_en": "Breakfast grid",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ዋፍል",
+    "hint_am": "የቁርስ ፍርግርግ"
   },
   {
     "id": "imp_food_027",
@@ -492,7 +600,9 @@
     "hint_en": "Thick drink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሚልክሼክ",
+    "hint_am": "ወፍራም መጠጥ"
   },
   {
     "id": "imp_food_028",
@@ -501,7 +611,9 @@
     "hint_en": "Strong flavor",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ነጭ ሽንኩርት",
+    "hint_am": "ጠንካራ ጣዕም"
   },
   {
     "id": "imp_food_029",
@@ -510,7 +622,9 @@
     "hint_en": "Bee sweet",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ማር",
+    "hint_am": "የንብ ጣፋጭ"
   },
   {
     "id": "imp_food_030",
@@ -519,7 +633,9 @@
     "hint_en": "Hot cup",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሻይ",
+    "hint_am": "ትኩስ ኩባያ"
   },
   {
     "id": "imp_food_031",
@@ -528,7 +644,9 @@
     "hint_en": "Fruit drink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጭማቂ",
+    "hint_am": "የፍሬ መጠጥ"
   },
   {
     "id": "imp_obj_006",
@@ -537,7 +655,9 @@
     "hint_en": "Private music",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የጆሮ ማዳመጫ",
+    "hint_am": "የግል ሙዚቃ"
   },
   {
     "id": "imp_obj_007",
@@ -546,7 +666,9 @@
     "hint_en": "School bag",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቦርሳ",
+    "hint_am": "የትምህርት ቦርሳ"
   },
   {
     "id": "imp_obj_008",
@@ -555,7 +677,9 @@
     "hint_en": "Bright days",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የፀሐይ መነጽር",
+    "hint_am": "ብሩህ ቀናት"
   },
   {
     "id": "imp_obj_009",
@@ -564,7 +688,9 @@
     "hint_en": "Stay hydrated",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የውሃ ጠርሙስ",
+    "hint_am": "እርጥበት ይጠብቁ"
   },
   {
     "id": "imp_obj_010",
@@ -573,7 +699,9 @@
     "hint_en": "TV control",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሪሞት",
+    "hint_am": "የቴሌቪዥን መቆጣጠሪያ"
   },
   {
     "id": "imp_obj_011",
@@ -582,7 +710,9 @@
     "hint_en": "Sleep soft",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ትራስ",
+    "hint_am": "ለስላሳ እንቅልፍ"
   },
   {
     "id": "imp_obj_012",
@@ -591,7 +721,9 @@
     "hint_en": "Soft light",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሻማ",
+    "hint_am": "ለስላሳ ብርሃን"
   },
   {
     "id": "imp_obj_013",
@@ -600,7 +732,9 @@
     "hint_en": "Cut paper",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መቀስ",
+    "hint_am": "ወረቀት መቁረጥ"
   },
   {
     "id": "imp_obj_014",
@@ -609,7 +743,9 @@
     "hint_en": "Holds money",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኪስ ቦርሳ",
+    "hint_am": "ገንዘብ ይይዛል"
   },
   {
     "id": "imp_obj_015",
@@ -618,7 +754,9 @@
     "hint_en": "Wakes you up",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ማንቂያ ሰዓት",
+    "hint_am": "ያነቃዎታል"
   },
   {
     "id": "imp_obj_016",
@@ -627,7 +765,9 @@
     "hint_en": "Write things down",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ማስታወሻ ደብተር",
+    "hint_am": "ነገሮችን ይጻፉ"
   },
   {
     "id": "imp_obj_017",
@@ -636,7 +776,9 @@
     "hint_en": "Writes ink",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ብዕር",
+    "hint_am": "ቀለም ይጽፋል"
   },
   {
     "id": "imp_obj_018",
@@ -645,7 +787,9 @@
     "hint_en": "Foot covers",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካልሲ",
+    "hint_am": "የእግር ልብስ"
   },
   {
     "id": "imp_obj_019",
@@ -654,7 +798,9 @@
     "hint_en": "Keeps warm",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጃኬት",
+    "hint_am": "ሙቀት ይጠብቃል"
   },
   {
     "id": "imp_obj_020",
@@ -663,7 +809,9 @@
     "hint_en": "Dark helper",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ባትሪ ብርሃን",
+    "hint_am": "የጨለማ መርጃ"
   },
   {
     "id": "imp_obj_021",
@@ -672,7 +820,9 @@
     "hint_en": "Power cord",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የቻርጀር ገመድ",
+    "hint_am": "የኃይል ገመድ"
   },
   {
     "id": "imp_obj_022",
@@ -681,7 +831,9 @@
     "hint_en": "Portable computer",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ላፕቶፕ",
+    "hint_am": "ተንቀሳቃሽ ኮምፒውተር"
   },
   {
     "id": "imp_obj_023",
@@ -690,7 +842,9 @@
     "hint_en": "Typing board",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኪቦርድ",
+    "hint_am": "የመተየብ ሰሌዳ"
   },
   {
     "id": "imp_obj_024",
@@ -699,7 +853,9 @@
     "hint_en": "Computer pointer",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መዳፊት",
+    "hint_am": "የኮምፒውተር ጠቋሚ"
   },
   {
     "id": "imp_obj_025",
@@ -708,7 +864,9 @@
     "hint_en": "Sneeze helper",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቲሹ",
+    "hint_am": "ለማስነጠስ"
   },
   {
     "id": "imp_obj_026",
@@ -717,7 +875,9 @@
     "hint_en": "Wash hands",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሳሙና",
+    "hint_am": "እጅ ይታጠቡ"
   },
   {
     "id": "imp_obj_027",
@@ -726,7 +886,9 @@
     "hint_en": "Dry off",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፎጣ",
+    "hint_am": "ይደርቁ"
   },
   {
     "id": "imp_obj_028",
@@ -735,7 +897,9 @@
     "hint_en": "Travel bag",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሻንጣ",
+    "hint_am": "የጉዞ ቦርሳ"
   },
   {
     "id": "imp_obj_029",
@@ -744,7 +908,9 @@
     "hint_en": "Head safety",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ራስ ቁም ሳጥን",
+    "hint_am": "የራስ ደህንነት"
   },
   {
     "id": "imp_obj_030",
@@ -753,7 +919,9 @@
     "hint_en": "Two wheels",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ብስክሌት",
+    "hint_am": "ሁለት ጎማ"
   },
   {
     "id": "imp_obj_031",
@@ -762,7 +930,9 @@
     "hint_en": "Takes photos",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካሜራ",
+    "hint_am": "ፎቶ ያነሳል"
   },
   {
     "id": "imp_place_006",
@@ -771,7 +941,9 @@
     "hint_en": "Coffee stop",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካፌ",
+    "hint_am": "ቡና ማቆሚያ"
   },
   {
     "id": "imp_place_007",
@@ -780,7 +952,9 @@
     "hint_en": "Green space",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፓርክ",
+    "hint_am": "አረንጓዴ ቦታ"
   },
   {
     "id": "imp_place_008",
@@ -789,7 +963,9 @@
     "hint_en": "Sand and sea",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ባህር ዳርቻ",
+    "hint_am": "አሸዋ እና ባህር"
   },
   {
     "id": "imp_place_009",
@@ -798,7 +974,9 @@
     "hint_en": "Get better",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሆስፒታል",
+    "hint_am": "ለመፈወስ"
   },
   {
     "id": "imp_place_010",
@@ -807,7 +985,9 @@
     "hint_en": "Learn here",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ትምህርት ቤት",
+    "hint_am": "እዚህ ይማሩ"
   },
   {
     "id": "imp_place_011",
@@ -816,7 +996,9 @@
     "hint_en": "Prayer place",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መስጊድ",
+    "hint_am": "የጸሎት ቦታ"
   },
   {
     "id": "imp_place_012",
@@ -825,7 +1007,9 @@
     "hint_en": "Sunday place",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቤተ ክርስቲያን",
+    "hint_am": "የእሁድ ቦታ"
   },
   {
     "id": "imp_place_013",
@@ -834,7 +1018,9 @@
     "hint_en": "Shopping center",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሞል",
+    "hint_am": "የግዢ ማዕከል"
   },
   {
     "id": "imp_place_014",
@@ -843,7 +1029,9 @@
     "hint_en": "Workout spot",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ጂም",
+    "hint_am": "የአካል ብቃት"
   },
   {
     "id": "imp_place_015",
@@ -852,7 +1040,9 @@
     "hint_en": "Cooking room",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኩሽና",
+    "hint_am": "የማብሰያ ክፍል"
   },
   {
     "id": "imp_place_016",
@@ -861,7 +1051,9 @@
     "hint_en": "Mirror room",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መታጠቢያ ቤት",
+    "hint_am": "የመስታወት ክፍል"
   },
   {
     "id": "imp_place_017",
@@ -870,7 +1062,9 @@
     "hint_en": "Outside ledge",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ረገድ",
+    "hint_am": "ውጭ መደረክ"
   },
   {
     "id": "imp_place_018",
@@ -879,7 +1073,9 @@
     "hint_en": "Up and down",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሊፍት",
+    "hint_am": "ላይ እና ታች"
   },
   {
     "id": "imp_place_019",
@@ -888,7 +1084,9 @@
     "hint_en": "Paid ride",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ታክሲ",
+    "hint_am": "የሚከፈል ጉዞ"
   },
   {
     "id": "imp_place_020",
@@ -897,7 +1095,9 @@
     "hint_en": "Waiting spot",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የአውቶቡስ ማቆሚያ",
+    "hint_am": "መጠበቂያ ቦታ"
   },
   {
     "id": "imp_place_021",
@@ -906,7 +1106,9 @@
     "hint_en": "Grocery store",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሱፐርማርኬት",
+    "hint_am": "የግሮሰሪ መደብር"
   },
   {
     "id": "imp_place_022",
@@ -915,7 +1117,9 @@
     "hint_en": "Art and history",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሙዚየም",
+    "hint_am": "ጥበብ እና ታሪክ"
   },
   {
     "id": "imp_place_023",
@@ -924,7 +1128,9 @@
     "hint_en": "Animals visit",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የእንስሳት የአትክልት ስፍራ",
+    "hint_am": "እንስሳት መጎብኘት"
   },
   {
     "id": "imp_place_024",
@@ -933,7 +1139,9 @@
     "hint_en": "Travel sleep",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሆቴል",
+    "hint_am": "የጉዞ እንቅልፍ"
   },
   {
     "id": "imp_place_025",
@@ -942,7 +1150,9 @@
     "hint_en": "Work desks",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቢሮ",
+    "hint_am": "የሥራ ጠረጴዛ"
   },
   {
     "id": "imp_place_026",
@@ -951,7 +1161,9 @@
     "hint_en": "Crops and animals",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "እርሻ",
+    "hint_am": "ሰብል እና እንስሳት"
   },
   {
     "id": "imp_place_027",
@@ -960,7 +1172,9 @@
     "hint_en": "High ground",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ተራራ",
+    "hint_am": "ከፍተኛ መሬት"
   },
   {
     "id": "imp_place_028",
@@ -969,7 +1183,9 @@
     "hint_en": "Flowing water",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ወንዝ",
+    "hint_am": "የሚፈስ ውሃ"
   },
   {
     "id": "imp_place_029",
@@ -978,7 +1194,9 @@
     "hint_en": "Top of building",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ጣሪያ",
+    "hint_am": "የሕንፃ ጫፍ"
   },
   {
     "id": "imp_place_030",
@@ -987,7 +1205,9 @@
     "hint_en": "Loud dancing",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ናይት ክለብ",
+    "hint_am": "ጮክ ያለ ዳንስ"
   },
   {
     "id": "imp_place_031",
@@ -996,7 +1216,9 @@
     "hint_en": "Big celebration",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሰርግ",
+    "hint_am": "ትልቅ ድግስ"
   },
   {
     "id": "imp_ent_006",
@@ -1005,7 +1227,9 @@
     "hint_en": "Streaming show",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "Netflix",
+    "hint_am": "የስትሪሚንግ ትዕይንት"
   },
   {
     "id": "imp_ent_007",
@@ -1014,7 +1238,9 @@
     "hint_en": "Short videos",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "TikTok",
+    "hint_am": "አጭር ቪዲዮ"
   },
   {
     "id": "imp_ent_008",
@@ -1023,7 +1249,9 @@
     "hint_en": "Table fun",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የጠረጴዛ ጨዋታ",
+    "hint_am": "የጠረጴዛ ደስታ"
   },
   {
     "id": "imp_ent_009",
@@ -1032,7 +1260,9 @@
     "hint_en": "Fit the pieces",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፐዝል",
+    "hint_am": "ክፍሎቹን አጣጥሙ"
   },
   {
     "id": "imp_ent_010",
@@ -1041,7 +1271,9 @@
     "hint_en": "Move to music",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ዳንስ",
+    "hint_am": "በሙዚቃ መንቀሳቀስ"
   },
   {
     "id": "imp_ent_011",
@@ -1050,7 +1282,9 @@
     "hint_en": "Makes you laugh",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኮሜዲ",
+    "hint_am": "ያስቃል"
   },
   {
     "id": "imp_ent_012",
@@ -1059,7 +1293,9 @@
     "hint_en": "Audio show",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ፖድካስት",
+    "hint_am": "የድምጽ ትዕይንት"
   },
   {
     "id": "imp_ent_013",
@@ -1068,7 +1304,9 @@
     "hint_en": "Controller fun",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የቪዲዮ ጨዋታ",
+    "hint_am": "የመቆጣጠሪያ ደስታ"
   },
   {
     "id": "imp_ent_014",
@@ -1077,7 +1315,9 @@
     "hint_en": "Online videos",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "YouTube",
+    "hint_am": "የመስመር ቪዲዮ"
   },
   {
     "id": "imp_ent_015",
@@ -1086,7 +1326,9 @@
     "hint_en": "Phone photo",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሴልፊ",
+    "hint_am": "የስልክ ፎቶ"
   },
   {
     "id": "imp_ent_016",
@@ -1095,7 +1337,9 @@
     "hint_en": "Internet jokes",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሚሞች",
+    "hint_am": "የኢንተርኔት ቀልዶች"
   },
   {
     "id": "imp_ent_017",
@@ -1104,7 +1348,9 @@
     "hint_en": "Emotional story",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ድራማ",
+    "hint_am": "ስሜታዊ ታሪክ"
   },
   {
     "id": "imp_ent_018",
@@ -1113,7 +1359,9 @@
     "hint_en": "Perform on stage",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የችሎታ ትዕይንት",
+    "hint_am": "በመድረክ አቅርቡ"
   },
   {
     "id": "imp_ent_019",
@@ -1122,7 +1370,9 @@
     "hint_en": "Rides and lights",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካርኒቫል",
+    "hint_am": "ጨዋታ እና መብራት"
   },
   {
     "id": "imp_ent_020",
@@ -1131,7 +1381,9 @@
     "hint_en": "Tents and tricks",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሰርከስ",
+    "hint_am": "ድንኳን እና ጥበብ"
   },
   {
     "id": "imp_ent_021",
@@ -1140,7 +1392,9 @@
     "hint_en": "Illusion",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የአስማት ብልሃት",
+    "hint_am": "ቅዠት"
   },
   {
     "id": "imp_ent_022",
@@ -1149,7 +1403,9 @@
     "hint_en": "Spins tracks",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ዲጄ",
+    "hint_am": "ሙዚቃ ያሽከረክራል"
   },
   {
     "id": "imp_ent_023",
@@ -1158,7 +1414,9 @@
     "hint_en": "Big event",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፌስቲቫል",
+    "hint_am": "ትልቅ ዝግጅት"
   },
   {
     "id": "imp_ent_024",
@@ -1167,7 +1425,9 @@
     "hint_en": "Stadium game",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የእግር ኳስ ጨዋታ",
+    "hint_am": "የስታዲየም ጨዋታ"
   },
   {
     "id": "imp_ent_025",
@@ -1176,7 +1436,9 @@
     "hint_en": "Hoop sport",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቅርጫት ኳስ",
+    "hint_am": "የቀለበት ስፖርት"
   },
   {
     "id": "imp_ent_026",
@@ -1185,7 +1447,9 @@
     "hint_en": "Racket sport",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቴኒስ",
+    "hint_am": "የራኬት ስፖርት"
   },
   {
     "id": "imp_ent_027",
@@ -1194,7 +1458,9 @@
     "hint_en": "In the water",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መዋኘት",
+    "hint_am": "በውሃ ውስጥ"
   },
   {
     "id": "imp_ent_028",
@@ -1203,7 +1469,9 @@
     "hint_en": "Sleep outdoors",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካምፒንግ",
+    "hint_am": "ውጭ መተኛት"
   },
   {
     "id": "imp_ent_029",
@@ -1212,7 +1480,9 @@
     "hint_en": "Outdoor meal",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፒክኒክ",
+    "hint_am": "የውጭ ምግብ"
   },
   {
     "id": "imp_ent_030",
@@ -1221,7 +1491,9 @@
     "hint_en": "Knock pins",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቦውሊንግ",
+    "hint_am": "ፒን መምታት"
   },
   {
     "id": "imp_ent_031",
@@ -1230,7 +1502,9 @@
     "hint_en": "Puzzle room",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የአምልጦ ማግኛ ክፍል",
+    "hint_am": "የፐዝል ክፍል"
   },
   {
     "id": "imp_school_006",
@@ -1239,7 +1513,9 @@
     "hint_en": "After class",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የቤት ሥራ",
+    "hint_am": "ከክፍል በኋላ"
   },
   {
     "id": "imp_school_007",
@@ -1248,7 +1524,9 @@
     "hint_en": "Classroom lead",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አስተማሪ",
+    "hint_am": "የክፍል መሪ"
   },
   {
     "id": "imp_school_008",
@@ -1257,7 +1535,9 @@
     "hint_en": "Work leader",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "አለቃ",
+    "hint_am": "የሥራ መሪ"
   },
   {
     "id": "imp_school_009",
@@ -1266,7 +1546,9 @@
     "hint_en": "Monthly pay",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ደመወዝ",
+    "hint_am": "ወርሃዊ ክፍያ"
   },
   {
     "id": "imp_school_010",
@@ -1275,7 +1557,9 @@
     "hint_en": "Job paper",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሲቪ",
+    "hint_am": "የሥራ ወረቀት"
   },
   {
     "id": "imp_school_011",
@@ -1284,7 +1568,9 @@
     "hint_en": "Job questions",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ቃለ መጠይቅ",
+    "hint_am": "የሥራ ጥያቄዎች"
   },
   {
     "id": "imp_school_012",
@@ -1293,7 +1579,9 @@
     "hint_en": "Talk with slides",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "አቀራረብ",
+    "hint_am": "በስላይድ ንግግር"
   },
   {
     "id": "imp_school_013",
@@ -1302,7 +1590,9 @@
     "hint_en": "Work message",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ኢሜይል",
+    "hint_am": "የሥራ መልእክት"
   },
   {
     "id": "imp_school_014",
@@ -1311,7 +1601,9 @@
     "hint_en": "Schedule days",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ቀን መቁጠሪያ",
+    "hint_am": "ቀናትን ያቅዱ"
   },
   {
     "id": "imp_school_015",
@@ -1320,7 +1612,9 @@
     "hint_en": "Secret login",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የይለፍ ቃል",
+    "hint_am": "ምስጢር መግቢያ"
   },
   {
     "id": "imp_school_016",
@@ -1329,7 +1623,9 @@
     "hint_en": "Video meeting",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የዙም ጥሪ",
+    "hint_am": "የቪዲዮ ስብሰባ"
   },
   {
     "id": "imp_school_017",
@@ -1338,7 +1634,9 @@
     "hint_en": "Short pause",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የቡና እረፍት",
+    "hint_am": "አጭር ማቆም"
   },
   {
     "id": "imp_school_018",
@@ -1347,7 +1645,9 @@
     "hint_en": "School clothes",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ዩኒፎርም",
+    "hint_am": "የትምህርት ልብስ"
   },
   {
     "id": "imp_school_019",
@@ -1356,7 +1656,9 @@
     "hint_en": "School storage",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሎከር",
+    "hint_am": "የትምህርት ማከማቻ"
   },
   {
     "id": "imp_school_020",
@@ -1365,7 +1667,9 @@
     "hint_en": "School lunch",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካፌቴሪያ",
+    "hint_am": "የትምህርት ምሳ"
   },
   {
     "id": "imp_school_021",
@@ -1374,7 +1678,9 @@
     "hint_en": "Finish school",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ምረቃ",
+    "hint_am": "ትምህርት ማጠናቀቅ"
   },
   {
     "id": "imp_school_022",
@@ -1383,7 +1689,9 @@
     "hint_en": "Degree paper",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ዲፕሎማ",
+    "hint_am": "የዲግሪ ወረቀት"
   },
   {
     "id": "imp_school_023",
@@ -1392,7 +1700,9 @@
     "hint_en": "Group work",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ፕሮጀክት",
+    "hint_am": "የቡድን ሥራ"
   },
   {
     "id": "imp_school_024",
@@ -1401,7 +1711,9 @@
     "hint_en": "Extra hours",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ተጨማሪ ሰዓት",
+    "hint_am": "ተጨማሪ ሰዓታት"
   },
   {
     "id": "imp_school_025",
@@ -1410,7 +1722,9 @@
     "hint_en": "Job level up",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ማስፋፋት",
+    "hint_am": "የሥራ ደረጃ መውጣት"
   },
   {
     "id": "imp_school_026",
@@ -1419,7 +1733,9 @@
     "hint_en": "Desk neighbor",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የሥራ ባልደረባ",
+    "hint_am": "የጠረጴዛ ጎረቤት"
   },
   {
     "id": "imp_school_027",
@@ -1428,7 +1744,9 @@
     "hint_en": "Paper holder",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ክሊፕቦርድ",
+    "hint_am": "የወረቀት መያዣ"
   },
   {
     "id": "imp_school_028",
@@ -1437,7 +1755,9 @@
     "hint_en": "Math helper",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ካልኩሌተር",
+    "hint_am": "የሂሳብ መርጃ"
   },
   {
     "id": "imp_school_029",
@@ -1446,7 +1766,9 @@
     "hint_en": "Heavy reading",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መማሪያ መጽሐፍ",
+    "hint_am": "ከባድ ንባብ"
   },
   {
     "id": "imp_school_030",
@@ -1455,7 +1777,9 @@
     "hint_en": "Paper machine",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አታሚ",
+    "hint_am": "የወረቀት ማሽን"
   },
   {
     "id": "imp_school_031",
@@ -1464,7 +1788,9 @@
     "hint_en": "Clips papers",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ስቴፕለር",
+    "hint_am": "ወረቀት ያያይዛል"
   },
   {
     "id": "imp_people_006",
@@ -1473,7 +1799,9 @@
     "hint_en": "Takes charge",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "መሪ",
+    "hint_am": "ኃላፊነት ይወስዳል"
   },
   {
     "id": "imp_people_007",
@@ -1482,7 +1810,9 @@
     "hint_en": "Always joking",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ቀልደኛ",
+    "hint_am": "ሁልጊዜ ይቀልዳል"
   },
   {
     "id": "imp_people_008",
@@ -1491,7 +1821,9 @@
     "hint_en": "Quiet around people",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "እፍረተኛ",
+    "hint_am": "በሰዎች ዘንድ ጸጥታ"
   },
   {
     "id": "imp_people_009",
@@ -1500,7 +1832,9 @@
     "hint_en": "Faces fear",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ደፋር",
+    "hint_am": "ፍርሃትን ይገጥማል"
   },
   {
     "id": "imp_people_010",
@@ -1509,7 +1843,9 @@
     "hint_en": "Shares freely",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ልግስ",
+    "hint_am": "በነጻ ይጋራል"
   },
   {
     "id": "imp_people_011",
@@ -1518,7 +1854,9 @@
     "hint_en": "Hard to change",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ማይታጠፍ",
+    "hint_am": "ለመለወጥ ከባድ"
   },
   {
     "id": "imp_people_012",
@@ -1527,7 +1865,9 @@
     "hint_en": "Asks why",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ጉጉ",
+    "hint_am": "ለምን ይላል"
   },
   {
     "id": "imp_people_013",
@@ -1536,7 +1876,9 @@
     "hint_en": "Avoids effort",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሰነፍ",
+    "hint_am": "ጥረትን ያስወግዳል"
   },
   {
     "id": "imp_people_014",
@@ -1545,7 +1887,9 @@
     "hint_en": "Wants more",
     "difficulty": "medium",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ታላቅ ምኞት ያለው",
+    "hint_am": "ተጨማሪ ይፈልጋል"
   },
   {
     "id": "imp_people_015",
@@ -1554,7 +1898,9 @@
     "hint_en": "Stays true",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ታማኝ",
+    "hint_am": "እውነተኛ ይቆያል"
   },
   {
     "id": "imp_people_016",
@@ -1563,7 +1909,9 @@
     "hint_en": "Big reactions",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ድራማዊ",
+    "hint_am": "ትልቅ ምላሽ"
   },
   {
     "id": "imp_people_017",
@@ -1572,7 +1920,9 @@
     "hint_en": "Wants to win",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ተወዳዳሪ",
+    "hint_am": "ማሸነፍ ይፈልጋል"
   },
   {
     "id": "imp_people_018",
@@ -1581,7 +1931,9 @@
     "hint_en": "Loves love",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ሮማንቲክ",
+    "hint_am": "ፍቅርን ይወዳል"
   },
   {
     "id": "imp_people_019",
@@ -1590,7 +1942,9 @@
     "hint_en": "Brother or sister",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ወንድም ወይም እህት",
+    "hint_am": "ወንድም/እህት"
   },
   {
     "id": "imp_people_020",
@@ -1599,7 +1953,9 @@
     "hint_en": "Family relative",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አጎት ልጅ",
+    "hint_am": "የቤተሰብ ዘመድ"
   },
   {
     "id": "imp_people_021",
@@ -1608,7 +1964,9 @@
     "hint_en": "Older family",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አያት",
+    "hint_am": "ከፍተኛ ቤተሰብ"
   },
   {
     "id": "imp_people_022",
@@ -1617,7 +1975,9 @@
     "hint_en": "Shares a home",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "የቤት አጋር",
+    "hint_am": "ቤት ይጋራል"
   },
   {
     "id": "imp_people_023",
@@ -1626,7 +1986,9 @@
     "hint_en": "Same side",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "የቡድን አባል",
+    "hint_am": "አንድ ጎን"
   },
   {
     "id": "imp_people_024",
@@ -1635,7 +1997,9 @@
     "hint_en": "Someone new",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ያልታወቀ ሰው",
+    "hint_am": "አዲስ ሰው"
   },
   {
     "id": "imp_people_025",
@@ -1644,7 +2008,9 @@
     "hint_en": "Famous face",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ታዋቂ ሰው",
+    "hint_am": "ታዋቂ ፊት"
   },
   {
     "id": "imp_people_026",
@@ -1653,7 +2019,9 @@
     "hint_en": "Online fame",
     "difficulty": "easy",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "word_am": "ኢንፍሉዌንሰር",
+    "hint_am": "የመስመር ዝና"
   },
   {
     "id": "imp_people_027",
@@ -1662,7 +2030,9 @@
     "hint_en": "Trains the team",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አሰልጣኝ",
+    "hint_am": "ቡድኑን ያሰለጥናል"
   },
   {
     "id": "imp_people_028",
@@ -1671,7 +2041,9 @@
     "hint_en": "Helps patients",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "ሐኪም",
+    "hint_am": "ታማሚዎችን ይረዳል"
   },
   {
     "id": "imp_people_029",
@@ -1680,7 +2052,9 @@
     "hint_en": "Flies planes",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አብራሪ",
+    "hint_am": "አውሮፕላን ያበርራል"
   },
   {
     "id": "imp_people_030",
@@ -1689,7 +2063,9 @@
     "hint_en": "Makes art",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "word_am": "አርቲስት",
+    "hint_am": "ጥበብ ይሠራል"
   },
   {
     "id": "imp_spicy_031",
@@ -1698,7 +2074,9 @@
     "hint_en": "Planned romance",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "የቀን ምሽት",
+    "hint_am": "የታቀደ ፍቅር"
   },
   {
     "id": "imp_spicy_032",
@@ -1707,7 +2085,9 @@
     "hint_en": "Green feeling",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "ቅናት",
+    "hint_am": "አረንጓዴ ስሜት"
   },
   {
     "id": "imp_spicy_033",
@@ -1716,7 +2096,9 @@
     "hint_en": "Lips meet",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "መሳም",
+    "hint_am": "ከንፈሮች ይገናኛሉ"
   },
   {
     "id": "imp_spicy_034",
@@ -1725,7 +2107,9 @@
     "hint_en": "Romance ends",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "መለያየት",
+    "hint_am": "ፍቅር ያበቃል"
   },
   {
     "id": "imp_spicy_035",
@@ -1734,6 +2118,657 @@
     "hint_en": "Hidden crush",
     "difficulty": "easy",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "word_am": "ምስጢር አድናቂ",
+    "hint_am": "የተደበቀ ፍቅር"
+  },
+  {
+    "id": "imp_spicy_036",
+    "word_en": "Butterfly feelings",
+    "category_id": "people_and_personality",
+    "hint_en": "Nervous crush",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የቢራቢሮ ስሜት",
+    "hint_am": "የፍቅር መንቀጥቀጥ"
+  },
+  {
+    "id": "imp_spicy_037",
+    "word_en": "Red flag",
+    "category_id": "people_and_personality",
+    "hint_en": "Warning sign",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ቀይ ባንዲራ",
+    "hint_am": "የማስጠንቀቂያ ምልክት"
+  },
+  {
+    "id": "imp_spicy_038",
+    "word_en": "Green flag",
+    "category_id": "people_and_personality",
+    "hint_en": "Good sign",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "አረንጓዴ ባንዲራ",
+    "hint_am": "ጥሩ ምልክት"
+  },
+  {
+    "id": "imp_spicy_039",
+    "word_en": "Situationship",
+    "category_id": "people_and_personality",
+    "hint_en": "Undefined romance",
+    "difficulty": "medium",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ያልተገለጸ ግንኙነት",
+    "hint_am": "ያልተገለጸ ፍቅር"
+  },
+  {
+    "id": "imp_spicy_040",
+    "word_en": "Love triangle",
+    "category_id": "people_and_personality",
+    "hint_en": "Three-way drama",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የፍቅር ሦስት ማእዘን",
+    "hint_am": "የሦስት ሰዎች ድራማ"
+  },
+  {
+    "id": "imp_spicy_041",
+    "word_en": "Blind date",
+    "category_id": "people_and_personality",
+    "hint_en": "Stranger meetup",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ያልታወቀ ቀን",
+    "hint_am": "ከማያውቁ ጋር መገናኘት"
+  },
+  {
+    "id": "imp_spicy_042",
+    "word_en": "Proposal",
+    "category_id": "people_and_personality",
+    "hint_en": "Marriage ask",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የጋብቻ ጥያቄ",
+    "hint_am": "የጋብቻ ጥያቄ"
+  },
+  {
+    "id": "imp_spicy_043",
+    "word_en": "Honeymoon",
+    "category_id": "places",
+    "hint_en": "Post-wedding trip",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የማር ጨረቃ",
+    "hint_am": "ከሰርግ በኋላ ጉዞ"
+  },
+  {
+    "id": "imp_spicy_044",
+    "word_en": "Romantic rooftop",
+    "category_id": "places",
+    "hint_en": "City date view",
+    "difficulty": "medium",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ሮማንቲክ ጣሪያ",
+    "hint_am": "የከተማ ቀን እይታ"
+  },
+  {
+    "id": "imp_spicy_045",
+    "word_en": "Weekend getaway",
+    "category_id": "places",
+    "hint_en": "Private couple trip",
+    "difficulty": "medium",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የሳምንት መጨረሻ መውጫ",
+    "hint_am": "የግል የጥንዶች ጉዞ"
+  },
+  {
+    "id": "imp_spicy_046",
+    "word_en": "Candlelit restaurant",
+    "category_id": "places",
+    "hint_en": "Dim dinner date",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "በሻማ የበራ ሬስቶራንት",
+    "hint_am": "ደብዛዛ የእራት ቀን"
+  },
+  {
+    "id": "imp_spicy_047",
+    "word_en": "Couple's spa",
+    "category_id": "places",
+    "hint_en": "Shared pampering",
+    "difficulty": "medium",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የጥንዶች ስፓ",
+    "hint_am": "የጋራ እንክብካቤ"
+  },
+  {
+    "id": "imp_spicy_048",
+    "word_en": "Love song",
+    "category_id": "entertainment",
+    "hint_en": "Romantic track",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የፍቅር ዘፈን",
+    "hint_am": "ሮማንቲክ ሙዚቃ"
+  },
+  {
+    "id": "imp_spicy_049",
+    "word_en": "Rom-com",
+    "category_id": "entertainment",
+    "hint_en": "Love movie",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ሮም-ኮም",
+    "hint_am": "የፍቅር ፊልም"
+  },
+  {
+    "id": "imp_spicy_050",
+    "word_en": "Slow dance",
+    "category_id": "entertainment",
+    "hint_en": "Close dancing",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ቀርፋፋ ዳንስ",
+    "hint_am": "ቅርብ ዳንስ"
+  },
+  {
+    "id": "imp_spicy_051",
+    "word_en": "Valentine's Day",
+    "category_id": "entertainment",
+    "hint_en": "Romance holiday",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የፍቅር ቀን",
+    "hint_am": "የፍቅር በዓል"
+  },
+  {
+    "id": "imp_spicy_052",
+    "word_en": "Chocolate strawberries",
+    "category_id": "food_and_drink",
+    "hint_en": "Romantic dessert",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "ቸኮሌት ፍራፍሬ",
+    "hint_am": "ሮማንቲክ ጣፋጭ"
+  },
+  {
+    "id": "imp_spicy_053",
+    "word_en": "Shared milkshake",
+    "category_id": "food_and_drink",
+    "hint_en": "Two straws",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የጋራ ሚልክሼክ",
+    "hint_am": "ሁለት ገለባ"
+  },
+  {
+    "id": "imp_spicy_054",
+    "word_en": "Champagne toast",
+    "category_id": "food_and_drink",
+    "hint_en": "Celebration drink",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የሻምፒዮን ቶስት",
+    "hint_am": "የድግስ መጠጥ"
+  },
+  {
+    "id": "imp_spicy_055",
+    "word_en": "Love letter",
+    "category_id": "everyday_objects",
+    "hint_en": "Written feelings",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የፍቅር ደብዳቤ",
+    "hint_am": "የተጻፈ ስሜት"
+  },
+  {
+    "id": "imp_spicy_056",
+    "word_en": "Engagement ring",
+    "category_id": "everyday_objects",
+    "hint_en": "Promise jewelry",
+    "difficulty": "easy",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የእጅ ቀለበት",
+    "hint_am": "የቃል ኪዳን ጌጣጌጥ"
+  },
+  {
+    "id": "imp_spicy_057",
+    "word_en": "Office crush",
+    "category_id": "school_and_work",
+    "hint_en": "Workplace liking",
+    "difficulty": "medium",
+    "content_level": "spicy",
+    "active": true,
+    "word_am": "የቢሮ ፍቅር",
+    "hint_am": "የሥራ ቦታ ፍላጎት"
+  },
+  {
+    "id": "imp_football_001",
+    "word_en": "Messi",
+    "category_id": "football",
+    "hint_en": "Argentina legend",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Messi",
+    "hint_am": "የአርጀንቲና አፈ ታሪክ"
+  },
+  {
+    "id": "imp_football_002",
+    "word_en": "Ronaldo",
+    "category_id": "football",
+    "hint_en": "Portuguese star",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Ronaldo",
+    "hint_am": "የፖርቱጋል ኮከብ"
+  },
+  {
+    "id": "imp_football_003",
+    "word_en": "Mbappé",
+    "category_id": "football",
+    "hint_en": "French forward",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Mbappé",
+    "hint_am": "የፈረንሳይ አጥቂ"
+  },
+  {
+    "id": "imp_football_004",
+    "word_en": "Haaland",
+    "category_id": "football",
+    "hint_en": "Norwegian striker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Haaland",
+    "hint_am": "የኖርዌይ አጥቂ"
+  },
+  {
+    "id": "imp_football_005",
+    "word_en": "Salah",
+    "category_id": "football",
+    "hint_en": "Egyptian winger",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Salah",
+    "hint_am": "የግብጽ ክንፍ"
+  },
+  {
+    "id": "imp_football_006",
+    "word_en": "Benzema",
+    "category_id": "football",
+    "hint_en": "French striker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Benzema",
+    "hint_am": "የፈረንሳይ አጥቂ"
+  },
+  {
+    "id": "imp_football_007",
+    "word_en": "Modrić",
+    "category_id": "football",
+    "hint_en": "Croatian midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Modrić",
+    "hint_am": "የክሮኤሺያ መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_008",
+    "word_en": "De Bruyne",
+    "category_id": "football",
+    "hint_en": "Belgian playmaker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "De Bruyne",
+    "hint_am": "የቤልጂየም አጫዋች"
+  },
+  {
+    "id": "imp_football_009",
+    "word_en": "Kane",
+    "category_id": "football",
+    "hint_en": "England striker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Kane",
+    "hint_am": "የእንግሊዝ አጥቂ"
+  },
+  {
+    "id": "imp_football_010",
+    "word_en": "Bellingham",
+    "category_id": "football",
+    "hint_en": "England midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Bellingham",
+    "hint_am": "የእንግሊዝ መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_011",
+    "word_en": "Vinícius",
+    "category_id": "football",
+    "hint_en": "Brazil winger",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Vinícius",
+    "hint_am": "የብራዚል ክንፍ"
+  },
+  {
+    "id": "imp_football_012",
+    "word_en": "Lewandowski",
+    "category_id": "football",
+    "hint_en": "Polish striker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Lewandowski",
+    "hint_am": "የፖላንድ አጥቂ"
+  },
+  {
+    "id": "imp_football_013",
+    "word_en": "Neymar",
+    "category_id": "football",
+    "hint_en": "Brazil forward",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Neymar",
+    "hint_am": "የብራዚል አጥቂ"
+  },
+  {
+    "id": "imp_football_014",
+    "word_en": "Saka",
+    "category_id": "football",
+    "hint_en": "Arsenal winger",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Saka",
+    "hint_am": "የአርሰናል ክንፍ"
+  },
+  {
+    "id": "imp_football_015",
+    "word_en": "Rodri",
+    "category_id": "football",
+    "hint_en": "Spain midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Rodri",
+    "hint_am": "የስፔን መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_016",
+    "word_en": "Pedri",
+    "category_id": "football",
+    "hint_en": "Barcelona midfielder",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Pedri",
+    "hint_am": "የባርሴሎና መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_017",
+    "word_en": "Yamal",
+    "category_id": "football",
+    "hint_en": "Young Spain winger",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Yamal",
+    "hint_am": "ወጣት የስፔን ክንፍ"
+  },
+  {
+    "id": "imp_football_018",
+    "word_en": "Ødegaard",
+    "category_id": "football",
+    "hint_en": "Arsenal captain",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Ødegaard",
+    "hint_am": "የአርሰናል ካፒቴን"
+  },
+  {
+    "id": "imp_football_019",
+    "word_en": "Van Dijk",
+    "category_id": "football",
+    "hint_en": "Dutch defender",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Van Dijk",
+    "hint_am": "የሆላንድ ተከላካይ"
+  },
+  {
+    "id": "imp_football_020",
+    "word_en": "Courtois",
+    "category_id": "football",
+    "hint_en": "Belgian keeper",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Courtois",
+    "hint_am": "የቤልጂየም ጠባቂ"
+  },
+  {
+    "id": "imp_football_021",
+    "word_en": "Rashford",
+    "category_id": "football",
+    "hint_en": "Man United forward",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Rashford",
+    "hint_am": "የማን ዩናይትድ አጥቂ"
+  },
+  {
+    "id": "imp_football_022",
+    "word_en": "Foden",
+    "category_id": "football",
+    "hint_en": "City midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Foden",
+    "hint_am": "የሲቲ መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_023",
+    "word_en": "Palmer",
+    "category_id": "football",
+    "hint_en": "Chelsea attacker",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Palmer",
+    "hint_am": "የቸልሲ አጥቂ"
+  },
+  {
+    "id": "imp_football_024",
+    "word_en": "Griezmann",
+    "category_id": "football",
+    "hint_en": "French forward",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Griezmann",
+    "hint_am": "የፈረንሳይ አጥቂ"
+  },
+  {
+    "id": "imp_football_025",
+    "word_en": "Kroos",
+    "category_id": "football",
+    "hint_en": "German midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Kroos",
+    "hint_am": "የጀርመን መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_026",
+    "word_en": "Iniesta",
+    "category_id": "football",
+    "hint_en": "Spain legend",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Iniesta",
+    "hint_am": "የስፔን አፈ ታሪክ"
+  },
+  {
+    "id": "imp_football_027",
+    "word_en": "Zidane",
+    "category_id": "football",
+    "hint_en": "France legend",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Zidane",
+    "hint_am": "የፈረንሳይ አፈ ታሪክ"
+  },
+  {
+    "id": "imp_football_028",
+    "word_en": "Ronaldinho",
+    "category_id": "football",
+    "hint_en": "Brazil magician",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Ronaldinho",
+    "hint_am": "የብራዚል አስማተኛ"
+  },
+  {
+    "id": "imp_football_029",
+    "word_en": "Xavi",
+    "category_id": "football",
+    "hint_en": "Spain midfielder",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Xavi",
+    "hint_am": "የስፔን መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_030",
+    "word_en": "Piqué",
+    "category_id": "football",
+    "hint_en": "Barça defender",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Piqué",
+    "hint_am": "የባርሳ ተከላካይ"
+  },
+  {
+    "id": "imp_football_031",
+    "word_en": "Ramos",
+    "category_id": "football",
+    "hint_en": "Spain defender",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Ramos",
+    "hint_am": "የስፔን ተከላካይ"
+  },
+  {
+    "id": "imp_football_032",
+    "word_en": "Getaneh Kebede",
+    "category_id": "football",
+    "hint_en": "Ethiopia striker",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Getaneh Kebede",
+    "hint_am": "የኢትዮጵያ አጥቂ"
+  },
+  {
+    "id": "imp_football_033",
+    "word_en": "Saladin Said",
+    "category_id": "football",
+    "hint_en": "Ethiopia forward",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Saladin Said",
+    "hint_am": "የኢትዮጵያ አጥቂ"
+  },
+  {
+    "id": "imp_football_034",
+    "word_en": "Shimelis Bekele",
+    "category_id": "football",
+    "hint_en": "Ethiopia midfielder",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Shimelis Bekele",
+    "hint_am": "የኢትዮጵያ መሃል አጥቂ"
+  },
+  {
+    "id": "imp_football_035",
+    "word_en": "Oumed Oukri",
+    "category_id": "football",
+    "hint_en": "Ethiopia striker",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Oumed Oukri",
+    "hint_am": "የኢትዮጵያ አጥቂ"
+  },
+  {
+    "id": "imp_football_036",
+    "word_en": "Abubeker Nassir",
+    "category_id": "football",
+    "hint_en": "Ethiopia forward",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Abubeker Nassir",
+    "hint_am": "የኢትዮጵያ አጥቂ"
+  },
+  {
+    "id": "imp_football_037",
+    "word_en": "Aschalew Tamene",
+    "category_id": "football",
+    "hint_en": "Ethiopia defender",
+    "difficulty": "hard",
+    "content_level": "family",
+    "active": true,
+    "word_am": "Aschalew Tamene",
+    "hint_am": "የኢትዮጵያ ተከላካይ"
   }
 ]

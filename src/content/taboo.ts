@@ -1,6 +1,7 @@
 import type { ContentLevel, TabooCard, TabooCategory } from '../domain/taboo/types';
 import categoriesJson from '../../content/categories/taboo.json';
 import cardsJson from '../../content/taboo/cards.en.json';
+import { prioritizeFresh, recentIds, recordPlayed, reportedIds } from '../storage/contentHistory';
 
 const categories = categoriesJson as TabooCategory[];
 const cards = cardsJson as TabooCard[];
@@ -25,7 +26,7 @@ export function getTabooCards(options: {
       card.active &&
       cats.has(card.category_id) &&
       levels.has(card.content_level) &&
-      !exclude.has(card.id),
+      !exclude.has(card.id) && !reportedIds('taboo').has(card.id),
   );
 }
 
@@ -34,9 +35,13 @@ export function pickTabooCard(options: {
   contentLevels: ContentLevel[];
   excludeIds?: string[];
 }): TabooCard | null {
-  const pool = getTabooCards(options);
+  const pool = prioritizeFresh(getTabooCards(options), 'taboo');
   if (pool.length === 0) return null;
-  return pool[Math.floor(Math.random() * pool.length)] ?? null;
+  const freshCount = pool.filter((item) => !recentIds('taboo').has(item.id)).length;
+  const candidates = freshCount ? pool.slice(0, freshCount) : pool;
+  const picked = candidates[Math.floor(Math.random() * candidates.length)] ?? null;
+  if (picked) recordPlayed('taboo', picked.id);
+  return picked;
 }
 
 export function countTabooCards(options: {

@@ -3,6 +3,7 @@ import { Animated, Modal, Pressable, StyleSheet, Text, View } from 'react-native
 import { duration, easeOut, useReducedMotion } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
+import { MoonFace, type MoonExpression } from '../brand/MoonFace';
 import { Icon, type IconName } from './Icon';
 import { PrimaryButton, type ButtonTone } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
@@ -11,6 +12,8 @@ import { Surface } from './Surface';
 type Props = {
   visible: boolean;
   icon?: IconName;
+  /** Soft 3D mascot — when set, replaces the Lucide badge icon. */
+  moon?: MoonExpression;
   accent?: string;
   title: string;
   message?: string;
@@ -31,6 +34,7 @@ type Props = {
 export function Dialog({
   visible,
   icon = 'alert',
+  moon,
   accent = color.dangerUrgency,
   title,
   message,
@@ -93,14 +97,18 @@ export function Dialog({
           ]}
         >
           <Surface accent={accent} active contentStyle={styles.card}>
-            <View
-              style={[
-                styles.badge,
-                { backgroundColor: alpha(accent, 0.16), borderColor: alpha(accent, 0.4) },
-              ]}
-            >
-              <Icon name={icon} size={24} color={accent} strokeWidth={1.9} />
-            </View>
+            {moon ? (
+              <MoonFace expression={moon} size={56} glow={false} />
+            ) : (
+              <View
+                style={[
+                  styles.badge,
+                  { backgroundColor: alpha(accent, 0.16), borderColor: alpha(accent, 0.4) },
+                ]}
+              >
+                <Icon name={icon} size={24} color={accent} strokeWidth={1.9} />
+              </View>
+            )}
             <Text style={[type.titleLg, styles.title]}>{title}</Text>
             {message ? <Text style={[type.body, styles.message]}>{message}</Text> : null}
             <View style={styles.actions}>

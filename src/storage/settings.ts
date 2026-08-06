@@ -41,7 +41,3 @@ export async function loadSettings(): Promise<AppSettings> {
 export async function saveSettings(settings: AppSettings): Promise<void> {
   await AsyncStorage.setItem(storageKeys.settings, JSON.stringify(settings));
 }
-
-export async function clearCardHistory(): Promise<void> {
-  await AsyncStorage.multiRemove([storageKeys.cardHistory, storageKeys.reportedCards]);
-}

@@ -11,6 +11,7 @@ import {
   beginPlaying,
   confirmTurnSummary,
   createTabooSession,
+  discardCard,
   expireTurn,
   markCorrect,
   markSkip,
@@ -35,6 +36,7 @@ type SessionContextValue = {
     markCorrect: () => void;
     markSkip: () => void;
     markViolation: () => void;
+    discardCard: () => void;
     expireTurn: () => void;
     adjustTurnScore: (delta: number) => void;
     confirmTurnSummary: () => void;
@@ -79,6 +81,7 @@ export function TabooSessionProvider({ children }: { children: ReactNode }) {
       markCorrect: () => update(markCorrect),
       markSkip: () => update(markSkip),
       markViolation: () => update(markViolation),
+      discardCard: () => update(discardCard),
       expireTurn: () => update(expireTurn),
       adjustTurnScore: (delta: number) =>
         update((current) => adjustTurnScore(current, delta)),

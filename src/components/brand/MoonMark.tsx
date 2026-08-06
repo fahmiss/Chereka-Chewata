@@ -12,6 +12,7 @@ type Props = {
 
 /**
  * Crescent moon + three orbiting game dots (brand board, Step 7).
+ * Logo / app-icon mark only — expressive UI moments use the 3D MoonFace mascot.
  *
  * The crescent is a real masked subtraction, so the mark keeps its shape on
  * any surface — the previous version punched the bite out with a

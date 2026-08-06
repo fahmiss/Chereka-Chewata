@@ -3,36 +3,49 @@
     "id": "everyday_objects",
     "name_en": "Everyday Objects",
     "sort_order": 10,
-    "active": true
+    "active": true,
+    "name_am": "የዕለት ተዕለት ነገሮች"
   },
   {
     "id": "food_and_drink",
     "name_en": "Food and Drink",
     "sort_order": 20,
-    "active": true
+    "active": true,
+    "name_am": "ምግብ እና መጠጥ"
   },
   {
     "id": "places",
     "name_en": "Places",
     "sort_order": 30,
-    "active": true
+    "active": true,
+    "name_am": "ቦታዎች"
   },
   {
     "id": "entertainment",
     "name_en": "Entertainment",
     "sort_order": 40,
-    "active": true
+    "active": true,
+    "name_am": "መዝናኛ"
   },
   {
     "id": "school_and_work",
     "name_en": "School and Work",
     "sort_order": 50,
-    "active": true
+    "active": true,
+    "name_am": "ትምህርት እና ሥራ"
   },
   {
     "id": "people_and_personality",
     "name_en": "People and Personality",
     "sort_order": 60,
-    "active": true
+    "active": true,
+    "name_am": "ሰዎች እና ባሕሪ"
+  },
+  {
+    "id": "football",
+    "name_en": "Football",
+    "sort_order": 70,
+    "active": true,
+    "name_am": "እግር ኳስ"
   }
 ]

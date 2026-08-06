@@ -4,16 +4,30 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-08-04._
+_Last updated: 2026-08-06._
 
 ---
 
 ## Open
 
+### Amharic content for remaining games (2026-08-06)
+
+Impostor EN/AM/Mixed shipped. Still English-only for:
+
+- [ ] Who’s the Liar? pairs (`main_question_am` / `liar_question_am`)
+- [ ] Taboo targets + forbidden lists
+- [ ] Most Likely prompts
+- [ ] Would You Rather dilemmas
+- [ ] Category `name_am` for non-Impostor games
+
 ### Impostor polish after first playtest (2026-08-04)
 Vertical slice is playable. Follow-ups once someone runs a real table:
 
-- [ ] Full two-Impostor second-cycle rules (currently simplified)
+- [ ] Two-Impostor mode — **cut from MVP 2026-08-06**, gated behind
+      `TWO_IMPOSTOR_ENABLED` in `src/domain/impostor/types.ts`. To ship it:
+      implement §3.6's second clue-and-vote cycle (a caught Impostor who
+      guesses wrong must not end the round), then flip the flag and restore the
+      1/2 `Segmented` block in `setup/review.tsx`.
 
 ### Shared UI kit extraction (2026-08-04)
 Primary/secondary buttons and setup chrome exist. Extract player chips, toggle,
@@ -21,18 +35,18 @@ and secret-card shell into `src/components/ui` as other games land.
 
 ### Settings leftovers (2026-08-04)
 - [ ] Sound *effects* (cue audio) — toggle is wired and persisted; no audio yet
-- [ ] Privacy / terms placeholders
+- [x] Privacy / terms placeholders — in-app copy dialogs (2026-08-06)
 
 ### Who’s the Liar? polish after first playtest (2026-08-04)
 Vertical slice is playable. Follow-ups once someone runs a real table:
 
 - [ ] Optional answer / discussion timers in the session UI (options persist)
 - [ ] Optional scoring on result
-- [ ] Grow English pairs toward 150+
+- [x] Grow English pairs toward 150+ — now 153 (17 per category), 2026-08-05
 
 ### Taboo polish after first playtest (2026-08-05)
 - [ ] Manual team editor (random balanced split is MVP)
-- [ ] Grow deck toward 300+
+- [x] Grow deck toward 300+ — now 303, Friends 20 → 119, 2026-08-06
 - [ ] Strict-language mode
 
 ### Who’s Most Likely polish after first playtest (2026-08-05)
@@ -41,16 +55,239 @@ Vertical slice is playable. Follow-ups once someone runs a real table:
 - [ ] Couples / close-friends tags
 
 ### Would You Rather polish after first playtest (2026-08-05)
-- [ ] Grow the initial 50-dilemma deck toward 150+
-- [ ] Optional debate timer and group split counters
+- [ ] Optional debate timer
+- [ ] ~~Group split counters~~ — dropped with the move to a single tapped
+      verdict (2026-08-05). Revisit only if per-player tapping comes back.
 
-### Amharic content + typography QA (deferred)
-### EAS Build + store assets (deferred)
+### Store listing / EAS profiles (deferred)
+
+Icons + splash are branded. Skip EAS build profiles until a store submit is real.
+
 ### Analytics + remote report upload (deferred)
 
 ---
 
 ## Shipped
+
+### Brand icons + Impostor Amharic content (2026-08-06)
+
+- Regenerated `assets/icon.png`, splash, adaptive Android foreground/background/
+  monochrome, and favicon from MoonMark geometry (midnight + honey crescent +
+  three orbit dots). No EAS profiles yet.
+- All 252 Impostor words have `word_am` / `hint_am`; categories have `name_am`.
+- Content language EN / Amharic / Mixed unlocked in language gate + Settings.
+- Impostor secrets / results use Ethiopic type when content language is am/mixed.
+- Other games remain English decks for now.
+
+### Playtest pass 1 cleared (2026-08-06)
+
+Owner playtested on a real phone — all five games okay; no blocking issues
+reported. Further polish is elective until the next table finds friction.
+
+### Impostor one shared clue screen (2026-08-06)
+
+After the last role reveal, one clues screen shows who starts + full order.
+No per-player “Next player” loop — table gives clues verbally, then
+**Start discussion**. Spec §3 Steps 4–5 updated.
+
+### Spicy decks grown (2026-08-06)
+
+Spicy restored in UI, then English decks padded so the tier is playable:
+
+- Impostor 8 → 30 · Liar 2 → 20 · Taboo 0 → 27 · Most Likely 2 → 29 ·
+  Would You Rather 24 → 44
+- Tone: dating / exes / confessions / social awkwardness (PG-13), not explicit
+
+### Settings about dialogs (2026-08-06)
+
+- Settings About: Privacy + Terms placeholder dialogs (local-only copy).
+- Spicy briefly cut then restored the same day.
+
+### 3D MoonFace mascot unlocked (2026-08-06)
+
+§18.8 now allows the soft 3D nightcap mascot for personality moments; flat
+`MoonMark` stays the logo. `MoonFace` loads PNGs from `assets/mascot/`
+(ready / secret / caught / delighted / loading / comingSoon) on Home, boot,
+pass-the-phone, Impostor accusation/results, Liar/Taboo finals, and locked
+game details. Style sheet kept in `design-reference/`.
+
+### Flat MoonFace character system (2026-08-06)
+
+Superseded the same day by the 3D unlock above. Brief flat SVG experiment
+(Ready / Secret / Caught / Delighted) lived briefly before the product lock
+changed.
+
+### Taboo deck exhaustion: fair resolution + no frozen turn (2026-08-06)
+
+Two bugs on the same path. Owner's call was "let the trailing team finish its
+turn, then compare."
+
+**1. Matches could be won on a turn advantage.** `beginPlaying` responded to an
+empty deck by jumping to `final` and crowning `leadingWinner()` — bypassing the
+equal-turns guarantee that the normal ending path enforces. Team A could win
+having played one more turn than Team B.
+
+**2. Mid-turn exhaustion froze the turn.** `markCorrect` / `markSkip` /
+`markViolation` / `discardCard` all drew via `withNextCard`, which sets
+`currentCard: null` while leaving `phase: 'playing'`. Every action then guards
+on `!session.currentCard`, so nothing worked until the timer expired.
+
+Fix — new `deckExhausted` flag on the session plus `withNextCardOrRecycle()`:
+
+- Spec §2.6 permits card repeats *only* when the deck is exhausted. That
+  allowance is now spent exactly once, to cover the turn the trailing team is
+  owed, so no match ends on a turn advantage.
+- Mid-turn draws recycle instead of freezing; if even that yields nothing the
+  turn closes to `turn_summary` rather than locking up.
+- `applyTurnAndAdvance` settles the match once the deck has been recycled and
+  turns are equal — checked *before* the sudden-death branch, so the game can't
+  open a sudden death there are no cards for.
+- If the trailing team truly can't be given its turn, the result is a **tie**:
+  comparing scores over unequal turns is the thing being fixed.
+
+Not runtime-verified (no test runner in the repo) — desk-checked across equal
+turns, owed turn, mid-turn exhaustion, and the sudden-death collision.
+
+### Two-Impostor mode cut from MVP (2026-08-06)
+
+The app shipped a mode that README "Out of scope" and spec §3.6 both say should
+wait for one-Impostor to be stable — and its resolution was genuinely wrong, not
+just simplified.
+
+§3.6 requires a second clue-and-vote cycle when a caught Impostor guesses wrong,
+and that regular players win *only* after both Impostors are caught.
+`machine.ts` did `winner: correct ? 'impostor' : 'crew'`, so a wrong guess ended
+the round with the crew winning while the second Impostor sat undetected. Roles
+were assigned correctly for two; the round never accounted for the second one.
+
+- New `TWO_IMPOSTOR_ENABLED = false` in `src/domain/impostor/types.ts`, applied
+  in `createImpostorSession`'s count clamp. Sessions are always 1 Impostor.
+- The 1/2 `Segmented` control is gone from the Impostor quick setup.
+- `assignRoles` keeps its two-Impostor support and `impostorCount` stays
+  `1 | 2`, so the mode returns by flipping one flag and restoring one block.
+- Dropped the now-unused `note` prop from `QuickControlBlock` rather than
+  leaving a speculative API behind.
+
+### Taboo deck 150 → 303, Friends tier 20 → 119 (2026-08-06)
+
+Taboo was the only game where a legitimate setup quietly broke: a Friends-only
+group had **20 cards**, and `beginPlaying` responds to an exhausted deck by
+jumping to `final` and crowning `leadingWinner()` — so the match ended early
+with a possibly-undeserved winner rather than an error.
+
+- +153 cards, 33–34 per category across all 9. Family 184 · Friends 119.
+- Weighted to the gap: ~2/3 of the new cards are Friends.
+- Taboo's `friends` tier means *harder / more niche to describe* (the existing
+  Kitfo, Tej, Dulet), not risqué — new cards follow that reading. No Spicy
+  written; that tier is still locked and may be cut.
+- Existing IDs untouched; the growth diff is purely additive (2295 insertions,
+  0 deletions).
+
+**Fixed 3 pre-existing duplicate targets** (all in the original 150). The same
+word existed in two categories, and `excludedCardIds` de-dupes by card id, not
+by word — so with all categories selected (the default) the same target could
+come up twice in one session with a different forbidden list:
+
+- `taboo_everyday_life_027` Backpack → Suitcase (kept in `school`)
+- `taboo_places_043` Stadium → Post office (kept in `sports`)
+- `taboo_school_071` Teacher → School bell (kept in `jobs`)
+
+IDs preserved so recent-card history and local reports still resolve. All 303
+targets are now unique.
+
+### Would You Rather is tap-to-choose, not physical + countdown (2026-08-05)
+
+**Product-spec override — §7.4 and §7.5 steps 3-4 are superseded for this game.**
+The spec locks "simultaneous physical choice" with left/right pointing and an
+optional 3-second countdown. Owner's call: the ceremony was too much ritual for
+the simplest launch game.
+
+- The room argues out loud, then **someone taps the option they agreed on**.
+  One verdict per dilemma — no per-player input, so no pass-the-phone.
+- Re-tapping the other side changes the verdict, so misreading the table costs
+  one tap instead of being a dead end.
+- `countdown` phase and `countdownValue` are gone. `WouldRatherPhase` is now
+  `choice | discuss | ended`, with `chosen: 'a' | 'b' | null` on the session.
+  `beginCountdown` / `tickCountdown` replaced by `chooseSide(side)`.
+- Setup and how-to-play copy no longer mention pointing or counting down.
+
+Still true to §7.5 step 3 — no neutral answer, the group must land on one.
+**Who's Most Likely To keeps physical pointing and its 3-2-1**; digital voting
+for that game is explicitly out of MVP scope (README), so the two games now use
+different input models on purpose.
+
+Note: this removes the natural home for the open "group split counters" idea —
+a single verdict has no split to count. If that comes back, it needs per-player
+tapping, which is the model this change deliberately rejected.
+
+### Who's the Liar? deck 90 → 153 pairs (2026-08-05)
+Was the thinnest real deck and the closest game to the hero. Now 17 per
+category across all 9, hitting the 150+ launch target from CONTENT.md.
+
+- Family 81 · Friends 70 · Spicy 2 (unchanged — **no new Spicy**, that tier is
+  locked and may be cut; writing for it now would be waste).
+- Existing IDs untouched and unrenumbered — they are keys in recent-card
+  history and local reports. The diff is purely additive: 567 insertions, 0
+  deletions.
+- New pairs keep the deck's signature real-vs-performed framing ("What do you
+  cook to impress someone? / What do you cook when nobody is watching?") so
+  answers overlap and the Liar can blend in, per CONTENT.md's rules.
+
+### Quick setup for all five games + merged discussion screens (2026-08-05)
+
+**Quick setup everywhere.** The Impostor overview pattern now covers every
+game. `Play` opens `setup/review` for all five; defaults are already playable,
+so the only required action is Start game.
+
+- New `src/components/setup/QuickSetup.tsx` — shared chrome (drill-down link
+  rows, inline controls, optional More options). All five games use it; the old
+  `ReviewChrome` stat-card + Edit-pill layout is gone.
+- Inline per game: Impostor — count, category hint, timer · Liar — random answer
+  order · Taboo — turn length, target score · Most Likely / Would You Rather —
+  session length.
+- `setup/options` is now advanced-only and keeps just Impostor (voting mode,
+  random start) and Taboo (skip penalty). Liar, Most Likely and Would You
+  Rather have nothing left there, so the route redirects back to the overview.
+- Drill-downs (players / categories / content) end in **Done → back to the
+  overview** for every game, and no longer show a 01/04 progress rail — there
+  is no linear journey left to be step 1 of.
+- Every session's **Change setup** now returns to the overview instead of
+  dropping into `setup/players`.
+- Fixed: starting a game only cleared *some* other games' sessions (nobody
+  cleared Would You Rather). `useStartGame()` in `review.tsx` now clears all
+  four others, so a stale session can never outlive its game.
+
+**Discussion is a moment, not a screen** (Would You Rather + Who's Most Likely
+To). Both games pushed a separate discuss screen that re-rendered the same card
+*smaller* and added a "Why?" / "Who got the most points?" prompt — taking the
+wording away exactly when the room was arguing about it.
+
+- One card, three states: read → count down → locked. The card never moves,
+  shrinks, or gets replaced; the countdown runs as an overlay over it.
+- The footer keeps the same three slots in every state (disabled while
+  counting), so nothing shifts under the argument.
+- Machines are unchanged — `choice/prompt → countdown → discuss` still drives
+  the stage rail and skip-vs-next semantics. This is a view-only change.
+
+Spec note (AGENTS.md override log): §14.12 lists Discussion as its own screen
+in the recommended Would You Rather sequence, and the shared setup journey
+implies category → content → options → review. Both are now single overviews /
+single cards. §7.5 step 5 is unaffected — nothing stops the group talking, and
+the app no longer instructs them to.
+
+### Impostor quick setup (2026-08-05)
+- Replaced the mandatory four-step Impostor setup journey with one ready-to-play overview.
+- Players, categories, and content remain editable drill-down screens; common hint and timer controls are available inline.
+- Advanced voting and starting-player choices live under More options, and Change setup returns to the overview.
+
+### Playability hardening (2026-08-05)
+- Persistent recent-card deprioritization and locally reported-card suppression
+- Report controls across all five games; Settings reset clears both stores
+- Active-session Android Back confirmation and disabled iOS session swipe-back
+- Taboo auto-pauses when the app backgrounds
+- Content-level availability counts prevent zero-card setup combinations
+- Removed setup toggles whose timer/scoring behavior was not implemented
+- Would You Rather deck expanded from 50 to 150 dilemmas
 
 ### UI restraint pass (2026-08-05)
 - Reduced ambient particles, global bloom, card glows, and decorative hairlines
@@ -83,8 +320,7 @@ Playable end to end alongside Impostor:
 - English deck: 90 pairs across 9 categories
 
 ### Secret-screen privacy + language gate (2026-08-04)
-- **Privacy** — `expo-screen-capture` on Impostor reveal + private vote: blocks
-  screenshots/recording; iOS app-switcher blur; Android blank recents tile.
+- **Privacy** — screenshot blocking removed (2026-08-06); re-add only if asked.
 - **Language gate** — first launch → `/language` (interface EN/AM, content EN
   with Amharic/Mixed marked soon) → Home. Returning users skip. Editable later
   under Settings → Language.

@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from 'react';
 import {
+  accusePlayer,
   beginAnswers,
   beginVoteSelect,
   castVote,
@@ -15,6 +16,7 @@ import {
   nextAnswerOrDiscuss,
   readyToReveal,
   rematchSession,
+  resolveGroupDeadlock,
   startVoting,
 } from './machine';
 import type { LiarSession, LiarSetup } from './types';
@@ -33,6 +35,8 @@ type SessionContextValue = {
     startVoting: () => void;
     beginVoteSelect: () => void;
     castVote: (suspectId: string) => void;
+    accusePlayer: (playerId: string) => void;
+    resolveGroupDeadlock: () => void;
     rematch: () => LiarSession | null;
   };
 };
@@ -74,6 +78,9 @@ export function LiarSessionProvider({ children }: { children: ReactNode }) {
       startVoting: () => update(startVoting),
       beginVoteSelect: () => update(beginVoteSelect),
       castVote: (suspectId: string) => update((current) => castVote(current, suspectId)),
+      accusePlayer: (playerId: string) =>
+        update((current) => accusePlayer(current, playerId)),
+      resolveGroupDeadlock: () => update(resolveGroupDeadlock),
       rematch: () => {
         const current = session;
         if (!current) return null;

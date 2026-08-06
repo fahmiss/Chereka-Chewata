@@ -1,6 +1,8 @@
 import { pickImpostorWord } from '../../content/impostor';
 import {
   createId,
+  TWO_IMPOSTOR_ENABLED,
+  type ContentLanguage,
   type ImpostorSession,
   type ImpostorSetup,
   type Player,
@@ -51,6 +53,7 @@ function rotatedOrder(playerIds: string[], startId: string): string[] {
 export function createImpostorSession(
   setup: ImpostorSetup,
   excludedWordIds: string[] = [],
+  contentLanguage: ContentLanguage = 'en',
 ): ImpostorSession | { error: string } {
   if (setup.players.length < 3) {
     return { error: 'Impostor needs at least 3 players.' };
@@ -65,6 +68,7 @@ export function createImpostorSession(
   const word = pickImpostorWord({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage,
     excludeIds: excludedWordIds,
   });
 
@@ -72,8 +76,13 @@ export function createImpostorSession(
     return { error: 'No cards left for these categories and content levels.' };
   }
 
+  // Gated, not deleted: role assignment already handles two, but the round
+  // never runs §3.6's second clue-and-vote cycle, so catching one Impostor
+  // would settle the round while the other sits undetected.
   const impostorCount: 1 | 2 =
-    setup.impostorCount === 2 && setup.players.length >= 8 ? 2 : 1;
+    TWO_IMPOSTOR_ENABLED && setup.impostorCount === 2 && setup.players.length >= 8
+      ? 2
+      : 1;
 
   const revealOrder = shuffle(setup.players.map((player) => player.id));
   const roles = assignRoles(setup.players, impostorCount);
@@ -88,6 +97,7 @@ export function createImpostorSession(
   return {
     sessionId: createId('sess'),
     setup,
+    contentLanguage,
     phase: 'handoff',
     word,
     roles,
@@ -117,23 +127,27 @@ export function hideRevealAndContinue(session: ImpostorSession): ImpostorSession
   if (session.phase !== 'reveal') return session;
   const nextIndex = session.revealIndex + 1;
   if (nextIndex >= session.revealOrder.length) {
-    return { ...session, phase: 'starting_player', revealIndex: nextIndex };
+    // Skip the dedicated clue-order screen — land on the first turn.
+    return { ...session, phase: 'clues', revealIndex: nextIndex, clueIndex: 0 };
   }
   return { ...session, phase: 'handoff', revealIndex: nextIndex };
 }
 
+/** Legacy: older sessions may still sit on `starting_player`. */
 export function beginClues(session: ImpostorSession): ImpostorSession {
-  if (session.phase !== 'starting_player') return session;
+  if (session.phase !== 'starting_player' && session.phase !== 'clues') return session;
+  if (session.phase === 'clues') return session;
   return { ...session, phase: 'clues', clueIndex: 0 };
 }
 
+/** One shared clue screen — phone does not step through each player. */
 export function nextClueOrDiscuss(session: ImpostorSession): ImpostorSession {
-  if (session.phase !== 'clues') return session;
-  const next = session.clueIndex + 1;
-  if (next >= session.clueOrder.length) {
-    return { ...session, phase: 'discussion', clueIndex: next };
-  }
-  return { ...session, clueIndex: next };
+  if (session.phase !== 'clues' && session.phase !== 'starting_player') return session;
+  return {
+    ...session,
+    phase: 'discussion',
+    clueIndex: session.clueOrder.length,
+  };
 }
 
 export function startVoting(session: ImpostorSession): ImpostorSession {
@@ -322,7 +336,11 @@ export function resolveFinalGuess(
 }
 
 export function rematchSession(session: ImpostorSession): ImpostorSession | { error: string } {
-  const created = createImpostorSession(session.setup, session.excludedWordIds);
+  const created = createImpostorSession(
+    session.setup,
+    session.excludedWordIds,
+    session.contentLanguage,
+  );
   if ('error' in created) return created;
   // Keep the route session id stable so rematch does not orphan /session/[id].
   return { ...created, sessionId: session.sessionId };

@@ -9,17 +9,19 @@ import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
+import { ReportCardButton } from '../session/ReportCardButton';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { MoonFace } from '../brand/MoonFace';
 import { Icon } from '../ui/Icon';
 
 const ACCENT = color.gameMostLikely;
 const STAGES = ['prompt', 'point', 'discuss', 'result'] as const;
 
 function endGame(clearSession: () => void) {
-  clearSession();
   router.replace('/home');
+  clearSession();
 }
 
 function stageFor(phase: MostLikelySession['phase']): string {
@@ -35,112 +37,114 @@ function stageFor(phase: MostLikelySession['phase']): string {
   }
 }
 
-function PromptPhase({ session }: { session: MostLikelySession }) {
+/**
+ * One card, three states: read → count down → pointed.
+ *
+ * The prompt keeps its size and position throughout. Replacing it with a
+ * smaller "Who got the most points?" screen the moment people start arguing
+ * took the wording away exactly when the room needed it.
+ */
+function PromptCard({ session }: { session: MostLikelySession }) {
   const { dispatch, clearSession } = useMostLikelySession();
   const prompt = currentPrompt(session);
   const enter = useEnterAnimation(1, 16);
+  const badgeEnter = useEnterAnimation(0, 10);
+  const phase = session.phase;
+  const counting = phase === 'countdown';
+  const pointed = phase === 'discuss';
   const remaining = session.deck.length - session.index;
-
-  return (
-    <SessionShell
-      eyebrow={`Prompt ${session.index + 1} · ${remaining} left`}
-      stage={stageFor(session.phase)}
-      stages={STAGES}
-      accent={ACCENT}
-      onEndGame={() => endGame(clearSession)}
-      footer={
-        <>
-          <PrimaryButton
-            label="Start countdown"
-            icon="users"
-            onPress={() => dispatch.beginCountdown()}
-          />
-          <SecondaryButton label="Skip prompt" onPress={() => dispatch.skipPrompt()} />
-        </>
-      }
-    >
-      <Animated.View style={[styles.body, enter]}>
-        <Surface accent={ACCENT} active contentStyle={styles.promptCard}>
-          <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
-          <Text style={styles.promptText}>{prompt?.prompt_en}</Text>
-        </Surface>
-        <Text style={[type.bodySm, styles.hint]}>
-          Someone reads it aloud. Then everyone points at the same time.
-        </Text>
-      </Animated.View>
-    </SessionShell>
-  );
-}
-
-function CountdownPhase({ session }: { session: MostLikelySession }) {
-  const { dispatch, clearSession } = useMostLikelySession();
-  const prompt = currentPrompt(session);
+  const last = session.index >= session.deck.length - 1;
   const value = session.countdownValue;
-  const enter = useEnterAnimation(0, 10);
 
   useEffect(() => {
-    if (session.phase !== 'countdown') return;
+    if (!counting) return;
     if (value === 3 || value === 2 || value === 1) hapticImpact('medium');
     if (value === 0) hapticSuccess();
     const id = setTimeout(() => dispatch.tickCountdown(), value === 0 ? 700 : 850);
     return () => clearTimeout(id);
-  }, [session.phase, value, dispatch]);
+  }, [counting, value, dispatch]);
 
-  const label =
-    value === 0 ? 'Point!' : value === null ? '' : String(value);
-
-  return (
-    <SessionShell
-      eyebrow="Point together"
-      stage={stageFor(session.phase)}
-      stages={STAGES}
-      accent={ACCENT}
-      onEndGame={() => endGame(clearSession)}
-    >
-      <View style={styles.countdownWrap}>
-        <Text style={[type.body, styles.countdownPrompt]} numberOfLines={3}>
-          {prompt?.prompt_en}
-        </Text>
-        <Animated.View
-          style={[
-            styles.countdownBadge,
-            enter,
-            glow(ACCENT, 0.4, 28),
-            { borderColor: alpha(ACCENT, 0.5) },
-          ]}
-        >
-          <Text style={styles.countdownValue}>{label}</Text>
-        </Animated.View>
-      </View>
-    </SessionShell>
-  );
-}
-
-function DiscussPhase({ session }: { session: MostLikelySession }) {
-  const { dispatch, clearSession } = useMostLikelySession();
-  const prompt = currentPrompt(session);
-  const last = session.index >= session.deck.length - 1;
+  const countLabel = value === 0 ? 'Point!' : value === null ? '' : String(value);
 
   return (
     <SessionShell
-      eyebrow="Discuss"
-      stage={stageFor(session.phase)}
+      eyebrow={
+        counting
+          ? 'Point together'
+          : pointed
+            ? 'Fingers up'
+            : `Prompt ${session.index + 1} · ${remaining} left`
+      }
+      stage={stageFor(phase)}
       stages={STAGES}
-      title="Who got the most points?"
-      subtitle="Argue it out. No official winner needed."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
+      // Same three slots in every state, so the prompt above never shifts as
+      // the round moves from reading to pointed.
       footer={
-        <PrimaryButton
-          label={last ? 'Finish session' : 'Next prompt'}
-          icon="chevronRight"
-          onPress={() => dispatch.nextPrompt()}
-        />
+        <>
+          <PrimaryButton
+            label={
+              pointed ? (last ? 'Finish session' : 'Next prompt') : 'Start countdown'
+            }
+            icon={pointed ? 'chevronRight' : 'users'}
+            disabled={counting}
+            onPress={() => (pointed ? dispatch.nextPrompt() : dispatch.beginCountdown())}
+          />
+          <SecondaryButton
+            label="Skip prompt"
+            disabled={counting}
+            onPress={() => dispatch.skipPrompt()}
+          />
+          {prompt ? (
+            <ReportCardButton
+              game="most_likely"
+              cardId={prompt.id}
+              onReported={dispatch.skipPrompt}
+            />
+          ) : null}
+        </>
       }
     >
-      <Surface contentStyle={styles.discussCard}>
-        <Text style={[type.body, styles.discussPrompt]}>{prompt?.prompt_en}</Text>
-      </Surface>
+      <Animated.View style={[styles.body, enter]}>
+        <View style={counting ? styles.dimmed : undefined}>
+          <Surface accent={ACCENT} active contentStyle={styles.promptCard}>
+            <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
+            <Text style={styles.promptText}>{prompt?.prompt_en}</Text>
+          </Surface>
+        </View>
+
+        {/*
+          Always rendered, only faded — unmounting it shrinks this centred
+          column and shifts the prompt card the instant the countdown starts.
+          The reserved height also absorbs the one- vs two-line difference
+          between the two hints.
+        */}
+        <Text
+          style={[type.bodySm, styles.hint, counting && styles.hintHidden]}
+          numberOfLines={2}
+        >
+          {pointed
+            ? 'Argue it out. No official winner needed.'
+            : 'Someone reads it aloud. Then everyone points at the same time.'}
+        </Text>
+
+        {counting ? (
+          <View style={styles.countOverlay} pointerEvents="none">
+            <Animated.View
+              style={[
+                styles.countdownBadge,
+                badgeEnter,
+                glow(ACCENT, 0.4, 28),
+                { borderColor: alpha(ACCENT, 0.5) },
+              ]}
+            >
+              <MoonFace expression="timer" size={52} />
+              <Text style={styles.countdownValue}>{countLabel}</Text>
+            </Animated.View>
+          </View>
+        ) : null}
+      </Animated.View>
     </SessionShell>
   );
 }
@@ -167,7 +171,7 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
               label="Change setup"
               onPress={() => {
                 clearSession();
-                router.replace('/game/most_likely/setup/players');
+                router.replace('/game/most_likely/setup/review');
               }}
               style={styles.half}
             />
@@ -181,14 +185,7 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
       }
     >
       <Animated.View style={[styles.ended, enter]}>
-        <View
-          style={[
-            styles.endedBadge,
-            { backgroundColor: alpha(ACCENT, 0.14), borderColor: alpha(ACCENT, 0.4) },
-          ]}
-        >
-          <Icon name="users" size={34} color={ACCENT} strokeWidth={1.8} />
-        </View>
+        <MoonFace expression="delighted" size={96} />
         <Text style={[type.displayLg, { color: color.textPrimary }]}>That’s a wrap</Text>
         <Text style={[type.body, styles.hint]}>
           You played {session.playedCount} prompt{session.playedCount === 1 ? '' : 's'}.
@@ -200,18 +197,8 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
 }
 
 export function MostLikelySessionView({ session }: { session: MostLikelySession }) {
-  switch (session.phase) {
-    case 'prompt':
-      return <PromptPhase session={session} />;
-    case 'countdown':
-      return <CountdownPhase session={session} />;
-    case 'discuss':
-      return <DiscussPhase session={session} />;
-    case 'ended':
-      return <EndedPhase session={session} />;
-    default:
-      return null;
-  }
+  if (session.phase === 'ended') return <EndedPhase session={session} />;
+  return <PromptCard session={session} />;
 }
 
 const styles = StyleSheet.create({
@@ -236,17 +223,23 @@ const styles = StyleSheet.create({
   hint: {
     color: color.textSecondary,
     textAlign: 'center',
+    // Two lines of bodySm — holds the column steady across all three states.
+    minHeight: 40,
   },
-  countdownWrap: {
-    flex: 1,
+  hintHidden: {
+    opacity: 0,
+  },
+  dimmed: {
+    opacity: 0.35,
+  },
+  countOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: space[8],
-  },
-  countdownPrompt: {
-    color: color.textSecondary,
-    textAlign: 'center',
-    paddingHorizontal: space[2],
   },
   countdownBadge: {
     width: 168,
@@ -256,20 +249,13 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(ACCENT, 0.16),
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 2,
   },
   countdownValue: {
     color: color.textPrimary,
     fontFamily: family.display.black,
-    fontSize: 64,
-    lineHeight: 68,
-  },
-  discussCard: {
-    padding: space[5],
-  },
-  discussPrompt: {
-    color: color.textPrimary,
-    fontSize: 20,
-    lineHeight: 30,
+    fontSize: 48,
+    lineHeight: 52,
   },
   ended: {
     flex: 1,

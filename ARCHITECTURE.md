@@ -14,7 +14,7 @@ One Expo app. Earliest build keeps navigation minimal:
 |---|---|
 | Splash | Brand load; first-time → language, returning → home |
 | Home | Brand hero; equal tiles for playable games; quieter coming-next rows |
-| i18n | `src/i18n` — interface EN/AM via Settings; content decks stay English-first |
+| i18n | `src/i18n` — interface EN/AM via Settings; Impostor content EN/AM/Mixed |
 | Game details | Short rules + Play |
 | Setup chain | Players → categories → content level → options → review |
 | Session | State-machine-driven gameplay screens |
@@ -59,10 +59,9 @@ stateDiagram-v2
 
     Handoff --> Reveal : player ready
     Reveal --> Handoff : hide + next player
-    Reveal --> StartingPlayer : all players seen
+    Reveal --> Clues : all players seen
 
-    StartingPlayer --> Clues
-    Clues --> Discussion : everyone gave a clue
+    Clues --> Discussion : group finishes clues (single screen)
     Discussion --> GroupAccuse : votingMode = group
     Discussion --> VoteHandoff : votingMode = private
 
@@ -210,7 +209,7 @@ Rules of thumb:
 
 - Portrait-first; one-handed pass-the-phone use.
 - iOS and Android from the same Expo project (EAS Build later for store binaries).
-- Screenshot / app-switcher protection on secret screens where the platform allows.
+- Screenshot / app-switcher blocking is deferred — do not reintroduce unless asked.
 - Haptics and sound are independently toggleable; respect Reduce Motion.
 
 ---

@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
+import { Animated, AppState, StyleSheet, Text, View } from 'react-native';
 import {
   currentDescriberId,
   getPlayerName,
@@ -10,9 +10,11 @@ import {
 import { useTabooSession } from '../../domain/taboo/SessionContext';
 import type { TabooSession, TeamId } from '../../domain/taboo/types';
 import { useEnterAnimation } from '../../theme/motion';
-import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
+import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell, TABOO_STAGES } from '../session/SessionShell';
+import { ReportCardButton } from '../session/ReportCardButton';
+import { MoonFace } from '../brand/MoonFace';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
@@ -24,8 +26,8 @@ const ACCENT = color.gameTaboo;
 const LOCK_MS = 420;
 
 function endGame(clearSession: () => void) {
-  clearSession();
   router.replace('/home');
+  clearSession();
 }
 
 function stageFor(phase: TabooSession['phase']): string {
@@ -162,6 +164,13 @@ function PlayingPhase({ session }: { session: TabooSession }) {
     return () => clearTimeout(id);
   }, [left, paused, session.phase, dispatch]);
 
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state !== 'active' && session.phase === 'playing') dispatch.pauseTurn();
+    });
+    return () => subscription.remove();
+  }, [session.phase, dispatch]);
+
   useEffect(
     () => () => {
       if (lockTimer.current) clearTimeout(lockTimer.current);
@@ -222,6 +231,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               </Text>
             </PressableScale>
           </View>
+          {card ? <ReportCardButton game="taboo" cardId={card.id} onReported={() => withLock(dispatch.discardCard)} /> : null}
           <View style={styles.actionRow}>
             <PressableScale
               accessibilityRole="button"
@@ -255,6 +265,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
           accessibilityLabel={paused ? `Timer paused at ${left} seconds` : `${left} seconds remaining`}
         >
           <View style={styles.timerReadout}>
+            <MoonFace expression="timer" size={56} />
             <Text style={[styles.timerDigits, urgent && styles.timerDigitsUrgent]}>
               {String(Math.max(left, 0)).padStart(2, '0')}
             </Text>
@@ -399,7 +410,7 @@ function FinalPhase({ session }: { session: TabooSession }) {
               label="Change setup"
               onPress={() => {
                 clearSession();
-                router.replace('/game/taboo/setup/players');
+                router.replace('/game/taboo/setup/review');
               }}
               style={styles.half}
             />
@@ -413,22 +424,17 @@ function FinalPhase({ session }: { session: TabooSession }) {
       }
     >
       <Animated.View style={[styles.finalBlock, enter]}>
-        <View
-          style={[
-            styles.verdictBadge,
-            { backgroundColor: alpha(ACCENT, 0.14), borderColor: alpha(ACCENT, 0.4) },
-            glow(ACCENT, 0.35, 24),
-          ]}
-        >
-          <Icon name="trophy" size={34} color={ACCENT} strokeWidth={1.8} />
-        </View>
+        <MoonFace
+          expression={session.winner === 'tie' ? 'ready' : 'delighted'}
+          size={96}
+        />
         <Text style={[type.displayLg, { color: color.textPrimary }]}>{winner}</Text>
         <ScoreStrip session={session} />
       </Animated.View>
 
       <Dialog
         visible={deckError}
-        icon="layers"
+        moon="caught"
         accent={color.brandPrimary}
         title="Could not rematch"
         message="No cards match these categories and levels."
@@ -656,14 +662,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: space[4],
     paddingTop: space[4],
-  },
-  verdictBadge: {
-    width: 72,
-    height: 72,
-    borderRadius: radius.large,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   resultActions: {
     flexDirection: 'row',

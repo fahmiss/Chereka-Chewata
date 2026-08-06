@@ -7,7 +7,8 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { clearCardHistory, loadSettings, saveSettings } from '../../storage/settings';
+import { clearContentHistory } from '../../storage/contentHistory';
+import { loadSettings, saveSettings } from '../../storage/settings';
 import { setSettingsSnapshot } from './snapshot';
 import {
   defaultSettings,
@@ -65,7 +66,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       setContentLanguage: (contentLanguage) => commit({ ...settings, contentLanguage }),
       setLanguages: (interfaceLanguage, contentLanguage) =>
         commit({ ...settings, interfaceLanguage, contentLanguage }),
-      resetCardHistory: () => clearCardHistory(),
+      resetCardHistory: () => clearContentHistory(),
     }),
     [settings, ready, commit],
   );

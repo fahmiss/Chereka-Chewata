@@ -4,6 +4,7 @@ import { MetaChip, Pill } from '../../../src/components/ui/Chip';
 import { Icon } from '../../../src/components/ui/Icon';
 import { PrimaryButton } from '../../../src/components/ui/PrimaryButton';
 import { IconButton, Screen } from '../../../src/components/ui/Screen';
+import { MoonFace } from '../../../src/components/brand/MoonFace';
 import { getGame } from '../../../src/domain/games';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, radius, space } from '../../../src/theme/tokens';
@@ -31,9 +32,9 @@ const STEPS: Record<string, string[]> = {
     'Laugh, argue, next prompt. No scores required.',
   ],
   would_you_rather: [
-    'Read both choices before anyone decides.',
-    'Count down, then point left for A or right for B.',
-    'Defend your choice, debate, and move to the next dilemma.',
+    'Read both choices out loud. No neutral answers allowed.',
+    'Argue it out — everyone has to defend a side.',
+    'Tap the one the room agreed on, then move to the next dilemma.',
   ],
 };
 
@@ -104,11 +105,13 @@ export default function GameDetailsScreen() {
         {game.playable ? (
           <PrimaryButton
             label={`Play ${game.name}`}
-            onPress={() => router.push(`/game/${game.id}/setup/${game.id === 'would_you_rather' ? 'categories' : 'players'}`)}
+            // Every game opens on its ready-to-play overview — defaults are
+            // already playable, so setup is opt-in rather than a journey.
+            onPress={() => router.push(`/game/${game.id}/setup/review`)}
           />
         ) : (
           <View style={styles.soonBox}>
-            <Icon name="lock" size={18} color={color.textMuted} />
+            <MoonFace expression="comingSoon" size={48} />
             <Text style={[type.button, styles.soonLabel]}>Coming soon</Text>
           </View>
         )}

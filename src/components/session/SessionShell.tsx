@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
-import { useState } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { Animated, BackHandler, StyleSheet, Text, View } from 'react-native';
 import { useT } from '../../i18n';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, radius, space } from '../../theme/tokens';
@@ -61,6 +61,16 @@ export function SessionShell({
   const resolvedEndMessage = endMessage ?? t('session.endMessage');
   const resolvedEndConfirm = endConfirmLabel ?? t('session.endConfirm');
   const resolvedEndCancel = endCancelLabel ?? t('session.keepPlaying');
+  const guardsBack = !!onEndGame;
+
+  useEffect(() => {
+    if (!guardsBack) return;
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      setConfirmVisible(true);
+      return true;
+    });
+    return () => subscription.remove();
+  }, [guardsBack]);
 
   return (
     <Screen accent={accent}>

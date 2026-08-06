@@ -27,7 +27,10 @@ export type WouldRatherSetup = {
   spicyAcknowledged: boolean;
 };
 
-export type WouldRatherPhase = 'choice' | 'countdown' | 'discuss' | 'ended';
+export type WouldRatherPhase = 'choice' | 'discuss' | 'ended';
+
+/** Which option the room agreed on — a verdict, not a per-player vote. */
+export type WouldRatherSide = 'a' | 'b';
 
 export type WouldRatherSession = {
   sessionId: string;
@@ -36,7 +39,7 @@ export type WouldRatherSession = {
   deck: WouldRatherDilemma[];
   index: number;
   playedCount: number;
-  countdownValue: 3 | 2 | 1 | 0 | null;
+  chosen: WouldRatherSide | null;
 };
 
 export function defaultWouldRatherSetup(): WouldRatherSetup {

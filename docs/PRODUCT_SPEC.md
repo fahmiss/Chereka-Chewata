@@ -206,9 +206,11 @@ The app randomly selects a starting player after all roles are viewed.
 
 The Impostor may be selected first. Do not protect the Impostor from this; the risk is part of the familiar game.
 
+After the last secret is hidden, show **one shared clue screen**: who starts, the speaking order, and the clue rules. Do not step the phone through each player with “Next player.”
+
 ### Step 5: Give clues
 
-Beginning with the selected player, every player gives one short verbal clue related to the word.
+Beginning with the selected player, every player gives one short verbal clue related to the word, using the order on screen.
 
 Default rule:
 
@@ -216,7 +218,7 @@ Default rule:
 - Players must not say the secret word.
 - Players should not spell, translate, rhyme with, or state the first letter of the word.
 
-The phone may display whose turn it is, but it does not need to record clues.
+The phone stays on the table for the whole clue round. It does not need to record clues. When the group is done, they advance to discussion.
 
 ### Step 6: Discussion
 
@@ -1260,7 +1262,7 @@ Unless user testing gives strong evidence otherwise:
 - No account is required.
 - Offline play is required.
 - Impostor defaults to group-decides accusation (tap the accused); private pass-the-phone voting is optional.
-- Who’s the Liar uses private pass-the-phone voting by default (revisit after Impostor playtests).
+- Who’s the Liar defaults to group-decides accusation (tap the accused); private pass-the-phone voting is optional.
 - Impostor receives one final word guess when caught.
 - Who’s the Liar does not include a final guess.
 - Taboo uses two teams and a 60-second default timer.
@@ -2325,12 +2327,12 @@ Motion should create energy without slowing play.
 
 ## 15.9 Icon and illustration style
 
-- Use bold, rounded, simple icons.
-- Prefer two-dimensional shapes with limited detail.
-- Each game icon should communicate its mechanic, not merely decorate the card.
-- Illustrations may use abstract moons, stars, cards, speech bubbles, eyes, question marks, and playful silhouettes.
+- Use bold, rounded, simple icons for UI chrome (Lucide-style geometry).
+- Game icons should communicate mechanic, not merely decorate the card.
+- The Chereka moon mascot may use soft 3D rendering (nightcap character) for
+  personality moments — see §18.8. The primary logo mark stays flat.
+- Illustrations may use moons, stars, cards, speech bubbles, and playful poses.
 - Avoid culturally generic safari imagery, overused coffee imagery, national flags, and traditional patterns used only as decoration.
-- A mascot is not required for MVP.
 
 ## 15.10 Key-screen visual direction
 
@@ -2604,10 +2606,15 @@ Motion:
 
 Illustration:
 
-- Flat, rounded, graphic, and expressive.
-- Moon character may appear in onboarding, empty states, and marketing, but not on every gameplay screen.
-- The mascot is supporting personality, not navigation chrome.
-- Avoid 3D-rendered mascots, detailed shadows, horror cues, or generic Ethiopian clichés.
+- Soft 3D rendered moon mascot (nightcap character) is approved for hero,
+  empty, loading, result, and marketing moments.
+- Keep the primary logo mark (`MoonMark`) flat and geometric — app icon and
+  favicon stay silhouette-first; the 3D character is not the logo.
+- Mascot may appear in onboarding, empty states, loading, pass-the-phone,
+  results, and marketing — not as dense navigation chrome or tiny list glyphs.
+- Prefer expression / pose alone at small sizes; drop held props when the UI
+  already labels the state.
+- Avoid horror cues or generic Ethiopian clichés.
 
 ## 18.9 Accessibility lock
 

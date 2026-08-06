@@ -808,5 +808,734 @@
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
+  },
+  {
+    "id": "liar_food_091",
+    "main_question_en": "What do you order when you're really hungry?",
+    "liar_question_en": "What do you order when you're barely hungry?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_food_092",
+    "main_question_en": "Which dish is worth the wait?",
+    "liar_question_en": "Which dish is never worth the price?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_food_093",
+    "main_question_en": "What do you always add to your plate?",
+    "liar_question_en": "What do you always push to the side?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_food_094",
+    "main_question_en": "Which drink do you make for guests?",
+    "liar_question_en": "Which drink do you only make for yourself?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_food_095",
+    "main_question_en": "What food reminds you of home?",
+    "liar_question_en": "What food reminds you of a bad week?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_food_096",
+    "main_question_en": "Which fasting dish do you look forward to?",
+    "liar_question_en": "Which fasting dish do you just tolerate?",
+    "category_id": "food",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_food_097",
+    "main_question_en": "What would you cook to impress someone?",
+    "liar_question_en": "What do you cook when nobody is watching?",
+    "category_id": "food",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_098",
+    "main_question_en": "Which part of the city would you show a visitor?",
+    "liar_question_en": "Which part would you warn them about?",
+    "category_id": "addis_life",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_099",
+    "main_question_en": "What is worth sitting in traffic for?",
+    "liar_question_en": "What is never worth the traffic?",
+    "category_id": "addis_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_100",
+    "main_question_en": "Which route do you know by heart?",
+    "liar_question_en": "Which route do you dread?",
+    "category_id": "addis_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_101",
+    "main_question_en": "Where do you go to think?",
+    "liar_question_en": "Where do you go to be seen?",
+    "category_id": "addis_life",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_102",
+    "main_question_en": "What sound tells you you're home?",
+    "liar_question_en": "What sound wakes you up too early?",
+    "category_id": "addis_life",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_103",
+    "main_question_en": "Which neighbourhood would you move to?",
+    "liar_question_en": "Which neighbourhood is overrated?",
+    "category_id": "addis_life",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_104",
+    "main_question_en": "What do you always budget for?",
+    "liar_question_en": "What do you always overspend on?",
+    "category_id": "addis_life",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_105",
+    "main_question_en": "Which friend keeps the group together?",
+    "liar_question_en": "Which friend disappears for months?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_friends_106",
+    "main_question_en": "Who tells the best stories?",
+    "liar_question_en": "Who exaggerates the most?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_107",
+    "main_question_en": "Which friend would you travel with?",
+    "liar_question_en": "Which friend would you never share a room with?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_108",
+    "main_question_en": "Who gives the most honest opinion?",
+    "liar_question_en": "Who agrees with everyone?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_109",
+    "main_question_en": "Which friend always arrives first?",
+    "liar_question_en": "Which friend is always late?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_friends_110",
+    "main_question_en": "Who would you lend money to?",
+    "liar_question_en": "Who still owes you money?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_111",
+    "main_question_en": "Which friend actually makes the plans?",
+    "liar_question_en": "Which friend cancels at the last minute?",
+    "category_id": "friends",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_112",
+    "main_question_en": "What did you always do the night before an exam?",
+    "liar_question_en": "What did you promise to do and never did?",
+    "category_id": "school_and_university",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_113",
+    "main_question_en": "Which teacher changed how you think?",
+    "liar_question_en": "Which teacher did everyone avoid?",
+    "category_id": "school_and_university",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_114",
+    "main_question_en": "Where did you actually study?",
+    "liar_question_en": "Where did you pretend to study?",
+    "category_id": "school_and_university",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_115",
+    "main_question_en": "What was the best part of campus?",
+    "liar_question_en": "What was the worst part of campus?",
+    "category_id": "school_and_university",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_116",
+    "main_question_en": "Which group project went well?",
+    "liar_question_en": "Which group project did you carry alone?",
+    "category_id": "school_and_university",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_117",
+    "main_question_en": "What subject would you study again?",
+    "liar_question_en": "What subject would you drop today?",
+    "category_id": "school_and_university",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_118",
+    "main_question_en": "What did you spend your allowance on?",
+    "liar_question_en": "What did you say you spent it on?",
+    "category_id": "school_and_university",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_119",
+    "main_question_en": "Who actually runs the house?",
+    "liar_question_en": "Who thinks they run the house?",
+    "category_id": "family",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_120",
+    "main_question_en": "What tradition would you keep forever?",
+    "liar_question_en": "What tradition do you quietly skip?",
+    "category_id": "family",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_121",
+    "main_question_en": "Which relative calls the most?",
+    "liar_question_en": "Which relative never picks up?",
+    "category_id": "family",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_family_122",
+    "main_question_en": "Who is the best cook in the family?",
+    "liar_question_en": "Who thinks they are the best cook?",
+    "category_id": "family",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_123",
+    "main_question_en": "What do gatherings always run out of?",
+    "liar_question_en": "What is always left over?",
+    "category_id": "family",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_family_124",
+    "main_question_en": "Which sibling got away with more?",
+    "liar_question_en": "Which sibling got blamed for everything?",
+    "category_id": "family",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_125",
+    "main_question_en": "What advice from home do you still follow?",
+    "liar_question_en": "What advice do you nod at and ignore?",
+    "category_id": "family",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_126",
+    "main_question_en": "What song gets everyone dancing?",
+    "liar_question_en": "What song clears the room?",
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_127",
+    "main_question_en": "Which film could you rewatch forever?",
+    "liar_question_en": "Which film did you never finish?",
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_128",
+    "main_question_en": "What do you listen to while working?",
+    "liar_question_en": "What do you listen to when nobody is around?",
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_129",
+    "main_question_en": "Which show did everyone tell you to watch?",
+    "liar_question_en": "Which show did you pretend to have watched?",
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_130",
+    "main_question_en": "What is your go-to karaoke song?",
+    "liar_question_en": "What song would you refuse to sing?",
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_131",
+    "main_question_en": "Which artist did you love as a teenager?",
+    "liar_question_en": "Which artist are you embarrassed to have loved?",
+    "category_id": "music_and_entertainment",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_132",
+    "main_question_en": "What do you always play in the car?",
+    "liar_question_en": "What always gets skipped in the car?",
+    "category_id": "music_and_entertainment",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_travel_133",
+    "main_question_en": "Which trip would you take again tomorrow?",
+    "liar_question_en": "Which trip did you regret?",
+    "category_id": "travel",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_134",
+    "main_question_en": "What do you always forget to pack?",
+    "liar_question_en": "What do you pack and never use?",
+    "category_id": "travel",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_travel_135",
+    "main_question_en": "Which city would you live in for a year?",
+    "liar_question_en": "Which city is fine for a weekend only?",
+    "category_id": "travel",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_136",
+    "main_question_en": "Who is the best person to travel with?",
+    "liar_question_en": "Who is the worst person to travel with?",
+    "category_id": "travel",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_137",
+    "main_question_en": "What do you buy first when you land?",
+    "liar_question_en": "What do you refuse to pay for abroad?",
+    "category_id": "travel",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_138",
+    "main_question_en": "Where do you tell people you want to go?",
+    "liar_question_en": "Where do you actually want to go?",
+    "category_id": "travel",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_139",
+    "main_question_en": "What is your ideal length for a trip?",
+    "liar_question_en": "How long before you want to go home?",
+    "category_id": "travel",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_140",
+    "main_question_en": "What makes you trust someone quickly?",
+    "liar_question_en": "What makes you lose interest quickly?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_141",
+    "main_question_en": "Which habit is a dealbreaker?",
+    "liar_question_en": "Which habit can you learn to live with?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_142",
+    "main_question_en": "What is a good sign on a second date?",
+    "liar_question_en": "What is a warning sign?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_143",
+    "main_question_en": "Who should plan the date?",
+    "liar_question_en": "Who should pay for it?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_144",
+    "main_question_en": "What do you tell your friends about someone new?",
+    "liar_question_en": "What do you keep to yourself?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_145",
+    "main_question_en": "Which couple does everyone admire?",
+    "liar_question_en": "Which couple confuses everyone?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_146",
+    "main_question_en": "What would you compromise on?",
+    "liar_question_en": "What would you never compromise on?",
+    "category_id": "relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_147",
+    "main_question_en": "What do you drink first thing?",
+    "liar_question_en": "What do you drink just to be polite?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_148",
+    "main_question_en": "What chore do you do immediately?",
+    "liar_question_en": "What chore do you put off for weeks?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_149",
+    "main_question_en": "How early do you actually arrive?",
+    "liar_question_en": "How early do you say you'll arrive?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_150",
+    "main_question_en": "What do you spend on without thinking?",
+    "liar_question_en": "What do you refuse to spend money on?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_151",
+    "main_question_en": "Which seat do you take in a room?",
+    "liar_question_en": "Which seat do you avoid?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_152",
+    "main_question_en": "What do you do when you can't sleep?",
+    "liar_question_en": "What do you tell people you do?",
+    "category_id": "everyday_preferences",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_153",
+    "main_question_en": "Which notification do you check instantly?",
+    "liar_question_en": "Which do you leave unread for days?",
+    "category_id": "everyday_preferences",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_154",
+    "main_question_en": "What would make you text an ex?",
+    "liar_question_en": "What would make you block an ex?",
+    "category_id": "relationships",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_155",
+    "main_question_en": "What confession would scare a new partner?",
+    "liar_question_en": "What confession would impress a new partner?",
+    "category_id": "relationships",
+    "content_level": "spicy",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "liar_relationships_156",
+    "main_question_en": "Which dating app move is clever?",
+    "liar_question_en": "Which dating app move is desperate?",
+    "category_id": "relationships",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_157",
+    "main_question_en": "Which friend would you set up on a date?",
+    "liar_question_en": "Which friend should never date your crush?",
+    "category_id": "friends",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_friends_158",
+    "main_question_en": "What crush secret would you keep for a friend?",
+    "liar_question_en": "What crush secret would you accidentally spill?",
+    "category_id": "friends",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_159",
+    "main_question_en": "Where in Addis is a perfect first date?",
+    "liar_question_en": "Where in Addis is a terrible first date?",
+    "category_id": "addis_life",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_addis_life_160",
+    "main_question_en": "Which café feels flirty after dark?",
+    "liar_question_en": "Which café feels like a job interview?",
+    "category_id": "addis_life",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_161",
+    "main_question_en": "Who would you take on a surprise weekend trip?",
+    "liar_question_en": "Who would you never share a hotel room with?",
+    "category_id": "travel",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_travel_162",
+    "main_question_en": "What vacation with a partner sounds dreamy?",
+    "liar_question_en": "What vacation with a partner sounds stressful?",
+    "category_id": "travel",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_163",
+    "main_question_en": "Which song is your secret romance anthem?",
+    "liar_question_en": "Which song reminds you of a messy breakup?",
+    "category_id": "music_and_entertainment",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_music_and_entertainment_164",
+    "main_question_en": "What movie kiss scene do you rewatch?",
+    "liar_question_en": "What movie breakup scene hits too hard?",
+    "category_id": "music_and_entertainment",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_165",
+    "main_question_en": "What texting habit turns you on to someone?",
+    "liar_question_en": "What texting habit makes you lose interest?",
+    "category_id": "everyday_preferences",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_everyday_preferences_166",
+    "main_question_en": "What late-night message is exciting?",
+    "liar_question_en": "What late-night message is a red flag?",
+    "category_id": "everyday_preferences",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_167",
+    "main_question_en": "Who was your most memorable campus crush?",
+    "liar_question_en": "Who was your most awkward campus crush?",
+    "category_id": "school_and_university",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_school_and_university_168",
+    "main_question_en": "What class crush move is bold?",
+    "liar_question_en": "What class crush move is embarrassing?",
+    "category_id": "school_and_university",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_food_169",
+    "main_question_en": "What dinner order screams 'trying to impress'?",
+    "liar_question_en": "What dinner order screams 'I gave up'?",
+    "category_id": "food",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "liar_family_170",
+    "main_question_en": "What would you hide from family about your dating life?",
+    "liar_question_en": "What dating news would you announce first?",
+    "category_id": "family",
+    "content_level": "spicy",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "liar_family_171",
+    "main_question_en": "Which relative's dating advice would you take?",
+    "liar_question_en": "Which relative's dating advice would you ignore?",
+    "category_id": "family",
+    "content_level": "spicy",
+    "difficulty": "medium",
+    "active": true
   }
 ]

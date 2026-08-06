@@ -5,7 +5,13 @@ import { Dialog } from '../../../../src/components/ui/Dialog';
 import type { IconName } from '../../../../src/components/ui/Icon';
 import { OptionRow } from '../../../../src/components/ui/Selectable';
 import { SetupScreen } from '../../../../src/components/ui/SetupScreen';
+import { countImpostorWords } from '../../../../src/content/impostor';
+import { countLiarPairs } from '../../../../src/content/liar';
+import { countMostLikelyPrompts } from '../../../../src/content/mostLikely';
+import { countTabooCards } from '../../../../src/content/taboo';
+import { countWouldRatherDilemmas } from '../../../../src/content/wouldRather';
 import { useGameSetup } from '../../../../src/domain/useGameSetup';
+import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import type { ContentLevel } from '../../../../src/domain/impostor/types';
 import { useEnterAnimation } from '../../../../src/theme/motion';
 import { color, space } from '../../../../src/theme/tokens';
@@ -42,9 +48,35 @@ const LEVELS: {
 
 export default function ContentLevelScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
-  const { setup, toggleContentLevel, acknowledgeSpicy, validation, accent } =
-    useGameSetup(gameId);
+  const {
+    setup,
+    toggleContentLevel,
+    acknowledgeSpicy,
+    validation,
+    accent,
+    isLiar,
+    isTaboo,
+    isMostLikely,
+    isWouldRather,
+  } = useGameSetup(gameId);
+  const { settings } = useSettings();
   const [spicyPromptVisible, setSpicyPromptVisible] = useState(false);
+
+  const countFor = (contentLevels: ContentLevel[]) =>
+    isWouldRather
+      ? countWouldRatherDilemmas({ categoryIds: setup.categoryIds, contentLevels })
+      : isMostLikely
+        ? countMostLikelyPrompts({ categoryIds: setup.categoryIds, contentLevels })
+        : isTaboo
+          ? countTabooCards({ categoryIds: setup.categoryIds, contentLevels })
+          : isLiar
+            ? countLiarPairs({ categoryIds: setup.categoryIds, contentLevels })
+            : countImpostorWords({
+                categoryIds: setup.categoryIds,
+                contentLevels,
+                contentLanguage: settings.contentLanguage,
+              });
+  const selectedCount = countFor(setup.contentLevels);
 
   const onToggle = (level: ContentLevel) => {
     if (
@@ -60,15 +92,22 @@ export default function ContentLevelScreen() {
 
   return (
     <SetupScreen
-      step={3}
       stepLabel="Content"
       title="Content level"
-      subtitle="Family is the default. Levels stack."
+      subtitle="Family is the default. Levels stack. Spicy needs a one-time OK."
       accent={accent}
-      primaryLabel="Continue"
-      primaryDisabled={!validation.contentOk || !validation.spicyOk}
-      footerNote={!validation.contentOk ? 'Pick at least one level.' : undefined}
-      onPrimary={() => router.push(`/game/${gameId}/setup/options`)}
+      primaryLabel="Done"
+      primaryDisabled={!validation.contentOk || !validation.spicyOk || selectedCount === 0}
+      footerNote={
+        !validation.contentOk
+          ? 'Pick at least one level.'
+          : !validation.spicyOk
+            ? 'Confirm Spicy before continuing.'
+            : selectedCount === 0
+              ? 'No cards match this combination.'
+              : `${selectedCount} cards available`
+      }
+      onPrimary={() => router.back()}
     >
       <View style={styles.list}>
         {LEVELS.map((level, index) => (
@@ -80,6 +119,7 @@ export default function ContentLevelScreen() {
             icon={level.icon}
             accent={level.accent}
             selected={setup.contentLevels.includes(level.id)}
+            count={countFor([level.id])}
             onPress={() => onToggle(level.id)}
           />
         ))}
@@ -112,6 +152,7 @@ function LevelRow({
   icon,
   accent,
   selected,
+  count,
   onPress,
 }: {
   index: number;
@@ -120,6 +161,7 @@ function LevelRow({
   icon: IconName;
   accent: string;
   selected: boolean;
+  count: number;
   onPress: () => void;
 }) {
   const enter = useEnterAnimation(index);
@@ -129,9 +171,11 @@ function LevelRow({
       <OptionRow
         title={title}
         description={body}
+        meta={count > 0 ? `${count} cards` : 'Unavailable for these categories'}
         icon={icon}
         accent={accent}
         selected={selected}
+        disabled={count === 0 && !selected}
         onPress={onPress}
       />
     </Animated.View>

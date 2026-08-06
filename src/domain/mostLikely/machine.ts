@@ -4,6 +4,7 @@ import {
   type MostLikelySession,
   type MostLikelySetup,
 } from './types';
+import { recordPlayed } from '../../storage/contentHistory';
 
 export function currentPrompt(session: MostLikelySession) {
   return session.deck[session.index] ?? null;
@@ -28,6 +29,7 @@ export function createMostLikelySession(
   if (deck.length === 0) {
     return { error: 'No prompts left for these categories and content levels.' };
   }
+  recordPlayed('most_likely', deck[0]!.id);
 
   return {
     sessionId: createId('sess'),
@@ -76,6 +78,7 @@ function advance(session: MostLikelySession, countPlayed: boolean): MostLikelySe
       countdownValue: null,
     };
   }
+  recordPlayed('most_likely', session.deck[nextIndex]!.id);
   return {
     ...session,
     phase: 'prompt',

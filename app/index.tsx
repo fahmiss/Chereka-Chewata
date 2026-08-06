@@ -1,6 +1,7 @@
 import { Redirect } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { MoonFace } from '../src/components/brand/MoonFace';
 import { useSettings } from '../src/domain/settings/SettingsContext';
 import { hasCompletedLanguageGate } from '../src/storage/onboarding';
 import { color } from '../src/theme/tokens';
@@ -23,7 +24,11 @@ export default function Index() {
   }, []);
 
   if (!ready || gateDone === null) {
-    return <View style={{ flex: 1, backgroundColor: color.background }} />;
+    return (
+      <View style={styles.boot}>
+        <MoonFace expression="loading" size={96} />
+      </View>
+    );
   }
 
   if (!gateDone) {
@@ -32,3 +37,12 @@ export default function Index() {
 
   return <Redirect href="/home" />;
 }
+
+const styles = StyleSheet.create({
+  boot: {
+    flex: 1,
+    backgroundColor: color.background,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

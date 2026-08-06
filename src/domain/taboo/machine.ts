@@ -114,6 +114,7 @@ export function createTabooSession(
     turnViolations: 0,
     turnScore: 0,
     excludedCardIds: options.excludedCardIds ?? [],
+    deckExhausted: false,
     isSuddenDeath: false,
     winner: null,
   };
@@ -130,11 +131,50 @@ function resetTurnCounters(session: TabooSession): TabooSession {
   };
 }
 
+/**
+ * Draw the next card, recycling the used pile once the deck is spent.
+ * Spec §2.6 permits repeats precisely when the deck is exhausted.
+ *
+ * Without this a turn freezes mid-play: `currentCard` goes null while the
+ * phase stays `playing`, and every action guards on having a current card.
+ */
+function withNextCardOrRecycle(session: TabooSession): TabooSession {
+  let next = withNextCard(session);
+  if (!next.currentCard && !session.deckExhausted) {
+    next = withNextCard({ ...session, deckExhausted: true, excludedCardIds: [] });
+  }
+  // Nothing left even after recycling — close the turn rather than freeze it.
+  if (!next.currentCard) return { ...next, phase: 'turn_summary' };
+  return next;
+}
+
 export function beginPlaying(session: TabooSession): TabooSession {
   if (session.phase !== 'round_ready' && session.phase !== 'paused') return session;
-  const next = withNextCard(resetTurnCounters({ ...session, phase: 'playing' }));
+  const base = resetTurnCounters({ ...session, phase: 'playing' });
+  let next = withNextCard(base);
+
   if (!next.currentCard) {
-    return { ...session, phase: 'final', winner: leadingWinner(session) ?? 'tie' };
+    // The active team is owed a turn when the other side has had more.
+    const owedTurn =
+      session.turnsCompleted[session.activeTeam] <
+      session.turnsCompleted[otherTeam(session.activeTeam)];
+
+    // Spend the §2.6 repeat allowance on the turn the trailing team is owed,
+    // so a match never ends on a turn advantage.
+    if (owedTurn && !session.deckExhausted) {
+      next = withNextCard({ ...base, deckExhausted: true, excludedCardIds: [] });
+    }
+
+    if (!next.currentCard) {
+      return {
+        ...session,
+        phase: 'final',
+        currentCard: null,
+        // Only compare scores when both teams had the same number of turns.
+        // If the trailing team never got its turn, nobody earned the win.
+        winner: owedTurn ? 'tie' : (leadingWinner(session) ?? 'tie'),
+      };
+    }
   }
   return next;
 }
@@ -156,7 +196,7 @@ export function markCorrect(session: TabooSession): TabooSession {
     turnCorrect: session.turnCorrect + 1,
     turnScore: session.turnScore + 1,
   };
-  return withNextCard(scored);
+  return withNextCardOrRecycle(scored);
 }
 
 export function markSkip(session: TabooSession): TabooSession {
@@ -169,7 +209,13 @@ export function markSkip(session: TabooSession): TabooSession {
     turnSkips: session.turnSkips + 1,
     turnScore: session.turnScore + penalty,
   };
-  return withNextCard(scored);
+  return withNextCardOrRecycle(scored);
+}
+
+/** Hide a reported card without consuming a skip or changing the score. */
+export function discardCard(session: TabooSession): TabooSession {
+  if (session.phase !== 'playing' || !session.currentCard) return session;
+  return withNextCardOrRecycle(session);
 }
 
 export function markViolation(session: TabooSession): TabooSession {
@@ -179,7 +225,7 @@ export function markViolation(session: TabooSession): TabooSession {
     turnViolations: session.turnViolations + 1,
     turnScore: session.turnScore - 1,
   };
-  return withNextCard(scored);
+  return withNextCardOrRecycle(scored);
 }
 
 export function expireTurn(session: TabooSession): TabooSession {
@@ -213,6 +259,21 @@ function applyTurnAndAdvance(session: TabooSession): TabooSession {
   const equalTurns = turnsCompleted.a === turnsCompleted.b;
   const hitTarget =
     scores.a >= session.setup.pointsToWin || scores.b >= session.setup.pointsToWin;
+
+  // The deck was recycled to cover the turn the trailing team was owed. Both
+  // sides have now had the same number of turns, so settle it here rather than
+  // opening a sudden death nobody has cards for.
+  if (session.deckExhausted && equalTurns) {
+    return {
+      ...session,
+      scores,
+      turnsCompleted,
+      describerIndex,
+      phase: 'final',
+      currentCard: null,
+      winner: leadingWinner({ ...session, scores }) ?? 'tie',
+    };
+  }
 
   // Matching final turn: if A hit target first, B still gets their turn.
   if (hitTarget && equalTurns) {

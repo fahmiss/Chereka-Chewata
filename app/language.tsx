@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { MoonMark } from '../src/components/brand/MoonMark';
+import { MoonFace } from '../src/components/brand/MoonFace';
 import { OptionRow } from '../src/components/ui/Selectable';
 import { PrimaryButton } from '../src/components/ui/PrimaryButton';
 import { Screen } from '../src/components/ui/Screen';
@@ -15,15 +15,17 @@ import { family, type } from '../src/theme/typography';
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
 /**
- * First-launch language gate. Content libraries beyond English stay visible
- * but locked — per product spec for the functionality-first prototype.
+ * First-launch language gate. Amharic + Mixed content unlock for Impostor;
+ * other games still draw English decks until those packs ship.
  */
 export default function LanguageGateScreen() {
   const { settings, setLanguages } = useSettings();
   const [interfaceLanguage, setInterfaceLanguage] = useState<InterfaceLanguage>(
     settings.interfaceLanguage,
   );
-  const [contentLanguage, setContentLanguage] = useState<ContentLanguage>('en');
+  const [contentLanguage, setContentLanguage] = useState<ContentLanguage>(
+    settings.contentLanguage,
+  );
   // Preview copy in the language being chosen before persist.
   const t = (key: Parameters<typeof translate>[1]) => translate(interfaceLanguage, key);
   const uiFont = interfaceLanguage === 'am' ? family.ethiopic.medium : undefined;
@@ -38,7 +40,7 @@ export default function LanguageGateScreen() {
     <Screen accent={color.brandPrimary}>
       <View style={styles.content}>
         <View style={styles.brand}>
-          <MoonMark size={64} orbit />
+          <MoonFace expression="ready" size={88} />
           <Text style={styles.wordmark}>CHEREKA</Text>
           <Text style={styles.amharic}>{AMHARIC}</Text>
           <Text style={[type.body, styles.subtitle, uiFont ? { fontFamily: uiFont } : null]}>
@@ -79,21 +81,17 @@ export default function LanguageGateScreen() {
           />
           <OptionRow
             title={t('language.amharic')}
-            description={t('language.contentAmSoon')}
-            selected={false}
-            disabled
-            onPress={() => {}}
+            description={t('language.contentAm')}
+            selected={contentLanguage === 'am'}
+            onPress={() => setContentLanguage('am')}
             accent={color.gameImpostor}
-            meta="soon"
           />
           <OptionRow
             title={t('language.mixed')}
-            description={t('language.contentMixedSoon')}
-            selected={false}
-            disabled
-            onPress={() => {}}
+            description={t('language.contentMixed')}
+            selected={contentLanguage === 'mixed'}
+            onPress={() => setContentLanguage('mixed')}
             accent={color.gameImpostor}
-            meta="soon"
           />
         </View>
 

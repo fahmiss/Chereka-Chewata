@@ -5,6 +5,7 @@ import type {
 } from '../domain/mostLikely/types';
 import categoriesJson from '../../content/categories/most_likely.json';
 import promptsJson from '../../content/most_likely/prompts.en.json';
+import { prioritizeFresh, reportedIds } from '../storage/contentHistory';
 
 const categories = categoriesJson as MostLikelyCategory[];
 const prompts = promptsJson as MostLikelyPrompt[];
@@ -29,7 +30,7 @@ export function getMostLikelyPrompts(options: {
       prompt.active &&
       cats.has(prompt.category_id) &&
       levels.has(prompt.content_level) &&
-      !exclude.has(prompt.id),
+      !exclude.has(prompt.id) && !reportedIds('most_likely').has(prompt.id),
   );
 }
 
@@ -38,12 +39,9 @@ export function pickMostLikelyDeck(options: {
   contentLevels: ContentLevel[];
   count: number;
 }): MostLikelyPrompt[] {
-  const pool = [...getMostLikelyPrompts(options)];
-  for (let i = pool.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [pool[i], pool[j]] = [pool[j]!, pool[i]!];
-  }
-  return pool.slice(0, Math.min(options.count, pool.length));
+  const pool = prioritizeFresh(getMostLikelyPrompts(options), 'most_likely');
+  const picked = pool.slice(0, Math.min(options.count, pool.length));
+  return picked;
 }
 
 export function countMostLikelyPrompts(options: {
