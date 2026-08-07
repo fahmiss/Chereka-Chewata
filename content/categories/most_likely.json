@@ -3,54 +3,63 @@
     "id": "friends",
     "name_en": "Friends",
     "sort_order": 10,
-    "active": true
+    "active": true,
+    "name_am": "ጓደኞች"
   },
   {
     "id": "family",
     "name_en": "Family",
     "sort_order": 20,
-    "active": true
+    "active": true,
+    "name_am": "ቤተሰብ"
   },
   {
     "id": "school_and_university",
     "name_en": "School and University",
     "sort_order": 30,
-    "active": true
+    "active": true,
+    "name_am": "ትምህርት እና ዩኒቨርሲቲ"
   },
   {
     "id": "addis_life",
     "name_en": "Addis Life",
     "sort_order": 40,
-    "active": true
+    "active": true,
+    "name_am": "የአዲስ ሕይወት"
   },
   {
     "id": "relationships",
     "name_en": "Relationships",
     "sort_order": 50,
-    "active": true
+    "active": true,
+    "name_am": "ግንኙነቶች"
   },
   {
     "id": "work",
     "name_en": "Work",
     "sort_order": 60,
-    "active": true
+    "active": true,
+    "name_am": "ሥራ"
   },
   {
     "id": "diaspora",
     "name_en": "Diaspora",
     "sort_order": 70,
-    "active": true
+    "active": true,
+    "name_am": "የውጭ አገር ኑሮ"
   },
   {
     "id": "weddings_and_events",
     "name_en": "Weddings and Events",
     "sort_order": 80,
-    "active": true
+    "active": true,
+    "name_am": "ሰርግ እና ዝግጅቶች"
   },
   {
     "id": "general_funny",
     "name_en": "General Funny",
     "sort_order": 90,
-    "active": true
+    "active": true,
+    "name_am": "አጠቃላይ አስቂኝ"
   }
 ]

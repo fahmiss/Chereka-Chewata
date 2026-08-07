@@ -1,5 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
+import { BombSessionView } from '../../src/components/bomb/BombSessionView';
 import { ImpostorSessionView } from '../../src/components/impostor/ImpostorSessionView';
 import { LiarSessionView } from '../../src/components/liar/LiarSessionView';
 import { MostLikelySessionView } from '../../src/components/mostLikely/MostLikelySessionView';
@@ -8,6 +9,7 @@ import { WouldRatherSessionView } from '../../src/components/wouldRather/WouldRa
 import { Icon } from '../../src/components/ui/Icon';
 import { PrimaryButton } from '../../src/components/ui/PrimaryButton';
 import { Screen } from '../../src/components/ui/Screen';
+import { useBombSession } from '../../src/domain/bomb/SessionContext';
 import { useSession } from '../../src/domain/impostor/SessionContext';
 import { useLiarSession } from '../../src/domain/liar/SessionContext';
 import { useMostLikelySession } from '../../src/domain/mostLikely/SessionContext';
@@ -24,6 +26,7 @@ export default function SessionScreen() {
   const taboo = useTabooSession();
   const mostLikely = useMostLikelySession();
   const wouldRather = useWouldRatherSession();
+  const bomb = useBombSession();
   const { t, uiFont } = useT();
   const font = uiFont ? { fontFamily: uiFont } : null;
 
@@ -43,6 +46,9 @@ export default function SessionScreen() {
     return <MostLikelySessionView session={mostLikely.session} />;
   }
   if (wouldRather.session && wouldRather.session.sessionId === sessionId) return <WouldRatherSessionView session={wouldRather.session} />;
+  if (bomb.session && bomb.session.sessionId === sessionId) {
+    return <BombSessionView session={bomb.session} />;
+  }
 
   return (
     <Screen accent={color.brandPrimary} style={styles.fallback}>
@@ -60,6 +66,7 @@ export default function SessionScreen() {
           taboo.clearSession();
           mostLikely.clearSession();
           wouldRather.clearSession();
+          bomb.clearSession();
           router.replace('/home');
         }}
       />

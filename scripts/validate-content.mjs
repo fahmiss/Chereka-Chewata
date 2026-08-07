@@ -6,6 +6,7 @@ const decks = [
   ['Taboo', 'content/taboo/cards.en.json', ['target_en', 'forbidden_en']],
   ["Who's Most Likely", 'content/most_likely/prompts.en.json', ['prompt_en']],
   ['Would You Rather', 'content/would_you_rather/dilemmas.en.json', ['option_a_en', 'option_b_en']],
+  ["Who's Got the Bomb", 'content/bomb/cards.json', ['prompt_en']],
 ];
 
 let failed = false;

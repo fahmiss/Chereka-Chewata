@@ -70,7 +70,11 @@ export function SetupProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setPlayers = useCallback((players: Player[]) => {
-    setSetup((prev) => ({ ...prev, players }));
+    setSetup((prev) => ({
+      ...prev,
+      players,
+      impostorCount: players.length < 8 ? 1 : prev.impostorCount,
+    }));
   }, []);
 
   const addPlayer = useCallback(() => {
@@ -133,7 +137,11 @@ export function SetupProvider({ children }: { children: ReactNode }) {
     const group = lastGroup ?? (await loadLastPlayerGroup());
     if (!group || group.length < IMPOSTOR_MIN_PLAYERS) return false;
     setLastGroup(group);
-    setSetup((prev) => ({ ...prev, players: group }));
+    setSetup((prev) => ({
+      ...prev,
+      players: group,
+      impostorCount: group.length < 8 ? 1 : prev.impostorCount,
+    }));
     return true;
   }, [lastGroup]);
 

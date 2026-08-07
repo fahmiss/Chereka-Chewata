@@ -3,54 +3,63 @@
     "id": "food",
     "name_en": "Food",
     "sort_order": 10,
-    "active": true
+    "active": true,
+    "name_am": "ምግብ"
   },
   {
     "id": "addis_life",
     "name_en": "Addis Life",
     "sort_order": 20,
-    "active": true
+    "active": true,
+    "name_am": "የአዲስ ሕይወት"
   },
   {
     "id": "friends",
     "name_en": "Friends",
     "sort_order": 30,
-    "active": true
+    "active": true,
+    "name_am": "ጓደኞች"
   },
   {
     "id": "school_and_university",
     "name_en": "School and University",
     "sort_order": 40,
-    "active": true
+    "active": true,
+    "name_am": "ትምህርት እና ዩኒቨርሲቲ"
   },
   {
     "id": "family",
     "name_en": "Family",
     "sort_order": 50,
-    "active": true
+    "active": true,
+    "name_am": "ቤተሰብ"
   },
   {
     "id": "music_and_entertainment",
     "name_en": "Music and Entertainment",
     "sort_order": 60,
-    "active": true
+    "active": true,
+    "name_am": "ሙዚቃ እና መዝናኛ"
   },
   {
     "id": "travel",
     "name_en": "Travel",
     "sort_order": 70,
-    "active": true
+    "active": true,
+    "name_am": "ጉዞ"
   },
   {
     "id": "relationships",
     "name_en": "Relationships",
     "sort_order": 80,
-    "active": true
+    "active": true,
+    "name_am": "ግንኙነቶች"
   },
   {
     "id": "everyday_preferences",
     "name_en": "Everyday Preferences",
     "sort_order": 90,
-    "active": true
+    "active": true,
+    "name_am": "የዕለት ምርጫዎች"
   }
 ]

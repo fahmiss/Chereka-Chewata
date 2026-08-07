@@ -1,7 +1,6 @@
 import { pickImpostorWord } from '../../content/impostor';
 import {
   createId,
-  TWO_IMPOSTOR_ENABLED,
   type ContentLanguage,
   type ImpostorSession,
   type ImpostorSetup,
@@ -32,6 +31,12 @@ export function getRole(session: ImpostorSession, playerId: string): RoleAssignm
 
 export function isImpostor(session: ImpostorSession, playerId: string): boolean {
   return getRole(session, playerId)?.role === 'impostor';
+}
+
+function activePlayers(session: ImpostorSession): Player[] {
+  return session.setup.players.filter(
+    (player) => !session.eliminatedImpostorIds.includes(player.id),
+  );
 }
 
 function assignRoles(players: Player[], impostorCount: 1 | 2): RoleAssignment[] {
@@ -76,11 +81,8 @@ export function createImpostorSession(
     return { error: 'No cards left for these categories and content levels.' };
   }
 
-  // Gated, not deleted: role assignment already handles two, but the round
-  // never runs §3.6's second clue-and-vote cycle, so catching one Impostor
-  // would settle the round while the other sits undetected.
   const impostorCount: 1 | 2 =
-    TWO_IMPOSTOR_ENABLED && setup.impostorCount === 2 && setup.players.length >= 8
+    setup.impostorCount === 2 && setup.players.length >= 8
       ? 2
       : 1;
 
@@ -96,7 +98,7 @@ export function createImpostorSession(
 
   return {
     sessionId: createId('sess'),
-    setup,
+    setup: { ...setup, impostorCount },
     contentLanguage,
     phase: 'handoff',
     word,
@@ -112,6 +114,7 @@ export function createImpostorSession(
     runoffRound: 0,
     accusedPlayerId: null,
     accusedIsImpostor: null,
+    eliminatedImpostorIds: [],
     winner: null,
     excludedWordIds: [...excludedWordIds, word.id],
   };
@@ -153,6 +156,8 @@ export function nextClueOrDiscuss(session: ImpostorSession): ImpostorSession {
 export function startVoting(session: ImpostorSession): ImpostorSession {
   if (session.phase !== 'discussion') return session;
 
+  const active = activePlayers(session);
+
   if (session.setup.votingMode === 'group') {
     return {
       ...session,
@@ -167,7 +172,7 @@ export function startVoting(session: ImpostorSession): ImpostorSession {
     };
   }
 
-  const voteOrder = shuffle(session.setup.players.map((player) => player.id));
+  const voteOrder = shuffle(active.map((player) => player.id));
   return {
     ...session,
     phase: 'voting_handoff',
@@ -184,7 +189,7 @@ export function startVoting(session: ImpostorSession): ImpostorSession {
 /** Group mode: table already decided — record the accused player. */
 export function accusePlayer(session: ImpostorSession, playerId: string): ImpostorSession {
   if (session.phase !== 'group_accuse') return session;
-  if (!session.setup.players.some((player) => player.id === playerId)) return session;
+  if (!activePlayers(session).some((player) => player.id === playerId)) return session;
 
   const accusedIsImpostor = isImpostor(session, playerId);
   return {
@@ -272,12 +277,13 @@ function resolveVotes(session: ImpostorSession): ImpostorSession {
     }
 
     const tied = leaders;
-    let voteOrder = session.setup.players
+    const active = activePlayers(session);
+    let voteOrder = active
       .map((player) => player.id)
       .filter((id) => !tied.includes(id));
 
     if (voteOrder.length < 2) {
-      voteOrder = shuffle(session.setup.players.map((player) => player.id));
+      voteOrder = shuffle(active.map((player) => player.id));
     } else {
       voteOrder = shuffle(voteOrder);
     }
@@ -328,10 +334,44 @@ export function resolveFinalGuess(
   correct: boolean,
 ): ImpostorSession {
   if (session.phase !== 'final_guess') return session;
+
+  if (correct) {
+    return { ...session, phase: 'result', winner: 'impostor' };
+  }
+
+  const caughtId = session.accusedPlayerId;
+  if (!caughtId || !isImpostor(session, caughtId)) return session;
+
+  const eliminatedImpostorIds = session.eliminatedImpostorIds.includes(caughtId)
+    ? session.eliminatedImpostorIds
+    : [...session.eliminatedImpostorIds, caughtId];
+  const totalImpostors = session.roles.filter((role) => role.role === 'impostor').length;
+
+  if (eliminatedImpostorIds.length >= totalImpostors) {
+    return {
+      ...session,
+      eliminatedImpostorIds,
+      phase: 'result',
+      winner: 'crew',
+    };
+  }
+
+  // Two-Impostor mode: the caught player is out. Everyone remaining completes
+  // a fresh clue, discussion, and vote cycle for the second Impostor.
   return {
     ...session,
-    phase: 'result',
-    winner: correct ? 'impostor' : 'crew',
+    phase: 'clues',
+    eliminatedImpostorIds,
+    clueOrder: session.clueOrder.filter((id) => !eliminatedImpostorIds.includes(id)),
+    clueIndex: 0,
+    voteOrder: [],
+    voteIndex: 0,
+    votes: {},
+    eligibleSuspectIds: null,
+    runoffRound: 0,
+    accusedPlayerId: null,
+    accusedIsImpostor: null,
+    winner: null,
   };
 }
 
@@ -361,8 +401,8 @@ export function currentVoterId(session: ImpostorSession): string | null {
 export function voteSuspectOptions(session: ImpostorSession): Player[] {
   const voterId = currentVoterId(session);
   const pool = session.eligibleSuspectIds
-    ? session.setup.players.filter((player) => session.eligibleSuspectIds!.includes(player.id))
-    : session.setup.players;
+    ? activePlayers(session).filter((player) => session.eligibleSuspectIds!.includes(player.id))
+    : activePlayers(session);
   return pool.filter((player) => player.id !== voterId);
 }
 

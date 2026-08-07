@@ -5,6 +5,7 @@ import { Dialog } from '../../../../src/components/ui/Dialog';
 import type { IconName } from '../../../../src/components/ui/Icon';
 import { OptionRow } from '../../../../src/components/ui/Selectable';
 import { SetupScreen } from '../../../../src/components/ui/SetupScreen';
+import { countBombCards } from '../../../../src/content/bomb';
 import { countImpostorWords } from '../../../../src/content/impostor';
 import { countLiarPairs } from '../../../../src/content/liar';
 import { countMostLikelyPrompts } from '../../../../src/content/mostLikely';
@@ -58,23 +59,47 @@ export default function ContentLevelScreen() {
     isTaboo,
     isMostLikely,
     isWouldRather,
+    isBomb,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
   const [spicyPromptVisible, setSpicyPromptVisible] = useState(false);
 
+  const lang = settings.contentLanguage;
   const countFor = (contentLevels: ContentLevel[]) =>
-    isWouldRather
-      ? countWouldRatherDilemmas({ categoryIds: setup.categoryIds, contentLevels })
+    isBomb
+      ? countBombCards({
+          categoryIds: setup.categoryIds,
+          contentLevels,
+          contentLanguage: lang,
+        })
+      : isWouldRather
+        ? countWouldRatherDilemmas({
+          categoryIds: setup.categoryIds,
+          contentLevels,
+          contentLanguage: lang,
+        })
       : isMostLikely
-        ? countMostLikelyPrompts({ categoryIds: setup.categoryIds, contentLevels })
+        ? countMostLikelyPrompts({
+            categoryIds: setup.categoryIds,
+            contentLevels,
+            contentLanguage: lang,
+          })
         : isTaboo
-          ? countTabooCards({ categoryIds: setup.categoryIds, contentLevels })
+          ? countTabooCards({
+              categoryIds: setup.categoryIds,
+              contentLevels,
+              contentLanguage: lang,
+            })
           : isLiar
-            ? countLiarPairs({ categoryIds: setup.categoryIds, contentLevels })
+            ? countLiarPairs({
+                categoryIds: setup.categoryIds,
+                contentLevels,
+                contentLanguage: lang,
+              })
             : countImpostorWords({
                 categoryIds: setup.categoryIds,
                 contentLevels,
-                contentLanguage: settings.contentLanguage,
+                contentLanguage: lang,
               });
   const selectedCount = countFor(setup.contentLevels);
 

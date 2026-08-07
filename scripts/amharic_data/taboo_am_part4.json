@@ -1,0 +1,110 @@
+{
+  "taboo_everyday_life_304": {
+    "target_am": "መጀመሪያ ቀን",
+    "forbidden_am": ["ፍቅር", "ፍርሃት", "ሬስቶራንት", "መገናኘት", "ጥንዶች"]
+  },
+  "taboo_everyday_life_305": {
+    "target_am": "የልብ ምኞት",
+    "forbidden_am": ["መውደድ", "ሚስጥር", "ልብ", "ማፍጠን", "ፍቅር"]
+  },
+  "taboo_everyday_life_306": {
+    "target_am": "መለያየት",
+    "forbidden_am": ["ቀድሞ ያጋረጠ", "ማልቀስ", "መከፋፈል", "ግንኙነት", "መጨረሻ"]
+  },
+  "taboo_places_307": {
+    "target_am": "የሰርግ ጉዞ",
+    "forbidden_am": ["ሰርግ", "ጉዞ", "ጥንዶች", "እረፍት", "ጋብቻ"]
+  },
+  "taboo_places_308": {
+    "target_am": "የፍቅር ጣራ",
+    "forbidden_am": ["ቀን", "እይታ", "ለሊት", "ከተማ", "እራት"]
+  },
+  "taboo_places_309": {
+    "target_am": "የፍቅር መቀመጫ",
+    "forbidden_am": ["ሶፋ", "ሁለት", "መቀመጥ", "ቅርብ", "ሶፋ"]
+  },
+  "taboo_music_and_entertainment_310": {
+    "target_am": "የፍቅር ዘፈን",
+    "forbidden_am": ["ፍቅር", "ግጥም", "ልብ", "ባላድ", "መዘመር"]
+  },
+  "taboo_music_and_entertainment_311": {
+    "target_am": "ሮም ኮም",
+    "forbidden_am": ["ፊልም", "አስቂኝ", "መሳም", "ጥንዶች", "ደስተኛ"]
+  },
+  "taboo_music_and_entertainment_312": {
+    "target_am": "ቀስ ያለ ዳንስ",
+    "forbidden_am": ["ሙዚቃ", "ቅርብ", "እጆች", "ዘፈን", "መወዛወዝ"]
+  },
+  "taboo_school_313": {
+    "target_am": "የካምፓስ ምኞት",
+    "forbidden_am": ["ክፍል", "ተማሪ", "መውደድ", "ዩኒቨርሲቲ", "ሚስጥር"]
+  },
+  "taboo_school_314": {
+    "target_am": "የፍቅር ማስታወሻ",
+    "forbidden_am": ["ማስተላለፍ", "መጻፍ", "ጠረጴዛ", "ሚስጥር", "ደብዳቤ"]
+  },
+  "taboo_school_315": {
+    "target_am": "የፕሮም ጓደኛ",
+    "forbidden_am": ["ዳንስ", "ቀሚስ", "ትምህርት ቤት", "ለሊት", "አጋር"]
+  },
+  "taboo_jobs_316": {
+    "target_am": "የቢሮ ምኞት",
+    "forbidden_am": ["ሥራ", "ባልደረባ", "ጠረጴዛ", "ሚስጥር", "መውደድ"]
+  },
+  "taboo_jobs_317": {
+    "target_am": "የሥራ ባል",
+    "forbidden_am": ["ቀልድ", "ባልደረባ", "ቅርብ", "ቢሮ", "አጋር"]
+  },
+  "taboo_jobs_318": {
+    "target_am": "ከሥራ በኋላ መጠጥ",
+    "forbidden_am": ["ባር", "የሥራ ባልደረባ", "ማታ", "መሰብሰብ", "ፍላርት"]
+  },
+  "taboo_animals_319": {
+    "target_am": "የፍቅር ወፎች",
+    "forbidden_am": ["ጥንዶች", "ወፎች", "ቆንጆ", "ጥንድ", "ጎጆ"]
+  },
+  "taboo_animals_320": {
+    "target_am": "የውሻ ፍቅር",
+    "forbidden_am": ["ወጣት", "ምኞት", "ቆንጆ", "ውሻ", "ንጹህ"]
+  },
+  "taboo_animals_321": {
+    "target_am": "መጥሪያ ጩኸት",
+    "forbidden_am": ["ፉፋንጫ", "መንገድ", "አጉል", "ትኩረት", "ድምፅ"]
+  },
+  "taboo_sports_322": {
+    "target_am": "የጥንዶች ዮጋ",
+    "forbidden_am": ["መዘርጋት", "አጋር", "አቀማመጥ", "ማት", "አብረው"]
+  },
+  "taboo_sports_323": {
+    "target_am": "ድብልቅ ድርብ",
+    "forbidden_am": ["ቴኒስ", "አጋር", "ቡድን", "ሁለት", "ጨዋታ"]
+  },
+  "taboo_sports_324": {
+    "target_am": "የመሳም ካሜራ",
+    "forbidden_am": ["ስታዲየም", "ማያ", "ጥንዶች", "ተመልካች", "ማፈር"]
+  },
+  "taboo_general_words_325": {
+    "target_am": "ፍላርት",
+    "forbidden_am": ["መቀለድ", "ፈገግታ", "ፍላጎት", "ማራኪ", "ማሟሟገት"]
+  },
+  "taboo_general_words_326": {
+    "target_am": "ቢራቢሮዎች",
+    "forbidden_am": ["ሆድ", "ፍርሃት", "ምኞት", "ስሜት", "ደስታ"]
+  },
+  "taboo_general_words_327": {
+    "target_am": "ኬሚስትሪ",
+    "forbidden_am": ["ብልጭታ", "መሳብ", "ግንኙነት", "ቫይብ", "መሳብ"]
+  },
+  "taboo_ethiopian_food_328": {
+    "target_am": "የጋራ ሳህን",
+    "forbidden_am": ["አብረው", "እንጀራ", "ቀን", "አንድ", "መብላት"]
+  },
+  "taboo_ethiopian_food_329": {
+    "target_am": "የጠጅ ቶስት",
+    "forbidden_am": ["ጠጅ", "ጣፋጭ", "መጠጥ", "ማክበር", "ጥንዶች"]
+  },
+  "taboo_ethiopian_food_330": {
+    "target_am": "የለሊት ክትፎ",
+    "forbidden_am": ["ስጋ", "ቀን", "ጥሬ", "ሬስቶራንት", "ለሊት"]
+  }
+}

@@ -160,6 +160,12 @@ const ICONS = {
       <Path d="M9 10.5h1.5M13.5 10.5H15" stroke={s} />
     </>
   ),
+  bomb: (s) => (
+    <>
+      <Circle cx={11} cy={13} r={8} stroke={s} />
+      <Path d="m16.5 7.5 2-2M18.5 5.5h2M18.5 5.5v-2M14.8 5.8l1.7 1.7M8 5h6" stroke={s} />
+    </>
+  ),
 } satisfies Record<string, (stroke: string) => ReactNode>;
 
 export type IconName = keyof typeof ICONS;

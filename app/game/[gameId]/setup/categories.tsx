@@ -4,6 +4,7 @@ import { Icon, type IconName } from '../../../../src/components/ui/Icon';
 import { PressableScale } from '../../../../src/components/ui/PressableScale';
 import { SecondaryButton } from '../../../../src/components/ui/SecondaryButton';
 import { SetupScreen } from '../../../../src/components/ui/SetupScreen';
+import { countBombCards, getBombCategories } from '../../../../src/content/bomb';
 import {
   countImpostorWords,
   getImpostorCategories,
@@ -70,6 +71,17 @@ const LIKELY_ICONS: Record<string, IconName> = {
   general_funny: 'megaphone',
 };
 
+const BOMB_ICONS: Record<string, IconName> = {
+  ethiopia: 'mapPin',
+  food_and_drink: 'utensils',
+  places: 'mapPin',
+  entertainment: 'film',
+  sports: 'trophy',
+  everyday: 'home',
+  nature: 'smile',
+  school_and_work: 'book',
+};
+
 export default function CategoriesScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
   const { t, isAmharic } = useT();
@@ -83,11 +95,14 @@ export default function CategoriesScreen() {
     isTaboo,
     isMostLikely,
     isWouldRather,
+    isBomb,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
 
-  const categories = isWouldRather
-    ? getWouldRatherCategories()
+  const categories = isBomb
+    ? getBombCategories()
+    : isWouldRather
+      ? getWouldRatherCategories()
     : isMostLikely
     ? getMostLikelyCategories()
     : isTaboo
@@ -95,8 +110,10 @@ export default function CategoriesScreen() {
       : isLiar
         ? getLiarCategories()
         : getImpostorCategories();
-  const icons = isMostLikely
-    ? LIKELY_ICONS
+  const icons = isBomb
+    ? BOMB_ICONS
+    : isMostLikely
+      ? LIKELY_ICONS
     : isTaboo
       ? TABOO_ICONS
       : isLiar
@@ -106,20 +123,43 @@ export default function CategoriesScreen() {
     ? setup.contentLevels
     : ['family'];
 
+  const lang = settings.contentLanguage;
   const countFor = (categoryIds: string[]) =>
-    isWouldRather
-      ? countWouldRatherDilemmas({ categoryIds, contentLevels: levels })
+    isBomb
+      ? countBombCards({
+          categoryIds,
+          contentLevels: levels,
+          contentLanguage: lang,
+        })
+      : isWouldRather
+        ? countWouldRatherDilemmas({
+          categoryIds,
+          contentLevels: levels,
+          contentLanguage: lang,
+        })
       : isMostLikely
-      ? countMostLikelyPrompts({ categoryIds, contentLevels: levels })
-      : isTaboo
-        ? countTabooCards({ categoryIds, contentLevels: levels })
-        : isLiar
-          ? countLiarPairs({ categoryIds, contentLevels: levels })
-          : countImpostorWords({
+        ? countMostLikelyPrompts({
+            categoryIds,
+            contentLevels: levels,
+            contentLanguage: lang,
+          })
+        : isTaboo
+          ? countTabooCards({
               categoryIds,
               contentLevels: levels,
-              contentLanguage: settings.contentLanguage,
-            });
+              contentLanguage: lang,
+            })
+          : isLiar
+            ? countLiarPairs({
+                categoryIds,
+                contentLevels: levels,
+                contentLanguage: lang,
+              })
+            : countImpostorWords({
+                categoryIds,
+                contentLevels: levels,
+                contentLanguage: lang,
+              });
 
   const totalCards = countFor(setup.categoryIds);
   const categoryLabel = (category: { name_en: string; name_am?: string }) =>

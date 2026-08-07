@@ -1,9 +1,15 @@
+import type { ContentLanguage } from '../settings/types';
+
+export type { ContentLanguage };
+
 export type ContentLevel = 'family' | 'friends' | 'spicy';
 
 export type WouldRatherDilemma = {
   id: string;
   option_a_en: string;
   option_b_en: string;
+  option_a_am?: string;
+  option_b_am?: string;
   category_id: string;
   content_level: ContentLevel;
   intensity?: string;
@@ -35,6 +41,7 @@ export type WouldRatherSide = 'a' | 'b';
 export type WouldRatherSession = {
   sessionId: string;
   setup: WouldRatherSetup;
+  contentLanguage: ContentLanguage;
   phase: WouldRatherPhase;
   deck: WouldRatherDilemma[];
   index: number;

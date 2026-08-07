@@ -1,3 +1,7 @@
+import type { ContentLanguage } from '../settings/types';
+
+export type { ContentLanguage };
+
 export type ContentLevel = 'family' | 'friends' | 'spicy';
 
 export type MostLikelyPrompt = {
@@ -37,6 +41,7 @@ export type MostLikelyPhase = 'prompt' | 'countdown' | 'discuss' | 'ended';
 export type MostLikelySession = {
   sessionId: string;
   setup: MostLikelySetup;
+  contentLanguage: ContentLanguage;
   phase: MostLikelyPhase;
   deck: MostLikelyPrompt[];
   index: number;

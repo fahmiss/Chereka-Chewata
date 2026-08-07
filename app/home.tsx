@@ -31,7 +31,7 @@ export default function HomeScreen() {
 
         <Animated.View style={[styles.brand, brand]}>
           <MoonFace expression="ready" size={88} />
-          <Text style={styles.wordmark}>CHEREKA CHEWATA</Text>
+          <Text style={styles.wordmark}>CHEREKA{`\n`}CHEWATA</Text>
           <Text style={styles.amharic}>{AMHARIC}</Text>
           <Text style={[type.body, styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>
             {t('home.tagline')}
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: space[6],
     paddingBottom: space[12],
-    gap: space[8],
+    gap: space[6],
   },
   topBar: {
     flexDirection: 'row',
@@ -101,15 +101,14 @@ const styles = StyleSheet.create({
   brand: {
     alignItems: 'center',
     gap: space[1],
-    paddingTop: space[1],
   },
   wordmark: {
-    marginTop: space[3],
+    marginTop: space[2],
     color: color.textPrimary,
     fontFamily: family.display.black,
-    fontSize: 34,
-    lineHeight: 38,
-    letterSpacing: 2.4,
+    fontSize: 38,
+    lineHeight: 36,
+    letterSpacing: 1.8,
     textAlign: 'center',
   },
   amharic: {
@@ -123,7 +122,7 @@ const styles = StyleSheet.create({
   tagline: {
     color: color.textSecondary,
     textAlign: 'center',
-    marginTop: space[2],
+    marginTop: space[1],
     maxWidth: 280,
   },
   section: {
@@ -143,7 +142,7 @@ const styles = StyleSheet.create({
     backgroundColor: overlay.hairline,
   },
   playList: {
-    gap: space[3],
+    gap: 10,
   },
   soonList: {
     gap: space[2],

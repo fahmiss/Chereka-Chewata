@@ -538,13 +538,18 @@ function CluesPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
   const firstId = session.clueOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
+  const secondCycle = session.eliminatedImpostorIds.length > 0;
 
   return (
     <SessionShell
-      eyebrow="Clues"
+      eyebrow={secondCycle ? 'Clues · Round 2' : 'Clues'}
       stage="clues"
       title={`${name} starts`}
-      subtitle="One short clue each, in order. Leave the phone on the table."
+      subtitle={
+        secondCycle
+          ? 'One Impostor remains. Give one new short clue each.'
+          : 'One short clue each, in order. Leave the phone on the table.'
+      }
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
@@ -584,12 +589,13 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
   const timer = session.setup.discussionTimerSeconds;
   const privateVotes = session.setup.votingMode === 'private';
   const nextLabel = privateVotes ? 'Start private voting' : 'Choose accused';
+  const secondCycle = session.eliminatedImpostorIds.length > 0;
 
   return (
     <SessionShell
       eyebrow="Discussion"
       stage="discuss"
-      title="Talk it out"
+      title={secondCycle ? 'Find the remaining Impostor' : 'Talk it out'}
       onEndGame={() => endGame(clearSession)}
       footer={
         timer ? null : (
@@ -600,7 +606,9 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
       {timer ? (
         <View style={styles.discussion}>
           <Text style={[type.body, styles.discussionText]}>
-            {privateVotes
+            {secondCycle
+              ? 'The first Impostor is out. Discuss the new clues and find their hidden teammate.'
+              : privateVotes
               ? 'When you’re ready, each player votes privately on this phone.'
               : 'Argue in the room. When the group agrees, tap who you’re accusing.'}
           </Text>
@@ -613,7 +621,9 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
       ) : (
         <Brief icon="megaphone">
           <Text style={[type.body, styles.briefText]}>
-            {privateVotes
+            {secondCycle
+              ? 'The first Impostor is out. Discuss the new clues and find their hidden teammate.'
+              : privateVotes
               ? 'When you’re ready, each player votes privately on this phone.'
               : 'Argue in the room. When the group agrees, tap who you’re accusing.'}
           </Text>
@@ -653,15 +663,17 @@ function GroupAccusePhase({ session }: { session: ImpostorSession }) {
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.choiceList}>
-        {session.setup.players.map((player, index) => (
-          <PlayerChoice
-            key={player.id}
-            index={index}
-            name={player.displayName}
-            selected={selected === player.id}
-            onPress={() => setSelected(player.id)}
-          />
-        ))}
+        {session.setup.players
+          .filter((player) => !session.eliminatedImpostorIds.includes(player.id))
+          .map((player, index) => (
+            <PlayerChoice
+              key={player.id}
+              index={index}
+              name={player.displayName}
+              selected={selected === player.id}
+              onPress={() => setSelected(player.id)}
+            />
+          ))}
       </ScrollView>
     </SessionShell>
   );
@@ -686,7 +698,7 @@ function VotingSelectPhase({ session }: { session: ImpostorSession }) {
     <SessionShell
       eyebrow={session.runoffRound > 0 ? 'Runoff vote' : 'Private vote'}
       stage="vote"
-      title={`${name}, who is the Impostor?`}
+      title={`${name}, who is ${session.eliminatedImpostorIds.length ? 'the remaining' : 'the'} Impostor?`}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
@@ -720,6 +732,9 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
     ? getPlayerName(session, session.accusedPlayerId)
     : 'Someone';
   const caught = session.accusedIsImpostor;
+  const totalImpostors = session.roles.filter((role) => role.role === 'impostor').length;
+  const anotherRemains =
+    !!caught && session.eliminatedImpostorIds.length + 1 < totalImpostors;
   const accent = caught ? color.success : color.dangerUrgency;
   const enter = useEnterAnimation(1, 20);
 
@@ -745,7 +760,9 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
         </Text>
         <Text style={[type.body, styles.verdictBody]}>
           {caught
-            ? 'Caught — one chance to guess the secret word out loud.'
+            ? anotherRemains
+              ? 'Caught. A correct guess wins; an incorrect guess starts round two for the remaining Impostor.'
+              : 'Caught — one chance to guess the secret word out loud.'
             : 'The group accused an innocent player. The Impostor wins.'}
         </Text>
       </Animated.View>
@@ -759,6 +776,8 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
     ? getPlayerName(session, session.accusedPlayerId)
     : 'Impostor';
   const categoryName = getCategoryName(session.word.category_id, session.contentLanguage);
+  const totalImpostors = session.roles.filter((role) => role.role === 'impostor').length;
+  const anotherRemains = session.eliminatedImpostorIds.length + 1 < totalImpostors;
 
   return (
     <SessionShell
@@ -774,7 +793,7 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
             onPress={() => dispatch.resolveFinalGuess(true)}
           />
           <SecondaryButton
-            label="Incorrect"
+            label={anotherRemains ? 'Incorrect — round 2' : 'Incorrect'}
             icon="close"
             onPress={() => dispatch.resolveFinalGuess(false)}
           />
@@ -796,6 +815,7 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
 function ResultPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
   const crewWon = session.winner === 'crew';
+  const pluralImpostors = session.roles.filter((role) => role.role === 'impostor').length > 1;
   const accent = crewWon ? color.success : color.gameImpostor;
   const impostorNames = session.setup.players
     .filter((player) => isImpostor(session, player.id))
@@ -847,10 +867,11 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
         <Animated.View style={[styles.winnerBlock, enter]}>
           <MoonFace expression={crewWon ? 'delighted' : 'secret'} size={96} />
           <Text style={[type.displayLg, { color: color.textPrimary }]}>
-            {crewWon ? 'Crew wins' : 'Impostor wins'}
+            {crewWon ? 'Crew wins' : pluralImpostors ? 'Impostors win' : 'Impostor wins'}
           </Text>
           <Text style={[type.body, styles.winnerSub]}>
-            Impostor: <Text style={{ color: accent }}>{impostorNames}</Text>
+            {pluralImpostors ? 'Impostors' : 'Impostor'}:{' '}
+            <Text style={{ color: accent }}>{impostorNames}</Text>
           </Text>
         </Animated.View>
 

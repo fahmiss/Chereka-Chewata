@@ -1,6 +1,7 @@
 import { pickWouldRatherDeck } from '../../content/wouldRather';
 import {
   createId,
+  type ContentLanguage,
   type WouldRatherSession,
   type WouldRatherSetup,
   type WouldRatherSide,
@@ -11,13 +12,29 @@ export function currentDilemma(session: WouldRatherSession) {
   return session.deck[session.index] ?? null;
 }
 
-export function createWouldRatherSession(setup: WouldRatherSetup): WouldRatherSession | { error: string } {
+export function createWouldRatherSession(
+  setup: WouldRatherSetup,
+  contentLanguage: ContentLanguage = 'en',
+): WouldRatherSession | { error: string } {
   if (!setup.categoryIds.length) return { error: 'Pick at least one category.' };
   if (!setup.contentLevels.length) return { error: 'Pick at least one content level.' };
-  const deck = pickWouldRatherDeck({ ...setup, count: Math.max(1, setup.cardCount) });
+  const deck = pickWouldRatherDeck({
+    ...setup,
+    contentLanguage,
+    count: Math.max(1, setup.cardCount),
+  });
   if (!deck.length) return { error: 'No dilemmas available for these filters.' };
   recordPlayed('would_you_rather', deck[0]!.id);
-  return { sessionId: createId('sess'), setup, phase: 'choice', deck, index: 0, playedCount: 0, chosen: null };
+  return {
+    sessionId: createId('sess'),
+    setup,
+    contentLanguage,
+    phase: 'choice',
+    deck,
+    index: 0,
+    playedCount: 0,
+    chosen: null,
+  };
 }
 
 /**
@@ -52,6 +69,6 @@ export function endSession(session: WouldRatherSession): WouldRatherSession {
 }
 
 export function rematchSession(session: WouldRatherSession): WouldRatherSession | { error: string } {
-  const created = createWouldRatherSession(session.setup);
+  const created = createWouldRatherSession(session.setup, session.contentLanguage);
   return 'error' in created ? created : { ...created, sessionId: session.sessionId };
 }

@@ -14,7 +14,7 @@ One Expo app. Earliest build keeps navigation minimal:
 |---|---|
 | Splash | Brand load; first-time → language, returning → home |
 | Home | Brand hero; equal tiles for playable games; quieter coming-next rows |
-| i18n | `src/i18n` — interface EN/AM via Settings; Impostor content EN/AM/Mixed |
+| i18n | `src/i18n` — interface EN/AM; all six games content EN/AM/Mixed |
 | Game details | Short rules + Play |
 | Setup chain | Players → categories → content level → options → review |
 | Session | State-machine-driven gameplay screens |
@@ -49,7 +49,8 @@ Framework route names may differ slightly; product states map roughly to:
 
 ## Impostor round lifecycle
 
-First vertical slice. One Impostor by default (two-Impostor deferred).
+First vertical slice. One Impostor by default; two-Impostor mode is available
+for groups of 8 or more and follows the second-cycle branch below.
 
 ```mermaid
 stateDiagram-v2
@@ -79,7 +80,8 @@ stateDiagram-v2
 
     AccusationReveal --> ImpostorWins : innocent accused
     AccusationReveal --> FinalGuess : impostor caught
-    FinalGuess --> GroupWins : incorrect guess
+    FinalGuess --> Clues : incorrect guess + Impostor remains
+    FinalGuess --> GroupWins : incorrect guess + none remain
     FinalGuess --> ImpostorWins : correct guess
 
     GroupWins --> Result
@@ -95,6 +97,27 @@ Implementation:
 - Setup draft: `SetupContext` (players persist via AsyncStorage)
 - Active round: `SessionContext` + `app/session/[sessionId].tsx` → `ImpostorSessionView` (phase switch, not separate secret routes)
 - Screens must not invent parallel status flags outside the machine.
+
+## Who’s Got the Bomb? lifecycle
+
+The category prompt and randomly chosen starter are public, but the randomized
+fuse deadline remains only in session state. Players pass the phone physically;
+the app does not track handoffs. Backgrounding the app does not pause the fuse.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Ready
+    Ready --> Playing : light hidden fuse
+    Playing --> Playing : physical answer + pass
+    Playing --> Exploded : fuse expires
+    Exploded --> Ready : new category + random starter
+```
+
+Implementation:
+
+- Rules / transitions: `src/domain/bomb/machine.ts`
+- Setup draft: `BombSetupProvider`
+- Active round: `BombSessionProvider` + `BombSessionView`
 
 ## Who’s the Liar? round lifecycle
 

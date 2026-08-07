@@ -28,6 +28,8 @@ import * as SystemUI from 'expo-system-ui';
 import { useEffect, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { BombSessionProvider } from '../src/domain/bomb/SessionContext';
+import { BombSetupProvider } from '../src/domain/bomb/SetupContext';
 import { SessionProvider } from '../src/domain/impostor/SessionContext';
 import { SetupProvider } from '../src/domain/impostor/SetupContext';
 import { LiarSessionProvider } from '../src/domain/liar/SessionContext';
@@ -93,31 +95,35 @@ export default function RootLayout() {
             <TabooSetupProvider>
               <MostLikelySetupProvider>
                 <WouldRatherSetupProvider>
-                  <SessionProvider>
-                    <LiarSessionProvider>
-                      <TabooSessionProvider>
-                        <MostLikelySessionProvider>
-                          <WouldRatherSessionProvider>
-                        <StatusBar style="light" />
-                        <Stack
-                          screenOptions={{
-                            headerShown: false,
-                            contentStyle: { backgroundColor: color.background },
-                            animation: 'slide_from_right',
-                          }}
-                        >
-                          <Stack.Screen name="index" options={{ animation: 'fade' }} />
-                          <Stack.Screen name="language" options={{ animation: 'fade' }} />
-                          <Stack.Screen
-                            name="session/[sessionId]"
-                            options={{ animation: 'fade', gestureEnabled: false }}
-                          />
-                        </Stack>
-                          </WouldRatherSessionProvider>
-                        </MostLikelySessionProvider>
-                      </TabooSessionProvider>
-                    </LiarSessionProvider>
-                  </SessionProvider>
+                  <BombSetupProvider>
+                    <SessionProvider>
+                      <LiarSessionProvider>
+                        <TabooSessionProvider>
+                          <MostLikelySessionProvider>
+                            <WouldRatherSessionProvider>
+                              <BombSessionProvider>
+                                <StatusBar style="light" />
+                                <Stack
+                                  screenOptions={{
+                                    headerShown: false,
+                                    contentStyle: { backgroundColor: color.background },
+                                    animation: 'slide_from_right',
+                                  }}
+                                >
+                                  <Stack.Screen name="index" options={{ animation: 'fade' }} />
+                                  <Stack.Screen name="language" options={{ animation: 'fade' }} />
+                                  <Stack.Screen
+                                    name="session/[sessionId]"
+                                    options={{ animation: 'fade', gestureEnabled: false }}
+                                  />
+                                </Stack>
+                              </BombSessionProvider>
+                            </WouldRatherSessionProvider>
+                          </MostLikelySessionProvider>
+                        </TabooSessionProvider>
+                      </LiarSessionProvider>
+                    </SessionProvider>
+                  </BombSetupProvider>
                 </WouldRatherSetupProvider>
               </MostLikelySetupProvider>
             </TabooSetupProvider>

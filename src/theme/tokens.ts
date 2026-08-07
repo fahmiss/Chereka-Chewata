@@ -22,6 +22,7 @@ export const color = {
   gameTaboo: '#FFB646',
   gameMostLikely: '#3FD6A8',
   gameWouldRather: '#4FA3FF',
+  gameBomb: '#FF7A59',
 } as const;
 
 export const font = {
@@ -109,7 +110,8 @@ export type GameAccentKey =
   | 'whos_the_liar'
   | 'taboo'
   | 'most_likely'
-  | 'would_you_rather';
+  | 'would_you_rather'
+  | 'bomb';
 
 export const gameAccent: Record<GameAccentKey, string> = {
   impostor: color.gameImpostor,
@@ -117,4 +119,5 @@ export const gameAccent: Record<GameAccentKey, string> = {
   taboo: color.gameTaboo,
   most_likely: color.gameMostLikely,
   would_you_rather: color.gameWouldRather,
+  bomb: color.gameBomb,
 };

@@ -1,7 +1,9 @@
 import type { ContentLevel, LiarCategory, LiarPair } from '../domain/liar/types';
+import type { ContentLanguage } from '../domain/settings/types';
 import categoriesJson from '../../content/categories/whos_the_liar.json';
 import pairsJson from '../../content/whos_the_liar/pairs.en.json';
 import { prioritizeFresh, recentIds, recordPlayed, reportedIds } from '../storage/contentHistory';
+import { matchesContentLanguage } from './localize';
 
 const categories = categoriesJson as LiarCategory[];
 const pairs = pairsJson as LiarPair[];
@@ -15,24 +17,32 @@ export function getLiarCategories(): LiarCategory[] {
 export function getLiarPairs(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
   excludeIds?: string[];
 }): LiarPair[] {
   const exclude = new Set(options.excludeIds ?? []);
   const levels = new Set(options.contentLevels);
   const cats = new Set(options.categoryIds);
+  const language = options.contentLanguage ?? 'en';
 
   return pairs.filter(
     (pair) =>
       pair.active &&
       cats.has(pair.category_id) &&
       levels.has(pair.content_level) &&
-      !exclude.has(pair.id) && !reportedIds('whos_the_liar').has(pair.id),
+      matchesContentLanguage(language, {
+        en: pair.main_question_en,
+        am: pair.main_question_am,
+      }) &&
+      !exclude.has(pair.id) &&
+      !reportedIds('whos_the_liar').has(pair.id),
   );
 }
 
 export function pickLiarPair(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
   excludeIds?: string[];
 }): LiarPair | null {
   const pool = prioritizeFresh(getLiarPairs(options), 'whos_the_liar');
@@ -47,6 +57,7 @@ export function pickLiarPair(options: {
 export function countLiarPairs(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
 }): number {
   return getLiarPairs(options).length;
 }

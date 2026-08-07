@@ -2,7 +2,7 @@ import { Image, StyleSheet, View } from 'react-native';
 
 /**
  * Soft 3D Chereka nightcap mascot — PRODUCT_SPEC §18.8.
- * Hero / empty / loading / result / pass-the-phone only — not nav chrome.
+ * Hero, home catalog, empty, loading, result, and pass-the-phone moments.
  * Primary logo remains flat MoonMark.
  */
 export type MoonExpression =
@@ -10,6 +10,11 @@ export type MoonExpression =
   | 'secret'
   | 'caught'
   | 'delighted'
+  | 'impostor'
+  | 'detective'
+  | 'pointing'
+  | 'thinking'
+  | 'bomb'
   | 'loading'
   | 'comingSoon'
   | 'timer';
@@ -28,6 +33,11 @@ const SOURCES: Record<MoonExpression, number> = {
   secret: require('../../../assets/mascot/moon-secret.png'),
   caught: require('../../../assets/mascot/moon-caught.png'),
   delighted: require('../../../assets/mascot/moon-delighted.png'),
+  impostor: require('../../../assets/mascot/moon-impostor.png'),
+  detective: require('../../../assets/mascot/moon-detective.png'),
+  pointing: require('../../../assets/mascot/moon-pointing.png'),
+  thinking: require('../../../assets/mascot/moon-thinking.png'),
+  bomb: require('../../../assets/mascot/moon-bomb-user.png'),
   loading: require('../../../assets/mascot/moon-loading.png'),
   comingSoon: require('../../../assets/mascot/moon-coming-soon.png'),
   timer: require('../../../assets/mascot/moon-timer.png'),

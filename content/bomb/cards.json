@@ -1,0 +1,57 @@
+[
+  { "id": "bomb_eth_001", "prompt_en": "Ethiopian foods", "prompt_am": "የኢትዮጵያ ምግቦች", "category_id": "ethiopia", "content_level": "family", "active": true },
+  { "id": "bomb_eth_002", "prompt_en": "Cities in Ethiopia", "prompt_am": "የኢትዮጵያ ከተሞች", "category_id": "ethiopia", "content_level": "family", "active": true },
+  { "id": "bomb_eth_003", "prompt_en": "Ethiopian musicians", "prompt_am": "የኢትዮጵያ ሙዚቀኞች", "category_id": "ethiopia", "content_level": "family", "active": true },
+  { "id": "bomb_eth_004", "prompt_en": "Ethiopian languages", "prompt_am": "የኢትዮጵያ ቋንቋዎች", "category_id": "ethiopia", "content_level": "family", "active": true },
+  { "id": "bomb_eth_005", "prompt_en": "Places in Addis Ababa", "prompt_am": "በአዲስ አበባ ያሉ ቦታዎች", "category_id": "ethiopia", "content_level": "friends", "active": true },
+  { "id": "bomb_eth_006", "prompt_en": "Things served at an Ethiopian wedding", "prompt_am": "በኢትዮጵያ ሰርግ የሚቀርቡ ነገሮች", "category_id": "ethiopia", "content_level": "friends", "active": true },
+
+  { "id": "bomb_food_001", "prompt_en": "Fruits", "prompt_am": "ፍራፍሬዎች", "category_id": "food_and_drink", "content_level": "family", "active": true },
+  { "id": "bomb_food_002", "prompt_en": "Vegetables", "prompt_am": "አትክልቶች", "category_id": "food_and_drink", "content_level": "family", "active": true },
+  { "id": "bomb_food_003", "prompt_en": "Soft drinks", "prompt_am": "ለስላሳ መጠጦች", "category_id": "food_and_drink", "content_level": "family", "active": true },
+  { "id": "bomb_food_004", "prompt_en": "Breakfast foods", "prompt_am": "የቁርስ ምግቦች", "category_id": "food_and_drink", "content_level": "family", "active": true },
+  { "id": "bomb_food_005", "prompt_en": "Fast-food restaurants", "prompt_am": "ፈጣን ምግብ ቤቶች", "category_id": "food_and_drink", "content_level": "friends", "active": true },
+  { "id": "bomb_food_006", "prompt_en": "Foods that are difficult to eat neatly", "prompt_am": "በንጽህና ለመብላት አስቸጋሪ የሆኑ ምግቦች", "category_id": "food_and_drink", "content_level": "friends", "active": true },
+
+  { "id": "bomb_place_001", "prompt_en": "Countries in Africa", "prompt_am": "የአፍሪካ አገሮች", "category_id": "places", "content_level": "family", "active": true },
+  { "id": "bomb_place_002", "prompt_en": "Capital cities", "prompt_am": "ዋና ከተሞች", "category_id": "places", "content_level": "family", "active": true },
+  { "id": "bomb_place_003", "prompt_en": "Places you can swim", "prompt_am": "መዋኘት የሚቻልባቸው ቦታዎች", "category_id": "places", "content_level": "family", "active": true },
+  { "id": "bomb_place_004", "prompt_en": "Places with long queues", "prompt_am": "ረጅም ሰልፍ የሚኖርባቸው ቦታዎች", "category_id": "places", "content_level": "family", "active": true },
+  { "id": "bomb_place_005", "prompt_en": "Dream holiday destinations", "prompt_am": "ለእረፍት መሄድ የምትፈልጉባቸው ቦታዎች", "category_id": "places", "content_level": "friends", "active": true },
+  { "id": "bomb_place_006", "prompt_en": "Places you would not want to be alone", "prompt_am": "ብቻችሁን መሆን የማትፈልጉባቸው ቦታዎች", "category_id": "places", "content_level": "friends", "active": true },
+
+  { "id": "bomb_ent_001", "prompt_en": "Movie characters", "prompt_am": "የፊልም ገጸ ባሕርያት", "category_id": "entertainment", "content_level": "family", "active": true },
+  { "id": "bomb_ent_002", "prompt_en": "Singers", "prompt_am": "ዘፋኞች", "category_id": "entertainment", "content_level": "family", "active": true },
+  { "id": "bomb_ent_003", "prompt_en": "TV shows", "prompt_am": "የቴሌቪዥን ፕሮግራሞች", "category_id": "entertainment", "content_level": "family", "active": true },
+  { "id": "bomb_ent_004", "prompt_en": "Superheroes", "prompt_am": "ልዕለ ኃያላን", "category_id": "entertainment", "content_level": "family", "active": true },
+  { "id": "bomb_ent_005", "prompt_en": "Songs everyone knows", "prompt_am": "ሁሉም የሚያውቃቸው ዘፈኖች", "category_id": "entertainment", "content_level": "friends", "active": true },
+  { "id": "bomb_ent_006", "prompt_en": "Celebrities you would invite to dinner", "prompt_am": "ለእራት የምትጋብዟቸው ታዋቂ ሰዎች", "category_id": "entertainment", "content_level": "friends", "active": true },
+
+  { "id": "bomb_sport_001", "prompt_en": "Football clubs", "prompt_am": "የእግር ኳስ ክለቦች", "category_id": "sports", "content_level": "family", "active": true },
+  { "id": "bomb_sport_002", "prompt_en": "Football players", "prompt_am": "የእግር ኳስ ተጫዋቾች", "category_id": "sports", "content_level": "family", "active": true },
+  { "id": "bomb_sport_003", "prompt_en": "Olympic sports", "prompt_am": "የኦሎምፒክ ስፖርቶች", "category_id": "sports", "content_level": "family", "active": true },
+  { "id": "bomb_sport_004", "prompt_en": "Things found in a gym", "prompt_am": "በጂም ውስጥ የሚገኙ ነገሮች", "category_id": "sports", "content_level": "family", "active": true },
+  { "id": "bomb_sport_005", "prompt_en": "Reasons a referee stops a game", "prompt_am": "ዳኛ ጨዋታን የሚያቆምባቸው ምክንያቶች", "category_id": "sports", "content_level": "friends", "active": true },
+  { "id": "bomb_sport_006", "prompt_en": "Athletes known by one name", "prompt_am": "በአንድ ስም የሚታወቁ አትሌቶች", "category_id": "sports", "content_level": "friends", "active": true },
+
+  { "id": "bomb_day_001", "prompt_en": "Car brands", "prompt_am": "የመኪና ብራንዶች", "category_id": "everyday", "content_level": "family", "active": true },
+  { "id": "bomb_day_002", "prompt_en": "Things in a kitchen", "prompt_am": "በወጥ ቤት ውስጥ ያሉ ነገሮች", "category_id": "everyday", "content_level": "family", "active": true },
+  { "id": "bomb_day_003", "prompt_en": "Things you charge", "prompt_am": "ቻርጅ የሚደረጉ ነገሮች", "category_id": "everyday", "content_level": "family", "active": true },
+  { "id": "bomb_day_004", "prompt_en": "Things with wheels", "prompt_am": "ጎማ ያላቸው ነገሮች", "category_id": "everyday", "content_level": "family", "active": true },
+  { "id": "bomb_day_005", "prompt_en": "Excuses for being late", "prompt_am": "ለመዘግየት የሚቀርቡ ሰበቦች", "category_id": "everyday", "content_level": "friends", "active": true },
+  { "id": "bomb_day_006", "prompt_en": "Things people pretend to understand", "prompt_am": "ሰዎች እንደተረዱ የሚያስመስሏቸው ነገሮች", "category_id": "everyday", "content_level": "friends", "active": true },
+
+  { "id": "bomb_nat_001", "prompt_en": "Animals that fly", "prompt_am": "የሚበሩ እንስሳት", "category_id": "nature", "content_level": "family", "active": true },
+  { "id": "bomb_nat_002", "prompt_en": "Animals found on a farm", "prompt_am": "በእርሻ ላይ የሚገኙ እንስሳት", "category_id": "nature", "content_level": "family", "active": true },
+  { "id": "bomb_nat_003", "prompt_en": "Flowers", "prompt_am": "አበቦች", "category_id": "nature", "content_level": "family", "active": true },
+  { "id": "bomb_nat_004", "prompt_en": "Things found in the ocean", "prompt_am": "በውቅያኖስ ውስጥ የሚገኙ ነገሮች", "category_id": "nature", "content_level": "family", "active": true },
+  { "id": "bomb_nat_005", "prompt_en": "Animals you would not want as pets", "prompt_am": "እንደ የቤት እንስሳ የማትፈልጉዋቸው እንስሳት", "category_id": "nature", "content_level": "friends", "active": true },
+  { "id": "bomb_nat_006", "prompt_en": "Things that make people scream", "prompt_am": "ሰዎችን የሚያስጮኹ ነገሮች", "category_id": "nature", "content_level": "friends", "active": true },
+
+  { "id": "bomb_work_001", "prompt_en": "School subjects", "prompt_am": "የትምህርት ዓይነቶች", "category_id": "school_and_work", "content_level": "family", "active": true },
+  { "id": "bomb_work_002", "prompt_en": "Jobs", "prompt_am": "ሥራዎች", "category_id": "school_and_work", "content_level": "family", "active": true },
+  { "id": "bomb_work_003", "prompt_en": "Things in a classroom", "prompt_am": "በክፍል ውስጥ ያሉ ነገሮች", "category_id": "school_and_work", "content_level": "family", "active": true },
+  { "id": "bomb_work_004", "prompt_en": "Office supplies", "prompt_am": "የቢሮ ዕቃዎች", "category_id": "school_and_work", "content_level": "family", "active": true },
+  { "id": "bomb_work_005", "prompt_en": "Reasons to miss class", "prompt_am": "ክፍል ለመቅረት የሚቀርቡ ምክንያቶች", "category_id": "school_and_work", "content_level": "friends", "active": true },
+  { "id": "bomb_work_006", "prompt_en": "Things people do during a boring meeting", "prompt_am": "በአሰልቺ ስብሰባ ጊዜ ሰዎች የሚያደርጓቸው ነገሮች", "category_id": "school_and_work", "content_level": "friends", "active": true }
+]

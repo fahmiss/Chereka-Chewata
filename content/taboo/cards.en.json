@@ -2,12 +2,20 @@
   {
     "id": "taboo_ethiopian_food_001",
     "target_en": "Coffee",
+    "target_am": "ቡና",
     "forbidden_en": [
       "Jebena",
       "Cup",
       "Drink",
       "Black",
       "Morning"
+    ],
+    "forbidden_am": [
+      "ጀበና",
+      "ስኒ",
+      "መጠጥ",
+      "ጥቁር",
+      "ጠዋት"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -17,12 +25,20 @@
   {
     "id": "taboo_ethiopian_food_002",
     "target_en": "Injera",
+    "target_am": "እንጀራ",
     "forbidden_en": [
       "Teff",
       "Bread",
       "Sponge",
       "Ethiopian",
       "Plate"
+    ],
+    "forbidden_am": [
+      "ጤፍ",
+      "ዳቦ",
+      "ሰፖንጅ",
+      "ኢትዮጵያዊ",
+      "ሳህን"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -32,12 +48,20 @@
   {
     "id": "taboo_ethiopian_food_003",
     "target_en": "Doro Wat",
+    "target_am": "ዶሮ ወጥ",
     "forbidden_en": [
       "Chicken",
       "Spice",
       "Stew",
       "Egg",
       "Berbere"
+    ],
+    "forbidden_am": [
+      "ዶሮ",
+      "ቅመም",
+      "ወጥ",
+      "እንቁላል",
+      "በርበሬ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -47,12 +71,20 @@
   {
     "id": "taboo_ethiopian_food_004",
     "target_en": "Tibs",
+    "target_am": "ጥብስ",
     "forbidden_en": [
       "Meat",
       "Fried",
       "Sauté",
       "Beef",
       "Onion"
+    ],
+    "forbidden_am": [
+      "ስጋ",
+      "የተጠበሰ",
+      "ማጥበስ",
+      "በሬ",
+      "ሽንኩርት"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -62,12 +94,20 @@
   {
     "id": "taboo_ethiopian_food_005",
     "target_en": "Shiro",
+    "target_am": "ሽሮ",
     "forbidden_en": [
       "Chickpea",
       "Powder",
       "Stew",
       "Vegetarian",
       "Sauce"
+    ],
+    "forbidden_am": [
+      "ሽምብራ",
+      "ዱቄት",
+      "ወጥ",
+      "ጾም",
+      "መረቅ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -77,12 +117,20 @@
   {
     "id": "taboo_ethiopian_food_006",
     "target_en": "Kitfo",
+    "target_am": "ክትፎ",
     "forbidden_en": [
       "Raw",
       "Beef",
       "Butter",
       "Minced",
       "Mitmita"
+    ],
+    "forbidden_am": [
+      "ጥሬ",
+      "በሬ",
+      "ቅቤ",
+      "የተፈጨ",
+      "ሚጥሚጣ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -92,12 +140,20 @@
   {
     "id": "taboo_ethiopian_food_007",
     "target_en": "Tej",
+    "target_am": "ጠጅ",
     "forbidden_en": [
       "Honey",
       "Wine",
       "Alcohol",
       "Drink",
       "Sweet"
+    ],
+    "forbidden_am": [
+      "ማር",
+      "ወይን",
+      "አልኮል",
+      "መጠጥ",
+      "ጣፋጭ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -107,12 +163,20 @@
   {
     "id": "taboo_ethiopian_food_008",
     "target_en": "Berbere",
+    "target_am": "በርበሬ",
     "forbidden_en": [
       "Spice",
       "Red",
       "Hot",
       "Powder",
       "Pepper"
+    ],
+    "forbidden_am": [
+      "ቅመም",
+      "ቀይ",
+      "ሞቃት",
+      "ዱቄት",
+      "ቃሪያ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -122,12 +186,20 @@
   {
     "id": "taboo_ethiopian_food_009",
     "target_en": "Ayib",
+    "target_am": "አይብ",
     "forbidden_en": [
       "Cheese",
       "White",
       "Fresh",
       "Cottage",
       "Mild"
+    ],
+    "forbidden_am": [
+      "ቺዝ",
+      "ነጭ",
+      "ትኩስ",
+      "ኮቴጅ",
+      "ለስላሳ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -137,12 +209,20 @@
   {
     "id": "taboo_ethiopian_food_010",
     "target_en": "Firfir",
+    "target_am": "ፍርፍር",
     "forbidden_en": [
       "Injera",
       "Torn",
       "Breakfast",
       "Sauce",
       "Leftover"
+    ],
+    "forbidden_am": [
+      "እንጀራ",
+      "የተቀደደ",
+      "ቁርስ",
+      "መረቅ",
+      "ቀሪ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -152,12 +232,20 @@
   {
     "id": "taboo_ethiopian_food_011",
     "target_en": "Kategna",
+    "target_am": "ካተኛ",
     "forbidden_en": [
       "Injera",
       "Butter",
       "Berbere",
       "Snack",
       "Rolled"
+    ],
+    "forbidden_am": [
+      "እንጀራ",
+      "ቅቤ",
+      "በርበሬ",
+      "መክሰስ",
+      "ተጠቅልሎ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -167,12 +255,20 @@
   {
     "id": "taboo_ethiopian_food_012",
     "target_en": "Dulet",
+    "target_am": "ዱለት",
     "forbidden_en": [
       "Organ",
       "Meat",
       "Spicy",
       "Minced",
       "Breakfast"
+    ],
+    "forbidden_am": [
+      "አካል",
+      "ስጋ",
+      "ቅመም ያለው",
+      "የተፈጨ",
+      "ቁርስ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -182,12 +278,20 @@
   {
     "id": "taboo_ethiopian_food_013",
     "target_en": "Ambasha",
+    "target_am": "አምባሻ",
     "forbidden_en": [
       "Bread",
       "Round",
       "Holiday",
       "Sweet",
       "Celebration"
+    ],
+    "forbidden_am": [
+      "ዳቦ",
+      "ክብ",
+      "በዓል",
+      "ጣፋጭ",
+      "ክብረ በዓል"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -197,12 +301,20 @@
   {
     "id": "taboo_ethiopian_food_014",
     "target_en": "Genfo",
+    "target_am": "ገንፎ",
     "forbidden_en": [
       "Porridge",
       "Breakfast",
       "Barley",
       "Hole",
       "Butter"
+    ],
+    "forbidden_am": [
+      "ጭማቅ",
+      "ቁርስ",
+      "ገብስ",
+      "ጉድጓድ",
+      "ቅቤ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -212,12 +324,20 @@
   {
     "id": "taboo_ethiopian_food_015",
     "target_en": "Tella",
+    "target_am": "ጠላ",
     "forbidden_en": [
       "Beer",
       "Home",
       "Grain",
       "Drink",
       "Traditional"
+    ],
+    "forbidden_am": [
+      "ቢራ",
+      "ቤት",
+      "እህል",
+      "መጠጥ",
+      "ባህላዊ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -227,12 +347,20 @@
   {
     "id": "taboo_ethiopian_food_016",
     "target_en": "Beso",
+    "target_am": "በሶ",
     "forbidden_en": [
       "Barley",
       "Snack",
       "Powder",
       "Travel",
       "Dry"
+    ],
+    "forbidden_am": [
+      "ገብስ",
+      "መክሰስ",
+      "ዱቄት",
+      "ጉዞ",
+      "ደረቅ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -242,12 +370,20 @@
   {
     "id": "taboo_ethiopian_food_017",
     "target_en": "Mitmita",
+    "target_am": "ሚጥሚጣ",
     "forbidden_en": [
       "Chili",
       "Spice",
       "Hot",
       "Powder",
       "Red"
+    ],
+    "forbidden_am": [
+      "ቃሪያ",
+      "ቅመም",
+      "ሞቃት",
+      "ዱቄት",
+      "ቀይ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -257,12 +393,20 @@
   {
     "id": "taboo_everyday_life_018",
     "target_en": "Umbrella",
+    "target_am": "ጃንጥላ",
     "forbidden_en": [
       "Rain",
       "Wet",
       "Open",
       "Sun",
       "Cover"
+    ],
+    "forbidden_am": [
+      "ዝናብ",
+      "እርጥብ",
+      "መክፈት",
+      "ፀሐይ",
+      "መከለል"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -272,12 +416,20 @@
   {
     "id": "taboo_everyday_life_019",
     "target_en": "Phone",
+    "target_am": "ስልክ",
     "forbidden_en": [
       "Call",
       "Screen",
       "Mobile",
       "Text",
       "App"
+    ],
+    "forbidden_am": [
+      "ድውል",
+      "ማያ",
+      "ሞባይል",
+      "መልእክት",
+      "አፕ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -287,12 +439,20 @@
   {
     "id": "taboo_everyday_life_020",
     "target_en": "Key",
+    "target_am": "ቁልፍ",
     "forbidden_en": [
       "Lock",
       "Door",
       "Metal",
       "Open",
       "Ring"
+    ],
+    "forbidden_am": [
+      "መቆለፊያ",
+      "በር",
+      "ብረት",
+      "መክፈት",
+      "ቀለበት"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -302,12 +462,20 @@
   {
     "id": "taboo_everyday_life_021",
     "target_en": "Mirror",
+    "target_am": "መስታወት",
     "forbidden_en": [
       "Reflect",
       "Glass",
       "Face",
       "Look",
       "Bathroom"
+    ],
+    "forbidden_am": [
+      "ነጸብራቅ",
+      "ብርጭቆ",
+      "ፊት",
+      "መመልከት",
+      "መታጠቢያ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -317,12 +485,20 @@
   {
     "id": "taboo_everyday_life_022",
     "target_en": "Candle",
+    "target_am": "ሻማ",
     "forbidden_en": [
       "Wax",
       "Flame",
       "Light",
       "Birthday",
       "Dark"
+    ],
+    "forbidden_am": [
+      "ሰም",
+      "ነበልባል",
+      "ብርሃን",
+      "ልደት",
+      "ጨለማ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -332,12 +508,20 @@
   {
     "id": "taboo_everyday_life_023",
     "target_en": "Soap",
+    "target_am": "ሳሙና",
     "forbidden_en": [
       "Wash",
       "Clean",
       "Bubbles",
       "Bath",
       "Hand"
+    ],
+    "forbidden_am": [
+      "መታጠብ",
+      "ንጹህ",
+      "አረፋ",
+      "መታጠቢያ",
+      "እጅ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -347,12 +531,20 @@
   {
     "id": "taboo_everyday_life_024",
     "target_en": "Pillow",
+    "target_am": "ትራስ",
     "forbidden_en": [
       "Sleep",
       "Bed",
       "Soft",
       "Head",
       "Night"
+    ],
+    "forbidden_am": [
+      "መኝታ",
+      "አልጋ",
+      "ለስላሳ",
+      "ራስ",
+      "ለሊት"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -362,12 +554,20 @@
   {
     "id": "taboo_everyday_life_025",
     "target_en": "Clock",
+    "target_am": "ሰዓት",
     "forbidden_en": [
       "Time",
       "Watch",
       "Hour",
       "Tick",
       "Wall"
+    ],
+    "forbidden_am": [
+      "ጊዜ",
+      "የእጅ ሰዓት",
+      "ሰዓት ቁጥር",
+      "ቲክ",
+      "ግድግዳ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -377,12 +577,20 @@
   {
     "id": "taboo_everyday_life_026",
     "target_en": "Wallet",
+    "target_am": "የገንዘብ ቦርሳ",
     "forbidden_en": [
       "Money",
       "Pocket",
       "Cards",
       "Leather",
       "Pay"
+    ],
+    "forbidden_am": [
+      "ገንዘብ",
+      "ኪስ",
+      "ካርድ",
+      "ቆዳ",
+      "መክፈል"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -392,12 +600,20 @@
   {
     "id": "taboo_everyday_life_027",
     "target_en": "Suitcase",
+    "target_am": "ሻንጣ",
     "forbidden_en": [
       "Travel",
       "Pack",
       "Wheels",
       "Clothes",
       "Trip"
+    ],
+    "forbidden_am": [
+      "ጉዞ",
+      "ማሸግ",
+      "ጎማ",
+      "ልብስ",
+      "ጉብኝት"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -407,12 +623,20 @@
   {
     "id": "taboo_everyday_life_028",
     "target_en": "Scissors",
+    "target_am": "መቀስ",
     "forbidden_en": [
       "Cut",
       "Paper",
       "Sharp",
       "Blade",
       "Craft"
+    ],
+    "forbidden_am": [
+      "መቁረጥ",
+      "ወረቀት",
+      "ሹል",
+      "ሞላጫ",
+      "እጅ ሥራ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -422,12 +646,20 @@
   {
     "id": "taboo_everyday_life_029",
     "target_en": "Toothbrush",
+    "target_am": "የጥርስ ብሩሽ",
     "forbidden_en": [
       "Teeth",
       "Morning",
       "Paste",
       "Brush",
       "Clean"
+    ],
+    "forbidden_am": [
+      "ጥርስ",
+      "ጠዋት",
+      "ፔስት",
+      "መቦረሽ",
+      "ንጹህ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -437,12 +669,20 @@
   {
     "id": "taboo_everyday_life_030",
     "target_en": "Remote",
+    "target_am": "ሪሞት",
     "forbidden_en": [
       "TV",
       "Button",
       "Channel",
       "Control",
       "Click"
+    ],
+    "forbidden_am": [
+      "ቲቪ",
+      "አዝራር",
+      "ቻናል",
+      "መቆጣጠሪያ",
+      "መጫን"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -452,12 +692,20 @@
   {
     "id": "taboo_everyday_life_031",
     "target_en": "Charger",
+    "target_am": "ቻርጀር",
     "forbidden_en": [
       "Battery",
       "Plug",
       "Phone",
       "Cable",
       "Power"
+    ],
+    "forbidden_am": [
+      "ባትሪ",
+      "ፕለግ",
+      "ስልክ",
+      "ገመድ",
+      "ኃይል"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -467,12 +715,20 @@
   {
     "id": "taboo_everyday_life_032",
     "target_en": "Laundry",
+    "target_am": "ልብስ ማጠብ",
     "forbidden_en": [
       "Clothes",
       "Wash",
       "Dirty",
       "Machine",
       "Dry"
+    ],
+    "forbidden_am": [
+      "ልብስ",
+      "ማጠብ",
+      "ቆሻሻ",
+      "ማሽን",
+      "ማድረቅ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -482,12 +738,20 @@
   {
     "id": "taboo_everyday_life_033",
     "target_en": "Queue",
+    "target_am": "ረድፍ",
     "forbidden_en": [
       "Line",
       "Wait",
       "Order",
       "Turn",
       "Stand"
+    ],
+    "forbidden_am": [
+      "መስመር",
+      "መጠበቅ",
+      "ቅደም ተከተል",
+      "ተራ",
+      "መቆም"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -497,12 +761,20 @@
   {
     "id": "taboo_everyday_life_034",
     "target_en": "Password",
+    "target_am": "የይለፍ ቃል",
     "forbidden_en": [
       "Secret",
       "Login",
       "Code",
       "Safe",
       "Account"
+    ],
+    "forbidden_am": [
+      "ሚስጥር",
+      "ግባ",
+      "ኮድ",
+      "ደህንነት",
+      "መለያ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -512,12 +784,20 @@
   {
     "id": "taboo_places_035",
     "target_en": "Addis Ababa",
+    "target_am": "አዲስ አበባ",
     "forbidden_en": [
       "Capital",
       "Ethiopia",
       "City",
       "Merkato",
       "Bole"
+    ],
+    "forbidden_am": [
+      "ዋና ከተማ",
+      "ኢትዮጵያ",
+      "ከተማ",
+      "መርካቶ",
+      "ቦሌ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -527,12 +807,20 @@
   {
     "id": "taboo_places_036",
     "target_en": "Airport",
+    "target_am": "አውሮፕላን ማረፊያ",
     "forbidden_en": [
       "Plane",
       "Fly",
       "Gate",
       "Travel",
       "Luggage"
+    ],
+    "forbidden_am": [
+      "አውሮፕላን",
+      "መብረር",
+      "በር",
+      "ጉዞ",
+      "ሻንጣ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -542,12 +830,20 @@
   {
     "id": "taboo_places_037",
     "target_en": "Market",
+    "target_am": "ገበያ",
     "forbidden_en": [
       "Buy",
       "Sell",
       "Shop",
       "Food",
       "Crowd"
+    ],
+    "forbidden_am": [
+      "መግዛት",
+      "መሸጥ",
+      "ሱቅ",
+      "ምግብ",
+      "ሰው"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -557,12 +853,20 @@
   {
     "id": "taboo_places_038",
     "target_en": "Church",
+    "target_am": "ቤተ ክርስቲያን",
     "forbidden_en": [
       "Pray",
       "Sunday",
       "Cross",
       "Priest",
       "Holy"
+    ],
+    "forbidden_am": [
+      "መጸለይ",
+      "እሁድ",
+      "መስቀል",
+      "ካህን",
+      "ቅዱስ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -572,12 +876,20 @@
   {
     "id": "taboo_places_039",
     "target_en": "Mosque",
+    "target_am": "መስጊድ",
     "forbidden_en": [
       "Pray",
       "Islam",
       "Friday",
       "Minaret",
       "Imam"
+    ],
+    "forbidden_am": [
+      "መጸለይ",
+      "እስልምና",
+      "አርብ",
+      "ሚናሬት",
+      "ኢማም"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -587,12 +899,20 @@
   {
     "id": "taboo_places_040",
     "target_en": "School",
+    "target_am": "ትምህርት ቤት",
     "forbidden_en": [
       "Teacher",
       "Student",
       "Class",
       "Learn",
       "Book"
+    ],
+    "forbidden_am": [
+      "መምህር",
+      "ተማሪ",
+      "ክፍል",
+      "መማር",
+      "መጽሐፍ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -602,12 +922,20 @@
   {
     "id": "taboo_places_041",
     "target_en": "Hospital",
+    "target_am": "ሆስፒታል",
     "forbidden_en": [
       "Doctor",
       "Sick",
       "Nurse",
       "Medicine",
       "Bed"
+    ],
+    "forbidden_am": [
+      "ሐኪም",
+      "ታማሚ",
+      "ነርስ",
+      "መድሃኒት",
+      "አልጋ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -617,12 +945,20 @@
   {
     "id": "taboo_places_042",
     "target_en": "Library",
+    "target_am": "ቤተ መጻሕፍት",
     "forbidden_en": [
       "Book",
       "Quiet",
       "Read",
       "Shelf",
       "Study"
+    ],
+    "forbidden_am": [
+      "መጽሐፍ",
+      "ጸጥታ",
+      "ማንበብ",
+      "መደርደሪያ",
+      "ማጥናት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -632,12 +968,20 @@
   {
     "id": "taboo_places_043",
     "target_en": "Post office",
+    "target_am": "ፖስታ ቤት",
     "forbidden_en": [
       "Letter",
       "Stamp",
       "Send",
       "Parcel",
       "Queue"
+    ],
+    "forbidden_am": [
+      "ደብዳቤ",
+      "ማህተም",
+      "መላክ",
+      "ፓርሴል",
+      "ረድፍ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -647,12 +991,20 @@
   {
     "id": "taboo_places_044",
     "target_en": "Beach",
+    "target_am": "ባህር ዳርቻ",
     "forbidden_en": [
       "Sand",
       "Ocean",
       "Swim",
       "Sun",
       "Wave"
+    ],
+    "forbidden_am": [
+      "አሸዋ",
+      "ውቅያኖስ",
+      "መዋኘት",
+      "ፀሐይ",
+      "ማዕበል"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -662,12 +1014,20 @@
   {
     "id": "taboo_places_045",
     "target_en": "Mountain",
+    "target_am": "ተራራ",
     "forbidden_en": [
       "Climb",
       "High",
       "Peak",
       "Hike",
       "Rock"
+    ],
+    "forbidden_am": [
+      "መውጣት",
+      "ከፍተኛ",
+      "ጫፍ",
+      "እግር ጉዞ",
+      "ድንጋይ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -677,12 +1037,20 @@
   {
     "id": "taboo_places_046",
     "target_en": "Café",
+    "target_am": "ካፌ",
     "forbidden_en": [
       "Coffee",
       "Sit",
       "Wifi",
       "Drink",
       "Meet"
+    ],
+    "forbidden_am": [
+      "ቡና",
+      "መቀመጥ",
+      "ዋይፋይ",
+      "መጠጥ",
+      "መገናኘት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -692,12 +1060,20 @@
   {
     "id": "taboo_places_047",
     "target_en": "Cinema",
+    "target_am": "ሲኒማ",
     "forbidden_en": [
       "Movie",
       "Screen",
       "Popcorn",
       "Ticket",
       "Dark"
+    ],
+    "forbidden_am": [
+      "ፊልም",
+      "ማያ",
+      "ፖፕኮርን",
+      "ቲኬት",
+      "ጨለማ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -707,12 +1083,20 @@
   {
     "id": "taboo_places_048",
     "target_en": "Museum",
+    "target_am": "ሙዚየም",
     "forbidden_en": [
       "Art",
       "History",
       "Exhibit",
       "Tour",
       "Quiet"
+    ],
+    "forbidden_am": [
+      "ሥነ ጥበብ",
+      "ታሪክ",
+      "ኤግዚቢሽን",
+      "ጉብኝት",
+      "ጸጥታ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -722,12 +1106,20 @@
   {
     "id": "taboo_places_049",
     "target_en": "Embassy",
+    "target_am": "ኤምባሲ",
     "forbidden_en": [
       "Visa",
       "Passport",
       "Country",
       "Diplomat",
       "Gate"
+    ],
+    "forbidden_am": [
+      "ቪዛ",
+      "ፓስፖርት",
+      "አገር",
+      "ዲፕሎማት",
+      "በር"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -737,12 +1129,20 @@
   {
     "id": "taboo_places_050",
     "target_en": "Lalibela",
+    "target_am": "ላሊበላ",
     "forbidden_en": [
       "Churches",
       "Rock",
       "UNESCO",
       "Pilgrim",
       "Ethiopia"
+    ],
+    "forbidden_am": [
+      "ቤተ ክርስቲያኖች",
+      "የድንጋይ",
+      "ዩኔስኮ",
+      "ጉብኝተኛ",
+      "ኢትዮጵያ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -752,12 +1152,20 @@
   {
     "id": "taboo_places_051",
     "target_en": "Axum",
+    "target_am": "አክሱም",
     "forbidden_en": [
       "Obelisk",
       "History",
       "Ancient",
       "North",
       "Kingdom"
+    ],
+    "forbidden_am": [
+      "ኦቤሊስክ",
+      "ታሪክ",
+      "ጥንታዊ",
+      "ሰሜን",
+      "መንግሥት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -767,12 +1175,20 @@
   {
     "id": "taboo_music_and_entertainment_052",
     "target_en": "Guitar",
+    "target_am": "ጊታር",
     "forbidden_en": [
       "String",
       "Music",
       "Play",
       "Acoustic",
       "Song"
+    ],
+    "forbidden_am": [
+      "ገመድ",
+      "ሙዚቃ",
+      "መጫወት",
+      "አኮስቲክ",
+      "ዘፈን"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -782,12 +1198,20 @@
   {
     "id": "taboo_music_and_entertainment_053",
     "target_en": "Drum",
+    "target_am": "ከበሮ",
     "forbidden_en": [
       "Beat",
       "Hit",
       "Music",
       "Rhythm",
       "Stick"
+    ],
+    "forbidden_am": [
+      "ሪትም",
+      "መምታት",
+      "ሙዚቃ",
+      "ምት",
+      "ዱላ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -797,12 +1221,20 @@
   {
     "id": "taboo_music_and_entertainment_054",
     "target_en": "Karaoke",
+    "target_am": "ካራኦኬ",
     "forbidden_en": [
       "Sing",
       "Microphone",
       "Lyrics",
       "Fun",
       "Stage"
+    ],
+    "forbidden_am": [
+      "መዘመር",
+      "ማይክሮፎን",
+      "ግጥም",
+      "አዝናኝ",
+      "መድረክ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -812,12 +1244,20 @@
   {
     "id": "taboo_music_and_entertainment_055",
     "target_en": "Podcast",
+    "target_am": "ፖድካስት",
     "forbidden_en": [
       "Listen",
       "Talk",
       "Episode",
       "Audio",
       "Host"
+    ],
+    "forbidden_am": [
+      "ማዳመጥ",
+      "መነጋገር",
+      "ኤፒሶድ",
+      "ድምጽ",
+      "አስተናጋጅ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -827,12 +1267,20 @@
   {
     "id": "taboo_music_and_entertainment_056",
     "target_en": "Playlist",
+    "target_am": "ፕሌይሊስት",
     "forbidden_en": [
       "Songs",
       "Spotify",
       "Order",
       "Music",
       "Shuffle"
+    ],
+    "forbidden_am": [
+      "ዘፈኖች",
+      "ስፖቲፋይ",
+      "ቅደም ተከተል",
+      "ሙዚቃ",
+      "መቀላቀል"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -842,12 +1290,20 @@
   {
     "id": "taboo_music_and_entertainment_057",
     "target_en": "Concert",
+    "target_am": "ኮንሰርት",
     "forbidden_en": [
       "Live",
       "Stage",
       "Crowd",
       "Ticket",
       "Band"
+    ],
+    "forbidden_am": [
+      "ቀጥታ",
+      "መድረክ",
+      "ተመልካች",
+      "ቲኬት",
+      "ባንድ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -857,12 +1313,20 @@
   {
     "id": "taboo_music_and_entertainment_058",
     "target_en": "Comedy",
+    "target_am": "ኮሜዲ",
     "forbidden_en": [
       "Laugh",
       "Joke",
       "Funny",
       "Standup",
       "Humor"
+    ],
+    "forbidden_am": [
+      "ሳቅ",
+      "ቀልድ",
+      "አስቂኝ",
+      "ስታንድአፕ",
+      "ቀልድነት"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -872,12 +1336,20 @@
   {
     "id": "taboo_music_and_entertainment_059",
     "target_en": "Netflix",
+    "target_am": "Netflix",
     "forbidden_en": [
       "Stream",
       "Show",
       "Watch",
       "Series",
       "Movie"
+    ],
+    "forbidden_am": [
+      "ስትሪም",
+      "ሾው",
+      "መመልከት",
+      "ተከታታይ",
+      "ፊልም"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -887,12 +1359,20 @@
   {
     "id": "taboo_music_and_entertainment_060",
     "target_en": "Dance",
+    "target_am": "ዳንስ",
     "forbidden_en": [
       "Move",
       "Music",
       "Feet",
       "Party",
       "Rhythm"
+    ],
+    "forbidden_am": [
+      "መንቀሳቀስ",
+      "ሙዚቃ",
+      "እግር",
+      "ፓርቲ",
+      "ሪትም"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -902,12 +1382,20 @@
   {
     "id": "taboo_music_and_entertainment_061",
     "target_en": "Piano",
+    "target_am": "ፒያኖ",
     "forbidden_en": [
       "Keys",
       "Music",
       "Play",
       "Black",
       "White"
+    ],
+    "forbidden_am": [
+      "ቁልፎች",
+      "ሙዚቃ",
+      "መጫወት",
+      "ጥቁር",
+      "ነጭ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -917,12 +1405,20 @@
   {
     "id": "taboo_music_and_entertainment_062",
     "target_en": "Actor",
+    "target_am": "ተዋናይ",
     "forbidden_en": [
       "Movie",
       "Role",
       "Film",
       "Stage",
       "Famous"
+    ],
+    "forbidden_am": [
+      "ፊልም",
+      "ሚና",
+      "ሲነማ",
+      "መድረክ",
+      "ታዋቂ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -932,12 +1428,20 @@
   {
     "id": "taboo_music_and_entertainment_063",
     "target_en": "Director",
+    "target_am": "ዳይሬክተር",
     "forbidden_en": [
       "Film",
       "Camera",
       "Movie",
       "Crew",
       "Scene"
+    ],
+    "forbidden_am": [
+      "ፊልም",
+      "ካሜራ",
+      "ሲነማ",
+      "ሠራተኞች",
+      "ትዕይንት"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -947,12 +1451,20 @@
   {
     "id": "taboo_music_and_entertainment_064",
     "target_en": "Festival",
+    "target_am": "ፌስቲቫል",
     "forbidden_en": [
       "Music",
       "Crowd",
       "Outdoor",
       "Stage",
       "Summer"
+    ],
+    "forbidden_am": [
+      "ሙዚቃ",
+      "ሰው",
+      "ከቤት ውጭ",
+      "መድረክ",
+      "በጋ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -962,12 +1474,20 @@
   {
     "id": "taboo_music_and_entertainment_065",
     "target_en": "TikTok",
+    "target_am": "TikTok",
     "forbidden_en": [
       "Video",
       "Short",
       "App",
       "Scroll",
       "Trend"
+    ],
+    "forbidden_am": [
+      "ቪዲዮ",
+      "አጭር",
+      "አፕ",
+      "ስክሮል",
+      "ትሬንድ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -977,12 +1497,20 @@
   {
     "id": "taboo_music_and_entertainment_066",
     "target_en": "Headline",
+    "target_am": "አርእስት",
     "forbidden_en": [
       "News",
       "Title",
       "Paper",
       "Story",
       "Top"
+    ],
+    "forbidden_am": [
+      "ዜና",
+      "ርዕስ",
+      "ጋዜጣ",
+      "ታሪክ",
+      "ከፍተኛ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -992,12 +1520,20 @@
   {
     "id": "taboo_music_and_entertainment_067",
     "target_en": "Soundtrack",
+    "target_am": "ሳውንድትራክ",
     "forbidden_en": [
       "Movie",
       "Music",
       "Song",
       "Film",
       "Score"
+    ],
+    "forbidden_am": [
+      "ፊልም",
+      "ሙዚቃ",
+      "ዘፈን",
+      "ሲነማ",
+      "ስኮር"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -1007,12 +1543,20 @@
   {
     "id": "taboo_music_and_entertainment_068",
     "target_en": "Encore",
+    "target_am": "ኤንኮር",
     "forbidden_en": [
       "Again",
       "Concert",
       "Crowd",
       "Sing",
       "Extra"
+    ],
+    "forbidden_am": [
+      "እንደገና",
+      "ኮንሰርት",
+      "ተመልካች",
+      "መዘመር",
+      "ተጨማሪ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -1022,12 +1566,20 @@
   {
     "id": "taboo_school_069",
     "target_en": "Homework",
+    "target_am": "የቤት ሥራ",
     "forbidden_en": [
       "School",
       "Assignment",
       "Teacher",
       "Due",
       "Study"
+    ],
+    "forbidden_am": [
+      "ትምህርት ቤት",
+      "ተግባር",
+      "መምህር",
+      "ጊዜው",
+      "ማጥናት"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1037,12 +1589,20 @@
   {
     "id": "taboo_school_070",
     "target_en": "Exam",
+    "target_am": "ፈተና",
     "forbidden_en": [
       "Test",
       "Grade",
       "Study",
       "Paper",
       "Score"
+    ],
+    "forbidden_am": [
+      "ሙከራ",
+      "ውጤት",
+      "ማጥናት",
+      "ወረቀት",
+      "ነጥብ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1052,12 +1612,20 @@
   {
     "id": "taboo_school_071",
     "target_en": "School bell",
+    "target_am": "የትምህርት ቤት ደውል",
     "forbidden_en": [
       "Ring",
       "Class",
       "End",
       "Sound",
       "Period"
+    ],
+    "forbidden_am": [
+      "መደወል",
+      "ክፍል",
+      "መጨረሻ",
+      "ድምፅ",
+      "ጊዜ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1067,12 +1635,20 @@
   {
     "id": "taboo_school_072",
     "target_en": "Notebook",
+    "target_am": "ማስታወሻ ደብተር",
     "forbidden_en": [
       "Write",
       "Paper",
       "School",
       "Pen",
       "Page"
+    ],
+    "forbidden_am": [
+      "መጻፍ",
+      "ወረቀት",
+      "ትምህርት ቤት",
+      "እስክሪብቶ",
+      "ገጽ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1082,12 +1658,20 @@
   {
     "id": "taboo_school_073",
     "target_en": "Calculator",
+    "target_am": "ካልኩሌተር",
     "forbidden_en": [
       "Math",
       "Numbers",
       "Button",
       "Solve",
       "School"
+    ],
+    "forbidden_am": [
+      "ሒሳብ",
+      "ቁጥሮች",
+      "አዝራር",
+      "መፍታት",
+      "ትምህርት ቤት"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1097,12 +1681,20 @@
   {
     "id": "taboo_school_074",
     "target_en": "Uniform",
+    "target_am": "ዩኒፎርም",
     "forbidden_en": [
       "Clothes",
       "School",
       "Same",
       "Wear",
       "Dress"
+    ],
+    "forbidden_am": [
+      "ልብስ",
+      "ትምህርት ቤት",
+      "ተመሳሳይ",
+      "መልበስ",
+      "ቀሚስ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1112,12 +1704,20 @@
   {
     "id": "taboo_school_075",
     "target_en": "Diploma",
+    "target_am": "ዲፕሎማ",
     "forbidden_en": [
       "Graduate",
       "Certificate",
       "Degree",
       "Finish",
       "School"
+    ],
+    "forbidden_am": [
+      "መመረቅ",
+      "ሰርተፍኬት",
+      "ዲግሪ",
+      "መጨረስ",
+      "ትምህርት ቤት"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1127,12 +1727,20 @@
   {
     "id": "taboo_school_076",
     "target_en": "Lecture",
+    "target_am": "ትምህርት",
     "forbidden_en": [
       "University",
       "Talk",
       "Professor",
       "Class",
       "Notes"
+    ],
+    "forbidden_am": [
+      "ዩኒቨርሲቲ",
+      "ንግግር",
+      "ፕሮፌሰር",
+      "ክፍል",
+      "ማስታወሻ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1142,12 +1750,20 @@
   {
     "id": "taboo_school_077",
     "target_en": "Library card",
+    "target_am": "የቤተ መጻሕፍት ካርድ",
     "forbidden_en": [
       "Borrow",
       "Book",
       "Student",
       "ID",
       "Checkout"
+    ],
+    "forbidden_am": [
+      "መበደር",
+      "መጽሐፍ",
+      "ተማሪ",
+      "መታወቂያ",
+      "መውሰድ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1157,12 +1773,20 @@
   {
     "id": "taboo_school_078",
     "target_en": "Recess",
+    "target_am": "ረፈት",
     "forbidden_en": [
       "Break",
       "Play",
       "School",
       "Outside",
       "Fun"
+    ],
+    "forbidden_am": [
+      "እረፍት",
+      "መጫወት",
+      "ትምህርት ቤት",
+      "ውጭ",
+      "አዝናኝ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1172,12 +1796,20 @@
   {
     "id": "taboo_school_079",
     "target_en": "Chalkboard",
+    "target_am": "ሰሌዳ",
     "forbidden_en": [
       "Write",
       "Class",
       "Dust",
       "Teacher",
       "Black"
+    ],
+    "forbidden_am": [
+      "መጻፍ",
+      "ክፍል",
+      "አቧራ",
+      "መምህር",
+      "ጥቁር"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1187,12 +1819,20 @@
   {
     "id": "taboo_school_080",
     "target_en": "Scholarship",
+    "target_am": "ስኮላርሺፕ",
     "forbidden_en": [
       "Money",
       "Study",
       "Award",
       "University",
       "Merit"
+    ],
+    "forbidden_am": [
+      "ገንዘብ",
+      "ማጥናት",
+      "ሽልማት",
+      "ዩኒቨርሲቲ",
+      "ብቃት"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1202,12 +1842,20 @@
   {
     "id": "taboo_school_081",
     "target_en": "Thesis",
+    "target_am": "ቲሲስ",
     "forbidden_en": [
       "Research",
       "University",
       "Paper",
       "Graduate",
       "Write"
+    ],
+    "forbidden_am": [
+      "ምርምር",
+      "ዩኒቨርሲቲ",
+      "ጽሑፍ",
+      "መመረቅ",
+      "መጻፍ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -1217,12 +1865,20 @@
   {
     "id": "taboo_school_082",
     "target_en": "Detention",
+    "target_am": "ዲቴንሽን",
     "forbidden_en": [
       "Punish",
       "After",
       "School",
       "Stay",
       "Rule"
+    ],
+    "forbidden_am": [
+      "መቀጣት",
+      "ከትምህርት በኋላ",
+      "ትምህርት ቤት",
+      "መቆየት",
+      "ደንብ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -1232,12 +1888,20 @@
   {
     "id": "taboo_school_083",
     "target_en": "Backpack",
+    "target_am": "የጀርባ ቦርሳ",
     "forbidden_en": [
       "Bag",
       "Carry",
       "School",
       "Books",
       "Zip"
+    ],
+    "forbidden_am": [
+      "ቦርሳ",
+      "መሸከም",
+      "ትምህርት ቤት",
+      "መጻሕፍት",
+      "ዚፕ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1247,12 +1911,20 @@
   {
     "id": "taboo_school_084",
     "target_en": "Semester",
+    "target_am": "ሴሚስተር",
     "forbidden_en": [
       "Term",
       "Year",
       "University",
       "Half",
       "Classes"
+    ],
+    "forbidden_am": [
+      "ጊዜ",
+      "ዓመት",
+      "ዩኒቨርሲቲ",
+      "ግማሽ",
+      "ትምህርቶች"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1262,12 +1934,20 @@
   {
     "id": "taboo_school_085",
     "target_en": "Lab",
+    "target_am": "ላቦራቶሪ",
     "forbidden_en": [
       "Science",
       "Experiment",
       "Class",
       "Coat",
       "Chem"
+    ],
+    "forbidden_am": [
+      "ሳይንስ",
+      "ሙከራ",
+      "ክፍል",
+      "ጃኬት",
+      "ኬሚስትሪ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -1277,12 +1957,20 @@
   {
     "id": "taboo_jobs_086",
     "target_en": "Doctor",
+    "target_am": "ሐኪም",
     "forbidden_en": [
       "Hospital",
       "Patient",
       "Medicine",
       "Sick",
       "White"
+    ],
+    "forbidden_am": [
+      "ሆስፒታል",
+      "ታካሚ",
+      "መድሃኒት",
+      "ታማሚ",
+      "ነጭ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1292,12 +1980,20 @@
   {
     "id": "taboo_jobs_087",
     "target_en": "Teacher",
+    "target_am": "መምህር",
     "forbidden_en": [
       "School",
       "Student",
       "Lesson",
       "Class",
       "Educate"
+    ],
+    "forbidden_am": [
+      "ትምህርት ቤት",
+      "ተማሪ",
+      "ትምህርት",
+      "ክፍል",
+      "ማስተማር"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1307,12 +2003,20 @@
   {
     "id": "taboo_jobs_088",
     "target_en": "Pilot",
+    "target_am": "አብራሪ",
     "forbidden_en": [
       "Plane",
       "Fly",
       "Cockpit",
       "Airport",
       "Captain"
+    ],
+    "forbidden_am": [
+      "አውሮፕላን",
+      "መብረር",
+      "ኮክፒት",
+      "አውሮፕላን ማረፊያ",
+      "ካፒቴን"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1322,12 +2026,20 @@
   {
     "id": "taboo_jobs_089",
     "target_en": "Chef",
+    "target_am": "ሼፍ",
     "forbidden_en": [
       "Cook",
       "Kitchen",
       "Food",
       "Restaurant",
       "Knife"
+    ],
+    "forbidden_am": [
+      "ማብሰል",
+      "ኩሽና",
+      "ምግብ",
+      "ሬስቶራንት",
+      "ቢላ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1337,12 +2049,20 @@
   {
     "id": "taboo_jobs_090",
     "target_en": "Driver",
+    "target_am": "ሹፌር",
     "forbidden_en": [
       "Car",
       "Road",
       "Steering",
       "Taxi",
       "Travel"
+    ],
+    "forbidden_am": [
+      "መኪና",
+      "መንገድ",
+      "መሪ",
+      "ታክሲ",
+      "ጉዞ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1352,12 +2072,20 @@
   {
     "id": "taboo_jobs_091",
     "target_en": "Nurse",
+    "target_am": "ነርስ",
     "forbidden_en": [
       "Hospital",
       "Care",
       "Patient",
       "Doctor",
       "Medicine"
+    ],
+    "forbidden_am": [
+      "ሆስፒታል",
+      "እንክብካቤ",
+      "ታካሚ",
+      "ሐኪም",
+      "መድሃኒት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1367,12 +2095,20 @@
   {
     "id": "taboo_jobs_092",
     "target_en": "Engineer",
+    "target_am": "መሐንዲስ",
     "forbidden_en": [
       "Build",
       "Design",
       "Math",
       "Tech",
       "Project"
+    ],
+    "forbidden_am": [
+      "መገንባት",
+      "ንድፍ",
+      "ሒሳብ",
+      "ቴክኖሎጂ",
+      "ፕሮጀክት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1382,12 +2118,20 @@
   {
     "id": "taboo_jobs_093",
     "target_en": "Lawyer",
+    "target_am": "ጠበቃ",
     "forbidden_en": [
       "Court",
       "Law",
       "Case",
       "Judge",
       "Argue"
+    ],
+    "forbidden_am": [
+      "ፍርድ ቤት",
+      "ሕግ",
+      "ጉዳይ",
+      "ዳኛ",
+      "መከራከር"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1397,12 +2141,20 @@
   {
     "id": "taboo_jobs_094",
     "target_en": "Farmer",
+    "target_am": "ገበሬ",
     "forbidden_en": [
       "Farm",
       "Crop",
       "Land",
       "Grow",
       "Animals"
+    ],
+    "forbidden_am": [
+      "እርሻ",
+      "ሰብል",
+      "መሬት",
+      "ማብቀል",
+      "እንስሳት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1412,12 +2164,20 @@
   {
     "id": "taboo_jobs_095",
     "target_en": "Journalist",
+    "target_am": "ጋዜጠኛ",
     "forbidden_en": [
       "News",
       "Write",
       "Report",
       "Story",
       "Interview"
+    ],
+    "forbidden_am": [
+      "ዜና",
+      "መጻፍ",
+      "ሪፖርት",
+      "ታሪክ",
+      "ቃለ መጠይቅ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1427,12 +2187,20 @@
   {
     "id": "taboo_jobs_096",
     "target_en": "Barista",
+    "target_am": "ባሪስታ",
     "forbidden_en": [
       "Coffee",
       "Café",
       "Drink",
       "Foam",
       "Order"
+    ],
+    "forbidden_am": [
+      "ቡና",
+      "ካፌ",
+      "መጠጥ",
+      "አረፋ",
+      "ትእዛዝ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1442,12 +2210,20 @@
   {
     "id": "taboo_jobs_097",
     "target_en": "Firefighter",
+    "target_am": "የእሳት አደጋ ሰራተኛ",
     "forbidden_en": [
       "Fire",
       "Hose",
       "Rescue",
       "Truck",
       "Brave"
+    ],
+    "forbidden_am": [
+      "እሳት",
+      "ቱቦ",
+      "ማዳን",
+      "መኪና",
+      "ደፋር"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1457,12 +2233,20 @@
   {
     "id": "taboo_jobs_098",
     "target_en": "Dentist",
+    "target_am": "የጥርስ ሐኪም",
     "forbidden_en": [
       "Teeth",
       "Clinic",
       "Drill",
       "Smile",
       "Clean"
+    ],
+    "forbidden_am": [
+      "ጥርስ",
+      "ክሊኒክ",
+      "ድሪል",
+      "ፈገግታ",
+      "ማጽዳት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1472,12 +2256,20 @@
   {
     "id": "taboo_jobs_099",
     "target_en": "Architect",
+    "target_am": "አርክቴክት",
     "forbidden_en": [
       "Building",
       "Design",
       "Plan",
       "Draw",
       "House"
+    ],
+    "forbidden_am": [
+      "ህንጻ",
+      "ንድፍ",
+      "እቅድ",
+      "መሳል",
+      "ቤት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1487,12 +2279,20 @@
   {
     "id": "taboo_jobs_100",
     "target_en": "Cashier",
+    "target_am": "ካሺየር",
     "forbidden_en": [
       "Money",
       "Store",
       "Pay",
       "Register",
       "Receipt"
+    ],
+    "forbidden_am": [
+      "ገንዘብ",
+      "ሱቅ",
+      "መክፈል",
+      "መመዝገቢያ",
+      "ደረሰኝ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1502,12 +2302,20 @@
   {
     "id": "taboo_jobs_101",
     "target_en": "Translator",
+    "target_am": "ተርጓሚ",
     "forbidden_en": [
       "Language",
       "Words",
       "Speak",
       "Convert",
       "Meaning"
+    ],
+    "forbidden_am": [
+      "ቋንቋ",
+      "ቃላት",
+      "መናገር",
+      "መቀየር",
+      "ትርጉም"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -1517,12 +2325,20 @@
   {
     "id": "taboo_jobs_102",
     "target_en": "Influencer",
+    "target_am": "ኢንፍሉዌንሰር",
     "forbidden_en": [
       "Social",
       "Followers",
       "Content",
       "Online",
       "Brand"
+    ],
+    "forbidden_am": [
+      "ማኅበራዊ",
+      "ተከታዮች",
+      "ይዘት",
+      "ኦንላይን",
+      "ብራንድ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -1532,12 +2348,20 @@
   {
     "id": "taboo_animals_103",
     "target_en": "Lion",
+    "target_am": "አንበሳ",
     "forbidden_en": [
       "King",
       "Mane",
       "Roar",
       "Cat",
       "Africa"
+    ],
+    "forbidden_am": [
+      "ንጉሥ",
+      "ጸጉር",
+      "ጩኸት",
+      "ድመት",
+      "አፍሪካ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1547,12 +2371,20 @@
   {
     "id": "taboo_animals_104",
     "target_en": "Elephant",
+    "target_am": "ዝሆን",
     "forbidden_en": [
       "Trunk",
       "Ivory",
       "Large",
       "Tusk",
       "Africa"
+    ],
+    "forbidden_am": [
+      "ሽንቁር",
+      "አይቮሪ",
+      "ትልቅ",
+      "ትልቅ ጥርስ",
+      "አፍሪካ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1562,12 +2394,20 @@
   {
     "id": "taboo_animals_105",
     "target_en": "Giraffe",
+    "target_am": "ቀጭኔ",
     "forbidden_en": [
       "Neck",
       "Tall",
       "Spots",
       "Africa",
       "Zoo"
+    ],
+    "forbidden_am": [
+      "አንገት",
+      "ረጅም",
+      "ነጠብጣብ",
+      "አፍሪካ",
+      "እንስሳት ስፍራ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1577,12 +2417,20 @@
   {
     "id": "taboo_animals_106",
     "target_en": "Dog",
+    "target_am": "ውሻ",
     "forbidden_en": [
       "Bark",
       "Pet",
       "Walk",
       "Loyal",
       "Bone"
+    ],
+    "forbidden_am": [
+      "መጮህ",
+      "የቤት እንስሳ",
+      "መራመድ",
+      "ታማኝ",
+      "አጥንት"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1592,12 +2440,20 @@
   {
     "id": "taboo_animals_107",
     "target_en": "Cat",
+    "target_am": "ድመት",
     "forbidden_en": [
       "Meow",
       "Pet",
       "Purr",
       "Whiskers",
       "Litter"
+    ],
+    "forbidden_am": [
+      "ሚው",
+      "የቤት እንስሳ",
+      "ፕርር",
+      "ጢም ጸጉር",
+      "አሸዋ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1607,12 +2463,20 @@
   {
     "id": "taboo_animals_108",
     "target_en": "Chicken",
+    "target_am": "ዶሮ",
     "forbidden_en": [
       "Egg",
       "Farm",
       "Cluck",
       "Bird",
       "Wing"
+    ],
+    "forbidden_am": [
+      "እንቁላል",
+      "እርሻ",
+      "መጮህ",
+      "ወፍ",
+      "ክንፍ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1622,12 +2486,20 @@
   {
     "id": "taboo_animals_109",
     "target_en": "Fish",
+    "target_am": "ዓሳ",
     "forbidden_en": [
       "Water",
       "Swim",
       "Scale",
       "Gill",
       "Ocean"
+    ],
+    "forbidden_am": [
+      "ውሃ",
+      "መዋኘት",
+      "ቅርፊት",
+      "ጊል",
+      "ውቅያኖስ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1637,12 +2509,20 @@
   {
     "id": "taboo_animals_110",
     "target_en": "Horse",
+    "target_am": "ፈረስ",
     "forbidden_en": [
       "Ride",
       "Stable",
       "Gallop",
       "Saddle",
       "Mane"
+    ],
+    "forbidden_am": [
+      "መጋለብ",
+      "ጋጣ",
+      "መሮጥ",
+      "ኮረጆ",
+      "ጸጉር"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1652,12 +2532,20 @@
   {
     "id": "taboo_animals_111",
     "target_en": "Monkey",
+    "target_am": "ዝንጀሮ",
     "forbidden_en": [
       "Banana",
       "Tree",
       "Swing",
       "Primate",
       "Zoo"
+    ],
+    "forbidden_am": [
+      "ሙዝ",
+      "ዛፍ",
+      "መንቀጥቀጥ",
+      "ፕሪሜት",
+      "እንስሳት ስፍራ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1667,12 +2555,20 @@
   {
     "id": "taboo_animals_112",
     "target_en": "Eagle",
+    "target_am": "ንስር",
     "forbidden_en": [
       "Bird",
       "Fly",
       "Nest",
       "Prey",
       "Wings"
+    ],
+    "forbidden_am": [
+      "ወፍ",
+      "መብረር",
+      "ጎጆ",
+      "አደን",
+      "ክንፎች"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1682,12 +2578,20 @@
   {
     "id": "taboo_animals_113",
     "target_en": "Snake",
+    "target_am": "እባብ",
     "forbidden_en": [
       "Slither",
       "Venom",
       "Scale",
       "Hiss",
       "Long"
+    ],
+    "forbidden_am": [
+      "መሳብ",
+      "መርዝ",
+      "ቀለበት",
+      "ሂስ",
+      "ረጅም"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1697,12 +2601,20 @@
   {
     "id": "taboo_animals_114",
     "target_en": "Camel",
+    "target_am": "ግመል",
     "forbidden_en": [
       "Desert",
       "Hump",
       "Sand",
       "Water",
       "Ride"
+    ],
+    "forbidden_am": [
+      "በረሃ",
+      "ጉብታ",
+      "አሸዋ",
+      "ውሃ",
+      "መጋለብ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1712,12 +2624,20 @@
   {
     "id": "taboo_animals_115",
     "target_en": "Bee",
+    "target_am": "ንብ",
     "forbidden_en": [
       "Honey",
       "Sting",
       "Hive",
       "Buzz",
       "Flower"
+    ],
+    "forbidden_am": [
+      "ማር",
+      "መውጋት",
+      "ቀፎ",
+      "ዝንቦ",
+      "አበባ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1727,12 +2647,20 @@
   {
     "id": "taboo_animals_116",
     "target_en": "Owl",
+    "target_am": "ጉጉት",
     "forbidden_en": [
       "Night",
       "Hoot",
       "Wise",
       "Bird",
       "Eyes"
+    ],
+    "forbidden_am": [
+      "ለሊት",
+      "ሁት",
+      "ጥበበኛ",
+      "ወፍ",
+      "ዓይኖች"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1742,12 +2670,20 @@
   {
     "id": "taboo_animals_117",
     "target_en": "Crocodile",
+    "target_am": "አዞ",
     "forbidden_en": [
       "River",
       "Teeth",
       "Reptile",
       "Snap",
       "Africa"
+    ],
+    "forbidden_am": [
+      "ወንዝ",
+      "ጥርሶች",
+      "ተሳቢ",
+      "መንከስ",
+      "አፍሪካ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1757,12 +2693,20 @@
   {
     "id": "taboo_animals_118",
     "target_en": "Butterfly",
+    "target_am": "ቢራቢሮ",
     "forbidden_en": [
       "Wings",
       "Flower",
       "Cocoon",
       "Color",
       "Fly"
+    ],
+    "forbidden_am": [
+      "ክንፎች",
+      "አበባ",
+      "ሻክላ",
+      "ቀለም",
+      "መብረር"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -1772,12 +2716,20 @@
   {
     "id": "taboo_sports_119",
     "target_en": "Football",
+    "target_am": "እግር ኳስ",
     "forbidden_en": [
       "Goal",
       "Kick",
       "Ball",
       "Team",
       "Soccer"
+    ],
+    "forbidden_am": [
+      "ጎል",
+      "መምታት",
+      "ኳስ",
+      "ቡድን",
+      "ሶከር"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1787,12 +2739,20 @@
   {
     "id": "taboo_sports_120",
     "target_en": "Basketball",
+    "target_am": "ቅርጫት ኳስ",
     "forbidden_en": [
       "Hoop",
       "Dribble",
       "Court",
       "Ball",
       "Shoot"
+    ],
+    "forbidden_am": [
+      "ቀለበት",
+      "ድሪብል",
+      "ሜዳ",
+      "ኳስ",
+      "መተኮስ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1802,12 +2762,20 @@
   {
     "id": "taboo_sports_121",
     "target_en": "Running",
+    "target_am": "ሩጫ",
     "forbidden_en": [
       "Race",
       "Speed",
       "Track",
       "Shoes",
       "Marathon"
+    ],
+    "forbidden_am": [
+      "ውድድር",
+      "ፍጥነት",
+      "ትራክ",
+      "ጫማ",
+      "ማራቶን"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1817,12 +2785,20 @@
   {
     "id": "taboo_sports_122",
     "target_en": "Swimming",
+    "target_am": "ዋና",
     "forbidden_en": [
       "Water",
       "Pool",
       "Stroke",
       "Lane",
       "Dive"
+    ],
+    "forbidden_am": [
+      "ውሃ",
+      "መዋኛ",
+      "ስትሮክ",
+      "መስመር",
+      "መጥለቅ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1832,12 +2808,20 @@
   {
     "id": "taboo_sports_123",
     "target_en": "Tennis",
+    "target_am": "ቴኒስ",
     "forbidden_en": [
       "Racket",
       "Court",
       "Net",
       "Serve",
       "Ball"
+    ],
+    "forbidden_am": [
+      "ራኬት",
+      "ሜዳ",
+      "መረብ",
+      "ሰርቭ",
+      "ኳስ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1847,12 +2831,20 @@
   {
     "id": "taboo_sports_124",
     "target_en": "Cycling",
+    "target_am": "ብስክሌት ማሽከርከር",
     "forbidden_en": [
       "Bike",
       "Pedal",
       "Helmet",
       "Wheel",
       "Road"
+    ],
+    "forbidden_am": [
+      "ብስክሌት",
+      "ፔዳል",
+      "ኮፍያ",
+      "ጎማ",
+      "መንገድ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1862,12 +2854,20 @@
   {
     "id": "taboo_sports_125",
     "target_en": "Boxing",
+    "target_am": "ቦክስ",
     "forbidden_en": [
       "Punch",
       "Ring",
       "Gloves",
       "Fight",
       "Round"
+    ],
+    "forbidden_am": [
+      "መምታት",
+      "ሪንግ",
+      "ጓንት",
+      "ውጊያ",
+      "ራውንድ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -1877,12 +2877,20 @@
   {
     "id": "taboo_sports_126",
     "target_en": "Volleyball",
+    "target_am": "ቮሊቦል",
     "forbidden_en": [
       "Net",
       "Spike",
       "Beach",
       "Serve",
       "Team"
+    ],
+    "forbidden_am": [
+      "መረብ",
+      "ስፓይክ",
+      "ባህር ዳርቻ",
+      "ሰርቭ",
+      "ቡድን"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1892,12 +2900,20 @@
   {
     "id": "taboo_sports_127",
     "target_en": "Olympics",
+    "target_am": "ኦሎምፒክ",
     "forbidden_en": [
       "Medal",
       "Games",
       "Athlete",
       "Torch",
       "World"
+    ],
+    "forbidden_am": [
+      "ሜዳልያ",
+      "ጨዋታዎች",
+      "አትሌት",
+      "ቶርች",
+      "ዓለም"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1907,12 +2923,20 @@
   {
     "id": "taboo_sports_128",
     "target_en": "Referee",
+    "target_am": "ዳኛ",
     "forbidden_en": [
       "Whistle",
       "Foul",
       "Judge",
       "Rules",
       "Game"
+    ],
+    "forbidden_am": [
+      "ፉፋንጫ",
+      "ፋውል",
+      "መፍረድ",
+      "ደንቦች",
+      "ጨዋታ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1922,12 +2946,20 @@
   {
     "id": "taboo_sports_129",
     "target_en": "Trophy",
+    "target_am": "ዋንጫ",
     "forbidden_en": [
       "Win",
       "Cup",
       "Prize",
       "Gold",
       "Champion"
+    ],
+    "forbidden_am": [
+      "ማሸነፍ",
+      "ኩባያ",
+      "ሽልማት",
+      "ወርቅ",
+      "ሻምፒዮን"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1937,12 +2969,20 @@
   {
     "id": "taboo_sports_130",
     "target_en": "Coach",
+    "target_am": "አሰልጣኝ",
     "forbidden_en": [
       "Train",
       "Team",
       "Strategy",
       "Player",
       "Practice"
+    ],
+    "forbidden_am": [
+      "ማሰልጠን",
+      "ቡድን",
+      "ስልት",
+      "ተጫዋች",
+      "ልምምድ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1952,12 +2992,20 @@
   {
     "id": "taboo_sports_131",
     "target_en": "Penalty",
+    "target_am": "ፔናልቲ",
     "forbidden_en": [
       "Foul",
       "Kick",
       "Card",
       "Rule",
       "Free"
+    ],
+    "forbidden_am": [
+      "ፋውል",
+      "ረጫ",
+      "ካርድ",
+      "ደንብ",
+      "ነጻ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1967,12 +3015,20 @@
   {
     "id": "taboo_sports_132",
     "target_en": "Stadium",
+    "target_am": "ስታዲየም",
     "forbidden_en": [
       "Crowd",
       "Field",
       "Seats",
       "Game",
       "Cheer"
+    ],
+    "forbidden_am": [
+      "ተመልካች",
+      "ሜዳ",
+      "መቀመጫ",
+      "ጨዋታ",
+      "ጩኸት"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1982,12 +3038,20 @@
   {
     "id": "taboo_sports_133",
     "target_en": "Jersey",
+    "target_am": "ጀርሲ",
     "forbidden_en": [
       "Shirt",
       "Number",
       "Team",
       "Wear",
       "Kit"
+    ],
+    "forbidden_am": [
+      "ሸሚዝ",
+      "ቁጥር",
+      "ቡድን",
+      "መልበስ",
+      "ኪት"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -1997,11 +3061,19 @@
   {
     "id": "taboo_sports_134",
     "target_en": "Marathon",
+    "target_am": "ማራቶን",
     "forbidden_en": [
       "Long",
       "Run",
       "Race",
       "Endurance",
+      "42"
+    ],
+    "forbidden_am": [
+      "ረጅም",
+      "መሮጥ",
+      "ውድድር",
+      "ጽናት",
       "42"
     ],
     "category_id": "sports",
@@ -2012,12 +3084,20 @@
   {
     "id": "taboo_general_words_135",
     "target_en": "Friendship",
+    "target_am": "ጓደኝነት",
     "forbidden_en": [
       "Friend",
       "Trust",
       "Bond",
       "People",
       "Close"
+    ],
+    "forbidden_am": [
+      "ጓደኛ",
+      "እምነት",
+      "ግንኙነት",
+      "ሰዎች",
+      "ቅርብ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2027,12 +3107,20 @@
   {
     "id": "taboo_general_words_136",
     "target_en": "Secret",
+    "target_am": "ሚስጥር",
     "forbidden_en": [
       "Hide",
       "Tell",
       "Whisper",
       "Private",
       "Know"
+    ],
+    "forbidden_am": [
+      "መደበቅ",
+      "መንገር",
+      "ሹክሹክታ",
+      "ግል",
+      "ማወቅ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2042,12 +3130,20 @@
   {
     "id": "taboo_general_words_137",
     "target_en": "Promise",
+    "target_am": "ቃል ኪዳን",
     "forbidden_en": [
       "Keep",
       "Word",
       "Vow",
       "Break",
       "Agree"
+    ],
+    "forbidden_am": [
+      "መጠበቅ",
+      "ቃል",
+      "መሐላ",
+      "መስበር",
+      "መስማማት"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2057,12 +3153,20 @@
   {
     "id": "taboo_general_words_138",
     "target_en": "Shadow",
+    "target_am": "ጥላ",
     "forbidden_en": [
       "Dark",
       "Light",
       "Follow",
       "Shape",
       "Sun"
+    ],
+    "forbidden_am": [
+      "ጨለማ",
+      "ብርሃን",
+      "መከተል",
+      "ቅርጽ",
+      "ፀሐይ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2072,12 +3176,20 @@
   {
     "id": "taboo_general_words_139",
     "target_en": "Memory",
+    "target_am": "ትውስታ",
     "forbidden_en": [
       "Remember",
       "Past",
       "Mind",
       "Forget",
       "Think"
+    ],
+    "forbidden_am": [
+      "ማስታወስ",
+      "ያለፈ",
+      "አእምሮ",
+      "መርሳት",
+      "ማሰብ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2087,12 +3199,20 @@
   {
     "id": "taboo_general_words_140",
     "target_en": "Courage",
+    "target_am": "ድፍረት",
     "forbidden_en": [
       "Brave",
       "Fear",
       "Strong",
       "Heart",
       "Dare"
+    ],
+    "forbidden_am": [
+      "ደፋር",
+      "ፍርሃት",
+      "ጠንካራ",
+      "ልብ",
+      "መድፈር"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2102,12 +3222,20 @@
   {
     "id": "taboo_general_words_141",
     "target_en": "Patience",
+    "target_am": "ትዕግሥት",
     "forbidden_en": [
       "Wait",
       "Calm",
       "Time",
       "Slow",
       "Tolerate"
+    ],
+    "forbidden_am": [
+      "መጠበቅ",
+      "ጸጥታ",
+      "ጊዜ",
+      "ዝግታ",
+      "መቻል"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2117,12 +3245,20 @@
   {
     "id": "taboo_general_words_142",
     "target_en": "Rumor",
+    "target_am": "ወሬ",
     "forbidden_en": [
       "Gossip",
       "Hear",
       "Talk",
       "False",
       "Spread"
+    ],
+    "forbidden_am": [
+      "ሹክሹክታ",
+      "መስማት",
+      "መነጋገር",
+      "ውሸት",
+      "መስፋፋት"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -2132,12 +3268,20 @@
   {
     "id": "taboo_general_words_143",
     "target_en": "Deadline",
+    "target_am": "የመጨረሻ ቀን",
     "forbidden_en": [
       "Due",
       "Time",
       "Late",
       "Finish",
       "Date"
+    ],
+    "forbidden_am": [
+      "ጊዜው",
+      "ጊዜ",
+      "ዘግይቶ",
+      "መጨረስ",
+      "ቀን"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -2147,12 +3291,20 @@
   {
     "id": "taboo_general_words_144",
     "target_en": "Habit",
+    "target_am": "ልማድ",
     "forbidden_en": [
       "Routine",
       "Daily",
       "Repeat",
       "Hard",
       "Change"
+    ],
+    "forbidden_am": [
+      "ዕለታዊ",
+      "በየቀኑ",
+      "መድገም",
+      "አስቸጋሪ",
+      "መለወጥ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2162,12 +3314,20 @@
   {
     "id": "taboo_general_words_145",
     "target_en": "Luck",
+    "target_am": "ዕድል",
     "forbidden_en": [
       "Chance",
       "Fortune",
       "Lucky",
       "Fate",
       "Win"
+    ],
+    "forbidden_am": [
+      "እድል ምንጭ",
+      "ብልጽግና",
+      "እድለኛ",
+      "ዕጣ ፈንታ",
+      "ማሸነፍ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2177,12 +3337,20 @@
   {
     "id": "taboo_general_words_146",
     "target_en": "Silence",
+    "target_am": "ጸጥታ",
     "forbidden_en": [
       "Quiet",
       "Noise",
       "Mute",
       "Still",
       "Sound"
+    ],
+    "forbidden_am": [
+      "ጸጥ",
+      "ጫጫታ",
+      "ማጥፋት",
+      "ዝምታ",
+      "ድምፅ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2192,12 +3360,20 @@
   {
     "id": "taboo_general_words_147",
     "target_en": "Adventure",
+    "target_am": "ጀብደኝነት",
     "forbidden_en": [
       "Travel",
       "Risk",
       "Explore",
       "Journey",
       "Exciting"
+    ],
+    "forbidden_am": [
+      "ጉዞ",
+      "አደጋ",
+      "ማሰስ",
+      "መንገድ",
+      "አስደሳች"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -2207,12 +3383,20 @@
   {
     "id": "taboo_general_words_148",
     "target_en": "Excuse",
+    "target_am": "ማመካኛ",
     "forbidden_en": [
       "Sorry",
       "Reason",
       "Late",
       "Blame",
       "Apology"
+    ],
+    "forbidden_am": [
+      "ይቅርታ",
+      "ምክንያት",
+      "ዘግይቶ",
+      "ክስ",
+      "ይቅርታ መጠየቅ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -2222,12 +3406,20 @@
   {
     "id": "taboo_general_words_149",
     "target_en": "Trend",
+    "target_am": "ትሬንድ",
     "forbidden_en": [
       "Popular",
       "Fashion",
       "Viral",
       "Now",
       "Style"
+    ],
+    "forbidden_am": [
+      "ታዋቂ",
+      "ፋሽን",
+      "ቫይራል",
+      "አሁን",
+      "ስታይል"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -2237,12 +3429,20 @@
   {
     "id": "taboo_general_words_150",
     "target_en": "Legacy",
+    "target_am": "ቅርስ",
     "forbidden_en": [
       "Leave",
       "History",
       "Remember",
       "Past",
       "Impact"
+    ],
+    "forbidden_am": [
+      "መተው",
+      "ታሪክ",
+      "ማስታወስ",
+      "ያለፈ",
+      "ተጽእኖ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -2252,12 +3452,20 @@
   {
     "id": "taboo_animals_151",
     "target_en": "Donkey",
+    "target_am": "አህያ",
     "forbidden_en": [
       "Ride",
       "Carry",
       "Load",
       "Ears",
       "Animal"
+    ],
+    "forbidden_am": [
+      "መጋለብ",
+      "መሸከም",
+      "ጭነት",
+      "ጆሮዎች",
+      "እንስሳ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2267,12 +3475,20 @@
   {
     "id": "taboo_animals_152",
     "target_en": "Goat",
+    "target_am": "ፍየል",
     "forbidden_en": [
       "Milk",
       "Beard",
       "Horns",
       "Farm",
       "Climb"
+    ],
+    "forbidden_am": [
+      "ወተት",
+      "ጢም",
+      "ቀንዶች",
+      "እርሻ",
+      "መውጣት"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2282,12 +3498,20 @@
   {
     "id": "taboo_animals_153",
     "target_en": "Cow",
+    "target_am": "ላም",
     "forbidden_en": [
       "Milk",
       "Beef",
       "Farm",
       "Moo",
       "Horns"
+    ],
+    "forbidden_am": [
+      "ወተት",
+      "የበሬ ሥጋ",
+      "እርሻ",
+      "ሙ",
+      "ቀንዶች"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2297,12 +3521,20 @@
   {
     "id": "taboo_animals_154",
     "target_en": "Sheep",
+    "target_am": "በግ",
     "forbidden_en": [
       "Wool",
       "Flock",
       "Lamb",
       "Farm",
       "White"
+    ],
+    "forbidden_am": [
+      "ጸጉር",
+      "መንጋ",
+      "ጠቦት",
+      "እርሻ",
+      "ነጭ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2312,12 +3544,20 @@
   {
     "id": "taboo_animals_155",
     "target_en": "Rooster",
+    "target_am": "ደቦል",
     "forbidden_en": [
       "Morning",
       "Crow",
       "Chicken",
       "Farm",
       "Wake"
+    ],
+    "forbidden_am": [
+      "ጠዋት",
+      "መጮህ",
+      "ዶሮ",
+      "እርሻ",
+      "ማንቃት"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2327,12 +3567,20 @@
   {
     "id": "taboo_animals_156",
     "target_en": "Frog",
+    "target_am": "እንቁራሪት",
     "forbidden_en": [
       "Jump",
       "Green",
       "Pond",
       "Croak",
       "Water"
+    ],
+    "forbidden_am": [
+      "መዝለል",
+      "አረንጓዴ",
+      "ኩሬ",
+      "መጮህ",
+      "ውሃ"
     ],
     "category_id": "animals",
     "content_level": "family",
@@ -2342,12 +3590,20 @@
   {
     "id": "taboo_animals_157",
     "target_en": "Hyena",
+    "target_am": "ጅብ",
     "forbidden_en": [
       "Laugh",
       "Scavenger",
       "Africa",
       "Night",
       "Pack"
+    ],
+    "forbidden_am": [
+      "ሳቅ",
+      "ጉድፍ",
+      "አፍሪካ",
+      "ለሊት",
+      "ቡድን"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2357,12 +3613,20 @@
   {
     "id": "taboo_animals_158",
     "target_en": "Leopard",
+    "target_am": "ነብር",
     "forbidden_en": [
       "Spots",
       "Cat",
       "Fast",
       "Africa",
       "Hunt"
+    ],
+    "forbidden_am": [
+      "ነጠብጣብ",
+      "ድመት",
+      "ፈጣን",
+      "አፍሪካ",
+      "አደን"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2372,12 +3636,20 @@
   {
     "id": "taboo_animals_159",
     "target_en": "Hippo",
+    "target_am": "ጉማሬ",
     "forbidden_en": [
       "Water",
       "Heavy",
       "River",
       "Mouth",
       "Africa"
+    ],
+    "forbidden_am": [
+      "ውሃ",
+      "ከባድ",
+      "ወንዝ",
+      "አፍ",
+      "አፍሪካ"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2387,12 +3659,20 @@
   {
     "id": "taboo_animals_160",
     "target_en": "Zebra",
+    "target_am": "ዜብራ",
     "forbidden_en": [
       "Stripes",
       "Black",
       "White",
       "Horse",
       "Africa"
+    ],
+    "forbidden_am": [
+      "መስመሮች",
+      "ጥቁር",
+      "ነጭ",
+      "ፈረስ",
+      "አፍሪካ"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2402,12 +3682,20 @@
   {
     "id": "taboo_animals_161",
     "target_en": "Ostrich",
+    "target_am": "ሰጎን",
     "forbidden_en": [
       "Big",
       "Bird",
       "Run",
       "Fly",
       "Neck"
+    ],
+    "forbidden_am": [
+      "ትልቅ",
+      "ወፍ",
+      "መሮጥ",
+      "መብረር",
+      "አንገት"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2417,12 +3705,20 @@
   {
     "id": "taboo_animals_162",
     "target_en": "Baboon",
+    "target_am": "ጦጣ",
     "forbidden_en": [
       "Monkey",
       "Troop",
       "Face",
       "Africa",
       "Climb"
+    ],
+    "forbidden_am": [
+      "ዝንጀሮ",
+      "ቡድን",
+      "ፊት",
+      "አፍሪካ",
+      "መውጣት"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2432,12 +3728,20 @@
   {
     "id": "taboo_animals_163",
     "target_en": "Tortoise",
+    "target_am": "ኤሊ",
     "forbidden_en": [
       "Slow",
       "Shell",
       "Turtle",
       "Land",
       "Old"
+    ],
+    "forbidden_am": [
+      "ዝግታ",
+      "ቅርፊት",
+      "የውሃ ኤሊ",
+      "መሬት",
+      "አረጋዊ"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2447,12 +3751,20 @@
   {
     "id": "taboo_animals_164",
     "target_en": "Spider",
+    "target_am": "ሸረሪት",
     "forbidden_en": [
       "Web",
       "Eight",
       "Legs",
       "Insect",
       "Crawl"
+    ],
+    "forbidden_am": [
+      "ድር",
+      "ስምንት",
+      "እግሮች",
+      "ነፍሳት",
+      "መሳብ"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2462,12 +3774,20 @@
   {
     "id": "taboo_animals_165",
     "target_en": "Ant",
+    "target_am": "ጉንዳን",
     "forbidden_en": [
       "Small",
       "Colony",
       "Insect",
       "Sugar",
       "Line"
+    ],
+    "forbidden_am": [
+      "ትንሽ",
+      "ቅኝት",
+      "ነፍሳት",
+      "ስኳር",
+      "መስመር"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2477,12 +3797,20 @@
   {
     "id": "taboo_animals_166",
     "target_en": "Mosquito",
+    "target_am": "ትንኝ",
     "forbidden_en": [
       "Bite",
       "Buzz",
       "Malaria",
       "Blood",
       "Night"
+    ],
+    "forbidden_am": [
+      "መንከስ",
+      "ዝንቦ",
+      "ወባ",
+      "ደም",
+      "ለሊት"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2492,12 +3820,20 @@
   {
     "id": "taboo_animals_167",
     "target_en": "Parrot",
+    "target_am": "ቆቅ",
     "forbidden_en": [
       "Talk",
       "Colourful",
       "Bird",
       "Repeat",
       "Cage"
+    ],
+    "forbidden_am": [
+      "መናገር",
+      "ቀለም ያለው",
+      "ወፍ",
+      "መድገም",
+      "ቤት"
     ],
     "category_id": "animals",
     "content_level": "friends",
@@ -2507,12 +3843,20 @@
   {
     "id": "taboo_ethiopian_food_168",
     "target_en": "Gomen",
+    "target_am": "ጎመን",
     "forbidden_en": [
       "Collard",
       "Greens",
       "Cabbage",
       "Cooked",
       "Side"
+    ],
+    "forbidden_am": [
+      "ቅጠል ጎመን",
+      "አረንጓዴ",
+      "ከተምባ",
+      "የተቀቀለ",
+      "ጎን"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2522,12 +3866,20 @@
   {
     "id": "taboo_ethiopian_food_169",
     "target_en": "Sambusa",
+    "target_am": "ሳምቡሳ",
     "forbidden_en": [
       "Triangle",
       "Fried",
       "Lentil",
       "Snack",
       "Pastry"
+    ],
+    "forbidden_am": [
+      "ሶስት ማዕዘን",
+      "የተጠበሰ",
+      "ምስር",
+      "መክሰስ",
+      "ፓስቴሪ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2537,12 +3889,20 @@
   {
     "id": "taboo_ethiopian_food_170",
     "target_en": "Macchiato",
+    "target_am": "ማኪያቶ",
     "forbidden_en": [
       "Coffee",
       "Milk",
       "Foam",
       "Cup",
       "Café"
+    ],
+    "forbidden_am": [
+      "ቡና",
+      "ወተት",
+      "አረፋ",
+      "ስኒ",
+      "ካፌ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2552,12 +3912,20 @@
   {
     "id": "taboo_ethiopian_food_171",
     "target_en": "Misir Wot",
+    "target_am": "ምስር ወጥ",
     "forbidden_en": [
       "Lentil",
       "Red",
       "Stew",
       "Berbere",
       "Fasting"
+    ],
+    "forbidden_am": [
+      "ምስር",
+      "ቀይ",
+      "ወጥ",
+      "በርበሬ",
+      "ጾም"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2567,12 +3935,20 @@
   {
     "id": "taboo_ethiopian_food_172",
     "target_en": "Atkilt",
+    "target_am": "አትክልት",
     "forbidden_en": [
       "Vegetable",
       "Cabbage",
       "Carrot",
       "Potato",
       "Mild"
+    ],
+    "forbidden_am": [
+      "የአትክልት ምግብ",
+      "ከተምባ",
+      "ካሮት",
+      "ድንች",
+      "ለስላሳ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2582,12 +3958,20 @@
   {
     "id": "taboo_ethiopian_food_173",
     "target_en": "Difo Dabo",
+    "target_am": "ድፎ ዳቦ",
     "forbidden_en": [
       "Bread",
       "Baked",
       "Holiday",
       "Round",
       "Big"
+    ],
+    "forbidden_am": [
+      "ዳቦ",
+      "የተጋገረ",
+      "በዓል",
+      "ክብ",
+      "ትልቅ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "family",
@@ -2597,12 +3981,20 @@
   {
     "id": "taboo_ethiopian_food_174",
     "target_en": "Awaze",
+    "target_am": "አዋዜ",
     "forbidden_en": [
       "Paste",
       "Berbere",
       "Spicy",
       "Dip",
       "Red"
+    ],
+    "forbidden_am": [
+      "መረቅ",
+      "በርበሬ",
+      "ቅመም ያለው",
+      "ማጥመቂያ",
+      "ቀይ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2612,12 +4004,20 @@
   {
     "id": "taboo_ethiopian_food_175",
     "target_en": "Kocho",
+    "target_am": "ቆጮ",
     "forbidden_en": [
       "Enset",
       "Flatbread",
       "Southern",
       "Fermented",
       "Dense"
+    ],
+    "forbidden_am": [
+      "እንሰት",
+      "ቀጭን ዳቦ",
+      "ደቡብ",
+      "የተለሳበ",
+      "ጠጣር"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2627,12 +4027,20 @@
   {
     "id": "taboo_ethiopian_food_176",
     "target_en": "Chechebsa",
+    "target_am": "ጨጨብሳ",
     "forbidden_en": [
       "Kita",
       "Torn",
       "Butter",
       "Breakfast",
       "Berbere"
+    ],
+    "forbidden_am": [
+      "ቂጣ",
+      "የተቀደደ",
+      "ቅቤ",
+      "ቁርስ",
+      "በርበሬ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2642,12 +4050,20 @@
   {
     "id": "taboo_ethiopian_food_177",
     "target_en": "Katikala",
+    "target_am": "ካቲካላ",
     "forbidden_en": [
       "Alcohol",
       "Strong",
       "Homemade",
       "Clear",
       "Drink"
+    ],
+    "forbidden_am": [
+      "አልኮል",
+      "ጠንካራ",
+      "የቤት",
+      "ግልጽ",
+      "መጠጥ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2657,12 +4073,20 @@
   {
     "id": "taboo_ethiopian_food_178",
     "target_en": "Kolo",
+    "target_am": "ቆሎ",
     "forbidden_en": [
       "Roasted",
       "Barley",
       "Snack",
       "Grain",
       "Chew"
+    ],
+    "forbidden_am": [
+      "የተጠበሰ",
+      "ገብስ",
+      "መክሰስ",
+      "እህል",
+      "መቁረስ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2672,12 +4096,20 @@
   {
     "id": "taboo_ethiopian_food_179",
     "target_en": "Bula",
+    "target_am": "ቡላ",
     "forbidden_en": [
       "Enset",
       "Powder",
       "Porridge",
       "White",
       "Southern"
+    ],
+    "forbidden_am": [
+      "እንሰት",
+      "ዱቄት",
+      "ጭማቅ",
+      "ነጭ",
+      "ደቡብ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2687,12 +4119,20 @@
   {
     "id": "taboo_ethiopian_food_180",
     "target_en": "Enkulal Firfir",
+    "target_am": "እንቁላል ፍርፍር",
     "forbidden_en": [
       "Egg",
       "Scrambled",
       "Breakfast",
       "Onion",
       "Butter"
+    ],
+    "forbidden_am": [
+      "እንቁላል",
+      "የተደበለ",
+      "ቁርስ",
+      "ሽንኩርት",
+      "ቅቤ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2702,12 +4142,20 @@
   {
     "id": "taboo_ethiopian_food_181",
     "target_en": "Zilzil Tibs",
+    "target_am": "ዝልዝል ጥብስ",
     "forbidden_en": [
       "Strips",
       "Beef",
       "Fried",
       "Meat",
       "Sizzling"
+    ],
+    "forbidden_am": [
+      "ጭረቶች",
+      "በሬ",
+      "የተጠበሰ",
+      "ስጋ",
+      "ድምፅ የሚያሰማ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2717,12 +4165,20 @@
   {
     "id": "taboo_ethiopian_food_182",
     "target_en": "Gored Gored",
+    "target_am": "ጎረድ ጎረድ",
     "forbidden_en": [
       "Raw",
       "Cubes",
       "Beef",
       "Butter",
       "Awaze"
+    ],
+    "forbidden_am": [
+      "ጥሬ",
+      "ኩብ",
+      "በሬ",
+      "ቅቤ",
+      "አዋዜ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2732,12 +4188,20 @@
   {
     "id": "taboo_ethiopian_food_183",
     "target_en": "Alicha",
+    "target_am": "አልጫ",
     "forbidden_en": [
       "Mild",
       "Turmeric",
       "Stew",
       "Yellow",
       "Spice"
+    ],
+    "forbidden_am": [
+      "ለስላሳ",
+      "እርድ",
+      "ወጥ",
+      "ቢጫ",
+      "ቅመም"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2747,12 +4211,20 @@
   {
     "id": "taboo_ethiopian_food_184",
     "target_en": "Buna Bet",
+    "target_am": "ቡና ቤት",
     "forbidden_en": [
       "Coffee",
       "House",
       "Café",
       "Ceremony",
       "Sit"
+    ],
+    "forbidden_am": [
+      "ቡና",
+      "ቤት",
+      "ካፌ",
+      "ስነ ሥርዓት",
+      "መቀመጥ"
     ],
     "category_id": "ethiopian_food",
     "content_level": "friends",
@@ -2762,12 +4234,20 @@
   {
     "id": "taboo_everyday_life_185",
     "target_en": "Broom",
+    "target_am": "መጥረጊያ",
     "forbidden_en": [
       "Sweep",
       "Floor",
       "Dust",
       "Handle",
       "Clean"
+    ],
+    "forbidden_am": [
+      "መጥረግ",
+      "ወለል",
+      "አቧራ",
+      "እጀታ",
+      "ንጹህ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2777,12 +4257,20 @@
   {
     "id": "taboo_everyday_life_186",
     "target_en": "Bucket",
+    "target_am": "ባልዲ",
     "forbidden_en": [
       "Water",
       "Carry",
       "Plastic",
       "Fill",
       "Handle"
+    ],
+    "forbidden_am": [
+      "ውሃ",
+      "መሸከም",
+      "ፕላስቲክ",
+      "መሙላት",
+      "እጀታ"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2792,12 +4280,20 @@
   {
     "id": "taboo_everyday_life_187",
     "target_en": "Fridge",
+    "target_am": "ፍሪጅ",
     "forbidden_en": [
       "Cold",
       "Food",
       "Kitchen",
       "Door",
       "Milk"
+    ],
+    "forbidden_am": [
+      "ቀዝቃዛ",
+      "ምግብ",
+      "ኩሽና",
+      "በር",
+      "ወተት"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2807,12 +4303,20 @@
   {
     "id": "taboo_everyday_life_188",
     "target_en": "Blanket",
+    "target_am": "ብርድ ልብስ",
     "forbidden_en": [
       "Bed",
       "Warm",
       "Cover",
       "Sleep",
       "Wool"
+    ],
+    "forbidden_am": [
+      "አልጋ",
+      "ሞቃት",
+      "መሸፈኛ",
+      "መኝታ",
+      "ጸጉር"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2822,12 +4326,20 @@
   {
     "id": "taboo_everyday_life_189",
     "target_en": "Towel",
+    "target_am": "ፎጣ",
     "forbidden_en": [
       "Dry",
       "Bath",
       "Water",
       "Cloth",
       "Shower"
+    ],
+    "forbidden_am": [
+      "ማድረቅ",
+      "መታጠቢያ",
+      "ውሃ",
+      "ጨርቅ",
+      "ሻወር"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2837,12 +4349,20 @@
   {
     "id": "taboo_everyday_life_190",
     "target_en": "Curtain",
+    "target_am": "መጋረጃ",
     "forbidden_en": [
       "Window",
       "Hang",
       "Light",
       "Cloth",
       "Close"
+    ],
+    "forbidden_am": [
+      "መስኮት",
+      "መስቀል",
+      "ብርሃን",
+      "ጨርቅ",
+      "መዝጋት"
     ],
     "category_id": "everyday_life",
     "content_level": "family",
@@ -2852,12 +4372,20 @@
   {
     "id": "taboo_everyday_life_191",
     "target_en": "Kettle",
+    "target_am": "ብቅሎ",
     "forbidden_en": [
       "Boil",
       "Water",
       "Tea",
       "Heat",
       "Pour"
+    ],
+    "forbidden_am": [
+      "ማፍላት",
+      "ውሃ",
+      "ሻይ",
+      "ማሞቅ",
+      "ማፍሰስ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2867,12 +4395,20 @@
   {
     "id": "taboo_everyday_life_192",
     "target_en": "Receipt",
+    "target_am": "ደረሰኝ",
     "forbidden_en": [
       "Paper",
       "Buy",
       "Shop",
       "Proof",
       "Price"
+    ],
+    "forbidden_am": [
+      "ወረቀት",
+      "መግዛት",
+      "ሱቅ",
+      "ማስረጃ",
+      "ዋጋ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2882,12 +4418,20 @@
   {
     "id": "taboo_everyday_life_193",
     "target_en": "Elevator",
+    "target_am": "ሊፍት",
     "forbidden_en": [
       "Floor",
       "Button",
       "Up",
       "Building",
       "Lift"
+    ],
+    "forbidden_am": [
+      "ፎቅ",
+      "አዝራር",
+      "ወደ ላይ",
+      "ህንጻ",
+      "መነሳት"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2897,12 +4441,20 @@
   {
     "id": "taboo_everyday_life_194",
     "target_en": "Doorbell",
+    "target_am": "የበር ደውል",
     "forbidden_en": [
       "Ring",
       "Door",
       "Press",
       "Sound",
       "Visitor"
+    ],
+    "forbidden_am": [
+      "መደወል",
+      "በር",
+      "መጫን",
+      "ድምፅ",
+      "እንግዳ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2912,12 +4464,20 @@
   {
     "id": "taboo_everyday_life_195",
     "target_en": "Alarm",
+    "target_am": "ማንቂያ",
     "forbidden_en": [
       "Wake",
       "Morning",
       "Sound",
       "Phone",
       "Time"
+    ],
+    "forbidden_am": [
+      "ማንቃት",
+      "ጠዋት",
+      "ድምፅ",
+      "ስልክ",
+      "ጊዜ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2927,12 +4487,20 @@
   {
     "id": "taboo_everyday_life_196",
     "target_en": "Wifi",
+    "target_am": "ዋይፋይ",
     "forbidden_en": [
       "Internet",
       "Password",
       "Router",
       "Signal",
       "Connect"
+    ],
+    "forbidden_am": [
+      "ኢንተርኔት",
+      "የይለፍ ቃል",
+      "ራውተር",
+      "ሲግናል",
+      "መገናኘት"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2942,12 +4510,20 @@
   {
     "id": "taboo_everyday_life_197",
     "target_en": "Shoelace",
+    "target_am": "የጫማ ገመድ",
     "forbidden_en": [
       "Tie",
       "Shoe",
       "Knot",
       "String",
       "Loose"
+    ],
+    "forbidden_am": [
+      "ማሰር",
+      "ጫማ",
+      "ቋጠሮ",
+      "ገመድ",
+      "ልቅ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2957,12 +4533,20 @@
   {
     "id": "taboo_everyday_life_198",
     "target_en": "Battery",
+    "target_am": "ባትሪ",
     "forbidden_en": [
       "Power",
       "Charge",
       "Phone",
       "Dead",
       "Energy"
+    ],
+    "forbidden_am": [
+      "ኃይል",
+      "ቻርጅ",
+      "ስልክ",
+      "ሞቶ",
+      "ኤነርጂ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2972,12 +4556,20 @@
   {
     "id": "taboo_everyday_life_199",
     "target_en": "Envelope",
+    "target_am": "ኤንቨሎፕ",
     "forbidden_en": [
       "Letter",
       "Seal",
       "Paper",
       "Post",
       "Address"
+    ],
+    "forbidden_am": [
+      "ደብዳቤ",
+      "መዝጋት",
+      "ወረቀት",
+      "ፖስታ",
+      "አድራሻ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -2987,12 +4579,20 @@
   {
     "id": "taboo_everyday_life_200",
     "target_en": "Ladder",
+    "target_am": "መሰላል",
     "forbidden_en": [
       "Climb",
       "Steps",
       "Tall",
       "Reach",
       "Wall"
+    ],
+    "forbidden_am": [
+      "መውጣት",
+      "ደረጃዎች",
+      "ረጅም",
+      "መድረስ",
+      "ግድግዳ"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -3002,12 +4602,20 @@
   {
     "id": "taboo_everyday_life_201",
     "target_en": "Electric fan",
+    "target_am": "ኤሌክትሪክ ፋን",
     "forbidden_en": [
       "Cool",
       "Blow",
       "Air",
       "Spin",
       "Hot"
+    ],
+    "forbidden_am": [
+      "ማቀዝቀዝ",
+      "መንፋት",
+      "አየር",
+      "መዞር",
+      "ሞቃት"
     ],
     "category_id": "everyday_life",
     "content_level": "friends",
@@ -3017,12 +4625,20 @@
   {
     "id": "taboo_general_words_202",
     "target_en": "Freedom",
+    "target_am": "ነፃነት",
     "forbidden_en": [
       "Free",
       "Choice",
       "Cage",
       "Independence",
       "Right"
+    ],
+    "forbidden_am": [
+      "ነፃ",
+      "ምርጫ",
+      "ቅጥር",
+      "ራስነት",
+      "መብት"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3032,12 +4648,20 @@
   {
     "id": "taboo_general_words_203",
     "target_en": "Respect",
+    "target_am": "ክብር",
     "forbidden_en": [
       "Elder",
       "Honour",
       "Polite",
       "Earn",
       "Look"
+    ],
+    "forbidden_am": [
+      "አረጋዊ",
+      "ክብር ማድረግ",
+      "አክብሮት",
+      "ማግኘት",
+      "መመልከት"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3047,12 +4671,20 @@
   {
     "id": "taboo_general_words_204",
     "target_en": "Comfort",
+    "target_am": "ምቾት",
     "forbidden_en": [
       "Cosy",
       "Easy",
       "Safe",
       "Warm",
       "Zone"
+    ],
+    "forbidden_am": [
+      "ልስላሴ",
+      "ቀላል",
+      "ደህንነት",
+      "ሞቃት",
+      "ዞን"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3062,12 +4694,20 @@
   {
     "id": "taboo_general_words_205",
     "target_en": "Curiosity",
+    "target_am": "የማወቅ ፍላጎት",
     "forbidden_en": [
       "Question",
       "Cat",
       "Know",
       "Wonder",
       "Explore"
+    ],
+    "forbidden_am": [
+      "ጥያቄ",
+      "ድመት",
+      "ማወቅ",
+      "መገረም",
+      "ማሰስ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3077,12 +4717,20 @@
   {
     "id": "taboo_general_words_206",
     "target_en": "Confidence",
+    "target_am": "እምነት በራስ",
     "forbidden_en": [
       "Sure",
       "Believe",
       "Self",
       "Bold",
       "Doubt"
+    ],
+    "forbidden_am": [
+      "እርግጠኛ",
+      "ማመን",
+      "ራስ",
+      "ደፋር",
+      "ጥርጣሬ"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3092,12 +4740,20 @@
   {
     "id": "taboo_general_words_207",
     "target_en": "Boredom",
+    "target_am": "ሰልቸት",
     "forbidden_en": [
       "Nothing",
       "Time",
       "Dull",
       "Slow",
       "Yawn"
+    ],
+    "forbidden_am": [
+      "ምንም",
+      "ጊዜ",
+      "ደብዛዛ",
+      "ዝግታ",
+      "ማንጎራጎር"
     ],
     "category_id": "general_words",
     "content_level": "family",
@@ -3107,12 +4763,20 @@
   {
     "id": "taboo_general_words_208",
     "target_en": "Regret",
+    "target_am": "ጸጸት",
     "forbidden_en": [
       "Sorry",
       "Wish",
       "Past",
       "Mistake",
       "Undo"
+    ],
+    "forbidden_am": [
+      "ይቅርታ",
+      "መፈለግ",
+      "ያለፈ",
+      "ስህተት",
+      "መመለስ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3122,12 +4786,20 @@
   {
     "id": "taboo_general_words_209",
     "target_en": "Jealousy",
+    "target_am": "ምቀኝነት",
     "forbidden_en": [
       "Green",
       "Envy",
       "Want",
       "Compare",
       "Partner"
+    ],
+    "forbidden_am": [
+      "አረንጓዴ",
+      "ቅናት",
+      "መፈለግ",
+      "ማነፃፀር",
+      "አጋር"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3137,12 +4809,20 @@
   {
     "id": "taboo_general_words_210",
     "target_en": "Ambition",
+    "target_am": "ታላቅ ምኞት",
     "forbidden_en": [
       "Goal",
       "Drive",
       "Climb",
       "Career",
       "Want"
+    ],
+    "forbidden_am": [
+      "ግብ",
+      "ግፊት",
+      "መውጣት",
+      "ሙያ",
+      "መፈለግ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3152,12 +4832,20 @@
   {
     "id": "taboo_general_words_211",
     "target_en": "Loyalty",
+    "target_am": "ታማኝነት",
     "forbidden_en": [
       "Faithful",
       "Stay",
       "Friend",
       "Trust",
       "Dog"
+    ],
+    "forbidden_am": [
+      "ታማኝ",
+      "መቆየት",
+      "ጓደኛ",
+      "እምነት",
+      "ውሻ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3167,12 +4855,20 @@
   {
     "id": "taboo_general_words_212",
     "target_en": "Gossip",
+    "target_am": "ወሬ",
     "forbidden_en": [
       "Talk",
       "Rumour",
       "Behind",
       "Whisper",
       "People"
+    ],
+    "forbidden_am": [
+      "መነጋገር",
+      "ሹክሹክታ",
+      "ከጀርባ",
+      "ሹክሹክታ ማድረግ",
+      "ሰዎች"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3182,12 +4878,20 @@
   {
     "id": "taboo_general_words_213",
     "target_en": "Pressure",
+    "target_am": "ጫና",
     "forbidden_en": [
       "Stress",
       "Push",
       "Exam",
       "Force",
       "Time"
+    ],
+    "forbidden_am": [
+      "ጭንቀት",
+      "መግፋት",
+      "ፈተና",
+      "ኃይል",
+      "ጊዜ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3197,12 +4901,20 @@
   {
     "id": "taboo_general_words_214",
     "target_en": "Guilt",
+    "target_am": "የጥፋተኝነት ስሜት",
     "forbidden_en": [
       "Bad",
       "Wrong",
       "Feel",
       "Conscience",
       "Sorry"
+    ],
+    "forbidden_am": [
+      "መጥፎ",
+      "ስህተት",
+      "መሰማት",
+      "ሕሊና",
+      "ይቅርታ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3212,12 +4924,20 @@
   {
     "id": "taboo_general_words_215",
     "target_en": "Betrayal",
+    "target_am": "ክህደት",
     "forbidden_en": [
       "Trust",
       "Back",
       "Friend",
       "Break",
       "Stab"
+    ],
+    "forbidden_am": [
+      "እምነት",
+      "ጀርባ",
+      "ጓደኛ",
+      "መስበር",
+      "መውጋት"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3227,12 +4947,20 @@
   {
     "id": "taboo_general_words_216",
     "target_en": "Nostalgia",
+    "target_am": "ኖስታልጂያ",
     "forbidden_en": [
       "Past",
       "Miss",
       "Childhood",
       "Memory",
       "Old"
+    ],
+    "forbidden_am": [
+      "ያለፈ",
+      "ማጣት",
+      "ልጅነት",
+      "ትውስታ",
+      "አሮጌ"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3242,12 +4970,20 @@
   {
     "id": "taboo_general_words_217",
     "target_en": "Doubt",
+    "target_am": "ጥርጣሬ",
     "forbidden_en": [
       "Sure",
       "Question",
       "Believe",
       "Maybe",
       "Trust"
+    ],
+    "forbidden_am": [
+      "እርግጠኛ",
+      "ጥያቄ",
+      "ማመን",
+      "ምናልባት",
+      "እምነት"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3257,12 +4993,20 @@
   {
     "id": "taboo_general_words_218",
     "target_en": "Reputation",
+    "target_am": "ዝና",
     "forbidden_en": [
       "Name",
       "People",
       "Think",
       "Image",
       "Ruin"
+    ],
+    "forbidden_am": [
+      "ስም",
+      "ሰዎች",
+      "ማሰብ",
+      "ምስል",
+      "ማጥፋት"
     ],
     "category_id": "general_words",
     "content_level": "friends",
@@ -3272,12 +5016,20 @@
   {
     "id": "taboo_jobs_219",
     "target_en": "Tailor",
+    "target_am": "ስፌት",
     "forbidden_en": [
       "Sew",
       "Clothes",
       "Measure",
       "Needle",
       "Fit"
+    ],
+    "forbidden_am": [
+      "መስፋት",
+      "ልብስ",
+      "መለካት",
+      "መርፌ",
+      "መጠን"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3287,12 +5039,20 @@
   {
     "id": "taboo_jobs_220",
     "target_en": "Mechanic",
+    "target_am": "መካኒክ",
     "forbidden_en": [
       "Car",
       "Fix",
       "Engine",
       "Garage",
       "Oil"
+    ],
+    "forbidden_am": [
+      "መኪና",
+      "ማስተካከል",
+      "ኤንጂን",
+      "ጋራጅ",
+      "ዘይት"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3302,12 +5062,20 @@
   {
     "id": "taboo_jobs_221",
     "target_en": "Waiter",
+    "target_am": "ዌተር",
     "forbidden_en": [
       "Restaurant",
       "Order",
       "Table",
       "Serve",
       "Menu"
+    ],
+    "forbidden_am": [
+      "ሬስቶራንት",
+      "ትእዛዝ",
+      "ጠረጴዛ",
+      "ማገልገል",
+      "ሜኑ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3317,12 +5085,20 @@
   {
     "id": "taboo_jobs_222",
     "target_en": "Barber",
+    "target_am": "ፀጉር አስተካካይ",
     "forbidden_en": [
       "Hair",
       "Cut",
       "Shave",
       "Chair",
       "Shop"
+    ],
+    "forbidden_am": [
+      "ፀጉር",
+      "መቁረጥ",
+      "መላጨት",
+      "ወንበር",
+      "ሱቅ"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3332,12 +5108,20 @@
   {
     "id": "taboo_jobs_223",
     "target_en": "Shopkeeper",
+    "target_am": "ሱቅ ባለቤት",
     "forbidden_en": [
       "Shop",
       "Sell",
       "Counter",
       "Customer",
       "Store"
+    ],
+    "forbidden_am": [
+      "ሱቅ",
+      "መሸጥ",
+      "ካውንተር",
+      "ደንበኛ",
+      "መደብር"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3347,12 +5131,20 @@
   {
     "id": "taboo_jobs_224",
     "target_en": "Cleaner",
+    "target_am": "አጽዳጅ",
     "forbidden_en": [
       "Clean",
       "Mop",
       "Office",
       "Dust",
       "Floor"
+    ],
+    "forbidden_am": [
+      "ማጽዳት",
+      "መጥረግ",
+      "ቢሮ",
+      "አቧራ",
+      "ወለል"
     ],
     "category_id": "jobs",
     "content_level": "family",
@@ -3362,12 +5154,20 @@
   {
     "id": "taboo_jobs_225",
     "target_en": "Electrician",
+    "target_am": "ኤሌክትሪሺያን",
     "forbidden_en": [
       "Wire",
       "Power",
       "Light",
       "Shock",
       "Install"
+    ],
+    "forbidden_am": [
+      "ገመድ",
+      "ኃይል",
+      "ብርሃን",
+      "ድንጋጤ",
+      "መትከል"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3377,12 +5177,20 @@
   {
     "id": "taboo_jobs_226",
     "target_en": "Plumber",
+    "target_am": "ፕለምበር",
     "forbidden_en": [
       "Pipe",
       "Water",
       "Leak",
       "Sink",
       "Fix"
+    ],
+    "forbidden_am": [
+      "ቧንቧ",
+      "ውሃ",
+      "ፍሰት",
+      "መታጠቢያ",
+      "ማስተካከል"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3392,12 +5200,20 @@
   {
     "id": "taboo_jobs_227",
     "target_en": "Accountant",
+    "target_am": "አካውንታንት",
     "forbidden_en": [
       "Numbers",
       "Tax",
       "Money",
       "Books",
       "Audit"
+    ],
+    "forbidden_am": [
+      "ቁጥሮች",
+      "ታክስ",
+      "ገንዘብ",
+      "መጻሕፍት",
+      "ኦዲት"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3407,12 +5223,20 @@
   {
     "id": "taboo_jobs_228",
     "target_en": "Pharmacist",
+    "target_am": "ፋርማሲስት",
     "forbidden_en": [
       "Medicine",
       "Drug",
       "Prescription",
       "Counter",
       "Pills"
+    ],
+    "forbidden_am": [
+      "መድሃኒት",
+      "ድሮግ",
+      "ሬሲፒ",
+      "ካውንተር",
+      "ኪኒን"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3422,12 +5246,20 @@
   {
     "id": "taboo_jobs_229",
     "target_en": "Photographer",
+    "target_am": "ፎቶግራፍ አንሺ",
     "forbidden_en": [
       "Camera",
       "Picture",
       "Shoot",
       "Lens",
       "Wedding"
+    ],
+    "forbidden_am": [
+      "ካሜራ",
+      "ስዕል",
+      "መተኮስ",
+      "ሌንስ",
+      "ሰርግ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3437,12 +5269,20 @@
   {
     "id": "taboo_jobs_230",
     "target_en": "Security guard",
+    "target_am": "ደህንነት ጠባቂ",
     "forbidden_en": [
       "Guard",
       "Gate",
       "Watch",
       "Uniform",
       "Building"
+    ],
+    "forbidden_am": [
+      "ጠባቂ",
+      "በር",
+      "መጠበቅ",
+      "ዩኒፎርም",
+      "ህንጻ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3452,12 +5292,20 @@
   {
     "id": "taboo_jobs_231",
     "target_en": "Carpenter",
+    "target_am": "አናጺ",
     "forbidden_en": [
       "Wood",
       "Furniture",
       "Saw",
       "Build",
       "Nail"
+    ],
+    "forbidden_am": [
+      "እንጨት",
+      "ፈርኒቸር",
+      "መጋዝ",
+      "መገንባት",
+      "ምስማር"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3467,12 +5315,20 @@
   {
     "id": "taboo_jobs_232",
     "target_en": "Banker",
+    "target_am": "ባንከኛ",
     "forbidden_en": [
       "Bank",
       "Money",
       "Loan",
       "Account",
       "Interest"
+    ],
+    "forbidden_am": [
+      "ባንክ",
+      "ገንዘብ",
+      "ብድር",
+      "መለያ",
+      "ወለድ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3482,12 +5338,20 @@
   {
     "id": "taboo_jobs_233",
     "target_en": "Soldier",
+    "target_am": "ወታደር",
     "forbidden_en": [
       "Army",
       "War",
       "Uniform",
       "Gun",
       "Serve"
+    ],
+    "forbidden_am": [
+      "ሰራዊት",
+      "ጦርነት",
+      "ዩኒፎርም",
+      "ጠመንጃ",
+      "ማገልገል"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3497,12 +5361,20 @@
   {
     "id": "taboo_jobs_234",
     "target_en": "Vet",
+    "target_am": "የእንስሳት ሐኪም",
     "forbidden_en": [
       "Animal",
       "Doctor",
       "Pet",
       "Treat",
       "Clinic"
+    ],
+    "forbidden_am": [
+      "እንስሳ",
+      "ሐኪም",
+      "የቤት እንስሳ",
+      "ማከም",
+      "ክሊኒክ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3512,12 +5384,20 @@
   {
     "id": "taboo_jobs_235",
     "target_en": "Graphic designer",
+    "target_am": "ግራፊክ ዲዛይነር",
     "forbidden_en": [
       "Design",
       "Create",
       "Draw",
       "Brand",
       "Logo"
+    ],
+    "forbidden_am": [
+      "ንድፍ",
+      "መፍጠር",
+      "መሳል",
+      "ብራንድ",
+      "ሎጎ"
     ],
     "category_id": "jobs",
     "content_level": "friends",
@@ -3527,12 +5407,20 @@
   {
     "id": "taboo_music_and_entertainment_236",
     "target_en": "Lyrics",
+    "target_am": "ግጥም",
     "forbidden_en": [
       "Words",
       "Song",
       "Sing",
       "Write",
       "Verse"
+    ],
+    "forbidden_am": [
+      "ቃላት",
+      "ዘፈን",
+      "መዘመር",
+      "መጻፍ",
+      "ስታንዛ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3542,12 +5430,20 @@
   {
     "id": "taboo_music_and_entertainment_237",
     "target_en": "Album",
+    "target_am": "አልበም",
     "forbidden_en": [
       "Songs",
       "Release",
       "Cover",
       "Artist",
       "Track"
+    ],
+    "forbidden_am": [
+      "ዘፈኖች",
+      "መልቀቅ",
+      "ሽፋን",
+      "አርቲስት",
+      "ትራክ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3557,12 +5453,20 @@
   {
     "id": "taboo_music_and_entertainment_238",
     "target_en": "Stage",
+    "target_am": "መድረክ",
     "forbidden_en": [
       "Perform",
       "Light",
       "Concert",
       "Stand",
       "Crowd"
+    ],
+    "forbidden_am": [
+      "መጫወት",
+      "ብርሃን",
+      "ኮንሰርት",
+      "መቆም",
+      "ተመልካች"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3572,12 +5476,20 @@
   {
     "id": "taboo_music_and_entertainment_239",
     "target_en": "Microphone",
+    "target_am": "ማይክሮፎን",
     "forbidden_en": [
       "Sing",
       "Speak",
       "Sound",
       "Hold",
       "Stand"
+    ],
+    "forbidden_am": [
+      "መዘመር",
+      "መናገር",
+      "ድምፅ",
+      "መያዝ",
+      "መቆሚያ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3587,12 +5499,20 @@
   {
     "id": "taboo_music_and_entertainment_240",
     "target_en": "Ticket",
+    "target_am": "ቲኬት",
     "forbidden_en": [
       "Buy",
       "Entry",
       "Show",
       "Price",
       "Seat"
+    ],
+    "forbidden_am": [
+      "መግዛት",
+      "መግባት",
+      "ሾው",
+      "ዋጋ",
+      "መቀመጫ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3602,12 +5522,20 @@
   {
     "id": "taboo_music_and_entertainment_241",
     "target_en": "Radio",
+    "target_am": "ሬዲዮ",
     "forbidden_en": [
       "Listen",
       "Station",
       "Broadcast",
       "Car",
       "Music"
+    ],
+    "forbidden_am": [
+      "ማዳመጥ",
+      "ጣቢያ",
+      "ብሮድካስት",
+      "መኪና",
+      "ሙዚቃ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "family",
@@ -3617,12 +5545,20 @@
   {
     "id": "taboo_music_and_entertainment_242",
     "target_en": "Masinko",
+    "target_am": "ማሲንቆ",
     "forbidden_en": [
       "String",
       "Bow",
       "One",
       "Traditional",
       "Instrument"
+    ],
+    "forbidden_am": [
+      "ገመድ",
+      "ቀስት",
+      "አንድ",
+      "ባህላዊ",
+      "መሣሪያ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3632,12 +5568,20 @@
   {
     "id": "taboo_music_and_entertainment_243",
     "target_en": "Krar",
+    "target_am": "ክራር",
     "forbidden_en": [
       "Strings",
       "Lyre",
       "Traditional",
       "Pluck",
       "Instrument"
+    ],
+    "forbidden_am": [
+      "ገመዶች",
+      "ሊሬ",
+      "ባህላዊ",
+      "መንቀጥቀጥ",
+      "መሣሪያ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3647,12 +5591,20 @@
   {
     "id": "taboo_music_and_entertainment_244",
     "target_en": "Washint",
+    "target_am": "ዋሽንት",
     "forbidden_en": [
       "Flute",
       "Blow",
       "Bamboo",
       "Traditional",
       "Wind"
+    ],
+    "forbidden_am": [
+      "ፍሉት",
+      "መንፋት",
+      "ቀርከሃ",
+      "ባህላዊ",
+      "ነፋስ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3662,12 +5614,20 @@
   {
     "id": "taboo_music_and_entertainment_245",
     "target_en": "Kebero",
+    "target_am": "ከበሮ",
     "forbidden_en": [
       "Drum",
       "Beat",
       "Traditional",
       "Church",
       "Hand"
+    ],
+    "forbidden_am": [
+      "ድራም",
+      "ሪትም",
+      "ባህላዊ",
+      "ቤተ ክርስቲያን",
+      "እጅ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3677,12 +5637,20 @@
   {
     "id": "taboo_music_and_entertainment_246",
     "target_en": "Chorus",
+    "target_am": "ኮረስ",
     "forbidden_en": [
       "Repeat",
       "Song",
       "Sing",
       "Part",
       "Catchy"
+    ],
+    "forbidden_am": [
+      "መድገም",
+      "ዘፈን",
+      "መዘመር",
+      "ክፍል",
+      "ሞቅ ያለ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3692,12 +5660,20 @@
   {
     "id": "taboo_music_and_entertainment_247",
     "target_en": "Audience",
+    "target_am": "ተመልካቾች",
     "forbidden_en": [
       "Crowd",
       "Watch",
       "Seat",
       "Clap",
       "People"
+    ],
+    "forbidden_am": [
+      "ሰው",
+      "መመልከት",
+      "መቀመጫ",
+      "ማጨብጨብ",
+      "ሰዎች"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3707,12 +5683,20 @@
   {
     "id": "taboo_music_and_entertainment_248",
     "target_en": "Trailer",
+    "target_am": "ትሬይለር",
     "forbidden_en": [
       "Preview",
       "Film",
       "Short",
       "Cinema",
       "Release"
+    ],
+    "forbidden_am": [
+      "ቅድመ እይታ",
+      "ፊልም",
+      "አጭር",
+      "ሲኒማ",
+      "መልቀቅ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3722,12 +5706,20 @@
   {
     "id": "taboo_music_and_entertainment_249",
     "target_en": "Series",
+    "target_am": "ተከታታይ",
     "forbidden_en": [
       "Episode",
       "Season",
       "Watch",
       "Show",
       "Binge"
+    ],
+    "forbidden_am": [
+      "ኤፒሶድ",
+      "ሲዝን",
+      "መመልከት",
+      "ሾው",
+      "ቢንጅ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3737,12 +5729,20 @@
   {
     "id": "taboo_music_and_entertainment_250",
     "target_en": "Subtitle",
+    "target_am": "ሰብታይትል",
     "forbidden_en": [
       "Text",
       "Bottom",
       "Translate",
       "Read",
       "Screen"
+    ],
+    "forbidden_am": [
+      "ጽሑፍ",
+      "ታች",
+      "መተርጎም",
+      "ማንበብ",
+      "ማያ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3752,12 +5752,20 @@
   {
     "id": "taboo_music_and_entertainment_251",
     "target_en": "Remix",
+    "target_am": "ሪሚክስ",
     "forbidden_en": [
       "Version",
       "Song",
       "Beat",
       "Change",
       "DJ"
+    ],
+    "forbidden_am": [
+      "ስሪት",
+      "ዘፈን",
+      "ቢት",
+      "መለወጥ",
+      "ዲጄ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3767,12 +5775,20 @@
   {
     "id": "taboo_music_and_entertainment_252",
     "target_en": "Superstar",
+    "target_am": "ሱፐርስታር",
     "forbidden_en": [
       "Famous",
       "Big",
       "Artist",
       "Celebrity",
       "Rich"
+    ],
+    "forbidden_am": [
+      "ታዋቂ",
+      "ትልቅ",
+      "አርቲስት",
+      "ታዋቂ ሰው",
+      "ሀብታም"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "friends",
@@ -3782,12 +5798,20 @@
   {
     "id": "taboo_places_253",
     "target_en": "Hotel",
+    "target_am": "ሆቴል",
     "forbidden_en": [
       "Sleep",
       "Room",
       "Stay",
       "Book",
       "Guest"
+    ],
+    "forbidden_am": [
+      "መኝታ",
+      "ክፍል",
+      "መቆየት",
+      "መያዝ",
+      "እንግዳ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3797,12 +5821,20 @@
   {
     "id": "taboo_places_254",
     "target_en": "Bank",
+    "target_am": "ባንክ",
     "forbidden_en": [
       "Money",
       "Account",
       "Cash",
       "Queue",
       "Teller"
+    ],
+    "forbidden_am": [
+      "ገንዘብ",
+      "መለያ",
+      "ጥሬ ገንዘብ",
+      "ረድፍ",
+      "ቴለር"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3812,12 +5844,20 @@
   {
     "id": "taboo_places_255",
     "target_en": "Park",
+    "target_am": "ፓርክ",
     "forbidden_en": [
       "Green",
       "Walk",
       "Bench",
       "Trees",
       "Play"
+    ],
+    "forbidden_am": [
+      "አረንጓዴ",
+      "መራመድ",
+      "አግዳሚ",
+      "ዛፎች",
+      "መጫወት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3827,12 +5867,20 @@
   {
     "id": "taboo_places_256",
     "target_en": "Bridge",
+    "target_am": "ድልድይ",
     "forbidden_en": [
       "Cross",
       "River",
       "Road",
       "Over",
       "Build"
+    ],
+    "forbidden_am": [
+      "መሻገር",
+      "ወንዝ",
+      "መንገድ",
+      "ከላይ",
+      "መገንባት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3842,12 +5890,20 @@
   {
     "id": "taboo_places_257",
     "target_en": "Village",
+    "target_am": "መንደር",
     "forbidden_en": [
       "Small",
       "Rural",
       "Countryside",
       "Houses",
       "Community"
+    ],
+    "forbidden_am": [
+      "ትንሽ",
+      "ገጠር",
+      "ገጠራማ",
+      "ቤቶች",
+      "ማህበረሰብ"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3857,12 +5913,20 @@
   {
     "id": "taboo_places_258",
     "target_en": "Bus station",
+    "target_am": "የአውቶቡስ ጣቢያ",
     "forbidden_en": [
       "Bus",
       "Travel",
       "Ticket",
       "Wait",
       "Depart"
+    ],
+    "forbidden_am": [
+      "አውቶቡስ",
+      "ጉዞ",
+      "ቲኬት",
+      "መጠበቅ",
+      "መነሳት"
     ],
     "category_id": "places",
     "content_level": "family",
@@ -3872,12 +5936,20 @@
   {
     "id": "taboo_places_259",
     "target_en": "Gondar",
+    "target_am": "ጎንደር",
     "forbidden_en": [
       "Castle",
       "Fasilides",
       "North",
       "Historic",
       "City"
+    ],
+    "forbidden_am": [
+      "ቤተ መንግሥት",
+      "ፋሲል",
+      "ሰሜን",
+      "ታሪካዊ",
+      "ከተማ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3887,12 +5959,20 @@
   {
     "id": "taboo_places_260",
     "target_en": "Harar",
+    "target_am": "ሐረር",
     "forbidden_en": [
       "Walls",
       "Hyena",
       "East",
       "Old",
       "City"
+    ],
+    "forbidden_am": [
+      "ግድግዳዎች",
+      "ጅብ",
+      "ምሥራቅ",
+      "አሮጌ",
+      "ከተማ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3902,12 +5982,20 @@
   {
     "id": "taboo_places_261",
     "target_en": "Bahir Dar",
+    "target_am": "ባሕር ዳር",
     "forbidden_en": [
       "Tana",
       "Lake",
       "City",
       "North",
       "Boat"
+    ],
+    "forbidden_am": [
+      "ጣና",
+      "ሐይቅ",
+      "ከተማ",
+      "ሰሜን",
+      "ጀልባ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3917,12 +6005,20 @@
   {
     "id": "taboo_places_262",
     "target_en": "Hawassa",
+    "target_am": "ሐዋሳ",
     "forbidden_en": [
       "Lake",
       "Fish",
       "South",
       "City",
       "Resort"
+    ],
+    "forbidden_am": [
+      "ሐይቅ",
+      "ዓሳ",
+      "ደቡብ",
+      "ከተማ",
+      "ሪዞርት"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3932,12 +6028,20 @@
   {
     "id": "taboo_places_263",
     "target_en": "Dire Dawa",
+    "target_am": "ድሬ ዳዋ",
     "forbidden_en": [
       "East",
       "Train",
       "Hot",
       "City",
       "Railway"
+    ],
+    "forbidden_am": [
+      "ምሥራቅ",
+      "ባቡር",
+      "ሞቃት",
+      "ከተማ",
+      "ባቡር መስመር"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3947,12 +6051,20 @@
   {
     "id": "taboo_places_264",
     "target_en": "Simien Mountains",
+    "target_am": "ሰሜን ተራሮች",
     "forbidden_en": [
       "Gelada",
       "Trek",
       "North",
       "Park",
       "Peaks"
+    ],
+    "forbidden_am": [
+      "ጌላዳ",
+      "እግር ጉዞ",
+      "ሰሜን",
+      "ፓርክ",
+      "ጫፎች"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3962,12 +6074,20 @@
   {
     "id": "taboo_places_265",
     "target_en": "Danakil",
+    "target_am": "ደንከል",
     "forbidden_en": [
       "Hot",
       "Salt",
       "Depression",
       "Volcano",
       "Desert"
+    ],
+    "forbidden_am": [
+      "ሞቃት",
+      "ጨው",
+      "ቁልቁለት",
+      "እሳተ ገሞራ",
+      "በረሃ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3977,12 +6097,20 @@
   {
     "id": "taboo_places_266",
     "target_en": "Blue Nile Falls",
+    "target_am": "የሰማያዊው ናይል ፏፏቴ",
     "forbidden_en": [
       "Waterfall",
       "Nile",
       "Tis",
       "Water",
       "Abay"
+    ],
+    "forbidden_am": [
+      "ፏፏቴ",
+      "ናይል",
+      "ጢስ",
+      "ውሃ",
+      "አባይ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -3992,12 +6120,20 @@
   {
     "id": "taboo_places_267",
     "target_en": "Pharmacy",
+    "target_am": "ፋርማሲ",
     "forbidden_en": [
       "Medicine",
       "Drug",
       "Buy",
       "Counter",
       "Health"
+    ],
+    "forbidden_am": [
+      "መድሃኒት",
+      "ድሮግ",
+      "መግዛት",
+      "ካውንተር",
+      "ጤና"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -4007,12 +6143,20 @@
   {
     "id": "taboo_places_268",
     "target_en": "Border",
+    "target_am": "ድንበር",
     "forbidden_en": [
       "Cross",
       "Country",
       "Line",
       "Guard",
       "Pass"
+    ],
+    "forbidden_am": [
+      "መሻገር",
+      "አገር",
+      "መስመር",
+      "ጠባቂ",
+      "ፓስ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -4022,12 +6166,20 @@
   {
     "id": "taboo_places_269",
     "target_en": "Roundabout",
+    "target_am": "ክብ መንገድ",
     "forbidden_en": [
       "Circle",
       "Traffic",
       "Car",
       "Turn",
       "Road"
+    ],
+    "forbidden_am": [
+      "ክብ",
+      "ትራፊክ",
+      "መኪና",
+      "መዞር",
+      "መንገድ"
     ],
     "category_id": "places",
     "content_level": "friends",
@@ -4037,12 +6189,20 @@
   {
     "id": "taboo_school_270",
     "target_en": "Grade",
+    "target_am": "ውጤት",
     "forbidden_en": [
       "Mark",
       "Score",
       "Report",
       "Pass",
       "Letter"
+    ],
+    "forbidden_am": [
+      "ምልክት",
+      "ነጥብ",
+      "ሪፖርት",
+      "ማለፍ",
+      "ፊደል"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4052,12 +6212,20 @@
   {
     "id": "taboo_school_271",
     "target_en": "Textbook",
+    "target_am": "የመማሪያ መጽሐፍ",
     "forbidden_en": [
       "Book",
       "Read",
       "Subject",
       "Heavy",
       "Class"
+    ],
+    "forbidden_am": [
+      "መጽሐፍ",
+      "ማንበብ",
+      "ትምህርት",
+      "ከባድ",
+      "ክፍል"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4067,12 +6235,20 @@
   {
     "id": "taboo_school_272",
     "target_en": "Pen",
+    "target_am": "እስክሪብቶ",
     "forbidden_en": [
       "Write",
       "Ink",
       "Paper",
       "Blue",
       "Hold"
+    ],
+    "forbidden_am": [
+      "መጻፍ",
+      "ቀለም",
+      "ወረቀት",
+      "ሰማያዊ",
+      "መያዝ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4082,12 +6258,20 @@
   {
     "id": "taboo_school_273",
     "target_en": "Ruler",
+    "target_am": "መለኪያ",
     "forbidden_en": [
       "Straight",
       "Measure",
       "Line",
       "Centimetre",
       "Plastic"
+    ],
+    "forbidden_am": [
+      "ቀጥተኛ",
+      "መለካት",
+      "መስመር",
+      "ሴንቲሜትር",
+      "ፕላስቲክ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4097,12 +6281,20 @@
   {
     "id": "taboo_school_274",
     "target_en": "Eraser",
+    "target_am": "መደምሰሻ",
     "forbidden_en": [
       "Rub",
       "Pencil",
       "Mistake",
       "Rubber",
       "Clean"
+    ],
+    "forbidden_am": [
+      "ማሸት",
+      "እርሳስ",
+      "ስህተት",
+      "ራበር",
+      "ማጽዳት"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4112,12 +6304,20 @@
   {
     "id": "taboo_school_275",
     "target_en": "Break",
+    "target_am": "እረፍት",
     "forbidden_en": [
       "Rest",
       "Between",
       "Short",
       "Class",
       "Snack"
+    ],
+    "forbidden_am": [
+      "ማረፍ",
+      "መካከል",
+      "አጭር",
+      "ክፍል",
+      "መክሰስ"
     ],
     "category_id": "school",
     "content_level": "family",
@@ -4127,12 +6327,20 @@
   {
     "id": "taboo_school_276",
     "target_en": "Attendance",
+    "target_am": "አቴንዳንስ",
     "forbidden_en": [
       "Present",
       "Absent",
       "Roll",
       "Call",
       "Register"
+    ],
+    "forbidden_am": [
+      "መገኘት",
+      "መቅረት",
+      "ዝርዝር",
+      "መጥራት",
+      "መመዝገቢያ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4142,12 +6350,20 @@
   {
     "id": "taboo_school_277",
     "target_en": "Principal",
+    "target_am": "ርዕሰ መምህር",
     "forbidden_en": [
       "Head",
       "Office",
       "School",
       "Boss",
       "Director"
+    ],
+    "forbidden_am": [
+      "ራስ",
+      "ቢሮ",
+      "ትምህርት ቤት",
+      "አለቃ",
+      "ዳይሬክተር"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4157,12 +6373,20 @@
   {
     "id": "taboo_school_278",
     "target_en": "Classmate",
+    "target_am": "የክፍል ጓደኛ",
     "forbidden_en": [
       "Same",
       "Class",
       "Friend",
       "Student",
       "Sit"
+    ],
+    "forbidden_am": [
+      "ተመሳሳይ",
+      "ክፍል",
+      "ጓደኛ",
+      "ተማሪ",
+      "መቀመጥ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4172,12 +6396,20 @@
   {
     "id": "taboo_school_279",
     "target_en": "Timetable",
+    "target_am": "የትምህርት ሰሌዳ",
     "forbidden_en": [
       "Schedule",
       "Class",
       "Time",
       "Week",
       "Plan"
+    ],
+    "forbidden_am": [
+      "መርሃ ግብር",
+      "ክፍል",
+      "ጊዜ",
+      "ሳምንት",
+      "እቅድ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4187,12 +6419,20 @@
   {
     "id": "taboo_school_280",
     "target_en": "Assignment",
+    "target_am": "አሳይመንት",
     "forbidden_en": [
       "Task",
       "Submit",
       "Deadline",
       "Work",
       "Grade"
+    ],
+    "forbidden_am": [
+      "ተግባር",
+      "ማስረከብ",
+      "የመጨረሻ ቀን",
+      "ሥራ",
+      "ውጤት"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4202,12 +6442,20 @@
   {
     "id": "taboo_school_281",
     "target_en": "Group project",
+    "target_am": "የቡድን ፕሮጀክት",
     "forbidden_en": [
       "Team",
       "Work",
       "Divide",
       "Carry",
       "Present"
+    ],
+    "forbidden_am": [
+      "ቡድን",
+      "ሥራ",
+      "መከፋፈል",
+      "መሸከም",
+      "ማቅረብ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4217,12 +6465,20 @@
   {
     "id": "taboo_school_282",
     "target_en": "Graduation",
+    "target_am": "ምረቃ",
     "forbidden_en": [
       "Cap",
       "Finish",
       "Ceremony",
       "Degree",
       "Gown"
+    ],
+    "forbidden_am": [
+      "ኮፍያ",
+      "መጨረስ",
+      "ስነ ሥርዓት",
+      "ዲግሪ",
+      "ቀሚስ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4232,12 +6488,20 @@
   {
     "id": "taboo_school_283",
     "target_en": "Tuition",
+    "target_am": "ትምህርት ክፍያ",
     "forbidden_en": [
       "Fee",
       "Pay",
       "School",
       "Cost",
       "Semester"
+    ],
+    "forbidden_am": [
+      "ክፍያ",
+      "መክፈል",
+      "ትምህርት ቤት",
+      "ዋጋ",
+      "ሴሚስተር"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4247,12 +6511,20 @@
   {
     "id": "taboo_school_284",
     "target_en": "Dormitory",
+    "target_am": "ዶርም",
     "forbidden_en": [
       "Sleep",
       "Room",
       "Campus",
       "Share",
       "Student"
+    ],
+    "forbidden_am": [
+      "መኝታ",
+      "ክፍል",
+      "ካምፓስ",
+      "መጋራት",
+      "ተማሪ"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4262,12 +6534,20 @@
   {
     "id": "taboo_school_285",
     "target_en": "Cheating",
+    "target_am": "ማጭበርበር",
     "forbidden_en": [
       "Copy",
       "Exam",
       "Caught",
       "Answer",
       "Wrong"
+    ],
+    "forbidden_am": [
+      "መቅዳት",
+      "ፈተና",
+      "መያዝ",
+      "መልስ",
+      "ስህተት"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4277,12 +6557,20 @@
   {
     "id": "taboo_school_286",
     "target_en": "Registration",
+    "target_am": "ምዝገባ",
     "forbidden_en": [
       "Sign",
       "Enrol",
       "Form",
       "Course",
       "Start"
+    ],
+    "forbidden_am": [
+      "መፈረም",
+      "መመዝገብ",
+      "ፎርም",
+      "ኮርስ",
+      "መጀመር"
     ],
     "category_id": "school",
     "content_level": "friends",
@@ -4292,12 +6580,20 @@
   {
     "id": "taboo_sports_287",
     "target_en": "Goalkeeper",
+    "target_am": "ጠባቂ",
     "forbidden_en": [
       "Goal",
       "Save",
       "Gloves",
       "Net",
       "Keep"
+    ],
+    "forbidden_am": [
+      "ጎል",
+      "ማዳን",
+      "ጓንት",
+      "መረብ",
+      "መጠበቅ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4307,12 +6603,20 @@
   {
     "id": "taboo_sports_288",
     "target_en": "Whistle",
+    "target_am": "ፉፋንጫ",
     "forbidden_en": [
       "Blow",
       "Referee",
       "Sound",
       "Stop",
       "Mouth"
+    ],
+    "forbidden_am": [
+      "መንፋት",
+      "ዳኛ",
+      "ድምፅ",
+      "ማቆም",
+      "አፍ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4322,12 +6626,20 @@
   {
     "id": "taboo_sports_289",
     "target_en": "Medal",
+    "target_am": "ሜዳልያ",
     "forbidden_en": [
       "Gold",
       "Win",
       "Neck",
       "Silver",
       "Award"
+    ],
+    "forbidden_am": [
+      "ወርቅ",
+      "ማሸነፍ",
+      "አንገት",
+      "ብር",
+      "ሽልማት"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4337,12 +6649,20 @@
   {
     "id": "taboo_sports_290",
     "target_en": "Training",
+    "target_am": "ስልጠና",
     "forbidden_en": [
       "Practice",
       "Prepare",
       "Gym",
       "Coach",
       "Session"
+    ],
+    "forbidden_am": [
+      "ልምምድ",
+      "ማዘጋጀት",
+      "ጂም",
+      "አሰልጣኝ",
+      "ክፍለ ጊዜ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4352,12 +6672,20 @@
   {
     "id": "taboo_sports_291",
     "target_en": "Scoreboard",
+    "target_am": "የውጤት ሰሌዳ",
     "forbidden_en": [
       "Score",
       "Numbers",
       "Display",
       "Board",
       "Game"
+    ],
+    "forbidden_am": [
+      "ውጤት",
+      "ቁጥሮች",
+      "ማሳያ",
+      "ሰሌዳ",
+      "ጨዋታ"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4367,12 +6695,20 @@
   {
     "id": "taboo_sports_292",
     "target_en": "Half-time",
+    "target_am": "ግማሽ ጊዜ",
     "forbidden_en": [
       "Break",
       "Middle",
       "Rest",
       "Match",
       "Talk"
+    ],
+    "forbidden_am": [
+      "እረፍት",
+      "መካከል",
+      "ማረፍ",
+      "ጨዋታ",
+      "መነጋገር"
     ],
     "category_id": "sports",
     "content_level": "family",
@@ -4382,12 +6718,20 @@
   {
     "id": "taboo_sports_293",
     "target_en": "Offside",
+    "target_am": "ኦፍሳይድ",
     "forbidden_en": [
       "Line",
       "Flag",
       "Football",
       "Rule",
       "Position"
+    ],
+    "forbidden_am": [
+      "መስመር",
+      "ባንዲራ",
+      "እግር ኳስ",
+      "ደንብ",
+      "አቀማመጥ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4397,12 +6741,20 @@
   {
     "id": "taboo_sports_294",
     "target_en": "Substitute",
+    "target_am": "ተተኪ",
     "forbidden_en": [
       "Replace",
       "Bench",
       "Swap",
       "Player",
       "Come"
+    ],
+    "forbidden_am": [
+      "መተካት",
+      "መቀመጫ",
+      "መቀየር",
+      "ተጫዋች",
+      "መምጣት"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4412,12 +6764,20 @@
   {
     "id": "taboo_sports_295",
     "target_en": "Captain",
+    "target_am": "ካፒቴን",
     "forbidden_en": [
       "Leader",
       "Armband",
       "Team",
       "Lead",
       "Toss"
+    ],
+    "forbidden_am": [
+      "መሪ",
+      "የክንድ ባንድ",
+      "ቡድን",
+      "መምራት",
+      "ቶስ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4427,12 +6787,20 @@
   {
     "id": "taboo_sports_296",
     "target_en": "Injury",
+    "target_am": "ጉዳት",
     "forbidden_en": [
       "Hurt",
       "Pain",
       "Doctor",
       "Out",
       "Stretcher"
+    ],
+    "forbidden_am": [
+      "መጎዳት",
+      "ህመም",
+      "ሐኪም",
+      "ውጭ",
+      "ተሸካሚ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4442,12 +6810,20 @@
   {
     "id": "taboo_sports_297",
     "target_en": "Supporters",
+    "target_am": "ደጋፊዎች",
     "forbidden_en": [
       "Fans",
       "Group",
       "Team",
       "Members",
       "Follow"
+    ],
+    "forbidden_am": [
+      "ፋኖች",
+      "ቡድን",
+      "ክለብ",
+      "አባላት",
+      "መከተል"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4457,12 +6833,20 @@
   {
     "id": "taboo_sports_298",
     "target_en": "Athletics",
+    "target_am": "አትሌቲክስ",
     "forbidden_en": [
       "Track",
       "Field",
       "Run",
       "Events",
       "Compete"
+    ],
+    "forbidden_am": [
+      "ትራክ",
+      "ሜዳ",
+      "ሮጥ",
+      "ውድድሮች",
+      "መወዳደር"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4472,12 +6856,20 @@
   {
     "id": "taboo_sports_299",
     "target_en": "Long jump",
+    "target_am": "ረጅም ዝላት",
     "forbidden_en": [
       "Sand",
       "Jump",
       "Distance",
       "Run",
       "Pit"
+    ],
+    "forbidden_am": [
+      "አሸዋ",
+      "መዝለል",
+      "ርቀት",
+      "መሮጥ",
+      "ጉድጓድ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4487,12 +6879,20 @@
   {
     "id": "taboo_sports_300",
     "target_en": "Wrestling",
+    "target_am": "ትግል",
     "forbidden_en": [
       "Grapple",
       "Mat",
       "Pin",
       "Fight",
       "Hold"
+    ],
+    "forbidden_am": [
+      "መያዝ",
+      "ማት",
+      "ማጣበቅ",
+      "ውጊያ",
+      "ማቆየት"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4502,12 +6902,20 @@
   {
     "id": "taboo_sports_301",
     "target_en": "Table tennis",
+    "target_am": "ጠረጴዛ ቴኒስ",
     "forbidden_en": [
       "Ping",
       "Paddle",
       "Ball",
       "Table",
       "Net"
+    ],
+    "forbidden_am": [
+      "ፒንግ",
+      "ፓድል",
+      "ኳስ",
+      "ጠረጴዛ",
+      "መረብ"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4517,12 +6925,20 @@
   {
     "id": "taboo_sports_302",
     "target_en": "Chess",
+    "target_am": "ቼዝ",
     "forbidden_en": [
       "Board",
       "King",
       "Queen",
       "Move",
       "Checkmate"
+    ],
+    "forbidden_am": [
+      "ሰሌዳ",
+      "ንጉሥ",
+      "እቴጌ",
+      "መንቀሳቀስ",
+      "ቼክሜት"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4532,12 +6948,20 @@
   {
     "id": "taboo_sports_303",
     "target_en": "Warm-up",
+    "target_am": "ማሞቅ",
     "forbidden_en": [
       "Stretch",
       "Before",
       "Prepare",
       "Muscle",
       "Light"
+    ],
+    "forbidden_am": [
+      "መዘርጋት",
+      "ከፊት",
+      "ማዘጋጀት",
+      "ጡንቻ",
+      "ቀላል"
     ],
     "category_id": "sports",
     "content_level": "friends",
@@ -4547,12 +6971,20 @@
   {
     "id": "taboo_everyday_life_304",
     "target_en": "First date",
+    "target_am": "መጀመሪያ ቀን",
     "forbidden_en": [
       "Romance",
       "Nervous",
       "Restaurant",
       "Meet",
       "Couple"
+    ],
+    "forbidden_am": [
+      "ፍቅር",
+      "መረበሽ",
+      "ሬስቶራንት",
+      "መገናኘት",
+      "ጥንዶች"
     ],
     "category_id": "everyday_life",
     "content_level": "spicy",
@@ -4562,12 +6994,20 @@
   {
     "id": "taboo_everyday_life_305",
     "target_en": "Crush",
+    "target_am": "የልብ ምኞት",
     "forbidden_en": [
       "Like",
       "Secret",
       "Heart",
       "Blush",
       "Love"
+    ],
+    "forbidden_am": [
+      "መውደድ",
+      "ሚስጥር",
+      "ልብ",
+      "ማፍጠን",
+      "ፍቅር"
     ],
     "category_id": "everyday_life",
     "content_level": "spicy",
@@ -4577,12 +7017,20 @@
   {
     "id": "taboo_everyday_life_306",
     "target_en": "Breakup",
+    "target_am": "መለያየት",
     "forbidden_en": [
       "Ex",
       "Cry",
       "Split",
       "Relationship",
       "End"
+    ],
+    "forbidden_am": [
+      "ቀድሞ ያጋረጠ",
+      "ማልቀስ",
+      "መከፋፈል",
+      "ግንኙነት",
+      "መጨረሻ"
     ],
     "category_id": "everyday_life",
     "content_level": "spicy",
@@ -4592,12 +7040,20 @@
   {
     "id": "taboo_places_307",
     "target_en": "Honeymoon",
+    "target_am": "የሰርግ ጉዞ",
     "forbidden_en": [
       "Wedding",
       "Trip",
       "Couple",
       "Vacation",
       "Marriage"
+    ],
+    "forbidden_am": [
+      "ሰርግ",
+      "ጉዞ",
+      "ጥንዶች",
+      "እረፍት",
+      "ጋብቻ"
     ],
     "category_id": "places",
     "content_level": "spicy",
@@ -4607,12 +7063,20 @@
   {
     "id": "taboo_places_308",
     "target_en": "Romantic rooftop",
+    "target_am": "የፍቅር ጣራ",
     "forbidden_en": [
       "Date",
       "View",
       "Night",
       "City",
       "Dinner"
+    ],
+    "forbidden_am": [
+      "ቀን",
+      "እይታ",
+      "ለሊት",
+      "ከተማ",
+      "እራት"
     ],
     "category_id": "places",
     "content_level": "spicy",
@@ -4622,12 +7086,20 @@
   {
     "id": "taboo_places_309",
     "target_en": "Love seat",
+    "target_am": "የፍቅር መቀመጫ",
     "forbidden_en": [
       "Couch",
       "Two",
       "Sit",
       "Close",
       "Sofa"
+    ],
+    "forbidden_am": [
+      "ሶፋ",
+      "ሁለት",
+      "መቀመጥ",
+      "ቅርብ",
+      "አጎማሮ"
     ],
     "category_id": "places",
     "content_level": "spicy",
@@ -4637,12 +7109,20 @@
   {
     "id": "taboo_music_and_entertainment_310",
     "target_en": "Love song",
+    "target_am": "የፍቅር ዘፈን",
     "forbidden_en": [
       "Romance",
       "Lyrics",
       "Heart",
       "Ballad",
       "Sing"
+    ],
+    "forbidden_am": [
+      "ፍቅር",
+      "ግጥም",
+      "ልብ",
+      "ባላድ",
+      "መዘመር"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "spicy",
@@ -4652,12 +7132,20 @@
   {
     "id": "taboo_music_and_entertainment_311",
     "target_en": "Rom-com",
+    "target_am": "ሮም ኮም",
     "forbidden_en": [
       "Movie",
       "Funny",
       "Kiss",
       "Couple",
       "Happy"
+    ],
+    "forbidden_am": [
+      "ፊልም",
+      "አስቂኝ",
+      "መሳም",
+      "ጥንዶች",
+      "ደስተኛ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "spicy",
@@ -4667,12 +7155,20 @@
   {
     "id": "taboo_music_and_entertainment_312",
     "target_en": "Slow dance",
+    "target_am": "ቀስ ያለ ዳንስ",
     "forbidden_en": [
       "Music",
       "Close",
       "Arms",
       "Song",
       "Sway"
+    ],
+    "forbidden_am": [
+      "ሙዚቃ",
+      "ቅርብ",
+      "እጆች",
+      "ዘፈን",
+      "መወዛወዝ"
     ],
     "category_id": "music_and_entertainment",
     "content_level": "spicy",
@@ -4682,12 +7178,20 @@
   {
     "id": "taboo_school_313",
     "target_en": "Campus crush",
+    "target_am": "የካምፓስ ምኞት",
     "forbidden_en": [
       "Class",
       "Student",
       "Like",
       "University",
       "Secret"
+    ],
+    "forbidden_am": [
+      "ክፍል",
+      "ተማሪ",
+      "መውደድ",
+      "ዩኒቨርሲቲ",
+      "ሚስጥር"
     ],
     "category_id": "school",
     "content_level": "spicy",
@@ -4697,12 +7201,20 @@
   {
     "id": "taboo_school_314",
     "target_en": "Love note",
+    "target_am": "የፍቅር ማስታወሻ",
     "forbidden_en": [
       "Pass",
       "Write",
       "Desk",
       "Secret",
       "Letter"
+    ],
+    "forbidden_am": [
+      "ማስተላለፍ",
+      "መጻፍ",
+      "ጠረጴዛ",
+      "ሚስጥር",
+      "ደብዳቤ"
     ],
     "category_id": "school",
     "content_level": "spicy",
@@ -4712,12 +7224,20 @@
   {
     "id": "taboo_school_315",
     "target_en": "Prom date",
+    "target_am": "የፕሮም ጓደኛ",
     "forbidden_en": [
       "Dance",
       "Dress",
       "School",
       "Night",
       "Partner"
+    ],
+    "forbidden_am": [
+      "ዳንስ",
+      "ቀሚስ",
+      "ትምህርት ቤት",
+      "ለሊት",
+      "አጋር"
     ],
     "category_id": "school",
     "content_level": "spicy",
@@ -4727,12 +7247,20 @@
   {
     "id": "taboo_jobs_316",
     "target_en": "Office crush",
+    "target_am": "የቢሮ ምኞት",
     "forbidden_en": [
       "Work",
       "Colleague",
       "Desk",
       "Secret",
       "Like"
+    ],
+    "forbidden_am": [
+      "ሥራ",
+      "ባልደረባ",
+      "ጠረጴዛ",
+      "ሚስጥር",
+      "መውደድ"
     ],
     "category_id": "jobs",
     "content_level": "spicy",
@@ -4742,12 +7270,20 @@
   {
     "id": "taboo_jobs_317",
     "target_en": "Work husband",
+    "target_am": "የሥራ ባል",
     "forbidden_en": [
       "Joke",
       "Colleague",
       "Close",
       "Office",
       "Partner"
+    ],
+    "forbidden_am": [
+      "ቀልድ",
+      "ባልደረባ",
+      "ቅርብ",
+      "ቢሮ",
+      "አጋር"
     ],
     "category_id": "jobs",
     "content_level": "spicy",
@@ -4757,12 +7293,20 @@
   {
     "id": "taboo_jobs_318",
     "target_en": "After-work drinks",
+    "target_am": "ከሥራ በኋላ መጠጥ",
     "forbidden_en": [
       "Bar",
       "Coworker",
       "Evening",
       "Hangout",
       "Flirt"
+    ],
+    "forbidden_am": [
+      "ባር",
+      "የሥራ ባልደረባ",
+      "ማታ",
+      "መሰብሰብ",
+      "ፍላርት"
     ],
     "category_id": "jobs",
     "content_level": "spicy",
@@ -4772,12 +7316,20 @@
   {
     "id": "taboo_animals_319",
     "target_en": "Lovebirds",
+    "target_am": "የፍቅር ወፎች",
     "forbidden_en": [
       "Couple",
       "Birds",
       "Cute",
       "Pair",
       "Nest"
+    ],
+    "forbidden_am": [
+      "ጥንዶች",
+      "ወፎች",
+      "ቆንጆ",
+      "ጥንድ",
+      "ጎጆ"
     ],
     "category_id": "animals",
     "content_level": "spicy",
@@ -4787,12 +7339,20 @@
   {
     "id": "taboo_animals_320",
     "target_en": "Puppy love",
+    "target_am": "የውሻ ፍቅር",
     "forbidden_en": [
       "Young",
       "Crush",
       "Cute",
       "Dog",
       "Innocent"
+    ],
+    "forbidden_am": [
+      "ወጣት",
+      "ምኞት",
+      "ቆንጆ",
+      "ውሻ",
+      "ንጹህ"
     ],
     "category_id": "animals",
     "content_level": "spicy",
@@ -4802,12 +7362,20 @@
   {
     "id": "taboo_animals_321",
     "target_en": "Catcall",
+    "target_am": "መጥሪያ ጩኸት",
     "forbidden_en": [
       "Whistle",
       "Street",
       "Rude",
       "Attention",
       "Sound"
+    ],
+    "forbidden_am": [
+      "ፉፋንጫ",
+      "መንገድ",
+      "አጉል",
+      "ትኩረት",
+      "ድምፅ"
     ],
     "category_id": "animals",
     "content_level": "spicy",
@@ -4817,12 +7385,20 @@
   {
     "id": "taboo_sports_322",
     "target_en": "Couple's yoga",
+    "target_am": "የጥንዶች ዮጋ",
     "forbidden_en": [
       "Stretch",
       "Partner",
       "Pose",
       "Mat",
       "Together"
+    ],
+    "forbidden_am": [
+      "መዘርጋት",
+      "አጋር",
+      "አቀማመጥ",
+      "ማት",
+      "አብረው"
     ],
     "category_id": "sports",
     "content_level": "spicy",
@@ -4832,12 +7408,20 @@
   {
     "id": "taboo_sports_323",
     "target_en": "Mixed doubles",
+    "target_am": "ድብልቅ ድርብ",
     "forbidden_en": [
       "Tennis",
       "Partner",
       "Team",
       "Two",
       "Match"
+    ],
+    "forbidden_am": [
+      "ቴኒስ",
+      "አጋር",
+      "ቡድን",
+      "ሁለት",
+      "ጨዋታ"
     ],
     "category_id": "sports",
     "content_level": "spicy",
@@ -4847,12 +7431,20 @@
   {
     "id": "taboo_sports_324",
     "target_en": "Kiss cam",
+    "target_am": "የመሳም ካሜራ",
     "forbidden_en": [
       "Stadium",
       "Screen",
       "Couple",
       "Crowd",
       "Embarrass"
+    ],
+    "forbidden_am": [
+      "ስታዲየም",
+      "ማያ",
+      "ጥንዶች",
+      "ተመልካች",
+      "ማፈር"
     ],
     "category_id": "sports",
     "content_level": "spicy",
@@ -4862,12 +7454,20 @@
   {
     "id": "taboo_general_words_325",
     "target_en": "Flirting",
+    "target_am": "ፍላርት",
     "forbidden_en": [
       "Tease",
       "Smile",
       "Interest",
       "Charm",
       "Wink"
+    ],
+    "forbidden_am": [
+      "መቀለድ",
+      "ፈገግታ",
+      "ፍላጎት",
+      "ማራኪ",
+      "ማሟሟገት"
     ],
     "category_id": "general_words",
     "content_level": "spicy",
@@ -4877,12 +7477,20 @@
   {
     "id": "taboo_general_words_326",
     "target_en": "Butterflies",
+    "target_am": "የቢራቢሮ ስሜት",
     "forbidden_en": [
       "Stomach",
       "Nervous",
       "Crush",
       "Feeling",
       "Excited"
+    ],
+    "forbidden_am": [
+      "ሆድ",
+      "መረበሽ",
+      "ምኞት",
+      "ስሜት",
+      "ደስታ"
     ],
     "category_id": "general_words",
     "content_level": "spicy",
@@ -4892,12 +7500,20 @@
   {
     "id": "taboo_general_words_327",
     "target_en": "Chemistry",
+    "target_am": "ኬሚስትሪ",
     "forbidden_en": [
       "Spark",
       "Attraction",
       "Connection",
       "Vibe",
       "Pull"
+    ],
+    "forbidden_am": [
+      "ብልጭታ",
+      "መሳብ",
+      "ግንኙነት",
+      "ቫይብ",
+      "መጎተት"
     ],
     "category_id": "general_words",
     "content_level": "spicy",
@@ -4907,12 +7523,20 @@
   {
     "id": "taboo_ethiopian_food_328",
     "target_en": "Shared platter",
+    "target_am": "የጋራ ሳህን",
     "forbidden_en": [
       "Together",
       "Injera",
       "Date",
       "One",
       "Eat"
+    ],
+    "forbidden_am": [
+      "አብረው",
+      "እንጀራ",
+      "ቀን",
+      "አንድ",
+      "መብላት"
     ],
     "category_id": "ethiopian_food",
     "content_level": "spicy",
@@ -4922,12 +7546,20 @@
   {
     "id": "taboo_ethiopian_food_329",
     "target_en": "Honey wine toast",
+    "target_am": "የጠጅ ቶስት",
     "forbidden_en": [
       "Tej",
       "Sweet",
       "Drink",
       "Celebrate",
       "Couple"
+    ],
+    "forbidden_am": [
+      "ጠጅ",
+      "ጣፋጭ",
+      "መጠጥ",
+      "ማክበር",
+      "ጥንዶች"
     ],
     "category_id": "ethiopian_food",
     "content_level": "spicy",
@@ -4937,12 +7569,20 @@
   {
     "id": "taboo_ethiopian_food_330",
     "target_en": "Late-night kitfo",
+    "target_am": "የለሊት ክትፎ",
     "forbidden_en": [
       "Meat",
       "Date",
       "Raw",
       "Restaurant",
       "Night"
+    ],
+    "forbidden_am": [
+      "ስጋ",
+      "ቀን",
+      "ጥሬ",
+      "ሬስቶራንት",
+      "ለሊት"
     ],
     "category_id": "ethiopian_food",
     "content_level": "spicy",

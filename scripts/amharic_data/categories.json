@@ -1,0 +1,47 @@
+{
+  "whos_the_liar": {
+    "food": "ምግብ",
+    "addis_life": "የአዲስ ሕይወት",
+    "friends": "ጓደኞች",
+    "school_and_university": "ትምህርት እና ዩኒቨርሲቲ",
+    "family": "ቤተሰብ",
+    "music_and_entertainment": "ሙዚቃ እና መዝናኛ",
+    "travel": "ጉዞ",
+    "relationships": "ግንኙነቶች",
+    "everyday_preferences": "የዕለት ምርጫዎች"
+  },
+  "taboo": {
+    "ethiopian_food": "የኢትዮጵያ ምግብ",
+    "everyday_life": "የዕለት ሕይወት",
+    "places": "ቦታዎች",
+    "music_and_entertainment": "ሙዚቃ እና መዝናኛ",
+    "school": "ትምህርት",
+    "jobs": "ሥራዎች",
+    "animals": "እንስሳት",
+    "sports": "ስፖርት",
+    "general_words": "አጠቃላይ ቃላት"
+  },
+  "most_likely": {
+    "friends": "ጓደኞች",
+    "family": "ቤተሰብ",
+    "school_and_university": "ትምህርት እና ዩኒቨርሲቲ",
+    "addis_life": "የአዲስ ሕይወት",
+    "relationships": "ግንኙነቶች",
+    "work": "ሥራ",
+    "diaspora": "የውጭ አገር ኑሮ",
+    "weddings_and_events": "ሰርግ እና ዝግጅቶች",
+    "general_funny": "አጠቃላይ አስቂኝ"
+  },
+  "would_you_rather": {
+    "ethiopian_life": "የኢትዮጵያ ሕይወት",
+    "food": "ምግብ",
+    "friends": "ጓደኞች",
+    "relationships": "ግንኙነቶች",
+    "money_and_lifestyle": "ገንዘብ እና ኑሮ",
+    "school_and_work": "ትምህርት እና ሥራ",
+    "travel": "ጉዞ",
+    "absurd_choices": "ያልተለመዱ ምርጫዎች",
+    "deep_choices": "ጥልቅ ምርጫዎች",
+    "diaspora": "የውጭ አገር ኑሮ"
+  }
+}

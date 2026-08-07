@@ -4,30 +4,11 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-08-06._
+_Last updated: 2026-08-07._
 
 ---
 
 ## Open
-
-### Amharic content for remaining games (2026-08-06)
-
-Impostor EN/AM/Mixed shipped. Still English-only for:
-
-- [ ] Who’s the Liar? pairs (`main_question_am` / `liar_question_am`)
-- [ ] Taboo targets + forbidden lists
-- [ ] Most Likely prompts
-- [ ] Would You Rather dilemmas
-- [ ] Category `name_am` for non-Impostor games
-
-### Impostor polish after first playtest (2026-08-04)
-Vertical slice is playable. Follow-ups once someone runs a real table:
-
-- [ ] Two-Impostor mode — **cut from MVP 2026-08-06**, gated behind
-      `TWO_IMPOSTOR_ENABLED` in `src/domain/impostor/types.ts`. To ship it:
-      implement §3.6's second clue-and-vote cycle (a caught Impostor who
-      guesses wrong must not end the round), then flip the flag and restore the
-      1/2 `Segmented` block in `setup/review.tsx`.
 
 ### Shared UI kit extraction (2026-08-04)
 Primary/secondary buttons and setup chrome exist. Extract player chips, toggle,
@@ -68,6 +49,80 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Who’s Got the Bomb? sixth playable game (2026-08-07)
+
+- Added a low-friction named-player hot-potato flow: public category, random
+  starter, short hidden randomized fuse, and physical answer-and-pass play.
+- The app does not track handoffs, lives, eliminations, or a winner. The group
+  sees who starts and knows who held the phone when it exploded.
+- Added an offline looping fuse cue and explosion effect; both follow the
+  app-level Sound setting and the fuse cue stops while paused.
+- Added quick setup, shared player/category/content screens, session routing,
+  report/history support, a bomb icon/accent, game details, and home catalog row.
+- Added the owner-provided nervous crescent mascot holding a lit cartoon bomb; its
+  lower silhouette is rounded so only the true right-side crescent horn reads
+  as a point, and no separate mechanic badge is used on the home card.
+- Bundled 48 English/Amharic category prompts across eight offline groups.
+- Product decision: the locked five-game MVP is now a six-game lineup.
+
+### Most Likely countdown clarity (2026-08-07)
+
+- Promoted the physical-pointing countdown to a dedicated full-focus screen
+  with room-scale numerals, per-beat motion, synchronized haptics, and offline
+  `3 · 2 · 1` / `POINT!` audio cues that follow the Sound setting.
+
+### Cross-game sound cues (2026-08-07)
+
+- Added Taboo warning/final-count/time-up cues plus Correct and Violation
+  feedback; Skip remains quiet.
+- Added a neutral private-reveal cue for every Liar player plus verdict and
+  distinct outcome cues. Impostor remains intentionally sound-free after
+  playtesting; its private reveals, accusation, and results use motion/haptics.
+- Centralized foreground audio setup and setting-aware effect playback. Home
+  game cards and Settings already use vibration-aware shared press haptics.
+
+### Two-Impostor mode restored with full resolution (2026-08-07)
+
+- Added a 1/2 Impostor setup control; two unlocks at the product-spec minimum
+  of 8 players and automatically returns to one if the group drops below 8.
+- A caught Impostor still gets a final guess. Correct wins for the Impostor
+  team; incorrect eliminates that player and starts a second clue, discussion,
+  and vote cycle with the remaining players.
+- Crew wins only after both Impostors are caught and both guesses are wrong.
+  Eliminated players are excluded from later clues, accusations, and votes.
+- Updated result copy for plural Impostors and removed the feature from the
+  README's out-of-scope list. This section supersedes the 2026-08-06 cut note.
+
+### Game-detail mascot continuity (2026-08-07)
+
+- Replaced the generic game glyph medallion on every game-detail hero with the
+  matching expressive moon used by that game's home card.
+- Centralized the game-to-expression mapping in `gameMoonExpression.ts` so the
+  catalog and detail screens stay visually consistent as mascot art evolves.
+- Kept mascots out of setup and core play surfaces; this is a navigation and
+  identity cue, not added gameplay decoration.
+- Made the detail back button fall back to Home when there is no navigator
+  history, avoiding the development-only unhandled `GO_BACK` warning.
+
+### Home library density pass (2026-08-07)
+
+- Kept the crescent mascot as the single home hero and strengthened the wordmark with an intentional portrait lockup.
+- Reworked playable games into compact horizontal rows with expressive mascot
+  poses, restrained accent washes, and clear navigation affordances.
+- Gave each game a purposeful expression of the same crescent mascot without redundant mechanic badges.
+- Added transparent masked, detective, pointing, and thinking expressions; Taboo reuses the established shushing pose.
+- Simplified playable rows to mascot, full title, and chevron; descriptions and
+  session metadata now live on the detail screen, where they do not compete
+  with long titles in the home library.
+
+### Amharic decks for all five games (2026-08-07)
+
+Every playable deck now has Amharic fields + category `name_am`:
+
+- Liar 171 · Taboo 330 · Most Likely 180 · Would You Rather 170 · Impostor 252
+- Content language EN / Amharic / Mixed applies across all five games
+- Native-speaker QA still welcome on tone and phrasing
 
 ### Brand icons + Impostor Amharic content (2026-08-06)
 
@@ -411,7 +466,7 @@ Secrets stay in memory only — never in route params.
 
 ## Locked product decisions (do not reopen without TASKS note)
 
-- Five launch games; Impostor is the hero / first vertical slice.
+- Six launch games; Impostor is the hero / first vertical slice.
 - One shared phone; no account required; offline play required.
 - Family / Friends / Spicy; Spicy off by default.
 - Lamp Honey primary CTA.

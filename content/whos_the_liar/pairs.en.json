@@ -2,7 +2,9 @@
   {
     "id": "liar_food_001",
     "main_question_en": "Which Ethiopian food could you eat every day?",
+    "main_question_am": "የትኛውን የኢትዮጵያ ምግብ በየቀኑ መብላት ትችላለህ?",
     "liar_question_en": "Which Ethiopian food would you never order?",
+    "liar_question_am": "የትኛውን የኢትዮጵያ ምግብ በፍጹም አታዝዝም?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -11,7 +13,9 @@
   {
     "id": "liar_food_002",
     "main_question_en": "What snack do you always buy at the shop?",
+    "main_question_am": "ከሱቅ ሁልጊዜ የምትገዛው መክሰስ ምንድን ነው?",
     "liar_question_en": "What snack do you pretend to like?",
+    "liar_question_am": "እንደምትወደው የምታሳይ መክሰስ ምንድን ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -20,7 +24,9 @@
   {
     "id": "liar_food_003",
     "main_question_en": "Which drink wakes you up best?",
+    "main_question_am": "የትኛው መጠጥ በደንብ ያነቃሃል?",
     "liar_question_en": "Which drink do you only order to look fancy?",
+    "liar_question_am": "ለመታየት ብቻ የምታዝዘው መጠጥ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -29,7 +35,9 @@
   {
     "id": "liar_food_004",
     "main_question_en": "What is your go-to breakfast?",
+    "main_question_am": "የምትወደው ቁርስ ምንድን ነው?",
     "liar_question_en": "What breakfast would you skip if you could?",
+    "liar_question_am": "ቢቻልህ የትኛውን ቁርስ ትተወው ነበር?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -38,7 +46,9 @@
   {
     "id": "liar_food_005",
     "main_question_en": "Which spice reminds you of home?",
+    "main_question_am": "የትኛው ቅመም ቤትህን ያስታውስሃል?",
     "liar_question_en": "Which spice do you secretly hate?",
+    "liar_question_am": "በድብቅ የምትጠላው ቅመም የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -47,7 +57,9 @@
   {
     "id": "liar_food_006",
     "main_question_en": "What dessert can you never finish?",
+    "main_question_am": "ሙሉ በሙሉ ማጠናቀቅ የማትችለው ጣፋጭ ምንድን ነው?",
     "liar_question_en": "What dessert do you always steal a bite of?",
+    "liar_question_am": "ሁልጊዜ ትንሽ የምትሰርቀው ጣፋጭ ምንድን ነው?",
     "category_id": "food",
     "content_level": "friends",
     "difficulty": "easy",
@@ -56,7 +68,9 @@
   {
     "id": "liar_food_007",
     "main_question_en": "Which restaurant would you take a visitor to?",
+    "main_question_am": "እንግዳን ወደ የትኛው ሬስቶራንት ትወስዳለህ?",
     "liar_question_en": "Which restaurant would you avoid with a visitor?",
+    "liar_question_am": "ከእንግዳ ጋር የትኛውን ሬስቶራንት ትርቃለህ?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -65,7 +79,9 @@
   {
     "id": "liar_food_008",
     "main_question_en": "What street food is worth the wait?",
+    "main_question_am": "መጠበቅ የሚያስቆይ የመንገድ ምግብ የትኛው ነው?",
     "liar_question_en": "What street food is overrated?",
+    "liar_question_am": "ከእውነት በላይ የሚነገርለት የመንገድ ምግብ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -74,7 +90,9 @@
   {
     "id": "liar_food_009",
     "main_question_en": "Which fruit do you buy every week?",
+    "main_question_am": "በየሳምንቱ የምትገዛው ፍራፍሬ የትኛው ነው?",
     "liar_question_en": "Which fruit do you only buy for guests?",
+    "liar_question_am": "ለእንግዶች ብቻ የምትገዛው ፍራፍሬ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -83,7 +101,9 @@
   {
     "id": "liar_food_010",
     "main_question_en": "What meal do you cook when you have no time?",
+    "main_question_am": "ጊዜ ሳይኖርህ የምትበስለው ምግብ ምንድን ነው?",
     "liar_question_en": "What meal do you pretend you can cook?",
+    "liar_question_am": "መብሰል እንደምትችል የምታሳይ ምግብ ምንድን ነው?",
     "category_id": "food",
     "content_level": "friends",
     "difficulty": "medium",
@@ -92,7 +112,9 @@
   {
     "id": "liar_addis_life_011",
     "main_question_en": "What is the most Addis thing about your week?",
+    "main_question_am": "በሳምንትህ ውስጥ በጣም «አዲስ አበባ» የሚስማማው ምንድን ነው?",
     "liar_question_en": "What Addis habit are you trying to quit?",
+    "liar_question_am": "ለመተው የምትሞክረው የአዲስ አበባ ልማድ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -101,7 +123,9 @@
   {
     "id": "liar_addis_life_012",
     "main_question_en": "Which café feels most like home?",
+    "main_question_am": "እንደ ቤት የሚሰማህ ካፌ የትኛው ነው?",
     "liar_question_en": "Which café is only good for the Wi‑Fi?",
+    "liar_question_am": "ለዋይፋይ ብቻ ጥሩ የሆነው ካፌ የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "easy",
@@ -110,7 +134,9 @@
   {
     "id": "liar_addis_life_013",
     "main_question_en": "What traffic trick do you swear by?",
+    "main_question_am": "በትራፊክ ላይ የምታምነው ዘዴ ምንድን ነው?",
     "liar_question_en": "What traffic excuse do you overuse?",
+    "liar_question_am": "ከመጠን በላይ የምትጠቀምበት የትራፊክ ምክንያት ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "friends",
     "difficulty": "medium",
@@ -119,7 +145,9 @@
   {
     "id": "liar_addis_life_014",
     "main_question_en": "Which neighborhood would you move to next?",
+    "main_question_am": "ቀጥሎ ወደ የትኛው ሰፈር መዛወር ትፈልጋለህ?",
     "liar_question_en": "Which neighborhood would you never live in?",
+    "liar_question_am": "በፍጹም የማትኖርበት ሰፈር የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -128,7 +156,9 @@
   {
     "id": "liar_addis_life_015",
     "main_question_en": "What is your favorite thing about living here?",
+    "main_question_am": "እዚህ መኖር የምትወደው ነገር ምንድን ነው?",
     "liar_question_en": "What about the city still surprises you badly?",
+    "liar_question_am": "ከከተማው አሁንም በመጥፎ የሚደንቅህ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -137,7 +167,9 @@
   {
     "id": "liar_addis_life_016",
     "main_question_en": "Where do you go when you need quiet?",
+    "main_question_am": "ጸጥታ ስትፈልግ ወዴት ትሄዳለህ?",
     "liar_question_en": "Where do you go when you need noise?",
+    "liar_question_am": "ድምጽ ስትፈልግ ወዴት ትሄዳለህ?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "easy",
@@ -146,7 +178,9 @@
   {
     "id": "liar_addis_life_017",
     "main_question_en": "Which market do you trust most?",
+    "main_question_am": "በጣም የምታምነው ገበያ የትኛው ነው?",
     "liar_question_en": "Which market do you only visit once?",
+    "liar_question_am": "አንድ ጊዜ ብቻ የምትሄድበት ገበያ የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -155,7 +189,9 @@
   {
     "id": "liar_addis_life_018",
     "main_question_en": "What app do you open first in Addis?",
+    "main_question_am": "በአዲስ አበባ መጀመሪያ የምትከፍተው መተግበሪያ ምንድን ነው?",
     "liar_question_en": "What app do you delete after every trip?",
+    "liar_question_am": "ከእያንዳንዱ ጉዞ በኋላ የምትሰርዘው መተግበሪያ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "friends",
     "difficulty": "easy",
@@ -164,7 +200,9 @@
   {
     "id": "liar_addis_life_019",
     "main_question_en": "Which local event would you never miss?",
+    "main_question_am": "በፍጹም የማትረሳው የአካባቢ ዝግጅት የትኛው ነው?",
     "liar_question_en": "Which local event do you always skip?",
+    "liar_question_am": "ሁልጊዜ የምትዘልለው የአካባቢ ዝግጅት የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -173,7 +211,9 @@
   {
     "id": "liar_addis_life_020",
     "main_question_en": "What is the best late-night plan in town?",
+    "main_question_am": "በከተማው ምሽት ላይ ምርጥ ዕቅድ ምንድን ነው?",
     "liar_question_en": "What late-night plan always goes wrong?",
+    "liar_question_am": "ሁልጊዜ የሚበላሽ የምሽት ዕቅድ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "friends",
     "difficulty": "medium",
@@ -182,7 +222,9 @@
   {
     "id": "liar_friends_021",
     "main_question_en": "Which friend would you call at 2 a.m.?",
+    "main_question_am": "ከሌሊት ሁለት ሰዓት የትኛውን ጓደኛ ትደውላለህ?",
     "liar_question_en": "Which friend would you avoid calling for advice?",
+    "liar_question_am": "ለምክር የማትደውልለት ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -191,7 +233,9 @@
   {
     "id": "liar_friends_022",
     "main_question_en": "What group chat are you most active in?",
+    "main_question_am": "በጣም ንቁ የሆንክበት የቡድን ቻት የትኛው ነው?",
     "liar_question_en": "What group chat do you mute the most?",
+    "liar_question_am": "ድምጹን በጣም የምታጠፋው የቡድን ቻት የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -200,7 +244,9 @@
   {
     "id": "liar_friends_023",
     "main_question_en": "Which friend makes you laugh hardest?",
+    "main_question_am": "በጣም የሚያስቅህ ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend makes every plan complicated?",
+    "liar_question_am": "እያንዳንዱን ዕቅድ የሚያወሳስበው ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -209,7 +255,9 @@
   {
     "id": "liar_friends_024",
     "main_question_en": "What trip with friends do you still talk about?",
+    "main_question_am": "ከጓደኞች ጋር አሁንም የምትናገርበት ጉዞ ምንድን ነው?",
     "liar_question_en": "What trip with friends would you never repeat?",
+    "liar_question_am": "ከጓደኞች ጋር በፍጹም እንደገና የማታደርገው ጉዞ ምንድን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -218,7 +266,9 @@
   {
     "id": "liar_friends_025",
     "main_question_en": "Who always shows up on time?",
+    "main_question_am": "ሁልጊዜ በሰዓቱ የሚመጣ ማን ነው?",
     "liar_question_en": "Who is always fashionably late?",
+    "liar_question_am": "ሁልጊዜ «በስታይል» የሚዘገይ ማን ነው?",
     "category_id": "friends",
     "content_level": "family",
     "difficulty": "easy",
@@ -227,7 +277,9 @@
   {
     "id": "liar_friends_026",
     "main_question_en": "What favor would you do for a friend without asking?",
+    "main_question_am": "ሳትጠየቅ ለጓደኛ የምታደርገው እርዳታ ምንድን ነው?",
     "liar_question_en": "What favor do you hate being asked for?",
+    "liar_question_am": "እንዲያደርጉልህ ሲጠይቁህ የምትጠላው እርዳታ ምንድን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -236,7 +288,9 @@
   {
     "id": "liar_friends_027",
     "main_question_en": "Which friend gives the best advice?",
+    "main_question_am": "ምርጥ ምክር የሚሰጥህ ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend gives advice you ignore?",
+    "liar_question_am": "የምትሳለው ምክር የሚሰጥ ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -245,7 +299,9 @@
   {
     "id": "liar_friends_028",
     "main_question_en": "What inside joke still makes you smile?",
+    "main_question_am": "አሁንም የሚያስቃቅቅህ የውስጥ ቀልድ ምንድን ነው?",
     "liar_question_en": "What inside joke needs to retire?",
+    "liar_question_am": "መቋረጥ ያለበት የውስጥ ቀልድ ምንድን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -254,7 +310,9 @@
   {
     "id": "liar_friends_029",
     "main_question_en": "Who would you trust with a secret?",
+    "main_question_am": "ምስጢር የምታምነው ማን ነው?",
     "liar_question_en": "Who finds out secrets somehow anyway?",
+    "liar_question_am": "በአንድ መንገድ ምስጢሮችን የሚያውቅ ማን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -263,7 +321,9 @@
   {
     "id": "liar_friends_030",
     "main_question_en": "What hangout is perfect for your crew?",
+    "main_question_am": "ለቡድንህ ፍጹም መዝናኛ የትኛው ነው?",
     "liar_question_en": "What hangout always ends too early?",
+    "liar_question_am": "ሁልጊዜ በጣም ቶሎ የሚያበቃ መዝናኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "family",
     "difficulty": "easy",
@@ -272,7 +332,9 @@
   {
     "id": "liar_school_and_university_031",
     "main_question_en": "What class did you actually enjoy?",
+    "main_question_am": "በእውነት የደሰተህ ክፍል የትኛው ነው?",
     "liar_question_en": "What class felt like a punishment?",
+    "liar_question_am": "እንደ ቅጣት የተሰማህ ክፍል የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "easy",
@@ -281,7 +343,9 @@
   {
     "id": "liar_school_and_university_032",
     "main_question_en": "Which subject are you secretly good at?",
+    "main_question_am": "በድብቅ የምታውቀው ትምህርት የትኛው ነው?",
     "liar_question_en": "Which subject do you pretend to understand?",
+    "liar_question_am": "እንደምትገባ የምታሳይ ትምህርት የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -290,7 +354,9 @@
   {
     "id": "liar_school_and_university_033",
     "main_question_en": "What campus habit stuck with you?",
+    "main_question_am": "ከካምፓስ የተጣበቀብህ ልማድ ምንድን ነው?",
     "liar_question_en": "What campus habit did you drop immediately?",
+    "liar_question_am": "አትክቦ የተውኸው የካምፓስ ልማድ ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "medium",
@@ -299,7 +365,9 @@
   {
     "id": "liar_school_and_university_034",
     "main_question_en": "Who was the most memorable teacher?",
+    "main_question_am": "በጣም የሚታወሰው መምህር ማን ነበር?",
     "liar_question_en": "Which teacher still lives rent-free in your head?",
+    "liar_question_am": "አሁንም ከአእምሮህ የማይወጣ መምህር የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -308,7 +376,9 @@
   {
     "id": "liar_school_and_university_035",
     "main_question_en": "What assignment are you proud of?",
+    "main_question_am": "በእሱ የምትኮራበት የቤት ስራ ምንድን ነው?",
     "liar_question_en": "What assignment did you barely finish?",
+    "liar_question_am": "በጭንቅ የጨረስኸው የቤት ስራ ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "easy",
@@ -317,7 +387,9 @@
   {
     "id": "liar_school_and_university_036",
     "main_question_en": "Where did you study best?",
+    "main_question_am": "በደንብ የምታጠናበት ቦታ የት ነበር?",
     "liar_question_en": "Where did you only pretend to study?",
+    "liar_question_am": "እንደምታጠና የምታሳይበት ቦታ የት ነበር?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "easy",
@@ -326,7 +398,9 @@
   {
     "id": "liar_school_and_university_037",
     "main_question_en": "What exam tip actually worked?",
+    "main_question_am": "በእውነት የሰራ የፈተና ምክር ምንድን ነው?",
     "liar_question_en": "What exam tip was total nonsense?",
+    "liar_question_am": "ሙሉ ትርጉም የለሽ የነበረ የፈተና ምክር ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "medium",
@@ -335,7 +409,9 @@
   {
     "id": "liar_school_and_university_038",
     "main_question_en": "Which club or team was worth it?",
+    "main_question_am": "የጠቀመ ክለብ ወይም ቡድን የትኛው ነው?",
     "liar_question_en": "Which club or team was a waste of time?",
+    "liar_question_am": "የጊዜ ብክነት የነበረ ክለብ ወይም ቡድን የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "medium",
@@ -344,7 +420,9 @@
   {
     "id": "liar_school_and_university_039",
     "main_question_en": "What would you tell your first-year self?",
+    "main_question_am": "ለአንደኛ ዓመት ራስህ ምን ትል ነበር?",
     "liar_question_en": "What did your first-year self get wrong?",
+    "liar_question_am": "የአንደኛ ዓመት ራስህ የተሳሳተው ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -353,7 +431,9 @@
   {
     "id": "liar_school_and_university_040",
     "main_question_en": "Which classmate would you team up with again?",
+    "main_question_am": "እንደገና ከእሱ ጋር ቡድን የምትፈጥር የክፍል ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which classmate made group work painful?",
+    "liar_question_am": "የቡድን ስራን ህመም ያደረገው የክፍል ጓደኛ የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -362,7 +442,9 @@
   {
     "id": "liar_family_041",
     "main_question_en": "What family meal means the most to you?",
+    "main_question_am": "በጣም ትርጉም ያለው የቤተሰብ ምግብ ምንድን ነው?",
     "liar_question_en": "What family meal do you quietly skip?",
+    "liar_question_am": "በጸጥታ የምትዘልለው የቤተሰብ ምግብ ምንድን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "easy",
@@ -371,7 +453,9 @@
   {
     "id": "liar_family_042",
     "main_question_en": "Which relative gives the best advice?",
+    "main_question_am": "ምርጥ ምክር የሚሰጥ ዘመድ የትኛው ነው?",
     "liar_question_en": "Which relative always has a story ready?",
+    "liar_question_am": "ሁልጊዜ ታሪክ ዝግጁ ያለው ዘመድ የትኛው ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "medium",
@@ -380,7 +464,9 @@
   {
     "id": "liar_family_043",
     "main_question_en": "What family tradition would you keep forever?",
+    "main_question_am": "ለዘላለም የምትይዘው የቤተሰብ ልማድ ምንድን ነው?",
     "liar_question_en": "What family tradition feels outdated?",
+    "liar_question_am": "ያረጀ የሚሰማህ የቤተሰብ ልማድ ምንድን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "medium",
@@ -389,7 +475,9 @@
   {
     "id": "liar_family_044",
     "main_question_en": "Who in the family is the peacemaker?",
+    "main_question_am": "በቤተሰብ ውስጥ አስተካካይ ማን ነው?",
     "liar_question_en": "Who in the family starts the debates?",
+    "liar_question_am": "በቤተሰብ ውስጥ ክርክር የሚጀምር ማን ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -398,7 +486,9 @@
   {
     "id": "liar_family_045",
     "main_question_en": "What chore did you always get stuck with?",
+    "main_question_am": "ሁልጊዜ የሚገባህ ስራ ምን ነበር?",
     "liar_question_en": "What chore did you somehow avoid?",
+    "liar_question_am": "በአንድ መንገድ ያመለጥከው ስራ ምን ነበር?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "easy",
@@ -407,7 +497,9 @@
   {
     "id": "liar_family_046",
     "main_question_en": "Which childhood rule still makes sense?",
+    "main_question_am": "አሁንም ትርጉም ያለው የልጅነት ደንብ የትኛው ነው?",
     "liar_question_en": "Which childhood rule was ridiculous?",
+    "liar_question_am": "ሙሉ አስቂኝ የነበረ የልጅነት ደንብ የትኛው ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -416,7 +508,9 @@
   {
     "id": "liar_family_047",
     "main_question_en": "What do you borrow from family most?",
+    "main_question_am": "ከቤተሰብ በጣም የምትበደረው ምንድን ነው?",
     "liar_question_en": "What do you never lend to family?",
+    "liar_question_am": "ለቤተሰብ በፍጹም የማትሰጥ ምንድን ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -425,7 +519,9 @@
   {
     "id": "liar_family_048",
     "main_question_en": "Who plans the gatherings?",
+    "main_question_am": "ስብሰባዎችን የሚያቅድ ማን ነው?",
     "liar_question_en": "Who arrives last to gatherings?",
+    "liar_question_am": "ወደ ስብሰባዎች መጨረሻ የሚደርስ ማን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "easy",
@@ -434,7 +530,9 @@
   {
     "id": "liar_family_049",
     "main_question_en": "What family compliment stuck with you?",
+    "main_question_am": "የተጣበቀብህ የቤተሰብ ምስጋና ምንድን ነው?",
     "liar_question_en": "What family comment still makes you roll your eyes?",
+    "liar_question_am": "አሁንም ዓይንህን የሚያንከባልል የቤተሰብ አስተያየት ምንድን ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -443,7 +541,9 @@
   {
     "id": "liar_family_050",
     "main_question_en": "Which relative would you travel with?",
+    "main_question_am": "ከእሱ ጋር መጓዝ የምትፈልገው ዘመድ የትኛው ነው?",
     "liar_question_en": "Which relative turns every trip into chaos?",
+    "liar_question_am": "እያንዳንዱን ጉዞ ወደ ቀስቀሳ የሚቀይር ዘመድ የትኛው ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -452,7 +552,9 @@
   {
     "id": "liar_music_and_entertainment_051",
     "main_question_en": "What song can you listen to on repeat?",
+    "main_question_am": "በተደጋጋሚ ማዳመጥ የምትችለው ዘፈን ምንድን ነው?",
     "liar_question_en": "What song do you skip the second it starts?",
+    "liar_question_am": "እንደጀመረ ወዲያው የምታቆምበት ዘፈን ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -461,7 +563,9 @@
   {
     "id": "liar_music_and_entertainment_052",
     "main_question_en": "Which artist would you see live tomorrow?",
+    "main_question_am": "ነገ ቀጥታ መድረክ ላይ የምታየው አርቲስት የትኛው ነው?",
     "liar_question_en": "Which popular artist do you not get the hype for?",
+    "liar_question_am": "ሃይፑን የማትረዳው ታዋቂ አርቲስት የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "medium",
@@ -470,7 +574,9 @@
   {
     "id": "liar_music_and_entertainment_053",
     "main_question_en": "What movie could you quote from memory?",
+    "main_question_am": "ከማስታወስ የምትጠቅሰው ፊልም ምንድን ነው?",
     "liar_question_en": "What movie do people love that bored you?",
+    "liar_question_am": "ሰዎች የሚወዱት አንተን ያስተኛ ፊልም ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -479,7 +585,9 @@
   {
     "id": "liar_music_and_entertainment_054",
     "main_question_en": "Which show do you recommend to everyone?",
+    "main_question_am": "ለሁሉም የምትመክረው ትርዒት የትኛው ነው?",
     "liar_question_en": "Which show did you quit halfway?",
+    "liar_question_am": "ግማሽ መንገድ ያቆምክበት ትርዒት የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "easy",
@@ -488,7 +596,9 @@
   {
     "id": "liar_music_and_entertainment_055",
     "main_question_en": "What playlist fits a rainy afternoon?",
+    "main_question_am": "ከዝናብ ከሰዓት ጋር የሚስማማ ፕሌይሊስት ምንድን ነው?",
     "liar_question_en": "What playlist only works at the gym?",
+    "liar_question_am": "በጂም ብቻ የሚሰራ ፕሌይሊስት ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "medium",
@@ -497,7 +607,9 @@
   {
     "id": "liar_music_and_entertainment_056",
     "main_question_en": "Which comedian always lands for you?",
+    "main_question_am": "ሁልጊዜ የሚሳቅህ አስቂኝ አቅራቢ የትኛው ነው?",
     "liar_question_en": "Which comedian never lands for you?",
+    "liar_question_am": "በፍጹም የማይሳቅህ አስቂኝ አቅራቢ የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "medium",
@@ -506,7 +618,9 @@
   {
     "id": "liar_music_and_entertainment_057",
     "main_question_en": "What game do you still play?",
+    "main_question_am": "አሁንም የምትጫወተው ጨዋታ ምንድን ነው?",
     "liar_question_en": "What game did you uninstall forever?",
+    "liar_question_am": "ለዘላለም የሰረዝከው ጨዋታ ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -515,7 +629,9 @@
   {
     "id": "liar_music_and_entertainment_058",
     "main_question_en": "Which concert memory is your favorite?",
+    "main_question_am": "የምትወደው የኮንሰርት ትውስታ የትኛው ነው?",
     "liar_question_en": "Which concert was not worth the ticket?",
+    "liar_question_am": "ቲኬቱ የማይቆይለት ኮንሰርት የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "medium",
@@ -524,7 +640,9 @@
   {
     "id": "liar_music_and_entertainment_059",
     "main_question_en": "What podcast topic pulls you in?",
+    "main_question_am": "ወደ ውስጥ የሚስብህ የፖድካስት ርዕስ ምንድን ነው?",
     "liar_question_en": "What podcast topic makes you change the station?",
+    "liar_question_am": "ጣቢያ እንድትቀይር የሚያደርግህ የፖድካስት ርዕስ ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "medium",
@@ -533,7 +651,9 @@
   {
     "id": "liar_music_and_entertainment_060",
     "main_question_en": "Which fictional character are you most like?",
+    "main_question_am": "በጣም የሚመስልህ ልቦለዳዊ ገጸ ባህሪ የትኛው ነው?",
     "liar_question_en": "Which fictional character annoyingly reminds people of you?",
+    "liar_question_am": "ሰዎችን በሚያበሳጭ መንገድ አንተን የሚያስታውሳቸው ልቦለዳዊ ገጸ ባህሪ የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "medium",
@@ -542,7 +662,9 @@
   {
     "id": "liar_travel_061",
     "main_question_en": "Where in Ethiopia would you go next?",
+    "main_question_am": "በኢትዮጵያ ቀጥሎ ወዴት ትሄዳለህ?",
     "liar_question_en": "Where would you skip on a road trip?",
+    "liar_question_am": "በመንገድ ጉዞ የትኛውን ቦታ ትዘልላለህ?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "easy",
@@ -551,7 +673,9 @@
   {
     "id": "liar_travel_062",
     "main_question_en": "What is packing essential number one?",
+    "main_question_am": "የአንደኛ ቁጥር የመያዣ አስፈላጊ ነገር ምንድን ነው?",
     "liar_question_en": "What do you always overpack?",
+    "liar_question_am": "ሁልጊዜ ከመጠን በላይ የምታከማች ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "easy",
@@ -560,7 +684,9 @@
   {
     "id": "liar_travel_063",
     "main_question_en": "Which trip changed how you see home?",
+    "main_question_am": "ቤትን እንዴት እንደምታይ የቀየረ ጉዞ የትኛው ነው?",
     "liar_question_en": "Which trip was mostly for the photos?",
+    "liar_question_am": "በአብዛኛው ለፎቶዎች የነበረ ጉዞ የትኛው ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "medium",
@@ -569,7 +695,9 @@
   {
     "id": "liar_travel_064",
     "main_question_en": "What is the best souvenir you ever brought back?",
+    "main_question_am": "እስካሁን ያመጣኸው ምርጥ መታሰቢያ ምንድን ነው?",
     "liar_question_en": "What souvenir was a total mistake?",
+    "liar_question_am": "ሙሉ ስህተት የነበረ መታሰቢያ ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -578,7 +706,9 @@
   {
     "id": "liar_travel_065",
     "main_question_en": "Which city felt easiest to navigate?",
+    "main_question_am": "ለመራመድ ቀላል የተሰማችህ ከተማ የትኛው ነው?",
     "liar_question_en": "Which city confused you the most?",
+    "liar_question_am": "በጣም ያደናገረችህ ከተማ የትኛው ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -587,7 +717,9 @@
   {
     "id": "liar_travel_066",
     "main_question_en": "Window seat or aisle — what do you fight for?",
+    "main_question_am": "የመስኮት ወንበር ወይስ መተላለፊያ — ለየትኛው ትታገላለህ?",
     "liar_question_en": "What airport habit slows everyone down?",
+    "liar_question_am": "ሁሉንም የሚያዘገይ የአውሮፕላን ማረፊያ ልማድ ምንድን ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "easy",
@@ -596,7 +728,9 @@
   {
     "id": "liar_travel_067",
     "main_question_en": "What travel food do you look forward to?",
+    "main_question_am": "በጉዞ የምትጠብቀው ምግብ ምንድን ነው?",
     "liar_question_en": "What travel food do you regret trying?",
+    "liar_question_am": "ሞከርክ እና የተጸየፍከው የጉዞ ምግብ ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "easy",
@@ -605,7 +739,9 @@
   {
     "id": "liar_travel_068",
     "main_question_en": "Who is your ideal travel buddy?",
+    "main_question_am": "ፍጹም የጉዞ አጋርህ ማን ነው?",
     "liar_question_en": "Who turns travel into a schedule war?",
+    "liar_question_am": "ጉዞን ወደ የጊዜ ሰሌዳ ጦርነት የሚቀይር ማን ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "medium",
@@ -614,7 +750,9 @@
   {
     "id": "liar_travel_069",
     "main_question_en": "What landmark lived up to the hype?",
+    "main_question_am": "ሃይፑን የተሸለመ ታዋቂ ቦታ ምንድን ነው?",
     "liar_question_en": "What landmark was underwhelming?",
+    "liar_question_am": "በጣም ያሳዘነ ታዋቂ ቦታ ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -623,7 +761,9 @@
   {
     "id": "liar_travel_070",
     "main_question_en": "Which language phrase saved you abroad?",
+    "main_question_am": "በውጭ አገር ያተረፈህ የቋንቋ ሐረግ የትኛው ነው?",
     "liar_question_en": "Which language mix-up embarrassed you?",
+    "liar_question_am": "ያሳፈረህ የቋንቋ ግራ መጋባት ምንድን ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "medium",
@@ -632,7 +772,9 @@
   {
     "id": "liar_relationships_071",
     "main_question_en": "What first date idea actually works?",
+    "main_question_am": "በእውነት የሚሰራ የመጀመሪያ ቀን ዕቅድ ምንድን ነው?",
     "liar_question_en": "What first date idea is a red flag?",
+    "liar_question_am": "ቀይ ምልክት የሆነ የመጀመሪያ ቀን ዕቅድ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -641,7 +783,9 @@
   {
     "id": "liar_relationships_072",
     "main_question_en": "What quality do you notice first in someone?",
+    "main_question_am": "በአንድ ሰው መጀመሪያ የምታስተውለው ባህሪ ምንድን ነው?",
     "liar_question_en": "What quality do you pretend not to care about?",
+    "liar_question_am": "እንደማትጨነቅ የምታሳይ ባህሪ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -650,7 +794,9 @@
   {
     "id": "liar_relationships_073",
     "main_question_en": "What love language do you speak most?",
+    "main_question_am": "በጣም የምትናገረው የፍቅር ቋንቋ ምንድን ነው?",
     "liar_question_en": "What love language do you struggle to receive?",
+    "liar_question_am": "ለመቀበል የሚከብድህ የፍቅር ቋንቋ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -659,7 +805,9 @@
   {
     "id": "liar_relationships_074",
     "main_question_en": "What anniversary plan would impress you?",
+    "main_question_am": "የሚያደንቅህ የአመታዊ በዓል ዕቅድ ምንድን ነው?",
     "liar_question_en": "What anniversary plan feels try-hard?",
+    "liar_question_am": "ከመጠን በላይ ጥረት የሚያሳይ የአመታዊ በዓል ዕቅድ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -668,7 +816,9 @@
   {
     "id": "liar_relationships_075",
     "main_question_en": "What texting habit is a green flag?",
+    "main_question_am": "አረንጓዴ ምልክት የሆነ የመልእክት ልማድ ምንድን ነው?",
     "liar_question_en": "What texting habit drives you crazy?",
+    "liar_question_am": "እጅግ የሚያበሳጭህ የመልእክት ልማድ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "easy",
@@ -677,7 +827,9 @@
   {
     "id": "liar_relationships_076",
     "main_question_en": "Which couple activity do you enjoy?",
+    "main_question_am": "የምትወደው የጥንድ እንቅስቃሴ የትኛው ነው?",
     "liar_question_en": "Which couple activity do you endure?",
+    "liar_question_am": "በትዕግስት የምታልፈው የጥንድ እንቅስቃሴ የትኛው ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -686,7 +838,9 @@
   {
     "id": "liar_relationships_077",
     "main_question_en": "What apology actually lands with you?",
+    "main_question_am": "በእውነት የሚደርስብህ ይቅርታ ምንድን ነው?",
     "liar_question_en": "What apology feels empty?",
+    "liar_question_am": "ባዶ የሚሰማህ ይቅርታ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -695,7 +849,9 @@
   {
     "id": "liar_relationships_078",
     "main_question_en": "What flirty move is charming?",
+    "main_question_am": "ማራኪ የሆነ የፍቅር ጨዋታ ምንድን ነው?",
     "liar_question_en": "What flirty move is cringe?",
+    "liar_question_am": "አሳፋሪ የሆነ የፍቅር ጨዋታ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -704,7 +860,9 @@
   {
     "id": "liar_relationships_079",
     "main_question_en": "What relationship boundary matters most?",
+    "main_question_am": "በጣም አስፈላጊ የሆነ የግንኙነት ድንበር ምንድን ነው?",
     "liar_question_en": "What boundary do people ignore too often?",
+    "liar_question_am": "ሰዎች ብዙ ጊዜ የሚተዉት ድንበር ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "hard",
@@ -713,7 +871,9 @@
   {
     "id": "liar_relationships_080",
     "main_question_en": "What gift says someone knows you?",
+    "main_question_am": "ሰው እንደሚያውቅህ የሚያሳይ ስጦታ ምንድን ነው?",
     "liar_question_en": "What gift is thoughtful but wrong for you?",
+    "liar_question_am": "አሳቢ ግን ለአንተ የተሳሳተ ስጦታ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -722,7 +882,9 @@
   {
     "id": "liar_everyday_preferences_081",
     "main_question_en": "Morning person or night owl — which are you?",
+    "main_question_am": "የጠዋት ሰው ወይስ የሌሊት ጉጉት — አንተ የትኛው ነህ?",
     "liar_question_en": "Which schedule do you fake for work?",
+    "liar_question_am": "ለስራ የምታስመስለው የጊዜ ሰሌዳ የትኛው ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -731,7 +893,9 @@
   {
     "id": "liar_everyday_preferences_082",
     "main_question_en": "What app do you open without thinking?",
+    "main_question_am": "ያለ ማሰብ የምትከፍተው መተግበሪያ ምንድን ነው?",
     "liar_question_en": "What app do you keep meaning to delete?",
+    "liar_question_am": "ሁልጊዜ ለመሰረዝ የምታስበው መተግበሪያ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -740,7 +904,9 @@
   {
     "id": "liar_everyday_preferences_083",
     "main_question_en": "Hot shower or cold — what resets you?",
+    "main_question_am": "ትኩስ ገላ መታጠብ ወይስ ቀዝቃዛ — ምን እንደገና ያስጀምርሃል?",
     "liar_question_en": "What small comfort do you refuse to share?",
+    "liar_question_am": "ለማጋራት የምትከለከለው ትንሽ ምቾት ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -749,7 +915,9 @@
   {
     "id": "liar_everyday_preferences_084",
     "main_question_en": "What chore do you oddly enjoy?",
+    "main_question_am": "በተለየ መልኩ የምትወደው ስራ ምንድን ነው?",
     "liar_question_en": "What chore do you postpone the longest?",
+    "liar_question_am": "በጣም ረጅም ጊዜ የምታራዝመው ስራ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -758,7 +926,9 @@
   {
     "id": "liar_everyday_preferences_085",
     "main_question_en": "Which color shows up most in your wardrobe?",
+    "main_question_am": "በልብስ ልብስዎ ውስጥ በጣም የሚታየው ቀለም የትኛው ነው?",
     "liar_question_en": "Which trend will you never try?",
+    "liar_question_am": "በፍጹም የማትሞክረው አዝማሚያ የትኛው ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -767,7 +937,9 @@
   {
     "id": "liar_everyday_preferences_086",
     "main_question_en": "What time do you feel most productive?",
+    "main_question_am": "በጣም ምርታማ የምትሰማበት ሰዓት መቼ ነው?",
     "liar_question_en": "What time of day is a write-off for you?",
+    "liar_question_am": "ለአንተ የጠፋ የቀን ጊዜ መቼ ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "medium",
@@ -776,7 +948,9 @@
   {
     "id": "liar_everyday_preferences_087",
     "main_question_en": "Coffee order that defines you?",
+    "main_question_am": "አንተን የሚገልጽ የቡና ትዕዛዝ ምንድን ነው?",
     "liar_question_en": "Drink order you only get when someone else pays?",
+    "liar_question_am": "ሌላ ሰው ሲከፍል ብቻ የምታዝዘው መጠጥ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "friends",
     "difficulty": "easy",
@@ -785,7 +959,9 @@
   {
     "id": "liar_everyday_preferences_088",
     "main_question_en": "What notification do you answer first?",
+    "main_question_am": "መጀመሪያ የምትመልስበት ማሳወቂያ ምንድን ነው?",
     "liar_question_en": "What notification do you ignore on purpose?",
+    "liar_question_am": "በአላማ የምትሳለው ማሳወቂያ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "friends",
     "difficulty": "easy",
@@ -794,7 +970,9 @@
   {
     "id": "liar_everyday_preferences_089",
     "main_question_en": "Which weather makes your mood better?",
+    "main_question_am": "ስሜትህን የሚያሻሽል የአየር ሁኔታ የትኛው ነው?",
     "liar_question_en": "Which weather ruins your plans every time?",
+    "liar_question_am": "ሁልጊዜ ዕቅዶችህን የሚያበላሽ የአየር ሁኔታ የትኛው ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -803,7 +981,9 @@
   {
     "id": "liar_everyday_preferences_090",
     "main_question_en": "What small luxury is worth the money?",
+    "main_question_am": "ገንዘቡ የሚያስቆይ ትንሽ የቅንጦት ነገር ምንድን ነው?",
     "liar_question_en": "What “luxury” purchase was a waste?",
+    "liar_question_am": "ብክነት የነበረ «የቅንጦት» ግዢ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "friends",
     "difficulty": "medium",
@@ -812,7 +992,9 @@
   {
     "id": "liar_food_091",
     "main_question_en": "What do you order when you're really hungry?",
+    "main_question_am": "በእውነት ስራብህ ምን ታዝዛለህ?",
     "liar_question_en": "What do you order when you're barely hungry?",
+    "liar_question_am": "በጭራሽ ሳትራብ ምን ታዝዛለህ?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -821,7 +1003,9 @@
   {
     "id": "liar_food_092",
     "main_question_en": "Which dish is worth the wait?",
+    "main_question_am": "መጠበቅ የሚያስቆይ ምግብ የትኛው ነው?",
     "liar_question_en": "Which dish is never worth the price?",
+    "liar_question_am": "ዋጋው በፍጹም የማይቆይ ምግብ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -830,7 +1014,9 @@
   {
     "id": "liar_food_093",
     "main_question_en": "What do you always add to your plate?",
+    "main_question_am": "ሁልጊዜ ወደ ሳህንህ የምታክለው ምንድን ነው?",
     "liar_question_en": "What do you always push to the side?",
+    "liar_question_am": "ሁልጊዜ ወደ ጎን የምትገፋው ምንድን ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -839,7 +1025,9 @@
   {
     "id": "liar_food_094",
     "main_question_en": "Which drink do you make for guests?",
+    "main_question_am": "ለእንግዶች የምትሠራው መጠጥ የትኛው ነው?",
     "liar_question_en": "Which drink do you only make for yourself?",
+    "liar_question_am": "ለራስህ ብቻ የምትሠራው መጠጥ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "easy",
@@ -848,7 +1036,9 @@
   {
     "id": "liar_food_095",
     "main_question_en": "What food reminds you of home?",
+    "main_question_am": "ቤትህን የሚያስታውስ ምግብ ምንድን ነው?",
     "liar_question_en": "What food reminds you of a bad week?",
+    "liar_question_am": "መጥፎ ሳምንት የሚያስታውስ ምግብ ምንድን ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -857,7 +1047,9 @@
   {
     "id": "liar_food_096",
     "main_question_en": "Which fasting dish do you look forward to?",
+    "main_question_am": "የምትጠብቀው የጾም ምግብ የትኛው ነው?",
     "liar_question_en": "Which fasting dish do you just tolerate?",
+    "liar_question_am": "በትዕግስት ብቻ የምታልፈው የጾም ምግብ የትኛው ነው?",
     "category_id": "food",
     "content_level": "family",
     "difficulty": "medium",
@@ -866,7 +1058,9 @@
   {
     "id": "liar_food_097",
     "main_question_en": "What would you cook to impress someone?",
+    "main_question_am": "ሰውን ለማደናቀቅ የምትበስለው ምንድን ነው?",
     "liar_question_en": "What do you cook when nobody is watching?",
+    "liar_question_am": "ማንም ሳያይ የምትበስለው ምንድን ነው?",
     "category_id": "food",
     "content_level": "friends",
     "difficulty": "medium",
@@ -875,7 +1069,9 @@
   {
     "id": "liar_addis_life_098",
     "main_question_en": "Which part of the city would you show a visitor?",
+    "main_question_am": "እንግዳን የትኛውን የከተማ ክፍል ታሳያለህ?",
     "liar_question_en": "Which part would you warn them about?",
+    "liar_question_am": "ስለ የትኛው ክፍል ትጠነቀቃለህ?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -884,7 +1080,9 @@
   {
     "id": "liar_addis_life_099",
     "main_question_en": "What is worth sitting in traffic for?",
+    "main_question_am": "ትራፊክ ላይ መቀመጥ የሚያስቆይ ምንድን ነው?",
     "liar_question_en": "What is never worth the traffic?",
+    "liar_question_am": "በፍጹም ትራፊኩ የማያስቆይ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "easy",
@@ -893,7 +1091,9 @@
   {
     "id": "liar_addis_life_100",
     "main_question_en": "Which route do you know by heart?",
+    "main_question_am": "በልብ የምታውቀው መስመር የትኛው ነው?",
     "liar_question_en": "Which route do you dread?",
+    "liar_question_am": "የምትፈራው መስመር የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "easy",
@@ -902,7 +1102,9 @@
   {
     "id": "liar_addis_life_101",
     "main_question_en": "Where do you go to think?",
+    "main_question_am": "ለማሰብ ወዴት ትሄዳለህ?",
     "liar_question_en": "Where do you go to be seen?",
+    "liar_question_am": "እንድትታይ ወዴት ትሄዳለህ?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "medium",
@@ -911,7 +1113,9 @@
   {
     "id": "liar_addis_life_102",
     "main_question_en": "What sound tells you you're home?",
+    "main_question_am": "ቤት እንደሆንክ የሚነግርህ ድምጽ ምንድን ነው?",
     "liar_question_en": "What sound wakes you up too early?",
+    "liar_question_am": "ከጊዜ በፊት የሚያነቃህ ድምጽ ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "family",
     "difficulty": "easy",
@@ -920,7 +1124,9 @@
   {
     "id": "liar_addis_life_103",
     "main_question_en": "Which neighbourhood would you move to?",
+    "main_question_am": "ወደ የትኛው ሰፈር መዛወር ትፈልጋለህ?",
     "liar_question_en": "Which neighbourhood is overrated?",
+    "liar_question_am": "ከእውነት በላይ የሚነገርለት ሰፈር የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "friends",
     "difficulty": "medium",
@@ -929,7 +1135,9 @@
   {
     "id": "liar_addis_life_104",
     "main_question_en": "What do you always budget for?",
+    "main_question_am": "ሁልጊዜ በጀት የምታደርግለት ምንድን ነው?",
     "liar_question_en": "What do you always overspend on?",
+    "liar_question_am": "ሁልጊዜ ከመጠን በላይ የምትወጣበት ምንድን ነው?",
     "category_id": "addis_life",
     "content_level": "friends",
     "difficulty": "medium",
@@ -938,7 +1146,9 @@
   {
     "id": "liar_friends_105",
     "main_question_en": "Which friend keeps the group together?",
+    "main_question_am": "ቡድኑን አንድ ላይ የሚያቆይ ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend disappears for months?",
+    "liar_question_am": "ለወራት የሚጠፋ ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -947,7 +1157,9 @@
   {
     "id": "liar_friends_106",
     "main_question_en": "Who tells the best stories?",
+    "main_question_am": "ምርጥ ታሪኮችን የሚናገር ማን ነው?",
     "liar_question_en": "Who exaggerates the most?",
+    "liar_question_am": "በጣም የሚያጋንን ማን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -956,7 +1168,9 @@
   {
     "id": "liar_friends_107",
     "main_question_en": "Which friend would you travel with?",
+    "main_question_am": "ከእሱ ጋር መጓዝ የምትፈልገው ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend would you never share a room with?",
+    "liar_question_am": "ክፍል በፍጹም የማታጋራው ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -965,7 +1179,9 @@
   {
     "id": "liar_friends_108",
     "main_question_en": "Who gives the most honest opinion?",
+    "main_question_am": "በጣም ታማኝ አስተያየት የሚሰጥ ማን ነው?",
     "liar_question_en": "Who agrees with everyone?",
+    "liar_question_am": "ከሁሉም ጋር የሚስማማ ማን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -974,7 +1190,9 @@
   {
     "id": "liar_friends_109",
     "main_question_en": "Which friend always arrives first?",
+    "main_question_am": "ሁልጊዜ መጀመሪያ የሚደርስ ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend is always late?",
+    "liar_question_am": "ሁልጊዜ የሚዘገይ ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -983,7 +1201,9 @@
   {
     "id": "liar_friends_110",
     "main_question_en": "Who would you lend money to?",
+    "main_question_am": "ገንዘብ የምትበድረው ማን ነው?",
     "liar_question_en": "Who still owes you money?",
+    "liar_question_am": "አሁንም ዕዳ ያለበት ማን ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "medium",
@@ -992,7 +1212,9 @@
   {
     "id": "liar_friends_111",
     "main_question_en": "Which friend actually makes the plans?",
+    "main_question_am": "በእውነት ዕቅዶችን የሚያዘጋጅ ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend cancels at the last minute?",
+    "liar_question_am": "በመጨረሻ ደቂቃ የሚሰርዝ ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "friends",
     "difficulty": "easy",
@@ -1001,7 +1223,9 @@
   {
     "id": "liar_school_and_university_112",
     "main_question_en": "What did you always do the night before an exam?",
+    "main_question_am": "ከፈተና በፊት ምሽት ሁልጊዜ ምን ታደርግ ነበር?",
     "liar_question_en": "What did you promise to do and never did?",
+    "liar_question_am": "ለማድረግ ቃል ገብተህ ያላደረግከው ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "easy",
@@ -1010,7 +1234,9 @@
   {
     "id": "liar_school_and_university_113",
     "main_question_en": "Which teacher changed how you think?",
+    "main_question_am": "አሳብህን የቀየረ መምህር የትኛው ነው?",
     "liar_question_en": "Which teacher did everyone avoid?",
+    "liar_question_am": "ሁሉም የሚርቀው መምህር የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "medium",
@@ -1019,7 +1245,9 @@
   {
     "id": "liar_school_and_university_114",
     "main_question_en": "Where did you actually study?",
+    "main_question_am": "በእውነት የት አጠናህ?",
     "liar_question_en": "Where did you pretend to study?",
+    "liar_question_am": "እንደምታጠና የት አሳይክ?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "easy",
@@ -1028,7 +1256,9 @@
   {
     "id": "liar_school_and_university_115",
     "main_question_en": "What was the best part of campus?",
+    "main_question_am": "የካምፓስ ምርጥ ክፍል ምን ነበር?",
     "liar_question_en": "What was the worst part of campus?",
+    "liar_question_am": "የካምፓስ መጥፎ ክፍል ምን ነበር?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "easy",
@@ -1037,7 +1267,9 @@
   {
     "id": "liar_school_and_university_116",
     "main_question_en": "Which group project went well?",
+    "main_question_am": "በደንብ የሰራ የቡድን ፕሮጀክት የትኛው ነው?",
     "liar_question_en": "Which group project did you carry alone?",
+    "liar_question_am": "ብቻህን የተሸከምከው የቡድን ፕሮጀክት የትኛው ነው?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1046,7 +1278,9 @@
   {
     "id": "liar_school_and_university_117",
     "main_question_en": "What subject would you study again?",
+    "main_question_am": "እንደገና የምታጠናው ትምህርት ምንድን ነው?",
     "liar_question_en": "What subject would you drop today?",
+    "liar_question_am": "ዛሬ የምትተው ትምህርት ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "family",
     "difficulty": "medium",
@@ -1055,7 +1289,9 @@
   {
     "id": "liar_school_and_university_118",
     "main_question_en": "What did you spend your allowance on?",
+    "main_question_am": "የአበል ገንዘብህን በምን አውጥተሃል?",
     "liar_question_en": "What did you say you spent it on?",
+    "liar_question_am": "በምን እንዳውጣህ ነው የምትል?",
     "category_id": "school_and_university",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1064,7 +1300,9 @@
   {
     "id": "liar_family_119",
     "main_question_en": "Who actually runs the house?",
+    "main_question_am": "በእውነት ቤቱን የሚያካሄድ ማን ነው?",
     "liar_question_en": "Who thinks they run the house?",
+    "liar_question_am": "ቤቱን እንደሚያካሄድ የሚያስብ ማን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "medium",
@@ -1073,7 +1311,9 @@
   {
     "id": "liar_family_120",
     "main_question_en": "What tradition would you keep forever?",
+    "main_question_am": "ለዘላለም የምትይዘው ልማድ ምንድን ነው?",
     "liar_question_en": "What tradition do you quietly skip?",
+    "liar_question_am": "በጸጥታ የምትዘልለው ልማድ ምንድን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "medium",
@@ -1082,7 +1322,9 @@
   {
     "id": "liar_family_121",
     "main_question_en": "Which relative calls the most?",
+    "main_question_am": "በጣም የሚደውል ዘመድ የትኛው ነው?",
     "liar_question_en": "Which relative never picks up?",
+    "liar_question_am": "በፍጹም ስልኩን የማያነሳ ዘመድ የትኛው ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "easy",
@@ -1091,7 +1333,9 @@
   {
     "id": "liar_family_122",
     "main_question_en": "Who is the best cook in the family?",
+    "main_question_am": "በቤተሰብ ውስጥ ምርጥ ምግብ ሰሪ ማን ነው?",
     "liar_question_en": "Who thinks they are the best cook?",
+    "liar_question_am": "ምርጥ ምግብ ሰሪ እንደሆነ የሚያስብ ማን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "medium",
@@ -1100,7 +1344,9 @@
   {
     "id": "liar_family_123",
     "main_question_en": "What do gatherings always run out of?",
+    "main_question_am": "ስብሰባዎች ሁልጊዜ የሚያልቅባቸው ምንድን ነው?",
     "liar_question_en": "What is always left over?",
+    "liar_question_am": "ሁልጊዜ የሚቀር ምንድን ነው?",
     "category_id": "family",
     "content_level": "family",
     "difficulty": "easy",
@@ -1109,7 +1355,9 @@
   {
     "id": "liar_family_124",
     "main_question_en": "Which sibling got away with more?",
+    "main_question_am": "በጣም ያመለጠ ወንድም/እህት የትኛው ነው?",
     "liar_question_en": "Which sibling got blamed for everything?",
+    "liar_question_am": "ለሁሉም የተወቀሰ ወንድም/እህት የትኛው ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1118,7 +1366,9 @@
   {
     "id": "liar_family_125",
     "main_question_en": "What advice from home do you still follow?",
+    "main_question_am": "ከቤት አሁንም የምትከተለው ምክር ምንድን ነው?",
     "liar_question_en": "What advice do you nod at and ignore?",
+    "liar_question_am": "እንደምትቀበል አሳይተህ የምትሳለው ምክር ምንድን ነው?",
     "category_id": "family",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1127,7 +1377,9 @@
   {
     "id": "liar_music_and_entertainment_126",
     "main_question_en": "What song gets everyone dancing?",
+    "main_question_am": "ሁሉንም የሚያድንስ ዘፈን ምንድን ነው?",
     "liar_question_en": "What song clears the room?",
+    "liar_question_am": "ክፍሉን የሚያጸዳ ዘፈን ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -1136,7 +1388,9 @@
   {
     "id": "liar_music_and_entertainment_127",
     "main_question_en": "Which film could you rewatch forever?",
+    "main_question_am": "ለዘላለም እንደገና ማየት የምትችለው ፊልም የትኛው ነው?",
     "liar_question_en": "Which film did you never finish?",
+    "liar_question_am": "በፍጹም ያላጠናቀቅከው ፊልም የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -1145,7 +1399,9 @@
   {
     "id": "liar_music_and_entertainment_128",
     "main_question_en": "What do you listen to while working?",
+    "main_question_am": "ስትሰራ ምን ትሰማለህ?",
     "liar_question_en": "What do you listen to when nobody is around?",
+    "liar_question_am": "ማንም በሌለ ጊዜ ምን ትሰማለህ?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "medium",
@@ -1154,7 +1410,9 @@
   {
     "id": "liar_music_and_entertainment_129",
     "main_question_en": "Which show did everyone tell you to watch?",
+    "main_question_am": "ሁሉም እንድታይ የነገረህ ትርዒት የትኛው ነው?",
     "liar_question_en": "Which show did you pretend to have watched?",
+    "liar_question_am": "እንደታየህ የምታሳይ ትርዒት የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1163,7 +1421,9 @@
   {
     "id": "liar_music_and_entertainment_130",
     "main_question_en": "What is your go-to karaoke song?",
+    "main_question_am": "የምትወደው የካራኦኬ ዘፈን ምንድን ነው?",
     "liar_question_en": "What song would you refuse to sing?",
+    "liar_question_am": "ለመዘመር የምትከለከለው ዘፈን ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "easy",
@@ -1172,7 +1432,9 @@
   {
     "id": "liar_music_and_entertainment_131",
     "main_question_en": "Which artist did you love as a teenager?",
+    "main_question_am": "በጉርምስናህ የወደድከው አርቲስት የትኛው ነው?",
     "liar_question_en": "Which artist are you embarrassed to have loved?",
+    "liar_question_am": "መውደድህ የሚያሳፍርህ አርቲስት የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1181,7 +1443,9 @@
   {
     "id": "liar_music_and_entertainment_132",
     "main_question_en": "What do you always play in the car?",
+    "main_question_am": "በመኪና ሁልጊዜ ምን ትጫወታለህ?",
     "liar_question_en": "What always gets skipped in the car?",
+    "liar_question_am": "በመኪና ሁልጊዜ የሚዘለል ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "family",
     "difficulty": "easy",
@@ -1190,7 +1454,9 @@
   {
     "id": "liar_travel_133",
     "main_question_en": "Which trip would you take again tomorrow?",
+    "main_question_am": "ነገ እንደገና የምትሄድበት ጉዞ የትኛው ነው?",
     "liar_question_en": "Which trip did you regret?",
+    "liar_question_am": "የተጸየፍከው ጉዞ የትኛው ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -1199,7 +1465,9 @@
   {
     "id": "liar_travel_134",
     "main_question_en": "What do you always forget to pack?",
+    "main_question_am": "ሁልጊዜ ለመያዝ የምትረሳው ምንድን ነው?",
     "liar_question_en": "What do you pack and never use?",
+    "liar_question_am": "ትይዘው ግን በፍጹም የማትጠቀምበት ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "easy",
@@ -1208,7 +1476,9 @@
   {
     "id": "liar_travel_135",
     "main_question_en": "Which city would you live in for a year?",
+    "main_question_am": "ለአንድ ዓመት የምትኖርበት ከተማ የትኛው ነው?",
     "liar_question_en": "Which city is fine for a weekend only?",
+    "liar_question_am": "ለሳምንት መጨረሻ ብቻ ጥሩ የሆነች ከተማ የትኛው ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -1217,7 +1487,9 @@
   {
     "id": "liar_travel_136",
     "main_question_en": "Who is the best person to travel with?",
+    "main_question_am": "ከእሱ ጋር ለመጓዝ ምርጥ ሰው ማን ነው?",
     "liar_question_en": "Who is the worst person to travel with?",
+    "liar_question_am": "ከእሱ ጋር ለመጓዝ መጥፎ ሰው ማን ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1226,7 +1498,9 @@
   {
     "id": "liar_travel_137",
     "main_question_en": "What do you buy first when you land?",
+    "main_question_am": "ስትወርድ መጀመሪያ ምን ትገዛለህ?",
     "liar_question_en": "What do you refuse to pay for abroad?",
+    "liar_question_am": "በውጭ አገር ለመክፈል የምትከለከለው ምንድን ነው?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "medium",
@@ -1235,7 +1509,9 @@
   {
     "id": "liar_travel_138",
     "main_question_en": "Where do you tell people you want to go?",
+    "main_question_am": "መሄድ እንደምትፈልግ ለሰዎች የምትነግርበት ቦታ የት ነው?",
     "liar_question_en": "Where do you actually want to go?",
+    "liar_question_am": "በእውነት መሄድ የምትፈልገው ቦታ የት ነው?",
     "category_id": "travel",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1244,7 +1520,9 @@
   {
     "id": "liar_travel_139",
     "main_question_en": "What is your ideal length for a trip?",
+    "main_question_am": "ፍጹም የጉዞ ርዝመትህ ምን ያህል ነው?",
     "liar_question_en": "How long before you want to go home?",
+    "liar_question_am": "ወደ ቤት ለመመለስ ከማሰብህ በፊት ምን ያህል ጊዜ ይፈጃል?",
     "category_id": "travel",
     "content_level": "family",
     "difficulty": "easy",
@@ -1253,7 +1531,9 @@
   {
     "id": "liar_relationships_140",
     "main_question_en": "What makes you trust someone quickly?",
+    "main_question_am": "ሰውን በፍጥነት እንድታምን የሚያደርግ ምንድን ነው?",
     "liar_question_en": "What makes you lose interest quickly?",
+    "liar_question_am": "ፍላጎትህን በፍጥነት እንድታጣ የሚያደርግ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1262,7 +1542,9 @@
   {
     "id": "liar_relationships_141",
     "main_question_en": "Which habit is a dealbreaker?",
+    "main_question_am": "ግንኙነትን የሚያቋርጥ ልማድ የትኛው ነው?",
     "liar_question_en": "Which habit can you learn to live with?",
+    "liar_question_am": "አብሮ ለመኖር የምትማረው ልማድ የትኛው ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1271,7 +1553,9 @@
   {
     "id": "liar_relationships_142",
     "main_question_en": "What is a good sign on a second date?",
+    "main_question_am": "በሁለተኛ ቀን ጥሩ ምልክት ምንድን ነው?",
     "liar_question_en": "What is a warning sign?",
+    "liar_question_am": "የማስጠንቀቂያ ምልክት ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1280,7 +1564,9 @@
   {
     "id": "liar_relationships_143",
     "main_question_en": "Who should plan the date?",
+    "main_question_am": "ቀኑን ማን ማቅድ አለበት?",
     "liar_question_en": "Who should pay for it?",
+    "liar_question_am": "ማን መክፈል አለበት?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "easy",
@@ -1289,7 +1575,9 @@
   {
     "id": "liar_relationships_144",
     "main_question_en": "What do you tell your friends about someone new?",
+    "main_question_am": "ስለ አዲስ ሰው ለጓደኞችህ ምን ትነግራለህ?",
     "liar_question_en": "What do you keep to yourself?",
+    "liar_question_am": "ለራስህ የምትይዘው ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1298,7 +1586,9 @@
   {
     "id": "liar_relationships_145",
     "main_question_en": "Which couple does everyone admire?",
+    "main_question_am": "ሁሉም የሚያደንቀው ጥንድ የትኛው ነው?",
     "liar_question_en": "Which couple confuses everyone?",
+    "liar_question_am": "ሁሉንም የሚያደናግረው ጥንድ የትኛው ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1307,7 +1597,9 @@
   {
     "id": "liar_relationships_146",
     "main_question_en": "What would you compromise on?",
+    "main_question_am": "በምን ላይ ትደራረድ ነበር?",
     "liar_question_en": "What would you never compromise on?",
+    "liar_question_am": "በፍጹም የማትደራረድበት ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1316,7 +1608,9 @@
   {
     "id": "liar_everyday_preferences_147",
     "main_question_en": "What do you drink first thing?",
+    "main_question_am": "መጀመሪያ የምትጠጣው ምንድን ነው?",
     "liar_question_en": "What do you drink just to be polite?",
+    "liar_question_am": "ለደግነት ብቻ የምትጠጣው ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -1325,7 +1619,9 @@
   {
     "id": "liar_everyday_preferences_148",
     "main_question_en": "What chore do you do immediately?",
+    "main_question_am": "ወዲያው የምታደርገው ስራ ምንድን ነው?",
     "liar_question_en": "What chore do you put off for weeks?",
+    "liar_question_am": "ለሳምንታት የምታራዝመው ስራ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -1334,7 +1630,9 @@
   {
     "id": "liar_everyday_preferences_149",
     "main_question_en": "How early do you actually arrive?",
+    "main_question_am": "በእውነት ምን ያህል ቶሎ ትደርሳለህ?",
     "liar_question_en": "How early do you say you'll arrive?",
+    "liar_question_am": "እንደምትደርስ የምትል ምን ያህል ቶሎ ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "medium",
@@ -1343,7 +1641,9 @@
   {
     "id": "liar_everyday_preferences_150",
     "main_question_en": "What do you spend on without thinking?",
+    "main_question_am": "ያለ ማሰብ የምትወጣበት ምንድን ነው?",
     "liar_question_en": "What do you refuse to spend money on?",
+    "liar_question_am": "ገንዘብ ለማውጣት የምትከለከለው ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "medium",
@@ -1352,7 +1652,9 @@
   {
     "id": "liar_everyday_preferences_151",
     "main_question_en": "Which seat do you take in a room?",
+    "main_question_am": "በክፍል ውስጥ የትኛውን ወንበር ትይዛለህ?",
     "liar_question_en": "Which seat do you avoid?",
+    "liar_question_am": "የትኛውን ወንበር ትርቃለህ?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -1361,7 +1663,9 @@
   {
     "id": "liar_everyday_preferences_152",
     "main_question_en": "What do you do when you can't sleep?",
+    "main_question_am": "መተኛት ሳትችል ምን ታደርጋለህ?",
     "liar_question_en": "What do you tell people you do?",
+    "liar_question_am": "እንደምታደርግ ለሰዎች የምትል ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "friends",
     "difficulty": "medium",
@@ -1370,7 +1674,9 @@
   {
     "id": "liar_everyday_preferences_153",
     "main_question_en": "Which notification do you check instantly?",
+    "main_question_am": "ወዲያው የምትፈትሸው ማሳወቂያ የትኛው ነው?",
     "liar_question_en": "Which do you leave unread for days?",
+    "liar_question_am": "ለቀናት ያልተነበበ የምትተው የትኛው ነው?",
     "category_id": "everyday_preferences",
     "content_level": "family",
     "difficulty": "easy",
@@ -1379,7 +1685,9 @@
   {
     "id": "liar_relationships_154",
     "main_question_en": "What would make you text an ex?",
+    "main_question_am": "ቀድሞ ያጋረጥክን እንድትልክ የሚያደርግ ምንድን ነው?",
     "liar_question_en": "What would make you block an ex?",
+    "liar_question_am": "ቀድሞ ያጋረጥክን እንድታግድ የሚያደርግ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1388,7 +1696,9 @@
   {
     "id": "liar_relationships_155",
     "main_question_en": "What confession would scare a new partner?",
+    "main_question_am": "አዲስ አጋርን የሚያስፈራ ኑዛዜ ምንድን ነው?",
     "liar_question_en": "What confession would impress a new partner?",
+    "liar_question_am": "አዲስ አጋርን የሚያደንቅ ኑዛዜ ምንድን ነው?",
     "category_id": "relationships",
     "content_level": "spicy",
     "difficulty": "hard",
@@ -1397,7 +1707,9 @@
   {
     "id": "liar_relationships_156",
     "main_question_en": "Which dating app move is clever?",
+    "main_question_am": "ብልህ የሆነ የፍቅር መተግበሪያ እንቅስቃሴ የትኛው ነው?",
     "liar_question_en": "Which dating app move is desperate?",
+    "liar_question_am": "ተስፋ የተቆረጠ የሚመስል የፍቅር መተግበሪያ እንቅስቃሴ የትኛው ነው?",
     "category_id": "relationships",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1406,7 +1718,9 @@
   {
     "id": "liar_friends_157",
     "main_question_en": "Which friend would you set up on a date?",
+    "main_question_am": "ለቀን እንድትገናኝ የምታቀርበው ጓደኛ የትኛው ነው?",
     "liar_question_en": "Which friend should never date your crush?",
+    "liar_question_am": "ከፍቅርህ ጋር በፍጹም መውጣት የሌለበት ጓደኛ የትኛው ነው?",
     "category_id": "friends",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1415,7 +1729,9 @@
   {
     "id": "liar_friends_158",
     "main_question_en": "What crush secret would you keep for a friend?",
+    "main_question_am": "ለጓደኛ የምትይዘው የፍቅር ምስጢር ምንድን ነው?",
     "liar_question_en": "What crush secret would you accidentally spill?",
+    "liar_question_am": "በስህተት የምትነግረው የፍቅር ምስጢር ምንድን ነው?",
     "category_id": "friends",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1424,7 +1740,9 @@
   {
     "id": "liar_addis_life_159",
     "main_question_en": "Where in Addis is a perfect first date?",
+    "main_question_am": "በአዲስ አበባ ፍጹም የመጀመሪያ ቀን ቦታ የት ነው?",
     "liar_question_en": "Where in Addis is a terrible first date?",
+    "liar_question_am": "በአዲስ አበባ መጥፎ የመጀመሪያ ቀን ቦታ የት ነው?",
     "category_id": "addis_life",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1433,7 +1751,9 @@
   {
     "id": "liar_addis_life_160",
     "main_question_en": "Which café feels flirty after dark?",
+    "main_question_am": "ከጨለማ በኋላ ፍቅር የሚሰማው ካፌ የትኛው ነው?",
     "liar_question_en": "Which café feels like a job interview?",
+    "liar_question_am": "እንደ የሥራ ቃለ መጠይቅ የሚሰማው ካፌ የትኛው ነው?",
     "category_id": "addis_life",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1442,7 +1762,9 @@
   {
     "id": "liar_travel_161",
     "main_question_en": "Who would you take on a surprise weekend trip?",
+    "main_question_am": "ለድንገተኛ የሳምንት መጨረሻ ጉዞ ማንን ትወስዳለህ?",
     "liar_question_en": "Who would you never share a hotel room with?",
+    "liar_question_am": "የሆቴል ክፍል በፍጹም የማታጋራው ማን ነው?",
     "category_id": "travel",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1451,7 +1773,9 @@
   {
     "id": "liar_travel_162",
     "main_question_en": "What vacation with a partner sounds dreamy?",
+    "main_question_am": "ከአጋር ጋር ህልም የሚመስል ዕረፍት ምንድን ነው?",
     "liar_question_en": "What vacation with a partner sounds stressful?",
+    "liar_question_am": "ከአጋር ጋር ውጥረት የሚመስል ዕረፍት ምንድን ነው?",
     "category_id": "travel",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1460,7 +1784,9 @@
   {
     "id": "liar_music_and_entertainment_163",
     "main_question_en": "Which song is your secret romance anthem?",
+    "main_question_am": "የሚስጥር የፍቅር መዝሙርህ የትኛው ዘፈን ነው?",
     "liar_question_en": "Which song reminds you of a messy breakup?",
+    "liar_question_am": "የተዘበረ መለያየት የሚያስታውስህ ዘፈን የትኛው ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1469,7 +1795,9 @@
   {
     "id": "liar_music_and_entertainment_164",
     "main_question_en": "What movie kiss scene do you rewatch?",
+    "main_question_am": "እንደገና የምታይ የፊልም መሳም ትዕይንት ምንድን ነው?",
     "liar_question_en": "What movie breakup scene hits too hard?",
+    "liar_question_am": "በጣም የሚነካህ የፊልም መለያየት ትዕይንት ምንድን ነው?",
     "category_id": "music_and_entertainment",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1478,7 +1806,9 @@
   {
     "id": "liar_everyday_preferences_165",
     "main_question_en": "What texting habit turns you on to someone?",
+    "main_question_am": "ወደ ሰው እንድትሳብ የሚያደርግህ የመልእክት ልማድ ምንድን ነው?",
     "liar_question_en": "What texting habit makes you lose interest?",
+    "liar_question_am": "ፍላጎት እንድታጣ የሚያደርግ የመልእክት ልማድ ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1487,7 +1817,9 @@
   {
     "id": "liar_everyday_preferences_166",
     "main_question_en": "What late-night message is exciting?",
+    "main_question_am": "አስደሳች የሆነ የሌሊት መልእክት ምንድን ነው?",
     "liar_question_en": "What late-night message is a red flag?",
+    "liar_question_am": "ቀይ ምልክት የሆነ የሌሊት መልእክት ምንድን ነው?",
     "category_id": "everyday_preferences",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1496,7 +1828,9 @@
   {
     "id": "liar_school_and_university_167",
     "main_question_en": "Who was your most memorable campus crush?",
+    "main_question_am": "በጣም የሚታወሰው የካምፓስ ፍቅር ማን ነበር?",
     "liar_question_en": "Who was your most awkward campus crush?",
+    "liar_question_am": "በጣም አሳፋሪ የነበረ የካምፓስ ፍቅር ማን ነበር?",
     "category_id": "school_and_university",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1505,7 +1839,9 @@
   {
     "id": "liar_school_and_university_168",
     "main_question_en": "What class crush move is bold?",
+    "main_question_am": "ድፍረት ያለው የክፍል ፍቅር እንቅስቃሴ ምንድን ነው?",
     "liar_question_en": "What class crush move is embarrassing?",
+    "liar_question_am": "አሳፋሪ የሆነ የክፍል ፍቅር እንቅስቃሴ ምንድን ነው?",
     "category_id": "school_and_university",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1514,7 +1850,9 @@
   {
     "id": "liar_food_169",
     "main_question_en": "What dinner order screams 'trying to impress'?",
+    "main_question_am": "«ለማደናቀቅ እየሞከርኩ ነው» የሚል የምሽት እራት ትዕዛዝ ምንድን ነው?",
     "liar_question_en": "What dinner order screams 'I gave up'?",
+    "liar_question_am": "«ተስፋ ቆርጬአለሁ» የሚል የምሽት እራት ትዕዛዝ ምንድን ነው?",
     "category_id": "food",
     "content_level": "spicy",
     "difficulty": "medium",
@@ -1523,7 +1861,9 @@
   {
     "id": "liar_family_170",
     "main_question_en": "What would you hide from family about your dating life?",
+    "main_question_am": "ስለ የፍቅር ሕይወትህ ከቤተሰብ የምትደብቀው ምንድን ነው?",
     "liar_question_en": "What dating news would you announce first?",
+    "liar_question_am": "መጀመሪያ የምታሳውቀው የፍቅር ዜና ምንድን ነው?",
     "category_id": "family",
     "content_level": "spicy",
     "difficulty": "hard",
@@ -1532,7 +1872,9 @@
   {
     "id": "liar_family_171",
     "main_question_en": "Which relative's dating advice would you take?",
+    "main_question_am": "የየትኛው ዘመድ የፍቅር ምክር ትቀበላለህ?",
     "liar_question_en": "Which relative's dating advice would you ignore?",
+    "liar_question_am": "የየትኛው ዘመድ የፍቅር ምክር ትሳላለህ?",
     "category_id": "family",
     "content_level": "spicy",
     "difficulty": "medium",

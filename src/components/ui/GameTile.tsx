@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import type { GameCatalogEntry } from '../../domain/games';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
+import { GAME_MOON_EXPRESSION } from '../brand/gameMoonExpression';
+import { MoonFace } from '../brand/MoonFace';
 import { Pill } from './Chip';
 import { Icon } from './Icon';
 import { PressableScale } from './PressableScale';
@@ -15,8 +17,8 @@ type Props = {
 };
 
 /**
- * Home game surface. Playable games share one equal card language —
- * no featured/hero size hierarchy between titles.
+ * Compact home game surface. Every playable title stays visible and easy to
+ * scan; one consistent mascot changes pose to communicate each mechanic.
  */
 export function GameTile({ game, compact, onPress }: Props) {
   const locked = !game.playable;
@@ -69,39 +71,23 @@ export function GameTile({ game, compact, onPress }: Props) {
         style={[styles.tile, { borderColor: alpha(accent, 0.22) }]}
       >
         <LinearGradient
-          colors={[alpha(accent, 0.075), color.surface]}
+          colors={[alpha(accent, 0.1), alpha(accent, 0.025), color.surface]}
           start={{ x: 0, y: 0 }}
-          end={{ x: 0.55, y: 1 }}
+          end={{ x: 1, y: 0.8 }}
           style={StyleSheet.absoluteFill}
         />
         <View style={styles.body}>
-          <View style={styles.topRow}>
-            <View
-              style={[
-                styles.medallion,
-                {
-                  backgroundColor: alpha(accent, 0.18),
-                  borderColor: alpha(accent, 0.4),
-                },
-              ]}
-            >
-              <Icon name={game.icon} size={24} color={accent} strokeWidth={1.9} />
-            </View>
-            <Icon name="chevronRight" size={20} color={color.textMuted} strokeWidth={2} />
+          <View style={styles.mascotFrame}>
+            <MoonFace expression={GAME_MOON_EXPRESSION[game.id]} size={64} />
           </View>
 
-          <View style={styles.copy}>
-            <Text style={[type.displayMd, styles.name]} numberOfLines={1}>
-              {game.name}
-            </Text>
-            <Text style={[type.body, styles.tagline]} numberOfLines={2}>
-              {game.tagline}
-            </Text>
-          </View>
-
-          <Text style={[type.mono, styles.meta]}>
-            {game.playerCountLabel} · {game.sessionLengthLabel}
+          <Text style={[type.titleLg, styles.name]} numberOfLines={2}>
+            {game.name}
           </Text>
+
+          <View style={[styles.arrow, { borderColor: alpha(accent, 0.24) }]}>
+            <Icon name="chevronRight" size={19} color={color.textSecondary} strokeWidth={2.2} />
+          </View>
         </View>
       </PressableScale>
     </View>
@@ -110,51 +96,48 @@ export function GameTile({ game, compact, onPress }: Props) {
 
 const styles = StyleSheet.create({
   tile: {
-    borderRadius: radius.extraLarge,
+    borderRadius: radius.large,
     borderWidth: 1,
     overflow: 'hidden',
     backgroundColor: color.surface,
-    minHeight: 168,
+    minHeight: 92,
   },
   locked: {
     opacity: 0.72,
   },
   body: {
-    padding: space[5],
-    gap: space[4],
-    minHeight: 168,
-    justifyContent: 'space-between',
-  },
-  topRow: {
+    minHeight: 92,
+    paddingHorizontal: space[4],
+    paddingVertical: space[3],
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     gap: space[3],
   },
-  medallion: {
-    width: 42,
-    height: 42,
-    borderRadius: radius.small,
+  mascotFrame: {
+    width: 64,
+    height: 66,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  copy: {
-    gap: 6,
-  },
   name: {
     color: color.textPrimary,
+    flex: 1,
+    lineHeight: 25,
   },
   nameMuted: {
-    color: color.textSecondary,
-  },
-  tagline: {
     color: color.textSecondary,
   },
   taglineMuted: {
     color: color.textMuted,
   },
-  meta: {
-    color: color.textMuted,
+  arrow: {
+    width: 36,
+    height: 36,
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    backgroundColor: overlay.glass,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   compact: {
     flexDirection: 'row',

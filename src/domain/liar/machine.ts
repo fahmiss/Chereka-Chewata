@@ -1,6 +1,8 @@
 import { pickLiarPair } from '../../content/liar';
+import { localizeText } from '../../content/localize';
 import {
   createId,
+  type ContentLanguage,
   type LiarSession,
   type LiarSetup,
   type Player,
@@ -30,8 +32,14 @@ export function isLiar(session: LiarSession, playerId: string): boolean {
 /** Question shown privately — never labels the Liar role. */
 export function questionForPlayer(session: LiarSession, playerId: string): string {
   return isLiar(session, playerId)
-    ? session.pair.liar_question_en
-    : session.pair.main_question_en;
+    ? localizeText(session.contentLanguage, {
+        en: session.pair.liar_question_en,
+        am: session.pair.liar_question_am,
+      })
+    : localizeText(session.contentLanguage, {
+        en: session.pair.main_question_en,
+        am: session.pair.main_question_am,
+      });
 }
 
 function pickLiarPlayerId(
@@ -60,6 +68,7 @@ export function createLiarSession(
     excludedPairIds?: string[];
     previousLiarPlayerId?: string | null;
     sessionId?: string;
+    contentLanguage?: ContentLanguage;
   } = {},
 ): LiarSession | { error: string } {
   if (setup.players.length < 3) {
@@ -72,10 +81,12 @@ export function createLiarSession(
     return { error: 'Pick at least one content level.' };
   }
 
+  const contentLanguage = options.contentLanguage ?? 'en';
   const excludedPairIds = options.excludedPairIds ?? [];
   const pair = pickLiarPair({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage,
     excludeIds: excludedPairIds,
   });
 
@@ -95,13 +106,13 @@ export function createLiarSession(
   return {
     sessionId: options.sessionId ?? createId('sess'),
     setup,
+    contentLanguage,
     phase: 'handoff',
     pair,
     liarPlayerId,
     revealOrder,
     revealIndex: 0,
     answerOrder,
-    answerIndex: 0,
     voteOrder: [],
     voteIndex: 0,
     votes: {},
@@ -129,18 +140,9 @@ export function hideRevealAndContinue(session: LiarSession): LiarSession {
   return { ...session, phase: 'handoff', revealIndex: nextIndex };
 }
 
-export function beginAnswers(session: LiarSession): LiarSession {
+export function startDiscussion(session: LiarSession): LiarSession {
   if (session.phase !== 'answer_order') return session;
-  return { ...session, phase: 'answers', answerIndex: 0 };
-}
-
-export function nextAnswerOrDiscuss(session: LiarSession): LiarSession {
-  if (session.phase !== 'answers') return session;
-  const next = session.answerIndex + 1;
-  if (next >= session.answerOrder.length) {
-    return { ...session, phase: 'discussion', answerIndex: next };
-  }
-  return { ...session, answerIndex: next };
+  return { ...session, phase: 'discussion' };
 }
 
 export function startVoting(session: LiarSession): LiarSession {
@@ -304,15 +306,12 @@ export function rematchSession(session: LiarSession): LiarSession | { error: str
     excludedPairIds: session.excludedPairIds,
     previousLiarPlayerId: session.liarPlayerId,
     sessionId: session.sessionId,
+    contentLanguage: session.contentLanguage,
   });
 }
 
 export function currentRevealPlayerId(session: LiarSession): string | null {
   return session.revealOrder[session.revealIndex] ?? null;
-}
-
-export function currentAnswerPlayerId(session: LiarSession): string | null {
-  return session.answerOrder[session.answerIndex] ?? null;
 }
 
 export function currentVoterId(session: LiarSession): string | null {

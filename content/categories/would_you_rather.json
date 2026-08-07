@@ -1,12 +1,72 @@
 [
-  { "id": "ethiopian_life", "name_en": "Ethiopian Life", "sort_order": 1, "active": true },
-  { "id": "food", "name_en": "Food", "sort_order": 2, "active": true },
-  { "id": "friends", "name_en": "Friends", "sort_order": 3, "active": true },
-  { "id": "relationships", "name_en": "Relationships", "sort_order": 4, "active": true },
-  { "id": "money_and_lifestyle", "name_en": "Money & Lifestyle", "sort_order": 5, "active": true },
-  { "id": "school_and_work", "name_en": "School & Work", "sort_order": 6, "active": true },
-  { "id": "travel", "name_en": "Travel", "sort_order": 7, "active": true },
-  { "id": "absurd_choices", "name_en": "Absurd Choices", "sort_order": 8, "active": true },
-  { "id": "deep_choices", "name_en": "Deep Choices", "sort_order": 9, "active": true },
-  { "id": "diaspora", "name_en": "Diaspora", "sort_order": 10, "active": true }
+  {
+    "id": "ethiopian_life",
+    "name_en": "Ethiopian Life",
+    "sort_order": 1,
+    "active": true,
+    "name_am": "የኢትዮጵያ ሕይወት"
+  },
+  {
+    "id": "food",
+    "name_en": "Food",
+    "sort_order": 2,
+    "active": true,
+    "name_am": "ምግብ"
+  },
+  {
+    "id": "friends",
+    "name_en": "Friends",
+    "sort_order": 3,
+    "active": true,
+    "name_am": "ጓደኞች"
+  },
+  {
+    "id": "relationships",
+    "name_en": "Relationships",
+    "sort_order": 4,
+    "active": true,
+    "name_am": "ግንኙነቶች"
+  },
+  {
+    "id": "money_and_lifestyle",
+    "name_en": "Money & Lifestyle",
+    "sort_order": 5,
+    "active": true,
+    "name_am": "ገንዘብ እና ኑሮ"
+  },
+  {
+    "id": "school_and_work",
+    "name_en": "School & Work",
+    "sort_order": 6,
+    "active": true,
+    "name_am": "ትምህርት እና ሥራ"
+  },
+  {
+    "id": "travel",
+    "name_en": "Travel",
+    "sort_order": 7,
+    "active": true,
+    "name_am": "ጉዞ"
+  },
+  {
+    "id": "absurd_choices",
+    "name_en": "Absurd Choices",
+    "sort_order": 8,
+    "active": true,
+    "name_am": "ያልተለመዱ ምርጫዎች"
+  },
+  {
+    "id": "deep_choices",
+    "name_en": "Deep Choices",
+    "sort_order": 9,
+    "active": true,
+    "name_am": "ጥልቅ ምርጫዎች"
+  },
+  {
+    "id": "diaspora",
+    "name_en": "Diaspora",
+    "sort_order": 10,
+    "active": true,
+    "name_am": "የውጭ አገር ኑሮ"
+  }
 ]

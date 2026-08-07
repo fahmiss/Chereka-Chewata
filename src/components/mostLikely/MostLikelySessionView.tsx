@@ -1,9 +1,13 @@
 import { router } from 'expo-router';
+import { preload, useAudioPlayer } from 'expo-audio';
 import { useEffect } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
+import { localizeText } from '../../content/localize';
 import { currentPrompt } from '../../domain/mostLikely/machine';
 import { useMostLikelySession } from '../../domain/mostLikely/SessionContext';
 import type { MostLikelySession } from '../../domain/mostLikely/types';
+import { useSettings } from '../../domain/settings/SettingsContext';
+import { prepareGameAudio } from '../../theme/audio';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
@@ -14,10 +18,14 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
 import { MoonFace } from '../brand/MoonFace';
-import { Icon } from '../ui/Icon';
 
 const ACCENT = color.gameMostLikely;
 const STAGES = ['prompt', 'point', 'discuss', 'result'] as const;
+const COUNT_SOUND = require('../../../assets/sounds/most-likely-count.wav');
+const POINT_SOUND = require('../../../assets/sounds/most-likely-point.wav');
+
+void preload(COUNT_SOUND);
+void preload(POINT_SOUND);
 
 function endGame(clearSession: () => void) {
   router.replace('/home');
@@ -37,50 +45,29 @@ function stageFor(phase: MostLikelySession['phase']): string {
   }
 }
 
-/**
- * One card, three states: read → count down → pointed.
- *
- * The prompt keeps its size and position throughout. Replacing it with a
- * smaller "Who got the most points?" screen the moment people start arguing
- * took the wording away exactly when the room needed it.
- */
+/** The prompt stays visible through discussion, when the room still needs it. */
 function PromptCard({ session }: { session: MostLikelySession }) {
   const { dispatch, clearSession } = useMostLikelySession();
   const prompt = currentPrompt(session);
   const enter = useEnterAnimation(1, 16);
-  const badgeEnter = useEnterAnimation(0, 10);
   const phase = session.phase;
-  const counting = phase === 'countdown';
   const pointed = phase === 'discuss';
   const remaining = session.deck.length - session.index;
   const last = session.index >= session.deck.length - 1;
-  const value = session.countdownValue;
-
-  useEffect(() => {
-    if (!counting) return;
-    if (value === 3 || value === 2 || value === 1) hapticImpact('medium');
-    if (value === 0) hapticSuccess();
-    const id = setTimeout(() => dispatch.tickCountdown(), value === 0 ? 700 : 850);
-    return () => clearTimeout(id);
-  }, [counting, value, dispatch]);
-
-  const countLabel = value === 0 ? 'Point!' : value === null ? '' : String(value);
 
   return (
     <SessionShell
       eyebrow={
-        counting
-          ? 'Point together'
-          : pointed
-            ? 'Fingers up'
-            : `Prompt ${session.index + 1} · ${remaining} left`
+        pointed
+          ? 'Fingers up'
+          : `Prompt ${session.index + 1} · ${remaining} left`
       }
       stage={stageFor(phase)}
       stages={STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
-      // Same three slots in every state, so the prompt above never shifts as
-      // the round moves from reading to pointed.
+      // Prompt and discussion keep matching action slots, so the card does not
+      // jump when everyone starts arguing.
       footer={
         <>
           <PrimaryButton
@@ -88,12 +75,10 @@ function PromptCard({ session }: { session: MostLikelySession }) {
               pointed ? (last ? 'Finish session' : 'Next prompt') : 'Start countdown'
             }
             icon={pointed ? 'chevronRight' : 'users'}
-            disabled={counting}
             onPress={() => (pointed ? dispatch.nextPrompt() : dispatch.beginCountdown())}
           />
           <SecondaryButton
             label="Skip prompt"
-            disabled={counting}
             onPress={() => dispatch.skipPrompt()}
           />
           {prompt ? (
@@ -107,44 +92,100 @@ function PromptCard({ session }: { session: MostLikelySession }) {
       }
     >
       <Animated.View style={[styles.body, enter]}>
-        <View style={counting ? styles.dimmed : undefined}>
-          <Surface accent={ACCENT} active contentStyle={styles.promptCard}>
-            <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
-            <Text style={styles.promptText}>{prompt?.prompt_en}</Text>
-          </Surface>
-        </View>
+        <Surface accent={ACCENT} active contentStyle={styles.promptCard}>
+          <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
+          <Text
+            style={[
+              styles.promptText,
+              session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
+            ]}
+          >
+            {prompt
+              ? localizeText(session.contentLanguage, {
+                  en: prompt.prompt_en,
+                  am: prompt.prompt_am,
+                })
+              : ''}
+          </Text>
+        </Surface>
 
-        {/*
-          Always rendered, only faded — unmounting it shrinks this centred
-          column and shifts the prompt card the instant the countdown starts.
-          The reserved height also absorbs the one- vs two-line difference
-          between the two hints.
-        */}
         <Text
-          style={[type.bodySm, styles.hint, counting && styles.hintHidden]}
+          style={[type.bodySm, styles.hint]}
           numberOfLines={2}
         >
           {pointed
             ? 'Argue it out. No official winner needed.'
             : 'Someone reads it aloud. Then everyone points at the same time.'}
         </Text>
-
-        {counting ? (
-          <View style={styles.countOverlay} pointerEvents="none">
-            <Animated.View
-              style={[
-                styles.countdownBadge,
-                badgeEnter,
-                glow(ACCENT, 0.4, 28),
-                { borderColor: alpha(ACCENT, 0.5) },
-              ]}
-            >
-              <MoonFace expression="timer" size={52} />
-              <Text style={styles.countdownValue}>{countLabel}</Text>
-            </Animated.View>
-          </View>
-        ) : null}
       </Animated.View>
+    </SessionShell>
+  );
+}
+
+function CountdownBeat({ value }: { value: 3 | 2 | 1 | 0 }) {
+  const enter = useEnterAnimation(0, value === 0 ? 18 : 10);
+  const pointNow = value === 0;
+
+  return (
+    <Animated.View style={[styles.countdownBody, enter]}>
+      <View style={[styles.countdownHalo, glow(ACCENT, 0.48, 38)]}>
+        <View style={styles.countdownCore}>
+          <Text style={[styles.countdownValue, pointNow && styles.pointValue]}>
+            {pointNow ? 'POINT!' : value}
+          </Text>
+        </View>
+      </View>
+      <Text style={[type.eyebrow, styles.countdownInstruction]}>
+        {pointNow ? 'EVERYONE POINTS NOW' : 'GET READY'}
+      </Text>
+      <Text style={[type.body, styles.countdownHint]}>
+        {pointNow ? 'Hold your choice.' : 'Choose one person. Reveal together.'}
+      </Text>
+    </Animated.View>
+  );
+}
+
+function CountdownPhase({ session }: { session: MostLikelySession }) {
+  const { dispatch, clearSession } = useMostLikelySession();
+  const { settings } = useSettings();
+  const value = session.countdownValue ?? 3;
+  const countPlayer = useAudioPlayer(COUNT_SOUND);
+  const pointPlayer = useAudioPlayer(POINT_SOUND);
+
+  useEffect(() => {
+    if (value === 0) hapticSuccess();
+    else hapticImpact('medium');
+
+    let audioActive = true;
+    const cuePlayer = value === 0 ? pointPlayer : countPlayer;
+    cuePlayer.volume = value === 0 ? 0.78 : 0.58;
+    if (settings.soundEnabled) {
+      cuePlayer.pause();
+      void prepareGameAudio()
+        .then(async () => {
+          await cuePlayer.seekTo(0);
+          if (audioActive) cuePlayer.play();
+        })
+        .catch(() => undefined);
+    }
+
+    const id = setTimeout(() => dispatch.tickCountdown(), value === 0 ? 700 : 850);
+    return () => {
+      audioActive = false;
+      cuePlayer.pause();
+      clearTimeout(id);
+    };
+  }, [countPlayer, dispatch, pointPlayer, settings.soundEnabled, value]);
+
+  return (
+    <SessionShell
+      eyebrow={value === 0 ? 'Point now' : 'Point together'}
+      stage="point"
+      stages={STAGES}
+      accent={ACCENT}
+      onEndGame={() => endGame(clearSession)}
+    >
+      <CountdownBeat key={value} value={value} />
     </SessionShell>
   );
 }
@@ -198,6 +239,7 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
 
 export function MostLikelySessionView({ session }: { session: MostLikelySession }) {
   if (session.phase === 'ended') return <EndedPhase session={session} />;
+  if (session.phase === 'countdown') return <CountdownPhase session={session} />;
   return <PromptCard session={session} />;
 }
 
@@ -223,39 +265,59 @@ const styles = StyleSheet.create({
   hint: {
     color: color.textSecondary,
     textAlign: 'center',
-    // Two lines of bodySm — holds the column steady across all three states.
+    // Two lines of bodySm keep the prompt steady from reading to discussion.
     minHeight: 40,
   },
-  hintHidden: {
-    opacity: 0,
-  },
-  dimmed: {
-    opacity: 0.35,
-  },
-  countOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+  countdownBody: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingBottom: space[8],
   },
-  countdownBadge: {
-    width: 168,
-    height: 168,
+  countdownHalo: {
+    width: 286,
+    height: 286,
     borderRadius: radius.pill,
     borderWidth: 1,
+    borderColor: alpha(ACCENT, 0.62),
+    backgroundColor: alpha(ACCENT, 0.1),
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: space[8],
+  },
+  countdownCore: {
+    width: 238,
+    height: 238,
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    borderColor: alpha(ACCENT, 0.28),
     backgroundColor: alpha(ACCENT, 0.16),
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 2,
   },
   countdownValue: {
     color: color.textPrimary,
     fontFamily: family.display.black,
-    fontSize: 48,
-    lineHeight: 52,
+    fontSize: 150,
+    lineHeight: 158,
+    textAlign: 'center',
+  },
+  pointValue: {
+    color: ACCENT,
+    fontSize: 58,
+    lineHeight: 64,
+    letterSpacing: 1.6,
+  },
+  countdownInstruction: {
+    color: ACCENT,
+    fontSize: 14,
+    letterSpacing: 1.4,
+    textAlign: 'center',
+  },
+  countdownHint: {
+    color: color.textSecondary,
+    textAlign: 'center',
+    marginTop: space[2],
   },
   ended: {
     flex: 1,

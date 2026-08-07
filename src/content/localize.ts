@@ -25,3 +25,28 @@ export function hasAmharicText(fields: LocalizedFields): boolean {
   const en = fields.en?.trim() ?? '';
   return Boolean(am) && am !== en;
 }
+
+/** Deck filter: EN needs English; Amharic/Mixed need an Amharic field. */
+export function matchesContentLanguage(
+  language: ContentLanguage,
+  fields: LocalizedFields,
+): boolean {
+  if (language === 'en') return Boolean(fields.en?.trim());
+  return Boolean(fields.am?.trim());
+}
+
+export function localizeList(
+  language: ContentLanguage,
+  en: string[],
+  am?: string[],
+): string[] {
+  if (language === 'en' || !am?.length) return en;
+  if (language === 'am') {
+    return en.map((item, index) => am[index]?.trim() || item);
+  }
+  return en.map((item, index) => {
+    const amItem = am[index]?.trim();
+    if (amItem && amItem !== item) return `${amItem} · ${item}`;
+    return amItem || item;
+  });
+}

@@ -15,8 +15,7 @@ import { family, type } from '../src/theme/typography';
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
 /**
- * First-launch language gate. Amharic + Mixed content unlock for Impostor;
- * other games still draw English decks until those packs ship.
+ * First-launch language gate. Content language applies to all five game decks.
  */
 export default function LanguageGateScreen() {
   const { settings, setLanguages } = useSettings();

@@ -1,6 +1,7 @@
 import { pickTabooCard } from '../../content/taboo';
 import {
   createId,
+  type ContentLanguage,
   type Player,
   type TabooCard,
   type TabooSession,
@@ -54,6 +55,7 @@ function drawCard(session: TabooSession): TabooCard | null {
   return pickTabooCard({
     categoryIds: session.setup.categoryIds,
     contentLevels: session.setup.contentLevels,
+    contentLanguage: session.contentLanguage,
     excludeIds: session.excludedCardIds,
   });
 }
@@ -72,7 +74,11 @@ function withNextCard(session: TabooSession): TabooSession {
 
 export function createTabooSession(
   setup: TabooSetup,
-  options: { excludedCardIds?: string[]; sessionId?: string } = {},
+  options: {
+    excludedCardIds?: string[];
+    sessionId?: string;
+    contentLanguage?: ContentLanguage;
+  } = {},
 ): TabooSession | { error: string } {
   if (setup.players.length < 4) {
     return { error: 'Taboo needs at least 4 players on two teams.' };
@@ -84,9 +90,11 @@ export function createTabooSession(
     return { error: 'Pick at least one content level.' };
   }
 
+  const contentLanguage = options.contentLanguage ?? 'en';
   const probe = pickTabooCard({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage,
     excludeIds: options.excludedCardIds ?? [],
   });
   if (!probe) {
@@ -101,6 +109,7 @@ export function createTabooSession(
   return {
     sessionId: options.sessionId ?? createId('sess'),
     setup,
+    contentLanguage,
     phase: 'round_ready',
     teamA,
     teamB,
@@ -344,6 +353,7 @@ export function rematchSession(session: TabooSession): TabooSession | { error: s
   return createTabooSession(session.setup, {
     excludedCardIds: [],
     sessionId: session.sessionId,
+    contentLanguage: session.contentLanguage,
   });
 }
 
@@ -351,6 +361,7 @@ export function rematchKeepTeams(session: TabooSession): TabooSession | { error:
   const created = createTabooSession(session.setup, {
     excludedCardIds: [],
     sessionId: session.sessionId,
+    contentLanguage: session.contentLanguage,
   });
   if ('error' in created) return created;
   return {

@@ -1,6 +1,7 @@
 import { pickMostLikelyDeck } from '../../content/mostLikely';
 import {
   createId,
+  type ContentLanguage,
   type MostLikelySession,
   type MostLikelySetup,
 } from './types';
@@ -12,6 +13,7 @@ export function currentPrompt(session: MostLikelySession) {
 
 export function createMostLikelySession(
   setup: MostLikelySetup,
+  contentLanguage: ContentLanguage = 'en',
 ): MostLikelySession | { error: string } {
   if (setup.categoryIds.length === 0) {
     return { error: 'Pick at least one category.' };
@@ -23,6 +25,7 @@ export function createMostLikelySession(
   const deck = pickMostLikelyDeck({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage,
     count: Math.max(1, setup.cardCount),
   });
 
@@ -34,6 +37,7 @@ export function createMostLikelySession(
   return {
     sessionId: createId('sess'),
     setup,
+    contentLanguage,
     phase: 'prompt',
     deck,
     index: 0,
@@ -97,7 +101,7 @@ export function endSession(session: MostLikelySession): MostLikelySession {
 }
 
 export function rematchSession(session: MostLikelySession): MostLikelySession | { error: string } {
-  const created = createMostLikelySession(session.setup);
+  const created = createMostLikelySession(session.setup, session.contentLanguage);
   if ('error' in created) return created;
   return { ...created, sessionId: session.sessionId };
 }

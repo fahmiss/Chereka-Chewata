@@ -36,10 +36,6 @@ export type ImpostorSetup = {
   players: Player[];
   categoryIds: string[];
   contentLevels: ContentLevel[];
-  /**
-   * Kept at 1 for MVP — see TWO_IMPOSTOR_ENABLED. The type still allows 2 so
-   * role assignment needs no change when the mode returns.
-   */
   impostorCount: 1 | 2;
   showCategoryToImpostor: boolean;
   discussionTimerSeconds: number | null;
@@ -85,20 +81,11 @@ export type ImpostorSession = {
   runoffRound: number;
   accusedPlayerId: string | null;
   accusedIsImpostor: boolean | null;
+  /** Caught Impostors who guessed incorrectly and no longer participate. */
+  eliminatedImpostorIds: string[];
   winner: 'crew' | 'impostor' | null;
   excludedWordIds: string[];
 };
-
-/**
- * Two-Impostor mode is out of MVP scope (README "Out of scope"; spec §3.6
- * defers it until one-Impostor is stable). The rules gap is real: §3.6 requires
- * a second clue-and-vote cycle after a caught Impostor guesses wrong, and the
- * machine resolves the round instead.
- *
- * Flip to `true` once that cycle exists, and restore the 1/2 control on the
- * Impostor quick setup. Nothing else needs to change.
- */
-export const TWO_IMPOSTOR_ENABLED = false;
 
 export const IMPOSTOR_MIN_PLAYERS = 3;
 export const IMPOSTOR_MAX_PLAYERS = 15;

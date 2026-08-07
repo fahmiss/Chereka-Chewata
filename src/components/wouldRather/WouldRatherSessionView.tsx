@@ -1,11 +1,12 @@
 import { router } from 'expo-router';
 import { Animated, StyleSheet, Text, View } from 'react-native';
+import { localizeText } from '../../content/localize';
 import { currentDilemma } from '../../domain/wouldRather/machine';
 import { useWouldRatherSession } from '../../domain/wouldRather/SessionContext';
 import type { WouldRatherSession, WouldRatherSide } from '../../domain/wouldRather/types';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
-import { type } from '../../theme/typography';
+import { family, type } from '../../theme/typography';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { MoonFace } from '../brand/MoonFace';
@@ -68,7 +69,15 @@ function DilemmaCard({ session }: { session: WouldRatherSession }) {
         <Option
           side="a"
           label="OPTION A"
-          text={dilemma?.option_a_en}
+          text={
+            dilemma
+              ? localizeText(session.contentLanguage, {
+                  en: dilemma.option_a_en,
+                  am: dilemma.option_a_am,
+                })
+              : undefined
+          }
+          ethiopic={session.contentLanguage !== 'en'}
           tint={ACCENT}
           chosen={chosen}
           onPress={() => dispatch.chooseSide('a')}
@@ -77,7 +86,15 @@ function DilemmaCard({ session }: { session: WouldRatherSession }) {
         <Option
           side="b"
           label="OPTION B"
-          text={dilemma?.option_b_en}
+          text={
+            dilemma
+              ? localizeText(session.contentLanguage, {
+                  en: dilemma.option_b_en,
+                  am: dilemma.option_b_am,
+                })
+              : undefined
+          }
+          ethiopic={session.contentLanguage !== 'en'}
           tint={OPTION_B}
           chosen={chosen}
           onPress={() => dispatch.chooseSide('b')}
@@ -96,6 +113,7 @@ function Option({
   side,
   label,
   text,
+  ethiopic,
   tint,
   chosen,
   onPress,
@@ -103,6 +121,7 @@ function Option({
   side: WouldRatherSide;
   label: string;
   text?: string;
+  ethiopic?: boolean;
   tint: string;
   chosen: WouldRatherSide | null;
   onPress: () => void;
@@ -134,7 +153,15 @@ function Option({
           </View>
         ) : null}
       </View>
-      <Text style={[type.titleLg, styles.optionText]}>{text}</Text>
+      <Text
+        style={[
+          type.titleLg,
+          styles.optionText,
+          ethiopic ? { fontFamily: family.ethiopic.bold } : null,
+        ]}
+      >
+        {text}
+      </Text>
     </PressableScale>
   );
 }

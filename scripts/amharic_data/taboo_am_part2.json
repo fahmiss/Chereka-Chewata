@@ -1,0 +1,434 @@
+{
+  "taboo_animals_111": {
+    "target_am": "ዝንጀሮ",
+    "forbidden_am": ["ሙዝ", "ዛፍ", "መንቀጥቀጥ", "ፕሪሜት", "እንስሳት ስፍራ"]
+  },
+  "taboo_animals_112": {
+    "target_am": "ንስር",
+    "forbidden_am": ["ወፍ", "መብረር", "ጎጆ", "ንጥረ ነገር", "ክንፎች"]
+  },
+  "taboo_animals_113": {
+    "target_am": "እባብ",
+    "forbidden_am": ["መሳብ", "መርዝ", "ቀለበት", "ሂስ", "ረጅም"]
+  },
+  "taboo_animals_114": {
+    "target_am": "ግመል",
+    "forbidden_am": ["በረሃ", "ሻንጣ", "አሸዋ", "ውሃ", "መጋለብ"]
+  },
+  "taboo_animals_115": {
+    "target_am": "ንብ",
+    "forbidden_am": ["ማር", "መውጋት", "ቀፎ", "ዝንቦ", "አበባ"]
+  },
+  "taboo_animals_116": {
+    "target_am": "ጉጉት",
+    "forbidden_am": ["ለሊት", "ሁት", "ጥበበኛ", "ወፍ", "ዓይኖች"]
+  },
+  "taboo_animals_117": {
+    "target_am": "አዞ",
+    "forbidden_am": ["ወንዝ", "ጥርሶች", "ተሳቢ", "መንከስ", "አፍሪካ"]
+  },
+  "taboo_animals_118": {
+    "target_am": "ቢራቢሮ",
+    "forbidden_am": ["ክንፎች", "አበባ", "ሻክላ", "ቀለም", "መብረር"]
+  },
+  "taboo_sports_119": {
+    "target_am": "እግር ኳስ",
+    "forbidden_am": ["ጎል", "መምታት", "ኳስ", "ቡድን", "ሶከር"]
+  },
+  "taboo_sports_120": {
+    "target_am": "ቅርጫት ኳስ",
+    "forbidden_am": ["ቀለበት", "ድሪብል", "ሜዳ", "ኳስ", "መተኮስ"]
+  },
+  "taboo_sports_121": {
+    "target_am": "ሩጫ",
+    "forbidden_am": ["ውድድር", "ፍጥነት", "ትራክ", "ጫማ", "ማራቶን"]
+  },
+  "taboo_sports_122": {
+    "target_am": "ዋና",
+    "forbidden_am": ["ውሃ", "መዋኛ", "ስትሮክ", "መስመር", "መጥለቅ"]
+  },
+  "taboo_sports_123": {
+    "target_am": "ቴኒስ",
+    "forbidden_am": ["ራኬት", "ሜዳ", "መረብ", "ሰርቭ", "ኳስ"]
+  },
+  "taboo_sports_124": {
+    "target_am": "ብስክሌት ማሽከርከር",
+    "forbidden_am": ["ብስክሌት", "ፔዳል", "ኮፍያ", "ጎማ", "መንገድ"]
+  },
+  "taboo_sports_125": {
+    "target_am": "ቦክስ",
+    "forbidden_am": ["መምታት", "ሪንግ", "ጓንት", "ውጊያ", "ራውንድ"]
+  },
+  "taboo_sports_126": {
+    "target_am": "ቮሊቦል",
+    "forbidden_am": ["መረብ", "ስፓይክ", "ባህር ዳርቻ", "ሰርቭ", "ቡድን"]
+  },
+  "taboo_sports_127": {
+    "target_am": "ኦሎምፒክ",
+    "forbidden_am": ["ሜዳልያ", "ጨዋታዎች", "አትሌት", "ትቦች", "ዓለም"]
+  },
+  "taboo_sports_128": {
+    "target_am": "ዳኛ",
+    "forbidden_am": ["ፉፋንጫ", "ፋውል", "መፍረድ", "ደንቦች", "ጨዋታ"]
+  },
+  "taboo_sports_129": {
+    "target_am": "ዋንጫ",
+    "forbidden_am": ["ማሸነፍ", "ኩባያ", "ሽልማት", "ወርቅ", "ሻምፒዮን"]
+  },
+  "taboo_sports_130": {
+    "target_am": "አሰልጣኝ",
+    "forbidden_am": ["ማሰልጠን", "ቡድን", "ስልት", "ተጫዋች", "ልምምድ"]
+  },
+  "taboo_sports_131": {
+    "target_am": "ቅጣት",
+    "forbidden_am": ["ፋውል", "ረጫ", "ካርድ", "ደንብ", "ነጻ"]
+  },
+  "taboo_sports_132": {
+    "target_am": "ስታዲየም",
+    "forbidden_am": ["ተመልካች", "ሜዳ", "መቀመጫ", "ጨዋታ", "ጩኸት"]
+  },
+  "taboo_sports_133": {
+    "target_am": "ጀርሲ",
+    "forbidden_am": ["ሸሚዝ", "ቁጥር", "ቡድን", "መልበስ", "ኪት"]
+  },
+  "taboo_sports_134": {
+    "target_am": "ማራቶን",
+    "forbidden_am": ["ረጅም", "ሮጥ", "ውድድር", "ጽናት", "42"]
+  },
+  "taboo_general_words_135": {
+    "target_am": "ጓደኝነት",
+    "forbidden_am": ["ጓደኛ", "እምነት", "ግንኙነት", "ሰዎች", "ቅርብ"]
+  },
+  "taboo_general_words_136": {
+    "target_am": "ሚስጥር",
+    "forbidden_am": ["መደበቅ", "መንገር", "ሹክሹክታ", "ግል", "ማወቅ"]
+  },
+  "taboo_general_words_137": {
+    "target_am": "ቃል ኪዳን",
+    "forbidden_am": ["መጠበቅ", "ቃል", "መሐላ", "መስበር", "መስማማት"]
+  },
+  "taboo_general_words_138": {
+    "target_am": "ጥላ",
+    "forbidden_am": ["ጨለማ", "ብርሃን", "መከተል", "ቅርጽ", "ፀሐይ"]
+  },
+  "taboo_general_words_139": {
+    "target_am": "ትውስታ",
+    "forbidden_am": ["ማስታወስ", "ያለፈ", "አእምሮ", "መርሳት", "ማሰብ"]
+  },
+  "taboo_general_words_140": {
+    "target_am": "ድፍረት",
+    "forbidden_am": ["ደፋር", "ፍርሃት", "ጠንካራ", "ልብ", "መድፈር"]
+  },
+  "taboo_general_words_141": {
+    "target_am": "ትዕግሥት",
+    "forbidden_am": ["መጠበቅ", "ጸጥታ", "ጊዜ", "ዝግታ", "መቻል"]
+  },
+  "taboo_general_words_142": {
+    "target_am": "ወሬ",
+    "forbidden_am": ["ሹክሹክታ", "መስማት", "መነጋገር", "ውሸት", "መስፋፋት"]
+  },
+  "taboo_general_words_143": {
+    "target_am": "የመጨረሻ ቀን",
+    "forbidden_am": ["ጊዜው", "ጊዜ", "ዘግይቶ", "መጨረስ", "ቀን"]
+  },
+  "taboo_general_words_144": {
+    "target_am": "ልማድ",
+    "forbidden_am": ["ዕለታዊ", "በየቀኑ", "መድገም", "አስቸጋሪ", "መለወጥ"]
+  },
+  "taboo_general_words_145": {
+    "target_am": "ዕድል",
+    "forbidden_am": ["እድል", "ብልጽግና", "እድለኛ", "ዕጣ", "ማሸነፍ"]
+  },
+  "taboo_general_words_146": {
+    "target_am": "ጸጥታ",
+    "forbidden_am": ["ጸጥ", "ጫጫታ", "ማጥፋት", "ዝምታ", "ድምፅ"]
+  },
+  "taboo_general_words_147": {
+    "target_am": "ጀብደኝነት",
+    "forbidden_am": ["ጉዞ", "አደጋ", "ማሰስ", "መንገድ", "አስደሳች"]
+  },
+  "taboo_general_words_148": {
+    "target_am": "ምክንያት",
+    "forbidden_am": ["ይቅርታ", "ምክንያት", "ዘግይቶ", "ክስ", "ይቅርታ ማድረግ"]
+  },
+  "taboo_general_words_149": {
+    "target_am": "ትሬንድ",
+    "forbidden_am": ["ታዋቂ", "ፋሽን", "ቫይራል", "አሁን", "ስታይል"]
+  },
+  "taboo_general_words_150": {
+    "target_am": "ቅርስ",
+    "forbidden_am": ["መተው", "ታሪክ", "ማስታወስ", "ያለፈ", "ተጽእኖ"]
+  },
+  "taboo_animals_151": {
+    "target_am": "አህያ",
+    "forbidden_am": ["መጋለብ", "መሸከም", "ጭነት", "ጆሮዎች", "እንስሳ"]
+  },
+  "taboo_animals_152": {
+    "target_am": "ፍየል",
+    "forbidden_am": ["ወተት", "ጢም", "ቀንዶች", "እርሻ", "መውጣት"]
+  },
+  "taboo_animals_153": {
+    "target_am": "ላም",
+    "forbidden_am": ["ወተት", "የበሬ ሥጋ", "እርሻ", "ሙ", "ቀንዶች"]
+  },
+  "taboo_animals_154": {
+    "target_am": "በግ",
+    "forbidden_am": ["ጸጉር", "መንጋ", "ጠቦት", "እርሻ", "ነጭ"]
+  },
+  "taboo_animals_155": {
+    "target_am": "ደቦል",
+    "forbidden_am": ["ጠዋት", "መጮህ", "ዶሮ", "እርሻ", "ማንቃት"]
+  },
+  "taboo_animals_156": {
+    "target_am": "ጓጉንቸር",
+    "forbidden_am": ["መዝለል", "አረንጓዴ", "ኩሬ", "መጮህ", "ውሃ"]
+  },
+  "taboo_animals_157": {
+    "target_am": "ጅብ",
+    "forbidden_am": ["ሳቅ", "ጉድፍ", "አፍሪካ", "ለሊት", "ቡድን"]
+  },
+  "taboo_animals_158": {
+    "target_am": "ነብር",
+    "forbidden_am": ["ነጠብጣብ", "ድመት", "ፈጣን", "አፍሪካ", "አደን"]
+  },
+  "taboo_animals_159": {
+    "target_am": "ጋሬጽ",
+    "forbidden_am": ["ውሃ", "ከባድ", "ወንዝ", "አፍ", "አፍሪካ"]
+  },
+  "taboo_animals_160": {
+    "target_am": "የብርሃን አህያ",
+    "forbidden_am": ["መስመሮች", "ጥቁር", "ነጭ", "ፈረስ", "አፍሪካ"]
+  },
+  "taboo_animals_161": {
+    "target_am": "ሰጎን",
+    "forbidden_am": ["ትልቅ", "ወፍ", "መሮጥ", "መብረር", "አንገት"]
+  },
+  "taboo_animals_162": {
+    "target_am": "ጦጣ",
+    "forbidden_am": ["ዝንጀሮ", "ቡድን", "ፊት", "አፍሪካ", "መውጣት"]
+  },
+  "taboo_animals_163": {
+    "target_am": "ኤሊ",
+    "forbidden_am": ["ዝግታ", "ቅርፊት", "ኤሊ ውሃ", "መሬት", "አረጋዊ"]
+  },
+  "taboo_animals_164": {
+    "target_am": "ሸረሪት",
+    "forbidden_am": ["ድር", "ስምንት", "እግሮች", "ነፍሳት", "መሳብ"]
+  },
+  "taboo_animals_165": {
+    "target_am": "ጉንዳን",
+    "forbidden_am": ["ትንሽ", "ቅኝት", "ነፍሳት", "ስኳር", "መስመር"]
+  },
+  "taboo_animals_166": {
+    "target_am": "ትንኝ",
+    "forbidden_am": ["መንከስ", "ዝንቦ", "ወባ", "ደም", "ለሊት"]
+  },
+  "taboo_animals_167": {
+    "target_am": "ጎጆቆቅ",
+    "forbidden_am": ["መናገር", "ቀለም ያለው", "ወፍ", "መድገም", "ቤት"]
+  },
+  "taboo_ethiopian_food_168": {
+    "target_am": "ጎመን",
+    "forbidden_am": ["ጎመን ቅጠል", "አረንጓዴ", "ከተምባ", "የተቀቀለ", "ጎን"]
+  },
+  "taboo_ethiopian_food_169": {
+    "target_am": "ሳምቡሳ",
+    "forbidden_am": ["ሶስት ማዕዘን", "የተጠበሰ", "ምስር", "መክሰስ", "ፓስቴሪ"]
+  },
+  "taboo_ethiopian_food_170": {
+    "target_am": "ማኪያቶ",
+    "forbidden_am": ["ቡና", "ወተት", "አረፋ", "ስኒ", "ካፌ"]
+  },
+  "taboo_ethiopian_food_171": {
+    "target_am": "ምስር ወጥ",
+    "forbidden_am": ["ምስር", "ቀይ", "ወጥ", "በርበሬ", "ጾም"]
+  },
+  "taboo_ethiopian_food_172": {
+    "target_am": "አትክልት",
+    "forbidden_am": ["አትክልት", "ከተምባ", "ካሮት", "ድንች", "ለስላሳ"]
+  },
+  "taboo_ethiopian_food_173": {
+    "target_am": "ድፎ ዳቦ",
+    "forbidden_am": ["ዳቦ", "የተጋገረ", "በዓል", "ክብ", "ትልቅ"]
+  },
+  "taboo_ethiopian_food_174": {
+    "target_am": "አዋዜ",
+    "forbidden_am": ["መረቅ", "በርበሬ", "ቅመም ያለው", "ማጥመቂያ", "ቀይ"]
+  },
+  "taboo_ethiopian_food_175": {
+    "target_am": "ቆጮ",
+    "forbidden_am": ["እንሰት", "ቀጭን ዳቦ", "ደቡብ", "የተለሳበ", "ጠጣር"]
+  },
+  "taboo_ethiopian_food_176": {
+    "target_am": "ጨጨብሳ",
+    "forbidden_am": ["ቂጣ", "የተቀደደ", "ቅቤ", "ቁርስ", "በርበሬ"]
+  },
+  "taboo_ethiopian_food_177": {
+    "target_am": "ካቲካላ",
+    "forbidden_am": ["አልኮል", "ጠንካራ", "የቤት", "ግልጽ", "መጠጥ"]
+  },
+  "taboo_ethiopian_food_178": {
+    "target_am": "ቆሎ",
+    "forbidden_am": ["የተጠበሰ", "ገብስ", "መክሰስ", "እህል", "መቁረጥ"]
+  },
+  "taboo_ethiopian_food_179": {
+    "target_am": "ቡላ",
+    "forbidden_am": ["እንሰት", "ዱቄት", "ጭማቅ", "ነጭ", "ደቡብ"]
+  },
+  "taboo_ethiopian_food_180": {
+    "target_am": "እንቁላል ፍርፍር",
+    "forbidden_am": ["እንቁላል", "የተደበለ", "ቁርስ", "ሽንኩርት", "ቅቤ"]
+  },
+  "taboo_ethiopian_food_181": {
+    "target_am": "ዝልዝል ጥብስ",
+    "forbidden_am": ["ጭረቶች", "በሬ", "የተጠበሰ", "ስጋ", "ምት"]
+  },
+  "taboo_ethiopian_food_182": {
+    "target_am": "ጎረድ ጎረድ",
+    "forbidden_am": ["ጥሬ", "ኩብ", "በሬ", "ቅቤ", "አዋዜ"]
+  },
+  "taboo_ethiopian_food_183": {
+    "target_am": "አልጫ",
+    "forbidden_am": ["ለስላሳ", "እርድ", "ወጥ", "ቢጫ", "ቅመም"]
+  },
+  "taboo_ethiopian_food_184": {
+    "target_am": "ቡና ቤት",
+    "forbidden_am": ["ቡና", "ቤት", "ካፌ", "ስነ ሥርዓት", "መቀመጥ"]
+  },
+  "taboo_everyday_life_185": {
+    "target_am": "መጥረጊያ",
+    "forbidden_am": ["መጥረግ", "ወለል", "አቧራ", "እጀታ", "ንጹህ"]
+  },
+  "taboo_everyday_life_186": {
+    "target_am": "ባልዲ",
+    "forbidden_am": ["ውሃ", "መሸከም", "ፕላስቲክ", "መሙላት", "እጀታ"]
+  },
+  "taboo_everyday_life_187": {
+    "target_am": "ፍሪጅ",
+    "forbidden_am": ["ቀዝቃዛ", "ምግብ", "ኩሽና", "በር", "ወተት"]
+  },
+  "taboo_everyday_life_188": {
+    "target_am": "ብርድ ልብስ",
+    "forbidden_am": ["አልጋ", "ሞቃት", "መሸፈኛ", "መኝታ", "ጸጉር"]
+  },
+  "taboo_everyday_life_189": {
+    "target_am": "ፎጣ",
+    "forbidden_am": ["ማድረቅ", "መታጠቢያ", "ውሃ", "ጨርቅ", "ሻወር"]
+  },
+  "taboo_everyday_life_190": {
+    "target_am": "መጋረጃ",
+    "forbidden_am": ["መስኮት", "መስቀል", "ብርሃን", "ጨርቅ", "መዝጋት"]
+  },
+  "taboo_everyday_life_191": {
+    "target_am": "ብቅሎ",
+    "forbidden_am": ["ማፍላት", "ውሃ", "ሻይ", "ማሞቅ", "ማፍሰስ"]
+  },
+  "taboo_everyday_life_192": {
+    "target_am": "ደረሰኝ",
+    "forbidden_am": ["ወረቀት", "መግዛት", "ሱቅ", "ማስረጃ", "ዋጋ"]
+  },
+  "taboo_everyday_life_193": {
+    "target_am": "ሊፍት",
+    "forbidden_am": ["ፎቅ", "አዝራር", "ወደ ላይ", "ህንጻ", "መነሳት"]
+  },
+  "taboo_everyday_life_194": {
+    "target_am": "የበር ደውል",
+    "forbidden_am": ["መደወል", "በር", "መጫን", "ድምፅ", "እንግዳ"]
+  },
+  "taboo_everyday_life_195": {
+    "target_am": "ማንቂያ",
+    "forbidden_am": ["ማንቃት", "ጠዋት", "ድምፅ", "ስልክ", "ጊዜ"]
+  },
+  "taboo_everyday_life_196": {
+    "target_am": "ዋይፋይ",
+    "forbidden_am": ["ኢንተርኔት", "የይለፍ ቃል", "ራውተር", "ሲግናል", "መገናኘት"]
+  },
+  "taboo_everyday_life_197": {
+    "target_am": "የጫማ ቀጠና",
+    "forbidden_am": ["ማሰር", "ጫማ", "ቋጠሮ", "ገመድ", "ልቅ"]
+  },
+  "taboo_everyday_life_198": {
+    "target_am": "ባትሪ",
+    "forbidden_am": ["ኃይል", "ቻርጅ", "ስልክ", "ሞቶ", "ኃይል አቅርቦት"]
+  },
+  "taboo_everyday_life_199": {
+    "target_am": "ፖስታ ፖስታ",
+    "forbidden_am": ["ደብዳቤ", "መዝጋት", "ወረቀት", "ፖስታ", "አድራሻ"]
+  },
+  "taboo_everyday_life_200": {
+    "target_am": "መሰላል",
+    "forbidden_am": ["መውጣት", "ደረጃዎች", "ረጅም", "መድረስ", "ግድግዳ"]
+  },
+  "taboo_everyday_life_201": {
+    "target_am": "ኤሌክትሪክ ፋን",
+    "forbidden_am": ["ማቀዝቀዝ", "መንፈስ", "አየር", "መዞር", "ሞቃት"]
+  },
+  "taboo_general_words_202": {
+    "target_am": "ነፃነት",
+    "forbidden_am": ["ነፃ", "ምርጫ", "ቤት", "ነጻነት", "መብት"]
+  },
+  "taboo_general_words_203": {
+    "target_am": "ክብር",
+    "forbidden_am": ["አረጋዊ", "ክብር ማድረግ", "አክብሮት", "ማግኘት", "መመልከት"]
+  },
+  "taboo_general_words_204": {
+    "target_am": "ምቾት",
+    "forbidden_am": ["ልስላሴ", "ቀላል", "ደህንነት", "ሞቃት", "ዞን"]
+  },
+  "taboo_general_words_205": {
+    "target_am": "ጉጉት",
+    "forbidden_am": ["ጥያቄ", "ድመት", "ማወቅ", "መገረም", "ማሰስ"]
+  },
+  "taboo_general_words_206": {
+    "target_am": "እምነት በራስ",
+    "forbidden_am": ["እርግጠኛ", "ማመን", "ራስ", "ደፋር", "ጥርጣሬ"]
+  },
+  "taboo_general_words_207": {
+    "target_am": "ድብርት",
+    "forbidden_am": ["ምንም", "ጊዜ", "ደብዛዛ", "ዝግታ", "ማንጎራጎር"]
+  },
+  "taboo_general_words_208": {
+    "target_am": "ጸጸት",
+    "forbidden_am": ["ይቅርታ", "መፈለግ", "ያለፈ", "ስህተት", "መመለስ"]
+  },
+  "taboo_general_words_209": {
+    "target_am": "ምቀኝነት",
+    "forbidden_am": ["አረንጓዴ", "ቅናት", "መፈለግ", "ማነፃፀር", "አጋር"]
+  },
+  "taboo_general_words_210": {
+    "target_am": "ታላቅ ምኞት",
+    "forbidden_am": ["ግብ", "ግፊት", "መውጣት", "ሙያ", "መፈለግ"]
+  },
+  "taboo_general_words_211": {
+    "target_am": "ታማኝነት",
+    "forbidden_am": ["ታማኝ", "መቆየት", "ጓደኛ", "እምነት", "ውሻ"]
+  },
+  "taboo_general_words_212": {
+    "target_am": "ሹክሹክታ",
+    "forbidden_am": ["መነጋገር", "ወሬ", "ከጀርባ", "ሹክሹክታ", "ሰዎች"]
+  },
+  "taboo_general_words_213": {
+    "target_am": "ጫና",
+    "forbidden_am": ["ጭንቀት", "መግፋት", "ፈተና", "ኃይል", "ጊዜ"]
+  },
+  "taboo_general_words_214": {
+    "target_am": "ንስሐ",
+    "forbidden_am": ["መጥፎ", "ስህተት", "መሰማት", "ሕሊና", "ይቅርታ"]
+  },
+  "taboo_general_words_215": {
+    "target_am": "ክህደት",
+    "forbidden_am": ["እምነት", "ጀርባ", "ጓደኛ", "መስበር", "መውጋት"]
+  },
+  "taboo_general_words_216": {
+    "target_am": "ኖስታልጂያ",
+    "forbidden_am": ["ያለፈ", "ማጣት", "ልጅነት", "ትውስታ", "አሮጌ"]
+  },
+  "taboo_general_words_217": {
+    "target_am": "ጥርጣሬ",
+    "forbidden_am": ["እርግጠኛ", "ጥያቄ", "ማመን", "ምናልባት", "እምነት"]
+  },
+  "taboo_general_words_218": {
+    "target_am": "ስም",
+    "forbidden_am": ["ስም", "ሰዎች", "ማሰብ", "ምስል", "ማጥፋት"]
+  }
+}

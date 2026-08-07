@@ -6,16 +6,46 @@ Bundled decks live under [`content/`](content/). Loaders in [`src/content/`](src
 
 | Game | Path | Status |
 |---|---|---|
-| Impostor categories | `content/categories/impostor.json` | 7 categories (incl. Football) |
-| Impostor words | `content/impostor/words.en.json` | 252 words with `word_am` / `hint_am` (Family 183 · Friends 39 · Spicy 30); Football 37 |
-| Who’s the Liar categories | `content/categories/whos_the_liar.json` | 9 MVP categories |
-| Who’s the Liar pairs | `content/whos_the_liar/pairs.en.json` | 171 English question pairs (Family 81 · Friends 70 · Spicy 20) |
-| Taboo categories | `content/categories/taboo.json` | 9 MVP categories |
-| Taboo cards | `content/taboo/cards.en.json` | 330 English cards (Family 184 · Friends 119 · Spicy 27) |
-| Most Likely categories | `content/categories/most_likely.json` | 9 MVP categories |
-| Most Likely prompts | `content/most_likely/prompts.en.json` | 180 English prompts (Family 50 · Friends 101 · Spicy 29) |
-| Would You Rather categories | `content/categories/would_you_rather.json` | 10 MVP categories |
-| Would You Rather dilemmas | `content/would_you_rather/dilemmas.en.json` | 170 English dilemmas (Family 74 · Friends 52 · Spicy 44) |
+| Impostor categories | `content/categories/impostor.json` | 7 categories with `name_am` (incl. Football) |
+| Impostor words | `content/impostor/words.en.json` | 252 with `word_am` / `hint_am` (Family 183 · Friends 39 · Spicy 30) |
+| Who’s the Liar categories | `content/categories/whos_the_liar.json` | 9 with `name_am` |
+| Who’s the Liar pairs | `content/whos_the_liar/pairs.en.json` | 171 with `main_question_am` / `liar_question_am` |
+| Taboo categories | `content/categories/taboo.json` | 9 with `name_am` |
+| Taboo cards | `content/taboo/cards.en.json` | 330 with `target_am` / `forbidden_am` |
+| Most Likely categories | `content/categories/most_likely.json` | 9 with `name_am` |
+| Most Likely prompts | `content/most_likely/prompts.en.json` | 180 with `prompt_am` |
+| Would You Rather categories | `content/categories/would_you_rather.json` | 10 with `name_am` |
+| Would You Rather dilemmas | `content/would_you_rather/dilemmas.en.json` | 170 with `option_a_am` / `option_b_am` |
+| Bomb categories | `content/categories/bomb.json` | 8 with `name_am` |
+| Bomb category prompts | `content/bomb/cards.json` | 48 with `prompt_am` |
+
+## Content language
+
+Settings / language gate: English, Amharic, Mixed.
+
+All six games filter and display via `localizeText` / `localizeList` and `settings.contentLanguage`.
+
+- **Amharic** prefers `*_am` fields (falls back to English if missing)
+- **Mixed** shows `አማርኛ · English` when both strings differ
+- Ethiopic typefaces apply when content language is am/mixed
+
+## Adding Who’s Got the Bomb? prompts
+
+Each card is a category broad enough to produce several quick spoken answers:
+
+```json
+{
+  "id": "bomb_day_001",
+  "prompt_en": "Car brands",
+  "prompt_am": "የመኪና ብራንዶች",
+  "category_id": "everyday",
+  "content_level": "family",
+  "active": true
+}
+```
+
+Avoid categories with only one or two obvious answers. Players judge answers
+socially; the app does not maintain an answer dictionary.
 
 ## Adding Impostor words
 
@@ -25,8 +55,10 @@ Each item:
 {
   "id": "imp_food_006",
   "word_en": "Tibs",
+  "word_am": "ጥብስ",
   "category_id": "food_and_drink",
   "hint_en": "Sautéed meat",
+  "hint_am": "የተጠበሰ ሥጋ",
   "difficulty": "easy",
   "content_level": "family",
   "active": true
@@ -41,14 +73,6 @@ Rules from the product spec:
 - Launch target: 150+ Impostor words minimum, 300+ better
 - Include `word_am` / `hint_am` for Amharic + Mixed content language
 
-## Content language
-
-Settings / language gate: English, Amharic, Mixed.
-
-- **Impostor** reads `word_am` / `hint_am` (and category `name_am`)
-- Other games still English-only until their Amharic packs ship
-- Mixed Impostor secrets render as `አማርኛ · English` when both differ
-
 ## Adding Who’s the Liar pairs
 
 Each item:
@@ -58,6 +82,8 @@ Each item:
   "id": "liar_food_001",
   "main_question_en": "Which Ethiopian food could you eat every day?",
   "liar_question_en": "Which Ethiopian food would you never order?",
+  "main_question_am": "የትኛውን የኢትዮጵያ ምግብ በየቀኑ መብላት ትችላለህ?",
+  "liar_question_am": "የትኛውን የኢትዮጵያ ምግብ በፍጹም አታዝዝም?",
   "category_id": "food",
   "content_level": "family",
   "difficulty": "medium",
@@ -80,7 +106,9 @@ Each item:
 {
   "id": "taboo_ethiopian_food_001",
   "target_en": "Coffee",
+  "target_am": "ቡና",
   "forbidden_en": ["Jebena", "Cup", "Drink", "Black", "Morning"],
+  "forbidden_am": ["ጀበና", "ስኒ", "መጠጥ", "ጥቁር", "ጠዋት"],
   "category_id": "ethiopian_food",
   "content_level": "family",
   "difficulty": "easy",
@@ -88,7 +116,7 @@ Each item:
 }
 ```
 
-Minimum usable: 150 cards (better: 300+).
+`forbidden_am` must match `forbidden_en` length (index-aligned). Minimum usable: 150 cards (better: 300+).
 
 ## Content validation
 

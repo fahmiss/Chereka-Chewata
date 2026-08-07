@@ -5,6 +5,7 @@ import { Icon } from '../../../../src/components/ui/Icon';
 import { PressableScale } from '../../../../src/components/ui/PressableScale';
 import { SecondaryButton } from '../../../../src/components/ui/SecondaryButton';
 import { SetupScreen } from '../../../../src/components/ui/SetupScreen';
+import { BOMB_MAX_PLAYERS, BOMB_MIN_PLAYERS } from '../../../../src/domain/bomb/types';
 import { useGameSetup } from '../../../../src/domain/useGameSetup';
 import { IMPOSTOR_MAX_PLAYERS, IMPOSTOR_MIN_PLAYERS } from '../../../../src/domain/impostor/types';
 import { MOST_LIKELY_MAX_PLAYERS } from '../../../../src/domain/mostLikely/types';
@@ -122,10 +123,19 @@ export default function PlayerSetupScreen() {
     accent,
     isTaboo,
     isMostLikely,
+    isBomb,
   } = useGameSetup(gameId);
-  const MIN = isMostLikely ? 0 : isTaboo ? TABOO_MIN_PLAYERS : IMPOSTOR_MIN_PLAYERS;
+  const MIN = isMostLikely
+    ? 0
+    : isBomb
+      ? BOMB_MIN_PLAYERS
+      : isTaboo
+        ? TABOO_MIN_PLAYERS
+        : IMPOSTOR_MIN_PLAYERS;
   const MAX = isMostLikely
     ? MOST_LIKELY_MAX_PLAYERS
+    : isBomb
+      ? BOMB_MAX_PLAYERS
     : isTaboo
       ? TABOO_MAX_PLAYERS
       : IMPOSTOR_MAX_PLAYERS;

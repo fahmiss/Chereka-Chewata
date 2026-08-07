@@ -1,10 +1,10 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { GAME_MOON_EXPRESSION } from '../../../src/components/brand/gameMoonExpression';
+import { MoonFace } from '../../../src/components/brand/MoonFace';
 import { MetaChip, Pill } from '../../../src/components/ui/Chip';
-import { Icon } from '../../../src/components/ui/Icon';
 import { PrimaryButton } from '../../../src/components/ui/PrimaryButton';
 import { IconButton, Screen } from '../../../src/components/ui/Screen';
-import { MoonFace } from '../../../src/components/brand/MoonFace';
 import { getGame } from '../../../src/domain/games';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, radius, space } from '../../../src/theme/tokens';
@@ -36,6 +36,11 @@ const STEPS: Record<string, string[]> = {
     'Argue it out — everyone has to defend a side.',
     'Tap the one the room agreed on, then move to the next dilemma.',
   ],
+  bomb: [
+    'Read the category and start the hidden fuse.',
+    'Say a new valid answer, then immediately pass the phone to the next player.',
+    'Whoever holds the phone when it explodes loses the round.',
+  ],
 };
 
 export default function GameDetailsScreen() {
@@ -53,26 +58,30 @@ export default function GameDetailsScreen() {
   }
 
   const steps = STEPS[game.id] ?? null;
+  const returnToGames = () => {
+    if (router.canGoBack()) {
+      router.back();
+      return;
+    }
+
+    router.replace('/home');
+  };
 
   return (
     <Screen accent={game.accent}>
       <View style={styles.nav}>
-        <IconButton name="arrowLeft" label="Back to games" onPress={() => router.back()} />
+        <IconButton name="arrowLeft" label="Back to games" onPress={returnToGames} />
         {!game.playable ? <Pill label="Soon" tint={color.textMuted} icon="lock" /> : null}
       </View>
 
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <Animated.View style={[styles.hero, enter]}>
-          <View
-            style={[
-              styles.medallion,
-              {
-                backgroundColor: alpha(game.accent, 0.16),
-                borderColor: alpha(game.accent, 0.4),
-              },
-            ]}
-          >
-            <Icon name={game.icon} size={34} color={game.accent} strokeWidth={1.7} />
+          <View style={styles.mascotWrap}>
+            <View
+              pointerEvents="none"
+              style={[styles.mascotGlow, { backgroundColor: alpha(game.accent, 0.16) }]}
+            />
+            <MoonFace expression={GAME_MOON_EXPRESSION[game.id]} size={116} />
           </View>
           <Text style={[type.displayXl, styles.title]}>{game.name}</Text>
           <Text style={[type.body, styles.tagline]}>{game.tagline}</Text>
@@ -142,13 +151,19 @@ const styles = StyleSheet.create({
   hero: {
     gap: space[4],
   },
-  medallion: {
-    width: 68,
-    height: 68,
-    borderRadius: radius.large,
-    borderWidth: 1,
+  mascotWrap: {
+    width: 116,
+    height: 116,
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
+  },
+  mascotGlow: {
+    position: 'absolute',
+    width: 88,
+    height: 88,
+    borderRadius: radius.pill,
+    opacity: 0.72,
   },
   title: {
     color: color.textPrimary,

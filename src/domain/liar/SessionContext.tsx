@@ -8,18 +8,18 @@ import {
 } from 'react';
 import {
   accusePlayer,
-  beginAnswers,
   beginVoteSelect,
   castVote,
   createLiarSession,
   hideRevealAndContinue,
-  nextAnswerOrDiscuss,
   readyToReveal,
   rematchSession,
   resolveGroupDeadlock,
+  startDiscussion,
   startVoting,
 } from './machine';
 import type { LiarSession, LiarSetup } from './types';
+import { useSettings } from '../settings/SettingsContext';
 
 type SessionContextValue = {
   session: LiarSession | null;
@@ -30,8 +30,7 @@ type SessionContextValue = {
   dispatch: {
     readyToReveal: () => void;
     hideRevealAndContinue: () => void;
-    beginAnswers: () => void;
-    nextAnswerOrDiscuss: () => void;
+    startDiscussion: () => void;
     startVoting: () => void;
     beginVoteSelect: () => void;
     castVote: (suspectId: string) => void;
@@ -44,19 +43,25 @@ type SessionContextValue = {
 const SessionContext = createContext<SessionContextValue | null>(null);
 
 export function LiarSessionProvider({ children }: { children: ReactNode }) {
+  const { settings } = useSettings();
   const [session, setSession] = useState<LiarSession | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const startSession = useCallback((setup: LiarSetup) => {
-    const created = createLiarSession(setup);
-    if ('error' in created) {
-      setError(created.error);
-      return { error: created.error };
-    }
-    setError(null);
-    setSession(created);
-    return { session: created };
-  }, []);
+  const startSession = useCallback(
+    (setup: LiarSetup) => {
+      const created = createLiarSession(setup, {
+        contentLanguage: settings.contentLanguage,
+      });
+      if ('error' in created) {
+        setError(created.error);
+        return { error: created.error };
+      }
+      setError(null);
+      setSession(created);
+      return { session: created };
+    },
+    [settings.contentLanguage],
+  );
 
   const clearSession = useCallback(() => {
     setSession(null);
@@ -73,8 +78,7 @@ export function LiarSessionProvider({ children }: { children: ReactNode }) {
     () => ({
       readyToReveal: () => update(readyToReveal),
       hideRevealAndContinue: () => update(hideRevealAndContinue),
-      beginAnswers: () => update(beginAnswers),
-      nextAnswerOrDiscuss: () => update(nextAnswerOrDiscuss),
+      startDiscussion: () => update(startDiscussion),
       startVoting: () => update(startVoting),
       beginVoteSelect: () => update(beginVoteSelect),
       castVote: (suspectId: string) => update((current) => castVote(current, suspectId)),

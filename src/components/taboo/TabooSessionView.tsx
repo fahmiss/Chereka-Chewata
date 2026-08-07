@@ -1,6 +1,8 @@
 import { router } from 'expo-router';
+import { preload } from 'expo-audio';
 import { useEffect, useRef, useState } from 'react';
 import { Animated, AppState, StyleSheet, Text, View } from 'react-native';
+import { localizeList, localizeText } from '../../content/localize';
 import {
   currentDescriberId,
   getPlayerName,
@@ -10,6 +12,7 @@ import {
 import { useTabooSession } from '../../domain/taboo/SessionContext';
 import type { TabooSession, TeamId } from '../../domain/taboo/types';
 import { useEnterAnimation } from '../../theme/motion';
+import { useSoundEffect } from '../../theme/useSoundEffect';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell, TABOO_STAGES } from '../session/SessionShell';
@@ -24,6 +27,17 @@ import { Surface } from '../ui/Surface';
 
 const ACCENT = color.gameTaboo;
 const LOCK_MS = 420;
+const WARNING_SOUND = require('../../../assets/sounds/taboo-warning.wav');
+const TICK_SOUND = require('../../../assets/sounds/most-likely-count.wav');
+const TIME_UP_SOUND = require('../../../assets/sounds/taboo-time-up.wav');
+const CORRECT_SOUND = require('../../../assets/sounds/taboo-correct.wav');
+const VIOLATION_SOUND = require('../../../assets/sounds/taboo-violation.wav');
+
+void preload(WARNING_SOUND);
+void preload(TICK_SOUND);
+void preload(TIME_UP_SOUND);
+void preload(CORRECT_SOUND);
+void preload(VIOLATION_SOUND);
 
 function endGame(clearSession: () => void) {
   router.replace('/home');
@@ -149,6 +163,10 @@ function PlayingPhase({ session }: { session: TabooSession }) {
   const [locked, setLocked] = useState(false);
   const lockTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const paused = session.phase === 'paused';
+  const playWarning = useSoundEffect(WARNING_SOUND, 0.62);
+  const playTick = useSoundEffect(TICK_SOUND, 0.58);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.62);
+  const playViolation = useSoundEffect(VIOLATION_SOUND, 0.64);
 
   useEffect(() => {
     setLeft(total);
@@ -163,6 +181,12 @@ function PlayingPhase({ session }: { session: TabooSession }) {
     const id = setTimeout(() => setLeft((value) => value - 1), 1000);
     return () => clearTimeout(id);
   }, [left, paused, session.phase, dispatch]);
+
+  useEffect(() => {
+    if (paused || session.phase !== 'playing') return;
+    if (left === 10) playWarning();
+    else if (left > 0 && left <= 3) playTick();
+  }, [left, paused, playTick, playWarning, session.phase]);
 
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (state) => {
@@ -204,7 +228,10 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               accessibilityRole="button"
               accessibilityLabel="Correct"
               disabled={locked || paused || !card}
-              onPress={() => withLock(() => dispatch.markCorrect())}
+              onPress={() => withLock(() => {
+                playCorrect();
+                dispatch.markCorrect();
+              })}
               haptic="medium"
               scaleTo={0.97}
               style={[styles.actionBtn, styles.correctBtn, (locked || paused) && styles.dim]}
@@ -237,7 +264,10 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               accessibilityRole="button"
               accessibilityLabel="Violation"
               disabled={locked || paused || !card}
-              onPress={() => withLock(() => dispatch.markViolation())}
+              onPress={() => withLock(() => {
+                playViolation();
+                dispatch.markViolation();
+              })}
               haptic="medium"
               scaleTo={0.97}
               style={[styles.actionBtn, styles.violationBtn, (locked || paused) && styles.dim]}
@@ -292,14 +322,38 @@ function PlayingPhase({ session }: { session: TabooSession }) {
       {card ? (
         <Surface accent={ACCENT} active contentStyle={styles.card}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>Describe</Text>
-          <Text style={styles.target} numberOfLines={2} adjustsFontSizeToFit>
-            {card.target_en}
+          <Text
+            style={[
+              styles.target,
+              session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
+            ]}
+            numberOfLines={2}
+            adjustsFontSizeToFit
+          >
+            {localizeText(session.contentLanguage, {
+              en: card.target_en,
+              am: card.target_am,
+            })}
           </Text>
           <Text style={[type.eyebrow, styles.forbiddenLabel]}>Don’t say</Text>
           <View style={styles.forbiddenList}>
-            {card.forbidden_en.map((word) => (
+            {localizeList(
+              session.contentLanguage,
+              card.forbidden_en,
+              card.forbidden_am,
+            ).map((word) => (
               <View key={word} style={styles.forbiddenChip}>
-                <Text style={[type.label, styles.forbiddenText]}>{word}</Text>
+                <Text
+                  style={[
+                    type.label,
+                    styles.forbiddenText,
+                    session.contentLanguage !== 'en'
+                      ? { fontFamily: family.ethiopic.medium }
+                      : null,
+                  ]}
+                >
+                  {word}
+                </Text>
               </View>
             ))}
           </View>
@@ -314,6 +368,9 @@ function PlayingPhase({ session }: { session: TabooSession }) {
 function TurnSummaryPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
   const team = teamLabel(session.activeTeam);
+  const playTimeUp = useSoundEffect(TIME_UP_SOUND, 0.78);
+
+  useEffect(() => playTimeUp(), [playTimeUp]);
 
   return (
     <SessionShell

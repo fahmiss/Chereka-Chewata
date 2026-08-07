@@ -1,7 +1,9 @@
 import type { ContentLevel, TabooCard, TabooCategory } from '../domain/taboo/types';
+import type { ContentLanguage } from '../domain/settings/types';
 import categoriesJson from '../../content/categories/taboo.json';
 import cardsJson from '../../content/taboo/cards.en.json';
 import { prioritizeFresh, recentIds, recordPlayed, reportedIds } from '../storage/contentHistory';
+import { matchesContentLanguage } from './localize';
 
 const categories = categoriesJson as TabooCategory[];
 const cards = cardsJson as TabooCard[];
@@ -15,24 +17,32 @@ export function getTabooCategories(): TabooCategory[] {
 export function getTabooCards(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
   excludeIds?: string[];
 }): TabooCard[] {
   const exclude = new Set(options.excludeIds ?? []);
   const levels = new Set(options.contentLevels);
   const cats = new Set(options.categoryIds);
+  const language = options.contentLanguage ?? 'en';
 
   return cards.filter(
     (card) =>
       card.active &&
       cats.has(card.category_id) &&
       levels.has(card.content_level) &&
-      !exclude.has(card.id) && !reportedIds('taboo').has(card.id),
+      matchesContentLanguage(language, {
+        en: card.target_en,
+        am: card.target_am,
+      }) &&
+      !exclude.has(card.id) &&
+      !reportedIds('taboo').has(card.id),
   );
 }
 
 export function pickTabooCard(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
   excludeIds?: string[];
 }): TabooCard | null {
   const pool = prioritizeFresh(getTabooCards(options), 'taboo');
@@ -47,6 +57,7 @@ export function pickTabooCard(options: {
 export function countTabooCards(options: {
   categoryIds: string[];
   contentLevels: ContentLevel[];
+  contentLanguage?: ContentLanguage;
 }): number {
   return getTabooCards(options).length;
 }

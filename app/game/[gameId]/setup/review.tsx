@@ -8,6 +8,7 @@ import {
   type QuickLink,
 } from '../../../../src/components/setup/QuickSetup';
 import { Segmented, Toggle } from '../../../../src/components/ui/Selectable';
+import { countBombCards, getBombCategories } from '../../../../src/content/bomb';
 import {
   countImpostorWords,
   getImpostorCategories,
@@ -23,6 +24,8 @@ import {
   getWouldRatherCategories,
 } from '../../../../src/content/wouldRather';
 import { getGame } from '../../../../src/domain/games';
+import { useBombSession } from '../../../../src/domain/bomb/SessionContext';
+import { useBombSetup } from '../../../../src/domain/bomb/SetupContext';
 import { useSession } from '../../../../src/domain/impostor/SessionContext';
 import { useSetup } from '../../../../src/domain/impostor/SetupContext';
 import { useLiarSession } from '../../../../src/domain/liar/SessionContext';
@@ -46,6 +49,7 @@ export default function ReviewScreen() {
   if (id === 'taboo') return <TabooQuickSetup gameId={id} />;
   if (id === 'most_likely') return <MostLikelyQuickSetup gameId={id} />;
   if (id === 'would_you_rather') return <WouldRatherQuickSetup gameId={id} />;
+  if (id === 'bomb') return <BombQuickSetup gameId={id} />;
   return <ImpostorQuickSetup gameId={id} />;
 }
 
@@ -63,14 +67,72 @@ function useStartGame() {
   const taboo = useTabooSession();
   const mostLikely = useMostLikelySession();
   const wouldRather = useWouldRatherSession();
+  const bomb = useBombSession();
 
-  return (keep: 'impostor' | 'liar' | 'taboo' | 'mostLikely' | 'wouldRather') => {
+  return (keep: 'impostor' | 'liar' | 'taboo' | 'mostLikely' | 'wouldRather' | 'bomb') => {
     if (keep !== 'impostor') impostor.clearSession();
     if (keep !== 'liar') liar.clearSession();
     if (keep !== 'taboo') taboo.clearSession();
     if (keep !== 'mostLikely') mostLikely.clearSession();
     if (keep !== 'wouldRather') wouldRather.clearSession();
+    if (keep !== 'bomb') bomb.clearSession();
   };
+}
+
+/* ------------------------------------------------------------------ *
+ * Who's Got the Bomb?
+ * ------------------------------------------------------------------ */
+
+function BombQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameBomb;
+  const { setup, validation, persistPlayers } = useBombSetup();
+  const { startSession, clearError } = useBombSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+
+  const totalCategories = getBombCategories().length;
+  const cardCount = countBombCards({
+    categoryIds: setup.categoryIds,
+    contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart =
+    validation.playersOk &&
+    validation.categoriesOk &&
+    validation.contentOk &&
+    validation.spicyOk &&
+    cardCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('bomb');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Who's Got the Bomb?"
+      subtitle="Say a valid answer, then pass the phone before the hidden fuse explodes."
+      canStart={canStart}
+      footerNote={startNote(canStart, cardCount)}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => { void onStart(); }}
+      links={[
+        playersLink(gameId, setup.players),
+        categoriesLink(gameId, setup.categoryIds.length, totalCategories, cardCount, 'categories'),
+        contentLink(gameId, setup.contentLevels),
+      ]}
+    />
+  );
 }
 
 function playersLink(
@@ -191,11 +253,33 @@ function ImpostorQuickSetup({ gameId }: { gameId: string }) {
         detail: `Random start ${setup.randomStartPlayer ? 'on' : 'off'}`,
         href: `/game/${gameId}/setup/options`,
       }}
-      // No Impostor-count control: two-Impostor mode is out of MVP scope
-      // (README) and its §3.6 second cycle is unimplemented. Gated by
-      // TWO_IMPOSTOR_ENABLED — restore that block here when the flag flips.
       controls={
         <QuickControls>
+          <QuickControlBlock
+            icon="mask"
+            title="Impostors"
+            hint={
+              setup.players.length < 8
+                ? 'Two Impostors unlock with 8 or more players.'
+                : 'Two is an advanced game with a second clue and vote cycle.'
+            }
+            accent={accent}
+          >
+            <Segmented<1 | 2>
+              options={[
+                { value: 1, label: '1 Impostor' },
+                {
+                  value: 2,
+                  label: '2 Impostors',
+                  disabled: setup.players.length < 8,
+                },
+              ]}
+              value={setup.impostorCount}
+              onChange={(impostorCount) => patchOptions({ impostorCount })}
+              accent={accent}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
           <Toggle
             accent={accent}
             label="Category hint"
@@ -231,6 +315,7 @@ function LiarQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameLiar;
   const { setup, validation, persistPlayers, patchOptions } = useLiarSetup();
   const { startSession, clearError } = useLiarSession();
+  const { settings } = useSettings();
   const clearOthers = useStartGame();
   const [startError, setStartError] = useState<string | null>(null);
 
@@ -238,6 +323,7 @@ function LiarQuickSetup({ gameId }: { gameId: string }) {
   const cardCount = countLiarPairs({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
   });
   const canStart =
     validation.playersOk &&
@@ -315,6 +401,7 @@ function TabooQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameTaboo;
   const { setup, validation, persistPlayers, patchOptions } = useTabooSetup();
   const { startSession, clearError } = useTabooSession();
+  const { settings } = useSettings();
   const clearOthers = useStartGame();
   const [startError, setStartError] = useState<string | null>(null);
 
@@ -322,6 +409,7 @@ function TabooQuickSetup({ gameId }: { gameId: string }) {
   const cardCount = countTabooCards({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
   });
   const canStart =
     validation.playersOk &&
@@ -423,6 +511,7 @@ function MostLikelyQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameMostLikely;
   const { setup, validation, persistPlayers, patchOptions } = useMostLikelySetup();
   const { startSession, clearError } = useMostLikelySession();
+  const { settings } = useSettings();
   const clearOthers = useStartGame();
   const [startError, setStartError] = useState<string | null>(null);
 
@@ -430,6 +519,7 @@ function MostLikelyQuickSetup({ gameId }: { gameId: string }) {
   const cardCount = countMostLikelyPrompts({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
   });
   const canStart =
     validation.playersOk &&
@@ -506,6 +596,7 @@ function WouldRatherQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameWouldRather;
   const { setup, validation, patchOptions } = useWouldRatherSetup();
   const { startSession, clearError } = useWouldRatherSession();
+  const { settings } = useSettings();
   const clearOthers = useStartGame();
   const [startError, setStartError] = useState<string | null>(null);
 
@@ -513,6 +604,7 @@ function WouldRatherQuickSetup({ gameId }: { gameId: string }) {
   const cardCount = countWouldRatherDilemmas({
     categoryIds: setup.categoryIds,
     contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
   });
   const canStart =
     validation.categoriesOk && validation.contentOk && validation.spicyOk && cardCount > 0;

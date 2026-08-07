@@ -1,0 +1,342 @@
+{
+  "taboo_jobs_219": {
+    "target_am": "ስፌት",
+    "forbidden_am": ["መስፋት", "ልብስ", "መለካት", "መርፌ", "መጠን"]
+  },
+  "taboo_jobs_220": {
+    "target_am": "መካኒክ",
+    "forbidden_am": ["መኪና", "ማስተካከል", "ኤንጂን", "ጋራጅ", "ዘይት"]
+  },
+  "taboo_jobs_221": {
+    "target_am": "ዌተር",
+    "forbidden_am": ["ሬስቶራንት", "ትእዛዝ", "ጠረጴዛ", "ማገልገል", "ሜኑ"]
+  },
+  "taboo_jobs_222": {
+    "target_am": "ፀጉር አስተካካይ",
+    "forbidden_am": ["ፀጉር", "መቁረጥ", "መላጨት", "ወንበር", "ሱቅ"]
+  },
+  "taboo_jobs_223": {
+    "target_am": "ሱቅ ባለቤት",
+    "forbidden_am": ["ሱቅ", "መሸጥ", "ካውንተር", "ደንበኛ", "መደብር"]
+  },
+  "taboo_jobs_224": {
+    "target_am": "አጽዳጅ",
+    "forbidden_am": ["ማጽዳት", "መጥረግ", "ቢሮ", "አቧራ", "ወለል"]
+  },
+  "taboo_jobs_225": {
+    "target_am": "ኤሌክትሪሺያን",
+    "forbidden_am": ["ገመድ", "ኃይል", "ብርሃን", "ድንጋጤ", "መትከል"]
+  },
+  "taboo_jobs_226": {
+    "target_am": "ፕለምበር",
+    "forbidden_am": ["ቧንቧ", "ውሃ", "ፍሰት", "መታጠቢያ", "ማስተካከል"]
+  },
+  "taboo_jobs_227": {
+    "target_am": "አካውንታንት",
+    "forbidden_am": ["ቁጥሮች", "ታክስ", "ገንዘብ", "መጻሕፍት", "ኦዲት"]
+  },
+  "taboo_jobs_228": {
+    "target_am": "ፋርማሲስት",
+    "forbidden_am": ["መድሃኒት", "መድሃኒት", "ሬሲፒ", "ካውንተር", "ኪኒን"]
+  },
+  "taboo_jobs_229": {
+    "target_am": "ፎቶግራፍ አንሺ",
+    "forbidden_am": ["ካሜራ", "ስዕል", "መተኮስ", "ሌንስ", "ሰርግ"]
+  },
+  "taboo_jobs_230": {
+    "target_am": "ደህንነት ጠባቂ",
+    "forbidden_am": ["ጠባቂ", "በር", "መጠበቅ", "ዩኒፎርም", "ህንጻ"]
+  },
+  "taboo_jobs_231": {
+    "target_am": "አናጺ",
+    "forbidden_am": ["እንጨት", "ፈርኒቸር", "መጋዝ", "መገንባት", "ምስማር"]
+  },
+  "taboo_jobs_232": {
+    "target_am": "ባንከኛ",
+    "forbidden_am": ["ባንክ", "ገንዘብ", "ብድር", "መለያ", "ወለድ"]
+  },
+  "taboo_jobs_233": {
+    "target_am": "ወታደር",
+    "forbidden_am": ["ሰራዊት", "ጦርነት", "ዩኒፎርም", "ጠመንጃ", "ማገልገል"]
+  },
+  "taboo_jobs_234": {
+    "target_am": "የእንስሳት ሐኪም",
+    "forbidden_am": ["እንስሳ", "ሐኪም", "የቤት እንስሳ", "ማከም", "ክሊኒክ"]
+  },
+  "taboo_jobs_235": {
+    "target_am": "ግራፊክ ዲዛይነር",
+    "forbidden_am": ["ንድፍ", "መፍጠር", "መሳል", "ብራንድ", "ሎጎ"]
+  },
+  "taboo_music_and_entertainment_236": {
+    "target_am": "ግጥም",
+    "forbidden_am": ["ቃላት", "ዘፈን", "መዘመር", "መጻፍ", "ቤት"]
+  },
+  "taboo_music_and_entertainment_237": {
+    "target_am": "አልበም",
+    "forbidden_am": ["ዘፈኖች", "መልቀቅ", "ሽፋን", "አርቲስት", "ትራክ"]
+  },
+  "taboo_music_and_entertainment_238": {
+    "target_am": "መድረክ",
+    "forbidden_am": ["መጫወት", "ብርሃን", "ኮንሰርት", "መቆም", "ተመልካች"]
+  },
+  "taboo_music_and_entertainment_239": {
+    "target_am": "ማይክሮፎን",
+    "forbidden_am": ["መዘመር", "መናገር", "ድምፅ", "መያዝ", "መቆሚያ"]
+  },
+  "taboo_music_and_entertainment_240": {
+    "target_am": "ቲኬት",
+    "forbidden_am": ["መግዛት", "መግባት", "ሾው", "ዋጋ", "መቀመጫ"]
+  },
+  "taboo_music_and_entertainment_241": {
+    "target_am": "ሬዲዮ",
+    "forbidden_am": ["ማዳመጥ", "ጣቢያ", "ብሮድካስት", "መኪና", "ሙዚቃ"]
+  },
+  "taboo_music_and_entertainment_242": {
+    "target_am": "ማሲንቆ",
+    "forbidden_am": ["ገመድ", "ቀስት", "አንድ", "ባህላዊ", "መሣሪያ"]
+  },
+  "taboo_music_and_entertainment_243": {
+    "target_am": "ክራር",
+    "forbidden_am": ["ገመዶች", "ሊሬ", "ባህላዊ", "መንቀጥቀጥ", "መሣሪያ"]
+  },
+  "taboo_music_and_entertainment_244": {
+    "target_am": "ዋሽንት",
+    "forbidden_am": ["ፍሉት", "መንፋት", "ቀርከሃ", "ባህላዊ", "ነፋስ"]
+  },
+  "taboo_music_and_entertainment_245": {
+    "target_am": "ከበሮ",
+    "forbidden_am": ["ከበሮ", "ሪትም", "ባህላዊ", "ቤተ ክርስቲያን", "እጅ"]
+  },
+  "taboo_music_and_entertainment_246": {
+    "target_am": "ኮረስ",
+    "forbidden_am": ["መድገም", "ዘፈን", "መዘመር", "ክፍል", "ሞቅ ያለ"]
+  },
+  "taboo_music_and_entertainment_247": {
+    "target_am": "ተመልካቾች",
+    "forbidden_am": ["ሰው", "መመልከት", "መቀመጫ", "ማጨብጨብ", "ሰዎች"]
+  },
+  "taboo_music_and_entertainment_248": {
+    "target_am": "ትሬይለር",
+    "forbidden_am": ["ቅድመ እይታ", "ፊልም", "አጭር", "ሲኒማ", "መልቀቅ"]
+  },
+  "taboo_music_and_entertainment_249": {
+    "target_am": "ተከታታይ",
+    "forbidden_am": ["ኤፒሶድ", "ሲዝን", "መመልከት", "ሾው", "ቢንጅ"]
+  },
+  "taboo_music_and_entertainment_250": {
+    "target_am": "ሰብታይትል",
+    "forbidden_am": ["ጽሑፍ", "ታች", "መተርጎም", "ማንበብ", "ማያ"]
+  },
+  "taboo_music_and_entertainment_251": {
+    "target_am": "ሪሚክስ",
+    "forbidden_am": ["ስሪት", "ዘፈን", "ቢት", "መለወጥ", "ዲጄ"]
+  },
+  "taboo_music_and_entertainment_252": {
+    "target_am": "ሱፐርስታር",
+    "forbidden_am": ["ታዋቂ", "ትልቅ", "አርቲስት", "ታዋቂ ሰው", "ሀብታም"]
+  },
+  "taboo_places_253": {
+    "target_am": "ሆቴል",
+    "forbidden_am": ["መኝታ", "ክፍል", "መቆየት", "መያዝ", "እንግዳ"]
+  },
+  "taboo_places_254": {
+    "target_am": "ባንክ",
+    "forbidden_am": ["ገንዘብ", "መለያ", "ጥሬ ገንዘብ", "ረድፍ", "ቴለር"]
+  },
+  "taboo_places_255": {
+    "target_am": "ፓርክ",
+    "forbidden_am": ["አረንጓዴ", "መራመድ", "አግዳሚ", "ዛፎች", "መጫወት"]
+  },
+  "taboo_places_256": {
+    "target_am": "ድልድይ",
+    "forbidden_am": ["መሻገር", "ወንዝ", "መንገድ", "ከላይ", "መገንባት"]
+  },
+  "taboo_places_257": {
+    "target_am": "መንደር",
+    "forbidden_am": ["ትንሽ", "ገጠር", "ገጠራማ", "ቤቶች", "ማህበረሰብ"]
+  },
+  "taboo_places_258": {
+    "target_am": "የአውቶቡስ ጣቢያ",
+    "forbidden_am": ["አውቶቡስ", "ጉዞ", "ቲኬት", "መጠበቅ", "መነሳት"]
+  },
+  "taboo_places_259": {
+    "target_am": "ጎንደር",
+    "forbidden_am": ["ቤተ መንግሥት", "ፋሲል", "ሰሜን", "ታሪካዊ", "ከተማ"]
+  },
+  "taboo_places_260": {
+    "target_am": "ሐረር",
+    "forbidden_am": ["ግድግዳዎች", "ጅብ", "ምሥራቅ", "አሮጌ", "ከተማ"]
+  },
+  "taboo_places_261": {
+    "target_am": "ባሕር ዳር",
+    "forbidden_am": ["ጣና", "ሐይቅ", "ከተማ", "ሰሜን", "ጀልባ"]
+  },
+  "taboo_places_262": {
+    "target_am": "ሐዋሳ",
+    "forbidden_am": ["ሐይቅ", "ዓሳ", "ደቡብ", "ከተማ", "ሪዞርት"]
+  },
+  "taboo_places_263": {
+    "target_am": "ድሬ ዳዋ",
+    "forbidden_am": ["ምሥራቅ", "ባቡር", "ሞቃት", "ከተማ", "ባቡር መስመር"]
+  },
+  "taboo_places_264": {
+    "target_am": "ሰሜን ተራሮች",
+    "forbidden_am": ["ጌላዳ", "እግር ጉዞ", "ሰሜን", "ፓርክ", "ጫፎች"]
+  },
+  "taboo_places_265": {
+    "target_am": "ደንከል",
+    "forbidden_am": ["ሞቃት", "ጨው", "ቁልቁለት", "እሳተ ገሞራ", "በረሃ"]
+  },
+  "taboo_places_266": {
+    "target_am": "የሰማያዊው ናይል ፏፏቴ",
+    "forbidden_am": ["ፏፏቴ", "ናይል", "ጢስ", "ውሃ", "አባይ"]
+  },
+  "taboo_places_267": {
+    "target_am": "ፋርማሲ",
+    "forbidden_am": ["መድሃኒት", "መድሃኒት", "መግዛት", "ካውንተር", "ጤና"]
+  },
+  "taboo_places_268": {
+    "target_am": "ድንበር",
+    "forbidden_am": ["መሻገር", "አገር", "መስመር", "ጠባቂ", "ፓስ"]
+  },
+  "taboo_places_269": {
+    "target_am": "ክብ መንገድ",
+    "forbidden_am": ["ክብ", "ትራፊክ", "መኪና", "መዞር", "መንገድ"]
+  },
+  "taboo_school_270": {
+    "target_am": "ውጤት",
+    "forbidden_am": ["ምልክት", "ነጥብ", "ሪፖርት", "ማለፍ", "ፊደል"]
+  },
+  "taboo_school_271": {
+    "target_am": "የመማሪያ መጽሐፍ",
+    "forbidden_am": ["መጽሐፍ", "ማንበብ", "ትምህርት", "ከባድ", "ክፍል"]
+  },
+  "taboo_school_272": {
+    "target_am": "እስክሪብቶ",
+    "forbidden_am": ["መጻፍ", "ቀለም", "ወረቀት", "ሰማያዊ", "መያዝ"]
+  },
+  "taboo_school_273": {
+    "target_am": "መለኪያ",
+    "forbidden_am": ["ቀጥተኛ", "መለካት", "መስመር", "ሴንቲሜትር", "ፕላስቲክ"]
+  },
+  "taboo_school_274": {
+    "target_am": "መደምሰሻ",
+    "forbidden_am": ["ማሸት", "እርሳስ", "ስህተት", "ራበር", "ማጽዳት"]
+  },
+  "taboo_school_275": {
+    "target_am": "እረፍት",
+    "forbidden_am": ["እረፍት", "መካከል", "አጭር", "ክፍል", "መክሰስ"]
+  },
+  "taboo_school_276": {
+    "target_am": "አቴንዳንስ",
+    "forbidden_am": ["መገኘት", "መቅረት", "ዝርዝር", "መጥራት", "መመዝገቢያ"]
+  },
+  "taboo_school_277": {
+    "target_am": "ዳይሬክተር",
+    "forbidden_am": ["ርዕሰ", "ቢሮ", "ትምህርት ቤት", "አለቃ", "ዳይሬክተር"]
+  },
+  "taboo_school_278": {
+    "target_am": "የክፍል ጓደኛ",
+    "forbidden_am": ["ተመሳሳይ", "ክፍል", "ጓደኛ", "ተማሪ", "መቀመጥ"]
+  },
+  "taboo_school_279": {
+    "target_am": "የትምህርት ሰሌዳ",
+    "forbidden_am": ["መርሃ ግብር", "ክፍል", "ጊዜ", "ሳምንት", "እቅድ"]
+  },
+  "taboo_school_280": {
+    "target_am": "ተግባር",
+    "forbidden_am": ["ሥራ", "ማስረከብ", "የመጨረሻ ቀን", "ሥራ", "ውጤት"]
+  },
+  "taboo_school_281": {
+    "target_am": "የቡድን ፕሮጀክት",
+    "forbidden_am": ["ቡድን", "ሥራ", "መከፋፈል", "መሸከም", "ማቅረብ"]
+  },
+  "taboo_school_282": {
+    "target_am": "ምረቃ",
+    "forbidden_am": ["ኮፍያ", "መጨረስ", "ስነ ሥርዓት", "ዲግሪ", "ቀሚስ"]
+  },
+  "taboo_school_283": {
+    "target_am": "ትምህርት ክፍያ",
+    "forbidden_am": ["ክፍያ", "መክፈል", "ትምህርት ቤት", "ዋጋ", "ሴሚስተር"]
+  },
+  "taboo_school_284": {
+    "target_am": "ዶርም",
+    "forbidden_am": ["መኝታ", "ክፍል", "ካምፓስ", "መጋራት", "ተማሪ"]
+  },
+  "taboo_school_285": {
+    "target_am": "ማጭበርበር",
+    "forbidden_am": ["መቅዳት", "ፈተና", "መያዝ", "መልስ", "ስህተት"]
+  },
+  "taboo_school_286": {
+    "target_am": "ምዝገባ",
+    "forbidden_am": ["መመዝገብ", "መመዝገብ", "ፎርም", "ኮርስ", "መጀመር"]
+  },
+  "taboo_sports_287": {
+    "target_am": "ጠባቂ",
+    "forbidden_am": ["ጎል", "ማዳን", "ጓንት", "መረብ", "መጠበቅ"]
+  },
+  "taboo_sports_288": {
+    "target_am": "ፉፋንጫ",
+    "forbidden_am": ["መንፋት", "ዳኛ", "ድምፅ", "ማቆም", "አፍ"]
+  },
+  "taboo_sports_289": {
+    "target_am": "ሜዳልያ",
+    "forbidden_am": ["ወርቅ", "ማሸነፍ", "አንገት", "ብር", "ሽልማት"]
+  },
+  "taboo_sports_290": {
+    "target_am": "ልምምድ",
+    "forbidden_am": ["ልምምድ", "ማዘጋጀት", "ጂም", "አሰልጣኝ", "ክፍለ ጊዜ"]
+  },
+  "taboo_sports_291": {
+    "target_am": "የውጤት ሰሌዳ",
+    "forbidden_am": ["ውጤት", "ቁጥሮች", "ማሳያ", "ሰሌዳ", "ጨዋታ"]
+  },
+  "taboo_sports_292": {
+    "target_am": "ግማሽ ጊዜ",
+    "forbidden_am": ["እረፍት", "መካከል", "እረፍት", "ጨዋታ", "መነጋገር"]
+  },
+  "taboo_sports_293": {
+    "target_am": "ኦፍሳይድ",
+    "forbidden_am": ["መስመር", "ባንዲራ", "እግር ኳስ", "ደንብ", "አቀማመጥ"]
+  },
+  "taboo_sports_294": {
+    "target_am": "ተተኪ",
+    "forbidden_am": ["መተካት", "መቀመጫ", "መቀየር", "ተጫዋች", "መምጣት"]
+  },
+  "taboo_sports_295": {
+    "target_am": "ካፒቴን",
+    "forbidden_am": ["መሪ", "የክንድ ባንድ", "ቡድን", "መምራት", "ቶስ"]
+  },
+  "taboo_sports_296": {
+    "target_am": "ጉዳት",
+    "forbidden_am": ["መጎዳት", "ህመም", "ሐኪም", "ውጭ", "ተሸካሚ"]
+  },
+  "taboo_sports_297": {
+    "target_am": "ደጋፊዎች",
+    "forbidden_am": ["ደጋፊዎች", "ቡድን", "ቡድን", "አባላት", "መከተል"]
+  },
+  "taboo_sports_298": {
+    "target_am": "አትሌቲክስ",
+    "forbidden_am": ["ትራክ", "ሜዳ", "ሮጥ", "ውድድሮች", "መወዳደር"]
+  },
+  "taboo_sports_299": {
+    "target_am": "ረጅም ዝላተኛ",
+    "forbidden_am": ["አሸዋ", "መዝለል", "ርቀት", "ሮጥ", "ጉድጓድ"]
+  },
+  "taboo_sports_300": {
+    "target_am": "ቃልጥማ",
+    "forbidden_am": ["መያዝ", "ማት", "ማጣበቅ", "ውጊያ", "መያዝ"]
+  },
+  "taboo_sports_301": {
+    "target_am": "ጠረጴዛ ቴኒስ",
+    "forbidden_am": ["ፒንግ", "ፓድል", "ኳስ", "ጠረጴዛ", "መረብ"]
+  },
+  "taboo_sports_302": {
+    "target_am": "ቼዝ",
+    "forbidden_am": ["ሰሌዳ", "ንጉሥ", "እቴጌ", "መንቀሳቀስ", "ቼክሜት"]
+  },
+  "taboo_sports_303": {
+    "target_am": "ማሞቅ",
+    "forbidden_am": ["መዘርጋት", "ከፊት", "ማዘጋጀት", "ጡንቻ", "ቀላል"]
+  }
+}

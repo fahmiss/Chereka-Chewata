@@ -1,3 +1,7 @@
+import type { ContentLanguage } from '../settings/types';
+
+export type { ContentLanguage };
+
 export type ContentLevel = 'family' | 'friends' | 'spicy';
 
 export type TabooCard = {
@@ -49,6 +53,7 @@ export type TabooPhase =
 export type TabooSession = {
   sessionId: string;
   setup: TabooSetup;
+  contentLanguage: ContentLanguage;
   phase: TabooPhase;
   teamA: string[];
   teamB: string[];

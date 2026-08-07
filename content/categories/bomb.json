@@ -1,0 +1,10 @@
+[
+  { "id": "ethiopia", "name_en": "Ethiopia", "name_am": "ኢትዮጵያ", "sort_order": 10, "active": true },
+  { "id": "food_and_drink", "name_en": "Food and Drink", "name_am": "ምግብ እና መጠጥ", "sort_order": 20, "active": true },
+  { "id": "places", "name_en": "Places", "name_am": "ቦታዎች", "sort_order": 30, "active": true },
+  { "id": "entertainment", "name_en": "Entertainment", "name_am": "መዝናኛ", "sort_order": 40, "active": true },
+  { "id": "sports", "name_en": "Sports", "name_am": "ስፖርት", "sort_order": 50, "active": true },
+  { "id": "everyday", "name_en": "Everyday Life", "name_am": "የዕለት ተዕለት ኑሮ", "sort_order": 60, "active": true },
+  { "id": "nature", "name_en": "Animals and Nature", "name_am": "እንስሳት እና ተፈጥሮ", "sort_order": 70, "active": true },
+  { "id": "school_and_work", "name_en": "School and Work", "name_am": "ትምህርት እና ሥራ", "sort_order": 80, "active": true }
+]

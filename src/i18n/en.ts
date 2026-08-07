@@ -21,8 +21,8 @@ export const en = {
   'language.interfaceEn': 'Menus and buttons in English',
   'language.interfaceAm': 'Menus in Amharic',
   'language.contentEn': 'Game decks in English',
-  'language.contentAm': 'Impostor secrets in Amharic (other games stay English for now)',
-  'language.contentMixed': 'Impostor shows Amharic · English together',
+  'language.contentAm': 'Game cards in Amharic',
+  'language.contentMixed': 'Cards show Amharic · English together',
   'language.contentAmSoon': 'Coming when the Amharic deck ships',
   'language.contentMixedSoon': 'Coming when bilingual decks ship',
 
@@ -31,10 +31,10 @@ export const en = {
   'settings.interfaceLanguage': 'Interface language',
   'settings.contentLanguage': 'Content language',
   'settings.contentNote':
-    'Impostor supports English, Amharic, and Mixed. Other games still use the English deck.',
+    'All five games support English, Amharic, and Mixed content.',
   'settings.feel': 'Feel',
   'settings.sound': 'Sound',
-  'settings.soundHint': 'Short cues during play. Effects roll out next.',
+  'settings.soundHint': 'Sound effects and gameplay cues.',
   'settings.vibration': 'Vibration',
   'settings.vibrationHint': 'Haptics on taps, reveals, and votes.',
   'settings.reduceMotion': 'Reduce motion',
@@ -61,7 +61,7 @@ export const en = {
   'settings.termsTitle': 'Terms',
   'settings.termsMessage':
     'For private fun with people you trust. You are responsible for the content level your group chooses and for keeping secret screens away from other players. Full legal terms will ship with the store release.',
-  'settings.version': 'v0.1.0 · Impostor EN/AM',
+  'settings.version': 'v0.1.0 · EN/AM decks',
 
   'game.howToPlay': 'How to play',
   'game.comingSoon': 'Coming soon',

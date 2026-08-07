@@ -15,6 +15,7 @@ Chereka Chewata is a one-phone party-game app built for Ethiopian living rooms, 
 | **Taboo** | Timed team word explanation | Teams |
 | **Who’s Most Likely To** | Simultaneous pointing | Optional |
 | **Would You Rather** | Forced choices + debate | No |
+| **Who’s Got the Bomb?** | Hot-potato category answers | Yes |
 
 Game names are temporary familiar names. Ethiopian/localized names can land later without changing mechanics.
 
@@ -110,9 +111,10 @@ Build in this order (from the product spec):
 7. Taboo
 8. Who’s Most Likely To
 9. Would You Rather
-10. Settings, reports, accessibility polish
+10. Who’s Got the Bomb?
+11. Settings, reports, accessibility polish
 
-Do not build all five games’ shells before one Impostor session plays end to end.
+Do not build all six games’ shells before one Impostor session plays end to end.
 
 ## Out of scope (MVP)
 
@@ -120,7 +122,6 @@ Do not build all five games’ shells before one Impostor session plays end to e
 - Online multiplayer
 - Premium pack commerce (restore-purchases stub only later)
 - Full Amharic content library (UI language switch can exist; decks stay English until packs are written)
-- Two-Impostor mode (may ship after one-Impostor is stable)
 - Digital voting for Who’s Most Likely To
 - Majority Prediction mode for Would You Rather
 

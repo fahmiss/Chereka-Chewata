@@ -11,15 +11,16 @@
 
 ## 1. MVP Game Lineup
 
-Chereka Chewata should launch with these five games:
+Chereka Chewata should launch with these six games:
 
 1. **Impostor**
 2. **Who’s the Liar?**
 3. **Taboo**
 4. **Who’s Most Likely To**
 5. **Would You Rather**
+6. **Who’s Got the Bomb?**
 
-### Why these five
+### Why these six
 
 Together, they cover the main types of social party-game play:
 
@@ -30,6 +31,7 @@ Together, they cover the main types of social party-game play:
 | Taboo | Fast word explanation | Yes | Yes | Teams, family, friends |
 | Who’s Most Likely To | Group voting and conversation | No by default | No | Friends, coworkers, family |
 | Would You Rather | Forced choices and debate | No by default | No | Any group |
+| Who’s Got the Bomb? | Fast category answers and hot-potato tension | Yes | Hidden fuse | Friends, family, mixed groups |
 
 This is enough variety for an MVP without creating too many systems at once.
 
@@ -43,7 +45,7 @@ These rules apply across the MVP unless a game overrides them.
 
 - One shared phone or tablet.
 - No account required to begin playing.
-- All five launch games must work offline after installation and content download.
+- All six launch games must work offline after installation and content download.
 - The app must never require every player to install the app.
 
 ## 2.2 Language model
@@ -77,6 +79,7 @@ Player names are required for:
 
 - Impostor
 - Who’s the Liar?
+- Who’s Got the Bomb?
 - Optional scored versions of Taboo
 - Optional host-led versions of Who’s Most Likely To
 
@@ -1257,7 +1260,7 @@ The app should never force experienced players to read the full rules before pla
 
 Unless user testing gives strong evidence otherwise:
 
-- The first five games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, and Would You Rather.
+- The six launch games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, Would You Rather, and Who’s Got the Bomb?.
 - All games are designed for one shared phone.
 - No account is required.
 - Offline play is required.
@@ -1373,7 +1376,7 @@ Required elements:
 - Chereka Chewata wordmark or compact header
 - Settings button
 - Featured game area, with Impostor as the default hero game
-- Cards for all five MVP games
+- Cards for all six MVP games
 - Recently played or Play Again section, once history exists
 - Optional content-level indicator
 
@@ -2395,7 +2398,7 @@ Step 6 is considered implemented in design when:
 
 - The logo mark works at app-icon size.
 - The home, player setup, and secret reveal screens use the same tokens.
-- All five game colors remain readable on the shared dark foundation.
+- All six game colors remain readable on the shared dark foundation.
 - English and Amharic samples fit without clipping or unrelated typography.
 - Primary actions are obvious without instruction.
 - Secret cards cannot be exposed accidentally through normal navigation.
@@ -2646,7 +2649,36 @@ Step 7 is complete. The design system is sufficiently locked to begin the Impost
 
 ---
 
-# 19. Research Basis
+# 19. Game Six: Who’s Got the Bomb?
+
+## 19.1 Familiar game concept
+
+The phone displays a category and chooses who starts. The current holder says a
+new valid answer and physically passes the phone. A short randomized hidden fuse
+continues while the phone moves. Whoever holds it when it explodes loses the
+round.
+
+## 19.2 Player count and defaults
+
+- 2–15 named players
+- No lives, elimination, scoring, or winner tracking
+- One short randomized fuse range, with no player-facing speed control
+
+## 19.3 Round flow
+
+1. Show a public category and randomly choose who starts.
+2. Start a hidden randomized fuse; never show its remaining duration.
+3. The holder says a unique valid answer and immediately hands the phone to the
+   next player; no app interaction is required between answers.
+4. Physical passing does not reset or pause the fuse.
+5. On explosion, the group identifies the holder, who loses that round.
+6. Start another round with a new category and randomly chosen starter.
+
+The fuse deadline remains in in-memory session state, never route parameters.
+Backgrounding the app does not pause the fuse. Category cards follow the shared
+history/report rules and support English, Amharic, and Mixed content modes.
+
+# 20. Research Basis
 
 This specification follows familiar versions of these games rather than copying any single app’s exact wording, interface, artwork, or proprietary content.
 
@@ -2658,6 +2690,8 @@ Key references consulted:
 - Public Who’s the Liar rules describing one different question and group voting.
 - Common Who’s Most Likely To rules using simultaneous pointing and no required winner.
 - Common Would You Rather rules using two forced choices and optional explanation or debate.
+- Splash’s public listing and common hot-potato word games for the category,
+  answer, pass, and hidden-explosion loop used by Who’s Got the Bomb?.
 
 ### Reference links
 
@@ -2667,4 +2701,3 @@ Key references consulted:
 - https://www.whostheliar.com/
 - https://pickmeupgame.com/blogs/pick-me-up-blog/how-to-play-who-s-most-likely-to-game-rules-and-party-setup
 - https://wouldyourather.app/how-to-play-would-you-rather/
-

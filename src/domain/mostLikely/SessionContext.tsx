@@ -16,6 +16,7 @@ import {
   tickCountdown,
 } from './machine';
 import type { MostLikelySession, MostLikelySetup } from './types';
+import { useSettings } from '../settings/SettingsContext';
 
 type SessionContextValue = {
   session: MostLikelySession | null;
@@ -38,19 +39,23 @@ type SessionContextValue = {
 const SessionContext = createContext<SessionContextValue | null>(null);
 
 export function MostLikelySessionProvider({ children }: { children: ReactNode }) {
+  const { settings } = useSettings();
   const [session, setSession] = useState<MostLikelySession | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const startSession = useCallback((setup: MostLikelySetup) => {
-    const created = createMostLikelySession(setup);
-    if ('error' in created) {
-      setError(created.error);
-      return { error: created.error };
-    }
-    setError(null);
-    setSession(created);
-    return { session: created };
-  }, []);
+  const startSession = useCallback(
+    (setup: MostLikelySetup) => {
+      const created = createMostLikelySession(setup, settings.contentLanguage);
+      if ('error' in created) {
+        setError(created.error);
+        return { error: created.error };
+      }
+      setError(null);
+      setSession(created);
+      return { session: created };
+    },
+    [settings.contentLanguage],
+  );
 
   const clearSession = useCallback(() => {
     setSession(null);

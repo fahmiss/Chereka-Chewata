@@ -1,3 +1,7 @@
+import type { ContentLanguage } from '../settings/types';
+
+export type { ContentLanguage };
+
 export type ContentLevel = 'family' | 'friends' | 'spicy';
 
 export type LiarPair = {
@@ -41,7 +45,6 @@ export type LiarPhase =
   | 'handoff'
   | 'reveal'
   | 'answer_order'
-  | 'answers'
   | 'discussion'
   | 'group_accuse'
   | 'voting_handoff'
@@ -52,13 +55,13 @@ export type LiarPhase =
 export type LiarSession = {
   sessionId: string;
   setup: LiarSetup;
+  contentLanguage: ContentLanguage;
   phase: LiarPhase;
   pair: LiarPair;
   liarPlayerId: string;
   revealOrder: string[];
   revealIndex: number;
   answerOrder: string[];
-  answerIndex: number;
   voteOrder: string[];
   voteIndex: number;
   votes: Record<string, string>;

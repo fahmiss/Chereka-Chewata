@@ -58,6 +58,16 @@ export const GAMES: GameCatalogEntry[] = [
     playable: true,
   },
   {
+    id: 'bomb',
+    name: "Who's Got the Bomb?",
+    tagline: 'Name an answer, pass the phone, and hope the hidden fuse keeps ticking.',
+    playerCountLabel: '2–15 players',
+    sessionLengthLabel: '~10 min',
+    accent: gameAccent.bomb,
+    icon: 'bomb',
+    playable: true,
+  },
+  {
     id: 'would_you_rather',
     name: 'Would You Rather',
     tagline: 'Pick between two difficult choices and defend your answer.',

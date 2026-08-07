@@ -1,10 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
+import { preload } from 'expo-audio';
 import { router } from 'expo-router';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Animated, AppState, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
+import { localizeText } from '../../content/localize';
 import {
-  currentAnswerPlayerId,
   currentRevealPlayerId,
   currentVoterId,
   getPlayerName,
@@ -15,6 +16,7 @@ import {
 import { useLiarSession } from '../../domain/liar/SessionContext';
 import type { LiarSession } from '../../domain/liar/types';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
+import { useSoundEffect } from '../../theme/useSoundEffect';
 import {
   duration,
   easeOut,
@@ -35,6 +37,15 @@ import { Surface } from '../ui/Surface';
 import { ReportCardButton } from '../session/ReportCardButton';
 
 const ACCENT = color.gameLiar;
+const REVEAL_SOUND = require('../../../assets/sounds/secret-reveal.wav');
+const VERDICT_SOUND = require('../../../assets/sounds/verdict-sting.wav');
+const WIN_SOUND = require('../../../assets/sounds/result-win.wav');
+const LOSS_SOUND = require('../../../assets/sounds/result-loss.wav');
+
+void preload(REVEAL_SOUND);
+void preload(VERDICT_SOUND);
+void preload(WIN_SOUND);
+void preload(LOSS_SOUND);
 
 function endGame(clearSession: () => void) {
   router.replace('/home');
@@ -190,6 +201,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
   const fade = useRef(new Animated.Value(0)).current;
   const revealScale = useRef(new Animated.Value(0.96)).current;
   const reduced = useReducedMotion();
+  const playReveal = useSoundEffect(REVEAL_SOUND, 0.5);
 
   useEffect(() => {
     const sub = AppState.addEventListener('change', (state) => {
@@ -232,6 +244,11 @@ function RevealPhase({ session }: { session: LiarSession }) {
       }),
     ]).start();
   }, [unlocked, fade, revealScale, reduced]);
+
+  useEffect(() => {
+    if (!unlocked) return;
+    return playReveal();
+  }, [playReveal, unlocked]);
 
   const startHold = () => {
     if (unlocked) return;
@@ -364,7 +381,16 @@ function RevealPhase({ session }: { session: LiarSession }) {
           >
             <Icon name="eye" size={30} color={cardAccent} strokeWidth={1.8} />
             <Text style={[type.eyebrow, { color: alpha(cardAccent, 0.9) }]}>Your question</Text>
-            <Text style={styles.secretQuestion} numberOfLines={5} adjustsFontSizeToFit>
+            <Text
+              style={[
+                styles.secretQuestion,
+                session.contentLanguage !== 'en'
+                  ? { fontFamily: family.ethiopic.medium }
+                  : null,
+              ]}
+              numberOfLines={5}
+              adjustsFontSizeToFit
+            >
               {question}
             </Text>
             <Text style={[type.body, styles.secretHint]}>
@@ -416,17 +442,17 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow="Answer order"
+      eyebrow="Answers"
       stage="clues"
-      title={`${name} answers first`}
-      subtitle="Everyone can look at the screen again."
+      title={`${name} starts`}
+      subtitle="One concise answer each, in order. Do not paraphrase the question."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label="Begin answers"
+          label="Start discussion"
           icon="megaphone"
-          onPress={() => dispatch.beginAnswers()}
+          onPress={() => dispatch.startDiscussion()}
         />
       }
     >
@@ -440,40 +466,6 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
           />
         ))}
       </ScrollView>
-    </SessionShell>
-  );
-}
-
-function AnswersPhase({ session }: { session: LiarSession }) {
-  const { dispatch, clearSession } = useLiarSession();
-  const playerId = currentAnswerPlayerId(session);
-  const name = playerId ? getPlayerName(session, playerId) : 'Player';
-  const index = session.answerIndex + 1;
-  const total = session.answerOrder.length;
-  const last = index >= total;
-
-  return (
-    <SessionShell
-      eyebrow={`Answers · ${index}/${total}`}
-      stage="clues"
-      title={`${name}'s turn`}
-      subtitle="One concise answer. Do not paraphrase the question."
-      accent={ACCENT}
-      onEndGame={() => endGame(clearSession)}
-      footer={
-        <PrimaryButton
-          label={last ? 'Everyone answered' : 'Next player'}
-          icon="chevronRight"
-          onPress={() => dispatch.nextAnswerOrDiscuss()}
-        />
-      }
-    >
-      <Brief icon="megaphone">
-        <Text style={[type.displayMd, styles.briefTitle]}>{name}</Text>
-        <Text style={[type.body, styles.briefBody]}>
-          Answer aloud. Keep it short.
-        </Text>
-      </Brief>
     </SessionShell>
   );
 }
@@ -611,6 +603,22 @@ function ResultPhase({ session }: { session: LiarSession }) {
   const topVotes = summary.reduce((max, row) => Math.max(max, row.count), 0);
   const enter = useEnterAnimation(1, 20);
   const [deckExhausted, setDeckExhausted] = useState(false);
+  const playVerdict = useSoundEffect(VERDICT_SOUND, 0.62);
+  const playGroupWin = useSoundEffect(WIN_SOUND, 0.72);
+  const playLiarWin = useSoundEffect(LOSS_SOUND, 0.64);
+
+  useEffect(() => {
+    const stopVerdict = playVerdict();
+    let stopResult: (() => void) | undefined;
+    const id = setTimeout(() => {
+      stopResult = groupWon ? playGroupWin() : playLiarWin();
+    }, 500);
+    return () => {
+      clearTimeout(id);
+      stopVerdict?.();
+      stopResult?.();
+    };
+  }, [groupWon, playGroupWin, playLiarWin, playVerdict]);
 
   return (
     <SessionShell
@@ -662,12 +670,34 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
         <Surface accent={color.brandPrimary} active contentStyle={styles.questionCard}>
           <Text style={[type.eyebrow, { color: color.brandPrimary }]}>Common question</Text>
-          <Text style={[type.titleMd, styles.questionText]}>{session.pair.main_question_en}</Text>
+          <Text
+            style={[
+              type.titleMd,
+              styles.questionText,
+              session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.medium } : null,
+            ]}
+          >
+            {localizeText(session.contentLanguage, {
+              en: session.pair.main_question_en,
+              am: session.pair.main_question_am,
+            })}
+          </Text>
         </Surface>
 
         <Surface accent={ACCENT} active contentStyle={styles.questionCard}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>Liar’s question</Text>
-          <Text style={[type.titleMd, styles.questionText]}>{session.pair.liar_question_en}</Text>
+          <Text
+            style={[
+              type.titleMd,
+              styles.questionText,
+              session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.medium } : null,
+            ]}
+          >
+            {localizeText(session.contentLanguage, {
+              en: session.pair.liar_question_en,
+              am: session.pair.liar_question_am,
+            })}
+          </Text>
         </Surface>
         <ReportCardButton game="whos_the_liar" cardId={session.pair.id} />
 
@@ -720,8 +750,6 @@ export function LiarSessionView({ session }: { session: LiarSession }) {
       return <RevealPhase session={session} />;
     case 'answer_order':
       return <AnswerOrderPhase session={session} />;
-    case 'answers':
-      return <AnswersPhase session={session} />;
     case 'discussion':
       return <DiscussionPhase session={session} />;
     case 'group_accuse':
@@ -792,9 +820,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  briefTitle: {
-    color: color.textPrimary,
   },
   briefBody: {
     color: color.textSecondary,

@@ -22,6 +22,7 @@ import {
   resumeTurn,
 } from './machine';
 import type { TabooSession, TabooSetup } from './types';
+import { useSettings } from '../settings/SettingsContext';
 
 type SessionContextValue = {
   session: TabooSession | null;
@@ -48,19 +49,25 @@ type SessionContextValue = {
 const SessionContext = createContext<SessionContextValue | null>(null);
 
 export function TabooSessionProvider({ children }: { children: ReactNode }) {
+  const { settings } = useSettings();
   const [session, setSession] = useState<TabooSession | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const startSession = useCallback((setup: TabooSetup) => {
-    const created = createTabooSession(setup);
-    if ('error' in created) {
-      setError(created.error);
-      return { error: created.error };
-    }
-    setError(null);
-    setSession(created);
-    return { session: created };
-  }, []);
+  const startSession = useCallback(
+    (setup: TabooSetup) => {
+      const created = createTabooSession(setup, {
+        contentLanguage: settings.contentLanguage,
+      });
+      if ('error' in created) {
+        setError(created.error);
+        return { error: created.error };
+      }
+      setError(null);
+      setSession(created);
+      return { session: created };
+    },
+    [settings.contentLanguage],
+  );
 
   const clearSession = useCallback(() => {
     setSession(null);
