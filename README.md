@@ -1,133 +1,181 @@
 # Chereka Chewata
 
+<p align="center">
+  <img src="assets/mascot/moon-ready.png" alt="Chereka Chewata moon mascot" width="160" />
+</p>
+
 > Pass the phone. Start the chaos. — ጨረቃ ጨዋታ
 
-Chereka Chewata is a one-phone party-game app built for Ethiopian living rooms, dorm floors, and diaspora kitchens. One shared device, no accounts required, offline after content is on the phone. Pass the phone, reveal secrets, argue, vote, laugh.
+Chereka Chewata is a one-phone party-game app built for Ethiopian living rooms,
+dorm floors, and diaspora kitchens. One shared device, no accounts required:
+pass the phone, reveal secrets, argue, vote, and laugh.
 
-**Chereka** means moon — the identity lives after dark, lit by lamplight rather than daylight. **Chewata** means game.
+**Chereka** means moon. **Chewata** means game. The identity lives after dark,
+lit by lamplight rather than daylight.
 
-## MVP games
+**[Play the live web build →](https://chereka-chewata.vercel.app)**
 
-| Game | Experience | Needs names? |
-|---|---|---|
-| **Impostor** (hero) | Bluffing + deduction; secret word | Yes |
-| **Who’s the Liar?** | Personal answers + deduction | Yes |
-| **Taboo** | Timed team word explanation | Teams |
-| **Who’s Most Likely To** | Simultaneous pointing | Optional |
-| **Would You Rather** | Forced choices + debate | No |
-| **Who’s Got the Bomb?** | Hot-potato category answers | Yes |
+The web build is a production preview of the same Expo app used for iOS and
+Android development. Native store releases are not published yet.
 
-Game names are temporary familiar names. Ethiopian/localized names can land later without changing mechanics.
+## Current status
+
+- All six MVP games are playable end to end.
+- Interface language: English or Amharic.
+- Content language: English, Amharic, or Mixed.
+- Native builds bundle all gameplay content for offline sessions.
+- No account or gameplay backend is required.
+- The `main` branch deploys automatically to Vercel.
+
+## Games
+
+| Game | Experience | Players | Names? |
+|---|---|---:|---|
+| **Impostor** (hero) | Find the player who does not know the secret word | 3–15 | Yes |
+| **Who’s the Liar?** | One player answers a different question; spot them | 3–15 | Yes |
+| **Taboo** | Timed team word explanation with forbidden clues | 4–20 | Teams |
+| **Who’s Most Likely To** | Read a prompt and point at the same time | 3+ | Optional |
+| **Who’s Got the Bomb?** | Give category answers while passing a hidden fuse | 2–15 | Yes |
+| **Would You Rather** | Choose between two difficult options and debate | 2+ | No |
+
+The familiar game names are temporary. Localized names can land later without
+changing the underlying mechanics.
+
+## Product principles
+
+- **One phone, one room:** the app supports the conversation instead of
+  replacing it.
+- **Private when necessary:** roles, questions, and votes use deliberate
+  pass-the-phone reveals.
+- **Local-first:** bundled decks, settings, history, and reports do not require
+  an account.
+- **Ethiopian by substance:** culture lives in the language and cards, not in
+  decorative stereotypes.
+- **Safe for different groups:** Family, Friends, and opt-in Spicy content
+  levels are independently selectable.
+- **Accessible by design:** large touch targets, high contrast, optional sound
+  and vibration, and reduced-motion support.
+
+## Content library
+
+The current bundled library contains **1,151 bilingual content items**:
+
+| Game | Cards |
+|---|---:|
+| Impostor | 252 words |
+| Who’s the Liar? | 171 question pairs |
+| Taboo | 330 cards |
+| Who’s Most Likely To | 180 prompts |
+| Would You Rather | 170 dilemmas |
+| Who’s Got the Bomb? | 48 categories |
+
+Decks live under `content/` and are validated before release. See
+[`CONTENT.md`](CONTENT.md) before adding or editing cards.
 
 ## Stack
 
-- Expo (React Native) + TypeScript — one codebase for **iOS** and **Android**
-- Expo Router (file-based navigation)
-- AsyncStorage for settings, last group, card history, local reports
-- Bundled English starter content for the functionality-first build; Amharic packs later
+- Expo SDK 57, React Native, and TypeScript
+- Expo Router for file-based navigation across iOS, Android, and web
+- AsyncStorage for settings, saved groups, card history, and local reports
+- Bundled JSON content for offline play
+- Vercel for the static web deployment
 
-No backend is required for the Impostor vertical slice. Accounts, remote packs, and analytics are deferred.
+There is no gameplay backend in the MVP. Active secrets remain in memory and
+are cleared when a session ends.
 
 ## Architecture
 
 ```mermaid
 flowchart TB
-    subgraph Surfaces["One Expo app — iOS + Android"]
+    subgraph Surfaces["One Expo app — iOS · Android · Web"]
         Home["Home / game library"]
-        Setup["Shared setup steps"]
-        Session["Active session state machine"]
+        Setup["Shared setup"]
+        Session["Game session state machines"]
     end
 
     Home --> Setup
     Setup --> Session
 
-    Session --> Handoff["Pass-the-phone + secret reveal"]
-    Session --> Play["Public play screens"]
-    Session --> Vote["Private voting"]
+    Session --> Handoff["Private handoff + reveal"]
+    Session --> Play["Public play"]
+    Session --> Vote["Group or private voting"]
     Session --> Result["Round / session result"]
 
-    Content["Bundled content JSON<br/>content/"] --> Session
+    Content["Bundled bilingual content<br/>content/"] --> Session
     Tokens["Design tokens<br/>src/theme/"] --> Surfaces
     Storage["AsyncStorage<br/>settings · groups · history · reports"] --> Surfaces
 
     Spec["docs/PRODUCT_SPEC.md"] -.->|rules + UX| Session
-    Brand["design-reference/brand-identity/"] -.->|visual lock| Tokens
+    Brand["design-reference/"] -.->|visual lock| Tokens
 ```
 
-Gameplay is driven by an in-memory **session state machine**. Secret roles, words, and votes live in session state only — never in route params or URLs. Setup choices (players, categories, content level) are preserved when navigating back through setup; secret screens are not kept in history.
+Gameplay is driven by in-memory session state machines. Secret roles, words,
+questions, and votes are never stored in route parameters, deep links, or
+analytics payloads. Setup choices may survive normal navigation; revealed
+secrets do not.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the Impostor round lifecycle, content model, and secret-safety rules.
-
-## Product & design sources of truth
-
-| Document | Role |
-|---|---|
-| [`docs/PRODUCT_SPEC.md`](docs/PRODUCT_SPEC.md) | Living product, game rules, UX flows, locked MVP decisions (v0.4) |
-| [`ARCHITECTURE.md`](ARCHITECTURE.md) | App structure, session machine, content/storage boundaries |
-| [`TASKS.md`](TASKS.md) | Open work, implementation order, shipped notes |
-| [`CONTENT.md`](CONTENT.md) | How to grow bundled card decks |
-| [`design-reference/brand-identity/`](design-reference/brand-identity/) | Brand board handoff (Step 7 visual lock) |
-| [`src/theme/tokens.ts`](src/theme/tokens.ts) | Implementation tokens — Lamp Honey CTA, midnight surfaces, game accents |
-
-Where Step 6 and Step 7 in the product spec disagree, **Step 7 wins**.
+See [`ARCHITECTURE.md`](ARCHITECTURE.md) for session lifecycles, content
+boundaries, storage rules, and secret-safety requirements.
 
 ## Quick start
 
+Requires Node.js 20+.
+
 ```bash
 npm install
-npm start          # Expo dev server — press i / a for iOS / Android
-npm run ios        # iOS simulator (macOS + Xcode)
-npm run android    # Android emulator
+npm start          # Start Expo and choose a target
+npm run web        # Run the web app
+npm run ios        # Build and run the iOS development app (macOS + Xcode)
+npm run android    # Build and run the Android development app
 ```
 
-Requires Node 20+, and Xcode and/or Android Studio for simulators. Physical devices can use Expo Go during early development.
+The native commands require Xcode or Android Studio. Physical-device testing
+can use a local development build; Expo Go may also work for supported flows.
+
+### Validation
+
+```bash
+npm run typecheck
+npm run validate:content
+npx expo export -p web
+```
+
+The production web export is written to `dist/` and deployed using
+[`vercel.json`](vercel.json).
 
 ## Project layout
 
 ```text
 app/                      Expo Router screens
 src/
-  components/             Shared UI + game shells
-  content/                Content loaders
-  domain/                 Game rules + session machines
-  i18n/                   Interface strings (EN first)
-  storage/                AsyncStorage helpers
-  theme/                  Locked design tokens
-content/                  Bundled card decks (JSON)
-docs/PRODUCT_SPEC.md      Full MVP specification
-design-reference/         Brand board + assets
+  components/             Shared UI and game-specific views
+  content/                Content loaders and localization helpers
+  domain/                 Game rules, setup state, and session machines
+  i18n/                   English and Amharic interface strings
+  storage/                Settings, history, groups, and reports
+  theme/                  Locked visual tokens
+content/                  Bundled bilingual game decks
+assets/                   Brand, mascot, icon, and sound assets
+docs/PRODUCT_SPEC.md      Product rules and UX decisions
+design-reference/         Brand-system source material
+scripts/                  Content validation and asset-generation tools
+vercel.json               Production web deployment configuration
 ```
 
-## Implementation priority
+## Sources of truth
 
-Build in this order (from the product spec):
+| Document | Role |
+|---|---|
+| [`docs/PRODUCT_SPEC.md`](docs/PRODUCT_SPEC.md) | Living product specification and locked game rules |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Session machines, secrets, storage, and content boundaries |
+| [`TASKS.md`](TASKS.md) | Shipped work, open polish, and deferred roadmap |
+| [`CONTENT.md`](CONTENT.md) | Deck-writing and content-growth guidance |
+| [`AGENTS.md`](AGENTS.md) | Repository guidance for coding agents |
+| [`design-reference/brand-identity/`](design-reference/brand-identity/) | Brand-board handoff |
+| [`src/theme/tokens.ts`](src/theme/tokens.ts) | Runtime implementation tokens |
 
-1. Home + game details
-2. Shared setup components
-3. Pass-the-phone + secret reveal
-4. **Impostor full flow** ← first complete vertical slice
-5. Shared voting + results
-6. Who’s the Liar?
-7. Taboo
-8. Who’s Most Likely To
-9. Would You Rather
-10. Who’s Got the Bomb?
-11. Settings, reports, accessibility polish
-
-Do not build all six games’ shells before one Impostor session plays end to end.
-
-## Out of scope (MVP)
-
-- User accounts / cloud sync
-- Online multiplayer
-- Premium pack commerce (restore-purchases stub only later)
-- Full Amharic content library (UI language switch can exist; decks stay English until packs are written)
-- Digital voting for Who’s Most Likely To
-- Majority Prediction mode for Would You Rather
-
-## Roadmap & tasks
-
-Active work and the Impostor slice checklist live in [`TASKS.md`](TASKS.md). Update it as items land.
+Where exploratory design material and the Step 7 visual lock disagree, Step 7
+and `src/theme/tokens.ts` win.
 
 ## Brand snapshot
 
@@ -135,46 +183,19 @@ Active work and the Impostor slice checklist live in [`TASKS.md`](TASKS.md). Upd
 - **Background:** Midnight `#0D0B1C` / Void `#080714`
 - **Surfaces:** Plum `#1B1533` / Raised `#241C43`
 - **Text:** Moonlight `#F6EFE2`
-- **Type:** Outfit (display) · Plus Jakarta Sans (body) · Space Mono (utility) · Noto Sans Ethiopic (Amharic)
-- **Mark:** Crescent moon + three orbiting game dots
+- **Type:** Outfit · Plus Jakarta Sans · Space Mono · Noto Sans Ethiopic
+- **Mark:** Crescent moon with three orbiting game dots
 
----
+## MVP boundaries
 
-## Below is instructions for ai models
+The current release intentionally excludes:
 
-Before you begin, follow these instructions:
+- User accounts and cloud sync
+- Online multiplayer
+- Premium pack commerce
+- User-generated or remotely downloaded packs
+- Digital voting for Who’s Most Likely To
+- Majority Prediction mode for Would You Rather
+- Native App Store and Google Play distribution
 
-- Understand the request fully before making changes.
-- Implement all requested changes in one pass whenever possible.
-- Use your best engineering and design judgment for minor decisions. Don't stop to ask for confirmation unless there's a major ambiguity or it would significantly change functionality.
-- Keep the existing architecture, coding style, naming conventions, and design language consistent.
-- Prefer clean, maintainable, and production-ready solutions. Avoid unnecessary complexity or overengineering.
-- Make only the changes required for this request. Don't modify unrelated code unless it's necessary to support the requested changes.
-- Treat [`docs/PRODUCT_SPEC.md`](docs/PRODUCT_SPEC.md) and [`src/theme/tokens.ts`](src/theme/tokens.ts) as locked unless the user asks to change a product decision — record any override in [`TASKS.md`](TASKS.md).
-- Never put secret words, roles, or votes in route params, deep links, or analytics payloads.
-
-For this task, prioritize implementation speed.
-
-Do NOT automatically:
-
-- Run the development server.
-- Run builds.
-- Run linting.
-- Run type checking.
-- Run unit, integration, or E2E tests.
-- Open the simulator or browser.
-- Perform visual verification.
-- Take screenshots.
-- Repeatedly verify changes after each edit.
-
-I'll handle all testing and verification manually.
-
-If you notice an obvious issue while implementing, mention it in your final summary instead of running tools to investigate it.
-
-When you're finished, provide a concise summary of:
-
-- What changed
-- Any assumptions you made
-- Anything I should pay attention to while testing
-
-Now implement the following:
+Current polish and release work lives in [`TASKS.md`](TASKS.md).

@@ -21,7 +21,6 @@ export default function HomeScreen() {
     <Screen accent={color.brandPrimary}>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
-          <View style={styles.spacer} />
           <IconButton
             name="sliders"
             label={t('common.settings')}
@@ -87,23 +86,21 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: space[6],
     paddingBottom: space[12],
-    gap: space[6],
+    gap: space[5],
   },
   topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    marginTop: space[1],
-  },
-  spacer: {
-    flex: 1,
+    position: 'absolute',
+    top: space[1],
+    right: space[6],
+    zIndex: 1,
   },
   brand: {
     alignItems: 'center',
     gap: space[1],
+    paddingTop: space[3],
   },
   wordmark: {
-    marginTop: space[2],
+    marginTop: space[1],
     color: color.textPrimary,
     fontFamily: family.display.black,
     fontSize: 38,
@@ -116,13 +113,11 @@ const styles = StyleSheet.create({
     fontFamily: family.ethiopic.medium,
     fontSize: 18,
     lineHeight: 26,
-    marginTop: space[1],
     textAlign: 'center',
   },
   tagline: {
     color: color.textSecondary,
     textAlign: 'center',
-    marginTop: space[1],
     maxWidth: 280,
   },
   section: {
