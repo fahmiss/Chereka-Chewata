@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
   explosionShadow: { width: '100%', aspectRatio: 1, borderRadius: radius.extraLarge },
   explosionClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(color.dangerUrgency, 0.58), backgroundColor: color.surface },
   explosionArtwork: { width: '100%', height: '100%' },
-  explosionFlash: { ...StyleSheet.absoluteFillObject, backgroundColor: '#FFF2D6' },
+  explosionFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
   boomOverlay: { position: 'absolute', left: 0, right: 0, bottom: space[5], alignItems: 'center' },
   boomText: { color: color.dangerUrgency, fontFamily: family.display.black, fontSize: 48, lineHeight: 52, letterSpacing: 2.4, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 3 }, textShadowRadius: 12 },
   explosionCopy: { alignItems: 'center', gap: space[2] },
