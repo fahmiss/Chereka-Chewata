@@ -4,7 +4,7 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-08-07._
+_Last updated: 2026-08-15._
 
 ---
 
@@ -33,7 +33,7 @@ Vertical slice is playable. Follow-ups once someone runs a real table:
 ### Who’s Most Likely polish after first playtest (2026-08-05)
 - [ ] Optional digital voting mode
 - [ ] Grow prompts toward 300+
-- [ ] Couples / close-friends tags
+- [x] Couples / close-friends tags — landed as the general tags system, 2026-08-15
 
 ### Would You Rather polish after first playtest (2026-08-05)
 - [ ] Optional debate timer
@@ -49,6 +49,80 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Quiz seventh playable game (2026-08-15)
+
+- Added an equal-weight mode choice before setup: Pass & Play for no-name,
+  no-score casual trivia and Compete for 2–12 named players, round-robin turns,
+  +1 scoring, ties, and a final leaderboard.
+- Added mode-aware quick setup with multi-select categories, Easy / Medium /
+  Hard / Mixed knowledge difficulty, and 10 / 20 / 30 total questions.
+- Added a state-machine session flow with locked answer selection, randomized
+  four-choice positions, explicit answer reveal, optional bilingual explanation,
+  setting-aware sound/haptics, Pass & Play handoff pacing, rematches, and
+  non-automatic advancement.
+- Bundled 60 EN/AM questions: six per category and 20 per difficulty, including
+  Ethiopian content both in Ethiopia & Culture and across Football, Sports,
+  Entertainment, and Food & Drink.
+- Added recent-question preference, safe exhaustion recycling, local card
+  reports, Quiz-specific content validation, and optional source metadata.
+- Added the owner-provided curious Quiz moon as a clean transparent mascot for
+  Home, game detail, mode choice, handoff, and results.
+
+### Filled the categories left empty by the taxonomy migration (2026-08-15)
+
+- Added 164 new items (English + best-effort Amharic) across the 14 categories
+  that had 0 cards after the taxonomy migration: Impostor `sports` (20) +
+  `ethiopia_and_culture` (20); Liar `football` (15) + `random` (15); Taboo
+  `football` (20) + `ethiopia_and_culture` (20); Most Likely
+  `entertainment_pop_culture` (15) + `football` (15) + `random` (15) — the
+  last of which was missed in the original migration note below and only
+  found via a post-fill audit; Would You Rather `entertainment_pop_culture`
+  (12) + `football` (12) + `sports` (12) + `random` (12), same audit catch;
+  Bomb `football` (6).
+- New decks total: Impostor 292, Liar 201, Taboo 370, Most Likely 225, Would
+  You Rather 218, Bomb 54 (was 252/171/330/180/170/48).
+- **Amharic on the new items is best-effort, not native-reviewed** — worth a
+  native-speaker pass before these are treated as ship-quality, same caveat
+  as the rest of the deck.
+- `npm run validate:content` and `npm run typecheck` both clean after this
+  pass (typecheck has unrelated pre-existing failures in `app/game/[gameId]/mode.tsx`
+  and `src/domain/quiz/*` from separate in-progress Quiz-game work — not
+  touched here).
+
+### Standardized category taxonomy across all six games (2026-08-15)
+
+- Replaced each game's independent, inconsistent category list with a shared
+  11-name vocabulary (Everyday Life, Food & Drink, Entertainment & Pop
+  Culture, Football, Sports, Places & Travel, School & Work, People &
+  Relationships, Ethiopia & Culture, Animals & Nature, Random) — a category id
+  like `food_and_drink` now means the same thing, and gets the same icon, in
+  every game that has it.
+- Re-mapped all ~1,151 existing content items (Impostor 252, Liar 171, Taboo
+  330, Most Likely 180, Would You Rather 170, Bomb 48) to the new categories.
+  Item `id`s were left untouched (recent-history / exclusion logic is keyed by
+  id, never by category).
+- Ethiopian content stays distributed across normal topic categories (Tibs in
+  Food & Drink, Ethiopian musicians in Entertainment, Addis traffic in
+  Ethiopia & Culture) rather than being siloed into one bucket — see
+  `CONTENT.md` § Category taxonomy.
+- Added an optional `tags?: string[]` field to every content item type for
+  sub-topic markers that don't warrant their own category — former top-level
+  categories like Friends/Family/Diaspora/Weddings/Absurd/Deep became tags
+  under a broader category instead (e.g. Liar's `friends` category → `people_and_relationships`
+  + `tags: ["Friends"]`). Would You Rather's `absurd_choices`/`deep_choices`
+  (tone, not topic) were individually re-sorted into topical categories with
+  an `Absurd`/`Deep` tag.
+- Consolidated five separate per-game category-icon maps in
+  `app/game/[gameId]/setup/categories.tsx` into one shared `CATEGORY_ICONS`
+  map — this also fixes a pre-existing bug where Would You Rather had no icon
+  map of its own and silently borrowed Impostor's.
+- `scripts/validate-content.mjs` now cross-checks every item's `category_id`
+  against that game's `content/categories/*.json` registry and fails the
+  build on an orphaned/misspelled id (previously this passed silently and
+  just made items unreachable in the UI).
+- Fixed `src/content/categories.ts` (`getCategoryName`) to include Bomb's
+  categories — it previously covered the other five games only.
 
 ### Who’s Got the Bomb? sixth playable game (2026-08-07)
 
@@ -466,7 +540,7 @@ Secrets stay in memory only — never in route params.
 
 ## Locked product decisions (do not reopen without TASKS note)
 
-- Six launch games; Impostor is the hero / first vertical slice.
+- Seven playable games; Impostor remains the hero / first vertical slice.
 - One shared phone; no account required; offline play required.
 - Family / Friends / Spicy; Spicy off by default.
 - Lamp Honey primary CTA.

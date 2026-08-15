@@ -77,6 +77,16 @@ export const GAMES: GameCatalogEntry[] = [
     icon: 'shuffle',
     playable: true,
   },
+  {
+    id: 'quiz',
+    name: 'Quiz',
+    tagline: 'Answer four-choice trivia casually or compete for the top score.',
+    playerCountLabel: '2+ players',
+    sessionLengthLabel: '~10–20 min',
+    accent: gameAccent.quiz,
+    icon: 'question',
+    playable: true,
+  },
 ];
 
 export function getGame(id: string): GameCatalogEntry | undefined {

@@ -8,11 +8,6 @@
     "scheme": "chereka",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0D0B1C"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.cherekachewata.app"
@@ -34,7 +29,15 @@
     "plugins": [
       "expo-router",
       "expo-font",
-      "expo-splash-screen",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-logo.png",
+          "imageWidth": 150,
+          "resizeMode": "contain",
+          "backgroundColor": "#0D0B1C"
+        }
+      ],
       "expo-audio"
     ],
     "experiments": {

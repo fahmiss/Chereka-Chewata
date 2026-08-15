@@ -1,9 +1,11 @@
+import { getBombCategories } from './bomb';
 import { getImpostorCategories } from './impostor';
 import { localizeText } from './localize';
 import { getLiarCategories } from './liar';
 import { getMostLikelyCategories } from './mostLikely';
 import { getTabooCategories } from './taboo';
 import { getWouldRatherCategories } from './wouldRather';
+import { getQuizCategories } from './quiz';
 import type { ContentLanguage } from '../domain/settings/types';
 
 export function getCategoryName(
@@ -15,7 +17,9 @@ export function getCategoryName(
     getLiarCategories().find((item) => item.id === categoryId) ??
     getTabooCategories().find((item) => item.id === categoryId) ??
     getMostLikelyCategories().find((item) => item.id === categoryId) ??
-    getWouldRatherCategories().find((item) => item.id === categoryId);
+    getWouldRatherCategories().find((item) => item.id === categoryId) ??
+    getBombCategories().find((item) => item.id === categoryId) ??
+    getQuizCategories().find((item) => item.id === categoryId);
 
   if (!category) return 'Category';
   return localizeText(language, {

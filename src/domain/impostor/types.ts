@@ -9,6 +9,8 @@ export type ImpostorWord = {
   word_en: string;
   word_am?: string;
   category_id: string;
+  /** Optional sub-topic markers — not a second category. */
+  tags?: string[];
   hint_en: string;
   hint_am?: string;
   difficulty: 'easy' | 'medium' | 'hard';

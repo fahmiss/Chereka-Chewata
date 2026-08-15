@@ -11,6 +11,8 @@ export type TabooCard = {
   forbidden_en: string[];
   forbidden_am?: string[];
   category_id: string;
+  /** Optional sub-topic markers (e.g. Ethiopian, Work) — not a second category. */
+  tags?: string[];
   content_level: ContentLevel;
   difficulty: 'easy' | 'medium' | 'hard';
   active: boolean;

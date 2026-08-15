@@ -1,65 +1,51 @@
 [
   {
-    "id": "friends",
-    "name_en": "Friends",
+    "id": "everyday_life",
+    "name_en": "Everyday Life",
     "sort_order": 10,
     "active": true,
-    "name_am": "ጓደኞች"
+    "name_am": "የዕለት ተዕለት ኑሮ"
   },
   {
-    "id": "family",
-    "name_en": "Family",
+    "id": "school_and_work",
+    "name_en": "School & Work",
     "sort_order": 20,
     "active": true,
-    "name_am": "ቤተሰብ"
+    "name_am": "ትምህርት እና ሥራ"
   },
   {
-    "id": "school_and_university",
-    "name_en": "School and University",
+    "id": "people_and_relationships",
+    "name_en": "People & Relationships",
     "sort_order": 30,
     "active": true,
-    "name_am": "ትምህርት እና ዩኒቨርሲቲ"
+    "name_am": "ሰዎች እና ግንኙነቶች"
   },
   {
-    "id": "addis_life",
-    "name_en": "Addis Life",
+    "id": "entertainment_pop_culture",
+    "name_en": "Entertainment & Pop Culture",
     "sort_order": 40,
     "active": true,
-    "name_am": "የአዲስ ሕይወት"
+    "name_am": "መዝናኛ"
   },
   {
-    "id": "relationships",
-    "name_en": "Relationships",
+    "id": "football",
+    "name_en": "Football",
     "sort_order": 50,
     "active": true,
-    "name_am": "ግንኙነቶች"
+    "name_am": "እግር ኳስ"
   },
   {
-    "id": "work",
-    "name_en": "Work",
+    "id": "ethiopia_and_culture",
+    "name_en": "Ethiopia & Culture",
     "sort_order": 60,
     "active": true,
-    "name_am": "ሥራ"
+    "name_am": "ኢትዮጵያ እና ባህል"
   },
   {
-    "id": "diaspora",
-    "name_en": "Diaspora",
+    "id": "random",
+    "name_en": "Random",
     "sort_order": 70,
     "active": true,
-    "name_am": "የውጭ አገር ኑሮ"
-  },
-  {
-    "id": "weddings_and_events",
-    "name_en": "Weddings and Events",
-    "sort_order": 80,
-    "active": true,
-    "name_am": "ሰርግ እና ዝግጅቶች"
-  },
-  {
-    "id": "general_funny",
-    "name_en": "General Funny",
-    "sort_order": 90,
-    "active": true,
-    "name_am": "አጠቃላይ አስቂኝ"
+    "name_am": "የተለያዩ"
   }
 ]

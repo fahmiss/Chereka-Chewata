@@ -5,6 +5,7 @@ import { useLiarSetup } from './liar/SetupContext';
 import { useMostLikelySetup } from './mostLikely/SetupContext';
 import { useTabooSetup } from './taboo/SetupContext';
 import { useWouldRatherSetup } from './wouldRather/SetupContext';
+import { useQuizSetup } from './quiz/SetupContext';
 import { color } from '../theme/tokens';
 
 /**
@@ -18,6 +19,7 @@ export function useGameSetup(gameId: string | undefined) {
   const mostLikely = useMostLikelySetup();
   const wouldRather = useWouldRatherSetup();
   const bomb = useBombSetup();
+  const quiz = useQuizSetup();
   const game = getGame(String(gameId ?? ''));
 
   const isLiar = gameId === 'whos_the_liar';
@@ -25,9 +27,12 @@ export function useGameSetup(gameId: string | undefined) {
   const isMostLikely = gameId === 'most_likely';
   const isWouldRather = gameId === 'would_you_rather';
   const isBomb = gameId === 'bomb';
+  const isQuiz = gameId === 'quiz';
 
-  const active = isBomb
-    ? bomb
+  const active = isQuiz
+    ? quiz
+    : isBomb
+      ? bomb
     : isWouldRather
       ? wouldRather
       : isMostLikely
@@ -40,7 +45,9 @@ export function useGameSetup(gameId: string | undefined) {
 
   const accent =
     game?.accent ??
-    (isMostLikely
+    (isQuiz
+      ? color.gameQuiz
+      : isMostLikely
       ? color.gameMostLikely
       : isBomb
         ? color.gameBomb
@@ -57,7 +64,8 @@ export function useGameSetup(gameId: string | undefined) {
     isMostLikely,
     isWouldRather,
     isBomb,
-    isImpostor: !isLiar && !isTaboo && !isMostLikely && !isWouldRather && !isBomb,
+    isQuiz,
+    isImpostor: !isLiar && !isTaboo && !isMostLikely && !isWouldRather && !isBomb && !isQuiz,
     accent,
     gameName: game?.name ?? 'Game',
   };

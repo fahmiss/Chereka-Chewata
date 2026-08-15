@@ -41,6 +41,11 @@ const STEPS: Record<string, string[]> = {
     'Say a new valid answer, then immediately pass the phone to the next player.',
     'Whoever holds the phone when it explodes loses the round.',
   ],
+  quiz: [
+    'Choose Pass & Play for quick no-score trivia, or Compete for named players and points.',
+    'Pick one of four answers, then reveal the correct choice and explanation.',
+    'Pass the phone between casual questions, or follow round-robin turns to a leaderboard.',
+  ],
 };
 
 export default function GameDetailsScreen() {
@@ -116,7 +121,13 @@ export default function GameDetailsScreen() {
             label={`Play ${game.name}`}
             // Every game opens on its ready-to-play overview — defaults are
             // already playable, so setup is opt-in rather than a journey.
-            onPress={() => router.push(`/game/${game.id}/setup/review`)}
+            onPress={() =>
+              router.push(
+                game.id === 'quiz'
+                  ? `/game/${game.id}/mode`
+                  : `/game/${game.id}/setup/review`,
+              )
+            }
           />
         ) : (
           <View style={styles.soonBox}>

@@ -10,6 +10,7 @@ import { useGameSetup } from '../../../../src/domain/useGameSetup';
 import { IMPOSTOR_MAX_PLAYERS, IMPOSTOR_MIN_PLAYERS } from '../../../../src/domain/impostor/types';
 import { MOST_LIKELY_MAX_PLAYERS } from '../../../../src/domain/mostLikely/types';
 import { TABOO_MAX_PLAYERS, TABOO_MIN_PLAYERS } from '../../../../src/domain/taboo/types';
+import { QUIZ_MAX_PLAYERS, QUIZ_MIN_PLAYERS } from '../../../../src/domain/quiz/types';
 import { useT } from '../../../../src/i18n';
 import { useEnterAnimation } from '../../../../src/theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../../../src/theme/tokens';
@@ -124,15 +125,20 @@ export default function PlayerSetupScreen() {
     isTaboo,
     isMostLikely,
     isBomb,
+    isQuiz,
   } = useGameSetup(gameId);
-  const MIN = isMostLikely
+  const MIN = isQuiz
+    ? QUIZ_MIN_PLAYERS
+    : isMostLikely
     ? 0
     : isBomb
       ? BOMB_MIN_PLAYERS
       : isTaboo
         ? TABOO_MIN_PLAYERS
         : IMPOSTOR_MIN_PLAYERS;
-  const MAX = isMostLikely
+  const MAX = isQuiz
+    ? QUIZ_MAX_PLAYERS
+    : isMostLikely
     ? MOST_LIKELY_MAX_PLAYERS
     : isBomb
       ? BOMB_MAX_PLAYERS
@@ -151,7 +157,9 @@ export default function PlayerSetupScreen() {
       stepLabel={t('setup.players')}
       title={t('setup.playersTitle')}
       subtitle={
-        isMostLikely
+        isQuiz
+          ? 'Compete supports 2–12 named players in round-robin order.'
+          : isMostLikely
           ? 'Optional. Physical pointing works with no names.'
           : t('setup.playersSubtitle', { min: MIN, max: MAX })
       }

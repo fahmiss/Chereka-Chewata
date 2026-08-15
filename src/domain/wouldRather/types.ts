@@ -11,6 +11,8 @@ export type WouldRatherDilemma = {
   option_a_am?: string;
   option_b_am?: string;
   category_id: string;
+  /** Optional sub-topic markers (e.g. Friends, Dating, Absurd, Deep) — not a second category. */
+  tags?: string[];
   content_level: ContentLevel;
   intensity?: string;
   active: boolean;

@@ -30,6 +30,7 @@ import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { BombSessionProvider } from '../src/domain/bomb/SessionContext';
 import { BombSetupProvider } from '../src/domain/bomb/SetupContext';
+import { AnimatedSplash } from '../src/components/brand/AnimatedSplash';
 import { SessionProvider } from '../src/domain/impostor/SessionContext';
 import { SetupProvider } from '../src/domain/impostor/SetupContext';
 import { LiarSessionProvider } from '../src/domain/liar/SessionContext';
@@ -41,6 +42,8 @@ import { TabooSessionProvider } from '../src/domain/taboo/SessionContext';
 import { TabooSetupProvider } from '../src/domain/taboo/SetupContext';
 import { WouldRatherSessionProvider } from '../src/domain/wouldRather/SessionContext';
 import { WouldRatherSetupProvider } from '../src/domain/wouldRather/SetupContext';
+import { QuizSessionProvider } from '../src/domain/quiz/SessionContext';
+import { QuizSetupProvider } from '../src/domain/quiz/SetupContext';
 import { color } from '../src/theme/tokens';
 import { hydrateContentHistory } from '../src/storage/contentHistory';
 
@@ -82,13 +85,15 @@ export default function RootLayout() {
   }, []);
 
   useEffect(() => {
-    if (ready) void SplashScreen.hideAsync();
-  }, [ready]);
-
-  if (!ready) return null;
+    // Hide the native launch screen the instant JS takes over — it can only
+    // ever be a static frame, so AnimatedSplash below owns the real reveal
+    // and bridges the remaining load time with motion instead of a blank gap.
+    void SplashScreen.hideAsync();
+  }, []);
 
   return (
     <GestureHandlerRootView style={styles.root}>
+      {ready ? (
       <SettingsProvider>
         <SetupProvider>
           <LiarSetupProvider>
@@ -96,12 +101,14 @@ export default function RootLayout() {
               <MostLikelySetupProvider>
                 <WouldRatherSetupProvider>
                   <BombSetupProvider>
+                    <QuizSetupProvider>
                     <SessionProvider>
                       <LiarSessionProvider>
                         <TabooSessionProvider>
                           <MostLikelySessionProvider>
                             <WouldRatherSessionProvider>
                               <BombSessionProvider>
+                              <QuizSessionProvider>
                                 <StatusBar style="light" />
                                 <Stack
                                   screenOptions={{
@@ -117,12 +124,14 @@ export default function RootLayout() {
                                     options={{ animation: 'fade', gestureEnabled: false }}
                                   />
                                 </Stack>
+                              </QuizSessionProvider>
                               </BombSessionProvider>
                             </WouldRatherSessionProvider>
                           </MostLikelySessionProvider>
                         </TabooSessionProvider>
                       </LiarSessionProvider>
                     </SessionProvider>
+                    </QuizSetupProvider>
                   </BombSetupProvider>
                 </WouldRatherSetupProvider>
               </MostLikelySetupProvider>
@@ -130,6 +139,8 @@ export default function RootLayout() {
           </LiarSetupProvider>
         </SetupProvider>
       </SettingsProvider>
+      ) : null}
+      <AnimatedSplash ready={ready} />
     </GestureHandlerRootView>
   );
 }

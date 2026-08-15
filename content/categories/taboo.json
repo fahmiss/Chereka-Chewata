@@ -1,65 +1,72 @@
 [
   {
-    "id": "ethiopian_food",
-    "name_en": "Ethiopian Food",
-    "sort_order": 10,
-    "active": true,
-    "name_am": "የኢትዮጵያ ምግብ"
-  },
-  {
     "id": "everyday_life",
     "name_en": "Everyday Life",
+    "sort_order": 10,
+    "active": true,
+    "name_am": "የዕለት ተዕለት ኑሮ"
+  },
+  {
+    "id": "food_and_drink",
+    "name_en": "Food & Drink",
     "sort_order": 20,
     "active": true,
-    "name_am": "የዕለት ሕይወት"
+    "name_am": "ምግብ እና መጠጥ"
   },
   {
-    "id": "places",
-    "name_en": "Places",
+    "id": "places_and_travel",
+    "name_en": "Places & Travel",
     "sort_order": 30,
     "active": true,
-    "name_am": "ቦታዎች"
+    "name_am": "ቦታዎች እና ጉዞ"
   },
   {
-    "id": "music_and_entertainment",
-    "name_en": "Music and Entertainment",
+    "id": "entertainment_pop_culture",
+    "name_en": "Entertainment & Pop Culture",
     "sort_order": 40,
     "active": true,
-    "name_am": "ሙዚቃ እና መዝናኛ"
+    "name_am": "መዝናኛ"
   },
   {
-    "id": "school",
-    "name_en": "School",
+    "id": "school_and_work",
+    "name_en": "School & Work",
     "sort_order": 50,
     "active": true,
-    "name_am": "ትምህርት"
+    "name_am": "ትምህርት እና ሥራ"
   },
   {
-    "id": "jobs",
-    "name_en": "Jobs",
+    "id": "football",
+    "name_en": "Football",
     "sort_order": 60,
     "active": true,
-    "name_am": "ሥራዎች"
-  },
-  {
-    "id": "animals",
-    "name_en": "Animals",
-    "sort_order": 70,
-    "active": true,
-    "name_am": "እንስሳት"
+    "name_am": "እግር ኳስ"
   },
   {
     "id": "sports",
     "name_en": "Sports",
-    "sort_order": 80,
+    "sort_order": 70,
     "active": true,
     "name_am": "ስፖርት"
   },
   {
-    "id": "general_words",
-    "name_en": "General Words",
+    "id": "animals_and_nature",
+    "name_en": "Animals & Nature",
+    "sort_order": 80,
+    "active": true,
+    "name_am": "እንስሳት እና ተፈጥሮ"
+  },
+  {
+    "id": "ethiopia_and_culture",
+    "name_en": "Ethiopia & Culture",
     "sort_order": 90,
     "active": true,
-    "name_am": "አጠቃላይ ቃላት"
+    "name_am": "ኢትዮጵያ እና ባህል"
+  },
+  {
+    "id": "random",
+    "name_en": "Random",
+    "sort_order": 100,
+    "active": true,
+    "name_am": "የተለያዩ"
   }
 ]

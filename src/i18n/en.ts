@@ -31,7 +31,7 @@ export const en = {
   'settings.interfaceLanguage': 'Interface language',
   'settings.contentLanguage': 'Content language',
   'settings.contentNote':
-    'All five games support English, Amharic, and Mixed content.',
+    'All seven games support English, Amharic, and Mixed content.',
   'settings.feel': 'Feel',
   'settings.sound': 'Sound',
   'settings.soundHint': 'Sound effects and gameplay cues.',

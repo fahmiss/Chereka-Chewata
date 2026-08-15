@@ -23,6 +23,7 @@ import {
   countWouldRatherDilemmas,
   getWouldRatherCategories,
 } from '../../../../src/content/wouldRather';
+import { countQuizQuestions, getQuizCategories } from '../../../../src/content/quiz';
 import { getGame } from '../../../../src/domain/games';
 import { useBombSession } from '../../../../src/domain/bomb/SessionContext';
 import { useBombSetup } from '../../../../src/domain/bomb/SetupContext';
@@ -36,6 +37,9 @@ import { useTabooSession } from '../../../../src/domain/taboo/SessionContext';
 import { useTabooSetup } from '../../../../src/domain/taboo/SetupContext';
 import { useWouldRatherSession } from '../../../../src/domain/wouldRather/SessionContext';
 import { useWouldRatherSetup } from '../../../../src/domain/wouldRather/SetupContext';
+import { useQuizSession } from '../../../../src/domain/quiz/SessionContext';
+import { useQuizSetup } from '../../../../src/domain/quiz/SetupContext';
+import type { QuizDifficultyFilter } from '../../../../src/domain/quiz/types';
 import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import { color } from '../../../../src/theme/tokens';
 
@@ -50,6 +54,7 @@ export default function ReviewScreen() {
   if (id === 'most_likely') return <MostLikelyQuickSetup gameId={id} />;
   if (id === 'would_you_rather') return <WouldRatherQuickSetup gameId={id} />;
   if (id === 'bomb') return <BombQuickSetup gameId={id} />;
+  if (id === 'quiz') return <QuizQuickSetup gameId={id} />;
   return <ImpostorQuickSetup gameId={id} />;
 }
 
@@ -68,15 +73,137 @@ function useStartGame() {
   const mostLikely = useMostLikelySession();
   const wouldRather = useWouldRatherSession();
   const bomb = useBombSession();
+  const quiz = useQuizSession();
 
-  return (keep: 'impostor' | 'liar' | 'taboo' | 'mostLikely' | 'wouldRather' | 'bomb') => {
+  return (keep: 'impostor' | 'liar' | 'taboo' | 'mostLikely' | 'wouldRather' | 'bomb' | 'quiz') => {
     if (keep !== 'impostor') impostor.clearSession();
     if (keep !== 'liar') liar.clearSession();
     if (keep !== 'taboo') taboo.clearSession();
     if (keep !== 'mostLikely') mostLikely.clearSession();
     if (keep !== 'wouldRather') wouldRather.clearSession();
     if (keep !== 'bomb') bomb.clearSession();
+    if (keep !== 'quiz') quiz.clearSession();
   };
+}
+
+/* ------------------------------------------------------------------ *
+ * Quiz
+ * ------------------------------------------------------------------ */
+
+function QuizQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameQuiz;
+  const { setup, validation, persistPlayers, patchOptions } = useQuizSetup();
+  const { startSession, clearError } = useQuizSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+
+  const totalCategories = getQuizCategories().length;
+  const questionCount = countQuizQuestions({
+    categoryIds: setup.categoryIds,
+    difficulty: setup.difficulty,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart = validation.playersOk && validation.categoriesOk && questionCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('quiz');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  const links: QuickLink[] = [
+    {
+      icon: setup.playMode === 'compete' ? 'trophy' : 'phone',
+      title: 'Play mode',
+      value: setup.playMode === 'compete' ? 'Compete' : 'Pass & Play',
+      detail:
+        setup.playMode === 'compete'
+          ? 'Named players · scoring · leaderboard'
+          : 'No names · no scores · pass after each answer',
+      href: '/game/quiz/mode',
+    },
+    ...(setup.playMode === 'compete' ? [playersLink(gameId, setup.players)] : []),
+    categoriesLink(
+      gameId,
+      setup.categoryIds.length,
+      totalCategories,
+      questionCount,
+      'questions',
+    ),
+  ];
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Quiz"
+      subtitle={
+        setup.playMode === 'compete'
+          ? 'Round-robin trivia with one point per correct answer.'
+          : 'Quick casual trivia. Answer, reveal, then pass the phone.'
+      }
+      canStart={canStart}
+      footerNote={
+        questionCount === 0
+          ? 'No questions match these categories and difficulty.'
+          : !validation.playersOk
+            ? 'Add 2–12 named players before starting Compete.'
+            : questionCount < setup.questionCount
+              ? `${questionCount} unique questions match; the deck will recycle safely.`
+              : undefined
+      }
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => { void onStart(); }}
+      links={links}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="question"
+            title="Difficulty"
+            hint="Knowledge difficulty, separate from content maturity."
+            accent={accent}
+          >
+            <Segmented<QuizDifficultyFilter>
+              accent={accent}
+              value={setup.difficulty}
+              onChange={(difficulty) => patchOptions({ difficulty })}
+              options={[
+                { value: 'easy', label: 'Easy' },
+                { value: 'medium', label: 'Medium' },
+                { value: 'hard', label: 'Hard' },
+                { value: 'mixed', label: 'Mixed' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <QuickControlBlock
+            icon="layers"
+            title="Questions"
+            hint="Total questions for the whole session."
+            accent={accent}
+          >
+            <Segmented<10 | 20 | 30>
+              accent={accent}
+              value={setup.questionCount}
+              onChange={(questionCount) => patchOptions({ questionCount })}
+              options={[
+                { value: 10, label: '10' },
+                { value: 20, label: '20' },
+                { value: 30, label: '30' },
+              ]}
+            />
+          </QuickControlBlock>
+        </QuickControls>
+      }
+    />
+  );
 }
 
 /* ------------------------------------------------------------------ *

@@ -11,6 +11,8 @@ export type LiarPair = {
   main_question_am?: string;
   liar_question_am?: string;
   category_id: string;
+  /** Optional sub-topic markers (e.g. Friends, Family, Addis) — not a second category. */
+  tags?: string[];
   content_level: ContentLevel;
   difficulty: 'easy' | 'medium' | 'hard';
   active: boolean;

@@ -30,7 +30,7 @@ export const am: Record<MessageKey, string> = {
   "settings.language": "ቋንቋ",
   "settings.interfaceLanguage": "የበይነገጽ ቋንቋ",
   "settings.contentLanguage": "የይዘት ቋንቋ",
-  "settings.contentNote": "አምስቱም ጨዋታዎች እንግሊዝኛ፣ አማርኛ እና ድብልቅ ይደግፋሉ።",
+  "settings.contentNote": "ሰባቱም ጨዋታዎች እንግሊዝኛ፣ አማርኛ እና ድብልቅ ይደግፋሉ።",
   "settings.feel": "ስሜት",
   "settings.sound": "ድምጽ",
   "settings.soundHint": "በጨዋታ ጊዜ የድምፅ ውጤቶችና ምልክቶች።",

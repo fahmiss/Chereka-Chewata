@@ -16,70 +16,36 @@ import {
 } from '../../../../src/content/mostLikely';
 import { countTabooCards, getTabooCategories } from '../../../../src/content/taboo';
 import { countWouldRatherDilemmas, getWouldRatherCategories } from '../../../../src/content/wouldRather';
+import { countQuizQuestions, getQuizCategories } from '../../../../src/content/quiz';
 import { useGameSetup } from '../../../../src/domain/useGameSetup';
 import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import type { ContentLevel } from '../../../../src/domain/impostor/types';
+import type { QuizSetup } from '../../../../src/domain/quiz/types';
 import { useT } from '../../../../src/i18n';
 import { localizeText } from '../../../../src/content/localize';
 import { useEnterAnimation } from '../../../../src/theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../../../src/theme/tokens';
 import { type } from '../../../../src/theme/typography';
 
-const IMPOSTOR_ICONS: Record<string, IconName> = {
-  everyday_objects: 'box',
-  food_and_drink: 'utensils',
-  places: 'mapPin',
-  entertainment: 'film',
-  school_and_work: 'book',
-  people_and_personality: 'smile',
-  football: 'target',
-};
-
-const LIAR_ICONS: Record<string, IconName> = {
-  food: 'utensils',
-  addis_life: 'mapPin',
-  friends: 'users',
-  school_and_university: 'book',
-  family: 'home',
-  music_and_entertainment: 'film',
-  travel: 'mapPin',
-  relationships: 'smile',
-  everyday_preferences: 'sliders',
-};
-
-const TABOO_ICONS: Record<string, IconName> = {
-  ethiopian_food: 'utensils',
+// One shared icon set, keyed by the standardized category vocabulary — every
+// game now draws from the same category ids (see content/categories/*.json),
+// so a single map keeps icons consistent instead of six near-duplicate ones.
+const CATEGORY_ICONS: Record<string, IconName> = {
   everyday_life: 'home',
-  places: 'mapPin',
-  music_and_entertainment: 'film',
-  school: 'book',
-  jobs: 'target',
-  animals: 'smile',
-  sports: 'trophy',
-  general_words: 'layers',
-};
-
-const LIKELY_ICONS: Record<string, IconName> = {
-  friends: 'users',
-  family: 'home',
-  school_and_university: 'book',
-  addis_life: 'mapPin',
-  relationships: 'smile',
-  work: 'target',
-  diaspora: 'shuffle',
-  weddings_and_events: 'users',
-  general_funny: 'megaphone',
-};
-
-const BOMB_ICONS: Record<string, IconName> = {
-  ethiopia: 'mapPin',
   food_and_drink: 'utensils',
-  places: 'mapPin',
-  entertainment: 'film',
+  entertainment_pop_culture: 'film',
+  football: 'target',
   sports: 'trophy',
-  everyday: 'home',
-  nature: 'smile',
+  places_and_travel: 'mapPin',
   school_and_work: 'book',
+  people_and_relationships: 'users',
+  ethiopia_and_culture: 'mapPin',
+  animals_and_nature: 'smile',
+  random: 'shuffle',
+  general_knowledge: 'question',
+  geography_places: 'mapPin',
+  history: 'book',
+  science_technology: 'question',
 };
 
 export default function CategoriesScreen() {
@@ -96,11 +62,14 @@ export default function CategoriesScreen() {
     isMostLikely,
     isWouldRather,
     isBomb,
+    isQuiz,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
 
-  const categories = isBomb
-    ? getBombCategories()
+  const categories = isQuiz
+    ? getQuizCategories()
+    : isBomb
+      ? getBombCategories()
     : isWouldRather
       ? getWouldRatherCategories()
     : isMostLikely
@@ -110,23 +79,20 @@ export default function CategoriesScreen() {
       : isLiar
         ? getLiarCategories()
         : getImpostorCategories();
-  const icons = isBomb
-    ? BOMB_ICONS
-    : isMostLikely
-      ? LIKELY_ICONS
-    : isTaboo
-      ? TABOO_ICONS
-      : isLiar
-        ? LIAR_ICONS
-        : IMPOSTOR_ICONS;
   const levels: ContentLevel[] = setup.contentLevels.length
     ? setup.contentLevels
     : ['family'];
 
   const lang = settings.contentLanguage;
   const countFor = (categoryIds: string[]) =>
-    isBomb
-      ? countBombCards({
+    isQuiz
+      ? countQuizQuestions({
+          categoryIds,
+          difficulty: (setup as QuizSetup).difficulty,
+          contentLanguage: lang,
+        })
+      : isBomb
+        ? countBombCards({
           categoryIds,
           contentLevels: levels,
           contentLanguage: lang,
@@ -200,7 +166,7 @@ export default function CategoriesScreen() {
               index={index}
               name={categoryLabel(category)}
               accent={accent}
-              icon={icons[category.id] ?? 'layers'}
+              icon={CATEGORY_ICONS[category.id] ?? 'layers'}
               count={count}
               selected={setup.categoryIds.includes(category.id)}
               onPress={() => toggleCategory(category.id)}

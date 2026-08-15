@@ -9,6 +9,8 @@ export type MostLikelyPrompt = {
   prompt_en: string;
   prompt_am?: string;
   category_id: string;
+  /** Optional sub-topic markers (e.g. Friends, Family, Addis) — not a second category. */
+  tags?: string[];
   content_level: ContentLevel;
   intensity?: string;
   active: boolean;

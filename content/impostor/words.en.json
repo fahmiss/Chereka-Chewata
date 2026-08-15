@@ -57,7 +57,7 @@
   {
     "id": "imp_obj_001",
     "word_en": "Umbrella",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Rainy day",
     "difficulty": "easy",
     "content_level": "family",
@@ -68,7 +68,7 @@
   {
     "id": "imp_obj_002",
     "word_en": "Phone charger",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Always missing",
     "difficulty": "easy",
     "content_level": "family",
@@ -79,7 +79,7 @@
   {
     "id": "imp_obj_003",
     "word_en": "Toothbrush",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Bathroom",
     "difficulty": "easy",
     "content_level": "family",
@@ -90,7 +90,7 @@
   {
     "id": "imp_obj_004",
     "word_en": "Key",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Opens doors",
     "difficulty": "easy",
     "content_level": "family",
@@ -101,7 +101,7 @@
   {
     "id": "imp_obj_005",
     "word_en": "Mirror",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Reflection",
     "difficulty": "easy",
     "content_level": "family",
@@ -112,7 +112,7 @@
   {
     "id": "imp_place_001",
     "word_en": "Mercato",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Busy market",
     "difficulty": "easy",
     "content_level": "family",
@@ -123,7 +123,7 @@
   {
     "id": "imp_place_002",
     "word_en": "Bole",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Addis area",
     "difficulty": "easy",
     "content_level": "family",
@@ -134,7 +134,7 @@
   {
     "id": "imp_place_003",
     "word_en": "Airport",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Travel",
     "difficulty": "easy",
     "content_level": "family",
@@ -145,7 +145,7 @@
   {
     "id": "imp_place_004",
     "word_en": "Library",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Quiet books",
     "difficulty": "easy",
     "content_level": "family",
@@ -156,7 +156,7 @@
   {
     "id": "imp_place_005",
     "word_en": "Stadium",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Sports crowd",
     "difficulty": "easy",
     "content_level": "family",
@@ -167,7 +167,7 @@
   {
     "id": "imp_ent_001",
     "word_en": "Karaoke",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Singing",
     "difficulty": "easy",
     "content_level": "friends",
@@ -178,7 +178,7 @@
   {
     "id": "imp_ent_002",
     "word_en": "Football",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Popular sport",
     "difficulty": "easy",
     "content_level": "family",
@@ -189,7 +189,7 @@
   {
     "id": "imp_ent_003",
     "word_en": "Concert",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Live music",
     "difficulty": "easy",
     "content_level": "family",
@@ -200,7 +200,7 @@
   {
     "id": "imp_ent_004",
     "word_en": "Cinema",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Movies",
     "difficulty": "easy",
     "content_level": "family",
@@ -211,7 +211,7 @@
   {
     "id": "imp_ent_005",
     "word_en": "Playlist",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Music list",
     "difficulty": "easy",
     "content_level": "family",
@@ -277,7 +277,7 @@
   {
     "id": "imp_people_001",
     "word_en": "Gossip",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Talk about others",
     "difficulty": "easy",
     "content_level": "friends",
@@ -288,7 +288,7 @@
   {
     "id": "imp_people_002",
     "word_en": "Introvert",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Quiet energy",
     "difficulty": "medium",
     "content_level": "friends",
@@ -299,7 +299,7 @@
   {
     "id": "imp_people_003",
     "word_en": "Best friend",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Closest person",
     "difficulty": "easy",
     "content_level": "family",
@@ -310,7 +310,7 @@
   {
     "id": "imp_people_004",
     "word_en": "Neighbor",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Lives nearby",
     "difficulty": "easy",
     "content_level": "family",
@@ -321,7 +321,7 @@
   {
     "id": "imp_people_005",
     "word_en": "Class clown",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Funny student",
     "difficulty": "easy",
     "content_level": "friends",
@@ -332,7 +332,7 @@
   {
     "id": "imp_spicy_001",
     "word_en": "Ex",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Past romance",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -343,7 +343,7 @@
   {
     "id": "imp_spicy_002",
     "word_en": "Flirting",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Playful interest",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -354,7 +354,7 @@
   {
     "id": "imp_spicy_003",
     "word_en": "Crush",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Secret liking",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -651,7 +651,7 @@
   {
     "id": "imp_obj_006",
     "word_en": "Headphones",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Private music",
     "difficulty": "easy",
     "content_level": "family",
@@ -662,7 +662,7 @@
   {
     "id": "imp_obj_007",
     "word_en": "Backpack",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "School bag",
     "difficulty": "easy",
     "content_level": "family",
@@ -673,7 +673,7 @@
   {
     "id": "imp_obj_008",
     "word_en": "Sunglasses",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Bright days",
     "difficulty": "easy",
     "content_level": "family",
@@ -684,7 +684,7 @@
   {
     "id": "imp_obj_009",
     "word_en": "Water bottle",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Stay hydrated",
     "difficulty": "easy",
     "content_level": "family",
@@ -695,7 +695,7 @@
   {
     "id": "imp_obj_010",
     "word_en": "Remote",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "TV control",
     "difficulty": "easy",
     "content_level": "family",
@@ -706,7 +706,7 @@
   {
     "id": "imp_obj_011",
     "word_en": "Pillow",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Sleep soft",
     "difficulty": "easy",
     "content_level": "family",
@@ -717,7 +717,7 @@
   {
     "id": "imp_obj_012",
     "word_en": "Candle",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Soft light",
     "difficulty": "easy",
     "content_level": "family",
@@ -728,7 +728,7 @@
   {
     "id": "imp_obj_013",
     "word_en": "Scissors",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Cut paper",
     "difficulty": "easy",
     "content_level": "family",
@@ -739,7 +739,7 @@
   {
     "id": "imp_obj_014",
     "word_en": "Wallet",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Holds money",
     "difficulty": "easy",
     "content_level": "family",
@@ -750,7 +750,7 @@
   {
     "id": "imp_obj_015",
     "word_en": "Alarm clock",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Wakes you up",
     "difficulty": "easy",
     "content_level": "family",
@@ -761,7 +761,7 @@
   {
     "id": "imp_obj_016",
     "word_en": "Notebook",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Write things down",
     "difficulty": "easy",
     "content_level": "family",
@@ -772,7 +772,7 @@
   {
     "id": "imp_obj_017",
     "word_en": "Pen",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Writes ink",
     "difficulty": "easy",
     "content_level": "family",
@@ -783,7 +783,7 @@
   {
     "id": "imp_obj_018",
     "word_en": "Socks",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Foot covers",
     "difficulty": "easy",
     "content_level": "family",
@@ -794,7 +794,7 @@
   {
     "id": "imp_obj_019",
     "word_en": "Jacket",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Keeps warm",
     "difficulty": "easy",
     "content_level": "family",
@@ -805,7 +805,7 @@
   {
     "id": "imp_obj_020",
     "word_en": "Flashlight",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Dark helper",
     "difficulty": "easy",
     "content_level": "family",
@@ -816,7 +816,7 @@
   {
     "id": "imp_obj_021",
     "word_en": "Charger cable",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Power cord",
     "difficulty": "easy",
     "content_level": "family",
@@ -827,7 +827,7 @@
   {
     "id": "imp_obj_022",
     "word_en": "Laptop",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Portable computer",
     "difficulty": "easy",
     "content_level": "family",
@@ -838,7 +838,7 @@
   {
     "id": "imp_obj_023",
     "word_en": "Keyboard",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Typing board",
     "difficulty": "easy",
     "content_level": "family",
@@ -849,7 +849,7 @@
   {
     "id": "imp_obj_024",
     "word_en": "Mouse",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Computer pointer",
     "difficulty": "easy",
     "content_level": "family",
@@ -860,7 +860,7 @@
   {
     "id": "imp_obj_025",
     "word_en": "Tissue",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Sneeze helper",
     "difficulty": "easy",
     "content_level": "family",
@@ -871,7 +871,7 @@
   {
     "id": "imp_obj_026",
     "word_en": "Soap",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Wash hands",
     "difficulty": "easy",
     "content_level": "family",
@@ -882,7 +882,7 @@
   {
     "id": "imp_obj_027",
     "word_en": "Towel",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Dry off",
     "difficulty": "easy",
     "content_level": "family",
@@ -893,7 +893,7 @@
   {
     "id": "imp_obj_028",
     "word_en": "Suitcase",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Travel bag",
     "difficulty": "easy",
     "content_level": "family",
@@ -904,7 +904,7 @@
   {
     "id": "imp_obj_029",
     "word_en": "Helmet",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Head safety",
     "difficulty": "easy",
     "content_level": "family",
@@ -915,7 +915,7 @@
   {
     "id": "imp_obj_030",
     "word_en": "Bicycle",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Two wheels",
     "difficulty": "easy",
     "content_level": "family",
@@ -926,7 +926,7 @@
   {
     "id": "imp_obj_031",
     "word_en": "Camera",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Takes photos",
     "difficulty": "easy",
     "content_level": "family",
@@ -937,7 +937,7 @@
   {
     "id": "imp_place_006",
     "word_en": "Cafe",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Coffee stop",
     "difficulty": "easy",
     "content_level": "family",
@@ -948,7 +948,7 @@
   {
     "id": "imp_place_007",
     "word_en": "Park",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Green space",
     "difficulty": "easy",
     "content_level": "family",
@@ -959,7 +959,7 @@
   {
     "id": "imp_place_008",
     "word_en": "Beach",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Sand and sea",
     "difficulty": "easy",
     "content_level": "family",
@@ -970,7 +970,7 @@
   {
     "id": "imp_place_009",
     "word_en": "Hospital",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Get better",
     "difficulty": "easy",
     "content_level": "family",
@@ -981,7 +981,7 @@
   {
     "id": "imp_place_010",
     "word_en": "School",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Learn here",
     "difficulty": "easy",
     "content_level": "family",
@@ -992,7 +992,7 @@
   {
     "id": "imp_place_011",
     "word_en": "Mosque",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Prayer place",
     "difficulty": "easy",
     "content_level": "family",
@@ -1003,7 +1003,7 @@
   {
     "id": "imp_place_012",
     "word_en": "Church",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Sunday place",
     "difficulty": "easy",
     "content_level": "family",
@@ -1014,7 +1014,7 @@
   {
     "id": "imp_place_013",
     "word_en": "Mall",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Shopping center",
     "difficulty": "easy",
     "content_level": "family",
@@ -1025,7 +1025,7 @@
   {
     "id": "imp_place_014",
     "word_en": "Gym",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Workout spot",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1036,7 +1036,7 @@
   {
     "id": "imp_place_015",
     "word_en": "Kitchen",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Cooking room",
     "difficulty": "easy",
     "content_level": "family",
@@ -1047,7 +1047,7 @@
   {
     "id": "imp_place_016",
     "word_en": "Bathroom",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Mirror room",
     "difficulty": "easy",
     "content_level": "family",
@@ -1058,7 +1058,7 @@
   {
     "id": "imp_place_017",
     "word_en": "Balcony",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Outside ledge",
     "difficulty": "easy",
     "content_level": "family",
@@ -1069,7 +1069,7 @@
   {
     "id": "imp_place_018",
     "word_en": "Elevator",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Up and down",
     "difficulty": "easy",
     "content_level": "family",
@@ -1080,7 +1080,7 @@
   {
     "id": "imp_place_019",
     "word_en": "Taxi",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Paid ride",
     "difficulty": "easy",
     "content_level": "family",
@@ -1091,7 +1091,7 @@
   {
     "id": "imp_place_020",
     "word_en": "Bus stop",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Waiting spot",
     "difficulty": "easy",
     "content_level": "family",
@@ -1102,7 +1102,7 @@
   {
     "id": "imp_place_021",
     "word_en": "Supermarket",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Grocery store",
     "difficulty": "easy",
     "content_level": "family",
@@ -1113,7 +1113,7 @@
   {
     "id": "imp_place_022",
     "word_en": "Museum",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Art and history",
     "difficulty": "easy",
     "content_level": "family",
@@ -1124,7 +1124,7 @@
   {
     "id": "imp_place_023",
     "word_en": "Zoo",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Animals visit",
     "difficulty": "easy",
     "content_level": "family",
@@ -1135,7 +1135,7 @@
   {
     "id": "imp_place_024",
     "word_en": "Hotel",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Travel sleep",
     "difficulty": "easy",
     "content_level": "family",
@@ -1146,7 +1146,7 @@
   {
     "id": "imp_place_025",
     "word_en": "Office",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Work desks",
     "difficulty": "easy",
     "content_level": "family",
@@ -1157,7 +1157,7 @@
   {
     "id": "imp_place_026",
     "word_en": "Farm",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Crops and animals",
     "difficulty": "easy",
     "content_level": "family",
@@ -1168,7 +1168,7 @@
   {
     "id": "imp_place_027",
     "word_en": "Mountain",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "High ground",
     "difficulty": "easy",
     "content_level": "family",
@@ -1179,7 +1179,7 @@
   {
     "id": "imp_place_028",
     "word_en": "River",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Flowing water",
     "difficulty": "easy",
     "content_level": "family",
@@ -1190,7 +1190,7 @@
   {
     "id": "imp_place_029",
     "word_en": "Rooftop",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Top of building",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1201,7 +1201,7 @@
   {
     "id": "imp_place_030",
     "word_en": "Nightclub",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Loud dancing",
     "difficulty": "medium",
     "content_level": "friends",
@@ -1212,7 +1212,7 @@
   {
     "id": "imp_place_031",
     "word_en": "Wedding",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Big celebration",
     "difficulty": "easy",
     "content_level": "family",
@@ -1223,7 +1223,7 @@
   {
     "id": "imp_ent_006",
     "word_en": "Netflix",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Streaming show",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1234,7 +1234,7 @@
   {
     "id": "imp_ent_007",
     "word_en": "TikTok",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Short videos",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1245,7 +1245,7 @@
   {
     "id": "imp_ent_008",
     "word_en": "Board game",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Table fun",
     "difficulty": "easy",
     "content_level": "family",
@@ -1256,7 +1256,7 @@
   {
     "id": "imp_ent_009",
     "word_en": "Puzzle",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Fit the pieces",
     "difficulty": "easy",
     "content_level": "family",
@@ -1267,7 +1267,7 @@
   {
     "id": "imp_ent_010",
     "word_en": "Dance",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Move to music",
     "difficulty": "easy",
     "content_level": "family",
@@ -1278,7 +1278,7 @@
   {
     "id": "imp_ent_011",
     "word_en": "Comedy",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Makes you laugh",
     "difficulty": "easy",
     "content_level": "family",
@@ -1289,7 +1289,7 @@
   {
     "id": "imp_ent_012",
     "word_en": "Podcast",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Audio show",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1300,7 +1300,7 @@
   {
     "id": "imp_ent_013",
     "word_en": "Video game",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Controller fun",
     "difficulty": "easy",
     "content_level": "family",
@@ -1311,7 +1311,7 @@
   {
     "id": "imp_ent_014",
     "word_en": "YouTube",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Online videos",
     "difficulty": "easy",
     "content_level": "family",
@@ -1322,7 +1322,7 @@
   {
     "id": "imp_ent_015",
     "word_en": "Selfie",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Phone photo",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1333,7 +1333,7 @@
   {
     "id": "imp_ent_016",
     "word_en": "Memes",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Internet jokes",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1344,7 +1344,7 @@
   {
     "id": "imp_ent_017",
     "word_en": "Drama",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Emotional story",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1355,7 +1355,7 @@
   {
     "id": "imp_ent_018",
     "word_en": "Talent show",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Perform on stage",
     "difficulty": "easy",
     "content_level": "family",
@@ -1366,7 +1366,7 @@
   {
     "id": "imp_ent_019",
     "word_en": "Carnival",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Rides and lights",
     "difficulty": "easy",
     "content_level": "family",
@@ -1377,7 +1377,7 @@
   {
     "id": "imp_ent_020",
     "word_en": "Circus",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Tents and tricks",
     "difficulty": "easy",
     "content_level": "family",
@@ -1388,7 +1388,7 @@
   {
     "id": "imp_ent_021",
     "word_en": "Magic trick",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Illusion",
     "difficulty": "easy",
     "content_level": "family",
@@ -1399,7 +1399,7 @@
   {
     "id": "imp_ent_022",
     "word_en": "DJ",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Spins tracks",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1410,7 +1410,7 @@
   {
     "id": "imp_ent_023",
     "word_en": "Festival",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Big event",
     "difficulty": "easy",
     "content_level": "family",
@@ -1421,7 +1421,7 @@
   {
     "id": "imp_ent_024",
     "word_en": "Soccer match",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Stadium game",
     "difficulty": "easy",
     "content_level": "family",
@@ -1432,7 +1432,7 @@
   {
     "id": "imp_ent_025",
     "word_en": "Basketball",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Hoop sport",
     "difficulty": "easy",
     "content_level": "family",
@@ -1443,7 +1443,7 @@
   {
     "id": "imp_ent_026",
     "word_en": "Tennis",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Racket sport",
     "difficulty": "easy",
     "content_level": "family",
@@ -1454,7 +1454,7 @@
   {
     "id": "imp_ent_027",
     "word_en": "Swimming",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "In the water",
     "difficulty": "easy",
     "content_level": "family",
@@ -1465,7 +1465,7 @@
   {
     "id": "imp_ent_028",
     "word_en": "Camping",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Sleep outdoors",
     "difficulty": "easy",
     "content_level": "family",
@@ -1476,7 +1476,7 @@
   {
     "id": "imp_ent_029",
     "word_en": "Picnic",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Outdoor meal",
     "difficulty": "easy",
     "content_level": "family",
@@ -1487,7 +1487,7 @@
   {
     "id": "imp_ent_030",
     "word_en": "Bowling",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Knock pins",
     "difficulty": "easy",
     "content_level": "family",
@@ -1498,7 +1498,7 @@
   {
     "id": "imp_ent_031",
     "word_en": "Escape room",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Puzzle room",
     "difficulty": "medium",
     "content_level": "friends",
@@ -1795,7 +1795,7 @@
   {
     "id": "imp_people_006",
     "word_en": "Leader",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Takes charge",
     "difficulty": "easy",
     "content_level": "family",
@@ -1806,7 +1806,7 @@
   {
     "id": "imp_people_007",
     "word_en": "Joker",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Always joking",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1817,7 +1817,7 @@
   {
     "id": "imp_people_008",
     "word_en": "Shy",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Quiet around people",
     "difficulty": "easy",
     "content_level": "family",
@@ -1828,7 +1828,7 @@
   {
     "id": "imp_people_009",
     "word_en": "Brave",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Faces fear",
     "difficulty": "easy",
     "content_level": "family",
@@ -1839,7 +1839,7 @@
   {
     "id": "imp_people_010",
     "word_en": "Generous",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Shares freely",
     "difficulty": "easy",
     "content_level": "family",
@@ -1850,7 +1850,7 @@
   {
     "id": "imp_people_011",
     "word_en": "Stubborn",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Hard to change",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1861,7 +1861,7 @@
   {
     "id": "imp_people_012",
     "word_en": "Curious",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Asks why",
     "difficulty": "easy",
     "content_level": "family",
@@ -1872,7 +1872,7 @@
   {
     "id": "imp_people_013",
     "word_en": "Lazy",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Avoids effort",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1883,7 +1883,7 @@
   {
     "id": "imp_people_014",
     "word_en": "Ambitious",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Wants more",
     "difficulty": "medium",
     "content_level": "friends",
@@ -1894,7 +1894,7 @@
   {
     "id": "imp_people_015",
     "word_en": "Loyal",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Stays true",
     "difficulty": "easy",
     "content_level": "family",
@@ -1905,7 +1905,7 @@
   {
     "id": "imp_people_016",
     "word_en": "Dramatic",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Big reactions",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1916,7 +1916,7 @@
   {
     "id": "imp_people_017",
     "word_en": "Competitive",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Wants to win",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1927,7 +1927,7 @@
   {
     "id": "imp_people_018",
     "word_en": "Romantic",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Loves love",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1938,7 +1938,7 @@
   {
     "id": "imp_people_019",
     "word_en": "Sibling",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Brother or sister",
     "difficulty": "easy",
     "content_level": "family",
@@ -1949,7 +1949,7 @@
   {
     "id": "imp_people_020",
     "word_en": "Cousin",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Family relative",
     "difficulty": "easy",
     "content_level": "family",
@@ -1960,7 +1960,7 @@
   {
     "id": "imp_people_021",
     "word_en": "Grandparent",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Older family",
     "difficulty": "easy",
     "content_level": "family",
@@ -1971,7 +1971,7 @@
   {
     "id": "imp_people_022",
     "word_en": "Roommate",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Shares a home",
     "difficulty": "easy",
     "content_level": "friends",
@@ -1982,7 +1982,7 @@
   {
     "id": "imp_people_023",
     "word_en": "Teammate",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Same side",
     "difficulty": "easy",
     "content_level": "family",
@@ -1993,7 +1993,7 @@
   {
     "id": "imp_people_024",
     "word_en": "Stranger",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Someone new",
     "difficulty": "easy",
     "content_level": "family",
@@ -2004,7 +2004,7 @@
   {
     "id": "imp_people_025",
     "word_en": "Celebrity",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Famous face",
     "difficulty": "easy",
     "content_level": "family",
@@ -2015,7 +2015,7 @@
   {
     "id": "imp_people_026",
     "word_en": "Influencer",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Online fame",
     "difficulty": "easy",
     "content_level": "friends",
@@ -2026,7 +2026,7 @@
   {
     "id": "imp_people_027",
     "word_en": "Coach",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Trains the team",
     "difficulty": "easy",
     "content_level": "family",
@@ -2037,7 +2037,7 @@
   {
     "id": "imp_people_028",
     "word_en": "Doctor",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Helps patients",
     "difficulty": "easy",
     "content_level": "family",
@@ -2048,7 +2048,7 @@
   {
     "id": "imp_people_029",
     "word_en": "Pilot",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Flies planes",
     "difficulty": "easy",
     "content_level": "family",
@@ -2059,7 +2059,7 @@
   {
     "id": "imp_people_030",
     "word_en": "Artist",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Makes art",
     "difficulty": "easy",
     "content_level": "family",
@@ -2070,7 +2070,7 @@
   {
     "id": "imp_spicy_031",
     "word_en": "Date night",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Planned romance",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2081,7 +2081,7 @@
   {
     "id": "imp_spicy_032",
     "word_en": "Jealousy",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Green feeling",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2092,7 +2092,7 @@
   {
     "id": "imp_spicy_033",
     "word_en": "Kiss",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Lips meet",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2103,7 +2103,7 @@
   {
     "id": "imp_spicy_034",
     "word_en": "Breakup",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Romance ends",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2114,7 +2114,7 @@
   {
     "id": "imp_spicy_035",
     "word_en": "Secret admirer",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Hidden crush",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2125,7 +2125,7 @@
   {
     "id": "imp_spicy_036",
     "word_en": "Butterfly feelings",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Nervous crush",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2136,7 +2136,7 @@
   {
     "id": "imp_spicy_037",
     "word_en": "Red flag",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Warning sign",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2147,7 +2147,7 @@
   {
     "id": "imp_spicy_038",
     "word_en": "Green flag",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Good sign",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2158,7 +2158,7 @@
   {
     "id": "imp_spicy_039",
     "word_en": "Situationship",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Undefined romance",
     "difficulty": "medium",
     "content_level": "spicy",
@@ -2169,7 +2169,7 @@
   {
     "id": "imp_spicy_040",
     "word_en": "Love triangle",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Three-way drama",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2180,7 +2180,7 @@
   {
     "id": "imp_spicy_041",
     "word_en": "Blind date",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Stranger meetup",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2191,7 +2191,7 @@
   {
     "id": "imp_spicy_042",
     "word_en": "Proposal",
-    "category_id": "people_and_personality",
+    "category_id": "people_and_relationships",
     "hint_en": "Marriage ask",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2202,7 +2202,7 @@
   {
     "id": "imp_spicy_043",
     "word_en": "Honeymoon",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Post-wedding trip",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2213,7 +2213,7 @@
   {
     "id": "imp_spicy_044",
     "word_en": "Romantic rooftop",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "City date view",
     "difficulty": "medium",
     "content_level": "spicy",
@@ -2224,7 +2224,7 @@
   {
     "id": "imp_spicy_045",
     "word_en": "Weekend getaway",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Private couple trip",
     "difficulty": "medium",
     "content_level": "spicy",
@@ -2235,7 +2235,7 @@
   {
     "id": "imp_spicy_046",
     "word_en": "Candlelit restaurant",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Dim dinner date",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2246,7 +2246,7 @@
   {
     "id": "imp_spicy_047",
     "word_en": "Couple's spa",
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "hint_en": "Shared pampering",
     "difficulty": "medium",
     "content_level": "spicy",
@@ -2257,7 +2257,7 @@
   {
     "id": "imp_spicy_048",
     "word_en": "Love song",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Romantic track",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2268,7 +2268,7 @@
   {
     "id": "imp_spicy_049",
     "word_en": "Rom-com",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Love movie",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2279,7 +2279,7 @@
   {
     "id": "imp_spicy_050",
     "word_en": "Slow dance",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Close dancing",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2290,7 +2290,7 @@
   {
     "id": "imp_spicy_051",
     "word_en": "Valentine's Day",
-    "category_id": "entertainment",
+    "category_id": "entertainment_pop_culture",
     "hint_en": "Romance holiday",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2334,7 +2334,7 @@
   {
     "id": "imp_spicy_055",
     "word_en": "Love letter",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Written feelings",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2345,7 +2345,7 @@
   {
     "id": "imp_spicy_056",
     "word_en": "Engagement ring",
-    "category_id": "everyday_objects",
+    "category_id": "everyday_life",
     "hint_en": "Promise jewelry",
     "difficulty": "easy",
     "content_level": "spicy",
@@ -2770,5 +2770,445 @@
     "active": true,
     "word_am": "Aschalew Tamene",
     "hint_am": "የኢትዮጵያ ተከላካይ"
+  },
+  {
+    "id": "imp_sports_001",
+    "word_en": "Basketball",
+    "category_id": "sports",
+    "hint_en": "Hoops game",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ቅርጫት ኳስ",
+    "hint_am": "የቅርጫት ጨዋታ"
+  },
+  {
+    "id": "imp_sports_002",
+    "word_en": "Tennis",
+    "category_id": "sports",
+    "hint_en": "Racket sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ቴኒስ",
+    "hint_am": "የራኬት ስፖርት"
+  },
+  {
+    "id": "imp_sports_003",
+    "word_en": "Boxing",
+    "category_id": "sports",
+    "hint_en": "Ring fighters",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ቦክስ",
+    "hint_am": "የቀለበት ትግል"
+  },
+  {
+    "id": "imp_sports_004",
+    "word_en": "Swimming",
+    "category_id": "sports",
+    "hint_en": "Pool sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ዋና",
+    "hint_am": "የመዋኛ ገንዳ"
+  },
+  {
+    "id": "imp_sports_005",
+    "word_en": "Marathon",
+    "category_id": "sports",
+    "hint_en": "Long race",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ማራቶን",
+    "hint_am": "ረጅም ሩጫ"
+  },
+  {
+    "id": "imp_sports_006",
+    "word_en": "Cycling",
+    "category_id": "sports",
+    "hint_en": "Two wheels",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ብስክሌት ግልቢያ",
+    "hint_am": "ሁለት ጎማ"
+  },
+  {
+    "id": "imp_sports_007",
+    "word_en": "Volleyball",
+    "category_id": "sports",
+    "hint_en": "Net spikes",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "መረብ ኳስ",
+    "hint_am": "የመረብ ጨዋታ"
+  },
+  {
+    "id": "imp_sports_008",
+    "word_en": "Gymnastics",
+    "category_id": "sports",
+    "hint_en": "Flexible flips",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ጅምናስቲክስ",
+    "hint_am": "ተለዋዋጭ ሰውነት"
+  },
+  {
+    "id": "imp_sports_009",
+    "word_en": "Wrestling",
+    "category_id": "sports",
+    "hint_en": "Grapple sport",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ትግል",
+    "hint_am": "የመታገል ስፖርት"
+  },
+  {
+    "id": "imp_sports_010",
+    "word_en": "Table Tennis",
+    "category_id": "sports",
+    "hint_en": "Mini rackets",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ጠረጴዛ ቴኒስ",
+    "hint_am": "ትንሽ ራኬቶች"
+  },
+  {
+    "id": "imp_sports_011",
+    "word_en": "Karate",
+    "category_id": "sports",
+    "hint_en": "Kick and punch",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ካራቴ",
+    "hint_am": "ምት እና ጡጫ"
+  },
+  {
+    "id": "imp_sports_012",
+    "word_en": "Chess",
+    "category_id": "sports",
+    "hint_en": "Board strategy",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ቼዝ",
+    "hint_am": "የሰሌዳ ጨዋታ"
+  },
+  {
+    "id": "imp_sports_013",
+    "word_en": "Golf",
+    "category_id": "sports",
+    "hint_en": "Small white ball",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ጎልፍ",
+    "hint_am": "ትንሽ ነጭ ኳስ"
+  },
+  {
+    "id": "imp_sports_014",
+    "word_en": "Cricket",
+    "category_id": "sports",
+    "hint_en": "Bat and wicket",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ክሪኬት",
+    "hint_am": "ባት እና ዊኬት"
+  },
+  {
+    "id": "imp_sports_015",
+    "word_en": "Rugby",
+    "category_id": "sports",
+    "hint_en": "Oval ball",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ራግቢ",
+    "hint_am": "ኦቫል ኳስ"
+  },
+  {
+    "id": "imp_sports_016",
+    "word_en": "Skiing",
+    "category_id": "sports",
+    "hint_en": "Snow slopes",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "በበረዶ መንሸራተት",
+    "hint_am": "የበረዶ ተዳፋት"
+  },
+  {
+    "id": "imp_sports_017",
+    "word_en": "Weightlifting",
+    "category_id": "sports",
+    "hint_en": "Heavy bar",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ክብደት ማንሳት",
+    "hint_am": "ከባድ ብረት"
+  },
+  {
+    "id": "imp_sports_018",
+    "word_en": "Athletics",
+    "category_id": "sports",
+    "hint_en": "Track and field",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "አትሌቲክስ",
+    "hint_am": "ትራክ እና ሜዳ"
+  },
+  {
+    "id": "imp_sports_019",
+    "word_en": "Olympics",
+    "category_id": "sports",
+    "hint_en": "Global games",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ኦሎምፒክስ",
+    "hint_am": "ዓለም አቀፍ ውድድር"
+  },
+  {
+    "id": "imp_sports_020",
+    "word_en": "Referee",
+    "category_id": "sports",
+    "hint_en": "Blows the whistle",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ዳኛ",
+    "hint_am": "ፊሽካ የሚነፋ"
+  },
+  {
+    "id": "imp_ethiopia_001",
+    "word_en": "Timket",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Water festival",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ጥምቀት",
+    "hint_am": "የውሃ በዓል"
+  },
+  {
+    "id": "imp_ethiopia_002",
+    "word_en": "Meskel",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Finding of the cross",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "መስቀል",
+    "hint_am": "የመስቀል ማግኘት በዓል"
+  },
+  {
+    "id": "imp_ethiopia_003",
+    "word_en": "Enkutatash",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Ethiopian New Year",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "እንቁጣጣሽ",
+    "hint_am": "የኢትዮጵያ አዲስ ዓመት"
+  },
+  {
+    "id": "imp_ethiopia_004",
+    "word_en": "Ge'ez",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Ancient script",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ግዕዝ",
+    "hint_am": "ጥንታዊ ፊደል"
+  },
+  {
+    "id": "imp_ethiopia_005",
+    "word_en": "Habesha kemis",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Traditional dress",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "የሐበሻ ቀሚስ",
+    "hint_am": "ባህላዊ ልብስ"
+  },
+  {
+    "id": "imp_ethiopia_006",
+    "word_en": "Netela",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Cotton shawl",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ነጠላ",
+    "hint_am": "የጥጥ ሻሽ"
+  },
+  {
+    "id": "imp_ethiopia_007",
+    "word_en": "Mesob",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Woven table",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "መሶብ",
+    "hint_am": "የተሸመነ ገበታ"
+  },
+  {
+    "id": "imp_ethiopia_008",
+    "word_en": "Coffee ceremony",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Three rounds",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "የቡና ሥነ ሥርዓት",
+    "hint_am": "ሦስት ዙር ቡና"
+  },
+  {
+    "id": "imp_ethiopia_009",
+    "word_en": "Ethiopian calendar",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Thirteen months",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "የኢትዮጵያ ዘመን አቆጣጠር",
+    "hint_am": "አሥራ ሦስት ወር"
+  },
+  {
+    "id": "imp_ethiopia_010",
+    "word_en": "Demera",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Meskel bonfire",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ደመራ",
+    "hint_am": "የመስቀል እሳት"
+  },
+  {
+    "id": "imp_ethiopia_011",
+    "word_en": "Fasika",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Ethiopian Easter",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ፋሲካ",
+    "hint_am": "የትንሳኤ በዓል"
+  },
+  {
+    "id": "imp_ethiopia_012",
+    "word_en": "Genna",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Ethiopian Christmas",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ገና",
+    "hint_am": "የገና በዓል"
+  },
+  {
+    "id": "imp_ethiopia_013",
+    "word_en": "Eskista",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Shoulder dance",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "እስክስታ",
+    "hint_am": "የትከሻ ውዝዋዜ"
+  },
+  {
+    "id": "imp_ethiopia_014",
+    "word_en": "Krar",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Stringed instrument",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ክራር",
+    "hint_am": "የተጣላ ገመድ"
+  },
+  {
+    "id": "imp_ethiopia_015",
+    "word_en": "Masinko",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "One-string fiddle",
+    "difficulty": "hard",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ማሲንቆ",
+    "hint_am": "አንድ ገመድ በገና"
+  },
+  {
+    "id": "imp_ethiopia_016",
+    "word_en": "Amharic",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "National language",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "አማርኛ",
+    "hint_am": "ብሔራዊ ቋንቋ"
+  },
+  {
+    "id": "imp_ethiopia_017",
+    "word_en": "Oromiffa",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Oromo language",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ኦሮምኛ",
+    "hint_am": "የኦሮሞ ቋንቋ"
+  },
+  {
+    "id": "imp_ethiopia_018",
+    "word_en": "Tigrinya",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Tigray language",
+    "difficulty": "easy",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ትግርኛ",
+    "hint_am": "የትግራይ ቋንቋ"
+  },
+  {
+    "id": "imp_ethiopia_019",
+    "word_en": "Haile Selassie",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Last emperor",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ኃይለ ሥላሴ",
+    "hint_am": "የመጨረሻው ንጉሠ ነገሥት"
+  },
+  {
+    "id": "imp_ethiopia_020",
+    "word_en": "Lucy",
+    "category_id": "ethiopia_and_culture",
+    "hint_en": "Ancient fossil",
+    "difficulty": "medium",
+    "content_level": "family",
+    "active": true,
+    "word_am": "ድንቅነሽ",
+    "hint_am": "ጥንታዊ አጽም"
   }
 ]

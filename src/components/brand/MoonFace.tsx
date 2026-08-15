@@ -17,7 +17,8 @@ export type MoonExpression =
   | 'bomb'
   | 'loading'
   | 'comingSoon'
-  | 'timer';
+  | 'timer'
+  | 'quiz';
 
 type Props = {
   expression?: MoonExpression;
@@ -41,6 +42,7 @@ const SOURCES: Record<MoonExpression, number> = {
   loading: require('../../../assets/mascot/moon-loading.png'),
   comingSoon: require('../../../assets/mascot/moon-coming-soon.png'),
   timer: require('../../../assets/mascot/moon-timer.png'),
+  quiz: require('../../../assets/mascot/moon-quiz.png'),
 };
 
 export function MoonFace({ expression = 'ready', size = 96 }: Props) {

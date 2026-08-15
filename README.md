@@ -20,7 +20,7 @@ Android development. Native store releases are not published yet.
 
 ## Current status
 
-- All six MVP games are playable end to end.
+- All seven games are playable end to end.
 - Interface language: English or Amharic.
 - Content language: English, Amharic, or Mixed.
 - Native builds bundle all gameplay content for offline sessions.
@@ -37,6 +37,7 @@ Android development. Native store releases are not published yet.
 | **Who’s Most Likely To** | Read a prompt and point at the same time | 3+ | Optional |
 | **Who’s Got the Bomb?** | Give category answers while passing a hidden fuse | 2–15 | Yes |
 | **Would You Rather** | Choose between two difficult options and debate | 2+ | No |
+| **Quiz** | Four-choice trivia in casual Pass & Play or scored Compete mode | 2+ | Compete only |
 
 The familiar game names are temporary. Localized names can land later without
 changing the underlying mechanics.
@@ -51,23 +52,24 @@ changing the underlying mechanics.
   an account.
 - **Ethiopian by substance:** culture lives in the language and cards, not in
   decorative stereotypes.
-- **Safe for different groups:** Family, Friends, and opt-in Spicy content
-  levels are independently selectable.
+- **Safe for different groups:** social-card games use Family, Friends, and
+  opt-in Spicy; Quiz uses separate knowledge difficulty.
 - **Accessible by design:** large touch targets, high contrast, optional sound
   and vibration, and reduced-motion support.
 
 ## Content library
 
-The current bundled library contains **1,151 bilingual content items**:
+The current bundled library includes bilingual offline content for all seven games:
 
 | Game | Cards |
 |---|---:|
-| Impostor | 252 words |
-| Who’s the Liar? | 171 question pairs |
-| Taboo | 330 cards |
-| Who’s Most Likely To | 180 prompts |
-| Would You Rather | 170 dilemmas |
-| Who’s Got the Bomb? | 48 categories |
+| Impostor | 292 words |
+| Who’s the Liar? | 201 question pairs |
+| Taboo | 370 cards |
+| Who’s Most Likely To | 225 prompts |
+| Would You Rather | 218 dilemmas |
+| Who’s Got the Bomb? | 54 categories |
+| Quiz | 60 questions |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.

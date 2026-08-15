@@ -1,0 +1,12 @@
+[
+  { "id": "general_knowledge", "name_en": "General Knowledge", "name_am": "አጠቃላይ እውቀት", "sort_order": 1, "active": true },
+  { "id": "ethiopia_and_culture", "name_en": "Ethiopia & Culture", "name_am": "ኢትዮጵያ እና ባህል", "sort_order": 2, "active": true },
+  { "id": "entertainment_pop_culture", "name_en": "Entertainment & Pop Culture", "name_am": "መዝናኛ እና ፖፕ ባህል", "sort_order": 3, "active": true },
+  { "id": "football", "name_en": "Football", "name_am": "እግር ኳስ", "sort_order": 4, "active": true },
+  { "id": "sports", "name_en": "Sports", "name_am": "ስፖርት", "sort_order": 5, "active": true },
+  { "id": "geography_places", "name_en": "Geography & Places", "name_am": "ጂኦግራፊ እና ቦታዎች", "sort_order": 6, "active": true },
+  { "id": "food_and_drink", "name_en": "Food & Drink", "name_am": "ምግብ እና መጠጥ", "sort_order": 7, "active": true },
+  { "id": "history", "name_en": "History", "name_am": "ታሪክ", "sort_order": 8, "active": true },
+  { "id": "animals_and_nature", "name_en": "Animals & Nature", "name_am": "እንስሳት እና ተፈጥሮ", "sort_order": 9, "active": true },
+  { "id": "science_technology", "name_en": "Science & Technology", "name_am": "ሳይንስ እና ቴክኖሎጂ", "sort_order": 10, "active": true }
+]

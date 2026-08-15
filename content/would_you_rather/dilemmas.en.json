@@ -5,9 +5,12 @@
     "option_b_en": "Always arrive thirty minutes late",
     "option_a_am": "ሁልጊዜ አንድ ሰዓት ቀድመህ መድረስ",
     "option_b_am": "ሁልጊዜ ሠላሳ ደቂቃ ዘግይተህ መድረስ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_002",
@@ -15,9 +18,12 @@
     "option_b_en": "Wash every dish afterward",
     "option_a_am": "ሁሉንም የበዓል ስብሰባዎች ማስተናገድ",
     "option_b_am": "ከበዓል በኋላ ሁሉንም ሳህኖች ማጠብ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_003",
@@ -25,9 +31,12 @@
     "option_b_en": "Give up holiday feasts for a year",
     "option_a_am": "ለአንድ ዓመት የቡና ሥነ ሥርዓት መተው",
     "option_b_am": "ለአንድ ዓመት የበዓል ግብዣ መተው",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_004",
@@ -35,9 +44,12 @@
     "option_b_en": "Spend a week without running water",
     "option_a_am": "አንድ ሳምንት ያለ ኤሌክትሪክ ማሳለፍ",
     "option_b_am": "አንድ ሳምንት ያለ ውሃ ማሳለፍ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_005",
@@ -45,9 +57,12 @@
     "option_b_en": "Know every Ethiopian song lyric",
     "option_a_am": "ሁሉንም የኢትዮጵያ ዳንስ ማወቅ",
     "option_b_am": "ሁሉንም የኢትዮጵያ የዘፈን ቃላት ማወቅ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_food_001",
@@ -55,7 +70,7 @@
     "option_b_en": "Give up coffee for one year",
     "option_a_am": "ለአንድ ዓመት እንጀራ መተው",
     "option_b_am": "ለአንድ ዓመት ቡና መተው",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -65,7 +80,7 @@
     "option_b_en": "Never eat spicy food",
     "option_a_am": "ቅመም የበዛ ምግብ ብቻ መብላት",
     "option_b_am": "ቅመም ያለበት ምግብ በጭራሽ አለመብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -75,7 +90,7 @@
     "option_b_en": "Eat the same restaurant meal every day",
     "option_a_am": "ሁሉንም ምግብ በራስህ ማብሰል",
     "option_b_am": "በየቀኑ ተመሳሳይ የሬስቶራንት ምግብ መብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -85,7 +100,7 @@
     "option_b_en": "Never eat breakfast again",
     "option_a_am": "የቁርስ ምግቦች ብቻ መብላት",
     "option_b_am": "ቁርስ በጭራሽ አለመብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "active": true
   },
@@ -95,7 +110,7 @@
     "option_b_en": "Have unlimited tibs",
     "option_a_am": "ያልተገደበ ዶሮ ወጥ ማግኘት",
     "option_b_am": "ያልተገደበ ጥብስ ማግኘት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -105,9 +120,12 @@
     "option_b_en": "Never hear anyone's secrets",
     "option_a_am": "ሁሉንም ምስጢር ከምርጥ ጓደኛህ ጋር ማጋራት",
     "option_b_am": "የማንንም ምስጢር አለመስማት",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_002",
@@ -115,9 +133,12 @@
     "option_b_en": "Never choose where the group goes",
     "option_a_am": "ሁሉንም የቡድን መውጫ ማቀድ",
     "option_b_am": "ቡድኑ የት እንደሚሄድ በጭራሽ አለመምረጥ",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_003",
@@ -125,9 +146,12 @@
     "option_b_en": "Have twenty casual friends",
     "option_a_am": "አንድ የዕድሜ ልክ ምርጥ ጓደኛ ማግኘት",
     "option_b_am": "ሃያ የአጋጣሚ ጓደኞች ማግኘት",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_004",
@@ -135,9 +159,12 @@
     "option_b_en": "Let friends see your photo gallery",
     "option_a_am": "ጓደኞች መልእክቶችህን እንዲያነቡ መተው",
     "option_b_am": "ፎቶ ጋለሪህን እንዲያዩ መተው",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_005",
@@ -145,9 +172,12 @@
     "option_b_en": "Be the wisest person in the group",
     "option_a_am": "በቡድኑ ውስጥ በጣም አስቂኝ ሰው መሆን",
     "option_b_am": "በቡድኑ ውስጥ በጣም ጠቢብ ሰው መሆን",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_rel_001",
@@ -155,9 +185,12 @@
     "option_b_en": "Go on an awkward date that becomes a relationship",
     "option_a_am": "ድንቅ ቀጠሮ ግን ሁለተኛ አልኖረም",
     "option_b_am": "አስቸጋሪ ቀጠሮ ግን ወደ ግንኙነት የሚያድግ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_002",
@@ -165,9 +198,12 @@
     "option_b_en": "Never be allowed to make the first move",
     "option_a_am": "ሁልጊዜ የመጀመሪያውን እርምጃ መውሰድ",
     "option_b_am": "የመጀመሪያ እርምጃ መውሰድ በጭራሽ አለመፈቀድ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_003",
@@ -175,9 +211,12 @@
     "option_b_en": "Date your complete opposite",
     "option_a_am": "እንደአንተ ሁሉ ከሆነ ሰው ጋር መውጣት",
     "option_b_am": "ከተቃራኒህ ጋር መውጣት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_004",
@@ -185,9 +224,12 @@
     "option_b_en": "Wait two years to meet them",
     "option_a_am": "በመጀመሪያው ቀጠሮ የአጋር ቤተሰብ ማግኘት",
     "option_b_am": "ሁለት ዓመት ጠብቀህ ማግኘት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_005",
@@ -195,9 +237,12 @@
     "option_b_en": "Forget every past relationship",
     "option_a_am": "እያንዳንዱ ቀድሞ ጓደኛ ለምን እንደወጣ ማወቅ",
     "option_b_am": "ያለፉትን ግንኙነቶች በሙሉ መርሳት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_money_001",
@@ -205,7 +250,7 @@
     "option_b_en": "Receive 1,000,000 ETB in ten years",
     "option_a_am": "ዛሬ 100,000 ብር ማግኘት",
     "option_b_am": "ከአስር ዓመት በኋላ 1,000,000 ብር ማግኘት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -215,7 +260,7 @@
     "option_b_en": "Travel every year but always rent",
     "option_a_am": "የህልም ቤት ግን ያለ በዓል ጉዞ",
     "option_b_am": "በየዓመቱ መጓዝ ግን ሁልጊዜ አከራይ መሆን",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -225,7 +270,7 @@
     "option_b_en": "Work six short days a week",
     "option_a_am": "በሳምንት አራት ረጅም ቀናት መሥራት",
     "option_b_am": "በሳምንት ስድስት አጭር ቀናት መሥራት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -235,7 +280,7 @@
     "option_b_en": "Be famous and comfortable",
     "option_a_am": "ሀብታም እና ያልታወቀ መሆን",
     "option_b_am": "ታዋቂ እና ምቹ መሆን",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -245,7 +290,7 @@
     "option_b_en": "Never pay for food again",
     "option_a_am": "ኪራይ በጭራሽ አለመክፈል",
     "option_b_am": "ለምግብ በጭራሽ አለመክፈል",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -305,7 +350,7 @@
     "option_b_en": "Visit one place with everyone you love",
     "option_a_am": "በነፃ በሁሉም ቦታ ብቻህን መጓዝ",
     "option_b_am": "ከምትወዳቸው ጋር አንድ ቦታ መጎብኘት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -315,7 +360,7 @@
     "option_b_en": "Always lose one piece of luggage",
     "option_a_am": "ሁልጊዜ የመጀመሪያውን በረራ ማጣት",
     "option_b_am": "ሁልጊዜ አንድ ሻንጣ ማጣት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -325,7 +370,7 @@
     "option_b_en": "Explore every national park",
     "option_a_am": "ሁሉንም ከተሞች ማሻሻላት",
     "option_b_am": "ሁሉንም ብሔራዊ ፓርኮች ማሻሻላት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -335,7 +380,7 @@
     "option_b_en": "Take a simple month-long trip",
     "option_a_am": "የቅንጦት የሳምንት መጨረሻ ጉዞ",
     "option_b_am": "ቀላል የአንድ ወር ጉዞ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "active": true
   },
@@ -345,7 +390,7 @@
     "option_b_en": "Never handle the planning",
     "option_a_am": "ሁልጊዜ መድረሻውን መምረጥ",
     "option_b_am": "እቅዱን በጭራሽ አለመያዝ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -355,9 +400,12 @@
     "option_b_en": "Sing everything you say",
     "option_a_am": "በሹክሹክታ ብቻ መናገር",
     "option_b_am": "የምትናገረውን ሁሉ መዘመር",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_002",
@@ -365,9 +413,12 @@
     "option_b_en": "Have arms as short as your fingers",
     "option_a_am": "እንደ ክንድህ ረጅም ጣቶች ማግኘት",
     "option_b_am": "እንደ ጣቶችህ አጭር ክንዶች ማግኘት",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_003",
@@ -375,9 +426,12 @@
     "option_b_en": "Fight fifty chicken-sized horses",
     "option_a_am": "ከአንድ የፈረስ መጠን ዶሮ ጋር መፋለም",
     "option_b_am": "ከሃምሳ የዶሮ መጠን ፈረሶች ጋር መፋለም",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_004",
@@ -385,9 +439,12 @@
     "option_b_en": "Always have a pebble in your shoe",
     "option_a_am": "ሁልጊዜ እርጥብ ካልሲ ማድረግ",
     "option_b_am": "ሁልጊዜ በጫማህ ውስጥ ጠጠር ማግኘት",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_005",
@@ -395,9 +452,12 @@
     "option_b_en": "Fly but only one metre above ground",
     "option_a_am": "መተላለፍ ግን በእርጥብ መድረስ",
     "option_b_am": "መብረር ግን ከመሬት አንድ ሜትር ብቻ",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_deep_001",
@@ -405,9 +465,12 @@
     "option_b_en": "Know what that success will be",
     "option_a_am": "የታላቅ ስኬትህን ቀን ማወቅ",
     "option_b_am": "ያ ስኬት ምን እንደሚሆን ማወቅ",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_002",
@@ -415,9 +478,12 @@
     "option_b_en": "Be deeply loved by a few people",
     "option_a_am": "በሁሉም ሰው መታሰብ",
     "option_b_am": "በጥቂት ሰዎች በጥልቅ መወደድ",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_003",
@@ -425,9 +491,12 @@
     "option_b_en": "Always be believed when telling the truth",
     "option_a_am": "ሁልጊዜ ሲዋሹ ማወቅ",
     "option_b_am": "እውነት ስትናገር ሁልጊዜ መታመን",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_004",
@@ -435,9 +504,12 @@
     "option_b_en": "See one future decision clearly",
     "option_a_am": "አንድ ያለፈ ውሳኔ መድገም",
     "option_b_am": "አንድ የወደፊት ውሳኔ በግልጽ ማየት",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_005",
@@ -445,9 +517,12 @@
     "option_b_en": "Have more courage",
     "option_a_am": "ተጨማሪ ጊዜ ማግኘት",
     "option_b_am": "ተጨማሪ ድፍረት ማግኘት",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_diaspora_001",
@@ -455,9 +530,12 @@
     "option_b_en": "Live far away with your dream career",
     "option_a_am": "ከቤተሰብ አቅራቢያ ጥቂት እድሎች ብቻ መኖር",
     "option_b_am": "ሩቅ ሆነህ የህልም ሥራ ማግኘት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_002",
@@ -465,9 +543,12 @@
     "option_b_en": "Visit once every five years for two months",
     "option_a_am": "በየዓመቱ ለአንድ ሳምንት ኢትዮጵያን መጎብኘት",
     "option_b_am": "በአምስት ዓመት አንድ ጊዜ ለሁለት ወር መጎብኘት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_003",
@@ -475,9 +556,12 @@
     "option_b_en": "Write perfectly but speak slowly",
     "option_a_am": "ፍጹም አማርኛ መናገር ግን አለመጻፍ",
     "option_b_am": "ፍጹም መጻፍ ግን በዝግታ መናገር",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_004",
@@ -485,9 +569,12 @@
     "option_b_en": "Let everyone pronounce it incorrectly",
     "option_a_am": "ስምህን በየቀኑ ማብራራት",
     "option_b_am": "ሁሉም በስህተት እንዲጠራው መተው",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_005",
@@ -495,9 +582,12 @@
     "option_b_en": "Bring ten people to an Ethiopian restaurant",
     "option_a_am": "አንድ ሰው ኢትዮጵያን እንዲጎበኝ ማምጣት",
     "option_b_am": "አስር ሰዎችን ወደ ኢትዮጵያ ሬስቶራንት ማምጣት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_eth_006",
@@ -505,9 +595,12 @@
     "option_b_en": "Never sit in traffic",
     "option_a_am": "ሁልጊዜ ታክሲ ወዲያውኑ ማግኘት",
     "option_b_am": "በጭራሽ በትራፊክ አለመቆየት",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_007",
@@ -515,9 +608,12 @@
     "option_b_en": "Choose only one favorite holiday",
     "option_a_am": "እያንዳንዱን በዓል ሁለት ጊዜ ማክበር",
     "option_b_am": "አንድ ብቻ ተወዳጅ በዓል መምረጥ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_008",
@@ -525,9 +621,12 @@
     "option_b_en": "Live far from every shop",
     "option_a_am": "በተጨናነቀ ገበያ ጎን መኖር",
     "option_b_am": "ከሁሉም ሱቆች ሩቅ መኖር",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_009",
@@ -535,9 +634,12 @@
     "option_b_en": "Always be the unexpected guest",
     "option_a_am": "ሁልጊዜ ያልተጠበቁ እንግዶች ማስተናገድ",
     "option_b_am": "ሁልጊዜ ያልተጠበቀ እንግዳ መሆን",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_010",
@@ -545,9 +647,12 @@
     "option_b_en": "Only listen to new Ethiopian music",
     "option_a_am": "የቆየ የኢትዮጵያ ሙዚቃ ብቻ ማዳመጥ",
     "option_b_am": "አዲስ የኢትዮጵያ ሙዚቃ ብቻ ማዳመጥ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_011",
@@ -555,9 +660,12 @@
     "option_b_en": "Spend every weekend in the countryside",
     "option_a_am": "እያንዳንዱን ሳምንት መጨረሻ በአዲስ አበባ ማሳለፍ",
     "option_b_am": "እያንዳንዱን ሳምንት መጨረሻ በገጠር ማሳለፍ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_012",
@@ -565,9 +673,12 @@
     "option_b_en": "Sleep on every host's sofa",
     "option_a_am": "ለእያንዳንዱ እንግዳ የመኝታ ክፍልህን መስጠት",
     "option_b_am": "በእያንዳንዱ አስተናጋጅ ሶፋ ላይ መተኛት",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_013",
@@ -575,9 +686,12 @@
     "option_b_en": "Be known for your cooking",
     "option_a_am": "በቡናህ ታዋቂ መሆን",
     "option_b_am": "በምግብ ማብሰልህ ታዋቂ መሆን",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_014",
@@ -585,9 +699,12 @@
     "option_b_en": "Let them choose your profile photo",
     "option_a_am": "ቤተሰብ ልብስህን እንዲመርጥ መተው",
     "option_b_am": "የመገለጫ ፎቶህን እንዲመርጡ መተው",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_015",
@@ -595,9 +712,12 @@
     "option_b_en": "Never hear the family gossip",
     "option_a_am": "ሁሉም ዘመድ የግል ጉዳይህን እንዲያውቅ",
     "option_b_am": "የቤተሰብ ወሬ በጭራሽ አለመስማት",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_food_006",
@@ -605,7 +725,7 @@
     "option_b_en": "Eat pasta every dinner",
     "option_a_am": "በእያንዳንዱ ምሳ ሽሮ መብላት",
     "option_b_am": "በእያንዳንዱ እራት ፓስታ መብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -615,7 +735,7 @@
     "option_b_en": "Never eat with your hands again",
     "option_a_am": "ሹካ በጭራሽ አለመጠቀም",
     "option_b_am": "በእጅ በጭራሽ አለመብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -625,7 +745,7 @@
     "option_b_en": "Get the last piece",
     "option_a_am": "የመጀመሪያውን ቁራጭ ማግኘት",
     "option_b_am": "የመጨረሻውን ቁራጭ ማግኘት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -635,7 +755,7 @@
     "option_b_en": "Eat an average meal with great company",
     "option_a_am": "ፍጹም ምግብ በጸጥታ መብላት",
     "option_b_am": "መካከለኛ ምግብ ከጥሩ ጓደኞች ጋር መብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "active": true
   },
@@ -645,7 +765,7 @@
     "option_b_en": "Give up salt",
     "option_a_am": "ስኳር መተው",
     "option_b_am": "ጨው መተው",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -655,7 +775,7 @@
     "option_b_en": "Clean up after twenty guests",
     "option_a_am": "ለሃያ እንግዶች ማብሰል",
     "option_b_am": "ከሃያ እንግዶች በኋላ ማጽዳት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "active": true
   },
@@ -665,7 +785,7 @@
     "option_b_en": "Only drink cold drinks",
     "option_a_am": "ሙቅ መጠጦች ብቻ መጠጣት",
     "option_b_am": "ቀዝቃዛ መጠጦች ብቻ መጠጣት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -675,7 +795,7 @@
     "option_b_en": "Master one family recipe",
     "option_a_am": "ሁሉንም የመንገድ ምግብ መሞከር",
     "option_b_am": "አንድ የቤተሰብ ምግብ አሰራር መማር",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "active": true
   },
@@ -685,7 +805,7 @@
     "option_b_en": "Let your date order for you",
     "option_a_am": "ከቀድሞ ጓደኛ ጋር ጣፋጭ ማጋራት",
     "option_b_am": "ቀጠሮ የሚሰጠው ሰው ምግብ እንዲያዝልህ",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "active": true
   },
@@ -695,7 +815,7 @@
     "option_b_en": "Eat the worst meal your crush made",
     "option_a_am": "መጥፎ የማብሰል ታሪክህን መግለጥ",
     "option_b_am": "ክረችህ ያበሰለውን መጥፎ ምግብ መብላት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "active": true
   },
@@ -705,9 +825,12 @@
     "option_b_en": "Have friends who are always supportive",
     "option_a_am": "ሁልጊዜ ታማኝ ጓደኞች ማግኘት",
     "option_b_am": "ሁልጊዜ ድጋፍ የሚሰጡ ጓደኞች ማግኘት",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_007",
@@ -715,9 +838,12 @@
     "option_b_en": "Control the music on every trip",
     "option_a_am": "በእያንዳንዱ ጉዞ መንጃ መሆን",
     "option_b_am": "በእያንዳንዱ ጉዞ ሙዚቃ መቆጣጠር",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_008",
@@ -725,9 +851,12 @@
     "option_b_en": "Lend your phone for a day",
     "option_a_am": "ምርጥ ልብስህን ማበደር",
     "option_b_am": "ስልክህን ለአንድ ቀን ማበደር",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_009",
@@ -735,9 +864,12 @@
     "option_b_en": "Always organize the meetup",
     "option_a_am": "ሁልጊዜ የቡድን ቻት መመለስ",
     "option_b_am": "ሁልጊዜ ስብሰባውን ማደራጀት",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_010",
@@ -745,9 +877,12 @@
     "option_b_en": "Never worry what they think",
     "option_a_am": "ጓደኞች ስለአንተ ምን እንደሚሉ ማወቅ",
     "option_b_am": "ምን እንደሚያስቡ አለመጨነቅ",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_011",
@@ -755,9 +890,12 @@
     "option_b_en": "Attend plans you no longer want",
     "option_a_am": "እቅድ በመጨረሻው ደቂቃ መሰረዝ",
     "option_b_am": "የማትፈልገውን እቅድ አሁንም መሄድ",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_012",
@@ -765,9 +903,12 @@
     "option_b_en": "Travel alone in comfort",
     "option_a_am": "ከአስቂኝ ጓደኛህ ጋር ክፍል ማጋራት",
     "option_b_am": "ብቻህን በምቾት መጓዝ",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_013",
@@ -775,9 +916,12 @@
     "option_b_en": "Never understand the inside jokes",
     "option_a_am": "በእያንዳንዱ ስብሰባ መሳለቅብህ",
     "option_b_am": "የውስጥ ቀልዶችን በጭራሽ አለመረዳት",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_014",
@@ -785,9 +929,12 @@
     "option_b_en": "Tell your friend whom they like",
     "option_a_am": "ማን እንደሚወደው ለጓደኛህ መንገር",
     "option_b_am": "እርሱ ማንን እንደሚወድ መንገር",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_015",
@@ -795,9 +942,12 @@
     "option_b_en": "Let your friend date your ex",
     "option_a_am": "ከጓደኛህ ቀድሞ ጓደኛ ጋር መውጣት",
     "option_b_am": "ጓደኛህ ከቀድሞ ጓደኛህ ጋር እንዲወጣ መተው",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_rel_006",
@@ -805,9 +955,12 @@
     "option_b_en": "Receive a surprise trip",
     "option_a_am": "ጥንቃቄ ያለው ደብዳቤ ማግኘት",
     "option_b_am": "ያልተጠበቀ ጉዞ ማግኘት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_007",
@@ -815,9 +968,12 @@
     "option_b_en": "Take a day before discussing it",
     "option_a_am": "እያንዳንዱን አለመግባባት ወዲያውኑ መናገር",
     "option_b_am": "ከመነጋገር በፊት አንድ ቀን መጠበቅ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_008",
@@ -825,9 +981,12 @@
     "option_b_en": "Teach each other different hobbies",
     "option_a_am": "ተመሳሳይ የትርፍ ጊዜ ፍላጎት ማጋራት",
     "option_b_am": "እርስ በርስ የተለያዩ ፍላጎቶችን ማስተማር",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_009",
@@ -835,9 +994,12 @@
     "option_b_en": "Be surprised every time",
     "option_a_am": "ሁሉንም ቀጠሮ ማቀድ",
     "option_b_am": "ሁልጊዜ መደነቅ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_010",
@@ -845,9 +1007,12 @@
     "option_b_en": "Be with someone very practical",
     "option_a_am": "ከፍቅር ስሜት ጠንካራ ሰው ጋር መሆን",
     "option_b_am": "ከተግባራዊ ሰው ጋር መሆን",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_011",
@@ -855,9 +1020,12 @@
     "option_b_en": "Share one bank account",
     "option_a_am": "አንድ የስልክ የይለፍ ቃል ማጋራት",
     "option_b_am": "አንድ የባንክ መለያ ማጋራት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_012",
@@ -865,9 +1033,12 @@
     "option_b_en": "Keep a comforting illusion",
     "option_a_am": "አስቸጋሪ እውነት መስማት",
     "option_b_am": "ምቾት ያለ ምናባዊ ነገር ማቆየት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_013",
@@ -875,9 +1046,12 @@
     "option_b_en": "Elope and travel",
     "option_a_am": "ትልቅ ሰርግ ማድረግ",
     "option_b_am": "በስውር ማግባትና መጓዝ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_014",
@@ -885,9 +1059,12 @@
     "option_b_en": "Wait a month for them to text",
     "option_a_am": "ለክረችህ መጀመሪያ መልእክት መላክ",
     "option_b_am": "እርሱ/እርሷ እንዲልኩ አንድ ወር መጠበቅ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_015",
@@ -895,9 +1072,12 @@
     "option_b_en": "Meet an almost-right person at the perfect time",
     "option_a_am": "ትክክለኛውን ሰው በስህተት ጊዜ ማግኘት",
     "option_b_am": "ከሞላ ጎደል ትክክለኛ ሰው በፍጹም ጊዜ ማግኘት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_money_006",
@@ -905,7 +1085,7 @@
     "option_b_en": "Spend freely for one year",
     "option_a_am": "ከእያንዳንዱ ደመወዝ ግማሽ ማስቀመጥ",
     "option_b_am": "ለአንድ ዓመት ነፃ ማውጣት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -915,7 +1095,7 @@
     "option_b_en": "Own a mansion somewhere you dislike",
     "option_a_am": "በተወዳጅ ቦታ ትንሽ ቤት መያዝ",
     "option_b_am": "በማትወደው ቦታ ግዙፍ ቤት መያዝ",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -925,7 +1105,7 @@
     "option_b_en": "Never buy a new phone",
     "option_a_am": "አዲስ ልብስ በጭራሽ አለመግዛት",
     "option_b_am": "አዲስ ስልክ በጭራሽ አለመግዛት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -935,7 +1115,7 @@
     "option_b_en": "Earn more with no free time",
     "option_a_am": "ያነሰ ገቢ ከሙሉ ነፃነት ጋር",
     "option_b_am": "በጣም ብዙ ገቢ ግን ያለ ነፃ ጊዜ",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -945,7 +1125,7 @@
     "option_b_en": "Let whoever earns more pay more",
     "option_a_am": "ሁሉንም ወጪ እኩል ማጋራት",
     "option_b_am": "የበለጠ የሚያገኘው የበለጠ እንዲከፍል",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -955,7 +1135,7 @@
     "option_b_en": "Receive half its value in cash",
     "option_a_am": "መሸጥ የማትችለው መኪና ማሸነፍ",
     "option_b_am": "ግማሽ ዋጋውን በገንዘብ ማግኘት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -965,7 +1145,7 @@
     "option_b_en": "Have free transport forever",
     "option_a_am": "ለዘላለም ነፃ ኢንተርኔት ማግኘት",
     "option_b_am": "ለዘላለም ነፃ መጓጓዣ ማግኘት",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "family",
     "active": true
   },
@@ -975,7 +1155,7 @@
     "option_b_en": "Tell family exactly what you spend",
     "option_a_am": "ለጓደኞች በትክክል ምን እንደምታገኝ መንገር",
     "option_b_am": "ለቤተሰብ በትክክል ምን እንደምታውጣ መንገር",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "active": true
   },
@@ -985,7 +1165,7 @@
     "option_b_en": "Never choose where the date happens",
     "option_a_am": "የመጀመሪያውን ቀጠሮ ሁልጊዜ መክፈል",
     "option_b_am": "ቀጠሮው የት እንደሚሆን በጭራሽ አለመምረጥ",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "active": true
   },
@@ -995,7 +1175,7 @@
     "option_b_en": "Look broke but have savings",
     "option_a_am": "ሀብታም ሆነህ መታየት ግን ዕዳ መኖር",
     "option_b_am": "ድሀ ሆነህ መታየት ግን ቁጠባ መኖር",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "active": true
   },
@@ -1105,7 +1285,7 @@
     "option_b_en": "Only travel by plane",
     "option_a_am": "በመንገድ ጉዞ ብቻ መጓዝ",
     "option_b_am": "በአውሮፕላን ብቻ መጓዝ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -1115,7 +1295,7 @@
     "option_b_en": "Schedule every hour",
     "option_a_am": "ያለ እቅድ መጓዝ",
     "option_b_am": "እያንዳንዱን ሰዓት ማቀድ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "active": true
   },
@@ -1125,7 +1305,7 @@
     "option_b_en": "Spend a year in one new country",
     "option_a_am": "አስር አገሮችን በፍጥነት መጎብኘት",
     "option_b_am": "በአንድ አዲስ አገር አንድ ዓመት ማሳለፍ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -1135,7 +1315,7 @@
     "option_b_en": "Take a twelve-hour bus",
     "option_a_am": "በአውሮፕላን ማረፊያ መተኛት",
     "option_b_am": "የአሥራ ሁለት ሰዓት አውቶቡስ መውሰድ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -1145,7 +1325,7 @@
     "option_b_en": "Travel somewhere rainy",
     "option_a_am": "ወደ ቀዝቃዛ ቦታ መጓዝ",
     "option_b_am": "ወደ ዝናባማ ቦታ መጓዝ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -1155,7 +1335,7 @@
     "option_b_en": "Never need to pay for accommodation",
     "option_a_am": "ሁሉንም የአካባቢ ቋንቋ ማወቅ",
     "option_b_am": "ለማረፊያ በጭራሽ አለመክፈል",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "active": true
   },
@@ -1165,7 +1345,7 @@
     "option_b_en": "Take your closest friend on every trip",
     "option_a_am": "ቤተሰብን በእያንዳንዱ ጉዞ መውሰድ",
     "option_b_am": "ቅርብ ጓደኛን በእያንዳንዱ ጉዞ መውሰድ",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "active": true
   },
@@ -1175,7 +1355,7 @@
     "option_b_en": "Follow a boring perfect itinerary",
     "option_a_am": "ከክረችህ ጋር መጠፋት",
     "option_b_am": "አሰልቺ ግን ፍጹም እቅድ መከተል",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "active": true
   },
@@ -1185,7 +1365,7 @@
     "option_b_en": "Camp alone for a week",
     "option_a_am": "ከቀድሞ ጓደኛ ጋር ትንሽ የሆቴል ክፍል ማጋራት",
     "option_b_am": "ለአንድ ሳምንት ብቻህን መካመር",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "active": true
   },
@@ -1195,7 +1375,7 @@
     "option_b_en": "Always visit somewhere new",
     "option_a_am": "ወደ ተወዳጅ ቦታህ መመለስ",
     "option_b_am": "ሁልጊዜ አዲስ ቦታ መጎብኘት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "active": true
   },
@@ -1205,9 +1385,12 @@
     "option_b_en": "Have a pause button",
     "option_a_am": "ወደ ኋላ የሚመልስ ቁልፍ ማግኘት",
     "option_b_am": "የማቆሚያ ቁልፍ ማግኘት",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_007",
@@ -1215,9 +1398,12 @@
     "option_b_en": "Cry lemonade",
     "option_a_am": "ጊልተር ማስነጠስ",
     "option_b_am": "ሎሚ ጭማቂ ማልቀስ",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_008",
@@ -1225,9 +1411,12 @@
     "option_b_en": "Wear gloves on your feet",
     "option_a_am": "በእጆችህ ጫማ ማድረግ",
     "option_b_am": "በእግሮችህ ጓንት ማድረግ",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_009",
@@ -1235,9 +1424,12 @@
     "option_b_en": "Speak every human language",
     "option_a_am": "እንስሳትን መረዳት",
     "option_b_am": "ሁሉንም የሰው ቋንቋ መናገር",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_010",
@@ -1245,9 +1437,12 @@
     "option_b_en": "Have a laugh track follow you",
     "option_a_am": "የራስህ የገጽታ ዘፈን ማግኘት",
     "option_b_am": "የሳቅ ድምፅ ሁልጊዜ እንዲከተልህ",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_011",
@@ -1255,9 +1450,12 @@
     "option_b_en": "Fly only when laughing",
     "option_a_am": "በሚዘምሩበት ጊዜ ብቻ የማይታዩ መሆን",
     "option_b_am": "በሚስቁበት ጊዜ ብቻ መብረር",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_012",
@@ -1265,9 +1463,12 @@
     "option_b_en": "Drive a car shaped like a banana",
     "option_a_am": "እንደ ጫማ ቅርጽ ባለ ቤት መኖር",
     "option_b_am": "እንደ ሙዝ ቅርጽ ባለ መኪና መንዳት",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_013",
@@ -1275,9 +1476,12 @@
     "option_b_en": "Swap wardrobes for a month",
     "option_a_am": "ከምርጥ ጓደኛህ ጋር ድምፅ መለዋወጥ",
     "option_b_am": "ለአንድ ወር ልብስ መለዋወጥ",
-    "category_id": "absurd_choices",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_014",
@@ -1285,9 +1489,12 @@
     "option_b_en": "Accidentally post every camera-roll photo",
     "option_a_am": "ሁሉንም ረቂቅ መልእክት በስህተት መላክ",
     "option_b_am": "ሁሉንም የካሜራ ፎቶ በስህተት ማጋራት",
-    "category_id": "absurd_choices",
+    "category_id": "everyday_life",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_015",
@@ -1295,9 +1502,12 @@
     "option_b_en": "Have your friends choose every date",
     "option_a_am": "የጓደኝነት ሕይወትህ እንዲተረክ",
     "option_b_am": "ጓደኞች እያንዳንዱን ቀጠሮ እንዲመርጡ",
-    "category_id": "absurd_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_deep_006",
@@ -1305,9 +1515,12 @@
     "option_b_en": "Never need closure",
     "option_a_am": "ሁልጊዜ መጨረሻ ማግኘት",
     "option_b_am": "መጨረሻ በጭራሽ አለመፈለግ",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_007",
@@ -1315,9 +1528,12 @@
     "option_b_en": "Never need anyone's forgiveness",
     "option_a_am": "ማንንም ይቅር ማለት መቻል",
     "option_b_am": "የማንንም ይቅርታ አለመፈለግ",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_008",
@@ -1325,9 +1541,12 @@
     "option_b_en": "Know your biggest blind spot",
     "option_a_am": "ጠንካራ ተሰጥኦህን ማወቅ",
     "option_b_am": "ትልቁን ዕውር ነጥብህን ማወቅ",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_009",
@@ -1335,9 +1554,12 @@
     "option_b_en": "Live an uncertain adventurous life",
     "option_a_am": "ሰላማዊና የሚጠበቅ ሕይወት መኖር",
     "option_b_am": "ያልተረጋጋ ጀብዱ ሕይወት መኖር",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_010",
@@ -1345,9 +1567,12 @@
     "option_b_en": "Change one thing about yourself",
     "option_a_am": "ስለ ዓለም አንድ ነገር መለወጥ",
     "option_b_am": "ስለ ራስህ አንድ ነገር መለወጥ",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_011",
@@ -1355,9 +1580,12 @@
     "option_b_en": "Forget anything on command",
     "option_a_am": "ሁሉንም መታወስ",
     "option_b_am": "በትእዛዝ ማንኛውንም መርሳት",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_012",
@@ -1365,9 +1593,12 @@
     "option_b_en": "Always trust your intuition",
     "option_a_am": "ሁልጊዜ ምክንያታዊ ምርጫ ማድረግ",
     "option_b_am": "ሁልጊዜ ስሜትህን መታመን",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_013",
@@ -1375,9 +1606,12 @@
     "option_b_en": "Know who secretly dislikes you",
     "option_a_am": "በስውር የሚያደንቅህን ማወቅ",
     "option_b_am": "በስውር የማይወድህን ማወቅ",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_014",
@@ -1385,9 +1619,12 @@
     "option_b_en": "Hear every unspoken confession",
     "option_a_am": "ያልተነገረ ይቅርታ ሁሉ መስማት",
     "option_b_am": "ያልተነገረ ኑዛዜ ሁሉ መስማት",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_015",
@@ -1395,9 +1632,12 @@
     "option_b_en": "Understand everyone",
     "option_a_am": "በሁሉም ሰው መረዳት",
     "option_b_am": "ሁሉንም ሰው መረዳት",
-    "category_id": "deep_choices",
+    "category_id": "everyday_life",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_diaspora_006",
@@ -1405,9 +1645,12 @@
     "option_b_en": "Always find cheap flights home",
     "option_a_am": "ሁልጊዜ በአቅራቢያ ኢትዮጵያ ምግብ ማግኘት",
     "option_b_am": "ሁልጊዜ ርካሽ ወደ ቤት በረራ ማግኘት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_007",
@@ -1415,9 +1658,12 @@
     "option_b_en": "Travel home for every holiday",
     "option_a_am": "እያንዳንዱን በዓል በውጭ አገር ማሳለፍ",
     "option_b_am": "ለእያንዳንዱ በዓል ወደ ቤት መመለስ",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_008",
@@ -1425,9 +1671,12 @@
     "option_b_en": "Visit family for three weeks",
     "option_a_am": "ቤተሰብ ለሦስት ወር እንዲጎበኝ",
     "option_b_am": "ቤተሰብን ለሦስት ሳምንት መጎብኘት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_009",
@@ -1435,9 +1684,12 @@
     "option_b_en": "Organize every family trip",
     "option_a_am": "እያንዳንዱን የቤተሰብ የስልክ ጥሪ መተርጎም",
     "option_b_am": "እያንዳንዱን የቤተሰብ ጉዞ ማደራጀት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_010",
@@ -1445,9 +1697,12 @@
     "option_b_en": "Create completely new traditions",
     "option_a_am": "ሁሉንም ትውፊት በትክክል ማስቀጠል",
     "option_b_am": "ሙሉ በሙሉ አዲስ ትውፊቶች መፍጠር",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_011",
@@ -1455,9 +1710,12 @@
     "option_b_en": "Always be asked where you are really from abroad",
     "option_a_am": "በኢትዮጵያ እንደ ቱሪስት መታየት",
     "option_b_am": "በውጭ ሁልጊዜ እውነተኛ አገርህን መጠየቅ",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_012",
@@ -1465,9 +1723,12 @@
     "option_b_en": "Live abroad on Ethiopian family time",
     "option_a_am": "በኢትዮጵያ በውጭ ሥራ ሰዓት መኖር",
     "option_b_am": "በውጭ በኢትዮጵያ የቤተሰብ ሰዓት መኖር",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_013",
@@ -1475,9 +1736,12 @@
     "option_b_en": "Explain every date to the family",
     "option_a_am": "ቤተሰብ አንድ ቀጠሮ እንዲያቀድ መተው",
     "option_b_am": "እያንዳንዱን ቀጠሮ ለቤተሰብ ማብራራት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_014",
@@ -1485,9 +1749,12 @@
     "option_b_en": "Ask them to move abroad for you",
     "option_a_am": "ለምትወደው ሰው ወደ ቤት መመለስ",
     "option_b_am": "እርሱ/እርሷ ለአንተ ወደ ውጭ እንዲመጡ መጠየቅ",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_015",
@@ -1495,9 +1762,12 @@
     "option_b_en": "Belong partly to two places",
     "option_a_am": "ሙሉ በሙሉ በአንድ ቦታ መሰማት",
     "option_b_am": "በከፊል በሁለት ቦታዎች መሰማት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_eth_016",
@@ -1505,9 +1775,12 @@
     "option_b_en": "Never mention dating at home",
     "option_a_am": "ስለ እያንዳንዱ ቀጠሮ ለእማማ መንገር",
     "option_b_am": "ስለ ጓደኝነት በቤት በጭራሽ አለመናገር",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_eth_017",
@@ -1515,9 +1788,12 @@
     "option_b_en": "Have only one friend know",
     "option_a_am": "መላው ሰፈር ጓደኛ እንዳለህ እንዲያውቅ",
     "option_b_am": "አንድ ጓደኛ ብቻ እንዲያውቅ",
-    "category_id": "ethiopian_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "wyr_food_016",
@@ -1525,7 +1801,7 @@
     "option_b_en": "Order takeout and pretend you cooked",
     "option_a_am": "ያልተሳካ የፍቅር እራት ማብሰል",
     "option_b_am": "ተወስዶ የሚመጣ ምግብ ማዘዝና እንዳበሰልክ ማስመሰል",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "active": true
   },
@@ -1535,7 +1811,7 @@
     "option_b_en": "Never share food with a partner",
     "option_a_am": "በእያንዳንዱ ቀጠሮ አንድ ሳህን ማጋራት",
     "option_b_am": "ከአጋር ጋር ምግብ በጭራሽ አለማጋራት",
-    "category_id": "food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "active": true
   },
@@ -1545,9 +1821,12 @@
     "option_b_en": "Never take dating advice again",
     "option_a_am": "ጓደኞች በሚቀጥለው ቀጠሮ እንዲመርጡ መተው",
     "option_b_am": "ስለ ጓደኝነት ምክር በጭራሽ አለመቀበል",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_friends_017",
@@ -1555,9 +1834,12 @@
     "option_b_en": "Keep it secret for a year",
     "option_a_am": "ክረችህን ለቡድኑ መግለጥ",
     "option_b_am": "ለአንድ ዓመት ምስጢር ማድረግ",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "wyr_rel_016",
@@ -1565,9 +1847,12 @@
     "option_b_en": "Never know what they write about you",
     "option_a_am": "የአጋርህን የግል ማስታወሻ አንድ ጊዜ ማንበብ",
     "option_b_am": "ስለአንተ ምን እንደሚጽፍ በጭራሽ አለማወቅ",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_rel_017",
@@ -1575,9 +1860,12 @@
     "option_b_en": "Have five quiet fade-outs",
     "option_a_am": "አንድ ደራማዊ መለያየት ማግኘት",
     "option_b_am": "አምስት ጸጥ ያሉ መራራቆች ማግኘት",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Dating"
+    ]
   },
   {
     "id": "wyr_money_016",
@@ -1585,7 +1873,7 @@
     "option_b_en": "Always pay to impress",
     "option_a_am": "የቀጠሮ ወጪን ለዘላለም ማጋራት",
     "option_b_am": "ለማስደነቅ ሁልጊዜ መክፈል",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "active": true
   },
@@ -1595,7 +1883,7 @@
     "option_b_en": "Date someone broke and cover everything",
     "option_a_am": "ከበለጸገ ሰው ጋር መውጣት እና ማፍረስ",
     "option_b_am": "ከገንዘብ ጎደለ ሰው ጋር መውጣት እና ሁሉን መሸፈን",
-    "category_id": "money_and_lifestyle",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "active": true
   },
@@ -1625,7 +1913,7 @@
     "option_b_en": "Never revisit places tied to an ex",
     "option_a_am": "የቀድሞ ጓደኛ ተወዳጅ ጉዞ ከአዲስ ሰው ጋር መውሰድ",
     "option_b_am": "ከቀድሞ ጓደኛ ጋር የተያያዙ ቦታዎችን አለመጎብኘት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "active": true
   },
@@ -1635,7 +1923,7 @@
     "option_b_en": "Never do public affection while traveling",
     "option_a_am": "በአውሮፕላን ማረፊያ ደህና ሁን መሳም",
     "option_b_am": "በጉዞ ላይ በይፋ ፍቅር አለማሳየት",
-    "category_id": "travel",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "active": true
   },
@@ -1645,9 +1933,12 @@
     "option_b_en": "You can hear your crush's thoughts for a day",
     "option_a_am": "ክረችህ ለአንድ ቀን ሀሳብህን እንዲሰማ",
     "option_b_am": "ለአንድ ቀን የክረችህን ሀሳብ እንድትሰማ",
-    "category_id": "absurd_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_absurd_017",
@@ -1655,9 +1946,12 @@
     "option_b_en": "Never post a partner online",
     "option_a_am": "እያንዳንዱን ግንኙነት በስውር ማስጀመር",
     "option_b_am": "አጋርን በመስመር ላይ በጭራሽ አለማጋራት",
-    "category_id": "absurd_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Absurd"
+    ]
   },
   {
     "id": "wyr_deep_016",
@@ -1665,9 +1959,12 @@
     "option_b_en": "Forget them completely forever",
     "option_a_am": "የመጀመሪያ ፍቅርህ አሁንም እንደሚያስብህ ማወቅ",
     "option_b_am": "ለዘላለም ሙሉ በሙሉ መርሳት",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_deep_017",
@@ -1675,9 +1972,12 @@
     "option_b_en": "Hear every crush confession about you",
     "option_a_am": "ያጋጠመህን ክረች ሁሉ መግለጥ",
     "option_b_am": "ስለአንተ የተነገረ ክረች ኑዛዜ ሁሉ መስማት",
-    "category_id": "deep_choices",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Deep"
+    ]
   },
   {
     "id": "wyr_diaspora_016",
@@ -1685,9 +1985,12 @@
     "option_b_en": "Date only people who don't know Ethiopia",
     "option_a_am": "ከ«ቤት» ካሉ ሰዎች ብቻ መውጣት",
     "option_b_am": "ኢትዮጵያ የማያውቁ ሰዎች ብቻ መውጣት",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "wyr_diaspora_017",
@@ -1695,8 +1998,491 @@
     "option_b_en": "Hide them until the next trip home",
     "option_a_am": "አጋርን በቤተሰብ ቪዲዮ ጥሪ ማስተዋወቅ",
     "option_b_am": "እስከሚቀጥለው የቤት ጉዞ ድረስ መደበቅ",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
+  },
+  {
+    "id": "wyr_entertainment_001",
+    "option_a_en": "Only watch movies for the rest of your life",
+    "option_b_en": "Only watch TV series for the rest of your life",
+    "option_a_am": "ለቀሪው ዘመንህ ፊልም ብቻ መመልከት",
+    "option_b_am": "ለቀሪው ዘመንህ ተከታታይ ትዕይንት ብቻ መመልከት",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_002",
+    "option_a_en": "Have perfect karaoke pitch",
+    "option_b_en": "Have perfect dance moves",
+    "option_a_am": "ፍጹም የካራኦኬ ድምፅ መያዝ",
+    "option_b_am": "ፍጹም የዳንስ ውዝዋዜ መያዝ",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_003",
+    "option_a_en": "Meet your favorite musician",
+    "option_b_en": "Meet your favorite actor",
+    "option_a_am": "የምትወደውን ሙዚቀኛ ማግኘት",
+    "option_b_am": "የምትወደውን ተዋናይ ማግኘት",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_004",
+    "option_a_en": "Have every movie spoiled before you watch it",
+    "option_b_en": "Never be able to watch a movie twice",
+    "option_a_am": "የምታየውን ፊልም ታሪክ ቀድሞ ማወቅ",
+    "option_b_am": "ፊልም ደግመህ አለማየት",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_005",
+    "option_a_en": "Be the star of a reality show",
+    "option_b_en": "Be the director of a blockbuster film",
+    "option_a_am": "የሪያሊቲ ትዕይንት ኮከብ መሆን",
+    "option_b_am": "የትልቅ ፊልም ዳይሬክተር መሆን",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_006",
+    "option_a_en": "Have a soundtrack that only you can hear",
+    "option_b_en": "Have applause follow every good decision you make",
+    "option_a_am": "አንተ ብቻ የምትሰማው የሙዚቃ ዳራ መያዝ",
+    "option_b_am": "ጥሩ ውሳኔ በምታደርግበት ጊዜ ሁሉ ጭብጨባ መስማት",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_007",
+    "option_a_en": "Know all the celebrity gossip first",
+    "option_b_en": "Never care about celebrity gossip again",
+    "option_a_am": "ስለ ታዋቂ ሰዎች ወሬ ቀድመህ ማወቅ",
+    "option_b_am": "ስለ ታዋቂ ሰዎች ወሬ ፈጽሞ ግድ የለሽ መሆን",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_008",
+    "option_a_en": "Be recognized everywhere you go",
+    "option_b_en": "Be able to disappear into any crowd",
+    "option_a_am": "በምትሄድበት ቦታ ሁሉ መታወቅ",
+    "option_b_am": "በማንኛውም ሕዝብ ውስጥ መጥፋት መቻል",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_009",
+    "option_a_en": "Have unlimited front-row concert tickets",
+    "option_b_en": "Have a lifetime pass to every movie premiere",
+    "option_a_am": "ያልተገደበ የፊት ረድፍ የኮንሰርት ትኬት መያዝ",
+    "option_b_am": "የዕድሜ ልክ የፊልም መክፈቻ ፓስ መያዝ",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_010",
+    "option_a_en": "Be able to lip-sync perfectly to any song",
+    "option_b_en": "Be able to freestyle rap on the spot",
+    "option_a_am": "ማንኛውንም ዘፈን በትክክል ከንፈር ማንቀሳቀስ መቻል",
+    "option_b_am": "ድንገት ራፕ መስራት መቻል",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_011",
+    "option_a_en": "Always know the ending of every show",
+    "option_b_en": "Never be able to guess any ending",
+    "option_a_am": "የማንኛውም ትዕይንት መጨረሻ ሁልጊዜ ማወቅ",
+    "option_b_am": "ማንኛውንም መጨረሻ ፈጽሞ መገመት አለመቻል",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_entertainment_012",
+    "option_a_en": "Have your life turned into a movie",
+    "option_b_en": "Have your life turned into a comedy sketch",
+    "option_a_am": "ሕይወትህ ወደ ፊልም ቢቀየር",
+    "option_b_am": "ሕይወትህ ወደ አስቂኝ ትዕይንት ቢቀየር",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_001",
+    "option_a_en": "Play in a World Cup final and lose",
+    "option_b_en": "Never play in a World Cup at all",
+    "option_a_am": "የዓለም ዋንጫ ፍጻሜ ተጫውቶ መሸነፍ",
+    "option_b_am": "ፈጽሞ የዓለም ዋንጫ አለመጫወት",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_002",
+    "option_a_en": "Score the winning goal but miss the celebration",
+    "option_b_en": "Miss the goal but join the best celebration ever",
+    "option_a_am": "አሸናፊ ግብ አግብቶ ክብረ በዓሉን ማምለጥ",
+    "option_b_am": "ግብ አምልጦ ምርጡን ክብረ በዓል መቀላቀል",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_003",
+    "option_a_en": "Support a team that always draws",
+    "option_b_en": "Support a team that wins big then loses big",
+    "option_a_am": "ሁልጊዜ እኩል የሚወጣ ቡድን መደገፍ",
+    "option_b_am": "ትልቅ አሸንፎ ትልቅ የሚሸነፍ ቡድን መደገፍ",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_004",
+    "option_a_en": "Be a legendary striker with a short career",
+    "option_b_en": "Be an average player with a very long career",
+    "option_a_am": "ለአጭር ጊዜ ታዋቂ አጥቂ መሆን",
+    "option_b_am": "ለረጅም ጊዜ መደበኛ ተጫዋች መሆን",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_005",
+    "option_a_en": "Referee a rivalry match",
+    "option_b_en": "Commentate a World Cup final",
+    "option_a_am": "የፉክክር ጨዋታ መዳኘት",
+    "option_b_am": "የዓለም ዋንጫ ፍጻሜን መተንተን",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_006",
+    "option_a_en": "Have season tickets but always sit far from the pitch",
+    "option_b_en": "Get one free ticket but always sit courtside",
+    "option_a_am": "የወቅት ትኬት ይዞ ከሜዳ ሩቅ መቀመጥ",
+    "option_b_am": "አንድ ነጻ ትኬት አግኝቶ ከሜዳ አጠገብ መቀመጥ",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_007",
+    "option_a_en": "Always predict match results correctly but never bet",
+    "option_b_en": "Never know results but win every bet by luck",
+    "option_a_am": "ውጤት ሁልጊዜ በትክክል መተንበይ ግን ፈጽሞ አለመወራረድ",
+    "option_b_am": "ውጤት ፈጽሞ ሳታውቅ በዕድል ሁሉንም ውርርድ ማሸነፍ",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_008",
+    "option_a_en": "Play football barefoot on grass",
+    "option_b_en": "Play football in the rain",
+    "option_a_am": "በሣር ላይ ባዶ እግር እግር ኳስ መጫወት",
+    "option_b_am": "በዝናብ ውስጥ እግር ኳስ መጫወት",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_009",
+    "option_a_en": "Be the most hated rival player",
+    "option_b_en": "Be the least noticed player on a winning team",
+    "option_a_am": "በጣም የተጠላ ተቀናቃኝ ተጫዋች መሆን",
+    "option_b_am": "በአሸናፊ ቡድን ውስጥ ትንሽ የማይታወቅ ተጫዋች መሆን",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_010",
+    "option_a_en": "Win a trophy with a team you don't like",
+    "option_b_en": "Lose a final with your favorite team",
+    "option_a_am": "የማትወደው ቡድን ውስጥ ዋንጫ ማሸነፍ",
+    "option_b_am": "ከምትወደው ቡድን ጋር ፍጻሜ ማጣት",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_football_011",
+    "option_a_en": "Have to celebrate every goal with a dance",
+    "option_b_en": "Have to celebrate every goal in total silence",
+    "option_a_am": "እያንዳንዱን ግብ በዳንስ ማክበር",
+    "option_b_am": "እያንዳንዱን ግብ ጸጥታ ውስጥ ማክበር",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_football_012",
+    "option_a_en": "Coach a team of legends who never listen",
+    "option_b_en": "Coach a team of amateurs who always listen",
+    "option_a_am": "የማይሰሙ የአፈ ታሪክ ተጫዋቾችን ቡድን ማሠልጠን",
+    "option_b_am": "ሁልጊዜ የሚሰሙ ጀማሪዎችን ቡድን ማሠልጠን",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_001",
+    "option_a_en": "Win an Olympic gold medal in a sport no one watches",
+    "option_b_en": "Win a local trophy in a sport everyone loves",
+    "option_a_am": "ማንም በማይመለከተው ስፖርት የኦሎምፒክ ወርቅ ማሸነፍ",
+    "option_b_am": "ሁሉም በሚወደው ስፖርት የአካባቢ ዋንጫ ማሸነፍ",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_002",
+    "option_a_en": "Be an undefeated boxer who never gets famous",
+    "option_b_en": "Be a famous boxer who loses often",
+    "option_a_am": "ታዋቂ ሳይሆን ያልተሸነፈ ቦክሰኛ መሆን",
+    "option_b_am": "ብዙ ጊዜ የሚሸነፍ ታዋቂ ቦክሰኛ መሆን",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_003",
+    "option_a_en": "Run a marathon with no training",
+    "option_b_en": "Play one professional match in any sport with no training",
+    "option_a_am": "ያለ ልምምድ ማራቶን መሮጥ",
+    "option_b_am": "ያለ ልምምድ በማንኛውም ስፖርት አንድ ሙያዊ ጨዋታ መጫወት",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_004",
+    "option_a_en": "Have the strength to lift anything but move very slowly",
+    "option_b_en": "Be incredibly fast but very weak",
+    "option_a_am": "ማንኛውንም ነገር የማንሳት ጥንካሬ ኖሮህ ቀስ ብሎ መንቀሳቀስ",
+    "option_b_am": "እጅግ ፈጣን ግን በጣም ደካማ መሆን",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_005",
+    "option_a_en": "Compete in the Olympics once and lose early",
+    "option_b_en": "Never compete but train with Olympic athletes",
+    "option_a_am": "አንዴ በኦሎምፒክ ተወዳድሮ ቀድሞ መሸነፍ",
+    "option_b_am": "ፈጽሞ ሳይወዳደር ከኦሎምፒክ አትሌቶች ጋር መለማመድ",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_006",
+    "option_a_en": "Be a chess champion with no other skills",
+    "option_b_en": "Be great at every sport but never win a title",
+    "option_a_am": "ሌላ ችሎታ የሌለው የቼዝ ሻምፒዮን መሆን",
+    "option_b_am": "በሁሉም ስፖርት ጎበዝ ሆኖ ማዕረግ ፈጽሞ አለማሸነፍ",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_007",
+    "option_a_en": "Swim across a lake",
+    "option_b_en": "Cycle up a mountain",
+    "option_a_am": "ሐይቅ ተሻግሮ መዋኘት",
+    "option_b_am": "ተራራ ላይ ብስክሌት መንዳት",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_008",
+    "option_a_en": "Wrestle a professional for one round",
+    "option_b_en": "Race a professional sprinter for one lap",
+    "option_a_am": "ከሙያተኛ ጋር ለአንድ ዙር መታገል",
+    "option_b_am": "ከሙያተኛ ሯጭ ጋር ለአንድ ዙር መሮጥ",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_009",
+    "option_a_en": "Have unmatched skill in table tennis",
+    "option_b_en": "Have unmatched skill in gymnastics",
+    "option_a_am": "ተወዳዳሪ የሌለው የጠረጴዛ ቴኒስ ችሎታ መያዝ",
+    "option_b_am": "ተወዳዳሪ የሌለው የጅምናስቲክስ ችሎታ መያዝ",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_010",
+    "option_a_en": "Coach an Olympic team to silver",
+    "option_b_en": "Play on an Olympic team that wins bronze",
+    "option_a_am": "አንድ የኦሎምፒክ ቡድን ብር እንዲያገኝ ማሠልጠን",
+    "option_b_am": "የነሐስ ሜዳሊያ ባገኘ የኦሎምፒክ ቡድን ውስጥ መጫወት",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_011",
+    "option_a_en": "Always win but never enjoy the game",
+    "option_b_en": "Always lose but always have fun",
+    "option_a_am": "ሁልጊዜ ማሸነፍ ግን ጨዋታውን ፈጽሞ አለመደሰት",
+    "option_b_am": "ሁልጊዜ መሸነፍ ግን ሁልጊዜ መደሰት",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_sports_012",
+    "option_a_en": "Be known as the most disciplined athlete",
+    "option_b_en": "Be known as the most talented athlete",
+    "option_a_am": "በጣም ሥነ ሥርዓት ያለው አትሌት ተብሎ መታወቅ",
+    "option_b_am": "በጣም ጎበዝ አትሌት ተብሎ መታወቅ",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_001",
+    "option_a_en": "Always have to whisper",
+    "option_b_en": "Always have to shout",
+    "option_a_am": "ሁልጊዜ በሹክሹክታ መናገር",
+    "option_b_am": "ሁልጊዜ መጮህ",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_002",
+    "option_a_en": "Have a photographic memory",
+    "option_b_en": "Be able to forget anything on command",
+    "option_a_am": "የፎቶግራፍ ትውስታ መያዝ",
+    "option_b_am": "በፈለክከው ጊዜ ሁሉንም መርሳት መቻል",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_003",
+    "option_a_en": "Always be ten minutes late",
+    "option_b_en": "Always be thirty minutes early",
+    "option_a_am": "ሁልጊዜ በ10 ደቂቃ መዘግየት",
+    "option_b_am": "ሁልጊዜ በ30 ደቂቃ ቀድሞ መድረስ",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_004",
+    "option_a_en": "Read minds but never control it",
+    "option_b_en": "Move objects but only when no one's watching",
+    "option_a_am": "ሐሳብ ማንበብ ግን መቆጣጠር አለመቻል",
+    "option_b_am": "ማንም በማይመለከትበት ጊዜ ብቻ ነገሮችን ማንቀሳቀስ",
+    "category_id": "random",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_005",
+    "option_a_en": "Have unlimited time",
+    "option_b_en": "Have unlimited money",
+    "option_a_am": "ያልተገደበ ጊዜ መያዝ",
+    "option_b_am": "ያልተገደበ ገንዘብ መያዝ",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_006",
+    "option_a_en": "Live without music",
+    "option_b_en": "Live without movies",
+    "option_a_am": "ያለ ሙዚቃ መኖር",
+    "option_b_am": "ያለ ፊልም መኖር",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_007",
+    "option_a_en": "Always win at everything but alone",
+    "option_b_en": "Always lose but with friends",
+    "option_a_am": "በሁሉም ነገር ብቻህን ማሸነፍ",
+    "option_b_am": "ሁልጊዜ ከጓደኞችህ ጋር መሸነፍ",
+    "category_id": "random",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_008",
+    "option_a_en": "Know how you'll die",
+    "option_b_en": "Know when you'll die",
+    "option_a_am": "እንዴት እንደምትሞት ማወቅ",
+    "option_b_am": "መቼ እንደምትሞት ማወቅ",
+    "category_id": "random",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_009",
+    "option_a_en": "Be famous for something embarrassing",
+    "option_b_en": "Be unknown forever",
+    "option_a_am": "በአሳፋሪ ነገር ታዋቂ መሆን",
+    "option_b_am": "ለዘላለም ያልታወቅህ መሆን",
+    "category_id": "random",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_010",
+    "option_a_en": "Have no internet for a year",
+    "option_b_en": "Have no coffee for a year",
+    "option_a_am": "ለአንድ ዓመት ኢንተርኔት አለመኖር",
+    "option_b_am": "ለአንድ ዓመት ቡና አለመኖር",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_random_011",
+    "option_a_en": "Always tell the truth",
+    "option_b_en": "Always keep a secret perfectly",
+    "option_a_am": "ሁልጊዜ እውነት መናገር",
+    "option_b_am": "ሚስጥርን ፍጹም አድርጎ መጠበቅ",
+    "category_id": "random",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_random_012",
+    "option_a_en": "Start every day from scratch",
+    "option_b_en": "Never be able to start over",
+    "option_a_am": "በየቀኑ ከዜሮ መጀመር",
+    "option_b_am": "ፈጽሞ እንደገና መጀመር አለመቻል",
+    "category_id": "random",
+    "content_level": "friends",
     "active": true
   }
 ]

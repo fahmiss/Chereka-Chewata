@@ -1,72 +1,72 @@
 [
   {
-    "id": "ethiopian_life",
-    "name_en": "Ethiopian Life",
-    "sort_order": 1,
+    "id": "everyday_life",
+    "name_en": "Everyday Life",
+    "sort_order": 10,
     "active": true,
-    "name_am": "የኢትዮጵያ ሕይወት"
+    "name_am": "የዕለት ተዕለት ኑሮ"
   },
   {
-    "id": "food",
-    "name_en": "Food",
-    "sort_order": 2,
+    "id": "food_and_drink",
+    "name_en": "Food & Drink",
+    "sort_order": 20,
     "active": true,
-    "name_am": "ምግብ"
+    "name_am": "ምግብ እና መጠጥ"
   },
   {
-    "id": "friends",
-    "name_en": "Friends",
-    "sort_order": 3,
+    "id": "entertainment_pop_culture",
+    "name_en": "Entertainment & Pop Culture",
+    "sort_order": 30,
     "active": true,
-    "name_am": "ጓደኞች"
+    "name_am": "መዝናኛ"
   },
   {
-    "id": "relationships",
-    "name_en": "Relationships",
-    "sort_order": 4,
+    "id": "football",
+    "name_en": "Football",
+    "sort_order": 40,
     "active": true,
-    "name_am": "ግንኙነቶች"
+    "name_am": "እግር ኳስ"
   },
   {
-    "id": "money_and_lifestyle",
-    "name_en": "Money & Lifestyle",
-    "sort_order": 5,
+    "id": "sports",
+    "name_en": "Sports",
+    "sort_order": 50,
     "active": true,
-    "name_am": "ገንዘብ እና ኑሮ"
+    "name_am": "ስፖርት"
+  },
+  {
+    "id": "places_and_travel",
+    "name_en": "Places & Travel",
+    "sort_order": 60,
+    "active": true,
+    "name_am": "ቦታዎች እና ጉዞ"
   },
   {
     "id": "school_and_work",
     "name_en": "School & Work",
-    "sort_order": 6,
+    "sort_order": 70,
     "active": true,
     "name_am": "ትምህርት እና ሥራ"
   },
   {
-    "id": "travel",
-    "name_en": "Travel",
-    "sort_order": 7,
+    "id": "people_and_relationships",
+    "name_en": "People & Relationships",
+    "sort_order": 80,
     "active": true,
-    "name_am": "ጉዞ"
+    "name_am": "ሰዎች እና ግንኙነቶች"
   },
   {
-    "id": "absurd_choices",
-    "name_en": "Absurd Choices",
-    "sort_order": 8,
+    "id": "ethiopia_and_culture",
+    "name_en": "Ethiopia & Culture",
+    "sort_order": 90,
     "active": true,
-    "name_am": "ያልተለመዱ ምርጫዎች"
+    "name_am": "ኢትዮጵያ እና ባህል"
   },
   {
-    "id": "deep_choices",
-    "name_en": "Deep Choices",
-    "sort_order": 9,
+    "id": "random",
+    "name_en": "Random",
+    "sort_order": 100,
     "active": true,
-    "name_am": "ጥልቅ ምርጫዎች"
-  },
-  {
-    "id": "diaspora",
-    "name_en": "Diaspora",
-    "sort_order": 10,
-    "active": true,
-    "name_am": "የውጭ አገር ኑሮ"
+    "name_am": "የተለያዩ"
   }
 ]

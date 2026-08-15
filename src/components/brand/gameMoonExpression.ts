@@ -12,4 +12,5 @@ export const GAME_MOON_EXPRESSION: Record<GameId, MoonExpression> = {
   most_likely: 'pointing',
   would_you_rather: 'thinking',
   bomb: 'bomb',
+  quiz: 'quiz',
 };

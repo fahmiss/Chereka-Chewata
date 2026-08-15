@@ -1,10 +1,65 @@
 [
-  { "id": "ethiopia", "name_en": "Ethiopia", "name_am": "ኢትዮጵያ", "sort_order": 10, "active": true },
-  { "id": "food_and_drink", "name_en": "Food and Drink", "name_am": "ምግብ እና መጠጥ", "sort_order": 20, "active": true },
-  { "id": "places", "name_en": "Places", "name_am": "ቦታዎች", "sort_order": 30, "active": true },
-  { "id": "entertainment", "name_en": "Entertainment", "name_am": "መዝናኛ", "sort_order": 40, "active": true },
-  { "id": "sports", "name_en": "Sports", "name_am": "ስፖርት", "sort_order": 50, "active": true },
-  { "id": "everyday", "name_en": "Everyday Life", "name_am": "የዕለት ተዕለት ኑሮ", "sort_order": 60, "active": true },
-  { "id": "nature", "name_en": "Animals and Nature", "name_am": "እንስሳት እና ተፈጥሮ", "sort_order": 70, "active": true },
-  { "id": "school_and_work", "name_en": "School and Work", "name_am": "ትምህርት እና ሥራ", "sort_order": 80, "active": true }
+  {
+    "id": "ethiopia_and_culture",
+    "name_en": "Ethiopia & Culture",
+    "sort_order": 10,
+    "active": true,
+    "name_am": "ኢትዮጵያ እና ባህል"
+  },
+  {
+    "id": "food_and_drink",
+    "name_en": "Food & Drink",
+    "sort_order": 20,
+    "active": true,
+    "name_am": "ምግብ እና መጠጥ"
+  },
+  {
+    "id": "places_and_travel",
+    "name_en": "Places & Travel",
+    "sort_order": 30,
+    "active": true,
+    "name_am": "ቦታዎች እና ጉዞ"
+  },
+  {
+    "id": "entertainment_pop_culture",
+    "name_en": "Entertainment & Pop Culture",
+    "sort_order": 40,
+    "active": true,
+    "name_am": "መዝናኛ"
+  },
+  {
+    "id": "football",
+    "name_en": "Football",
+    "sort_order": 50,
+    "active": true,
+    "name_am": "እግር ኳስ"
+  },
+  {
+    "id": "sports",
+    "name_en": "Sports",
+    "sort_order": 60,
+    "active": true,
+    "name_am": "ስፖርት"
+  },
+  {
+    "id": "everyday_life",
+    "name_en": "Everyday Life",
+    "sort_order": 70,
+    "active": true,
+    "name_am": "የዕለት ተዕለት ኑሮ"
+  },
+  {
+    "id": "animals_and_nature",
+    "name_en": "Animals & Nature",
+    "sort_order": 80,
+    "active": true,
+    "name_am": "እንስሳት እና ተፈጥሮ"
+  },
+  {
+    "id": "school_and_work",
+    "name_en": "School & Work",
+    "sort_order": 90,
+    "active": true,
+    "name_am": "ትምህርት እና ሥራ"
+  }
 ]

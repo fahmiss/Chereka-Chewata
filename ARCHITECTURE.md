@@ -14,8 +14,9 @@ One Expo app. Earliest build keeps navigation minimal:
 |---|---|
 | Splash | Brand load; first-time → language, returning → home |
 | Home | Brand hero; equal tiles for playable games; quieter coming-next rows |
-| i18n | `src/i18n` — interface EN/AM; all six games content EN/AM/Mixed |
+| i18n | `src/i18n` — interface EN/AM; all seven games content EN/AM/Mixed |
 | Game details | Short rules + Play |
+| Quiz mode choice | Pass & Play or Compete, selected before Quiz setup |
 | Setup chain | Players → categories → content level → options → review |
 | Session | State-machine-driven gameplay screens |
 | Settings | Language, sound, vibration, reduce motion, legal |
@@ -33,6 +34,7 @@ Framework route names may differ slightly; product states map roughly to:
 /home
 /settings
 /game/[gameId]            details
+/game/quiz/mode           Quiz play-mode choice
 /game/[gameId]/setup/*    players | categories | content-level | options | review
 /session/[sessionId]/*    handoff | reveal | play | vote | result | summary
 ```
@@ -165,6 +167,33 @@ dilemma in the shuffled session deck. Exhausting the chosen deck ends the
 session. Implementation lives under `src/domain/wouldRather/`, with the shared
 route rendering `WouldRatherSessionView`.
 
+## Quiz lifecycle
+
+Quiz is a public-information session with two first-class play modes. Both use
+the same bundled deck and answer-reveal rules; only turn identity, scoring, and
+the physical handoff rhythm differ.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Ready
+    Ready --> Question : begin
+    Question --> AnswerReveal : select one answer
+    AnswerReveal --> Handoff : Pass & Play, questions remain
+    Handoff --> Question : next player ready
+    AnswerReveal --> Question : Compete, questions remain
+    AnswerReveal --> Result : final question
+    Result --> Ready : rematch
+```
+
+- Pass & Play has no player identities, scores, winner, or leaderboard.
+- Compete has 2–12 named players, round-robin turns, +1 for correct answers,
+  zero for incorrect answers, ties, and a final leaderboard.
+- Question and answer payloads live in `QuizSessionProvider`, never routes.
+- `src/domain/quiz/machine.ts` owns transitions, shuffled answer correctness,
+  player rotation, scoring, safe deck recycling, and rematches.
+- `content/quiz/questions.json` is offline bundled content. Recent IDs and local
+  reports use the same AsyncStorage history shared by other games.
+
 ---
 
 ## Content model
@@ -180,6 +209,7 @@ content/
   taboo/             target + forbidden
   most_likely/       prompts (later)
   would_you_rather/  dilemmas
+  quiz/              four-choice questions + explanations
 ```
 
 Common fields: `id`, `game_type`, `category_ids`, `content_level` (`family` | `friends` | `spicy`), `difficulty`, `language_support`, `active`, `premium`.

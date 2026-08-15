@@ -1,65 +1,65 @@
 [
   {
-    "id": "food",
-    "name_en": "Food",
+    "id": "everyday_life",
+    "name_en": "Everyday Life",
     "sort_order": 10,
     "active": true,
-    "name_am": "ምግብ"
+    "name_am": "የዕለት ተዕለት ኑሮ"
   },
   {
-    "id": "addis_life",
-    "name_en": "Addis Life",
+    "id": "food_and_drink",
+    "name_en": "Food & Drink",
     "sort_order": 20,
     "active": true,
-    "name_am": "የአዲስ ሕይወት"
+    "name_am": "ምግብ እና መጠጥ"
   },
   {
-    "id": "friends",
-    "name_en": "Friends",
+    "id": "entertainment_pop_culture",
+    "name_en": "Entertainment & Pop Culture",
     "sort_order": 30,
     "active": true,
-    "name_am": "ጓደኞች"
+    "name_am": "መዝናኛ"
   },
   {
-    "id": "school_and_university",
-    "name_en": "School and University",
+    "id": "places_and_travel",
+    "name_en": "Places & Travel",
     "sort_order": 40,
     "active": true,
-    "name_am": "ትምህርት እና ዩኒቨርሲቲ"
+    "name_am": "ቦታዎች እና ጉዞ"
   },
   {
-    "id": "family",
-    "name_en": "Family",
+    "id": "school_and_work",
+    "name_en": "School & Work",
     "sort_order": 50,
     "active": true,
-    "name_am": "ቤተሰብ"
+    "name_am": "ትምህርት እና ሥራ"
   },
   {
-    "id": "music_and_entertainment",
-    "name_en": "Music and Entertainment",
+    "id": "people_and_relationships",
+    "name_en": "People & Relationships",
     "sort_order": 60,
     "active": true,
-    "name_am": "ሙዚቃ እና መዝናኛ"
+    "name_am": "ሰዎች እና ግንኙነቶች"
   },
   {
-    "id": "travel",
-    "name_en": "Travel",
+    "id": "football",
+    "name_en": "Football",
     "sort_order": 70,
     "active": true,
-    "name_am": "ጉዞ"
+    "name_am": "እግር ኳስ"
   },
   {
-    "id": "relationships",
-    "name_en": "Relationships",
+    "id": "ethiopia_and_culture",
+    "name_en": "Ethiopia & Culture",
     "sort_order": 80,
     "active": true,
-    "name_am": "ግንኙነቶች"
+    "name_am": "ኢትዮጵያ እና ባህል"
   },
   {
-    "id": "everyday_preferences",
-    "name_en": "Everyday Preferences",
+    "id": "random",
+    "name_en": "Random",
     "sort_order": 90,
     "active": true,
-    "name_am": "የዕለት ምርጫዎች"
+    "name_am": "የተለያዩ"
   }
 ]

@@ -17,10 +17,13 @@
       "ጥቁር",
       "ጠዋት"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_002",
@@ -40,10 +43,13 @@
       "ኢትዮጵያዊ",
       "ሳህን"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_003",
@@ -63,10 +69,13 @@
       "እንቁላል",
       "በርበሬ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_004",
@@ -86,10 +95,13 @@
       "በሬ",
       "ሽንኩርት"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_005",
@@ -109,10 +121,13 @@
       "ጾም",
       "መረቅ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_006",
@@ -132,10 +147,13 @@
       "የተፈጨ",
       "ሚጥሚጣ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_007",
@@ -155,10 +173,13 @@
       "መጠጥ",
       "ጣፋጭ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_008",
@@ -178,10 +199,13 @@
       "ዱቄት",
       "ቃሪያ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_009",
@@ -201,10 +225,13 @@
       "ኮቴጅ",
       "ለስላሳ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_010",
@@ -224,10 +251,13 @@
       "መረቅ",
       "ቀሪ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_011",
@@ -247,10 +277,13 @@
       "መክሰስ",
       "ተጠቅልሎ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_012",
@@ -270,10 +303,13 @@
       "የተፈጨ",
       "ቁርስ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_013",
@@ -293,10 +329,13 @@
       "ጣፋጭ",
       "ክብረ በዓል"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_014",
@@ -316,10 +355,13 @@
       "ጉድጓድ",
       "ቅቤ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_015",
@@ -339,10 +381,13 @@
       "መጠጥ",
       "ባህላዊ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_016",
@@ -362,10 +407,13 @@
       "ጉዞ",
       "ደረቅ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_017",
@@ -385,10 +433,13 @@
       "ዱቄት",
       "ቀይ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_everyday_life_018",
@@ -799,7 +850,7 @@
       "መርካቶ",
       "ቦሌ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -822,7 +873,7 @@
       "ጉዞ",
       "ሻንጣ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -845,7 +896,7 @@
       "ምግብ",
       "ሰው"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -868,7 +919,7 @@
       "ካህን",
       "ቅዱስ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -891,7 +942,7 @@
       "ሚናሬት",
       "ኢማም"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -914,7 +965,7 @@
       "መማር",
       "መጽሐፍ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -937,7 +988,7 @@
       "መድሃኒት",
       "አልጋ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -960,7 +1011,7 @@
       "መደርደሪያ",
       "ማጥናት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -983,7 +1034,7 @@
       "ፓርሴል",
       "ረድፍ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1006,7 +1057,7 @@
       "ፀሐይ",
       "ማዕበል"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1029,7 +1080,7 @@
       "እግር ጉዞ",
       "ድንጋይ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1052,7 +1103,7 @@
       "መጠጥ",
       "መገናኘት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1075,7 +1126,7 @@
       "ቲኬት",
       "ጨለማ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1098,7 +1149,7 @@
       "ጉብኝት",
       "ጸጥታ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1121,7 +1172,7 @@
       "ዲፕሎማት",
       "በር"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -1144,7 +1195,7 @@
       "ጉብኝተኛ",
       "ኢትዮጵያ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1167,7 +1218,7 @@
       "ሰሜን",
       "መንግሥት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "hard",
     "active": true
@@ -1190,7 +1241,7 @@
       "አኮስቲክ",
       "ዘፈን"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1213,7 +1264,7 @@
       "ምት",
       "ዱላ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1236,7 +1287,7 @@
       "አዝናኝ",
       "መድረክ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -1259,7 +1310,7 @@
       "ድምጽ",
       "አስተናጋጅ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1282,7 +1333,7 @@
       "ሙዚቃ",
       "መቀላቀል"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1305,7 +1356,7 @@
       "ቲኬት",
       "ባንድ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1328,7 +1379,7 @@
       "ስታንድአፕ",
       "ቀልድነት"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -1351,7 +1402,7 @@
       "ተከታታይ",
       "ፊልም"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -1374,7 +1425,7 @@
       "ፓርቲ",
       "ሪትም"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1397,7 +1448,7 @@
       "ጥቁር",
       "ነጭ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1420,7 +1471,7 @@
       "መድረክ",
       "ታዋቂ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1443,7 +1494,7 @@
       "ሠራተኞች",
       "ትዕይንት"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1466,7 +1517,7 @@
       "መድረክ",
       "በጋ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1489,7 +1540,7 @@
       "ስክሮል",
       "ትሬንድ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -1512,7 +1563,7 @@
       "ታሪክ",
       "ከፍተኛ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1535,7 +1586,7 @@
       "ሲነማ",
       "ስኮር"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1558,7 +1609,7 @@
       "መዘመር",
       "ተጨማሪ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -1581,7 +1632,7 @@
       "ጊዜው",
       "ማጥናት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1604,7 +1655,7 @@
       "ወረቀት",
       "ነጥብ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1627,7 +1678,7 @@
       "ድምፅ",
       "ጊዜ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1650,7 +1701,7 @@
       "እስክሪብቶ",
       "ገጽ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1673,7 +1724,7 @@
       "መፍታት",
       "ትምህርት ቤት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1696,7 +1747,7 @@
       "መልበስ",
       "ቀሚስ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1719,7 +1770,7 @@
       "መጨረስ",
       "ትምህርት ቤት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1742,7 +1793,7 @@
       "ክፍል",
       "ማስታወሻ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1765,7 +1816,7 @@
       "መታወቂያ",
       "መውሰድ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1788,7 +1839,7 @@
       "ውጭ",
       "አዝናኝ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1811,7 +1862,7 @@
       "መምህር",
       "ጥቁር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1834,7 +1885,7 @@
       "ዩኒቨርሲቲ",
       "ብቃት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1857,7 +1908,7 @@
       "መመረቅ",
       "መጻፍ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -1880,7 +1931,7 @@
       "መቆየት",
       "ደንብ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -1903,7 +1954,7 @@
       "መጻሕፍት",
       "ዚፕ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1926,7 +1977,7 @@
       "ግማሽ",
       "ትምህርቶች"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -1949,7 +2000,7 @@
       "ጃኬት",
       "ኬሚስትሪ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -1972,10 +2023,13 @@
       "ታማሚ",
       "ነጭ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_087",
@@ -1995,10 +2049,13 @@
       "ክፍል",
       "ማስተማር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_088",
@@ -2018,10 +2075,13 @@
       "አውሮፕላን ማረፊያ",
       "ካፒቴን"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_089",
@@ -2041,10 +2101,13 @@
       "ሬስቶራንት",
       "ቢላ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_090",
@@ -2064,10 +2127,13 @@
       "ታክሲ",
       "ጉዞ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_091",
@@ -2087,10 +2153,13 @@
       "ሐኪም",
       "መድሃኒት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_092",
@@ -2110,10 +2179,13 @@
       "ቴክኖሎጂ",
       "ፕሮጀክት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_093",
@@ -2133,10 +2205,13 @@
       "ዳኛ",
       "መከራከር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_094",
@@ -2156,10 +2231,13 @@
       "ማብቀል",
       "እንስሳት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_095",
@@ -2179,10 +2257,13 @@
       "ታሪክ",
       "ቃለ መጠይቅ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_096",
@@ -2202,10 +2283,13 @@
       "አረፋ",
       "ትእዛዝ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_097",
@@ -2225,10 +2309,13 @@
       "መኪና",
       "ደፋር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_098",
@@ -2248,10 +2335,13 @@
       "ፈገግታ",
       "ማጽዳት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_099",
@@ -2271,10 +2361,13 @@
       "መሳል",
       "ቤት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_100",
@@ -2294,10 +2387,13 @@
       "መመዝገቢያ",
       "ደረሰኝ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_101",
@@ -2317,10 +2413,13 @@
       "መቀየር",
       "ትርጉም"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_102",
@@ -2340,10 +2439,13 @@
       "ኦንላይን",
       "ብራንድ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_animals_103",
@@ -2363,7 +2465,7 @@
       "ድመት",
       "አፍሪካ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2386,7 +2488,7 @@
       "ትልቅ ጥርስ",
       "አፍሪካ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2409,7 +2511,7 @@
       "አፍሪካ",
       "እንስሳት ስፍራ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2432,7 +2534,7 @@
       "ታማኝ",
       "አጥንት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2455,7 +2557,7 @@
       "ጢም ጸጉር",
       "አሸዋ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2478,7 +2580,7 @@
       "ወፍ",
       "ክንፍ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2501,7 +2603,7 @@
       "ጊል",
       "ውቅያኖስ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2524,7 +2626,7 @@
       "ኮረጆ",
       "ጸጉር"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2547,7 +2649,7 @@
       "ፕሪሜት",
       "እንስሳት ስፍራ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2570,7 +2672,7 @@
       "አደን",
       "ክንፎች"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2593,7 +2695,7 @@
       "ሂስ",
       "ረጅም"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2616,7 +2718,7 @@
       "ውሃ",
       "መጋለብ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2639,7 +2741,7 @@
       "ዝንቦ",
       "አበባ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2662,7 +2764,7 @@
       "ወፍ",
       "ዓይኖች"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -2685,7 +2787,7 @@
       "መንከስ",
       "አፍሪካ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -2708,7 +2810,7 @@
       "ቀለም",
       "መብረር"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3099,7 +3201,7 @@
       "ሰዎች",
       "ቅርብ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3122,7 +3224,7 @@
       "ግል",
       "ማወቅ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3145,7 +3247,7 @@
       "መስበር",
       "መስማማት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3168,7 +3270,7 @@
       "ቅርጽ",
       "ፀሐይ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3191,7 +3293,7 @@
       "መርሳት",
       "ማሰብ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3214,7 +3316,7 @@
       "ልብ",
       "መድፈር"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3237,7 +3339,7 @@
       "ዝግታ",
       "መቻል"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3260,7 +3362,7 @@
       "ውሸት",
       "መስፋፋት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3283,7 +3385,7 @@
       "መጨረስ",
       "ቀን"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -3306,7 +3408,7 @@
       "አስቸጋሪ",
       "መለወጥ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3329,7 +3431,7 @@
       "ዕጣ ፈንታ",
       "ማሸነፍ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3352,7 +3454,7 @@
       "ዝምታ",
       "ድምፅ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3375,7 +3477,7 @@
       "መንገድ",
       "አስደሳች"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3398,7 +3500,7 @@
       "ክስ",
       "ይቅርታ መጠየቅ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -3421,7 +3523,7 @@
       "አሁን",
       "ስታይል"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3444,7 +3546,7 @@
       "ያለፈ",
       "ተጽእኖ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -3467,7 +3569,7 @@
       "ጆሮዎች",
       "እንስሳ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3490,7 +3592,7 @@
       "እርሻ",
       "መውጣት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3513,7 +3615,7 @@
       "ሙ",
       "ቀንዶች"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3536,7 +3638,7 @@
       "እርሻ",
       "ነጭ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3559,7 +3661,7 @@
       "እርሻ",
       "ማንቃት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -3582,7 +3684,7 @@
       "መጮህ",
       "ውሃ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -3605,7 +3707,7 @@
       "ለሊት",
       "ቡድን"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3628,7 +3730,7 @@
       "አፍሪካ",
       "አደን"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3651,7 +3753,7 @@
       "አፍ",
       "አፍሪካ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3674,7 +3776,7 @@
       "ፈረስ",
       "አፍሪካ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -3697,7 +3799,7 @@
       "መብረር",
       "አንገት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3720,7 +3822,7 @@
       "አፍሪካ",
       "መውጣት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3743,7 +3845,7 @@
       "መሬት",
       "አረጋዊ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3766,7 +3868,7 @@
       "ነፍሳት",
       "መሳብ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3789,7 +3891,7 @@
       "ስኳር",
       "መስመር"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -3812,7 +3914,7 @@
       "ደም",
       "ለሊት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3835,7 +3937,7 @@
       "መድገም",
       "ቤት"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -3858,10 +3960,13 @@
       "የተቀቀለ",
       "ጎን"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_169",
@@ -3881,10 +3986,13 @@
       "መክሰስ",
       "ፓስቴሪ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_170",
@@ -3904,10 +4012,13 @@
       "ስኒ",
       "ካፌ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_171",
@@ -3927,10 +4038,13 @@
       "በርበሬ",
       "ጾም"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_172",
@@ -3950,10 +4064,13 @@
       "ድንች",
       "ለስላሳ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_173",
@@ -3973,10 +4090,13 @@
       "ክብ",
       "ትልቅ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "family",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_174",
@@ -3996,10 +4116,13 @@
       "ማጥመቂያ",
       "ቀይ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_175",
@@ -4019,10 +4142,13 @@
       "የተለሳበ",
       "ጠጣር"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_176",
@@ -4042,10 +4168,13 @@
       "ቁርስ",
       "በርበሬ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_177",
@@ -4065,10 +4194,13 @@
       "ግልጽ",
       "መጠጥ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_178",
@@ -4088,10 +4220,13 @@
       "እህል",
       "መቁረስ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_179",
@@ -4111,10 +4246,13 @@
       "ነጭ",
       "ደቡብ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_180",
@@ -4134,10 +4272,13 @@
       "ሽንኩርት",
       "ቅቤ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_181",
@@ -4157,10 +4298,13 @@
       "ስጋ",
       "ድምፅ የሚያሰማ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_182",
@@ -4180,10 +4324,13 @@
       "ቅቤ",
       "አዋዜ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_183",
@@ -4203,10 +4350,13 @@
       "ቢጫ",
       "ቅመም"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_184",
@@ -4226,10 +4376,13 @@
       "ስነ ሥርዓት",
       "መቀመጥ"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_everyday_life_185",
@@ -4640,7 +4793,7 @@
       "ራስነት",
       "መብት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4663,7 +4816,7 @@
       "ማግኘት",
       "መመልከት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4686,7 +4839,7 @@
       "ሞቃት",
       "ዞን"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4709,7 +4862,7 @@
       "መገረም",
       "ማሰስ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4732,7 +4885,7 @@
       "ደፋር",
       "ጥርጣሬ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4755,7 +4908,7 @@
       "ዝግታ",
       "ማንጎራጎር"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -4778,7 +4931,7 @@
       "ስህተት",
       "መመለስ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -4801,7 +4954,7 @@
       "ማነፃፀር",
       "አጋር"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -4824,7 +4977,7 @@
       "ሙያ",
       "መፈለግ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -4847,7 +5000,7 @@
       "እምነት",
       "ውሻ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -4870,7 +5023,7 @@
       "ሹክሹክታ ማድረግ",
       "ሰዎች"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -4893,7 +5046,7 @@
       "ኃይል",
       "ጊዜ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -4916,7 +5069,7 @@
       "ሕሊና",
       "ይቅርታ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -4939,7 +5092,7 @@
       "መስበር",
       "መውጋት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -4962,7 +5115,7 @@
       "ትውስታ",
       "አሮጌ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -4985,7 +5138,7 @@
       "ምናልባት",
       "እምነት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5008,7 +5161,7 @@
       "ምስል",
       "ማጥፋት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5031,10 +5184,13 @@
       "መርፌ",
       "መጠን"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_220",
@@ -5054,10 +5210,13 @@
       "ጋራጅ",
       "ዘይት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_221",
@@ -5077,10 +5236,13 @@
       "ማገልገል",
       "ሜኑ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_222",
@@ -5100,10 +5262,13 @@
       "ወንበር",
       "ሱቅ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_223",
@@ -5123,10 +5288,13 @@
       "ደንበኛ",
       "መደብር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_224",
@@ -5146,10 +5314,13 @@
       "አቧራ",
       "ወለል"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_225",
@@ -5169,10 +5340,13 @@
       "ድንጋጤ",
       "መትከል"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_226",
@@ -5192,10 +5366,13 @@
       "መታጠቢያ",
       "ማስተካከል"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_227",
@@ -5215,10 +5392,13 @@
       "መጻሕፍት",
       "ኦዲት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_228",
@@ -5238,10 +5418,13 @@
       "ካውንተር",
       "ኪኒን"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_229",
@@ -5261,10 +5444,13 @@
       "ሌንስ",
       "ሰርግ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_230",
@@ -5284,10 +5470,13 @@
       "ዩኒፎርም",
       "ህንጻ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_231",
@@ -5307,10 +5496,13 @@
       "መገንባት",
       "ምስማር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_232",
@@ -5330,10 +5522,13 @@
       "መለያ",
       "ወለድ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_233",
@@ -5353,10 +5548,13 @@
       "ጠመንጃ",
       "ማገልገል"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_234",
@@ -5376,10 +5574,13 @@
       "ማከም",
       "ክሊኒክ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_235",
@@ -5399,10 +5600,13 @@
       "ብራንድ",
       "ሎጎ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_music_and_entertainment_236",
@@ -5422,7 +5626,7 @@
       "መጻፍ",
       "ስታንዛ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -5445,7 +5649,7 @@
       "አርቲስት",
       "ትራክ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5468,7 +5672,7 @@
       "መቆም",
       "ተመልካች"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5491,7 +5695,7 @@
       "መያዝ",
       "መቆሚያ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5514,7 +5718,7 @@
       "ዋጋ",
       "መቀመጫ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5537,7 +5741,7 @@
       "መኪና",
       "ሙዚቃ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -5560,7 +5764,7 @@
       "ባህላዊ",
       "መሣሪያ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5583,7 +5787,7 @@
       "መንቀጥቀጥ",
       "መሣሪያ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5606,7 +5810,7 @@
       "ባህላዊ",
       "ነፋስ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5629,7 +5833,7 @@
       "ቤተ ክርስቲያን",
       "እጅ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -5652,7 +5856,7 @@
       "ክፍል",
       "ሞቅ ያለ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5675,7 +5879,7 @@
       "ማጨብጨብ",
       "ሰዎች"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5698,7 +5902,7 @@
       "ሲኒማ",
       "መልቀቅ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5721,7 +5925,7 @@
       "ሾው",
       "ቢንጅ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5744,7 +5948,7 @@
       "ማንበብ",
       "ማያ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5767,7 +5971,7 @@
       "መለወጥ",
       "ዲጄ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5790,7 +5994,7 @@
       "ታዋቂ ሰው",
       "ሀብታም"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5813,7 +6017,7 @@
       "መያዝ",
       "እንግዳ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5836,7 +6040,7 @@
       "ረድፍ",
       "ቴለር"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5859,7 +6063,7 @@
       "ዛፎች",
       "መጫወት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5882,7 +6086,7 @@
       "ከላይ",
       "መገንባት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -5905,7 +6109,7 @@
       "ቤቶች",
       "ማህበረሰብ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -5928,7 +6132,7 @@
       "መጠበቅ",
       "መነሳት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -5951,7 +6155,7 @@
       "ታሪካዊ",
       "ከተማ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5974,7 +6178,7 @@
       "አሮጌ",
       "ከተማ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -5997,7 +6201,7 @@
       "ሰሜን",
       "ጀልባ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6020,7 +6224,7 @@
       "ከተማ",
       "ሪዞርት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6043,7 +6247,7 @@
       "ከተማ",
       "ባቡር መስመር"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6066,7 +6270,7 @@
       "ፓርክ",
       "ጫፎች"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -6089,7 +6293,7 @@
       "እሳተ ገሞራ",
       "በረሃ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -6112,7 +6316,7 @@
       "ውሃ",
       "አባይ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -6135,7 +6339,7 @@
       "ካውንተር",
       "ጤና"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
@@ -6158,7 +6362,7 @@
       "ጠባቂ",
       "ፓስ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6181,7 +6385,7 @@
       "መዞር",
       "መንገድ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6204,7 +6408,7 @@
       "ማለፍ",
       "ፊደል"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -6227,7 +6431,7 @@
       "ከባድ",
       "ክፍል"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -6250,7 +6454,7 @@
       "ሰማያዊ",
       "መያዝ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -6273,7 +6477,7 @@
       "ሴንቲሜትር",
       "ፕላስቲክ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -6296,7 +6500,7 @@
       "ራበር",
       "ማጽዳት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "easy",
     "active": true
@@ -6319,7 +6523,7 @@
       "ክፍል",
       "መክሰስ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "family",
     "difficulty": "medium",
     "active": true
@@ -6342,7 +6546,7 @@
       "መጥራት",
       "መመዝገቢያ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6365,7 +6569,7 @@
       "አለቃ",
       "ዳይሬክተር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6388,7 +6592,7 @@
       "ተማሪ",
       "መቀመጥ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6411,7 +6615,7 @@
       "ሳምንት",
       "እቅድ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6434,7 +6638,7 @@
       "ሥራ",
       "ውጤት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6457,7 +6661,7 @@
       "መሸከም",
       "ማቅረብ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -6480,7 +6684,7 @@
       "ዲግሪ",
       "ቀሚስ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6503,7 +6707,7 @@
       "ዋጋ",
       "ሴሚስተር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -6526,7 +6730,7 @@
       "መጋራት",
       "ተማሪ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6549,7 +6753,7 @@
       "መልስ",
       "ስህተት"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true
@@ -6572,7 +6776,7 @@
       "ኮርስ",
       "መጀመር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
@@ -7055,7 +7259,7 @@
       "እረፍት",
       "ጋብቻ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7078,7 +7282,7 @@
       "ከተማ",
       "እራት"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true
@@ -7101,7 +7305,7 @@
       "ቅርብ",
       "አጎማሮ"
     ],
-    "category_id": "places",
+    "category_id": "places_and_travel",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true
@@ -7124,7 +7328,7 @@
       "ባላድ",
       "መዘመር"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7147,7 +7351,7 @@
       "ጥንዶች",
       "ደስተኛ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7170,7 +7374,7 @@
       "ዘፈን",
       "መወዛወዝ"
     ],
-    "category_id": "music_and_entertainment",
+    "category_id": "entertainment_pop_culture",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7193,7 +7397,7 @@
       "ዩኒቨርሲቲ",
       "ሚስጥር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true
@@ -7216,7 +7420,7 @@
       "ሚስጥር",
       "ደብዳቤ"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7239,7 +7443,7 @@
       "ለሊት",
       "አጋር"
     ],
-    "category_id": "school",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7262,10 +7466,13 @@
       "ሚስጥር",
       "መውደድ"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_317",
@@ -7285,10 +7492,13 @@
       "ቢሮ",
       "አጋር"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "hard",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_jobs_318",
@@ -7308,10 +7518,13 @@
       "መሰብሰብ",
       "ፍላርት"
     ],
-    "category_id": "jobs",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "taboo_animals_319",
@@ -7331,7 +7544,7 @@
       "ጥንድ",
       "ጎጆ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7354,7 +7567,7 @@
       "ውሻ",
       "ንጹህ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7377,7 +7590,7 @@
       "ትኩረት",
       "ድምፅ"
     ],
-    "category_id": "animals",
+    "category_id": "animals_and_nature",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true
@@ -7469,7 +7682,7 @@
       "ማራኪ",
       "ማሟሟገት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7492,7 +7705,7 @@
       "ስሜት",
       "ደስታ"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "spicy",
     "difficulty": "easy",
     "active": true
@@ -7515,7 +7728,7 @@
       "ቫይብ",
       "መጎተት"
     ],
-    "category_id": "general_words",
+    "category_id": "random",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true
@@ -7538,10 +7751,13 @@
       "አንድ",
       "መብላት"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "difficulty": "easy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_329",
@@ -7561,10 +7777,13 @@
       "ማክበር",
       "ጥንዶች"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   },
   {
     "id": "taboo_ethiopian_food_330",
@@ -7584,9 +7803,932 @@
       "ሬስቶራንት",
       "ለሊት"
     ],
-    "category_id": "ethiopian_food",
+    "category_id": "food_and_drink",
     "content_level": "spicy",
     "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_football_001",
+    "target_en": "Goal",
+    "target_am": "ግብ",
+    "forbidden_en": [
+      "Score",
+      "Net",
+      "Ball",
+      "Kick",
+      "Post"
+    ],
+    "forbidden_am": [
+      "ውጤት",
+      "መረብ",
+      "ኳስ",
+      "ምት",
+      "ምሰሶ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_002",
+    "target_en": "Referee",
+    "target_am": "ዳኛ",
+    "forbidden_en": [
+      "Whistle",
+      "Card",
+      "Rules",
+      "Foul",
+      "Judge"
+    ],
+    "forbidden_am": [
+      "ፊሽካ",
+      "ካርድ",
+      "ደንብ",
+      "ጥፋት",
+      "ፈራጅ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_003",
+    "target_en": "Penalty",
+    "target_am": "ፍፁም ቅጣት ምት",
+    "forbidden_en": [
+      "Kick",
+      "Spot",
+      "Goalkeeper",
+      "Foul",
+      "Shootout"
+    ],
+    "forbidden_am": [
+      "ምት",
+      "ነጥብ",
+      "ግብ ጠባቂ",
+      "ጥፋት",
+      "ተጨማሪ ምት"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_004",
+    "target_en": "Stadium",
+    "target_am": "ስታዲየም",
+    "forbidden_en": [
+      "Crowd",
+      "Pitch",
+      "Seats",
+      "Match",
+      "Fans"
+    ],
+    "forbidden_am": [
+      "ተመልካች",
+      "ሜዳ",
+      "መቀመጫ",
+      "ጨዋታ",
+      "ደጋፊ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_005",
+    "target_en": "Messi",
+    "target_am": "መሲ",
+    "forbidden_en": [
+      "Argentina",
+      "Barcelona",
+      "Ball",
+      "Legend",
+      "Number ten"
+    ],
+    "forbidden_am": [
+      "አርጀንቲና",
+      "ባርሴሎና",
+      "ኳስ",
+      "አፈ ታሪክ",
+      "ቁጥር አሥር"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_006",
+    "target_en": "World Cup",
+    "target_am": "የዓለም ዋንጫ",
+    "forbidden_en": [
+      "Trophy",
+      "Country",
+      "Four years",
+      "Champion",
+      "FIFA"
+    ],
+    "forbidden_am": [
+      "ዋንጫ",
+      "አገር",
+      "አራት ዓመት",
+      "ሻምፒዮን",
+      "ፊፋ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_007",
+    "target_en": "Offside",
+    "target_am": "ኦፍሳይድ",
+    "forbidden_en": [
+      "Line",
+      "Defender",
+      "Rule",
+      "Flag",
+      "Position"
+    ],
+    "forbidden_am": [
+      "መስመር",
+      "ተከላካይ",
+      "ደንብ",
+      "ባንዲራ",
+      "ቦታ"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_football_008",
+    "target_en": "Corner Kick",
+    "target_am": "ኮርነር ምት",
+    "forbidden_en": [
+      "Flag",
+      "Cross",
+      "Box",
+      "Header",
+      "Edge"
+    ],
+    "forbidden_am": [
+      "ባንዲራ",
+      "ማቋረጫ",
+      "ሳጥን",
+      "ራስ ምት",
+      "ጠርዝ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_009",
+    "target_en": "Yellow Card",
+    "target_am": "ቢጫ ካርድ",
+    "forbidden_en": [
+      "Foul",
+      "Referee",
+      "Warning",
+      "Red",
+      "Booking"
+    ],
+    "forbidden_am": [
+      "ጥፋት",
+      "ዳኛ",
+      "ማስጠንቀቂያ",
+      "ቀይ",
+      "ምዝገባ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_010",
+    "target_en": "Goalkeeper",
+    "target_am": "ግብ ጠባቂ",
+    "forbidden_en": [
+      "Gloves",
+      "Save",
+      "Net",
+      "Dive",
+      "Box"
+    ],
+    "forbidden_am": [
+      "ጓንት",
+      "መከላከል",
+      "መረብ",
+      "ዘሎ መያዝ",
+      "ሳጥን"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_011",
+    "target_en": "Free Kick",
+    "target_am": "ነፃ ምት",
+    "forbidden_en": [
+      "Wall",
+      "Foul",
+      "Direct",
+      "Curve",
+      "Spot"
+    ],
+    "forbidden_am": [
+      "ግንብ",
+      "ጥፋት",
+      "ቀጥታ",
+      "ማጠፍ",
+      "ነጥብ"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_012",
+    "target_en": "Substitute",
+    "target_am": "ተለዋጭ ተጫዋች",
+    "forbidden_en": [
+      "Bench",
+      "Replace",
+      "Player",
+      "Injury",
+      "Coach"
+    ],
+    "forbidden_am": [
+      "ወንበር",
+      "መተካት",
+      "ተጫዋች",
+      "ጉዳት",
+      "አሠልጣኝ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_013",
+    "target_en": "Captain",
+    "target_am": "ካፒቴን",
+    "forbidden_en": [
+      "Armband",
+      "Leader",
+      "Team",
+      "Whistle",
+      "Coin toss"
+    ],
+    "forbidden_am": [
+      "ማሰሪያ",
+      "መሪ",
+      "ቡድን",
+      "ፊሽካ",
+      "ሳንቲም መጣል"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_014",
+    "target_en": "Derby",
+    "target_am": "የከተማ ፉክክር",
+    "forbidden_en": [
+      "Rivalry",
+      "City",
+      "Local",
+      "Match",
+      "Fans"
+    ],
+    "forbidden_am": [
+      "ፉክክር",
+      "ከተማ",
+      "አካባቢ",
+      "ጨዋታ",
+      "ደጋፊ"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_football_015",
+    "target_en": "Extra Time",
+    "target_am": "ተጨማሪ ሰዓት",
+    "forbidden_en": [
+      "Draw",
+      "Ninety",
+      "Overtime",
+      "Penalty",
+      "Whistle"
+    ],
+    "forbidden_am": [
+      "እኩል",
+      "ዘጠና",
+      "ተጨማሪ ጊዜ",
+      "ፍፁም ቅጣት",
+      "ፊሽካ"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_016",
+    "target_en": "Header",
+    "target_am": "ራስ ምት",
+    "forbidden_en": [
+      "Ball",
+      "Jump",
+      "Cross",
+      "Goal",
+      "Head"
+    ],
+    "forbidden_am": [
+      "ኳስ",
+      "ዝላይ",
+      "ማቋረጫ",
+      "ግብ",
+      "ራስ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_017",
+    "target_en": "Transfer",
+    "target_am": "ዝውውር",
+    "forbidden_en": [
+      "Club",
+      "Buy",
+      "Sell",
+      "Player",
+      "Fee"
+    ],
+    "forbidden_am": [
+      "ክለብ",
+      "መግዛት",
+      "መሸጥ",
+      "ተጫዋች",
+      "ክፍያ"
+    ],
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_football_018",
+    "target_en": "Jersey",
+    "target_am": "ማልያ",
+    "forbidden_en": [
+      "Number",
+      "Shirt",
+      "Team",
+      "Colors",
+      "Wear"
+    ],
+    "forbidden_am": [
+      "ቁጥር",
+      "ሸሚዝ",
+      "ቡድን",
+      "ቀለም",
+      "መልበስ"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_019",
+    "target_en": "Fans",
+    "target_am": "ደጋፊዎች",
+    "forbidden_en": [
+      "Cheer",
+      "Stadium",
+      "Chant",
+      "Support",
+      "Crowd"
+    ],
+    "forbidden_am": [
+      "ማወደስ",
+      "ስታዲየም",
+      "መዝሙር",
+      "ድጋፍ",
+      "ተመልካች"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_football_020",
+    "target_en": "Coach",
+    "target_am": "አሠልጣኝ",
+    "forbidden_en": [
+      "Team",
+      "Tactics",
+      "Bench",
+      "Training",
+      "Manager"
+    ],
+    "forbidden_am": [
+      "ቡድን",
+      "ስልት",
+      "ወንበር",
+      "ልምምድ",
+      "ማናጀር"
+    ],
+    "category_id": "football",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_001",
+    "target_en": "Timket",
+    "target_am": "ጥምቀት",
+    "forbidden_en": [
+      "Water",
+      "Festival",
+      "Baptism",
+      "Priests",
+      "January"
+    ],
+    "forbidden_am": [
+      "ውሃ",
+      "በዓል",
+      "ጥምቀት",
+      "ካህናት",
+      "ጥር"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_002",
+    "target_en": "Meskel",
+    "target_am": "መስቀል",
+    "forbidden_en": [
+      "Cross",
+      "Bonfire",
+      "September",
+      "Festival",
+      "Fire"
+    ],
+    "forbidden_am": [
+      "መስቀል",
+      "ደመራ",
+      "መስከረም",
+      "በዓል",
+      "እሳት"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_003",
+    "target_en": "Injera",
+    "target_am": "እንጀራ",
+    "forbidden_en": [
+      "Bread",
+      "Sour",
+      "Flat",
+      "Teff",
+      "Plate"
+    ],
+    "forbidden_am": [
+      "ዳቦ",
+      "ጎምዛዛ",
+      "ጠፍጣፋ",
+      "ጤፍ",
+      "ሳህን"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_004",
+    "target_en": "Coffee Ceremony",
+    "target_am": "የቡና ሥነ ሥርዓት",
+    "forbidden_en": [
+      "Beans",
+      "Roast",
+      "Rounds",
+      "Incense",
+      "Jebena"
+    ],
+    "forbidden_am": [
+      "ባቄላ",
+      "መቁላት",
+      "ዙር",
+      "እጣን",
+      "ጀበና"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_005",
+    "target_en": "Enkutatash",
+    "target_am": "እንቁጣጣሽ",
+    "forbidden_en": [
+      "September",
+      "New Year",
+      "Flowers",
+      "Yellow",
+      "Spring"
+    ],
+    "forbidden_am": [
+      "መስከረም",
+      "አዲስ ዓመት",
+      "አበባ",
+      "ቢጫ",
+      "ጸደይ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_006",
+    "target_en": "Ge'ez",
+    "target_am": "ግዕዝ",
+    "forbidden_en": [
+      "Alphabet",
+      "Ancient",
+      "Script",
+      "Church",
+      "Letters"
+    ],
+    "forbidden_am": [
+      "ፊደል",
+      "ጥንታዊ",
+      "ጽሑፍ",
+      "ቤተ ክርስቲያን",
+      "ፊደላት"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_007",
+    "target_en": "Habesha Kemis",
+    "target_am": "የሐበሻ ቀሚስ",
+    "forbidden_en": [
+      "Dress",
+      "White",
+      "Woven",
+      "Border",
+      "Traditional"
+    ],
+    "forbidden_am": [
+      "ቀሚስ",
+      "ነጭ",
+      "የተሸመነ",
+      "ጠርዝ",
+      "ባህላዊ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_008",
+    "target_en": "Lalibela",
+    "target_am": "ላሊበላ",
+    "forbidden_en": [
+      "Church",
+      "Rock",
+      "Carved",
+      "Pilgrims",
+      "UNESCO"
+    ],
+    "forbidden_am": [
+      "ቤተ ክርስቲያን",
+      "ድንጋይ",
+      "የተፈለፈለ",
+      "ተሳላሚ",
+      "ቅርስ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_009",
+    "target_en": "Eskista",
+    "target_am": "እስክስታ",
+    "forbidden_en": [
+      "Dance",
+      "Shoulders",
+      "Music",
+      "Move",
+      "Traditional"
+    ],
+    "forbidden_am": [
+      "ውዝዋዜ",
+      "ትከሻ",
+      "ሙዚቃ",
+      "እንቅስቃሴ",
+      "ባህላዊ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_010",
+    "target_en": "Ethiopian Calendar",
+    "target_am": "የኢትዮጵያ ዘመን አቆጣጠር",
+    "forbidden_en": [
+      "Months",
+      "Thirteen",
+      "Year",
+      "Julian",
+      "Sun"
+    ],
+    "forbidden_am": [
+      "ወር",
+      "አሥራ ሦስት",
+      "ዓመት",
+      "ጁሊያን",
+      "ፀሐይ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "hard",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_011",
+    "target_en": "Haile Selassie",
+    "target_am": "ኃይለ ሥላሴ",
+    "forbidden_en": [
+      "Emperor",
+      "Crown",
+      "Throne",
+      "Palace",
+      "Ruler"
+    ],
+    "forbidden_am": [
+      "ንጉሠ ነገሥት",
+      "ዘውድ",
+      "ዙፋን",
+      "ቤተ መንግሥት",
+      "ገዥ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_012",
+    "target_en": "Axum",
+    "target_am": "አክሱም",
+    "forbidden_en": [
+      "Obelisk",
+      "Ancient",
+      "Kingdom",
+      "Stone",
+      "History"
+    ],
+    "forbidden_am": [
+      "ሐውልት",
+      "ጥንታዊ",
+      "መንግሥት",
+      "ድንጋይ",
+      "ታሪክ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_013",
+    "target_en": "Genna",
+    "target_am": "ገና",
+    "forbidden_en": [
+      "Christmas",
+      "January",
+      "Church",
+      "Celebration",
+      "Feast"
+    ],
+    "forbidden_am": [
+      "ልደት",
+      "ጥር",
+      "ቤተ ክርስቲያን",
+      "ክብረ በዓል",
+      "ግብዣ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_014",
+    "target_en": "Mesob",
+    "target_am": "መሶብ",
+    "forbidden_en": [
+      "Basket",
+      "Woven",
+      "Table",
+      "Colorful",
+      "Grass"
+    ],
+    "forbidden_am": [
+      "ቅርጫት",
+      "የተሸመነ",
+      "ገበታ",
+      "ባለቀለም",
+      "ሣር"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_015",
+    "target_en": "Krar",
+    "target_am": "ክራር",
+    "forbidden_en": [
+      "Instrument",
+      "Strings",
+      "Music",
+      "Wooden",
+      "Play"
+    ],
+    "forbidden_am": [
+      "መሣሪያ",
+      "ገመድ",
+      "ሙዚቃ",
+      "የእንጨት",
+      "መጫወት"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_016",
+    "target_en": "Buna",
+    "target_am": "ቡና",
+    "forbidden_en": [
+      "Coffee",
+      "Drink",
+      "Hot",
+      "Ceremony",
+      "Cup"
+    ],
+    "forbidden_am": [
+      "ቡና",
+      "መጠጥ",
+      "ትኩስ",
+      "ሥነ ሥርዓት",
+      "ስኒ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_017",
+    "target_en": "Netela",
+    "target_am": "ነጠላ",
+    "forbidden_en": [
+      "Shawl",
+      "Cotton",
+      "White",
+      "Wrap",
+      "Traditional"
+    ],
+    "forbidden_am": [
+      "ሻሽ",
+      "ጥጥ",
+      "ነጭ",
+      "መጠቅለያ",
+      "ባህላዊ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_018",
+    "target_en": "Fasika",
+    "target_am": "ፋሲካ",
+    "forbidden_en": [
+      "Easter",
+      "Fasting",
+      "Church",
+      "Resurrection",
+      "April"
+    ],
+    "forbidden_am": [
+      "ትንሳኤ",
+      "ጾም",
+      "ቤተ ክርስቲያን",
+      "ትንሣኤ",
+      "ሚያዝያ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_019",
+    "target_en": "Amharic",
+    "target_am": "አማርኛ",
+    "forbidden_en": [
+      "Language",
+      "Script",
+      "Speak",
+      "National",
+      "Words"
+    ],
+    "forbidden_am": [
+      "ቋንቋ",
+      "ፊደል",
+      "መናገር",
+      "ብሔራዊ",
+      "ቃላት"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_020",
+    "target_en": "Simien Mountains",
+    "target_am": "ስሜን ተራሮች",
+    "forbidden_en": [
+      "Peaks",
+      "Wildlife",
+      "Trekking",
+      "National park",
+      "Highlands"
+    ],
+    "forbidden_am": [
+      "ጫፍ",
+      "የዱር እንስሳት",
+      "ጉዞ",
+      "ብሔራዊ ፓርክ",
+      "ደጋማ"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "hard",
     "active": true
   }
 ]

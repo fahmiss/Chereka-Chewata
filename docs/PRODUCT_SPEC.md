@@ -11,7 +11,7 @@
 
 ## 1. MVP Game Lineup
 
-Chereka Chewata should launch with these six games:
+Chereka Chewata includes these seven playable games:
 
 1. **Impostor**
 2. **Who’s the Liar?**
@@ -19,8 +19,9 @@ Chereka Chewata should launch with these six games:
 4. **Who’s Most Likely To**
 5. **Would You Rather**
 6. **Who’s Got the Bomb?**
+7. **Quiz**
 
-### Why these six
+### Why these seven
 
 Together, they cover the main types of social party-game play:
 
@@ -32,6 +33,7 @@ Together, they cover the main types of social party-game play:
 | Who’s Most Likely To | Group voting and conversation | No by default | No | Friends, coworkers, family |
 | Would You Rather | Forced choices and debate | No by default | No | Any group |
 | Who’s Got the Bomb? | Fast category answers and hot-potato tension | Yes | Hidden fuse | Friends, family, mixed groups |
+| Quiz | Four-choice trivia: casual passing or scored round-robin play | Optional | No | Friends, family, mixed groups |
 
 This is enough variety for an MVP without creating too many systems at once.
 
@@ -45,7 +47,7 @@ These rules apply across the MVP unless a game overrides them.
 
 - One shared phone or tablet.
 - No account required to begin playing.
-- All six launch games must work offline after installation and content download.
+- All seven games must work offline after installation and content download.
 - The app must never require every player to install the app.
 
 ## 2.2 Language model
@@ -80,6 +82,7 @@ Player names are required for:
 - Impostor
 - Who’s the Liar?
 - Who’s Got the Bomb?
+- Quiz Compete
 - Optional scored versions of Taboo
 - Optional host-led versions of Who’s Most Likely To
 
@@ -87,16 +90,19 @@ Player names are not required for:
 
 - Standard Would You Rather
 - Standard Who’s Most Likely To
+- Quiz Pass & Play
 
 ## 2.4 Content filters
 
-Every game card should support the following content levels:
+Social-game cards support the following content levels:
 
 - **Family:** suitable for mixed-age groups
 - **Friends:** playful, mildly personal, or embarrassing
 - **Spicy:** dating, exes, confessions, and mature social questions
 
 Spicy content must be disabled by default and require an explicit selection.
+Quiz is the explicit exception: it uses knowledge difficulty (Easy / Medium /
+Hard / Mixed) and does not expose maturity levels in setup.
 
 ## 2.5 Common controls
 
@@ -1260,7 +1266,7 @@ The app should never force experienced players to read the full rules before pla
 
 Unless user testing gives strong evidence otherwise:
 
-- The six launch games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, Would You Rather, and Who’s Got the Bomb?.
+- The seven playable games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, Would You Rather, Who’s Got the Bomb?, and Quiz.
 - All games are designed for one shared phone.
 - No account is required.
 - Offline play is required.
@@ -1376,7 +1382,7 @@ Required elements:
 - Chereka Chewata wordmark or compact header
 - Settings button
 - Featured game area, with Impostor as the default hero game
-- Cards for all six MVP games
+- Cards for all seven playable games
 - Recently played or Play Again section, once history exists
 - Optional content-level indicator
 
@@ -2398,7 +2404,7 @@ Step 6 is considered implemented in design when:
 
 - The logo mark works at app-icon size.
 - The home, player setup, and secret reveal screens use the same tokens.
-- All six game colors remain readable on the shared dark foundation.
+- All seven game colors remain readable on the shared dark foundation.
 - English and Amharic samples fit without clipping or unrelated typography.
 - Primary actions are obvious without instruction.
 - Secret cards cannot be exposed accidentally through normal navigation.
@@ -2678,7 +2684,98 @@ The fuse deadline remains in in-memory session state, never route parameters.
 Backgrounding the app does not pause the fuse. Category cards follow the shared
 history/report rules and support English, Amharic, and Mixed content modes.
 
-# 20. Research Basis
+# 20. Game Seven: Quiz
+
+## 20.1 Product role
+
+Quiz is offline four-choice trivia with two equally visible ways to play. The
+mode is selected before setup and must not be collapsed into one scored flow.
+Difficulty measures knowledge difficulty and is unrelated to Family / Friends /
+Spicy maturity levels.
+
+## 20.2 Pass & Play
+
+**Quick casual trivia. Answer, reveal, then pass the phone.**
+
+- No player names, scores, leaderboard, or invented winner.
+- Setup contains only multi-select categories, difficulty, and 10 / 20 / 30
+  total questions. Defaults: All Categories, Mixed, 20.
+- Flow: `Ready → Question → AnswerReveal → Handoff → Question → … → Result`.
+- After reveal the primary action is **Pass the phone**. The handoff says
+  **Next player, you’re up** and shows no upcoming question or private secret.
+- Result shows questions played and optional group accuracy, with Play again,
+  Change setup, and Home.
+
+## 20.3 Compete
+
+**Add players, keep score, and see who knows the most.**
+
+- 2–12 named players using shared player setup and saved-group convenience.
+- Questions rotate in player order until the configured total is reached;
+  totals are per session, not per player.
+- Correct answer: +1. Incorrect answer: 0. No penalties, timers, speed bonuses,
+  streaks, multipliers, or power-ups.
+- Flow: `Ready → Question → AnswerReveal → Question → … → Result`; public
+  trivia does not require a private handoff between competitive turns.
+- Highest score wins. Ties are allowed and every first-place player is shown
+  equally. Result actions are Play again, Change setup, and Home.
+- Rematches reshuffle answers and prefer questions not used recently.
+
+## 20.4 Shared answering rules
+
+- Every question displays exactly four large answers labeled A–D.
+- Selecting an answer locks all choices and immediately enters the reveal
+  phase without advancing to the next question.
+- Reveal visibly marks the selected answer and correct answer with icons/shapes
+  as well as color, plays setting-aware sound/haptics, and may show an optional
+  explanation.
+- The group advances explicitly after reacting; there is no timed auto-advance.
+- Question hierarchy is current player (Compete only), category · difficulty,
+  question, four choices, and `Question N of total`.
+
+## 20.5 Categories and difficulty
+
+Categories are multi-select with All Categories convenience:
+
+1. General Knowledge
+2. Ethiopia & Culture
+3. Entertainment & Pop Culture
+4. Football
+5. Sports
+6. Geography & Places
+7. Food & Drink
+8. History
+9. Animals & Nature
+10. Science & Technology
+
+Football stays separate from Sports. Difficulty is Easy, Medium, Hard, or
+Mixed (default). Ethiopian content belongs both in Ethiopia & Culture and,
+using an `Ethiopian` tag, naturally inside Football, Entertainment, Food,
+Geography, Sports, and other relevant subjects. The library should feel
+Ethiopian and global rather than Ethiopia-only.
+
+## 20.6 Offline content schema
+
+Each active question has a stable ID, bilingual question and answer fields,
+one correct answer, exactly three unique incorrect answers, category,
+difficulty, optional tags and explanation, and optional provenance metadata:
+`source_name`, `source_url`, `source_license`, `verified_at`.
+
+Displayed answers are shuffled for every question. Correctness is carried as
+metadata and never inferred from array position after shuffling. English,
+Amharic, and Mixed use the shared content-language setting.
+
+At session creation, filter category then difficulty (unless Mixed), prefer
+unseen/recently-unused questions, shuffle, and take the requested total. If the
+eligible pool is smaller than the request, use every eligible question before
+reshuffling and recycling; never fail or create an unusable session.
+
+Validation rejects duplicate IDs, unknown categories, invalid difficulty,
+empty questions or correct answers, any count other than three incorrect
+answers, duplicate choices, incomplete Amharic arrays, non-boolean `active`,
+and malformed optional metadata.
+
+# 21. Research Basis
 
 This specification follows familiar versions of these games rather than copying any single app’s exact wording, interface, artwork, or proprietary content.
 

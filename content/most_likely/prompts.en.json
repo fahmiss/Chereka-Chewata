@@ -3,313 +3,415 @@
     "id": "likely_friends_001",
     "prompt_en": "Who is most likely to start a group chat and then go silent?",
     "prompt_am": "ቡድን ቻት ከከፈተ በኋላ ጸጥ የሚል ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_002",
     "prompt_en": "Who is most likely to reply “I’m outside” while still putting on shoes?",
     "prompt_am": "ጫማውን እየለበሰ «ውጭ ነኝ» ብሎ የሚመልስ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_003",
     "prompt_en": "Who is most likely to suggest one more place at 1 a.m.?",
     "prompt_am": "ከሌሊቱ 1 ሰዓት ሌላ ቦታ የሚጠቁም ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_004",
     "prompt_en": "Who is most likely to remember everyone’s order?",
     "prompt_am": "የሁሉንም ትእዛዝ የሚያስታውስ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_005",
     "prompt_en": "Who is most likely to lose the aux and still blame Bluetooth?",
     "prompt_am": "ኦክስ ሲያጣ ብሉቱዝ የሚከስ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_006",
     "prompt_en": "Who is most likely to plan a trip that never leaves the chat?",
     "prompt_am": "ከቻቱ የማትወጣ ጉዞ የሚያቅድ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_007",
     "prompt_en": "Who is most likely to show up early just to wait in the car?",
     "prompt_am": "ቀድሞ መጥቶ በመኪና ውስጥ የሚጠብቅ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_008",
     "prompt_en": "Who is most likely to say “last message” and send five more?",
     "prompt_am": "«መጨረሻ መልእክት» ብሎ አምስት ተጨማሪ የሚልክ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_009",
     "prompt_en": "Who is most likely to bring snacks for everyone else?",
     "prompt_am": "ለሁሉም መክሰስ የሚያመጣ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_010",
     "prompt_en": "Who is most likely to start drama by saying “I’m just saying”?",
     "prompt_am": "«እኔ እያልኩ ነው» ብሎ ድራማ የሚጀምር ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_011",
     "prompt_en": "Who is most likely to screenshot the group chat?",
     "prompt_am": "የቡድን ቻቱን ስክሪንሾት የሚያነሳ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_012",
     "prompt_en": "Who is most likely to cancel plans with a voice note?",
     "prompt_am": "እቅድን በቮይስ ኖት የሚሰርዝ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_013",
     "prompt_en": "Who is most likely to know everyone’s secrets?",
     "prompt_am": "የሁሉንም ምስጢር የሚያውቅ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_014",
     "prompt_en": "Who is most likely to turn a five-minute stop into an hour?",
     "prompt_am": "አምስት ደቂቃ ማቆሚያን ወደ አንድ ሰዓት የሚቀይር ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_015",
     "prompt_en": "Who is most likely to borrow something and forget forever?",
     "prompt_am": "ነገር ተበድሮ ለዘላለም የሚረሳ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_016",
     "prompt_en": "Who is most likely to host and then disappear into the kitchen?",
     "prompt_am": "በቤቱ ካስተናገደ በኋላ ወደ ኩሽና የሚጠፋ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_017",
     "prompt_en": "Who is most likely to make the whole table laugh first?",
     "prompt_am": "መጀመሪያ ሙሉ ጠረጴዛውን የሚያስስቅ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_family_018",
     "prompt_en": "Who is most likely to be asked to fix the Wi‑Fi?",
     "prompt_am": "ዋይፋይ እንዲያስተካክል የሚጠየቅ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_019",
     "prompt_en": "Who is most likely to arrive late to family lunch?",
     "prompt_am": "ወደ ቤተሰብ ምሳ ዘግይቶ የሚመጣ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_020",
     "prompt_en": "Who is most likely to negotiate with a parent using humor?",
     "prompt_am": "ከወላጅ ጋር በቀልድ የሚደራደር ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_021",
     "prompt_en": "Who is most likely to take the best seat without asking?",
     "prompt_am": "ሳይጠይቅ ምርጥ ወንበር የሚይዝ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_022",
     "prompt_en": "Who is most likely to start helping in the kitchen unprompted?",
     "prompt_am": "ሳይታዘዝ በኩሽና መርዳት የሚጀምር ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_023",
     "prompt_en": "Who is most likely to get called “the responsible one”?",
     "prompt_am": "«ኃላፊነተኛው» ተብሎ የሚጠራ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_024",
     "prompt_en": "Who is most likely to hide leftovers for later?",
     "prompt_am": "ለኋላ ቀሪ ምግብ የሚደብቅ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_025",
     "prompt_en": "Who is most likely to tell a childhood story at every gathering?",
     "prompt_am": "በእያንዳንዱ ስብሰባ የልጅነት ታሪክ የሚናገር ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_026",
     "prompt_en": "Who is most likely to fall asleep during a movie night?",
     "prompt_am": "በፊልም ማታ ላይ የሚተኛ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_027",
     "prompt_en": "Who is most likely to argue about the thermostat?",
     "prompt_am": "ስለ ቴርሞስታት የሚከራከር ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_028",
     "prompt_en": "Who is most likely to take 40 photos of the food?",
     "prompt_am": "ለምግቡ 40 ፎቶ የሚያነሳ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_029",
     "prompt_en": "Who is most likely to be volunteered for every errand?",
     "prompt_am": "ለእያንዳንዱ ውጪ ስራ ያለ ፍቃዱ የሚመረጥ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_030",
     "prompt_en": "Who is most likely to remember every relative’s birthday?",
     "prompt_am": "የእያንዳንዱ ዘመድ የልደት ቀን የሚያስታውስ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_031",
     "prompt_en": "Who is most likely to dodge washing dishes with charm?",
     "prompt_am": "ሳህኖችን በማራኪነት የሚያመልጥ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_032",
     "prompt_en": "Who is most likely to bring a guest without warning?",
     "prompt_am": "ሳያስጠነቅቅ እንግዳ የሚያመጣ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_033",
     "prompt_en": "Who is most likely to start a family debate about football?",
     "prompt_am": "ስለ እግር ኳስ የቤተሰብ ክርክር የሚጀምር ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_034",
     "prompt_en": "Who is most likely to leave with a container of food?",
     "prompt_am": "በምግብ ኮንቴይነር ወጥቶ የሚሄድ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_school_and_university_035",
     "prompt_en": "Who is most likely to say “I studied” meaning they opened the PDF?",
     "prompt_am": "ፒዲኤፍ ስከፈተ «አጥንቻለሁ» የሚል ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -318,7 +420,7 @@
     "id": "likely_school_and_university_036",
     "prompt_en": "Who is most likely to carry every notebook and still forget a pen?",
     "prompt_am": "ሁሉንም ማስታወሻ ይዞ እስኪኖል የሚረሳ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -327,7 +429,7 @@
     "id": "likely_school_and_university_037",
     "prompt_en": "Who is most likely to answer a question with another question?",
     "prompt_am": "ጥያቄን በሌላ ጥያቄ የሚመልስ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -336,7 +438,7 @@
     "id": "likely_school_and_university_038",
     "prompt_en": "Who is most likely to join a club and never attend?",
     "prompt_am": "ክለብ ተቀላቅሎ በጭራሽ የማይመጣ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -345,7 +447,7 @@
     "id": "likely_school_and_university_039",
     "prompt_en": "Who is most likely to finish the group project alone?",
     "prompt_am": "የቡድን ፕሮጀክቱን ብቻውን የሚጨርስ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -354,7 +456,7 @@
     "id": "likely_school_and_university_040",
     "prompt_en": "Who is most likely to sit in the front row on purpose?",
     "prompt_am": "በአስቦ በመጀመሪያ ረድፍ የሚቀመጥ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -363,7 +465,7 @@
     "id": "likely_school_and_university_041",
     "prompt_en": "Who is most likely to ask “will this be on the exam?”?",
     "prompt_am": "«ይህ በፈተና ላይ ይመጣል?» ብሎ የሚጠይቅ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -372,7 +474,7 @@
     "id": "likely_school_and_university_042",
     "prompt_en": "Who is most likely to nap between lectures?",
     "prompt_am": "በትምህርቶች መካከል የሚተኛ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -381,7 +483,7 @@
     "id": "likely_school_and_university_043",
     "prompt_en": "Who is most likely to have 40 tabs open for one assignment?",
     "prompt_am": "ለአንድ ስራ 40 ታቦች ክፍት ያለው ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -390,7 +492,7 @@
     "id": "likely_school_and_university_044",
     "prompt_en": "Who is most likely to start a study group that becomes gossip hour?",
     "prompt_am": "የጥናት ቡድንን ወደ ወሬ ሰዓት የሚቀይር ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -399,7 +501,7 @@
     "id": "likely_school_and_university_045",
     "prompt_en": "Who is most likely to print something five minutes before class?",
     "prompt_am": "ከክፍል አምስት ደቂቃ በፊት የሚያትም ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -408,7 +510,7 @@
     "id": "likely_school_and_university_046",
     "prompt_en": "Who is most likely to know the professor’s first name?",
     "prompt_am": "የፕሮፌሰሩን የመጀመሪያ ስም የሚያውቅ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -417,7 +519,7 @@
     "id": "likely_school_and_university_047",
     "prompt_en": "Who is most likely to lose their student ID twice?",
     "prompt_am": "የተማሪ መታወቂያውን ሁለት ጊዜ የሚያጣ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -426,7 +528,7 @@
     "id": "likely_school_and_university_048",
     "prompt_en": "Who is most likely to overpack for a short campus day?",
     "prompt_am": "ለአጭር የካምፓስ ቀን ብዙ የሚሸከም ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -435,7 +537,7 @@
     "id": "likely_school_and_university_049",
     "prompt_en": "Who is most likely to celebrate a pass like a graduation?",
     "prompt_am": "ማለፍን እንደ ምረቃ የሚያከብር ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -444,7 +546,7 @@
     "id": "likely_school_and_university_050",
     "prompt_en": "Who is most likely to explain a topic they barely understand?",
     "prompt_am": "በደንብ ያልገባውን ርዕስ የሚያስረዳ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
     "active": true
@@ -453,7 +555,7 @@
     "id": "likely_school_and_university_051",
     "prompt_en": "Who is most likely to take the longest possible route to class?",
     "prompt_am": "ወደ ክፍል በጣም ረጅሙን መንገድ የሚወስድ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
     "active": true
@@ -462,1006 +564,1339 @@
     "id": "likely_addis_life_052",
     "prompt_en": "Who is most likely to say “I’m nearby” while still at home?",
     "prompt_am": "ገና ቤት ሳለ «አቅራቢያ ነኝ» የሚል ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_053",
     "prompt_en": "Who is most likely to underestimate Addis traffic every single time?",
     "prompt_am": "የአዲስ አበባ ትራፊክን ሁልጊዜ የሚያሳንስ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_054",
     "prompt_en": "Who is most likely to know every café with good Wi‑Fi?",
     "prompt_am": "ጥሩ ዋይፋይ ያለው እያንዳንዱን ካፌ የሚያውቅ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_055",
     "prompt_en": "Who is most likely to negotiate the bajaj fare with confidence?",
     "prompt_am": "የባጃጅ ዋጋን በራስ መተማመን የሚደራደር ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_056",
     "prompt_en": "Who is most likely to suggest coffee as a solution to everything?",
     "prompt_am": "ለማንኛውም ነገር ቡና እንደ መፍትሄ የሚጠቁም ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_057",
     "prompt_en": "Who is most likely to get stuck choosing a restaurant for 20 minutes?",
     "prompt_am": "ሬስቶራንት ለመምረጥ 20 ደቂቃ የሚጠፋበት ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_058",
     "prompt_en": "Who is most likely to say “just five minutes” about Bole Road?",
     "prompt_am": "ስለ ቦሌ መንገድ «አምስት ደቂቃ ብቻ» የሚል ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_059",
     "prompt_en": "Who is most likely to take visitors only to the same three spots?",
     "prompt_am": "ጎብኚዎችን ወደ ተመሳሳይ ሶስት ቦታዎች ብቻ የሚወስድ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_060",
     "prompt_en": "Who is most likely to complain about power and then open a laptop?",
     "prompt_am": "ስለ መብራት እያማረረ ላፕቶፕ የሚከፍት ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_061",
     "prompt_en": "Who is most likely to find parking like it’s a competitive sport?",
     "prompt_am": "ፓርኪንግ ማግኘትን እንደ ውድድር የሚያየው ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_062",
     "prompt_en": "Who is most likely to start the day at a café and stay for hours?",
     "prompt_am": "ቀኑን በካፌ ጀምሮ ለሰዓታት የሚቆይ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_063",
     "prompt_en": "Who is most likely to know which bakery has fresh bread first?",
     "prompt_am": "ትኩስ ዳቦ በመጀመሪያ የትኛው ዳቦ ቤት እንዳለው የሚያውቅ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_064",
     "prompt_en": "Who is most likely to post “Addis nights” from a living room?",
     "prompt_am": "ከሳሎን ሆኖ «የአዲስ ሌሊቶች» የሚለጥፍ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_065",
     "prompt_en": "Who is most likely to bring an umbrella and still get surprised by rain?",
     "prompt_am": "ጃንጥላ ይዞ ዝናብ ሲመጣ የሚገርመው ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_066",
     "prompt_en": "Who is most likely to treat Merkato like an Olympic event?",
     "prompt_am": "መርካቶን እንደ ኦሎምፒክ ዝግጅት የሚይዘው ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_067",
     "prompt_en": "Who is most likely to call everyone “my guy” in traffic?",
     "prompt_am": "በትራፊክ ላይ ሁሉንም «ወንድሜ» የሚል ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_068",
     "prompt_en": "Who is most likely to turn a short errand into a full city tour?",
     "prompt_am": "አጭር ስራን ወደ ሙሉ የከተማ ጉብኝት የሚቀይር ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_relationships_069",
     "prompt_en": "Who is most likely to overthink a text for 45 minutes?",
     "prompt_am": "መልእክትን ለ45 ደቂቃ የሚያጣጥን ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_070",
     "prompt_en": "Who is most likely to plan the perfect date and then get nervous?",
     "prompt_am": "ፍጹም ቀን ከያቀደ በኋላ የሚፈራ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_071",
     "prompt_en": "Who is most likely to say “we need to talk” about nothing serious?",
     "prompt_am": "ስለ ቀላል ነገር «መነጋገር አለብን» የሚል ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_072",
     "prompt_en": "Who is most likely to remember the anniversary of a first coffee?",
     "prompt_am": "የመጀመሪያ ቡና አመታዊ ቀን የሚያስታውስ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_073",
     "prompt_en": "Who is most likely to write a paragraph when a heart emoji would do?",
     "prompt_am": "የልብ ኢሞጂ በቂ ሲሆን አንቀጽ የሚጽፍ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_074",
     "prompt_en": "Who is most likely to get jealous of a group chat?",
     "prompt_am": "በቡድን ቻት ቅናት የሚሰማው ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_075",
     "prompt_en": "Who is most likely to introduce someone as “just a friend” too carefully?",
     "prompt_am": "አንድን ሰው በጣም በጥንቃቄ «ጓደኛ ብቻ» ብሎ የሚያስተዋውቅ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_076",
     "prompt_en": "Who is most likely to save screenshots “for memory”?",
     "prompt_am": "ስክሪንሾቶችን «ለማስታወሻ» የሚያስቀምጥ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_077",
     "prompt_en": "Who is most likely to give relationship advice they ignore?",
     "prompt_am": "እራሱ የማይከተለው የፍቅር ምክር የሚሰጥ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_078",
     "prompt_en": "Who is most likely to fall for a voice note?",
     "prompt_am": "ለቮይስ ኖት የሚወድቅ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_079",
     "prompt_en": "Who is most likely to plan outfits around a maybe-hangout?",
     "prompt_am": "ምናልባት-መገናኘት ስለ ልብስ የሚያቅድ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_080",
     "prompt_en": "Who is most likely to check if someone viewed their story?",
     "prompt_am": "ስቶሪውን ማን እንዳየ የሚፈትሽ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_081",
     "prompt_en": "Who is most likely to say “I’m chill” while clearly not chill?",
     "prompt_am": "በግልጽ ሳይረጋጋ «ተረጋግቻለሁ» የሚል ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_082",
     "prompt_en": "Who is most likely to write a poem and never send it?",
     "prompt_am": "ግጥም ጻፎ በጭራሽ የማይልክ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_083",
     "prompt_en": "Who is most likely to turn a compliment into a TED talk?",
     "prompt_am": "አመሰግናለሁን ወደ TED ንግግር የሚቀይር ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_084",
     "prompt_en": "Who is most likely to ghost and then send a meme as apology?",
     "prompt_am": "ከጠፋ በኋላ እንደ ይቅርታ ሜም የሚልክ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_085",
     "prompt_en": "Who is most likely to bring up marriage as a joke too often?",
     "prompt_am": "ጋብቻን በቀልድ በጣም ብዙ ጊዜ የሚያነሳ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_work_086",
     "prompt_en": "Who is most likely to reply-all by accident?",
     "prompt_am": "በስህተት ሪፕላይ-ኦል የሚል ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_087",
     "prompt_en": "Who is most likely to say “quick call” that lasts an hour?",
     "prompt_am": "«ፈጣን ጥሪ» ብሎ አንድ ሰዓት የሚፈጅ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_088",
     "prompt_en": "Who is most likely to have 12 unread work chats and still smile?",
     "prompt_am": "12 ያልተነበቡ የስራ ቻቶች ይዞ የሚስቅ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_089",
     "prompt_en": "Who is most likely to volunteer for a task and immediately regret it?",
     "prompt_am": "ለስራ በፈቃደኝነት ተነስቶ ወዲያው የሚጸጸት ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_090",
     "prompt_en": "Who is most likely to decorate their desk like a tiny home?",
     "prompt_am": "ዴስኩን እንደ ትንሽ ቤት የሚያስውብ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_091",
     "prompt_en": "Who is most likely to become the unofficial IT support?",
     "prompt_am": "ያልተሰየመው የአይቲ ድጋፍ የሚሆን ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_092",
     "prompt_en": "Who is most likely to schedule a meeting that could have been a message?",
     "prompt_am": "መልእክት ሊሆን የሚችል ስብሰባ የሚያቀድ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_093",
     "prompt_en": "Who is most likely to bring leftover injera energy to Monday?",
     "prompt_am": "የቀረ እንጀራ ኃይልን ወደ ሰኞ የሚያመጣ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_094",
     "prompt_en": "Who is most likely to have the best excuses for being late?",
     "prompt_am": "ለመዘግየት ምርጥ ምክንያቶች ያሉት ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_095",
     "prompt_en": "Who is most likely to say “per my last email” with a smile?",
     "prompt_am": "ሳቅ እያሳየ «እንደ ቀደመ ኢሜይሌ» የሚል ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_096",
     "prompt_en": "Who is most likely to finish work early and pretend they’re still busy?",
     "prompt_am": "ስራ ቀድሞ ጨርሶ ገና ቢዚ እንደሆነ የሚመስል ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_097",
     "prompt_en": "Who is most likely to collect every office snack?",
     "prompt_am": "ሁሉንም የቢሮ መክሰስ የሚሰበስብ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_098",
     "prompt_en": "Who is most likely to turn on a camera with a professional background?",
     "prompt_am": "ካሜራን በሙያዊ ዳራ የሚያበራ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_099",
     "prompt_en": "Who is most likely to start a spreadsheet for fun?",
     "prompt_am": "ለመዝናናት ስፕሬድሺት የሚጀምር ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_100",
     "prompt_en": "Who is most likely to become friends with the receptionist first?",
     "prompt_am": "መጀመሪያ ከረሴፕሽኑ ጋር ጓደኛ የሚሆን ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_101",
     "prompt_en": "Who is most likely to celebrate Friday at 11 a.m.?",
     "prompt_am": "አርብን ከጠዋቱ 11 ሰዓት የሚያከብር ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_102",
     "prompt_en": "Who is most likely to keep a to-do list with one item for months?",
     "prompt_am": "ለወራት አንድ ነገር ያለው የሚደርግ ዝርዝር የሚይዝ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_diaspora_103",
     "prompt_en": "Who is most likely to translate for the whole family at the airport?",
     "prompt_am": "በአውሮፕላን ማረፊያ ለሙሉ ቤተሰብ የሚተረጉም ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_104",
     "prompt_en": "Who is most likely to pack berbere like it’s essential luggage?",
     "prompt_am": "በርበሬን እንደ አስፈላጊ ሻንጣ የሚሸከም ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_105",
     "prompt_en": "Who is most likely to say “back home” every conversation?",
     "prompt_am": "በእያንዳንዱ ውይይት «ቤት ሀገር» የሚል ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_106",
     "prompt_en": "Who is most likely to find Ethiopian food in any city within an hour?",
     "prompt_am": "በማንኛውም ከተማ ባንድ ሰዓት የኢትዮጵያ ምግብ የሚያገኝ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_107",
     "prompt_en": "Who is most likely to FaceTime during a family holiday meal?",
     "prompt_am": "በቤተሰብ በዓል ምግብ ላይ ፌስታይም የሚያደርግ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_108",
     "prompt_en": "Who is most likely to overexplain Ethiopia to strangers proudly?",
     "prompt_am": "ኢትዮጵያን ለባዕዳን በኩራት ከልክ ያለፈ የሚያብራራ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_109",
     "prompt_en": "Who is most likely to convert currency in their head constantly?",
     "prompt_am": "ምንዛሬን በአእምሮ ውስጥ ሁልጊዜ የሚቀይር ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_110",
     "prompt_en": "Who is most likely to miss the coffee ceremony the most?",
     "prompt_am": "የቡና ሥነ ሥርዓትን በጣም የሚናፍቅ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_111",
     "prompt_en": "Who is most likely to bring back too many gifts?",
     "prompt_am": "ብዙ ስጦታዎችን ተመልሶ የሚያመጣ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_112",
     "prompt_en": "Who is most likely to join every diaspora group chat?",
     "prompt_am": "እያንዳንዱን የዲያስፖራ ቡድን ቻት የሚቀላቀል ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_113",
     "prompt_en": "Who is most likely to compare every city to Addis?",
     "prompt_am": "እያንዳንዱን ከተማ ከአዲስ አበባ ጋር የሚያነጻጽር ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_114",
     "prompt_en": "Who is most likely to teach someone how to eat injera correctly?",
     "prompt_am": "እንጀራን በትክክል እንዴት እንደሚበሉ የሚያስተምር ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_115",
     "prompt_en": "Who is most likely to get emotional at Ethiopian music abroad?",
     "prompt_am": "በውጭ አገር የኢትዮጵያ ሙዚቃ ሲሰማ የሚነካ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_116",
     "prompt_en": "Who is most likely to plan a “short visit” that becomes three weeks?",
     "prompt_am": "«አጭር ጉብኝት» አቅዶ ሦስት ሳምንት የሚቆይ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_117",
     "prompt_en": "Who is most likely to keep Ethiopian time even abroad?",
     "prompt_am": "በውጭም የኢትዮጵያ ሰዓት የሚይዝ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_118",
     "prompt_en": "Who is most likely to send food photos to the family group?",
     "prompt_am": "የምግብ ፎቶዎችን ወደ ቤተሰብ ቡድን የሚልክ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_119",
     "prompt_en": "Who is most likely to defend the national team like a coach?",
     "prompt_am": "ብሔራዊ ቡድኑን እንደ አሰልጣኝ የሚከላከል ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_weddings_and_events_120",
     "prompt_en": "Who is most likely to dance before the music fully starts?",
     "prompt_am": "ሙዚቃው ሙሉ በሙሉ ከመጀመሩ በፊት የሚደንስ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_121",
     "prompt_en": "Who is most likely to cry during the vows?",
     "prompt_am": "በቃለ መሐላ ጊዜ የሚያለቅስ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_122",
     "prompt_en": "Who is most likely to take 200 photos and post none?",
     "prompt_am": "200 ፎቶ አንስቶ ምንም የማይለጥፍ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_123",
     "prompt_en": "Who is most likely to know every guest’s name?",
     "prompt_am": "የእያንዳንዱን እንግዳ ስም የሚያውቅ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_124",
     "prompt_en": "Who is most likely to leave with a plate for later?",
     "prompt_am": "ለኋላ ሳህን ይዞ የሚሄድ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_125",
     "prompt_en": "Who is most likely to give a speech with no notes?",
     "prompt_am": "ያለ ማስታወሻ ንግግር የሚሰጥ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_126",
     "prompt_en": "Who is most likely to get lost finding the venue?",
     "prompt_am": "ቦታውን ሲፈልግ የሚጠፋ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_127",
     "prompt_en": "Who is most likely to wear something slightly too bold?",
     "prompt_am": "ጥቂት እንደዚህ ደፋር ልብስ የሚለብስ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_128",
     "prompt_en": "Who is most likely to start the conga line energy?",
     "prompt_am": "የኮንጋ መስመር ኃይልን የሚጀምር ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_129",
     "prompt_en": "Who is most likely to stay until the last song?",
     "prompt_am": "እስከ መጨረሻው ዘፈን የሚቆይ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_130",
     "prompt_en": "Who is most likely to judge the cake before tasting it?",
     "prompt_am": "ካኬውን ከመቅመሱ በፊት የሚፈርድ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_131",
     "prompt_en": "Who is most likely to become the unofficial photographer?",
     "prompt_am": "ያልተሰየመው ፎቶግራፍ አንሺ የሚሆን ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_132",
     "prompt_en": "Who is most likely to lose a shoe while dancing?",
     "prompt_am": "እየተደነሰ ጫማ የሚያጣ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_133",
     "prompt_en": "Who is most likely to collect every phone number “for the album”?",
     "prompt_am": "እያንዳንዱን የስልክ ቁጥር «ለአልበሙ» የሚሰበስብ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_134",
     "prompt_en": "Who is most likely to arrive dressed for a different dress code?",
     "prompt_am": "ለተለየ የአለባበስ ህግ ለብሶ የሚመጣ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_135",
     "prompt_en": "Who is most likely to toast with a story from childhood?",
     "prompt_am": "በልጅነት ታሪክ ቶስት የሚያደርግ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_136",
     "prompt_en": "Who is most likely to nap in a quiet room mid-reception?",
     "prompt_am": "በድግስ መሃል በጸጥታ ክፍል የሚተኛ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_general_funny_137",
     "prompt_en": "Who is most likely to laugh at their own joke first?",
     "prompt_am": "በራሱ ቀልድ መጀመሪያ የሚስቅ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_138",
     "prompt_en": "Who is most likely to drop their phone in public and pretend nothing happened?",
     "prompt_am": "በሕዝብ ስልኩን ጥሎ ምንም እንዳልሆነ የሚመስል ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_139",
     "prompt_en": "Who is most likely to say “I’m almost there” from the shower?",
     "prompt_am": "ከሻወር ሆኖ «ሊደርስ ነው» የሚል ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_140",
     "prompt_en": "Who is most likely to open the fridge for inspiration?",
     "prompt_am": "ለመነሳሳት ማቀዝቀዣ የሚከፍት ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_141",
     "prompt_en": "Who is most likely to start a sentence with “no offense but”?",
     "prompt_am": "አረፍተ ነገርን «ስድብ አይደለም ግን» ብሎ የሚጀምር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_142",
     "prompt_en": "Who is most likely to buy something online at 2 a.m.?",
     "prompt_am": "ከሌሊቱ 2 ሰዓት ኦንላይን የሚገዛ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_143",
     "prompt_en": "Who is most likely to lose their keys while holding them?",
     "prompt_am": "ቁልፎቹን እያዘ እያጣ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_144",
     "prompt_en": "Who is most likely to narrate their life like a documentary?",
     "prompt_am": "ሕይወቱን እንደ ዶኩመንታሪ የሚተርክ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_145",
     "prompt_en": "Who is most likely to take a “quick nap” that lasts three hours?",
     "prompt_am": "«ፈጣን እንቅልፍ» ብሎ ሦስት ሰዓት የሚተኛ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_146",
     "prompt_en": "Who is most likely to send a voice note longer than a podcast?",
     "prompt_am": "ከፖድካስት የሚረዝም ቮይስ ኖት የሚልክ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_147",
     "prompt_en": "Who is most likely to misplace headphones inside a jacket pocket?",
     "prompt_am": "ኢርፎን በጃኬት ኪስ ውስጥ የሚያጣ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_148",
     "prompt_en": "Who is most likely to argue with a GPS?",
     "prompt_am": "ከጂፒኤስ ጋር የሚከራከር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_149",
     "prompt_en": "Who is most likely to invent a new nickname for everyone?",
     "prompt_am": "ለሁሉም አዲስ ቅጽል ስም የሚፈጥር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_150",
     "prompt_en": "Who is most likely to clap when the plane lands?",
     "prompt_am": "አውሮፕላን ሲያርፍ የሚያጨብጭብ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_151",
     "prompt_en": "Who is most likely to say “this is the last one” about snacks?",
     "prompt_am": "ስለ መክሰስ «ይህ የመጨረሻው ነው» የሚል ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "family",
     "intensity": "mild",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_152",
     "prompt_en": "Who is most likely to start dancing when nobody asked?",
     "prompt_am": "ማንም ሳይጠይቅ መደነስ የሚጀምር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_153",
     "prompt_en": "Who is most likely to turn a simple story into a trilogy?",
     "prompt_am": "ቀላል ታሪክን ወደ ትሪሎጂ የሚቀይር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "friends",
     "intensity": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_relationships_154",
     "prompt_en": "Who is most likely to check an ex's stories every night?",
     "prompt_am": "የቀድሞ የፍቅር ስቶሪ በየሌሊቱ የሚፈትሽ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_155",
     "prompt_en": "Who is most likely to fall in love after one coffee?",
     "prompt_am": "ከአንድ ቡና በኋላ የሚወድቅ ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_relationships_156",
     "prompt_en": "Who is most likely to rewrite a text ten times before sending?",
     "prompt_am": "መልእክት ከመላኩ በፊት አስር ጊዜ የሚያስተካክል ማን ነው?",
-    "category_id": "relationships",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Couples"
+    ]
   },
   {
     "id": "likely_friends_157",
     "prompt_en": "Who is most likely to date someone their friends warned them about?",
     "prompt_am": "ጓደኞቹ ያስጠነቀቁትን ሰው የሚያወጣ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_158",
     "prompt_en": "Who is most likely to become the group matchmaker?",
     "prompt_am": "ጓደኞቹን እርስ በርስ የሚያጋጥም ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_friends_159",
     "prompt_en": "Who is most likely to catch feelings for a friend?",
     "prompt_am": "ለጓደኛ ፍቅር የሚይዝ ማን ነው?",
-    "category_id": "friends",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Friends"
+    ]
   },
   {
     "id": "likely_family_160",
     "prompt_en": "Who is most likely to hide a relationship from family the longest?",
     "prompt_am": "ግንኙነትን ከቤተሰብ በጣም ረጅሙ ጊዜ የሚደብቅ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_161",
     "prompt_en": "Who is most likely to bring a surprise date to family dinner?",
     "prompt_am": "ያልተጠበቀ ዴት ወደ ቤተሰብ እራት የሚያመጣ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_family_162",
     "prompt_en": "Who is most likely to get grilled about marriage at every holiday?",
     "prompt_am": "በእያንዳንዱ በዓል ስለ ጋብቻ የሚጣራ ማን ነው?",
-    "category_id": "family",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Family"
+    ]
   },
   {
     "id": "likely_school_and_university_163",
     "prompt_en": "Who is most likely to date someone from their class?",
     "prompt_am": "ከክፍሉ የሆነን የሚያወጣ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
     "active": true
@@ -1470,7 +1905,7 @@
     "id": "likely_school_and_university_164",
     "prompt_en": "Who is most likely to write a crush's name in a notebook?",
     "prompt_am": "የክራሽ ስም በማስታወሻ ደብተር የሚጽፍ ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
     "active": true
@@ -1479,7 +1914,7 @@
     "id": "likely_school_and_university_165",
     "prompt_en": "Who is most likely to turn a group project into a situationship?",
     "prompt_am": "የቡድን ፕሮጀክትን ወደ ያልጠራ ግንኙነት የሚቀይር ማን ነው?",
-    "category_id": "school_and_university",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
     "active": true
@@ -1488,135 +1923,585 @@
     "id": "likely_addis_life_166",
     "prompt_en": "Who is most likely to plan an over-the-top Addis date night?",
     "prompt_am": "በአዲስ አበባ ከልክ ያለፈ ቀን ማታ የሚያቅድ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_167",
     "prompt_en": "Who is most likely to flirt at a café then panic?",
     "prompt_am": "በካፌ ፍላርት አድርጎ ከዚያ የሚደነግጥ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_addis_life_168",
     "prompt_en": "Who is most likely to run into an ex on Bole?",
     "prompt_am": "በቦሌ ቀድሞ የፍቅር ሰው የሚገናኝ ማን ነው?",
-    "category_id": "addis_life",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Addis"
+    ]
   },
   {
     "id": "likely_work_169",
     "prompt_en": "Who is most likely to catch feelings for a coworker?",
     "prompt_am": "ለሥራ ባልደረባ ፍቅር የሚይዝ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_170",
     "prompt_en": "Who is most likely to hide a dating-app notification in a meeting?",
     "prompt_am": "በስብሰባ የዴቲንግ አፕ ማሳወቂያ የሚደብቅ ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_work_171",
     "prompt_en": "Who is most likely to call their work bestie 'work husband/wife'?",
     "prompt_am": "የስራ ጓደኛውን «የስራ ባል/ሚስት» የሚል ማን ነው?",
-    "category_id": "work",
+    "category_id": "school_and_work",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Work"
+    ]
   },
   {
     "id": "likely_diaspora_172",
     "prompt_en": "Who is most likely to date someone only their family would approve?",
     "prompt_am": "ቤተሰቡ ብቻ የሚፈቅደውን ሰው የሚያወጣ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_173",
     "prompt_en": "Who is most likely to keep a long-distance romance alive with voice notes?",
     "prompt_am": "ሩቅ ርቀት ፍቅርን በቮይስ ኖት የሚያቆይ ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_diaspora_174",
     "prompt_en": "Who is most likely to fly home just for a wedding crush?",
     "prompt_am": "ለሠርግ ክራሽ ብቻ ወደ ሃገር የሚበር ማን ነው?",
-    "category_id": "diaspora",
+    "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Diaspora"
+    ]
   },
   {
     "id": "likely_weddings_and_events_175",
     "prompt_en": "Who is most likely to catch the bouquet on purpose?",
     "prompt_am": "የአበባ እቅፉን በአስቦ የሚይዝ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_176",
     "prompt_en": "Who is most likely to flirt with someone in the wedding party?",
     "prompt_am": "ከሠርግ ቡድን አባል ጋር የሚፍላርት ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_weddings_and_events_177",
     "prompt_en": "Who is most likely to cry during someone else's vows?",
     "prompt_am": "በሌላ ሰው ቃለ መሐላ የሚያለቅስ ማን ነው?",
-    "category_id": "weddings_and_events",
+    "category_id": "people_and_relationships",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Weddings"
+    ]
   },
   {
     "id": "likely_general_funny_178",
     "prompt_en": "Who is most likely to soft-launch a partner with a mysterious selfie?",
     "prompt_am": "አጋርን በምስጢራዊ ሴልፊ ለስላሳ ማስጀመሪያ የሚያደርግ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_179",
     "prompt_en": "Who is most likely to turn a 'we're just talking' into a whole saga?",
     "prompt_am": "«እየተነጋገርን ነው ብቻ»ን ወደ ሙሉ ታሪክ የሚቀይር ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "intensity": "spicy",
-    "active": true
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
   },
   {
     "id": "likely_general_funny_180",
     "prompt_en": "Who is most likely to screenshot a crush's message for the group chat?",
     "prompt_am": "የክራሽ መልእክትን ለቡድን ቻት ስክሪንሾት የሚያነሳ ማን ነው?",
-    "category_id": "general_funny",
+    "category_id": "everyday_life",
     "content_level": "spicy",
     "intensity": "spicy",
+    "active": true,
+    "tags": [
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_entertainment_001",
+    "prompt_en": "Who is most likely to know every lyric to a song they claim to hate?",
+    "prompt_am": "የሚጠላውን ዘፈን ግጥም በሙሉ የሚያውቅ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_002",
+    "prompt_en": "Who is most likely to cry during a movie and deny it?",
+    "prompt_am": "ፊልም እያየ አልቅሶ የሚክድ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_003",
+    "prompt_en": "Who is most likely to binge an entire series in one weekend?",
+    "prompt_am": "አንድ ተከታታይ ትዕይንት በአንድ ቅዳሜና እሁድ ጨርሶ የሚያይ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_004",
+    "prompt_en": "Who is most likely to know all the dance moves from a music video?",
+    "prompt_am": "ከሙዚቃ ቪዲዮ ውስጥ ያለውን ውዝዋዜ ሁሉ የሚያውቅ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_005",
+    "prompt_en": "Who is most likely to fall asleep in the middle of a movie?",
+    "prompt_am": "ፊልም በሚገባ መሃል ላይ ተኝቶ የሚቀር ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_006",
+    "prompt_en": "Who is most likely to become a celebrity's biggest fan overnight?",
+    "prompt_am": "በአንድ ሌሊት የአንድ ታዋቂ ሰው ትልቁ አድናቂ የሚሆን ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_007",
+    "prompt_en": "Who is most likely to spoil a show for everyone by accident?",
+    "prompt_am": "ትዕይንት ያለ ሆን ብሎ ለሁሉም የሚያበላሽ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_008",
+    "prompt_en": "Who is most likely to sing karaoke like it's a real concert?",
+    "prompt_am": "ካራኦኬን እንደ እውነተኛ ኮንሰርት አድርጎ የሚዘፍን ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_009",
+    "prompt_en": "Who is most likely to have the most embarrassing music on their playlist?",
+    "prompt_am": "በዝርዝሩ ውስጥ በጣም አሳፋሪ ሙዚቃ ያለው ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_010",
+    "prompt_en": "Who is most likely to quote a movie in every conversation?",
+    "prompt_am": "በየንግግሩ ውስጥ ፊልም የሚጠቅስ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_011",
+    "prompt_en": "Who is most likely to know a celebrity's entire life story?",
+    "prompt_am": "የአንድ ታዋቂ ሰው ሙሉ ታሪክ የሚያውቅ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_012",
+    "prompt_en": "Who is most likely to walk out of a movie theater still in character?",
+    "prompt_am": "ከሲኒማ ቤት ገጸ ባህሪውን ይዞ የሚወጣ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_013",
+    "prompt_en": "Who is most likely to start a dance party out of nowhere?",
+    "prompt_am": "ድንገት የዳንስ ግብዣ የሚጀምር ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_014",
+    "prompt_en": "Who is most likely to have strong opinions about a reality show?",
+    "prompt_am": "ስለ አንድ ሪያሊቲ ትዕይንት ጠንካራ አስተያየት ያለው ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_entertainment_015",
+    "prompt_en": "Who is most likely to forget a movie's plot five minutes after watching it?",
+    "prompt_am": "ፊልም ካየ አምስት ደቂቃ በኋላ ታሪኩን የሚረሳ ማን ነው?",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_001",
+    "prompt_en": "Who is most likely to wear a jersey to bed after a big win?",
+    "prompt_am": "ትልቅ ድል ካሸነፉ በኋላ ማልያ ለብሶ የሚተኛ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_002",
+    "prompt_en": "Who is most likely to argue about football at a family dinner?",
+    "prompt_am": "በቤተሰብ እራት ላይ ስለ እግር ኳስ የሚከራከር ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_003",
+    "prompt_en": "Who is most likely to skip a wedding for a big match?",
+    "prompt_am": "ትልቅ ጨዋታ ስላለ ሰርግ የሚያመልጠው ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_004",
+    "prompt_en": "Who is most likely to know every player on their favorite team?",
+    "prompt_am": "የሚወደውን ቡድን ተጫዋቾች ሁሉ የሚያውቅ ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_005",
+    "prompt_en": "Who is most likely to yell at the TV during a match?",
+    "prompt_am": "በጨዋታ ወቅት ቲቪውን የሚጮህ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_006",
+    "prompt_en": "Who is most likely to wake up at 3am to watch a match?",
+    "prompt_am": "ጨዋታ ለማየት በሌሊት 3 ሰዓት የሚነቃ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_007",
+    "prompt_en": "Who is most likely to have a lucky jersey they refuse to wash?",
+    "prompt_am": "ማጠብ የማይፈልገው እድለኛ ማልያ ያለው ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_008",
+    "prompt_en": "Who is most likely to switch teams whenever it's convenient?",
+    "prompt_am": "አመቺ በሆነ ጊዜ ሁሉ ቡድን የሚቀይር ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_009",
+    "prompt_en": "Who is most likely to bring up football in an unrelated conversation?",
+    "prompt_am": "ግንኙነት በሌለው ንግግር ውስጥ እግር ኳስ የሚያነሳ ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_010",
+    "prompt_en": "Who is most likely to cry after a championship loss?",
+    "prompt_am": "ሻምፒዮና ካጣ በኋላ የሚያለቅስ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_011",
+    "prompt_en": "Who is most likely to predict the score wrong every single time?",
+    "prompt_am": "ውጤቱን ሁልጊዜ ስህተት የሚተነብይ ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_012",
+    "prompt_en": "Who is most likely to organize a group watch party?",
+    "prompt_am": "የቡድን መመልከቻ ግብዣ የሚያዘጋጅ ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_football_013",
+    "prompt_en": "Who is most likely to know more about football than actual players?",
+    "prompt_am": "ከተጫዋቾቹ በላይ ስለ እግር ኳስ የሚያውቅ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_014",
+    "prompt_en": "Who is most likely to buy an expensive jersey on impulse?",
+    "prompt_am": "ውድ ማልያ ድንገት የሚገዛ ማን ነው?",
+    "category_id": "football",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_football_015",
+    "prompt_en": "Who is most likely to still be talking about a match a week later?",
+    "prompt_am": "ከአንድ ሳምንት በኋላም ስለ ጨዋታው የሚያወራ ማን ነው?",
+    "category_id": "football",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_001",
+    "prompt_en": "Who is most likely to accidentally like an old photo while stalking someone's profile?",
+    "prompt_am": "የሌላ ሰውን ገጽ እያየ በስህተት አሮጌ ፎቶ የሚወድ ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_random_002",
+    "prompt_en": "Who is most likely to forget their own phone number?",
+    "prompt_am": "የራሱን ስልክ ቁጥር የሚረሳ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_003",
+    "prompt_en": "Who is most likely to win a staring contest?",
+    "prompt_am": "የመተያየት ውድድር የሚያሸንፍ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_004",
+    "prompt_en": "Who is most likely to survive a zombie apocalypse?",
+    "prompt_am": "ከዞምቢ ወረርሽኝ የሚተርፍ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_005",
+    "prompt_en": "Who is most likely to become a millionaire by accident?",
+    "prompt_am": "በአጋጣሚ ሚሊየነር የሚሆን ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_006",
+    "prompt_en": "Who is most likely to talk their way out of a parking ticket?",
+    "prompt_am": "ከፓርኪንግ ቅጣት በንግግር የሚያመልጥ ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_random_007",
+    "prompt_en": "Who is most likely to get lost using GPS?",
+    "prompt_am": "ጂፒኤስ እየተጠቀመ የሚጠፋ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_008",
+    "prompt_en": "Who is most likely to become famous for the wrong reason?",
+    "prompt_am": "በተሳሳተ ምክንያት ታዋቂ የሚሆን ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_random_009",
+    "prompt_en": "Who is most likely to fall asleep standing up?",
+    "prompt_am": "ቆሞ የሚተኛ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_010",
+    "prompt_en": "Who is most likely to win an argument with a robot?",
+    "prompt_am": "ከሮቦት ጋር ክርክር የሚያሸንፍ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_011",
+    "prompt_en": "Who is most likely to start a business that fails in a week?",
+    "prompt_am": "በአንድ ሳምንት ውስጥ የሚከስም ንግድ የሚጀምር ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_random_012",
+    "prompt_en": "Who is most likely to be the last one to find out big news?",
+    "prompt_am": "ትልቅ ዜና የመጨረሻ የሚያውቅ ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_013",
+    "prompt_en": "Who is most likely to trip on flat ground?",
+    "prompt_am": "ጠፍጣፋ መሬት ላይ የሚሰናከል ማን ነው?",
+    "category_id": "random",
+    "content_level": "family",
+    "intensity": "mild",
+    "active": true
+  },
+  {
+    "id": "likely_random_014",
+    "prompt_en": "Who is most likely to accidentally send a text to the wrong person?",
+    "prompt_am": "በስህተት መልእክት ለተሳሳተ ሰው የሚልክ ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
+    "active": true
+  },
+  {
+    "id": "likely_random_015",
+    "prompt_en": "Who is most likely to become a conspiracy theorist?",
+    "prompt_am": "የሴራ ንድፈ ሐሳብ አራማጅ የሚሆን ማን ነው?",
+    "category_id": "random",
+    "content_level": "friends",
+    "intensity": "medium",
     "active": true
   }
 ]
