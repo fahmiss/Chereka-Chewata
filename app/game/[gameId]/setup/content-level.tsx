@@ -1,4 +1,4 @@
-import { router, useLocalSearchParams } from 'expo-router';
+import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
 import { Dialog } from '../../../../src/components/ui/Dialog';
@@ -60,9 +60,12 @@ export default function ContentLevelScreen() {
     isMostLikely,
     isWouldRather,
     isBomb,
+    isQuiz,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
   const [spicyPromptVisible, setSpicyPromptVisible] = useState(false);
+
+  if (isQuiz) return <Redirect href="/game/quiz/setup/review" />;
 
   const lang = settings.contentLanguage;
   const countFor = (contentLevels: ContentLevel[]) =>
