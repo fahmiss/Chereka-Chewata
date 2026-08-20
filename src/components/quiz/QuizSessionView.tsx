@@ -23,7 +23,7 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 
 const ACCENT = color.gameQuiz;
-const STAGES = ['ready', 'question', 'reveal', 'handoff', 'result'] as const;
+const STAGES = ['ready', 'question', 'reveal', 'result'] as const;
 const LETTERS = ['A', 'B', 'C', 'D'] as const;
 
 function leaveQuiz(clear: () => void) {
@@ -98,13 +98,7 @@ function Question({ session }: { session: QuizSession }) {
       footer={revealed ? (
         <View style={styles.footer}>
           <PrimaryButton
-            label={
-              last
-                ? 'See results'
-                : session.setup.playMode === 'pass_play'
-                  ? 'Pass the phone'
-                  : 'Next question'
-            }
+            label={last ? 'See results' : 'Next question'}
             icon={last ? 'trophy' : 'chevronRight'}
             onPress={dispatch.continueAfterReveal}
           />
@@ -255,31 +249,6 @@ function AnswerCard({
   );
 }
 
-function Handoff({ session }: { session: QuizSession }) {
-  const { dispatch, clearSession } = useQuizSession();
-  const enter = useEnterAnimation(0, 20);
-
-  return (
-    <SessionShell
-      eyebrow={`Question ${session.questionIndex + 1} complete`}
-      stage="handoff"
-      stages={STAGES}
-      accent={ACCENT}
-      onEndGame={() => leaveQuiz(clearSession)}
-      footer={<PrimaryButton label="I’m ready" icon="checkCircle" onPress={dispatch.readyNextPlayer} />}
-    >
-      <Animated.View style={[styles.center, enter]}>
-        <MoonFace expression="quiz" size={104} />
-        <View style={styles.handoffIcon}>
-          <Icon name="phone" size={28} color={ACCENT} />
-        </View>
-        <Text style={[type.displayLg, styles.centerTitle]}>Pass the phone</Text>
-        <Text style={[type.body, styles.centerBody]}>Next player, you’re up.</Text>
-      </Animated.View>
-    </SessionShell>
-  );
-}
-
 function Result({ session }: { session: QuizSession }) {
   const { dispatch, clearSession } = useQuizSession();
   const compete = session.setup.playMode === 'compete';
@@ -374,7 +343,6 @@ function SummaryStat({ value, label }: { value: string; label: string }) {
 
 export function QuizSessionView({ session }: { session: QuizSession }) {
   if (session.phase === 'ready') return <Ready session={session} />;
-  if (session.phase === 'handoff') return <Handoff session={session} />;
   if (session.phase === 'result') return <Result session={session} />;
   return <Question session={session} />;
 }
@@ -464,14 +432,6 @@ const styles = StyleSheet.create({
   explanation: {
     color: color.textSecondary,
     lineHeight: 21,
-  },
-  handoffIcon: {
-    width: 56,
-    height: 56,
-    borderRadius: radius.medium,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: alpha(ACCENT, 0.14),
   },
   result: {
     alignItems: 'center',

@@ -12,7 +12,6 @@ import {
   continueAfterReveal,
   createQuizSession,
   endQuiz,
-  readyNextPlayer,
   rematchQuiz,
   selectQuizAnswer,
 } from './machine';
@@ -28,7 +27,6 @@ type Value = {
     begin: () => void;
     selectAnswer: (answerId: string) => void;
     continueAfterReveal: () => void;
-    readyNextPlayer: () => void;
     endSession: () => void;
     rematch: () => QuizSession | null;
   };
@@ -65,7 +63,6 @@ export function QuizSessionProvider({ children }: { children: ReactNode }) {
     begin: () => update(beginQuiz),
     selectAnswer: (answerId: string) => update((value) => selectQuizAnswer(value, answerId)),
     continueAfterReveal: () => update(continueAfterReveal),
-    readyNextPlayer: () => update(readyNextPlayer),
     endSession: () => update(endQuiz),
     rematch: () => {
       if (!session) return null;

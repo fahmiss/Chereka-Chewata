@@ -145,12 +145,7 @@ export function continueAfterReveal(session: QuizSession): QuizSession {
   if (session.phase !== 'answer_reveal') return session;
   const finished = session.questionIndex + 1 >= session.questions.length;
   if (finished) return { ...session, phase: 'result' };
-  if (session.setup.playMode === 'pass_play') return { ...session, phase: 'handoff' };
   return advanceQuestion(session);
-}
-
-export function readyNextPlayer(session: QuizSession): QuizSession {
-  return session.phase === 'handoff' ? advanceQuestion(session) : session;
 }
 
 export function endQuiz(session: QuizSession): QuizSession {

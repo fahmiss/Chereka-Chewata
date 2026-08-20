@@ -58,7 +58,7 @@ export type QuizAnswer = {
   correct: boolean;
 };
 
-export type QuizPhase = 'ready' | 'question' | 'answer_reveal' | 'handoff' | 'result';
+export type QuizPhase = 'ready' | 'question' | 'answer_reveal' | 'result';
 
 export type QuizSession = {
   sessionId: string;
