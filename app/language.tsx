@@ -1,6 +1,7 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MoonFace } from '../src/components/brand/MoonFace';
 import { OptionRow } from '../src/components/ui/Selectable';
 import { PrimaryButton } from '../src/components/ui/PrimaryButton';
@@ -37,81 +38,98 @@ export default function LanguageGateScreen() {
 
   return (
     <Screen accent={color.brandPrimary}>
-      <View style={styles.content}>
-        <View style={styles.brand}>
-          <MoonFace expression="ready" size={88} />
-          <Text style={styles.wordmark}>CHEREKA</Text>
-          <Text style={styles.amharic}>{AMHARIC}</Text>
-          <Text style={[type.body, styles.subtitle, uiFont ? { fontFamily: uiFont } : null]}>
-            {t('language.title')}
-          </Text>
-        </View>
+      <View style={styles.root}>
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={styles.brand}>
+            <MoonFace expression="ready" size={88} />
+            <Text style={styles.wordmark}>CHEREKA</Text>
+            <Text style={styles.amharic}>{AMHARIC}</Text>
+            <Text style={[type.body, styles.subtitle, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('language.title')}
+            </Text>
+          </View>
 
-        <View style={styles.section}>
-          <Text style={[type.eyebrow, styles.label, uiFont ? { fontFamily: uiFont } : null]}>
-            {t('language.interface')}
-          </Text>
-          <OptionRow
-            title={t('language.english')}
-            description={t('language.interfaceEn')}
-            selected={interfaceLanguage === 'en'}
-            onPress={() => setInterfaceLanguage('en')}
-            accent={color.brandPrimary}
+          <View style={styles.section}>
+            <Text style={[type.eyebrow, styles.label, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('language.interface')}
+            </Text>
+            <OptionRow
+              title={t('language.english')}
+              description={t('language.interfaceEn')}
+              selected={interfaceLanguage === 'en'}
+              onPress={() => setInterfaceLanguage('en')}
+              accent={color.brandPrimary}
+            />
+            <OptionRow
+              title={t('language.amharic')}
+              description={`${AMHARIC} — ${t('language.interfaceAm')}`}
+              selected={interfaceLanguage === 'am'}
+              onPress={() => setInterfaceLanguage('am')}
+              accent={color.brandPrimary}
+            />
+          </View>
+
+          <View style={styles.section}>
+            <Text style={[type.eyebrow, styles.label, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('language.content')}
+            </Text>
+            <OptionRow
+              title={t('language.english')}
+              description={t('language.contentEn')}
+              selected={contentLanguage === 'en'}
+              onPress={() => setContentLanguage('en')}
+              accent={color.gameImpostor}
+            />
+            <OptionRow
+              title={t('language.amharic')}
+              description={t('language.contentAm')}
+              selected={contentLanguage === 'am'}
+              onPress={() => setContentLanguage('am')}
+              accent={color.gameImpostor}
+            />
+            <OptionRow
+              title={t('language.mixed')}
+              description={t('language.contentMixed')}
+              selected={contentLanguage === 'mixed'}
+              onPress={() => setContentLanguage('mixed')}
+              accent={color.gameImpostor}
+            />
+          </View>
+        </ScrollView>
+
+        <View style={styles.footer}>
+          <LinearGradient
+            colors={['transparent', color.void]}
+            style={styles.footerScrim}
+            pointerEvents="none"
           />
-          <OptionRow
-            title={t('language.amharic')}
-            description={`${AMHARIC} — ${t('language.interfaceAm')}`}
-            selected={interfaceLanguage === 'am'}
-            onPress={() => setInterfaceLanguage('am')}
-            accent={color.brandPrimary}
+          <PrimaryButton
+            label={t('common.continue')}
+            icon="chevronRight"
+            onPress={() => void onContinue()}
           />
         </View>
-
-        <View style={styles.section}>
-          <Text style={[type.eyebrow, styles.label, uiFont ? { fontFamily: uiFont } : null]}>
-            {t('language.content')}
-          </Text>
-          <OptionRow
-            title={t('language.english')}
-            description={t('language.contentEn')}
-            selected={contentLanguage === 'en'}
-            onPress={() => setContentLanguage('en')}
-            accent={color.gameImpostor}
-          />
-          <OptionRow
-            title={t('language.amharic')}
-            description={t('language.contentAm')}
-            selected={contentLanguage === 'am'}
-            onPress={() => setContentLanguage('am')}
-            accent={color.gameImpostor}
-          />
-          <OptionRow
-            title={t('language.mixed')}
-            description={t('language.contentMixed')}
-            selected={contentLanguage === 'mixed'}
-            onPress={() => setContentLanguage('mixed')}
-            accent={color.gameImpostor}
-          />
-        </View>
-
-        <PrimaryButton
-          label={t('common.continue')}
-          icon="chevronRight"
-          onPress={() => void onContinue()}
-        />
       </View>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  content: {
+  root: {
     flex: 1,
     paddingHorizontal: space[6],
+  },
+  scroll: {
+    flex: 1,
+  },
+  scrollContent: {
     paddingTop: space[8],
     paddingBottom: space[6],
     gap: space[6],
-    justifyContent: 'center',
   },
   brand: {
     alignItems: 'center',
@@ -138,5 +156,16 @@ const styles = StyleSheet.create({
   },
   label: {
     color: color.textMuted,
+  },
+  footer: {
+    paddingTop: space[3],
+    paddingBottom: space[3],
+  },
+  footerScrim: {
+    position: 'absolute',
+    left: -space[6],
+    right: -space[6],
+    bottom: '100%',
+    height: space[8],
   },
 });
