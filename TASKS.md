@@ -4,18 +4,25 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-08-15._
+_Last updated: 2026-10-15._
 
 ---
 
 ## Open
+
+### Native-speaker Amharic review (2026-10-15)
+Every deck's Amharic is best-effort, not native-reviewed — including the 164
+taxonomy-fill items (2026-08-15), the 150 new Quiz questions, and the 82 new
+Bomb prompts (2026-10-15). Worth one pass by a native speaker before a store
+launch; Quiz answers and explanations are the most fact-sensitive.
 
 ### Shared UI kit extraction (2026-08-04)
 Primary/secondary buttons and setup chrome exist. Extract player chips, toggle,
 and secret-card shell into `src/components/ui` as other games land.
 
 ### Settings leftovers (2026-08-04)
-- [ ] Sound *effects* (cue audio) — toggle is wired and persisted; no audio yet
+- [x] Sound *effects* (cue audio) — shipped as cross-game cues, 2026-08-07
+      (Impostor intentionally silent; see Shipped)
 - [x] Privacy / terms placeholders — in-app copy dialogs (2026-08-06)
 
 ### Who’s the Liar? polish after first playtest (2026-08-04)
@@ -49,6 +56,32 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Quiz deck to 210, Bomb deck to 136 with first Spicy set (2026-10-15)
+
+- Quiz: 60 → 210 questions, 15 added per category (5 easy / 5 medium / 5 hard),
+  so each category now has 21 and each difficulty 70. A 30-question Compete
+  game now uses about 1/7 of the deck instead of half. New questions stick to
+  durable facts (no current champions or records) and keep Ethiopian content
+  spread across Sports, Football, Food, Entertainment, History and Nature as
+  well as Ethiopia & Culture.
+- Bomb: 54 → 136 prompts (family 73 · friends 43 · spicy 20). Spicy was
+  selectable before but had zero cards; it now has a dating / exes / couples
+  set in the same tone as the other decks' Spicy cards. Animals & Nature
+  deliberately has no Spicy prompts.
+- Removed the untracked `scripts/_am_export/` one-off scripts after confirming
+  all 180 Most Likely and 170 Would You Rather translations already match the
+  live decks.
+
+### Quiz + onboarding fixes (2026-08-20)
+
+- Quiz setup skips the shared Family / Friends / Spicy step and goes straight
+  to review — Quiz uses knowledge difficulty instead.
+- Quiz Pass & Play no longer shows a "Pass the phone" screen between
+  questions; nothing is secret, so it advanced like Compete mode already did.
+  The dead handoff phase and component were removed.
+- Language gate: the option list now scrolls with Continue pinned in a footer,
+  fixing an unreachable Continue button on shorter screens.
 
 ### Quiz seventh playable game (2026-08-15)
 

@@ -17,9 +17,9 @@ Bundled decks live under [`content/`](content/). Loaders in [`src/content/`](src
 | Would You Rather categories | `content/categories/would_you_rather.json` | 10 with `name_am` |
 | Would You Rather dilemmas | `content/would_you_rather/dilemmas.en.json` | 218 with `option_a_am` / `option_b_am` |
 | Bomb categories | `content/categories/bomb.json` | 9 with `name_am` |
-| Bomb category prompts | `content/bomb/cards.json` | 54 with `prompt_am` |
+| Bomb category prompts | `content/bomb/cards.json` | 136 with `prompt_am` |
 | Quiz categories | `content/categories/quiz.json` | 10 knowledge categories with `name_am` |
-| Quiz questions | `content/quiz/questions.json` | 60 bilingual four-choice questions |
+| Quiz questions | `content/quiz/questions.json` | 210 bilingual four-choice questions |
 
 ## Category taxonomy
 

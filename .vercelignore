@@ -1,1 +1,4 @@
-scripts/_am_export/
+ios/
+android/
+dist/
+.expo/

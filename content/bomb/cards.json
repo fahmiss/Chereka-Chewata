@@ -48,6 +48,103 @@
     "active": true
   },
   {
+    "id": "bomb_eth_007",
+    "prompt_en": "Ethiopian holidays",
+    "prompt_am": "የኢትዮጵያ በዓላት",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_008",
+    "prompt_en": "Ethiopian rivers and lakes",
+    "prompt_am": "የኢትዮጵያ ወንዞች እና ሐይቆች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_009",
+    "prompt_en": "Things at a coffee ceremony",
+    "prompt_am": "በቡና ሥነ ሥርዓት ላይ ያሉ ነገሮች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_010",
+    "prompt_en": "Ethiopian traditional dances",
+    "prompt_am": "የኢትዮጵያ ባህላዊ ጭፈራዎች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_011",
+    "prompt_en": "Things Ethiopian moms always say",
+    "prompt_am": "የኢትዮጵያ እናቶች ሁልጊዜ የሚሏቸው ነገሮች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "tags": [
+      "Family"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_eth_012",
+    "prompt_en": "Things you see on an Addis taxi ride",
+    "prompt_am": "በአዲስ አበባ ታክሲ ጉዞ ላይ የምታዩዋቸው ነገሮች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "tags": [
+      "Addis"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_eth_013",
+    "prompt_en": "Amharic slang words",
+    "prompt_am": "የአማርኛ የአራዳ ቃላት",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_014",
+    "prompt_en": "Questions relatives ask about your love life",
+    "prompt_am": "ዘመዶች ስለ ፍቅር ሕይወታችሁ የሚጠይቋቸው ጥያቄዎች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Family",
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_eth_015",
+    "prompt_en": "Ethiopian love songs",
+    "prompt_am": "የኢትዮጵያ የፍቅር ዘፈኖች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_eth_016",
+    "prompt_en": "Things you hide from your parents about dating",
+    "prompt_am": "ስለ ፍቅር ግንኙነት ከወላጆቻችሁ የምትደብቋቸው ነገሮች",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Family",
+      "Dating"
+    ],
+    "active": true
+  },
+  {
     "id": "bomb_food_001",
     "prompt_en": "Fruits",
     "prompt_am": "ፍራፍሬዎች",
@@ -93,6 +190,95 @@
     "prompt_am": "በንጽህና ለመብላት አስቸጋሪ የሆኑ ምግቦች",
     "category_id": "food_and_drink",
     "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_food_007",
+    "prompt_en": "Pizza toppings",
+    "prompt_am": "የፒዛ ላይ ማጣፈጫዎች",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_food_008",
+    "prompt_en": "Spices",
+    "prompt_am": "ቅመሞች",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_food_009",
+    "prompt_en": "Hot drinks",
+    "prompt_am": "ትኩስ መጠጦች",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_food_010",
+    "prompt_en": "Desserts",
+    "prompt_am": "ጣፋጭ ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_food_011",
+    "prompt_en": "Street foods",
+    "prompt_am": "የመንገድ ዳር ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_food_012",
+    "prompt_en": "Foods you would never eat",
+    "prompt_am": "በፍጹም የማትበሏቸው ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_food_013",
+    "prompt_en": "Things people order at a café",
+    "prompt_am": "ሰዎች በካፌ የሚያዝዟቸው ነገሮች",
+    "category_id": "food_and_drink",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_food_014",
+    "prompt_en": "Foods for a romantic dinner",
+    "prompt_am": "ለፍቅር እራት የሚሆኑ ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_food_015",
+    "prompt_en": "Foods to avoid on a first date",
+    "prompt_am": "በመጀመሪያ ቀጠሮ መራቅ ያለባችሁ ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_food_016",
+    "prompt_en": "Dishes you would cook to impress a crush",
+    "prompt_am": "የምትወዱትን ሰው ለማስደመም የምታበስሏቸው ምግቦች",
+    "category_id": "food_and_drink",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
     "active": true
   },
   {
@@ -144,6 +330,98 @@
     "active": true
   },
   {
+    "id": "bomb_place_007",
+    "prompt_en": "Things you pack for a trip",
+    "prompt_am": "ለጉዞ የምትይዟቸው ነገሮች",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_place_008",
+    "prompt_en": "Cities in Europe",
+    "prompt_am": "የአውሮፓ ከተሞች",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_place_009",
+    "prompt_en": "Things at an airport",
+    "prompt_am": "በአውሮፕላን ማረፊያ ያሉ ነገሮች",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_place_010",
+    "prompt_en": "Famous landmarks",
+    "prompt_am": "ታዋቂ የመለያ ምልክት ቦታዎች",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_place_011",
+    "prompt_en": "Places for a group day out",
+    "prompt_am": "ለቡድን መዝናኛ ቀን የሚሆኑ ቦታዎች",
+    "category_id": "places_and_travel",
+    "content_level": "friends",
+    "tags": [
+      "Friends"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_place_012",
+    "prompt_en": "Worst places to get lost",
+    "prompt_am": "ለመጥፋት በጣም መጥፎ ቦታዎች",
+    "category_id": "places_and_travel",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_place_013",
+    "prompt_en": "Things that go wrong on holiday",
+    "prompt_am": "በእረፍት ጉዞ ላይ የሚበላሹ ነገሮች",
+    "category_id": "places_and_travel",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_place_014",
+    "prompt_en": "First-date spots",
+    "prompt_am": "ለመጀመሪያ ቀጠሮ የሚሆኑ ቦታዎች",
+    "category_id": "places_and_travel",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_place_015",
+    "prompt_en": "Honeymoon destinations",
+    "prompt_am": "የጫጉላ ሽርሽር መዳረሻዎች",
+    "category_id": "places_and_travel",
+    "content_level": "spicy",
+    "tags": [
+      "Couples"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_place_016",
+    "prompt_en": "Places you might bump into your ex",
+    "prompt_am": "ከቀድሞ ፍቅረኛችሁ ጋር ልትገጣጠሙ የምትችሉባቸው ቦታዎች",
+    "category_id": "places_and_travel",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
     "id": "bomb_ent_001",
     "prompt_en": "Movie characters",
     "prompt_am": "የፊልም ገጸ ባሕርያት",
@@ -189,6 +467,95 @@
     "prompt_am": "ለእራት የምትጋብዟቸው ታዋቂ ሰዎች",
     "category_id": "entertainment_pop_culture",
     "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_007",
+    "prompt_en": "Cartoon characters",
+    "prompt_am": "የካርቱን ገጸ ባሕርያት",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_008",
+    "prompt_en": "Disney movies",
+    "prompt_am": "የዲዝኒ ፊልሞች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_009",
+    "prompt_en": "Musical instruments",
+    "prompt_am": "የሙዚቃ መሣሪያዎች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_010",
+    "prompt_en": "Video games",
+    "prompt_am": "የቪዲዮ ጨዋታዎች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_011",
+    "prompt_en": "TV shows worth binge-watching",
+    "prompt_am": "በተከታታይ ሊታዩ የሚገባቸው የቴሌቪዥን ፕሮግራሞች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_012",
+    "prompt_en": "Songs that fill the dance floor",
+    "prompt_am": "የዳንስ መድረኩን የሚሞሉ ዘፈኖች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_013",
+    "prompt_en": "Famous movie quotes",
+    "prompt_am": "ታዋቂ የፊልም ንግግሮች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_ent_014",
+    "prompt_en": "Love songs",
+    "prompt_am": "የፍቅር ዘፈኖች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_ent_015",
+    "prompt_en": "Romantic movies",
+    "prompt_am": "የፍቅር ፊልሞች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_ent_016",
+    "prompt_en": "Celebrity couples",
+    "prompt_am": "ታዋቂ ጥንዶች",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "spicy",
+    "tags": [
+      "Couples"
+    ],
     "active": true
   },
   {
@@ -240,6 +607,76 @@
     "active": true
   },
   {
+    "id": "bomb_sport_007",
+    "prompt_en": "Sports played with a ball",
+    "prompt_am": "በኳስ የሚጫወቱ ስፖርቶች",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_008",
+    "prompt_en": "Ethiopian athletes",
+    "prompt_am": "ኢትዮጵያውያን አትሌቶች",
+    "category_id": "sports",
+    "content_level": "family",
+    "tags": [
+      "Ethiopian"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_sport_009",
+    "prompt_en": "Water sports",
+    "prompt_am": "የውሃ ስፖርቶች",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_010",
+    "prompt_en": "Sports equipment",
+    "prompt_am": "የስፖርት መሣሪያዎች",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_011",
+    "prompt_en": "Sports you would be terrible at",
+    "prompt_am": "በጣም የምትደክሙባቸው ስፖርቶች",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_012",
+    "prompt_en": "Things people say after losing",
+    "prompt_am": "ሰዎች ከተሸነፉ በኋላ የሚሏቸው ነገሮች",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_013",
+    "prompt_en": "Activities people argue are not real sports",
+    "prompt_am": "ሰዎች «ስፖርት አይደለም» ብለው የሚከራከሩባቸው እንቅስቃሴዎች",
+    "category_id": "sports",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_014",
+    "prompt_en": "Sports to try on a date",
+    "prompt_am": "በቀጠሮ ላይ የሚሞከሩ ስፖርቶች",
+    "category_id": "sports",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
     "id": "bomb_day_001",
     "prompt_en": "Car brands",
     "prompt_am": "የመኪና ብራንዶች",
@@ -288,6 +725,106 @@
     "active": true
   },
   {
+    "id": "bomb_day_007",
+    "prompt_en": "Things in a bathroom",
+    "prompt_am": "በመታጠቢያ ቤት ውስጥ ያሉ ነገሮች",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_008",
+    "prompt_en": "Household chores",
+    "prompt_am": "የቤት ውስጥ ሥራዎች",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_009",
+    "prompt_en": "Things that are round",
+    "prompt_am": "ክብ የሆኑ ነገሮች",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_010",
+    "prompt_en": "Apps on your phone",
+    "prompt_am": "በስልካችሁ ላይ ያሉ መተግበሪያዎች",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_011",
+    "prompt_en": "Things people do when they are bored",
+    "prompt_am": "ሰዎች ሲሰለቻቸው የሚያደርጓቸው ነገሮች",
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_day_012",
+    "prompt_en": "Things you lose all the time",
+    "prompt_am": "ሁልጊዜ የምታጧቸው ነገሮች",
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_day_013",
+    "prompt_en": "Small lies people tell every day",
+    "prompt_am": "ሰዎች በየቀኑ የሚናገሯቸው ትናንሽ ውሸቶች",
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_day_014",
+    "prompt_en": "Pet names for a partner",
+    "prompt_am": "ለፍቅረኛ የሚሰጡ የፍቅር ስሞች",
+    "category_id": "everyday_life",
+    "content_level": "spicy",
+    "tags": [
+      "Couples"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_day_015",
+    "prompt_en": "Red flags on a first date",
+    "prompt_am": "በመጀመሪያ ቀጠሮ ላይ የሚታዩ የማስጠንቀቂያ ምልክቶች",
+    "category_id": "everyday_life",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_day_016",
+    "prompt_en": "Reasons couples break up",
+    "prompt_am": "ጥንዶች የሚለያዩባቸው ምክንያቶች",
+    "category_id": "everyday_life",
+    "content_level": "spicy",
+    "tags": [
+      "Couples"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_day_017",
+    "prompt_en": "Things couples argue about",
+    "prompt_am": "ጥንዶች የሚጨቃጨቁባቸው ነገሮች",
+    "category_id": "everyday_life",
+    "content_level": "spicy",
+    "tags": [
+      "Couples"
+    ],
+    "active": true
+  },
+  {
     "id": "bomb_nat_001",
     "prompt_en": "Animals that fly",
     "prompt_am": "የሚበሩ እንስሳት",
@@ -331,6 +868,71 @@
     "id": "bomb_nat_006",
     "prompt_en": "Things that make people scream",
     "prompt_am": "ሰዎችን የሚያስጮኹ ነገሮች",
+    "category_id": "animals_and_nature",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_nat_007",
+    "prompt_en": "Animals found in Ethiopia",
+    "prompt_am": "በኢትዮጵያ የሚገኙ እንስሳት",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "tags": [
+      "Ethiopian"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_nat_008",
+    "prompt_en": "Things that grow on trees",
+    "prompt_am": "በዛፍ ላይ የሚበቅሉ ነገሮች",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nat_009",
+    "prompt_en": "Animals that live in water",
+    "prompt_am": "በውሃ ውስጥ የሚኖሩ እንስሳት",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nat_010",
+    "prompt_en": "Insects",
+    "prompt_am": "ነፍሳት",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nat_011",
+    "prompt_en": "Animal sounds you can imitate",
+    "prompt_am": "ልትኮርጇቸው የምትችሉ የእንስሳት ድምፆች",
+    "category_id": "animals_and_nature",
+    "content_level": "friends",
+    "tags": [
+      "Funny"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_nat_012",
+    "prompt_en": "Animals that would be terrible roommates",
+    "prompt_am": "መጥፎ አብሮ ነዋሪ የሚሆኑ እንስሳት",
+    "category_id": "animals_and_nature",
+    "content_level": "friends",
+    "tags": [
+      "Funny"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_nat_013",
+    "prompt_en": "Things you see on a camping trip",
+    "prompt_am": "በካምፕ ጉዞ ላይ የምታዩዋቸው ነገሮች",
     "category_id": "animals_and_nature",
     "content_level": "friends",
     "active": true
@@ -384,6 +986,88 @@
     "active": true
   },
   {
+    "id": "bomb_work_007",
+    "prompt_en": "Things in a school bag",
+    "prompt_am": "በትምህርት ቤት ቦርሳ ውስጥ ያሉ ነገሮች",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_work_008",
+    "prompt_en": "Things in a hospital",
+    "prompt_am": "በሆስፒታል ውስጥ ያሉ ነገሮች",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_work_009",
+    "prompt_en": "Tools",
+    "prompt_am": "መሣሪያዎች",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_work_010",
+    "prompt_en": "Things teachers say",
+    "prompt_am": "መምህራን የሚሏቸው ነገሮች",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_work_011",
+    "prompt_en": "Excuses for not doing homework",
+    "prompt_am": "የቤት ሥራ ላለመሥራት የሚቀርቡ ሰበቦች",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_work_012",
+    "prompt_en": "Things people do on their phone at work",
+    "prompt_am": "ሰዎች በሥራ ቦታ በስልካቸው የሚያደርጓቸው ነገሮች",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "tags": [
+      "Work"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_work_013",
+    "prompt_en": "Worst jobs to have",
+    "prompt_am": "በጣም መጥፎ ሥራዎች",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_work_014",
+    "prompt_en": "Signs of an office crush",
+    "prompt_am": "የቢሮ ፍቅር ምልክቶች",
+    "category_id": "school_and_work",
+    "content_level": "spicy",
+    "tags": [
+      "Work",
+      "Dating"
+    ],
+    "active": true
+  },
+  {
+    "id": "bomb_work_015",
+    "prompt_en": "Ways to get a classmate's attention",
+    "prompt_am": "የክፍል ጓደኛን ትኩረት ለመሳብ የሚደረጉ ነገሮች",
+    "category_id": "school_and_work",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
+    "active": true
+  },
+  {
     "id": "bomb_football_001",
     "prompt_en": "Football clubs",
     "prompt_am": "የእግር ኳስ ክለቦች",
@@ -429,6 +1113,65 @@
     "prompt_am": "የእግር ኳስ ብሔራዊ ቡድኖች",
     "category_id": "football",
     "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_007",
+    "prompt_en": "Football terms",
+    "prompt_am": "የእግር ኳስ ቃላት",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_008",
+    "prompt_en": "African footballers",
+    "prompt_am": "አፍሪካውያን የእግር ኳስ ተጫዋቾች",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_009",
+    "prompt_en": "Football trophies",
+    "prompt_am": "የእግር ኳስ ዋንጫዎች",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_010",
+    "prompt_en": "Excuses fans make when their team loses",
+    "prompt_am": "ቡድናቸው ሲሸነፍ ደጋፊዎች የሚያቀርቧቸው ሰበቦች",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_football_011",
+    "prompt_en": "Goal celebrations",
+    "prompt_am": "የግብ ደስታ አገላለጾች",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_football_012",
+    "prompt_en": "Things fans shout at the referee",
+    "prompt_am": "ደጋፊዎች በዳኛው ላይ የሚጮኹባቸው ነገሮች",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "bomb_football_013",
+    "prompt_en": "Matches you would cancel a date to watch",
+    "prompt_am": "ቀጠሮ ሰርዛችሁ የምታዩዋቸው ጨዋታዎች",
+    "category_id": "football",
+    "content_level": "spicy",
+    "tags": [
+      "Dating"
+    ],
     "active": true
   }
 ]

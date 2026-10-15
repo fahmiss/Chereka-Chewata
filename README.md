@@ -68,8 +68,8 @@ The current bundled library includes bilingual offline content for all seven gam
 | Taboo | 370 cards |
 | Who’s Most Likely To | 225 prompts |
 | Would You Rather | 218 dilemmas |
-| Who’s Got the Bomb? | 54 categories |
-| Quiz | 60 questions |
+| Who’s Got the Bomb? | 136 categories |
+| Quiz | 210 questions |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.
