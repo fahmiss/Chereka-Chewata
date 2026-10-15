@@ -57,6 +57,28 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 
 ## Shipped
 
+### Tighter Liar, Most Likely, and Bomb loops (2026-10-15)
+
+- Who’s the Liar drops the empty discussion screen. The speaking order stays on
+  the table, and the next action is Choose the Liar (or Start private voting).
+- Who’s Most Likely To keeps the prompt on screen through the 3-2-1-POINT
+  countdown.
+- Who’s Got the Bomb no longer pauses the fuse. The deadline is wall-clock, so
+  backgrounding the app cannot stall the explosion.
+
+### English-only public build + session/home P1 pass (2026-10-15)
+
+- Hid the first-launch and Settings language selectors behind product feature
+  flags. Existing Amharic interface strings and bilingual deck fields remain in
+  source; the public build now consistently forces English until native review.
+- Added one shared in-game menu across all seven games with rules, sound,
+  vibration, restart-round confirmation, return-to-game, and guarded end-game actions.
+- Added a Home **Play again** shortcut that remembers the last-started game and
+  returns to its preserved quick setup.
+- Split game session views into lazy web chunks, trimmed unused font weights,
+  resized the Bomb result artwork, and halved the long fuse WAV sample rate.
+  The static web export fell from roughly 14 MB to 8.8 MB.
+
 ### Quiz deck to 210, Bomb deck to 136 with first Spicy set (2026-10-15)
 
 - Quiz: 60 → 210 questions, 15 added per category (5 easy / 5 medium / 5 hard),

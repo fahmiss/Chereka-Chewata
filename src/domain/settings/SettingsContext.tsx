@@ -9,6 +9,7 @@ import {
 } from 'react';
 import { clearContentHistory } from '../../storage/contentHistory';
 import { loadSettings, saveSettings } from '../../storage/settings';
+import { featureFlags } from '../../config/features';
 import { setSettingsSnapshot } from './snapshot';
 import {
   defaultSettings,
@@ -40,8 +41,13 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     let alive = true;
     void loadSettings().then((loaded) => {
       if (!alive) return;
-      setSettings(loaded);
-      setSettingsSnapshot(loaded);
+      const effective = {
+        ...loaded,
+        interfaceLanguage: featureFlags.amharicInterface ? loaded.interfaceLanguage : 'en',
+        contentLanguage: featureFlags.amharicContent ? loaded.contentLanguage : 'en',
+      } satisfies AppSettings;
+      setSettings(effective);
+      setSettingsSnapshot(effective);
       setReady(true);
     });
     return () => {
@@ -50,9 +56,14 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const commit = useCallback((next: AppSettings) => {
-    setSettings(next);
-    setSettingsSnapshot(next);
-    void saveSettings(next);
+    const effective = {
+      ...next,
+      interfaceLanguage: featureFlags.amharicInterface ? next.interfaceLanguage : 'en',
+      contentLanguage: featureFlags.amharicContent ? next.contentLanguage : 'en',
+    } satisfies AppSettings;
+    setSettings(effective);
+    setSettingsSnapshot(effective);
+    void saveSettings(effective);
   }, []);
 
   const value = useMemo<SettingsContextValue>(

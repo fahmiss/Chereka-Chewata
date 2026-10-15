@@ -140,13 +140,8 @@ export function hideRevealAndContinue(session: LiarSession): LiarSession {
   return { ...session, phase: 'handoff', revealIndex: nextIndex };
 }
 
-export function startDiscussion(session: LiarSession): LiarSession {
-  if (session.phase !== 'answer_order') return session;
-  return { ...session, phase: 'discussion' };
-}
-
 export function startVoting(session: LiarSession): LiarSession {
-  if (session.phase !== 'discussion') return session;
+  if (session.phase !== 'answer_order') return session;
 
   if (session.setup.votingMode === 'group') {
     return {

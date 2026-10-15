@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { useAudioPlayer } from 'expo-audio';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useRef } from 'react';
-import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Animated, AppState, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { localizeText } from '../../content/localize';
 import { currentBombCard, getBombPlayerName } from '../../domain/bomb/machine';
 import { useBombSession } from '../../domain/bomb/SessionContext';
@@ -222,9 +222,28 @@ function PlayingPhase({ session }: { session: BombSession }) {
 
   useEffect(() => {
     if (!session.fuseEndsAt) return;
-    const delay = Math.max(0, session.fuseEndsAt - Date.now());
-    const timer = setTimeout(dispatch.explodeBomb, delay);
-    return () => clearTimeout(timer);
+    const endsAt = session.fuseEndsAt;
+
+    const arm = () => {
+      const delay = endsAt - Date.now();
+      if (delay <= 0) {
+        dispatch.explodeBomb();
+        return undefined;
+      }
+      return setTimeout(dispatch.explodeBomb, delay);
+    };
+
+    let timer = arm();
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state !== 'active') return;
+      if (timer) clearTimeout(timer);
+      timer = arm();
+    });
+
+    return () => {
+      if (timer) clearTimeout(timer);
+      subscription.remove();
+    };
   }, [session.fuseEndsAt, dispatch]);
 
   return (
@@ -234,9 +253,6 @@ function PlayingPhase({ session }: { session: BombSession }) {
       stages={STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
-      footer={
-        <SecondaryButton label="Pause fuse" icon="clock" onPress={dispatch.pauseBomb} />
-      }
     >
       <Animated.View style={[styles.playingBody, enter]}>
         <View style={styles.fuseHero}>
@@ -271,32 +287,6 @@ function PlayingPhase({ session }: { session: BombSession }) {
         </View>
         <Text style={[type.label, styles.starterLabel]}>STARTED WITH {starter.toUpperCase()} · NO REPEATS</Text>
       </Animated.View>
-    </SessionShell>
-  );
-}
-
-function PausedPhase(_: { session: BombSession }) {
-  const { dispatch, clearSession } = useBombSession();
-
-  return (
-    <SessionShell
-      eyebrow="Paused"
-      title="Fuse paused"
-      subtitle="Keep the phone where it is."
-      stage="pass"
-      stages={STAGES}
-      accent={ACCENT}
-      onEndGame={() => endGame(clearSession)}
-      footer={
-        <PrimaryButton label="Resume fuse" icon="chevronRight" onPress={dispatch.resumeBomb} />
-      }
-    >
-      <View style={styles.centeredBody}>
-        <MoonFace expression="timer" size={104} />
-        <Text style={[type.body, styles.passHint]}>
-          Resume when everyone is ready. The hidden timer continues from where it stopped.
-        </Text>
-      </View>
     </SessionShell>
   );
 }
@@ -381,7 +371,6 @@ export function BombSessionView({ session }: { session: BombSession }) {
   switch (session.phase) {
     case 'ready': return <ReadyPhase session={session} />;
     case 'playing': return <PlayingPhase session={session} />;
-    case 'paused': return <PausedPhase session={session} />;
     case 'exploded': return <ExplodedPhase session={session} />;
   }
 }
@@ -414,5 +403,4 @@ const styles = StyleSheet.create({
   boomText: { color: color.dangerUrgency, fontFamily: family.display.black, fontSize: 48, lineHeight: 52, letterSpacing: 2.4, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 3 }, textShadowRadius: 12 },
   explosionCopy: { alignItems: 'center', gap: space[2] },
   explosionTitle: { color: color.textPrimary, textAlign: 'center' },
-  centeredBody: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: space[4] },
 });

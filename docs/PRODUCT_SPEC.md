@@ -108,7 +108,7 @@ Hard / Mixed) and does not expose maturity levels in setup.
 
 Every gameplay screen should provide:
 
-- Pause when a timer is active
+- Pause when a timer is active, except Who’s Got the Bomb, whose hidden fuse never pauses
 - Skip card
 - Report card
 - End game
@@ -469,45 +469,36 @@ Each player privately views their question using the same pass-the-phone protect
 
 This is important: the Liar should infer that they may have a different question, but should not know with certainty whether their question is the common one.
 
-### Step 4: Select answer order
+### Step 4: One shared answer screen
 
-The app randomly chooses the first player.
+After the last question is hidden, show **one screen** the phone can stay on: who starts, the full speaking order, and the answer rules. Do not step through each player, and do not add a separate discussion screen.
 
 The Liar may answer first.
 
-### Step 5: Answer aloud
+### Step 5: Answer and discuss
 
-Every player gives one concise answer.
+The group answers aloud in the order on screen, then argues while that same screen stays up. When they are ready, they advance straight to the accusation.
 
 Rules:
 
 - Do not reveal or paraphrase the full question.
 - Players may explain briefly, but long explanations should be discouraged.
 - Players should not intentionally give a meaningless answer solely to hide.
-
-The phone displays the current player’s name and a Next button.
-
-### Step 6: Optional discussion
-
-After all answers:
-
-- Players may discuss inconsistencies.
 - Players may ask each person one brief follow-up question.
 - No one may ask, “What exact question did you receive?”
 
-### Step 7: Private vote
+### Step 6: Accuse
 
-Each player votes for one other player using the shared phone.
+**Default: group decides.** Someone taps the player the table agreed on.
 
-- No self-voting.
-- The Liar also votes.
+**Optional: private pass-the-phone voting.** Each player votes for one other player. No self-voting. The Liar also votes.
 
-### Step 8: Resolve ties
+### Step 7: Resolve ties
 
 - First tie: runoff among tied players.
 - Second tie: the Liar wins.
 
-### Step 9: Reveal both questions and the Liar
+### Step 8: Reveal both questions and the Liar
 
 Show:
 
@@ -847,7 +838,7 @@ The reader says or taps a countdown:
 - One
 - Point
 
-A short sound or vibration may mark the reveal.
+The prompt stays on screen through the countdown so the group does not have to remember it. A short sound or vibration may mark the reveal.
 
 ### Step 3: Vote simultaneously
 
@@ -1725,13 +1716,12 @@ Recommended active-game sequence:
 
 1. Setup
 2. Private question reveal
-3. Answer-order announcement
-4. Group answer/discussion screen
-5. Private voting
-6. Tie runoff, when needed
-7. Liar reveal
-8. Round result
-9. Rematch
+3. Shared answer screen: who starts, the speaking order, and the accusation action
+4. Accuse (group tap by default, or optional private voting)
+5. Tie runoff, when needed
+6. Liar reveal
+7. Round result
+8. Rematch
 
 ### Private question reveal
 
@@ -1739,23 +1729,16 @@ Recommended active-game sequence:
 - The Liar sees the alternate question.
 - The app should not visually distinguish the two card types.
 
-### Answer-order screen
+### Shared answer screen
 
 Show:
 
 - First player
 - Full answer order
-- Optional answer timer
+- The rule not to paraphrase the question or ask what it was
+- **Choose the Liar**, or **Start private voting** when that mode is on
 
-### Discussion screen
-
-Show only public information:
-
-- Whose turn it is to answer
-- Next answer button
-- Start voting
-
-Do not display either question during public discussion unless the rules specifically call for revealing them after voting.
+The phone stays on the table while people answer and argue. Do not display either question on this screen.
 
 ### Liar reveal and result
 
@@ -1868,7 +1851,7 @@ Use a clear countdown:
 - 1
 - Point
 
-The phone does not need to detect or record physical votes.
+The phone does not need to detect or record physical votes. Keep the prompt visible above the countdown.
 
 ### Discussion state
 
@@ -2069,13 +2052,12 @@ Game-specific gameplay screens:
 21. Impostor accusation reveal
 22. Impostor final guess
 23. Who’s the Liar answer order
-24. Who’s the Liar discussion
-25. Who’s the Liar voting
-26. Taboo round-ready
-27. Taboo active timer/card
-28. Taboo round summary
-29. Who’s Most Likely prompt/countdown
-30. Would You Rather choice/countdown
+24. Who’s the Liar voting
+25. Taboo round-ready
+26. Taboo active timer/card
+27. Taboo round summary
+28. Who’s Most Likely prompt/countdown
+29. Would You Rather choice/countdown
 
 These do not need to be thirty separate code files. Reuse shared shells and state-driven components wherever possible.
 
@@ -2676,12 +2658,14 @@ round.
 2. Start a hidden randomized fuse; never show its remaining duration.
 3. The holder says a unique valid answer and immediately hands the phone to the
    next player; no app interaction is required between answers.
-4. Physical passing does not reset or pause the fuse.
+4. Physical passing does not reset or pause the fuse. There is no pause control.
 5. On explosion, the group identifies the holder, who loses that round.
 6. Start another round with a new category and randomly chosen starter.
 
 The fuse deadline remains in in-memory session state, never route parameters.
-Backgrounding the app does not pause the fuse. Category cards follow the shared
+It is a wall-clock deadline: backgrounding the app does not pause it, and
+returning to the app explodes immediately if the deadline has already passed.
+Category cards follow the shared
 history/report rules and support English, Amharic, and Mixed content modes.
 
 # 20. Game Seven: Quiz

@@ -1,25 +1,14 @@
-import {
-  NotoSansEthiopic_400Regular,
-  NotoSansEthiopic_500Medium,
-  NotoSansEthiopic_700Bold,
-  NotoSansEthiopic_900Black,
-} from '@expo-google-fonts/noto-sans-ethiopic';
-import {
-  Outfit_400Regular,
-  Outfit_500Medium,
-  Outfit_600SemiBold,
-  Outfit_700Bold,
-  Outfit_800ExtraBold,
-  Outfit_900Black,
-} from '@expo-google-fonts/outfit';
-import {
-  PlusJakartaSans_400Regular,
-  PlusJakartaSans_500Medium,
-  PlusJakartaSans_600SemiBold,
-  PlusJakartaSans_700Bold,
-  PlusJakartaSans_800ExtraBold,
-} from '@expo-google-fonts/plus-jakarta-sans';
-import { SpaceMono_400Regular, SpaceMono_700Bold } from '@expo-google-fonts/space-mono';
+import { NotoSansEthiopic_400Regular } from '@expo-google-fonts/noto-sans-ethiopic/400Regular';
+import { NotoSansEthiopic_500Medium } from '@expo-google-fonts/noto-sans-ethiopic/500Medium';
+import { NotoSansEthiopic_700Bold } from '@expo-google-fonts/noto-sans-ethiopic/700Bold';
+import { Outfit_600SemiBold } from '@expo-google-fonts/outfit/600SemiBold';
+import { Outfit_700Bold } from '@expo-google-fonts/outfit/700Bold';
+import { Outfit_800ExtraBold } from '@expo-google-fonts/outfit/800ExtraBold';
+import { Outfit_900Black } from '@expo-google-fonts/outfit/900Black';
+import { PlusJakartaSans_400Regular } from '@expo-google-fonts/plus-jakarta-sans/400Regular';
+import { PlusJakartaSans_600SemiBold } from '@expo-google-fonts/plus-jakarta-sans/600SemiBold';
+import { SpaceMono_400Regular } from '@expo-google-fonts/space-mono/400Regular';
+import { SpaceMono_700Bold } from '@expo-google-fonts/space-mono/700Bold';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -29,6 +18,7 @@ import { useEffect, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { BombSessionProvider } from '../src/domain/bomb/SessionContext';
+import { featureFlags } from '../src/config/features';
 import { BombSetupProvider } from '../src/domain/bomb/SetupContext';
 import { AnimatedSplash } from '../src/components/brand/AnimatedSplash';
 import { SessionProvider } from '../src/domain/impostor/SessionContext';
@@ -47,31 +37,32 @@ import { QuizSetupProvider } from '../src/domain/quiz/SetupContext';
 import { color } from '../src/theme/tokens';
 import { hydrateContentHistory } from '../src/storage/contentHistory';
 
+const APP_FONTS = {
+  Outfit_600SemiBold,
+  Outfit_700Bold,
+  Outfit_800ExtraBold,
+  Outfit_900Black,
+  PlusJakartaSans_400Regular,
+  PlusJakartaSans_600SemiBold,
+  SpaceMono_400Regular,
+  SpaceMono_700Bold,
+  // The Ethiopic wordmark remains part of the brand even in English-only mode.
+  NotoSansEthiopic_500Medium,
+  ...(featureFlags.amharicInterface || featureFlags.amharicContent
+    ? {
+        NotoSansEthiopic_400Regular,
+        NotoSansEthiopic_700Bold,
+      }
+    : {}),
+};
+
 SystemUI.setBackgroundColorAsync(color.background);
 void SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   // Brand type roles (tokens.font) — held behind the splash so no screen ever
   // renders in the system fallback face first.
-  const [fontsLoaded, fontError] = useFonts({
-    Outfit_400Regular,
-    Outfit_500Medium,
-    Outfit_600SemiBold,
-    Outfit_700Bold,
-    Outfit_800ExtraBold,
-    Outfit_900Black,
-    PlusJakartaSans_400Regular,
-    PlusJakartaSans_500Medium,
-    PlusJakartaSans_600SemiBold,
-    PlusJakartaSans_700Bold,
-    PlusJakartaSans_800ExtraBold,
-    SpaceMono_400Regular,
-    SpaceMono_700Bold,
-    NotoSansEthiopic_400Regular,
-    NotoSansEthiopic_500Medium,
-    NotoSansEthiopic_700Bold,
-    NotoSansEthiopic_900Black,
-  });
+  const [fontsLoaded, fontError] = useFonts(APP_FONTS);
   const [contentReady, setContentReady] = useState(false);
 
   const ready = (fontsLoaded || !!fontError) && contentReady;

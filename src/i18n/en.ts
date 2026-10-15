@@ -61,7 +61,7 @@ export const en = {
   'settings.termsTitle': 'Terms',
   'settings.termsMessage':
     'For private fun with people you trust. You are responsible for the content level your group chooses and for keeping secret screens away from other players. Full legal terms will ship with the store release.',
-  'settings.version': 'v0.1.0 · EN/AM decks',
+  'settings.version': 'v0.1.0 · English build',
 
   'game.howToPlay': 'How to play',
   'game.comingSoon': 'Coming soon',

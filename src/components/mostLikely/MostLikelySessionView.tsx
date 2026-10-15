@@ -145,6 +145,28 @@ function CountdownBeat({ value }: { value: 3 | 2 | 1 | 0 }) {
   );
 }
 
+function CountdownPrompt({ session }: { session: MostLikelySession }) {
+  const prompt = currentPrompt(session);
+  return (
+    <Surface accent={ACCENT} active contentStyle={styles.countdownPrompt}>
+      <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
+      <Text
+        style={[
+          styles.countdownPromptText,
+          session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
+        ]}
+      >
+        {prompt
+          ? localizeText(session.contentLanguage, {
+              en: prompt.prompt_en,
+              am: prompt.prompt_am,
+            })
+          : ''}
+      </Text>
+    </Surface>
+  );
+}
+
 function CountdownPhase({ session }: { session: MostLikelySession }) {
   const { dispatch, clearSession } = useMostLikelySession();
   const { settings } = useSettings();
@@ -185,7 +207,10 @@ function CountdownPhase({ session }: { session: MostLikelySession }) {
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
     >
-      <CountdownBeat key={value} value={value} />
+      <View style={styles.countdownLayout}>
+        <CountdownPrompt session={session} />
+        <CountdownBeat key={value} value={value} />
+      </View>
     </SessionShell>
   );
 }
@@ -268,26 +293,42 @@ const styles = StyleSheet.create({
     // Two lines of bodySm keep the prompt steady from reading to discussion.
     minHeight: 40,
   },
-  countdownBody: {
+  countdownLayout: {
     flex: 1,
+    justifyContent: 'space-between',
+    gap: space[3],
+    paddingBottom: space[2],
+  },
+  countdownPrompt: {
+    paddingHorizontal: space[4],
+    paddingVertical: space[4],
+    gap: space[2],
+  },
+  countdownPromptText: {
+    color: color.textPrimary,
+    fontFamily: family.display.bold,
+    fontSize: 22,
+    lineHeight: 28,
+    letterSpacing: -0.4,
+  },
+  countdownBody: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: space[8],
   },
   countdownHalo: {
-    width: 286,
-    height: 286,
+    width: 148,
+    height: 148,
     borderRadius: radius.pill,
     borderWidth: 1,
     borderColor: alpha(ACCENT, 0.62),
     backgroundColor: alpha(ACCENT, 0.1),
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: space[8],
+    marginBottom: space[3],
   },
   countdownCore: {
-    width: 238,
-    height: 238,
+    width: 112,
+    height: 112,
     borderRadius: radius.pill,
     borderWidth: 1,
     borderColor: alpha(ACCENT, 0.28),
@@ -298,15 +339,15 @@ const styles = StyleSheet.create({
   countdownValue: {
     color: color.textPrimary,
     fontFamily: family.display.black,
-    fontSize: 150,
-    lineHeight: 158,
+    fontSize: 64,
+    lineHeight: 70,
     textAlign: 'center',
   },
   pointValue: {
     color: ACCENT,
-    fontSize: 58,
-    lineHeight: 64,
-    letterSpacing: 1.6,
+    fontSize: 28,
+    lineHeight: 32,
+    letterSpacing: 1,
   },
   countdownInstruction: {
     color: ACCENT,

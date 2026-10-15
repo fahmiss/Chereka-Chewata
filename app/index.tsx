@@ -2,6 +2,7 @@ import { Redirect } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { MoonFace } from '../src/components/brand/MoonFace';
+import { featureFlags } from '../src/config/features';
 import { useSettings } from '../src/domain/settings/SettingsContext';
 import { hasCompletedLanguageGate } from '../src/storage/onboarding';
 import { color } from '../src/theme/tokens';
@@ -14,6 +15,11 @@ export default function Index() {
   const [gateDone, setGateDone] = useState<boolean | null>(null);
 
   useEffect(() => {
+    if (!featureFlags.languageSelection) {
+      setGateDone(true);
+      return;
+    }
+
     let alive = true;
     void hasCompletedLanguageGate().then((done) => {
       if (alive) setGateDone(done);
@@ -23,7 +29,7 @@ export default function Index() {
     };
   }, []);
 
-  if (!ready || gateDone === null) {
+  if (!ready || (featureFlags.languageSelection && gateDone === null)) {
     return (
       <View style={styles.boot}>
         <MoonFace expression="loading" size={96} />
@@ -31,7 +37,7 @@ export default function Index() {
     );
   }
 
-  if (!gateDone) {
+  if (featureFlags.languageSelection && !gateDone) {
     return <Redirect href="/language" />;
   }
 

@@ -21,8 +21,8 @@ Android development. Native store releases are not published yet.
 ## Current status
 
 - All seven games are playable end to end.
-- Interface language: English or Amharic.
-- Content language: English, Amharic, or Mixed.
+- Public interface and gameplay content are currently English-only.
+- Amharic and Mixed decks remain in the repository behind feature flags for a later native-reviewed release.
 - Native builds bundle all gameplay content for offline sessions.
 - No account or gameplay backend is required.
 - The `main` branch deploys automatically to Vercel.

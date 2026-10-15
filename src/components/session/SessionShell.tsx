@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react';
 import { Animated, BackHandler, StyleSheet, Text, View } from 'react-native';
 import { useT } from '../../i18n';
 import { useEnterAnimation } from '../../theme/motion';
-import { alpha, color, radius, space } from '../../theme/tokens';
+import { color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { ProgressRail } from '../ui/ProgressRail';
 import { Screen } from '../ui/Screen';
+import { useSessionControls } from './SessionControlsContext';
+import { SessionMenu } from './SessionMenu';
 
 /** Default rail for Impostor / Who’s the Liar. */
 export const DEDUCTION_STAGES = ['reveal', 'clues', 'discuss', 'vote', 'result'] as const;
@@ -57,6 +59,10 @@ export function SessionShell({
   const enter = useEnterAnimation(0, 12);
   const stageIndex = stage ? stages.indexOf(stage) : -1;
   const [confirmVisible, setConfirmVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [rulesVisible, setRulesVisible] = useState(false);
+  const [restartVisible, setRestartVisible] = useState(false);
+  const sessionControls = useSessionControls();
   const resolvedEndTitle = endTitle ?? t('session.endTitle');
   const resolvedEndMessage = endMessage ?? t('session.endMessage');
   const resolvedEndConfirm = endConfirmLabel ?? t('session.endConfirm');
@@ -88,14 +94,14 @@ export function SessionShell({
           {onEndGame ? (
             <PressableScale
               accessibilityRole="button"
-              accessibilityLabel={resolvedEndConfirm}
-              onPress={() => setConfirmVisible(true)}
+              accessibilityLabel="Open game menu"
+              onPress={() => setMenuVisible(true)}
               haptic="selection"
               scaleTo={0.94}
-              style={styles.endButton}
+              style={styles.menuButton}
             >
-              <Icon name="close" size={14} color={color.dangerUrgency} strokeWidth={2.4} />
-              <Text style={[type.label, styles.endLabel]}>{t('common.end')}</Text>
+              <Icon name="sliders" size={16} color={color.textSecondary} strokeWidth={2.2} />
+              <Text style={[type.label, styles.menuLabel]}>Menu</Text>
             </PressableScale>
           ) : null}
         </View>
@@ -121,21 +127,68 @@ export function SessionShell({
       </View>
 
       {onEndGame ? (
-        <Dialog
-          visible={confirmVisible}
-          icon="alert"
-          accent={color.dangerUrgency}
-          title={resolvedEndTitle}
-          message={resolvedEndMessage}
-          confirmLabel={resolvedEndConfirm}
-          confirmTone="danger"
-          onConfirm={() => {
-            setConfirmVisible(false);
-            onEndGame();
-          }}
-          cancelLabel={resolvedEndCancel}
-          onCancel={() => setConfirmVisible(false)}
-        />
+        <>
+          {menuVisible ? (
+            <SessionMenu
+              visible
+              accent={accent}
+              canRestart={!!sessionControls}
+              onClose={() => setMenuVisible(false)}
+              onShowRules={() => {
+                setMenuVisible(false);
+                setRulesVisible(true);
+              }}
+              onRestart={() => {
+                setMenuVisible(false);
+                setRestartVisible(true);
+              }}
+              onEnd={() => {
+                setMenuVisible(false);
+                setConfirmVisible(true);
+              }}
+            />
+          ) : null}
+          <Dialog
+            visible={rulesVisible}
+            icon="book"
+            accent={accent}
+            title="How to play"
+            message={sessionControls?.rules.map((rule, index) => `${index + 1}. ${rule}`).join('\n\n')}
+            confirmLabel="Back to game"
+            confirmTone="honey"
+            onConfirm={() => setRulesVisible(false)}
+          />
+          <Dialog
+            visible={restartVisible}
+            icon="refresh"
+            accent={color.dangerUrgency}
+            title="Restart round?"
+            message="The current round will be discarded. New cards, roles, or teams may be drawn from the same setup."
+            confirmLabel="Restart round"
+            confirmTone="danger"
+            onConfirm={() => {
+              setRestartVisible(false);
+              sessionControls?.onRestartRound();
+            }}
+            cancelLabel="Keep playing"
+            onCancel={() => setRestartVisible(false)}
+          />
+          <Dialog
+            visible={confirmVisible}
+            icon="alert"
+            accent={color.dangerUrgency}
+            title={resolvedEndTitle}
+            message={resolvedEndMessage}
+            confirmLabel={resolvedEndConfirm}
+            confirmTone="danger"
+            onConfirm={() => {
+              setConfirmVisible(false);
+              onEndGame();
+            }}
+            cancelLabel={resolvedEndCancel}
+            onCancel={() => setConfirmVisible(false)}
+          />
+        </>
       ) : null}
     </Screen>
   );
@@ -156,17 +209,19 @@ const styles = StyleSheet.create({
   eyebrowPill: {
     paddingVertical: 6,
   },
-  endButton: {
+  menuButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     paddingHorizontal: 12,
     paddingVertical: 9,
     borderRadius: radius.pill,
-    backgroundColor: alpha(color.dangerUrgency, 0.12),
+    backgroundColor: overlay.glass,
+    borderWidth: 1,
+    borderColor: color.borderSubtle,
   },
-  endLabel: {
-    color: color.dangerUrgency,
+  menuLabel: {
+    color: color.textSecondary,
   },
   rail: {
     marginTop: space[4],

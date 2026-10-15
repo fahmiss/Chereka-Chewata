@@ -5,4 +5,5 @@ export const storageKeys = {
   cardHistory: 'chereka.content.history.v1',
   reportedCards: 'chereka.content.reported.v1',
   hasCompletedLanguageGate: 'chereka.onboarding.languageGate.v1',
+  lastPlayedGame: 'chereka.session.lastPlayedGame.v1',
 } as const;

@@ -1,8 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { router } from 'expo-router';
+import { Redirect, router } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MoonFace } from '../src/components/brand/MoonFace';
+import { featureFlags } from '../src/config/features';
 import { OptionRow } from '../src/components/ui/Selectable';
 import { PrimaryButton } from '../src/components/ui/PrimaryButton';
 import { Screen } from '../src/components/ui/Screen';
@@ -35,6 +36,10 @@ export default function LanguageGateScreen() {
     await markLanguageGateComplete();
     router.replace('/home');
   };
+
+  if (!featureFlags.languageSelection) {
+    return <Redirect href="/home" />;
+  }
 
   return (
     <Screen accent={color.brandPrimary}>

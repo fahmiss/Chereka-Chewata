@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { preload } from 'expo-audio';
 import { router } from 'expo-router';
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, AppState, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { localizeText } from '../../content/localize';
@@ -29,7 +29,7 @@ import { SessionShell } from '../session/SessionShell';
 import { MoonFace } from '../brand/MoonFace';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
-import { Icon, type IconName } from '../ui/Icon';
+import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
@@ -37,6 +37,7 @@ import { Surface } from '../ui/Surface';
 import { ReportCardButton } from '../session/ReportCardButton';
 
 const ACCENT = color.gameLiar;
+const LIAR_STAGES = ['reveal', 'answers', 'vote', 'result'] as const;
 const REVEAL_SOUND = require('../../../assets/sounds/secret-reveal.wav');
 const VERDICT_SOUND = require('../../../assets/sounds/verdict-sting.wav');
 const WIN_SOUND = require('../../../assets/sounds/result-win.wav');
@@ -50,23 +51,6 @@ void preload(LOSS_SOUND);
 function endGame(clearSession: () => void) {
   router.replace('/home');
   clearSession();
-}
-
-function Brief({ icon, children }: { icon: IconName; children: ReactNode }) {
-  const enter = useEnterAnimation(1, 16);
-  return (
-    <Animated.View style={[styles.brief, enter]}>
-      <View
-        style={[
-          styles.briefIcon,
-          { backgroundColor: alpha(ACCENT, 0.14), borderColor: alpha(ACCENT, 0.3) },
-        ]}
-      >
-        <Icon name={icon} size={26} color={ACCENT} strokeWidth={1.8} />
-      </View>
-      {children}
-    </Animated.View>
-  );
 }
 
 function PlayerChoice({
@@ -151,6 +135,7 @@ function HandoffPhase({
     <SessionShell
       eyebrow={kind === 'reveal' ? 'Pass the phone' : 'Private vote'}
       stage={kind === 'reveal' ? 'reveal' : 'vote'}
+      stages={LIAR_STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -292,6 +277,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
     <SessionShell
       eyebrow={`Private reveal · ${session.revealIndex + 1}/${total}`}
       stage="reveal"
+      stages={LIAR_STAGES}
       title={name}
       accent={cardAccent}
       onEndGame={() => endGame(clearSession)}
@@ -439,20 +425,22 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
   const firstId = session.answerOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
+  const privateVotes = session.setup.votingMode === 'private';
 
   return (
     <SessionShell
       eyebrow="Answers"
-      stage="clues"
+      stage="answers"
+      stages={LIAR_STAGES}
       title={`${name} starts`}
-      subtitle="One concise answer each, in order. Do not paraphrase the question."
+      subtitle="One concise answer each, in order. Leave the phone on the table."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label="Start discussion"
-          icon="megaphone"
-          onPress={() => dispatch.startDiscussion()}
+          label={privateVotes ? 'Start private voting' : 'Choose the Liar'}
+          icon="target"
+          onPress={() => dispatch.startVoting()}
         />
       }
     >
@@ -465,39 +453,10 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
             first={index === 0}
           />
         ))}
-      </ScrollView>
-    </SessionShell>
-  );
-}
-
-function DiscussionPhase({ session }: { session: LiarSession }) {
-  const { dispatch, clearSession } = useLiarSession();
-  const privateVotes = session.setup.votingMode === 'private';
-  const nextLabel = privateVotes ? 'Start private voting' : 'Choose the Liar';
-
-  return (
-    <SessionShell
-      eyebrow="Discussion"
-      stage="discuss"
-      title="Who heard a different question?"
-      subtitle="Brief follow-ups are fine. Never ask what the exact question was."
-      accent={ACCENT}
-      onEndGame={() => endGame(clearSession)}
-      footer={
-        <PrimaryButton
-          label={nextLabel}
-          icon="target"
-          onPress={() => dispatch.startVoting()}
-        />
-      }
-    >
-      <Brief icon="users">
-        <Text style={[type.body, styles.briefBody]}>
-          {privateVotes
-            ? 'Talk it out, then vote privately on this phone.'
-            : 'Argue in the room. When the group agrees, tap who you think is the Liar.'}
+        <Text style={[type.bodySm, styles.orderNote]}>
+          Do not paraphrase the question. Never ask what the exact question was.
         </Text>
-      </Brief>
+      </ScrollView>
     </SessionShell>
   );
 }
@@ -510,6 +469,7 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
     <SessionShell
       eyebrow="Group decision"
       stage="vote"
+      stages={LIAR_STAGES}
       title="Who is the group accusing?"
       subtitle="Tap the player your group chose."
       accent={ACCENT}
@@ -563,6 +523,7 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
     <SessionShell
       eyebrow={runoff ? 'Runoff vote' : 'Your vote'}
       stage="vote"
+      stages={LIAR_STAGES}
       title={name}
       subtitle="Tap who you think got a different question."
       accent={ACCENT}
@@ -624,6 +585,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
     <SessionShell
       eyebrow="Result"
       stage="result"
+      stages={LIAR_STAGES}
       accent={accent}
       onEndGame={undefined}
       footer={
@@ -750,8 +712,6 @@ export function LiarSessionView({ session }: { session: LiarSession }) {
       return <RevealPhase session={session} />;
     case 'answer_order':
       return <AnswerOrderPhase session={session} />;
-    case 'discussion':
-      return <DiscussionPhase session={session} />;
     case 'group_accuse':
       return <GroupAccusePhase session={session} />;
     case 'voting_handoff':
@@ -807,22 +767,6 @@ const styles = StyleSheet.create({
   handoffNoteText: {
     color: color.textMuted,
     flex: 1,
-  },
-  brief: {
-    flex: 1,
-    justifyContent: 'center',
-    gap: space[4],
-  },
-  briefIcon: {
-    width: 56,
-    height: 56,
-    borderRadius: radius.medium,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  briefBody: {
-    color: color.textSecondary,
   },
   secretCard: {
     flex: 1,
@@ -882,6 +826,12 @@ const styles = StyleSheet.create({
   orderList: {
     gap: space[2],
     paddingBottom: space[4],
+  },
+  orderNote: {
+    color: color.textMuted,
+    textAlign: 'center',
+    marginTop: space[3],
+    paddingHorizontal: space[2],
   },
   orderRow: {
     flexDirection: 'row',

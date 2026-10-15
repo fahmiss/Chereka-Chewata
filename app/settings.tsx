@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MoonMark } from '../src/components/brand/MoonMark';
+import { featureFlags } from '../src/config/features';
 import { Dialog } from '../src/components/ui/Dialog';
 import { IconButton, Screen } from '../src/components/ui/Screen';
 import { SecondaryButton } from '../src/components/ui/SecondaryButton';
@@ -41,35 +42,37 @@ export default function SettingsScreen() {
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <Text style={[type.displayLg, styles.title, font]}>{t('settings.title')}</Text>
 
-        <Surface contentStyle={styles.card}>
-          <Text style={[type.eyebrow, styles.cardLabel, font]}>{t('settings.language')}</Text>
-          <Text style={[type.bodySm, styles.cardBody, font]}>
-            {t('settings.interfaceLanguage')}
-          </Text>
-          <Segmented<InterfaceLanguage>
-            accent={color.brandPrimary}
-            value={settings.interfaceLanguage}
-            onChange={setInterfaceLanguage}
-            options={[
-              { value: 'en', label: t('language.english') },
-              { value: 'am', label: t('language.amharic') },
-            ]}
-          />
-          <Text style={[type.bodySm, styles.cardBody, font]}>
-            {t('settings.contentLanguage')}
-          </Text>
-          <Segmented<ContentLanguage>
-            accent={color.gameImpostor}
-            value={settings.contentLanguage}
-            onChange={setContentLanguage}
-            options={[
-              { value: 'en', label: t('language.english') },
-              { value: 'am', label: t('language.amharic') },
-              { value: 'mixed', label: t('language.mixed') },
-            ]}
-          />
-          <Text style={[type.bodySm, styles.cardBody, font]}>{t('settings.contentNote')}</Text>
-        </Surface>
+        {featureFlags.languageSelection ? (
+          <Surface contentStyle={styles.card}>
+            <Text style={[type.eyebrow, styles.cardLabel, font]}>{t('settings.language')}</Text>
+            <Text style={[type.bodySm, styles.cardBody, font]}>
+              {t('settings.interfaceLanguage')}
+            </Text>
+            <Segmented<InterfaceLanguage>
+              accent={color.brandPrimary}
+              value={settings.interfaceLanguage}
+              onChange={setInterfaceLanguage}
+              options={[
+                { value: 'en', label: t('language.english') },
+                { value: 'am', label: t('language.amharic') },
+              ]}
+            />
+            <Text style={[type.bodySm, styles.cardBody, font]}>
+              {t('settings.contentLanguage')}
+            </Text>
+            <Segmented<ContentLanguage>
+              accent={color.gameImpostor}
+              value={settings.contentLanguage}
+              onChange={setContentLanguage}
+              options={[
+                { value: 'en', label: t('language.english') },
+                { value: 'am', label: t('language.amharic') },
+                { value: 'mixed', label: t('language.mixed') },
+              ]}
+            />
+            <Text style={[type.bodySm, styles.cardBody, font]}>{t('settings.contentNote')}</Text>
+          </Surface>
+        ) : null}
 
         <Surface contentStyle={styles.card}>
           <Text style={[type.eyebrow, styles.cardLabel, font]}>{t('settings.feel')}</Text>

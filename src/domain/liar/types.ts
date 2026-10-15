@@ -47,7 +47,6 @@ export type LiarPhase =
   | 'handoff'
   | 'reveal'
   | 'answer_order'
-  | 'discussion'
   | 'group_accuse'
   | 'voting_handoff'
   | 'voting_select'

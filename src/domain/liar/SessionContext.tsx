@@ -15,7 +15,6 @@ import {
   readyToReveal,
   rematchSession,
   resolveGroupDeadlock,
-  startDiscussion,
   startVoting,
 } from './machine';
 import type { LiarSession, LiarSetup } from './types';
@@ -30,7 +29,6 @@ type SessionContextValue = {
   dispatch: {
     readyToReveal: () => void;
     hideRevealAndContinue: () => void;
-    startDiscussion: () => void;
     startVoting: () => void;
     beginVoteSelect: () => void;
     castVote: (suspectId: string) => void;
@@ -78,7 +76,6 @@ export function LiarSessionProvider({ children }: { children: ReactNode }) {
     () => ({
       readyToReveal: () => update(readyToReveal),
       hideRevealAndContinue: () => update(hideRevealAndContinue),
-      startDiscussion: () => update(startDiscussion),
       startVoting: () => update(startVoting),
       beginVoteSelect: () => update(beginVoteSelect),
       castVote: (suspectId: string) => update((current) => castVote(current, suspectId)),

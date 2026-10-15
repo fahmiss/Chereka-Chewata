@@ -35,7 +35,7 @@ export type BombSetup = {
   spicyAcknowledged: boolean;
 };
 
-export type BombPhase = 'ready' | 'playing' | 'paused' | 'exploded';
+export type BombPhase = 'ready' | 'playing' | 'exploded';
 
 export type BombSession = {
   sessionId: string;
@@ -45,8 +45,8 @@ export type BombSession = {
   deck: BombCard[];
   cardIndex: number;
   startingPlayerId: string;
+  /** Wall-clock deadline. The fuse is never paused. */
   fuseEndsAt: number | null;
-  fuseRemainingMs: number | null;
   roundNumber: number;
 };
 

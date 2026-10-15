@@ -56,7 +56,6 @@ export function createBombSession(
     cardIndex: 0,
     startingPlayerId: setup.players[Math.floor(Math.random() * setup.players.length)]!.id,
     fuseEndsAt: null,
-    fuseRemainingMs: null,
     roundNumber: 1,
   };
 }
@@ -67,28 +66,6 @@ export function startBomb(session: BombSession, now = Date.now()): BombSession {
     ...session,
     phase: 'playing',
     fuseEndsAt: now + randomFuseMs(),
-    fuseRemainingMs: null,
-  };
-}
-
-export function pauseBomb(session: BombSession, now = Date.now()): BombSession {
-  if (session.phase !== 'playing' || !session.fuseEndsAt) return session;
-  if (session.fuseEndsAt <= now) return explodeBomb(session);
-  return {
-    ...session,
-    phase: 'paused',
-    fuseRemainingMs: session.fuseEndsAt - now,
-    fuseEndsAt: null,
-  };
-}
-
-export function resumeBomb(session: BombSession, now = Date.now()): BombSession {
-  if (session.phase !== 'paused' || !session.fuseRemainingMs) return session;
-  return {
-    ...session,
-    phase: 'playing',
-    fuseEndsAt: now + session.fuseRemainingMs,
-    fuseRemainingMs: null,
   };
 }
 
@@ -98,7 +75,6 @@ export function explodeBomb(session: BombSession): BombSession {
     ...session,
     phase: 'exploded',
     fuseEndsAt: null,
-    fuseRemainingMs: null,
   };
 }
 

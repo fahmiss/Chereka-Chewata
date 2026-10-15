@@ -19,7 +19,7 @@ const STEPS: Record<string, string[]> = {
   whos_the_liar: [
     'Everyone gets a question privately — one player got a different one.',
     'Answer aloud in order. Do not read your question out loud.',
-    'Discuss, then vote privately for who you think is the Liar.',
+    'Argue it out, then tap who the group thinks is the Liar.',
   ],
   taboo: [
     'Split into two teams. One describer sees the word and the forbidden list.',

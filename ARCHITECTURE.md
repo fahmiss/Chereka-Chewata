@@ -104,7 +104,8 @@ Implementation:
 
 The category prompt and randomly chosen starter are public, but the randomized
 fuse deadline remains only in session state. Players pass the phone physically;
-the app does not track handoffs. Backgrounding the app does not pause the fuse.
+the app does not track handoffs. There is no pause control. The fuse is a
+wall-clock deadline, so backgrounding the app does not pause it.
 
 ```mermaid
 stateDiagram-v2
@@ -123,7 +124,7 @@ Implementation:
 
 ## Who’s the Liar? round lifecycle
 
-Second vertical slice. One Liar. Private voting only. No final guess.
+Second vertical slice. One Liar. Group accusation by default; private voting is optional. No final guess. Answers and discussion share one screen.
 
 ```mermaid
 stateDiagram-v2
@@ -132,14 +133,14 @@ stateDiagram-v2
     Handoff --> Reveal : player ready
     Reveal --> Handoff : hide + next
     Reveal --> AnswerOrder : all seen
-    AnswerOrder --> Answers
-    Answers --> Discussion : everyone answered
-    Discussion --> VoteHandoff
+    AnswerOrder --> GroupAccuse : votingMode = group
+    AnswerOrder --> VoteHandoff : votingMode = private
     VoteHandoff --> VoteSelect
     VoteSelect --> VoteHandoff : next voter
     VoteSelect --> Result : resolved
     VoteSelect --> Runoff : first tie
     Runoff --> Result : second tie → Liar wins
+    GroupAccuse --> Result
     Result --> Handoff : rematch
 ```
 

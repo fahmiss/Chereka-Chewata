@@ -41,6 +41,7 @@ import { useQuizSession } from '../../../../src/domain/quiz/SessionContext';
 import { useQuizSetup } from '../../../../src/domain/quiz/SetupContext';
 import type { QuizDifficultyFilter } from '../../../../src/domain/quiz/types';
 import { useSettings } from '../../../../src/domain/settings/SettingsContext';
+import { saveLastPlayedGame } from '../../../../src/storage/lastPlayedGame';
 import { color } from '../../../../src/theme/tokens';
 
 type Player = { id: string; displayName: string };
@@ -115,6 +116,7 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('quiz');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -240,6 +242,7 @@ function BombQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('bomb');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -348,6 +351,7 @@ function ImpostorQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('impostor');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -468,6 +472,7 @@ function LiarQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('whos_the_liar');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -554,6 +559,7 @@ function TabooQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('taboo');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -664,6 +670,7 @@ function MostLikelyQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('most_likely');
     router.replace(`/session/${result.session.sessionId}`);
   };
 
@@ -744,6 +751,7 @@ function WouldRatherQuickSetup({ gameId }: { gameId: string }) {
       setStartError(result.error);
       return;
     }
+    void saveLastPlayedGame('would_you_rather');
     router.replace(`/session/${result.session.sessionId}`);
   };
 

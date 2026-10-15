@@ -11,8 +11,6 @@ import {
   continueAfterExplosion,
   createBombSession,
   explodeBomb,
-  pauseBomb,
-  resumeBomb,
   skipBombCard,
   startBomb,
 } from './machine';
@@ -26,8 +24,6 @@ type BombSessionContextValue = {
   clearError: () => void;
   dispatch: {
     startBomb: () => void;
-    pauseBomb: () => void;
-    resumeBomb: () => void;
     explodeBomb: () => void;
     continueAfterExplosion: () => void;
     skipCard: () => void;
@@ -67,8 +63,6 @@ export function BombSessionProvider({ children }: { children: ReactNode }) {
   const dispatch = useMemo(
     () => ({
       startBomb: () => update(startBomb),
-      pauseBomb: () => update(pauseBomb),
-      resumeBomb: () => update(resumeBomb),
       explodeBomb: () => update(explodeBomb),
       continueAfterExplosion: () => update(continueAfterExplosion),
       skipCard: () => update(skipBombCard),
