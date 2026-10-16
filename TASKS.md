@@ -57,6 +57,13 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 
 ## Shipped
 
+### Home-screen web launch (2026-10-16)
+
+- Added the manifest and iOS standalone links to the SPA HTML template that
+  Expo actually exports. The existing manifest and home-screen icons now let
+  installed web shortcuts launch without the browser toolbar.
+- Web installation does not yet cache the app for offline startup.
+
 ### Tighter Liar, Most Likely, and Bomb loops (2026-10-15)
 
 - Who’s the Liar drops the empty discussion screen. The speaking order stays on

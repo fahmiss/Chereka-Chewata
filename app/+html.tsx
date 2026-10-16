@@ -2,8 +2,8 @@ import { ScrollViewStyleReset } from 'expo-router/html';
 import { type PropsWithChildren } from 'react';
 
 /**
- * Web-only document shell. `display: standalone` plus the Apple tags make a
- * home-screen icon open the app without Safari's toolbar.
+ * Document shell for static/server web output. The current single-page export
+ * uses public/index.html for its home-screen metadata instead.
  */
 export default function Root({ children }: PropsWithChildren) {
   return (

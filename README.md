@@ -18,6 +18,13 @@ lit by lamplight rather than daylight.
 The web build is a production preview of the same Expo app used for iOS and
 Android development. Native store releases are not published yet.
 
+To open the web app without browser controls, add the live site to your home
+screen and launch it from the new icon. On iPhone, use Safari’s Share menu →
+**Add to Home Screen**. On Android, use Chrome’s menu → **Install app** or
+**Add to Home screen**. If you added an icon before this change, remove it and
+add it again after the updated site is deployed. This web install still needs
+a connection to start; offline support is currently provided by native builds.
+
 ## Current status
 
 - All seven games are playable end to end.
