@@ -52,7 +52,7 @@ export type WouldRatherSession = {
 };
 
 export function defaultWouldRatherSetup(): WouldRatherSetup {
-  return { players: [], categoryIds: [], contentLevels: ['family'], cardCount: 20, spicyAcknowledged: false };
+  return { players: [], categoryIds: [], contentLevels: ['family', 'friends'], cardCount: 20, spicyAcknowledged: false };
 }
 
 export function createId(prefix: string): string {

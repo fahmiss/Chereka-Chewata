@@ -96,7 +96,7 @@ export function defaultImpostorSetup(players?: Player[]): ImpostorSetup {
   return {
     players: players ?? defaultPlayers(3),
     categoryIds: [],
-    contentLevels: ['family'],
+    contentLevels: ['family', 'friends'],
     impostorCount: 1,
     showCategoryToImpostor: true,
     discussionTimerSeconds: null,

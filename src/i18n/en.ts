@@ -61,7 +61,7 @@ export const en = {
   'settings.termsTitle': 'Terms',
   'settings.termsMessage':
     'For private fun with people you trust. You are responsible for the content level your group chooses and for keeping secret screens away from other players. Full legal terms will ship with the store release.',
-  'settings.version': 'v0.1.0 · English build',
+  'settings.languageComingSoon': 'Amharic menus and game cards coming soon',
 
   'game.howToPlay': 'How to play',
   'game.comingSoon': 'Coming soon',
@@ -78,7 +78,7 @@ export const en = {
   'setup.categoriesSubtitle': 'English starter deck. Mix as many as you like.',
   'setup.content': 'Content',
   'setup.contentTitle': 'Content level',
-  'setup.contentSubtitle': 'Family is the default. Levels stack.',
+  'setup.contentSubtitle': 'Family and Friends start selected. Levels stack.',
   'setup.options': 'Options',
   'setup.review': 'Review',
   'setup.reviewTitle': 'Ready to play?',

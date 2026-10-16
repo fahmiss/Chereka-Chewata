@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { MoonMark } from '../src/components/brand/MoonMark';
+import { MoonFace } from '../src/components/brand/MoonFace';
 import { featureFlags } from '../src/config/features';
 import { Dialog } from '../src/components/ui/Dialog';
 import { IconButton, Screen } from '../src/components/ui/Screen';
@@ -126,10 +126,12 @@ export default function SettingsScreen() {
         </Surface>
 
         <View style={styles.brand}>
-          <MoonMark size={38} orbit />
+          <MoonFace expression="ready" size={64} />
           <Text style={styles.wordmark}>CHEREKA CHEWATA</Text>
           <Text style={styles.amharic}>{AMHARIC}</Text>
-          <Text style={[type.mono, styles.version]}>{t('settings.version')}</Text>
+          <Text style={[type.bodySm, styles.languageComingSoon]}>
+            {t('settings.languageComingSoon')}
+          </Text>
         </View>
       </ScrollView>
 
@@ -232,8 +234,9 @@ const styles = StyleSheet.create({
     fontFamily: family.ethiopic.medium,
     fontSize: 14,
   },
-  version: {
+  languageComingSoon: {
     color: color.textMuted,
     marginTop: space[2],
+    textAlign: 'center',
   },
 });

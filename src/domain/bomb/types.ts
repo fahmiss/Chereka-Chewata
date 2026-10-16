@@ -68,7 +68,7 @@ export function defaultBombSetup(players?: Player[]): BombSetup {
   return {
     players: players ?? defaultPlayers(3),
     categoryIds: [],
-    contentLevels: ['family'],
+    contentLevels: ['family', 'friends'],
     spicyAcknowledged: false,
   };
 }

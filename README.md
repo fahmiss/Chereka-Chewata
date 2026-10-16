@@ -21,15 +21,15 @@ Android development. Native store releases are not published yet.
 To open the web app without browser controls, install the live site and launch
 it from its home-screen icon. On iPhone: Safari → Share → Add to Home Screen →
 turn on **Open as Web App** → Add. On Android: Chrome → menu → Install app (or
-Install and create shortcut). If an older icon still opens the browser, remove
-it and install again. This web install still needs a connection to start;
-offline support is currently provided by native builds.
+Install and create shortcut). If an older shortcut opens the browser or shows
+a generic icon, remove it and install again. This web install still needs a
+connection to start; offline support is currently provided by native builds.
 
 ## Current status
 
 - All seven games are playable end to end.
 - Public interface and gameplay content are currently English-only.
-- Family and Friends content is playable; Spicy is shown as Coming soon.
+- Family and Friends start selected in social games; Spicy is shown as Coming soon.
 - Amharic and Mixed decks remain in the repository behind feature flags for a later native-reviewed release.
 - Native builds bundle all gameplay content for offline sessions.
 - No account or gameplay backend is required.

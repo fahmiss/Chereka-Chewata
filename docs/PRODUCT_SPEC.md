@@ -108,6 +108,8 @@ Hard / Mixed) and does not expose maturity levels in setup.
 “Coming soon” in every social game. Family and Friends remain selectable, and
 Spicy cards are excluded from gameplay until the content is ready for release.
 The opt-in requirement above applies when Spicy is enabled later.
+Family and Friends both start selected in the six social games; players may
+turn either one off. Quiz continues to use knowledge difficulty instead.
 
 ## 2.5 Common controls
 

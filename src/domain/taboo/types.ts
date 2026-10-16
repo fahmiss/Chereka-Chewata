@@ -86,7 +86,7 @@ export function defaultTabooSetup(players?: Player[]): TabooSetup {
   return {
     players: players ?? defaultPlayers(4),
     categoryIds: [],
-    contentLevels: ['family'],
+    contentLevels: ['family', 'friends'],
     roundSeconds: 60,
     pointsToWin: 15,
     maxSkips: 3,

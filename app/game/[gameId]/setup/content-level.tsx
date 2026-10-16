@@ -126,8 +126,8 @@ export default function ContentLevelScreen() {
       title="Content level"
       subtitle={
         featureFlags.spicyContent
-          ? 'Family is the default. Levels stack. Spicy needs a one-time OK.'
-          : 'Choose Family, Friends, or both. Spicy is coming soon.'
+          ? 'Family and Friends start selected. Spicy needs a one-time OK.'
+          : 'Family and Friends start selected. Spicy is coming soon.'
       }
       accent={accent}
       primaryLabel="Done"

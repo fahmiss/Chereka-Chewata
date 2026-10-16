@@ -4,7 +4,7 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-15._
+_Last updated: 2026-10-16._
 
 ---
 
@@ -56,6 +56,16 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Web game-surface and setup polish (2026-10-16)
+
+- Prevented accidental text selection on the web game surface while preserving
+  selection in player-name fields.
+- Family and Friends now start selected in all six social games; Quiz keeps its
+  separate difficulty defaults, and Spicy stays locked.
+- Made home-screen icon metadata explicit and refreshed its cache references.
+  Settings now uses the same moon mascot as Home and previews upcoming Amharic
+  menus and cards without an “English build” label.
 
 ### Spicy content preview locked (2026-10-16)
 

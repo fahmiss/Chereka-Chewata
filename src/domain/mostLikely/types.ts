@@ -57,7 +57,7 @@ export function defaultMostLikelySetup(): MostLikelySetup {
   return {
     players: [],
     categoryIds: [],
-    contentLevels: ['family'],
+    contentLevels: ['family', 'friends'],
     cardCount: 20,
     spicyAcknowledged: false,
   };

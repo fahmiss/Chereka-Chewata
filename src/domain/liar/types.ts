@@ -81,7 +81,7 @@ export function defaultLiarSetup(players?: Player[]): LiarSetup {
   return {
     players: players ?? defaultPlayers(3),
     categoryIds: [],
-    contentLevels: ['family'],
+    contentLevels: ['family', 'friends'],
     randomAnswerOrder: true,
     votingMode: 'group',
     spicyAcknowledged: false,
