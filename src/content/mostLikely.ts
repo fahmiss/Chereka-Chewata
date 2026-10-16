@@ -4,6 +4,7 @@ import type {
   MostLikelyPrompt,
 } from '../domain/mostLikely/types';
 import type { ContentLanguage } from '../domain/settings/types';
+import { isContentLevelAvailable } from '../config/features';
 import categoriesJson from '../../content/categories/most_likely.json';
 import promptsJson from '../../content/most_likely/prompts.en.json';
 import { prioritizeFresh, reportedIds } from '../storage/contentHistory';
@@ -25,7 +26,7 @@ export function getMostLikelyPrompts(options: {
   excludeIds?: string[];
 }): MostLikelyPrompt[] {
   const exclude = new Set(options.excludeIds ?? []);
-  const levels = new Set(options.contentLevels);
+  const levels = new Set(options.contentLevels.filter(isContentLevelAvailable));
   const cats = new Set(options.categoryIds);
   const language = options.contentLanguage ?? 'en';
 

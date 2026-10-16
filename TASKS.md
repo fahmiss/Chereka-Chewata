@@ -57,6 +57,13 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 
 ## Shipped
 
+### Spicy content preview locked (2026-10-16)
+
+- Shows Spicy as Coming soon on each social game's content screen while Family
+  and Friends stay selectable. The release flag blocks Spicy cards in all six
+  social-game deck loaders, including direct or stale setup selections.
+- Retains the Spicy decks and consent flow for a later content-reviewed release.
+
 ### Home-screen web launch (2026-10-16)
 
 - Added the manifest and iOS standalone links to the SPA HTML template that

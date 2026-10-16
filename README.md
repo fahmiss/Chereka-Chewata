@@ -29,6 +29,7 @@ offline support is currently provided by native builds.
 
 - All seven games are playable end to end.
 - Public interface and gameplay content are currently English-only.
+- Family and Friends content is playable; Spicy is shown as Coming soon.
 - Amharic and Mixed decks remain in the repository behind feature flags for a later native-reviewed release.
 - Native builds bundle all gameplay content for offline sessions.
 - No account or gameplay backend is required.

@@ -2,6 +2,7 @@ import categoriesJson from '../../content/categories/would_you_rather.json';
 import dilemmasJson from '../../content/would_you_rather/dilemmas.en.json';
 import type { ContentLevel, WouldRatherCategory, WouldRatherDilemma } from '../domain/wouldRather/types';
 import type { ContentLanguage } from '../domain/settings/types';
+import { isContentLevelAvailable } from '../config/features';
 import { prioritizeFresh, reportedIds } from '../storage/contentHistory';
 import { matchesContentLanguage } from './localize';
 
@@ -18,7 +19,7 @@ export function getWouldRatherDilemmas(options: {
   contentLanguage?: ContentLanguage;
 }): WouldRatherDilemma[] {
   const cats = new Set(options.categoryIds);
-  const levels = new Set(options.contentLevels);
+  const levels = new Set(options.contentLevels.filter(isContentLevelAvailable));
   const language = options.contentLanguage ?? 'en';
   return dilemmas.filter(
     (item) =>

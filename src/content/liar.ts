@@ -1,5 +1,6 @@
 import type { ContentLevel, LiarCategory, LiarPair } from '../domain/liar/types';
 import type { ContentLanguage } from '../domain/settings/types';
+import { isContentLevelAvailable } from '../config/features';
 import categoriesJson from '../../content/categories/whos_the_liar.json';
 import pairsJson from '../../content/whos_the_liar/pairs.en.json';
 import { prioritizeFresh, recentIds, recordPlayed, reportedIds } from '../storage/contentHistory';
@@ -21,7 +22,7 @@ export function getLiarPairs(options: {
   excludeIds?: string[];
 }): LiarPair[] {
   const exclude = new Set(options.excludeIds ?? []);
-  const levels = new Set(options.contentLevels);
+  const levels = new Set(options.contentLevels.filter(isContentLevelAvailable));
   const cats = new Set(options.categoryIds);
   const language = options.contentLanguage ?? 'en';
 

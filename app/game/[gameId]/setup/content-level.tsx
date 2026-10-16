@@ -11,6 +11,7 @@ import { countLiarPairs } from '../../../../src/content/liar';
 import { countMostLikelyPrompts } from '../../../../src/content/mostLikely';
 import { countTabooCards } from '../../../../src/content/taboo';
 import { countWouldRatherDilemmas } from '../../../../src/content/wouldRather';
+import { featureFlags } from '../../../../src/config/features';
 import { useGameSetup } from '../../../../src/domain/useGameSetup';
 import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import type { ContentLevel } from '../../../../src/domain/impostor/types';
@@ -107,6 +108,7 @@ export default function ContentLevelScreen() {
   const selectedCount = countFor(setup.contentLevels);
 
   const onToggle = (level: ContentLevel) => {
+    if (level === 'spicy' && !featureFlags.spicyContent) return;
     if (
       level === 'spicy' &&
       !setup.contentLevels.includes('spicy') &&
@@ -122,7 +124,11 @@ export default function ContentLevelScreen() {
     <SetupScreen
       stepLabel="Content"
       title="Content level"
-      subtitle="Family is the default. Levels stack. Spicy needs a one-time OK."
+      subtitle={
+        featureFlags.spicyContent
+          ? 'Family is the default. Levels stack. Spicy needs a one-time OK.'
+          : 'Choose Family, Friends, or both. Spicy is coming soon.'
+      }
       accent={accent}
       primaryLabel="Done"
       primaryDisabled={!validation.contentOk || !validation.spicyOk || selectedCount === 0}
@@ -138,19 +144,23 @@ export default function ContentLevelScreen() {
       onPrimary={() => router.back()}
     >
       <View style={styles.list}>
-        {LEVELS.map((level, index) => (
-          <LevelRow
-            key={level.id}
-            index={index}
-            title={level.title}
-            body={level.body}
-            icon={level.icon}
-            accent={level.accent}
-            selected={setup.contentLevels.includes(level.id)}
-            count={countFor([level.id])}
-            onPress={() => onToggle(level.id)}
-          />
-        ))}
+        {LEVELS.map((level, index) => {
+          const comingSoon = level.id === 'spicy' && !featureFlags.spicyContent;
+          return (
+            <LevelRow
+              key={level.id}
+              index={index}
+              title={comingSoon ? 'Spicy · Coming soon' : level.title}
+              body={comingSoon ? 'Dating, exes, and bolder questions.' : level.body}
+              icon={level.icon}
+              accent={level.accent}
+              selected={setup.contentLevels.includes(level.id) && !comingSoon}
+              count={countFor([level.id])}
+              comingSoon={comingSoon}
+              onPress={() => onToggle(level.id)}
+            />
+          );
+        })}
       </View>
 
       <Dialog
@@ -181,6 +191,7 @@ function LevelRow({
   accent,
   selected,
   count,
+  comingSoon,
   onPress,
 }: {
   index: number;
@@ -190,20 +201,27 @@ function LevelRow({
   accent: string;
   selected: boolean;
   count: number;
+  comingSoon: boolean;
   onPress: () => void;
 }) {
   const enter = useEnterAnimation(index);
+  const meta = comingSoon
+    ? undefined
+    : count > 0
+      ? `${count} cards`
+      : 'Unavailable for these categories';
 
   return (
     <Animated.View style={enter}>
       <OptionRow
         title={title}
         description={body}
-        meta={count > 0 ? `${count} cards` : 'Unavailable for these categories'}
+        meta={meta}
         icon={icon}
         accent={accent}
         selected={selected}
-        disabled={count === 0 && !selected}
+        disabled={comingSoon || (count === 0 && !selected)}
+        style={comingSoon ? styles.comingSoon : undefined}
         onPress={onPress}
       />
     </Animated.View>
@@ -213,5 +231,8 @@ function LevelRow({
 const styles = StyleSheet.create({
   list: {
     gap: space[3],
+  },
+  comingSoon: {
+    opacity: 0.72,
   },
 });

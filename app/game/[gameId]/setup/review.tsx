@@ -25,6 +25,7 @@ import {
 } from '../../../../src/content/wouldRather';
 import { countQuizQuestions, getQuizCategories } from '../../../../src/content/quiz';
 import { getGame } from '../../../../src/domain/games';
+import { featureFlags, isContentLevelAvailable } from '../../../../src/config/features';
 import { useBombSession } from '../../../../src/domain/bomb/SessionContext';
 import { useBombSetup } from '../../../../src/domain/bomb/SetupContext';
 import { useSession } from '../../../../src/domain/impostor/SessionContext';
@@ -301,11 +302,16 @@ function categoriesLink(
 }
 
 function contentLink(gameId: string, levels: string[]): QuickLink {
+  const availableLevels = levels.filter(isContentLevelAvailable);
   return {
     icon: 'lock',
     title: 'Content',
-    value: levels.map((level) => level[0]!.toUpperCase() + level.slice(1)).join(' + '),
-    detail: 'Family · Friends · Spicy',
+    value: availableLevels.length
+      ? availableLevels.map((level) => level[0]!.toUpperCase() + level.slice(1)).join(' + ')
+      : 'Choose content',
+    detail: featureFlags.spicyContent
+      ? 'Family · Friends · Spicy'
+      : 'Family · Friends · Spicy coming soon',
     href: `/game/${gameId}/setup/content-level`,
   };
 }

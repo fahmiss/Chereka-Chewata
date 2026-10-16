@@ -6,6 +6,7 @@ import type {
   ContentLevel,
 } from '../domain/bomb/types';
 import type { ContentLanguage } from '../domain/settings/types';
+import { isContentLevelAvailable } from '../config/features';
 import { prioritizeFresh, reportedIds } from '../storage/contentHistory';
 import { matchesContentLanguage } from './localize';
 
@@ -24,7 +25,7 @@ export function getBombCards(options: {
   contentLanguage?: ContentLanguage;
 }): BombCard[] {
   const selectedCategories = new Set(options.categoryIds);
-  const selectedLevels = new Set(options.contentLevels);
+  const selectedLevels = new Set(options.contentLevels.filter(isContentLevelAvailable));
   const language = options.contentLanguage ?? 'en';
 
   return cards.filter(

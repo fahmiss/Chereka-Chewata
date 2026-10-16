@@ -104,6 +104,11 @@ Spicy content must be disabled by default and require an explicit selection.
 Quiz is the explicit exception: it uses knowledge difficulty (Easy / Medium /
 Hard / Mixed) and does not expose maturity levels in setup.
 
+**Public-build override (2026-10-16):** Spicy is temporarily locked as
+“Coming soon” in every social game. Family and Friends remain selectable, and
+Spicy cards are excluded from gameplay until the content is ready for release.
+The opt-in requirement above applies when Spicy is enabled later.
+
 ## 2.5 Common controls
 
 Every gameplay screen should provide:

@@ -1,5 +1,6 @@
 import type { ContentLevel, TabooCard, TabooCategory } from '../domain/taboo/types';
 import type { ContentLanguage } from '../domain/settings/types';
+import { isContentLevelAvailable } from '../config/features';
 import categoriesJson from '../../content/categories/taboo.json';
 import cardsJson from '../../content/taboo/cards.en.json';
 import { prioritizeFresh, recentIds, recordPlayed, reportedIds } from '../storage/contentHistory';
@@ -21,7 +22,7 @@ export function getTabooCards(options: {
   excludeIds?: string[];
 }): TabooCard[] {
   const exclude = new Set(options.excludeIds ?? []);
-  const levels = new Set(options.contentLevels);
+  const levels = new Set(options.contentLevels.filter(isContentLevelAvailable));
   const cats = new Set(options.categoryIds);
   const language = options.contentLanguage ?? 'en';
 
