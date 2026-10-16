@@ -88,6 +88,9 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 - Family and Friends now start selected in all six social games; Quiz keeps its
   separate difficulty defaults, and Spicy stays locked.
 - Made home-screen icon metadata explicit and refreshed its cache references.
+  After an iPhone still previewed the fallback “C”, switched the Apple touch
+  icon link to a new filename (without a query string) to bypass Safari's
+  previously cached icon lookup; the conventional root icon remains available.
   Settings now uses the same moon mascot as Home and previews upcoming Amharic
   menus and cards without an “English build” label.
 
