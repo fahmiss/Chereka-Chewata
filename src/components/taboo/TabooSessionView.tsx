@@ -28,7 +28,7 @@ import { Surface } from '../ui/Surface';
 const ACCENT = color.gameTaboo;
 const LOCK_MS = 420;
 const WARNING_SOUND = require('../../../assets/sounds/taboo-warning.wav');
-const TICK_SOUND = require('../../../assets/sounds/most-likely-count.wav');
+const TICK_SOUND = require('../../../assets/sounds/taboo-last-three.wav');
 const TIME_UP_SOUND = require('../../../assets/sounds/taboo-time-up.wav');
 const CORRECT_SOUND = require('../../../assets/sounds/taboo-correct.wav');
 const VIOLATION_SOUND = require('../../../assets/sounds/taboo-violation.wav');

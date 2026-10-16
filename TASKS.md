@@ -57,6 +57,15 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 
 ## Shipped
 
+### Quiz and Taboo sound pass (2026-10-16)
+
+- Quiz now has its own short correct and incorrect cues instead of borrowing
+  sounds from Taboo and Liar. Both are preloaded for answer feedback.
+- Taboo has a dedicated last-three-seconds tick and refreshed warning,
+  time-up, correct, and violation cues with a softer percussive edge.
+- Shared audio mode setup is cached after the first successful preparation.
+  Bomb and Impostor sound choices are unchanged.
+
 ### Web game-surface and setup polish (2026-10-16)
 
 - Prevented accidental text selection on the web game surface while preserving

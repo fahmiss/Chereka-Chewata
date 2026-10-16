@@ -1,4 +1,5 @@
 import { router } from 'expo-router';
+import { preload } from 'expo-audio';
 import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { getCategoryName } from '../../content/categories';
 import { localizeText } from '../../content/localize';
@@ -25,6 +26,11 @@ import { SecondaryButton } from '../ui/SecondaryButton';
 const ACCENT = color.gameQuiz;
 const STAGES = ['ready', 'question', 'reveal', 'result'] as const;
 const LETTERS = ['A', 'B', 'C', 'D'] as const;
+const CORRECT_SOUND = require('../../../assets/sounds/quiz-correct.wav');
+const INCORRECT_SOUND = require('../../../assets/sounds/quiz-incorrect.wav');
+
+void preload(CORRECT_SOUND);
+void preload(INCORRECT_SOUND);
 
 function leaveQuiz(clear: () => void) {
   router.replace('/home');
@@ -66,8 +72,8 @@ function Question({ session }: { session: QuizSession }) {
   const revealed = session.phase === 'answer_reveal';
   const last = session.questionIndex + 1 >= session.questions.length;
   const enter = useEnterAnimation(session.questionIndex, 12);
-  const playCorrect = useSoundEffect(require('../../../assets/sounds/taboo-correct.wav'), 0.6);
-  const playIncorrect = useSoundEffect(require('../../../assets/sounds/result-loss.wav'), 0.5);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.6);
+  const playIncorrect = useSoundEffect(INCORRECT_SOUND, 0.55);
 
   if (!question) return null;
 

@@ -1,10 +1,18 @@
 import { setAudioModeAsync } from 'expo-audio';
 
-/** Shared configuration for short, foreground-only party-game effects. */
-export async function prepareGameAudio() {
-  await setAudioModeAsync({
-    playsInSilentMode: true,
-    shouldPlayInBackground: false,
-    interruptionMode: 'mixWithOthers',
-  });
+let preparation: Promise<void> | null = null;
+
+/** Configure foreground effects once, and retry if the initial setup fails. */
+export function prepareGameAudio(): Promise<void> {
+  if (!preparation) {
+    preparation = setAudioModeAsync({
+      playsInSilentMode: true,
+      shouldPlayInBackground: false,
+      interruptionMode: 'mixWithOthers',
+    }).catch((error: unknown) => {
+      preparation = null;
+      throw error;
+    });
+  }
+  return preparation;
 }
