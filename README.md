@@ -67,17 +67,19 @@ changing the underlying mechanics.
 
 ## Content library
 
-The current bundled library includes bilingual offline content for all seven games:
+The bundled library includes offline content for all seven games. Earlier cards
+are bilingual; the latest curated additions are English-only while the public
+build remains English-only.
 
 | Game | Cards |
 |---|---:|
-| Impostor | 292 words |
-| Who’s the Liar? | 201 question pairs |
-| Taboo | 370 cards |
-| Who’s Most Likely To | 225 prompts |
-| Would You Rather | 218 dilemmas |
-| Who’s Got the Bomb? | 136 categories |
-| Quiz | 210 questions |
+| Impostor | 318 words |
+| Who’s the Liar? | 216 question pairs |
+| Taboo | 388 cards |
+| Who’s Most Likely To | 250 prompts |
+| Would You Rather | 243 dilemmas |
+| Who’s Got the Bomb? | 146 categories |
+| Quiz | 218 questions |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.

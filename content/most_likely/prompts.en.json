@@ -2503,5 +2503,238 @@
     "content_level": "friends",
     "intensity": "medium",
     "active": true
+  },
+  {
+    "id": "likely_cur_001",
+    "prompt_en": "Who is most likely to refuse to leave a house until the third round of coffee (Berekha) is finished?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_002",
+    "prompt_en": "Who is most likely to give the biggest gursha at the dinner table?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_003",
+    "prompt_en": "Who is most likely to get up first and start doing eskista at a wedding?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_004",
+    "prompt_en": "Who is most likely to argue the longest over paying the bill at a café?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_005",
+    "prompt_en": "Who is most likely to have their phone on 3% battery right now?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_006",
+    "prompt_en": "Who is most likely to bargain for 20 minutes just to save 50 birr?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_007",
+    "prompt_en": "Who is most likely to start studying the night before a huge exam and still pass?",
+    "intensity": "mild",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_008",
+    "prompt_en": "Who is most likely to mute themselves on a work or class call and go back to sleep?",
+    "intensity": "mild",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "likely_cur_009",
+    "prompt_en": "Who is most likely to volunteer to present for the group project without reading the slides first?",
+    "intensity": "mild",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_010",
+    "prompt_en": "Who is most likely to be every Ethiopian auntie and grandma’s favorite?",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_011",
+    "prompt_en": "Who is most likely to cry happy tears at a friend's wedding?",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_012",
+    "prompt_en": "Who is most likely to wear their club's jersey to a formal family gathering?",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_013",
+    "prompt_en": "Who is most likely to pull a hamstring in the first 5 minutes of a casual weekend football game?",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "likely_cur_014",
+    "prompt_en": "Who is most likely to survive the longest if stranded on a desert island?",
+    "intensity": "mild",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_015",
+    "prompt_en": "Who is most likely to pack three suitcases for a two-day trip?",
+    "intensity": "mild",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_016",
+    "prompt_en": "Who is most likely to laugh at the worst possible moment during a serious meeting?",
+    "intensity": "mild",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_017",
+    "prompt_en": "Who is most likely to arrive at a wedding after the food is served?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_018",
+    "prompt_en": "Who is most likely to ask for extra injera at the table?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_019",
+    "prompt_en": "Who is most likely to offer guests food even after they say they are full?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_020",
+    "prompt_en": "Who is most likely to forget where they parked the car?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_021",
+    "prompt_en": "Who is most likely to turn a friendly football match into a serious debate?",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_023",
+    "prompt_en": "Who is most likely to ask for directions and then ignore them?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_024",
+    "prompt_en": "Who is most likely to start cheering before a goal is scored?",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "likely_cur_025",
+    "prompt_en": "Who is most likely to give the longest goodbye at a family visit?",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "likely_cur_026",
+    "prompt_en": "Who is most likely to try every food at a holiday buffet?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   }
 ]

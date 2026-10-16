@@ -2380,5 +2380,167 @@
     "content_level": "friends",
     "difficulty": "easy",
     "active": true
+  },
+  {
+    "id": "liar_cur_001",
+    "main_question_en": "What is the best dish to eat with injera?",
+    "liar_question_en": "What Ethiopian dish takes the longest to cook?",
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_002",
+    "main_question_en": "What is your favorite fruit to get at a local juice house (Espris)?",
+    "liar_question_en": "What fruit is hardest to peel or cut?",
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_003",
+    "main_question_en": "What is your favorite Ethiopian holiday of the year?",
+    "liar_question_en": "Which Ethiopian holiday has the biggest street celebrations?",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_004",
+    "main_question_en": "Which Ethiopian city or town has the best weather?",
+    "liar_question_en": "Which Ethiopian city would you recommend to a first-time tourist?",
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_005",
+    "main_question_en": "Who is the most famous Ethiopian singer of all time?",
+    "liar_question_en": "Which Ethiopian singer do your parents listen to the most?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_006",
+    "main_question_en": "What was the hardest subject for you in high school?",
+    "liar_question_en": "What school subject is the most useful in real life?",
+    "difficulty": "easy",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_007",
+    "main_question_en": "Which family member usually gives the longest advice?",
+    "liar_question_en": "Which family member is the easiest to ask for money or a favor?",
+    "difficulty": "easy",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_008",
+    "main_question_en": "Which Premier League club has the most passionate fans?",
+    "liar_question_en": "Which Premier League club is the most entertaining to watch?",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_009",
+    "main_question_en": "What is the best position on a football pitch?",
+    "liar_question_en": "What is the hardest position to play in football?",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_010",
+    "main_question_en": "What animal are you most afraid of encountering in real life?",
+    "liar_question_en": "What wild animal looks the most dangerous?",
+    "difficulty": "easy",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_011",
+    "main_question_en": "What do you usually bring to a family gathering?",
+    "liar_question_en": "What would you bring to a holiday meal?",
+    "difficulty": "easy",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_012",
+    "main_question_en": "What snack would you buy on a long bus ride?",
+    "liar_question_en": "What snack would you buy during a movie?",
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_013",
+    "main_question_en": "What household chore do you finish first?",
+    "liar_question_en": "What household chore do you mind doing least?",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "liar_cur_014",
+    "main_question_en": "Where do you like to sit at a wedding?",
+    "liar_question_en": "Where do you like to sit at a big family meal?",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_cur_015",
+    "main_question_en": "What do you usually buy from a neighborhood shop?",
+    "liar_question_en": "What would you ask someone to pick up from the shop?",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   }
 ]

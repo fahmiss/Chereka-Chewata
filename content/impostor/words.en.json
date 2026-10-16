@@ -3210,5 +3210,284 @@
     "active": true,
     "word_am": "ድንቅነሽ",
     "hint_am": "ጥንታዊ አጽም"
+  },
+  {
+    "id": "imp_cur_001",
+    "word_en": "Kolo",
+    "hint_en": "Snack",
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_002",
+    "word_en": "Macchiato",
+    "hint_en": "Drink",
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_003",
+    "word_en": "Jebena",
+    "hint_en": "Household Item",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_004",
+    "word_en": "Edir",
+    "hint_en": "Community Tradition",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_005",
+    "word_en": "Power Cut (Mebrat)",
+    "hint_en": "Everyday Situation",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_006",
+    "word_en": "Bajaj",
+    "hint_en": "Transport",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_007",
+    "word_en": "Barbershop",
+    "hint_en": "Local Place",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_008",
+    "word_en": "Lalibela",
+    "hint_en": "Famous Place",
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_009",
+    "word_en": "Lake Tana",
+    "hint_en": "Natural Landmark",
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_010",
+    "word_en": "Hawassa",
+    "hint_en": "City / Destination",
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_011",
+    "word_en": "Teddy Afro",
+    "hint_en": "Musician",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_012",
+    "word_en": "Aster Aweke",
+    "hint_en": "Musician",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_013",
+    "word_en": "Titanic",
+    "hint_en": "Movie",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_014",
+    "word_en": "Final Exam",
+    "hint_en": "School Event",
+    "difficulty": "easy",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_016",
+    "word_en": "Lionel Messi",
+    "hint_en": "Football Player",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_017",
+    "word_en": "Penalty Shootout",
+    "hint_en": "Football Moment",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_018",
+    "word_en": "Arsenal",
+    "hint_en": "Football Club",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_019",
+    "word_en": "AFCON (Africa Cup of Nations)",
+    "hint_en": "Football Tournament",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_020",
+    "word_en": "Haile Gebrselassie",
+    "hint_en": "Athlete",
+    "difficulty": "easy",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_021",
+    "word_en": "Lost Keys",
+    "hint_en": "A small disaster",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "imp_cur_022",
+    "word_en": "School Uniform",
+    "hint_en": "School life",
+    "difficulty": "easy",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_023",
+    "word_en": "Cristiano Ronaldo",
+    "hint_en": "Football legends",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_024",
+    "word_en": "Real Madrid",
+    "hint_en": "Famous clubs",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_025",
+    "word_en": "World Cup Trophy",
+    "hint_en": "Football history",
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "imp_cur_026",
+    "word_en": "Abebe Bikila",
+    "hint_en": "A sporting legend",
+    "difficulty": "medium",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_cur_027",
+    "word_en": "Olympic Medal",
+    "hint_en": "A major achievement",
+    "difficulty": "easy",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
   }
 ]

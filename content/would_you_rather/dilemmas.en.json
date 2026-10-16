@@ -2484,5 +2484,263 @@
     "category_id": "random",
     "content_level": "friends",
     "active": true
+  },
+  {
+    "id": "wyr_cur_001",
+    "option_a_en": "Eat food that is always slightly too spicy (extra mitmita)",
+    "option_b_en": "Eat food that never has any salt or seasoning",
+    "intensity": "mild",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_002",
+    "option_a_en": "Attend a massive 500-person Ethiopian wedding every weekend",
+    "option_b_en": "Host 15 relatives at your house every holiday",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_003",
+    "option_a_en": "Have to dance eskista in front of 200 strangers",
+    "option_b_en": "Have to sing a traditional song solo with no music",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_004",
+    "option_a_en": "Have the electricity go out for 3 hours every evening",
+    "option_b_en": "Have the water go out for a full day once a week",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_005",
+    "option_a_en": "Spend a relaxing week by the lake in Hawassa",
+    "option_b_en": "Spend an adventure week hiking in the Simien Mountains",
+    "intensity": "mild",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_006",
+    "option_a_en": "Travel to every country in Africa for free",
+    "option_b_en": "Travel to 5 countries of your choice outside Africa for free",
+    "intensity": "mild",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_007",
+    "option_a_en": "Always have a middle seat on a 10-hour flight",
+    "option_b_en": "Have a 12-hour airport layover with a window seat",
+    "intensity": "mild",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_008",
+    "option_a_en": "Give up TikTok and Instagram for 6 months",
+    "option_b_en": "Give up YouTube and Netflix for 6 months",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_009",
+    "option_a_en": "Have a job that pays double but has a terrible boss",
+    "option_b_en": "Have a job with average pay and the best coworkers",
+    "intensity": "mild",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_010",
+    "option_a_en": "Take one huge 3-hour oral exam",
+    "option_b_en": "Write five 10-page research papers",
+    "intensity": "mild",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_011",
+    "option_a_en": "Accidentally call your boss \"Mom/Dad\" in a meeting",
+    "option_b_en": "Accidentally like a 3-year-old photo while stalking someone's profile",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_012",
+    "option_a_en": "See your favorite club win the Champions League once",
+    "option_b_en": "See your favorite club win the league title three years in a row",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_013",
+    "option_a_en": "Watch every big football match alone with perfect TV quality",
+    "option_b_en": "Watch at a crowded local dstv/football hall where the screen freezes before every goal",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_014",
+    "option_a_en": "Have blazing sprint speed like Usain Bolt",
+    "option_b_en": "Have endless stamina like Haile Gebrselassie",
+    "intensity": "mild",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_015",
+    "option_a_en": "Be able to speak every language in the world fluently",
+    "option_b_en": "Be able to play every musical instrument masterfully",
+    "intensity": "mild",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_016",
+    "option_a_en": "Know the exact date of every future milestone in your life",
+    "option_b_en": "Be able to go back and relive one year of your past",
+    "intensity": "mild",
+    "category_id": "random",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_017",
+    "option_a_en": "Spend New Year with a big family gathering",
+    "option_b_en": "Spend New Year on a quiet trip",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_018",
+    "option_a_en": "Always get the window seat on a bus",
+    "option_b_en": "Always get extra legroom on a bus",
+    "intensity": "mild",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_019",
+    "option_a_en": "Have free movie tickets for a year",
+    "option_b_en": "Have free concert tickets for a year",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_020",
+    "option_a_en": "Watch a World Cup final live",
+    "option_b_en": "Watch a Champions League final live",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_021",
+    "option_a_en": "Play football with Messi",
+    "option_b_en": "Play football with Ronaldo",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_022",
+    "option_a_en": "Be captain of a football team",
+    "option_b_en": "Be its top goalscorer",
+    "intensity": "mild",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_023",
+    "option_a_en": "Always host family dinners",
+    "option_b_en": "Always travel to family dinners",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_cur_024",
+    "option_a_en": "Eat your favorite meal cold",
+    "option_b_en": "Eat your second favorite meal hot",
+    "intensity": "mild",
+    "category_id": "food_and_drink",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_cur_025",
+    "option_a_en": "Give a speech at a wedding",
+    "option_b_en": "Lead the dancing at a wedding",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
   }
 ]

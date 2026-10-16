@@ -1173,5 +1173,90 @@
       "Dating"
     ],
     "active": true
+  },
+  {
+    "id": "bomb_cur_001",
+    "prompt_en": "Common Ethiopian first names",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_cur_002",
+    "prompt_en": "Fasting (Tsom) foods in Ethiopia",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_cur_003",
+    "prompt_en": "Football clubs that have won the UEFA Champions League",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_cur_004",
+    "prompt_en": "Famous Ethiopian long-distance runners",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_cur_005",
+    "prompt_en": "Things people do when the Wi-Fi or power goes out",
+    "category_id": "everyday_life",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_cur_006",
+    "prompt_en": "Jobs where people wear a uniform",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_cur_007",
+    "prompt_en": "Things sold in a local market",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_cur_008",
+    "prompt_en": "Players who have played in a World Cup",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_cur_009",
+    "prompt_en": "Famous movies",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_cur_010",
+    "prompt_en": "Songs people dance to at parties",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true
   }
 ]

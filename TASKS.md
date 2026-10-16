@@ -15,6 +15,8 @@ Every deck's Amharic is best-effort, not native-reviewed — including the 164
 taxonomy-fill items (2026-08-15), the 150 new Quiz questions, and the 82 new
 Bomb prompts (2026-10-15). Worth one pass by a native speaker before a store
 launch; Quiz answers and explanations are the most fact-sensitive.
+The 127 curated English-only cards added on 2026-10-16 also need translation
+and native review before Amharic or Mixed content returns.
 
 ### Shared UI kit extraction (2026-08-04)
 Primary/secondary buttons and setup chrome exist. Extract player chips, toggle,
@@ -56,6 +58,19 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Curated English content across all seven games (2026-10-16)
+
+- Reviewed two external candidate batches (382 cards), skipped exact and
+  near-duplicate concepts plus weak game fits, and added 127 English-only cards:
+  Impostor 26, Liar 15, Taboo 18, Most Likely 25, Would You Rather 25,
+  Bomb 10, and Quiz 8.
+- Kept current category IDs and Family/Friends-only social levels. Roughly
+  half the additions are Ethiopia-connected; football additions are mainly
+  global. Verified retained Quiz answers against authoritative sources and
+  recorded source links and review dates.
+- No new category UI was added; proposed Music, Movies & TV, and Celebrations
+  categories remain ideas for later review.
 
 ### Quiz and Taboo sound pass (2026-10-16)
 

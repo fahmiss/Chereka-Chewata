@@ -8730,5 +8730,284 @@
     "content_level": "friends",
     "difficulty": "hard",
     "active": true
+  },
+  {
+    "id": "taboo_cur_001",
+    "target_en": "Ice Cream",
+    "forbidden_en": [
+      "Cold",
+      "Sweet",
+      "Cone",
+      "Melt"
+    ],
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_002",
+    "target_en": "Gursha",
+    "forbidden_en": [
+      "Feed",
+      "Mouth",
+      "Hand",
+      "Bite"
+    ],
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_003",
+    "target_en": "Equb",
+    "forbidden_en": [
+      "Money",
+      "Save",
+      "Group",
+      "Turn"
+    ],
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_004",
+    "target_en": "Blue-and-White Taxi",
+    "forbidden_en": [
+      "Minibus",
+      "Weyala",
+      "Transport",
+      "Ride"
+    ],
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_005",
+    "target_en": "Entoto",
+    "forbidden_en": [
+      "Mountain",
+      "Eucalyptus",
+      "Addis",
+      "View"
+    ],
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_006",
+    "target_en": "Mulatu Astatke",
+    "forbidden_en": [
+      "Ethio-Jazz",
+      "Music",
+      "Instrument",
+      "Legend"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_007",
+    "target_en": "YouTube",
+    "forbidden_en": [
+      "Video",
+      "Watch",
+      "Subscribe",
+      "Channel"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_008",
+    "target_en": "Cristiano Ronaldo",
+    "forbidden_en": [
+      "Portugal",
+      "Real Madrid",
+      "Number 7",
+      "Siuuu"
+    ],
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_009",
+    "target_en": "Champions League",
+    "forbidden_en": [
+      "Europe",
+      "Trophy",
+      "Tuesday",
+      "UEFA"
+    ],
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_010",
+    "target_en": "Red Card",
+    "forbidden_en": [
+      "Referee",
+      "Foul",
+      "Sent Off",
+      "Yellow"
+    ],
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_011",
+    "target_en": "Kenenisa Bekele",
+    "forbidden_en": [
+      "Runner",
+      "Olympic",
+      "Gold",
+      "Track"
+    ],
+    "difficulty": "easy",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_012",
+    "target_en": "Bajaj",
+    "forbidden_en": [
+      "three",
+      "wheel",
+      "taxi",
+      "ride"
+    ],
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_013",
+    "target_en": "Teddy Afro",
+    "forbidden_en": [
+      "singer",
+      "music",
+      "Ethiopian",
+      "song"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_014",
+    "target_en": "School Uniform",
+    "forbidden_en": [
+      "student",
+      "clothes",
+      "class",
+      "wear"
+    ],
+    "difficulty": "easy",
+    "category_id": "school_and_work",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_cur_015",
+    "target_en": "Lionel Messi",
+    "forbidden_en": [
+      "Argentina",
+      "Barcelona",
+      "football",
+      "Ronaldo"
+    ],
+    "difficulty": "easy",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_016",
+    "target_en": "Passport",
+    "forbidden_en": [
+      "travel",
+      "country",
+      "airport",
+      "document"
+    ],
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_017",
+    "target_en": "Birthday Cake",
+    "forbidden_en": [
+      "candles",
+      "party",
+      "sweet",
+      "slice"
+    ],
+    "difficulty": "easy",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "taboo_cur_018",
+    "target_en": "Spider-Man",
+    "forbidden_en": [
+      "web",
+      "hero",
+      "Marvel",
+      "Peter"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
   }
 ]
