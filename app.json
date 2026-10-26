@@ -38,7 +38,13 @@
           "backgroundColor": "#0D0B1C"
         }
       ],
-      "expo-audio"
+      "expo-audio",
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Chereka Chewata uses motion to detect forehead tilts in Gimbar."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

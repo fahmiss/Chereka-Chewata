@@ -13,6 +13,11 @@ import { useMostLikelySession } from '../../src/domain/mostLikely/SessionContext
 import { useTabooSession } from '../../src/domain/taboo/SessionContext';
 import { useWouldRatherSession } from '../../src/domain/wouldRather/SessionContext';
 import { useQuizSession } from '../../src/domain/quiz/SessionContext';
+import { useGimbarSession } from '../../src/domain/gimbar/context';
+import { useInsiderSession } from '../../src/domain/insider/context';
+import { useMesobSession } from '../../src/domain/mesob/context';
+import { useMizanSession } from '../../src/domain/mizan/context';
+import { useWinkKillerSession } from '../../src/domain/winkKiller/context';
 import type { GameId } from '../../src/domain/games';
 import { useT } from '../../src/i18n';
 import { saveLastPlayedGame } from '../../src/storage/lastPlayedGame';
@@ -55,6 +60,32 @@ const QuizSessionView = lazy(() =>
   })),
 );
 
+const GimbarSessionView = lazy(() =>
+  import('../../src/components/gimbar/GimbarSessionView').then((module) => ({
+    default: module.GimbarSessionView,
+  })),
+);
+const MesobSessionView = lazy(() =>
+  import('../../src/components/mesob/MesobSessionView').then((module) => ({
+    default: module.MesobSessionView,
+  })),
+);
+const MizanSessionView = lazy(() =>
+  import('../../src/components/mizan/MizanSessionView').then((module) => ({
+    default: module.MizanSessionView,
+  })),
+);
+const WinkKillerSessionView = lazy(() =>
+  import('../../src/components/winkKiller/WinkKillerSessionView').then((module) => ({
+    default: module.WinkKillerSessionView,
+  })),
+);
+const InsiderSessionView = lazy(() =>
+  import('../../src/components/insider/InsiderSessionView').then((module) => ({
+    default: module.InsiderSessionView,
+  })),
+);
+
 const SESSION_RULES: Record<GameId, string[]> = {
   impostor: [
     'Everyone sees the same secret word except the Impostor.',
@@ -90,6 +121,31 @@ const SESSION_RULES: Record<GameId, string[]> = {
     'Choose one of four answers before revealing the result.',
     'Pass & Play is casual; Compete rotates named players and keeps score.',
     'Read the explanation, then continue to the next question.',
+  ],
+  gimbar: [
+    'The guesser holds the phone sideways on their forehead, screen facing the room.',
+    'Everyone else acts, hums and describes the card without saying it.',
+    'Tilt down (or tap right) for got it, tilt up (or tap left) to pass. Most cards wins.',
+  ],
+  mesob: [
+    'Everyone secretly writes slips for the mesob. Two teams take timed turns.',
+    'Round 1: describe freely. Round 2: one word only. Round 3: act it out, no sounds.',
+    'The same slips come back every round. Most slips guessed over three rounds wins.',
+  ],
+  mizan: [
+    'The psychic privately sees where a hidden target sits between two opposites.',
+    'They give one clue out loud; the guessers drag the needle to match.',
+    'Closer earns more: 4, 3 or 2 points. In Teams, the other side can steal 1 with a left/right call.',
+  ],
+  wink_killer: [
+    'Everyone secretly checks their role. One player is the Killer.',
+    'The Killer winks at victims; a winked player counts to five, then falls.',
+    'Accuse the Killer to win. A wrong accuser is out. With a Detective, only they accuse.',
+  ],
+  insider: [
+    'The Master knows the word and answers only Yes, No or I don’t know.',
+    'Find the word with yes/no questions before time runs out, or everyone loses.',
+    'Then vote: one player secretly knew the word all along. Catch the Insider.',
   ],
 };
 
@@ -132,6 +188,11 @@ export default function SessionScreen() {
   const wouldRather = useWouldRatherSession();
   const bomb = useBombSession();
   const quiz = useQuizSession();
+  const gimbar = useGimbarSession();
+  const mesob = useMesobSession();
+  const mizan = useMizanSession();
+  const winkKiller = useWinkKillerSession();
+  const insider = useInsiderSession();
   const { t, uiFont } = useT();
   const font = uiFont ? { fontFamily: uiFont } : null;
 
@@ -194,6 +255,46 @@ export default function SessionScreen() {
       <QuizSessionView session={quiz.session} />,
     );
   }
+  if (gimbar.session && gimbar.session.sessionId === sessionId) {
+    return withSessionControls(
+      'gimbar',
+      gimbar.session.setup,
+      gimbar.startSession,
+      <GimbarSessionView session={gimbar.session} />,
+    );
+  }
+  if (mesob.session && mesob.session.sessionId === sessionId) {
+    return withSessionControls(
+      'mesob',
+      mesob.session.setup,
+      mesob.startSession,
+      <MesobSessionView session={mesob.session} />,
+    );
+  }
+  if (mizan.session && mizan.session.sessionId === sessionId) {
+    return withSessionControls(
+      'mizan',
+      mizan.session.setup,
+      mizan.startSession,
+      <MizanSessionView session={mizan.session} />,
+    );
+  }
+  if (winkKiller.session && winkKiller.session.sessionId === sessionId) {
+    return withSessionControls(
+      'wink_killer',
+      winkKiller.session.setup,
+      winkKiller.startSession,
+      <WinkKillerSessionView session={winkKiller.session} />,
+    );
+  }
+  if (insider.session && insider.session.sessionId === sessionId) {
+    return withSessionControls(
+      'insider',
+      insider.session.setup,
+      insider.startSession,
+      <InsiderSessionView session={insider.session} />,
+    );
+  }
 
   return (
     <Screen accent={color.brandPrimary} style={styles.fallback}>
@@ -213,6 +314,11 @@ export default function SessionScreen() {
           wouldRather.clearSession();
           bomb.clearSession();
           quiz.clearSession();
+          gimbar.clearSession();
+          mesob.clearSession();
+          mizan.clearSession();
+          winkKiller.clearSession();
+          insider.clearSession();
           router.replace('/home');
         }}
       />

@@ -1,0 +1,552 @@
+[
+  {
+    "id": "gimbar_act_001",
+    "text_en": "Coffee ceremony",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_002",
+    "text_en": "Eskista dance",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_003",
+    "text_en": "Meskel bonfire",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_004",
+    "text_en": "Timket celebration",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_005",
+    "text_en": "Giving gursha",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_006",
+    "text_en": "Wrapping a netela",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_007",
+    "text_en": "Playing the krar",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_008",
+    "text_en": "Playing the kebero drum",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_009",
+    "text_en": "Roasting coffee beans",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_010",
+    "text_en": "Haggling at Merkato",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_011",
+    "text_en": "Burning incense",
+    "category_id": "ethiopia_and_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_012",
+    "text_en": "Making injera",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_013",
+    "text_en": "Eating with your hands",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_014",
+    "text_en": "Pouring buna from a jebena",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_015",
+    "text_en": "Too much mitmita",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_016",
+    "text_en": "Sharing one big plate",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_017",
+    "text_en": "Blowing on hot shiro",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_018",
+    "text_en": "Peeling an orange",
+    "category_id": "food_and_drink",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_019",
+    "text_en": "Waiting for a minibus",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_020",
+    "text_en": "Minibus conductor calling stops",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_021",
+    "text_en": "Power cut at dinner",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_022",
+    "text_en": "Phone battery dying",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_023",
+    "text_en": "Hanging laundry",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_024",
+    "text_en": "Ironing a shirt",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_025",
+    "text_en": "Looking for lost keys",
+    "category_id": "everyday_life",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_026",
+    "text_en": "Long-distance runner",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_027",
+    "text_en": "Football goal celebration",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_028",
+    "text_en": "Penalty kick",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_029",
+    "text_en": "Goalkeeper diving",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_030",
+    "text_en": "Table tennis",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_031",
+    "text_en": "Cycling uphill",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_032",
+    "text_en": "Basketball dunk",
+    "category_id": "sports",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_033",
+    "text_en": "Grandma giving a blessing",
+    "category_id": "people_and_relationships",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_034",
+    "text_en": "Proud parent at graduation",
+    "category_id": "people_and_relationships",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_035",
+    "text_en": "Shy guest refusing food",
+    "category_id": "people_and_relationships",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_036",
+    "text_en": "Neighbour borrowing sugar",
+    "category_id": "people_and_relationships",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_037",
+    "text_en": "Wedding guest dancing",
+    "category_id": "people_and_relationships",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_038",
+    "text_en": "Herding goats",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_039",
+    "text_en": "Donkey carrying a load",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_040",
+    "text_en": "Gelada monkey",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_041",
+    "text_en": "Hyena laughing",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_042",
+    "text_en": "Rooster at dawn",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_043",
+    "text_en": "Lion roaring",
+    "category_id": "animals_and_nature",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_044",
+    "text_en": "Teacher writing on the board",
+    "category_id": "school_and_work",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_045",
+    "text_en": "Exam panic",
+    "category_id": "school_and_work",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_046",
+    "text_en": "Traffic police officer",
+    "category_id": "school_and_work",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_047",
+    "text_en": "Shoe shiner",
+    "category_id": "school_and_work",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_048",
+    "text_en": "Taking a selfie",
+    "category_id": "entertainment_pop_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_049",
+    "text_en": "Singing karaoke",
+    "category_id": "entertainment_pop_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_050",
+    "text_en": "Dancing at a concert",
+    "category_id": "entertainment_pop_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_051",
+    "text_en": "Watching a scary movie",
+    "category_id": "entertainment_pop_culture",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_052",
+    "text_en": "Brushing your teeth",
+    "category_id": "random",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_053",
+    "text_en": "Sneezing",
+    "category_id": "random",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_054",
+    "text_en": "Slipping on a banana peel",
+    "category_id": "random",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_act_055",
+    "text_en": "Carrying a heavy suitcase",
+    "category_id": "random",
+    "tags": [
+      "Act it out"
+    ],
+    "content_level": "family",
+    "active": true
+  }
+]

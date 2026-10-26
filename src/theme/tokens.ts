@@ -24,6 +24,11 @@ export const color = {
   gameWouldRather: '#4FA3FF',
   gameBomb: '#FF7A59',
   gameQuiz: '#E06FD1',
+  gameGimbar: '#FF8FB1',
+  gameMesob: '#D9A066',
+  gameMizan: '#2EC4C4',
+  gameWinkKiller: '#B8E05A',
+  gameInsider: '#9DB4FF',
 } as const;
 
 export const font = {
@@ -113,7 +118,12 @@ export type GameAccentKey =
   | 'most_likely'
   | 'would_you_rather'
   | 'bomb'
-  | 'quiz';
+  | 'quiz'
+  | 'gimbar'
+  | 'mesob'
+  | 'mizan'
+  | 'wink_killer'
+  | 'insider';
 
 export const gameAccent: Record<GameAccentKey, string> = {
   impostor: color.gameImpostor,
@@ -123,4 +133,9 @@ export const gameAccent: Record<GameAccentKey, string> = {
   would_you_rather: color.gameWouldRather,
   bomb: color.gameBomb,
   quiz: color.gameQuiz,
+  gimbar: color.gameGimbar,
+  mesob: color.gameMesob,
+  mizan: color.gameMizan,
+  wink_killer: color.gameWinkKiller,
+  insider: color.gameInsider,
 };

@@ -34,6 +34,7 @@ import { WouldRatherSessionProvider } from '../src/domain/wouldRather/SessionCon
 import { WouldRatherSetupProvider } from '../src/domain/wouldRather/SetupContext';
 import { QuizSessionProvider } from '../src/domain/quiz/SessionContext';
 import { QuizSetupProvider } from '../src/domain/quiz/SetupContext';
+import { ExtraGameProviders } from '../src/domain/extraGameProviders';
 import { color } from '../src/theme/tokens';
 import { hydrateContentHistory } from '../src/storage/contentHistory';
 
@@ -100,6 +101,7 @@ export default function RootLayout() {
                             <WouldRatherSessionProvider>
                               <BombSessionProvider>
                               <QuizSessionProvider>
+                              <ExtraGameProviders>
                                 <StatusBar style="light" />
                                 <Stack
                                   screenOptions={{
@@ -115,6 +117,7 @@ export default function RootLayout() {
                                     options={{ animation: 'fade', gestureEnabled: false }}
                                   />
                                 </Stack>
+                              </ExtraGameProviders>
                               </QuizSessionProvider>
                               </BombSessionProvider>
                             </WouldRatherSessionProvider>

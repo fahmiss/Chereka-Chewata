@@ -27,7 +27,7 @@ connection to start; offline support is currently provided by native builds.
 
 ## Current status
 
-- All seven games are playable end to end.
+- All twelve games are playable end to end.
 - Public interface and gameplay content are currently English-only.
 - Family and Friends start selected in social games; Spicy is shown as Coming soon.
 - Amharic and Mixed decks remain in the repository behind feature flags for a later native-reviewed release.
@@ -46,6 +46,11 @@ connection to start; offline support is currently provided by native builds.
 | **Who’s Got the Bomb?** | Give category answers while passing a hidden fuse | 2–15 | Yes |
 | **Would You Rather** | Choose between two difficult options and debate | 2+ | No |
 | **Quiz** | Four-choice trivia in casual Pass & Play or scored Compete mode | 2+ | Compete only |
+| **Gimbar** | Heads-up charades: phone on the forehead, tilt or tap to score | 2–20 | Yes |
+| **Mesob** | Three-round Fishbowl with slips the players write | 4–20 | Teams |
+| **Mizan** | Spectrum guessing: one clue, one hidden point on a dial | 2–20 | Yes |
+| **Wink Killer** | The phone deals a secret Killer who strikes with a wink | 4–30 | Yes |
+| **Insider** | Yes/no questions against the clock, then catch who already knew | 4–12 | Yes |
 
 The familiar game names are temporary. Localized names can land later without
 changing the underlying mechanics.
@@ -67,7 +72,7 @@ changing the underlying mechanics.
 
 ## Content library
 
-The bundled library includes offline content for all seven games. Earlier cards
+The bundled library includes offline content for every game. Earlier cards
 are bilingual; the latest curated additions are English-only while the public
 build remains English-only.
 
@@ -80,6 +85,11 @@ build remains English-only.
 | Would You Rather | 243 dilemmas |
 | Who’s Got the Bomb? | 146 categories |
 | Quiz | 218 questions |
+| Gimbar | 55 act-it-out cards + every Taboo and Impostor word (582 unique) |
+| Mesob | Player-written slips; optional top-up from the Gimbar deck |
+| Mizan | 77 spectrum cards |
+| Wink Killer | No cards — roles only |
+| Insider | Impostor word deck |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.

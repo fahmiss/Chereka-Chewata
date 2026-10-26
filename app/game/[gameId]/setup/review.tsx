@@ -44,6 +44,26 @@ import type { QuizDifficultyFilter } from '../../../../src/domain/quiz/types';
 import { useSettings } from '../../../../src/domain/settings/SettingsContext';
 import { saveLastPlayedGame } from '../../../../src/storage/lastPlayedGame';
 import { color } from '../../../../src/theme/tokens';
+import { countGimbarCards, getGimbarCategories } from '../../../../src/content/gimbar';
+import { countInsiderWords } from '../../../../src/content/insider';
+import { countMizanSpectra } from '../../../../src/content/mizan';
+import {
+  GIMBAR_TILT_SUPPORTED,
+  useGimbarSession,
+  useGimbarSetup,
+} from '../../../../src/domain/gimbar/context';
+import { useInsiderSession, useInsiderSetup } from '../../../../src/domain/insider/context';
+import { useMesobSession, useMesobSetup } from '../../../../src/domain/mesob/context';
+import { useMizanSession, useMizanSetup } from '../../../../src/domain/mizan/context';
+import { MIZAN_TEAMS_MIN_PLAYERS, type MizanMode } from '../../../../src/domain/mizan/types';
+import {
+  useWinkKillerSession,
+  useWinkKillerSetup,
+} from '../../../../src/domain/winkKiller/context';
+import {
+  WINK_DETECTIVE_MIN_PLAYERS,
+  WINK_TWO_KILLERS_MIN_PLAYERS,
+} from '../../../../src/domain/winkKiller/types';
 
 type Player = { id: string; displayName: string };
 
@@ -57,6 +77,11 @@ export default function ReviewScreen() {
   if (id === 'would_you_rather') return <WouldRatherQuickSetup gameId={id} />;
   if (id === 'bomb') return <BombQuickSetup gameId={id} />;
   if (id === 'quiz') return <QuizQuickSetup gameId={id} />;
+  if (id === 'gimbar') return <GimbarQuickSetup gameId={id} />;
+  if (id === 'mesob') return <MesobQuickSetup gameId={id} />;
+  if (id === 'mizan') return <MizanQuickSetup gameId={id} />;
+  if (id === 'wink_killer') return <WinkKillerQuickSetup gameId={id} />;
+  if (id === 'insider') return <InsiderQuickSetup gameId={id} />;
   return <ImpostorQuickSetup gameId={id} />;
 }
 
@@ -76,8 +101,27 @@ function useStartGame() {
   const wouldRather = useWouldRatherSession();
   const bomb = useBombSession();
   const quiz = useQuizSession();
+  const gimbar = useGimbarSession();
+  const mesob = useMesobSession();
+  const mizan = useMizanSession();
+  const winkKiller = useWinkKillerSession();
+  const insider = useInsiderSession();
 
-  return (keep: 'impostor' | 'liar' | 'taboo' | 'mostLikely' | 'wouldRather' | 'bomb' | 'quiz') => {
+  return (
+    keep:
+      | 'impostor'
+      | 'liar'
+      | 'taboo'
+      | 'mostLikely'
+      | 'wouldRather'
+      | 'bomb'
+      | 'quiz'
+      | 'gimbar'
+      | 'mesob'
+      | 'mizan'
+      | 'winkKiller'
+      | 'insider',
+  ) => {
     if (keep !== 'impostor') impostor.clearSession();
     if (keep !== 'liar') liar.clearSession();
     if (keep !== 'taboo') taboo.clearSession();
@@ -85,6 +129,11 @@ function useStartGame() {
     if (keep !== 'wouldRather') wouldRather.clearSession();
     if (keep !== 'bomb') bomb.clearSession();
     if (keep !== 'quiz') quiz.clearSession();
+    if (keep !== 'gimbar') gimbar.clearSession();
+    if (keep !== 'mesob') mesob.clearSession();
+    if (keep !== 'mizan') mizan.clearSession();
+    if (keep !== 'winkKiller') winkKiller.clearSession();
+    if (keep !== 'insider') insider.clearSession();
   };
 }
 
@@ -800,6 +849,470 @@ function WouldRatherQuickSetup({ gameId }: { gameId: string }) {
               ]}
             />
           </QuickControlBlock>
+        </QuickControls>
+      }
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Gimbar
+ * ------------------------------------------------------------------ */
+
+function GimbarQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameGimbar;
+  const { setup, validation, persistPlayers, patchOptions } = useGimbarSetup();
+  const { startSession, clearError } = useGimbarSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+
+  const totalCategories = getGimbarCategories().length;
+  const cardCount = countGimbarCards({
+    categoryIds: setup.categoryIds,
+    contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart =
+    validation.playersOk &&
+    validation.categoriesOk &&
+    validation.contentOk &&
+    validation.spicyOk &&
+    cardCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('gimbar');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('gimbar');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Gimbar"
+      subtitle="Phone on the forehead, friends act it out. Every player takes a turn guessing."
+      canStart={canStart}
+      footerNote={startNote(canStart, cardCount)}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => {
+        void onStart();
+      }}
+      links={[
+        playersLink(gameId, setup.players),
+        categoriesLink(gameId, setup.categoryIds.length, totalCategories, cardCount, 'cards'),
+        contentLink(gameId, setup.contentLevels),
+      ]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock icon="clock" title="Turn length" accent={accent}>
+            <Segmented<number>
+              accent={accent}
+              value={setup.turnSeconds}
+              onChange={(turnSeconds) => patchOptions({ turnSeconds })}
+              options={[
+                { value: 45, label: '45s' },
+                { value: 60, label: '60s' },
+                { value: 90, label: '90s' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <QuickControlBlock
+            icon="refresh"
+            title="Turns each"
+            hint="How many times every player guesses."
+            accent={accent}
+          >
+            <Segmented<number>
+              accent={accent}
+              value={setup.roundsPerPlayer}
+              onChange={(roundsPerPlayer) => patchOptions({ roundsPerPlayer })}
+              options={[
+                { value: 1, label: '1' },
+                { value: 2, label: '2' },
+                { value: 3, label: '3' },
+              ]}
+            />
+          </QuickControlBlock>
+          {GIMBAR_TILT_SUPPORTED ? (
+            <>
+              <QuickDivider />
+              <Toggle
+                accent={accent}
+                label="Tilt to answer"
+                hint="Off: tap the left or right half of the screen instead."
+                value={setup.control === 'tilt'}
+                onPress={() =>
+                  patchOptions({ control: setup.control === 'tilt' ? 'tap' : 'tilt' })
+                }
+              />
+            </>
+          ) : null}
+        </QuickControls>
+      }
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Mesob
+ * ------------------------------------------------------------------ */
+
+function MesobQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameMesob;
+  const { setup, validation, persistPlayers, patchOptions } = useMesobSetup();
+  const { startSession, clearError } = useMesobSession();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+  const canStart = validation.playersOk && validation.contentOk && validation.spicyOk;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('mesob');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('mesob');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Mesob"
+      subtitle="Two random teams. Everyone writes slips in private, then three rounds with the same slips."
+      canStart={canStart}
+      footerNote={canStart ? undefined : 'Add 4–20 named players before starting.'}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => {
+        void onStart();
+      }}
+      links={[playersLink(gameId, setup.players), contentLink(gameId, setup.contentLevels)]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="pencil"
+            title="Slips each"
+            hint="Each player writes this many names or things."
+            accent={accent}
+          >
+            <Segmented<number>
+              accent={accent}
+              value={setup.wordsPerPlayer}
+              onChange={(wordsPerPlayer) => patchOptions({ wordsPerPlayer })}
+              options={[
+                { value: 2, label: '2' },
+                { value: 3, label: '3' },
+                { value: 4, label: '4' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <QuickControlBlock icon="clock" title="Turn length" accent={accent}>
+            <Segmented<number>
+              accent={accent}
+              value={setup.turnSeconds}
+              onChange={(turnSeconds) => patchOptions({ turnSeconds })}
+              options={[
+                { value: 30, label: '30s' },
+                { value: 45, label: '45s' },
+                { value: 60, label: '60s' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <Toggle
+            accent={accent}
+            label="Add deck slips"
+            hint="Two extra slips per player from the Gimbar deck, for groups short on ideas."
+            value={setup.deckTopUp}
+            onPress={() => patchOptions({ deckTopUp: !setup.deckTopUp })}
+          />
+        </QuickControls>
+      }
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Mizan
+ * ------------------------------------------------------------------ */
+
+function MizanQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameMizan;
+  const { setup, validation, persistPlayers, patchOptions } = useMizanSetup();
+  const { startSession, clearError } = useMizanSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+
+  const teamsAllowed = setup.players.length >= MIZAN_TEAMS_MIN_PLAYERS;
+  const mode: MizanMode = teamsAllowed ? setup.mode : 'together';
+  const cardCount = countMizanSpectra({
+    contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart =
+    validation.playersOk && validation.contentOk && validation.spicyOk && cardCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('mizan');
+    await persistPlayers();
+    const result = startSession({ ...setup, mode });
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('mizan');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Mizan"
+      subtitle="One clue, one hidden point between two opposites. Read each other's minds."
+      canStart={canStart}
+      footerNote={startNote(canStart, cardCount)}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => {
+        void onStart();
+      }}
+      links={[playersLink(gameId, setup.players), contentLink(gameId, setup.contentLevels)]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="users"
+            title="Mode"
+            hint={
+              teamsAllowed
+                ? 'Teams race to a score. Together plays a set of rounds as one side.'
+                : 'Teams unlock with 4 or more players.'
+            }
+            accent={accent}
+          >
+            <Segmented<MizanMode>
+              accent={accent}
+              value={mode}
+              onChange={(next) => patchOptions({ mode: next })}
+              options={[
+                { value: 'teams', label: 'Teams', disabled: !teamsAllowed },
+                { value: 'together', label: 'Together' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          {mode === 'teams' ? (
+            <QuickControlBlock icon="trophy" title="Play to" accent={accent}>
+              <Segmented<number>
+                accent={accent}
+                value={setup.pointsToWin}
+                onChange={(pointsToWin) => patchOptions({ pointsToWin })}
+                options={[
+                  { value: 8, label: '8 pts' },
+                  { value: 10, label: '10 pts' },
+                  { value: 15, label: '15 pts' },
+                ]}
+              />
+            </QuickControlBlock>
+          ) : (
+            <QuickControlBlock icon="layers" title="Rounds" accent={accent}>
+              <Segmented<number>
+                accent={accent}
+                value={setup.rounds}
+                onChange={(rounds) => patchOptions({ rounds })}
+                options={[
+                  { value: 5, label: '5' },
+                  { value: 8, label: '8' },
+                  { value: 12, label: '12' },
+                ]}
+              />
+            </QuickControlBlock>
+          )}
+        </QuickControls>
+      }
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Wink Killer
+ * ------------------------------------------------------------------ */
+
+function WinkKillerQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameWinkKiller;
+  const { setup, validation, persistPlayers, patchOptions } = useWinkKillerSetup();
+  const { startSession, clearError } = useWinkKillerSession();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+  const twoAllowed = setup.players.length >= WINK_TWO_KILLERS_MIN_PLAYERS;
+  const detectiveAllowed = setup.players.length >= WINK_DETECTIVE_MIN_PLAYERS;
+  const canStart = validation.playersOk;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('winkKiller');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('wink_killer');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Wink Killer"
+      subtitle="Sit in a circle where everyone can see each other's eyes. The phone deals secret roles."
+      canStart={canStart}
+      footerNote={canStart ? undefined : 'Add 4–30 named players before starting.'}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => {
+        void onStart();
+      }}
+      links={[playersLink(gameId, setup.players)]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="eyeOff"
+            title="Killers"
+            hint={
+              twoAllowed ? 'Two killers know each other.' : 'Two killers unlock with 8 or more players.'
+            }
+            accent={accent}
+          >
+            <Segmented<1 | 2>
+              accent={accent}
+              value={twoAllowed ? setup.killerCount : 1}
+              onChange={(killerCount) => patchOptions({ killerCount })}
+              options={[
+                { value: 1, label: '1 Killer' },
+                { value: 2, label: '2 Killers', disabled: !twoAllowed },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <Toggle
+            accent={accent}
+            label="Public Detective"
+            hint={
+              detectiveAllowed
+                ? 'One known Detective makes every accusation, with 3 guesses.'
+                : 'Needs 5 or more players. Off: anyone may accuse.'
+            }
+            value={detectiveAllowed && setup.detective}
+            onPress={() => {
+              if (detectiveAllowed) patchOptions({ detective: !setup.detective });
+            }}
+          />
+        </QuickControls>
+      }
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ *
+ * Insider
+ * ------------------------------------------------------------------ */
+
+function InsiderQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameInsider;
+  const { setup, validation, persistPlayers, patchOptions } = useInsiderSetup();
+  const { startSession, clearError } = useInsiderSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+
+  const totalCategories = getImpostorCategories().length;
+  const cardCount = countInsiderWords({
+    categoryIds: setup.categoryIds,
+    contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart =
+    validation.playersOk &&
+    validation.categoriesOk &&
+    validation.contentOk &&
+    validation.spicyOk &&
+    cardCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('insider');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('insider');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Insider"
+      subtitle="Twenty questions against the clock, with a hidden helper among you."
+      canStart={canStart}
+      footerNote={startNote(canStart, cardCount)}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => {
+        void onStart();
+      }}
+      links={[
+        playersLink(gameId, setup.players),
+        categoriesLink(gameId, setup.categoryIds.length, totalCategories, cardCount, 'words'),
+        contentLink(gameId, setup.contentLevels),
+      ]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="clock"
+            title="Time to find the word"
+            hint="Run out and everyone loses."
+            accent={accent}
+          >
+            <Segmented<number>
+              accent={accent}
+              value={setup.timerSeconds}
+              onChange={(timerSeconds) => patchOptions({ timerSeconds })}
+              options={[
+                { value: 180, label: '3 min' },
+                { value: 300, label: '5 min' },
+                { value: 420, label: '7 min' },
+              ]}
+            />
+          </QuickControlBlock>
+          <QuickDivider />
+          <Toggle
+            accent={accent}
+            label="Private pass-the-phone voting"
+            hint="Off by default. Group decides in the room, then taps one name."
+            value={setup.votingMode === 'private'}
+            onPress={() =>
+              patchOptions({ votingMode: setup.votingMode === 'private' ? 'group' : 'private' })
+            }
+          />
         </QuickControls>
       }
     />

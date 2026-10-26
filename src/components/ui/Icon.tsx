@@ -172,6 +172,27 @@ const ICONS = {
       <Path d="M9.1 9a3 3 0 1 1 4.8 2.4c-1.2.9-1.9 1.5-1.9 2.6M12 18h.01" stroke={s} />
     </>
   ),
+  gauge: (s) => (
+    <>
+      <Path d="m12 14 4-4" stroke={s} />
+      <Path d="M3.34 19a10 10 0 1 1 17.32 0" stroke={s} />
+    </>
+  ),
+  search: (s) => (
+    <>
+      <Circle cx={11} cy={11} r={8} stroke={s} />
+      <Path d="m21 21-4.3-4.3" stroke={s} />
+    </>
+  ),
+  eyeOff: (s) => (
+    <>
+      <Path
+        d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49M14.084 14.158a3 3 0 0 1-4.242-4.242M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143M2 2l20 20"
+        stroke={s}
+      />
+    </>
+  ),
+  pause: (s) => <Path d="M8 5v14M16 5v14" stroke={s} />,
 } satisfies Record<string, (stroke: string) => ReactNode>;
 
 export type IconName = keyof typeof ICONS;

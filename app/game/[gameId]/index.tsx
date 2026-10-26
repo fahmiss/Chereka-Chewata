@@ -46,6 +46,31 @@ const STEPS: Record<string, string[]> = {
     'Pick one of four answers, then reveal the correct choice and explanation.',
     'Pass the phone between casual questions, or follow round-robin turns to a leaderboard.',
   ],
+  gimbar: [
+    'The guesser holds the phone sideways on their forehead, screen facing the room.',
+    'Everyone else acts, hums and describes the word on screen — just never says it.',
+    'Tilt down when you get it, tilt up to pass. Every player takes a turn; most cards wins.',
+  ],
+  mesob: [
+    'Everyone secretly drops a few names or things into the mesob. Then split into two teams.',
+    'Round 1: describe freely. Round 2: one word only. Round 3: act it out in silence.',
+    'The same slips return every round, so jokes build. Most slips guessed wins.',
+  ],
+  mizan: [
+    'The psychic secretly sees a target between two opposites, like Mild and Spicy.',
+    'They give one clue out loud. Everyone else drags the needle to where they think it is.',
+    'Closer scores more. Play as two teams racing to a score, or together as one side.',
+  ],
+  wink_killer: [
+    'The phone secretly deals roles. One player is the Killer.',
+    'The Killer winks at victims; when winked, count to five, then fall dramatically.',
+    'Think you saw it? Accuse. Catch the Killer before they clear the room.',
+  ],
+  insider: [
+    'The Master knows the secret word and answers only Yes, No or I don’t know.',
+    'Find the word together with yes/no questions before the clock runs out.',
+    'One player knew the word all along. Vote to catch the Insider.',
+  ],
 };
 
 export default function GameDetailsScreen() {

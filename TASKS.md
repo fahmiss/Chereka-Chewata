@@ -4,11 +4,19 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-16._
+_Last updated: 2026-10-26._
 
 ---
 
 ## Open
+
+### New games follow-ups (2026-10-26)
+- [ ] Device check of Gimbar tilt on a physical iPhone and Android phone
+- [ ] Dedicated mascot expressions for the five new games
+- [ ] Amharic decks for Gimbar act cards and Mizan spectra
+- [ ] `SecondaryButton`/`PressableScale` ignores `flex: 1` passed via
+      `style` (applied to the inner view), so “half” buttons in older games
+      do not share row width. New games wrap them in a flex `View`.
 
 ### Native-speaker Amharic review (2026-10-15)
 Every deck's Amharic is best-effort, not native-reviewed — including the 164
@@ -58,6 +66,39 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Five new games: Gimbar, Mesob, Mizan, Wink Killer, Insider (2026-10-26)
+
+- **Gimbar** (heads-up charades): phone sideways on the forehead, card text
+  rotated for the room. Native builds tilt to answer via `expo-sensors`
+  (screen down = got it, up = pass; re-arms only after returning upright).
+  Web and phones without motion use full-screen left/right tap halves. Turn
+  summary lets players flip a misread card; per-player standings.
+  Deck = 55 new act-it-out cards plus every Taboo target and Impostor word.
+- **Mesob** (Fishbowl): players privately write slips (or let the deck pick),
+  two random teams, three rounds (describe / one word / act) over the same
+  slips. Time left when the basket empties carries into the next round.
+- **Mizan** (spectrum guessing): psychic peeks at a hidden target on an SVG
+  dial, gives one clue; guessers drag the needle. 4/3/2-point bands. Teams
+  mode (first to target, opponents steal 1 with a left/right call) or
+  Together mode (fixed rounds, co-op score). 77 original spectrum cards.
+- **Wink Killer**: private role deal (1–2 Killers, optional public Detective
+  with 3 guesses), then a live board for wink-outs (undoable) and
+  accusations. A mis-tapped Killer never ends or reveals the game.
+- **Insider**: public Master, secret Insider, Impostor word deck, 3/5/7-minute
+  quiz clock (time out = everyone loses), then group or private vote with one
+  runoff. Master rotates on rematch.
+- Shared building blocks for these five: `createPlayerSetup`,
+  `createGameSession`, `HoldToReveal`, `PlayerPicker`, `Scoreboards`,
+  `useCountdown` (+ keep-awake during timers). `GAME_SETUP_SPECS` in
+  `useGameSetup` drives the shared setup screens for them.
+- New accents added to `tokens.ts` (Gimbar, Mesob, Mizan, Wink Killer,
+  Insider); mascots reuse existing expressions until dedicated art exists.
+- New dependencies: `expo-sensors` (config plugin with motion permission
+  text), `expo-keep-awake`.
+- Verified: typecheck, content validation, a Node simulation of every new
+  machine, and a full browser walkthrough of each game on the web export.
+  Tilt itself needs a check on a real iPhone and Android phone.
 
 ### Curated English content across all seven games (2026-10-16)
 

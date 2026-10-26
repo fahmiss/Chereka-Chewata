@@ -1,0 +1,208 @@
+import { Animated, StyleSheet, Text, View } from 'react-native';
+import type { TeamId } from '../../domain/shared/types';
+import { teamLabel } from '../../domain/shared/utils';
+import { useEnterAnimation } from '../../theme/motion';
+import { alpha, color, overlay, radius, space } from '../../theme/tokens';
+import { family, type } from '../../theme/typography';
+
+/** Team A vs Team B, with the team on turn lit in the game accent. */
+export function TeamScoreStrip({
+  scores,
+  activeTeam,
+  accent,
+}: {
+  scores: Record<TeamId, number>;
+  activeTeam: TeamId | null;
+  accent: string;
+}) {
+  return (
+    <View style={styles.strip}>
+      <TeamPill team="a" score={scores.a} active={activeTeam === 'a'} accent={accent} />
+      <Text style={[type.mono, styles.vs]}>vs</Text>
+      <TeamPill team="b" score={scores.b} active={activeTeam === 'b'} accent={accent} />
+    </View>
+  );
+}
+
+function TeamPill({
+  team,
+  score,
+  active,
+  accent,
+}: {
+  team: TeamId;
+  score: number;
+  active: boolean;
+  accent: string;
+}) {
+  return (
+    <View
+      style={[
+        styles.pill,
+        active && { borderColor: alpha(accent, 0.55), backgroundColor: alpha(accent, 0.16) },
+      ]}
+    >
+      <Text style={[type.eyebrow, { color: active ? accent : color.textMuted }]}>
+        {teamLabel(team)}
+      </Text>
+      <Text style={[type.displayMd, { color: active ? accent : color.textPrimary }]}>{score}</Text>
+    </View>
+  );
+}
+
+/** Team rosters side by side; the given player is highlighted. */
+export function TeamRoster({
+  teams,
+  nameOf,
+  highlightId,
+  accent,
+}: {
+  teams: Record<TeamId, string[]>;
+  nameOf: (playerId: string) => string;
+  highlightId?: string | null;
+  accent: string;
+}) {
+  return (
+    <View style={styles.roster}>
+      {(['a', 'b'] as TeamId[]).map((team) => (
+        <View key={team} style={styles.rosterCol}>
+          <Text style={[type.eyebrow, styles.rosterLabel]}>{teamLabel(team)}</Text>
+          {teams[team].map((id) => (
+            <Text
+              key={id}
+              style={[
+                type.bodySm,
+                styles.rosterName,
+                id === highlightId && { color: accent, fontFamily: family.body.semibold },
+              ]}
+              numberOfLines={1}
+            >
+              {nameOf(id)}
+            </Text>
+          ))}
+        </View>
+      ))}
+    </View>
+  );
+}
+
+export type StandingRow = { id: string; name: string; score: number };
+
+/** Ranked list; ties share a rank. */
+export function Standings({ rows, accent }: { rows: StandingRow[]; accent: string }) {
+  const top = rows[0]?.score ?? 0;
+  return (
+    <View style={styles.standings}>
+      {rows.map((row, index) => {
+        const rank = rows.findIndex((other) => other.score === row.score) + 1;
+        return (
+          <StandingLine
+            key={row.id}
+            index={index}
+            rank={rank}
+            name={row.name}
+            score={row.score}
+            leader={row.score === top && top > 0}
+            accent={accent}
+          />
+        );
+      })}
+    </View>
+  );
+}
+
+function StandingLine({
+  index,
+  rank,
+  name,
+  score,
+  leader,
+  accent,
+}: {
+  index: number;
+  rank: number;
+  name: string;
+  score: number;
+  leader: boolean;
+  accent: string;
+}) {
+  const enter = useEnterAnimation(index);
+  return (
+    <Animated.View
+      style={[
+        styles.line,
+        enter,
+        leader && { borderColor: alpha(accent, 0.5), backgroundColor: alpha(accent, 0.1) },
+      ]}
+    >
+      <Text style={[type.numeric, { color: leader ? accent : color.textMuted }]}>
+        {String(rank).padStart(2, '0')}
+      </Text>
+      <Text style={[type.titleMd, styles.lineName]} numberOfLines={1}>
+        {name}
+      </Text>
+      <Text style={[type.displayMd, { color: leader ? accent : color.textPrimary }]}>{score}</Text>
+    </Animated.View>
+  );
+}
+
+/** Players sharing the top score, or none when nobody scored. */
+export function leaders(rows: StandingRow[]): StandingRow[] {
+  const top = rows.reduce((max, row) => Math.max(max, row.score), 0);
+  if (top <= 0) return [];
+  return rows.filter((row) => row.score === top);
+}
+
+const styles = StyleSheet.create({
+  strip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space[3],
+  },
+  vs: {
+    color: color.textMuted,
+  },
+  pill: {
+    flex: 1,
+    borderRadius: radius.medium,
+    borderWidth: 1,
+    borderColor: color.borderSubtle,
+    backgroundColor: overlay.glass,
+    paddingVertical: space[3],
+    paddingHorizontal: space[4],
+    gap: 2,
+  },
+  roster: {
+    flexDirection: 'row',
+    gap: space[4],
+  },
+  rosterCol: {
+    flex: 1,
+    gap: space[1],
+  },
+  rosterLabel: {
+    color: color.textMuted,
+    marginBottom: space[1],
+  },
+  rosterName: {
+    color: color.textSecondary,
+  },
+  standings: {
+    gap: space[2],
+  },
+  line: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space[3],
+    paddingVertical: space[3],
+    paddingHorizontal: space[4],
+    borderRadius: radius.medium,
+    borderWidth: 1,
+    borderColor: color.borderSubtle,
+    backgroundColor: overlay.glass,
+  },
+  lineName: {
+    color: color.textPrimary,
+    flex: 1,
+  },
+});

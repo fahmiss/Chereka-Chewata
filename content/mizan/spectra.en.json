@@ -1,0 +1,541 @@
+[
+  {
+    "id": "mizan_001",
+    "left_en": "Mild",
+    "right_en": "Spicy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_002",
+    "left_en": "Habesha time",
+    "right_en": "On time",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_003",
+    "left_en": "Mama would approve",
+    "right_en": "Mama would faint",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_004",
+    "left_en": "Fasting food",
+    "right_en": "Feast food",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_005",
+    "left_en": "Countryside",
+    "right_en": "Big city",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_006",
+    "left_en": "Quick to cook",
+    "right_en": "Takes all day to cook",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_007",
+    "left_en": "Quiet guest",
+    "right_en": "Loud guest",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_008",
+    "left_en": "Bad wedding gift",
+    "right_en": "Great wedding gift",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_009",
+    "left_en": "Cheap",
+    "right_en": "Expensive",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_010",
+    "left_en": "Useless skill",
+    "right_en": "Useful skill",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_011",
+    "left_en": "Forgettable song",
+    "right_en": "Stuck in your head",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_012",
+    "left_en": "Boring holiday",
+    "right_en": "Exciting holiday",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_013",
+    "left_en": "Tiny animal",
+    "right_en": "Huge animal",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_014",
+    "left_en": "Harmless animal",
+    "right_en": "Dangerous animal",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_015",
+    "left_en": "Breakfast food",
+    "right_en": "Dinner food",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_016",
+    "left_en": "Old-fashioned",
+    "right_en": "Modern",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_017",
+    "left_en": "Kids love it",
+    "right_en": "Adults love it",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_018",
+    "left_en": "Easy job",
+    "right_en": "Hard job",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_019",
+    "left_en": "Bad smell",
+    "right_en": "Good smell",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_020",
+    "left_en": "Unhealthy",
+    "right_en": "Healthy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_021",
+    "left_en": "Short trip",
+    "right_en": "Long trip",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_022",
+    "left_en": "Rainy-season mood",
+    "right_en": "Sunny-season mood",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_023",
+    "left_en": "Normal pet",
+    "right_en": "Weird pet",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_024",
+    "left_en": "Bad first-date spot",
+    "right_en": "Great first-date spot",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_025",
+    "left_en": "Easy to pronounce",
+    "right_en": "Hard to pronounce",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_026",
+    "left_en": "Soft",
+    "right_en": "Hard",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_027",
+    "left_en": "Light",
+    "right_en": "Heavy",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_028",
+    "left_en": "Quiet place",
+    "right_en": "Noisy place",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_029",
+    "left_en": "Bad superpower",
+    "right_en": "Great superpower",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_030",
+    "left_en": "Rare",
+    "right_en": "Everywhere",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_031",
+    "left_en": "Relaxing",
+    "right_en": "Stressful",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_032",
+    "left_en": "Funny",
+    "right_en": "Serious",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_033",
+    "left_en": "Sweet",
+    "right_en": "Bitter",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_034",
+    "left_en": "Bad picnic food",
+    "right_en": "Great picnic food",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_035",
+    "left_en": "Boring to watch",
+    "right_en": "Thrilling to watch",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_036",
+    "left_en": "Easy to learn",
+    "right_en": "Hard to learn",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_037",
+    "left_en": "Childish",
+    "right_en": "Grown-up",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_038",
+    "left_en": "Strange smell",
+    "right_en": "Smells like home",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_039",
+    "left_en": "Unknown",
+    "right_en": "Famous",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_040",
+    "left_en": "Bad excuse for being late",
+    "right_en": "Good excuse for being late",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_041",
+    "left_en": "Kid's gift",
+    "right_en": "Grandparent's gift",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_042",
+    "left_en": "Worst thing in coffee",
+    "right_en": "Best thing in coffee",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_043",
+    "left_en": "Not romantic",
+    "right_en": "Very romantic",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_044",
+    "left_en": "Bad holiday food",
+    "right_en": "Great holiday food",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_045",
+    "left_en": "Ancient",
+    "right_en": "Brand new",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_046",
+    "left_en": "Cold drink",
+    "right_en": "Hot drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_047",
+    "left_en": "Never on TV",
+    "right_en": "Always on TV",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_048",
+    "left_en": "Bad name for a pet",
+    "right_en": "Great name for a pet",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_049",
+    "left_en": "Quiet at a party",
+    "right_en": "Life of the party",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_050",
+    "left_en": "Ugly",
+    "right_en": "Beautiful",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_051",
+    "left_en": "Unnecessary",
+    "right_en": "Essential",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_052",
+    "left_en": "Bad first impression",
+    "right_en": "Great first impression",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_053",
+    "left_en": "Weekday food",
+    "right_en": "Weekend food",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_054",
+    "left_en": "Normal",
+    "right_en": "Weird",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_055",
+    "left_en": "Easy to carry",
+    "right_en": "Hard to carry",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_056",
+    "left_en": "Bad gift for Mom",
+    "right_en": "Great gift for Mom",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_057",
+    "left_en": "Worst place to sleep",
+    "right_en": "Best place to sleep",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_058",
+    "left_en": "Dull colour",
+    "right_en": "Bright colour",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_059",
+    "left_en": "Safe",
+    "right_en": "Risky",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_060",
+    "left_en": "Bad wedding song",
+    "right_en": "Perfect wedding song",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_061",
+    "left_en": "Bargain",
+    "right_en": "Rip-off",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_062",
+    "left_en": "Feels like the lowlands",
+    "right_en": "Feels like the highlands",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_063",
+    "left_en": "Small talk",
+    "right_en": "Deep talk",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_064",
+    "left_en": "Easy to forgive",
+    "right_en": "Hard to forgive",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_065",
+    "left_en": "Bad advice",
+    "right_en": "Good advice",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_066",
+    "left_en": "Worst chore",
+    "right_en": "Best chore",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_067",
+    "left_en": "Obviously fake",
+    "right_en": "Obviously real",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_068",
+    "left_en": "Weak",
+    "right_en": "Strong",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_069",
+    "left_en": "Passing trend",
+    "right_en": "Classic forever",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_070",
+    "left_en": "Embarrassing",
+    "right_en": "Impressive",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "mizan_071",
+    "left_en": "Hard school subject",
+    "right_en": "Easy school subject",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_072",
+    "left_en": "Bad as leftovers",
+    "right_en": "Better as leftovers",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_073",
+    "left_en": "Needs no explanation",
+    "right_en": "Needs a long explanation",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_074",
+    "left_en": "Polite",
+    "right_en": "Rude",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_075",
+    "left_en": "Slow",
+    "right_en": "Fast",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_076",
+    "left_en": "Nobody's favourite",
+    "right_en": "Everybody's favourite",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "mizan_077",
+    "left_en": "Normal in Addis",
+    "right_en": "Strange in Addis",
+    "content_level": "family",
+    "active": true
+  }
+]

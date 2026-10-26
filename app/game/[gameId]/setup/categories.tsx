@@ -63,10 +63,13 @@ export default function CategoriesScreen() {
     isWouldRather,
     isBomb,
     isQuiz,
+    spec,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
 
-  const categories = isQuiz
+  const categories = spec
+    ? spec.getCategories()
+    : isQuiz
     ? getQuizCategories()
     : isBomb
       ? getBombCategories()
@@ -85,7 +88,9 @@ export default function CategoriesScreen() {
 
   const lang = settings.contentLanguage;
   const countFor = (categoryIds: string[]) =>
-    isQuiz
+    spec
+      ? spec.countCards({ categoryIds, contentLevels: levels, contentLanguage: lang })
+      : isQuiz
       ? countQuizQuestions({
           categoryIds,
           difficulty: (setup as QuizSetup).difficulty,

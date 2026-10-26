@@ -126,8 +126,11 @@ export default function PlayerSetupScreen() {
     isMostLikely,
     isBomb,
     isQuiz,
+    spec,
   } = useGameSetup(gameId);
-  const MIN = isQuiz
+  const MIN = spec
+    ? spec.minPlayers
+    : isQuiz
     ? QUIZ_MIN_PLAYERS
     : isMostLikely
     ? 0
@@ -136,7 +139,9 @@ export default function PlayerSetupScreen() {
       : isTaboo
         ? TABOO_MIN_PLAYERS
         : IMPOSTOR_MIN_PLAYERS;
-  const MAX = isQuiz
+  const MAX = spec
+    ? spec.maxPlayers
+    : isQuiz
     ? QUIZ_MAX_PLAYERS
     : isMostLikely
     ? MOST_LIKELY_MAX_PLAYERS

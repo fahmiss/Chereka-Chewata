@@ -13,4 +13,9 @@ export const GAME_MOON_EXPRESSION: Record<GameId, MoonExpression> = {
   would_you_rather: 'thinking',
   bomb: 'bomb',
   quiz: 'quiz',
+  gimbar: 'delighted',
+  mesob: 'timer',
+  mizan: 'thinking',
+  wink_killer: 'caught',
+  insider: 'detective',
 };

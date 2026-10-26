@@ -7,6 +7,7 @@ const decks = [
   ["Who's Most Likely", 'content/most_likely/prompts.en.json', 'content/categories/most_likely.json', ['prompt_en']],
   ['Would You Rather', 'content/would_you_rather/dilemmas.en.json', 'content/categories/would_you_rather.json', ['option_a_en', 'option_b_en']],
   ["Who's Got the Bomb", 'content/bomb/cards.json', 'content/categories/bomb.json', ['prompt_en']],
+  ['Gimbar (own cards)', 'content/gimbar/cards.en.json', 'content/categories/gimbar.json', ['text_en']],
 ];
 
 let failed = false;
@@ -27,6 +28,28 @@ for (const [name, path, categoriesPath, required] of decks) {
     if (required.includes('forbidden_en') && (!Array.isArray(card.forbidden_en) || card.forbidden_en.length < 3)) { console.error(`${path}: ${card.id} needs at least 3 forbidden words`); failed = true; }
   }
   console.log(`${name}: ${cards.length} cards · family ${levels.family} · friends ${levels.friends} · spicy ${levels.spicy}`);
+}
+
+{
+  const path = 'content/mizan/spectra.en.json';
+  const spectra = JSON.parse(await readFile(new URL(`../${path}`, import.meta.url), 'utf8'));
+  const ids = new Set();
+  const pairs = new Set();
+  const levels = { family: 0, friends: 0, spicy: 0 };
+  for (const [index, spectrum] of spectra.entries()) {
+    const missing = ['id', 'left_en', 'right_en', 'content_level', 'active'].filter(
+      (key) => spectrum[key] === undefined || spectrum[key] === '',
+    );
+    if (missing.length) { console.error(`${path}[${index}] missing ${missing.join(', ')}`); failed = true; }
+    if (ids.has(spectrum.id)) { console.error(`${path}: duplicate id ${spectrum.id}`); failed = true; }
+    ids.add(spectrum.id);
+    const pair = `${spectrum.left_en}|${spectrum.right_en}`.toLowerCase();
+    if (pairs.has(pair)) { console.error(`${path}: duplicate spectrum ${spectrum.left_en} / ${spectrum.right_en}`); failed = true; }
+    pairs.add(pair);
+    if (!(spectrum.content_level in levels)) { console.error(`${path}: invalid level ${spectrum.content_level}`); failed = true; }
+    else levels[spectrum.content_level] += 1;
+  }
+  console.log(`Mizan: ${spectra.length} spectra · family ${levels.family} · friends ${levels.friends} · spicy ${levels.spicy}`);
 }
 
 {

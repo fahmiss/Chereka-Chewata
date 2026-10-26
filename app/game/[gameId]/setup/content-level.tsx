@@ -62,6 +62,7 @@ export default function ContentLevelScreen() {
     isWouldRather,
     isBomb,
     isQuiz,
+    spec,
   } = useGameSetup(gameId);
   const { settings } = useSettings();
   const [spicyPromptVisible, setSpicyPromptVisible] = useState(false);
@@ -70,7 +71,9 @@ export default function ContentLevelScreen() {
 
   const lang = settings.contentLanguage;
   const countFor = (contentLevels: ContentLevel[]) =>
-    isBomb
+    spec
+      ? spec.countCards({ categoryIds: setup.categoryIds, contentLevels, contentLanguage: lang })
+      : isBomb
       ? countBombCards({
           categoryIds: setup.categoryIds,
           contentLevels,
