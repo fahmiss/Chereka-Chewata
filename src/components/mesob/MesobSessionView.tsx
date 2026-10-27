@@ -172,7 +172,6 @@ function EntryPhase({ session }: { session: MesobSession }) {
             label="Let the deck pick for me"
             quiet
             onPress={() => apply(fillFromDeck)}
-         
           />
         </ScrollView>
       </KeyboardAvoidingView>

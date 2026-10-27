@@ -174,14 +174,16 @@ export function markWinked(session: WinkKillerSession, playerId: string): WinkKi
   return { ...settled, phase: settled.winner ? 'result' : 'play' };
 }
 
-/** Undo the most recent wink-out, for a mis-tap. Accusation results stand. */
-export function undoLastWink(session: WinkKillerSession): WinkKillerSession {
-  if (session.phase !== 'play') return session;
-  const last = session.outIds[session.outIds.length - 1];
-  if (!last || session.outReasons[last] !== 'winked') return session;
+/**
+ * Bring a winked-out player back, for a mis-tap. Works on any wink-out, not
+ * just the latest, so a Killer marked out by mistake can always be restored
+ * and stays catchable. Accusation results stand.
+ */
+export function restoreWinked(session: WinkKillerSession, playerId: string): WinkKillerSession {
+  if (session.phase !== 'play' || session.outReasons[playerId] !== 'winked') return session;
   const outReasons = { ...session.outReasons };
-  delete outReasons[last];
-  return { ...session, outIds: session.outIds.slice(0, -1), outReasons };
+  delete outReasons[playerId];
+  return { ...session, outIds: session.outIds.filter((id) => id !== playerId), outReasons };
 }
 
 export function cancelAction(session: WinkKillerSession): WinkKillerSession {

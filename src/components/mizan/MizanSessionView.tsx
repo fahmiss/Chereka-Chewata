@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useMizanSession } from '../../domain/mizan/context';
 import {
+  answerTurnPending,
   beginPeek,
   currentPsychicId,
   finishPeek,
@@ -15,6 +16,7 @@ import {
   skipSpectrum,
   spectrumEnds,
   teamIds,
+  tiedAtTarget,
   togetherMaxScore,
 } from '../../domain/mizan/machine';
 import { MIZAN_MAX_POINTS, type MizanSession } from '../../domain/mizan/types';
@@ -253,6 +255,11 @@ function RevealPhase({ session }: { session: MizanSession }) {
           : ''
       }`
     : `${session.scores.a} points so far`;
+  const status = answerTurnPending(session)
+    ? `Target reached. ${teamLabel('b')} gets one last turn to answer.`
+    : tiedAtTarget(session)
+      ? 'Tied at the target. Another pair of turns decides it.'
+      : null;
 
   return (
     <SessionShell
@@ -267,6 +274,7 @@ function RevealPhase({ session }: { session: MizanSession }) {
         <Animated.View style={[styles.revealHead, enter]}>
           <Text style={[type.displayLg, styles.title]}>{headline}</Text>
           <Text style={[type.body, styles.secondaryCenter]}>{detail}</Text>
+          {status ? <Text style={[type.bodyStrong, { color: ACCENT }]}>{status}</Text> : null}
         </Animated.View>
         <MizanDial accent={ACCENT} target={session.target} needle={session.guess} />
         <SpectrumLabels session={session} />

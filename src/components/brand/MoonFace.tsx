@@ -18,7 +18,12 @@ export type MoonExpression =
   | 'loading'
   | 'comingSoon'
   | 'timer'
-  | 'quiz';
+  | 'quiz'
+  | 'gimbar'
+  | 'mesob'
+  | 'mizan'
+  | 'wink'
+  | 'insider';
 
 type Props = {
   expression?: MoonExpression;
@@ -43,6 +48,11 @@ const SOURCES: Record<MoonExpression, number> = {
   comingSoon: require('../../../assets/mascot/moon-coming-soon.png'),
   timer: require('../../../assets/mascot/moon-timer.png'),
   quiz: require('../../../assets/mascot/moon-quiz.png'),
+  gimbar: require('../../../assets/mascot/moon-gimbar.png'),
+  mesob: require('../../../assets/mascot/moon-mesob.png'),
+  mizan: require('../../../assets/mascot/moon-mizan.png'),
+  wink: require('../../../assets/mascot/moon-wink.png'),
+  insider: require('../../../assets/mascot/moon-insider.png'),
 };
 
 export function MoonFace({ expression = 'ready', size = 96 }: Props) {

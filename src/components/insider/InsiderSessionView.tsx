@@ -313,7 +313,6 @@ function GroupAccusePhase({ session }: { session: InsiderSession }) {
             label="Deadlock: Insider wins"
             quiet
             onPress={() => apply(resolveGroupDeadlock)}
-         
           />
         </>
       }

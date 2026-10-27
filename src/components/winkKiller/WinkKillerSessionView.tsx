@@ -20,12 +20,12 @@ import {
   readyToReveal,
   roleOf,
   startPlay,
-  undoLastWink,
+  restoreWinked,
   winkablePlayers,
 } from '../../domain/winkKiller/machine';
 import type { WinkKillerSession } from '../../domain/winkKiller/types';
 import { useEnterAnimation } from '../../theme/motion';
-import { color, space } from '../../theme/tokens';
+import { color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
@@ -34,6 +34,7 @@ import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { PlayerPicker } from '../session/PlayerPicker';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
+import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
@@ -165,8 +166,6 @@ function DetectiveAnnouncePhase({ session }: { session: WinkKillerSession }) {
 function PlayPhase({ session }: { session: WinkKillerSession }) {
   const { apply, clearSession } = useWinkKillerSession();
   const alive = alivePlayers(session);
-  const last = session.outIds[session.outIds.length - 1];
-  const canUndo = !!last && session.outReasons[last] === 'winked';
   const detective = session.setup.detective;
 
   return (
@@ -189,16 +188,7 @@ function PlayPhase({ session }: { session: WinkKillerSession }) {
             label={detective ? 'Detective accuses' : 'Make an accusation'}
             icon="target"
             onPress={() => apply(openAccusation)}
-         
           />
-          {canUndo ? (
-            <SecondaryButton
-              label={`Undo: ${getWinkPlayerName(session, last!)} back in`}
-              quiet
-              onPress={() => apply(undoLastWink)}
-           
-            />
-          ) : null}
         </>
       }
     >
@@ -212,12 +202,31 @@ function PlayPhase({ session }: { session: WinkKillerSession }) {
         {session.outIds.length ? (
           <Surface contentStyle={styles.card}>
             <Text style={[type.eyebrow, styles.muted]}>Out</Text>
-            {session.outIds.map((id) => (
-              <Text key={id} style={[type.bodySm, styles.secondary]}>
-                {getWinkPlayerName(session, id)} ·{' '}
-                {session.outReasons[id] === 'wrong_accusation' ? 'wrong accusation' : 'winked'}
-              </Text>
-            ))}
+            {session.outIds.map((id) =>
+              session.outReasons[id] === 'winked' ? (
+                <View key={id} style={styles.outRow}>
+                  <Text style={[type.bodySm, styles.secondary, styles.outName]}>
+                    {getWinkPlayerName(session, id)} · winked
+                  </Text>
+                  <PressableScale
+                    accessibilityRole="button"
+                    accessibilityLabel={`Mistake: bring ${getWinkPlayerName(session, id)} back in`}
+                    onPress={() => apply((current) => restoreWinked(current, id))}
+                    haptic="selection"
+                    scaleTo={0.95}
+                    style={styles.backIn}
+                  >
+                    <Icon name="refresh" size={14} color={color.textSecondary} />
+                    <Text style={[type.label, styles.secondary]}>Back in</Text>
+                  </PressableScale>
+                </View>
+              ) : (
+                <Text key={id} style={[type.bodySm, styles.secondary]}>
+                  {getWinkPlayerName(session, id)} · wrong accusation
+                </Text>
+              ),
+            )}
+            <Text style={[type.bodySm, styles.muted]}>Marked someone by mistake? Tap Back in.</Text>
           </Surface>
         ) : null}
         <Text style={[type.bodySm, styles.muted]}>
@@ -502,5 +511,24 @@ const styles = StyleSheet.create({
   },
   half: {
     flex: 1,
+  },
+  outRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space[3],
+  },
+  outName: {
+    flex: 1,
+  },
+  backIn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space[1],
+    minHeight: 36,
+    paddingHorizontal: space[3],
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    borderColor: color.borderSubtle,
+    backgroundColor: overlay.glass,
   },
 });

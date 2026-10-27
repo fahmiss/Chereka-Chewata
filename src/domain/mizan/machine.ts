@@ -126,6 +126,23 @@ export function spectrumEnds(session: MizanSession): { left: string; right: stri
   };
 }
 
+/**
+ * Teams mode, on the reveal: the target is reached but Team B is still owed
+ * its matching turn, so the game is not over yet.
+ */
+export function answerTurnPending(session: MizanSession): boolean {
+  if (session.setup.mode !== 'teams' || session.phase !== 'reveal') return false;
+  const { a, b } = session.scores;
+  return session.turnNumber % 2 === 0 && Math.max(a, b) >= session.setup.pointsToWin;
+}
+
+/** Teams mode: someone has reached the target on equal turns but it is tied. */
+export function tiedAtTarget(session: MizanSession): boolean {
+  if (session.setup.mode !== 'teams' || session.phase !== 'reveal') return false;
+  const { a, b } = session.scores;
+  return session.turnNumber % 2 === 1 && a === b && a >= session.setup.pointsToWin;
+}
+
 /** Together mode's best possible total, for the result screen. */
 export function togetherMaxScore(session: MizanSession): number {
   return session.setup.rounds * MIZAN_MAX_POINTS;
@@ -184,8 +201,11 @@ export function nextTurn(session: MizanSession): MizanSession {
       return { ...session, turnNumber, phase: 'final', winner: 'together' };
     }
   } else {
+    // Team A always opens, so an even count means both teams had equal turns.
+    // A team reaching the target on A's turn still gives B its answer turn.
     const { a, b } = session.scores;
-    if (Math.max(a, b) >= session.setup.pointsToWin && a !== b) {
+    const equalTurns = turnNumber % 2 === 0;
+    if (equalTurns && Math.max(a, b) >= session.setup.pointsToWin && a !== b) {
       return { ...session, turnNumber, phase: 'final', winner: a > b ? 'a' : 'b' };
     }
   }

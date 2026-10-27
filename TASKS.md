@@ -4,7 +4,7 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-26._
+_Last updated: 2026-10-27._
 
 ---
 
@@ -12,7 +12,7 @@ _Last updated: 2026-10-26._
 
 ### New games follow-ups (2026-10-26)
 - [ ] Device check of Gimbar tilt on a physical iPhone and Android phone
-- [ ] Dedicated mascot expressions for the five new games
+- [x] Dedicated mascot expressions for the five new games (2026-10-27)
 - [ ] Amharic decks for Gimbar act cards and Mizan spectra
 - [ ] `SecondaryButton`/`PressableScale` ignores `flex: 1` passed via
       `style` (applied to the inner view), so “half” buttons in older games
@@ -66,6 +66,18 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### New-game fixes and mascots (2026-10-27)
+
+- Mizan Teams: a match only ends after both teams have had the same number
+  of turns. Team B always gets its answer turn, and a tie at the target
+  plays another pair of turns. The reveal screen says why play continues.
+- Wink Killer: any winked-out player can be brought back from the Out list
+  (not only the latest), so a Killer marked out by mistake stays catchable.
+- Five new mascot expressions (`gimbar`, `mesob`, `mizan`, `wink`,
+  `insider`) generated from the existing moon renders as style references,
+  cut out to transparent 512px PNGs, and used on Home and game details.
+- Mizan rules copy rewritten around a worked example.
 
 ### Five new games: Gimbar, Mesob, Mizan, Wink Killer, Insider (2026-10-26)
 

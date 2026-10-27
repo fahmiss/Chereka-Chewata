@@ -133,9 +133,9 @@ const SESSION_RULES: Record<GameId, string[]> = {
     'The same slips come back every round. Most slips guessed over three rounds wins.',
   ],
   mizan: [
-    'The psychic privately sees where a hidden target sits between two opposites.',
-    'They give one clue out loud; the guessers drag the needle to match.',
-    'Closer earns more: 4, 3 or 2 points. In Teams, the other side can steal 1 with a left/right call.',
+    'Two opposites sit on a dial, like Mild ← → Spicy. Only the psychic sees the hidden target.',
+    'The psychic says one clue for that spot, e.g. “Grandma’s mitmita” for near Spicy.',
+    'Guessers drag the needle; closer earns 4, 3 or 2. In Teams, the other side can steal 1 by calling left or right.',
   ],
   wink_killer: [
     'Everyone secretly checks their role. One player is the Killer.',

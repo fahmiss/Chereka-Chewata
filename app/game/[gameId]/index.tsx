@@ -57,9 +57,9 @@ const STEPS: Record<string, string[]> = {
     'The same slips return every round, so jokes build. Most slips guessed wins.',
   ],
   mizan: [
-    'The psychic secretly sees a target between two opposites, like Mild and Spicy.',
-    'They give one clue out loud. Everyone else drags the needle to where they think it is.',
-    'Closer scores more. Play as two teams racing to a score, or together as one side.',
+    'Each round shows two opposites on a dial, like Mild ← → Spicy. A hidden target sits somewhere between them.',
+    'Only the psychic sees where. If it sits near Spicy, they might say one clue: “Grandma’s mitmita.”',
+    'Everyone else drags the needle to where they think the target is. Closer scores more: 4, 3 or 2.',
   ],
   wink_killer: [
     'The phone secretly deals roles. One player is the Killer.',
