@@ -7,6 +7,7 @@ import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { duration, easeOut, useReducedMotion } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
@@ -70,7 +71,7 @@ export function HoldToReveal({
   const fade = useRef(new Animated.Value(0)).current;
   const revealScale = useRef(new Animated.Value(0.96)).current;
   const reduced = useReducedMotion();
-  const playReveal = useSoundEffect(REVEAL_SOUND, 0.5);
+  const playReveal = useSoundEffect(REVEAL_SOUND, SOUND_VOLUME.soft);
 
   useEffect(() => {
     holdAnim.current?.stop();

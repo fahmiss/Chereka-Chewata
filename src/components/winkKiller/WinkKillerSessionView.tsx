@@ -27,6 +27,7 @@ import type { WinkKillerSession } from '../../domain/winkKiller/types';
 import { useEnterAnimation } from '../../theme/motion';
 import { color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
@@ -292,7 +293,7 @@ function PickPhase({
 
 function AccuseResultPhase({ session }: { session: WinkKillerSession }) {
   const { apply, clearSession } = useWinkKillerSession();
-  const playVerdict = useSoundEffect(VERDICT_SOUND, 0.62);
+  const playVerdict = useSoundEffect(VERDICT_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 16);
   const accusation = session.lastAccusation;
 
@@ -337,8 +338,8 @@ function AccuseResultPhase({ session }: { session: WinkKillerSession }) {
 function ResultPhase({ session }: { session: WinkKillerSession }) {
   const { rematch, clearSession } = useWinkKillerSession();
   const citizensWon = session.winner === 'citizens';
-  const playWin = useSoundEffect(WIN_SOUND, 0.72);
-  const playLoss = useSoundEffect(LOSS_SOUND, 0.64);
+  const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
+  const playLoss = useSoundEffect(LOSS_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 16);
   const killers = killerIds(session).map((id) => getWinkPlayerName(session, id));
 

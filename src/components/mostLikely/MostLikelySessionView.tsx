@@ -1,14 +1,14 @@
 import { router } from 'expo-router';
-import { preload, useAudioPlayer } from 'expo-audio';
+import { preload } from 'expo-audio';
 import { useEffect } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { localizeText } from '../../content/localize';
 import { currentPrompt } from '../../domain/mostLikely/machine';
 import { useMostLikelySession } from '../../domain/mostLikely/SessionContext';
 import type { MostLikelySession } from '../../domain/mostLikely/types';
-import { useSettings } from '../../domain/settings/SettingsContext';
-import { prepareGameAudio } from '../../theme/audio';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
+import { useSoundEffect } from '../../theme/useSoundEffect';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
@@ -169,35 +169,21 @@ function CountdownPrompt({ session }: { session: MostLikelySession }) {
 
 function CountdownPhase({ session }: { session: MostLikelySession }) {
   const { dispatch, clearSession } = useMostLikelySession();
-  const { settings } = useSettings();
   const value = session.countdownValue ?? 3;
-  const countPlayer = useAudioPlayer(COUNT_SOUND);
-  const pointPlayer = useAudioPlayer(POINT_SOUND);
+  const playCount = useSoundEffect(COUNT_SOUND, SOUND_VOLUME.cue);
+  const playPoint = useSoundEffect(POINT_SOUND, SOUND_VOLUME.result);
 
   useEffect(() => {
     if (value === 0) hapticSuccess();
     else hapticImpact('medium');
 
-    let audioActive = true;
-    const cuePlayer = value === 0 ? pointPlayer : countPlayer;
-    cuePlayer.volume = value === 0 ? 0.78 : 0.58;
-    if (settings.soundEnabled) {
-      cuePlayer.pause();
-      void prepareGameAudio()
-        .then(async () => {
-          await cuePlayer.seekTo(0);
-          if (audioActive) cuePlayer.play();
-        })
-        .catch(() => undefined);
-    }
-
+    const stopCue = value === 0 ? playPoint() : playCount();
     const id = setTimeout(() => dispatch.tickCountdown(), value === 0 ? 700 : 850);
     return () => {
-      audioActive = false;
-      cuePlayer.pause();
+      stopCue?.();
       clearTimeout(id);
     };
-  }, [countPlayer, dispatch, pointPlayer, settings.soundEnabled, value]);
+  }, [dispatch, playCount, playPoint, value]);
 
   return (
     <SessionShell

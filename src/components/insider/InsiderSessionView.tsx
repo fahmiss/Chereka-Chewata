@@ -27,6 +27,7 @@ import type { InsiderSession } from '../../domain/insider/types';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { MetaChip } from '../ui/Chip';
@@ -176,8 +177,8 @@ function RevealPhase({ session }: { session: InsiderSession }) {
 function QuizPhase({ session }: { session: InsiderSession }) {
   const { apply, clearSession } = useInsiderSession();
   const master = getInsiderPlayerName(session, session.masterId);
-  const playTick = useSoundEffect(TICK_SOUND, 0.58);
-  const playTimeUp = useSoundEffect(TIME_UP_SOUND, 0.78);
+  const playTick = useSoundEffect(TICK_SOUND, SOUND_VOLUME.soft);
+  const playTimeUp = useSoundEffect(TIME_UP_SOUND, SOUND_VOLUME.result);
   const [confirmGiveUp, setConfirmGiveUp] = useState(false);
 
   useSessionKeepAwake();
@@ -369,9 +370,9 @@ function VotingSelectPhase({ session }: { session: InsiderSession }) {
 function ResultPhase({ session }: { session: InsiderSession }) {
   const { rematch, clearSession } = useInsiderSession();
   const [deckError, setDeckError] = useState(false);
-  const playVerdict = useSoundEffect(VERDICT_SOUND, 0.62);
-  const playWin = useSoundEffect(WIN_SOUND, 0.72);
-  const playLoss = useSoundEffect(LOSS_SOUND, 0.64);
+  const playVerdict = useSoundEffect(VERDICT_SOUND, SOUND_VOLUME.result);
+  const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
+  const playLoss = useSoundEffect(LOSS_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 16);
   const insider = getInsiderPlayerName(session, session.insiderId);
   const caught = session.winner === 'commons';

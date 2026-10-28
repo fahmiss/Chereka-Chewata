@@ -25,6 +25,7 @@ import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
@@ -38,10 +39,10 @@ import { MizanDial } from './MizanDial';
 
 const ACCENT = color.gameMizan;
 const STAGES = ['peek', 'guess', 'reveal', 'result'] as const;
-const VERDICT_SOUND = require('../../../assets/sounds/verdict-sting.wav');
+const REVEAL_SOUND = require('../../../assets/sounds/mizan-reveal.wav');
 const WIN_SOUND = require('../../../assets/sounds/result-win.wav');
 
-void preload(VERDICT_SOUND);
+void preload(REVEAL_SOUND);
 void preload(WIN_SOUND);
 
 function endGame(clearSession: () => void) {
@@ -231,7 +232,7 @@ function CallPhase({ session }: { session: MizanSession }) {
 
 function RevealPhase({ session }: { session: MizanSession }) {
   const { apply, clearSession } = useMizanSession();
-  const playVerdict = useSoundEffect(VERDICT_SOUND, 0.6);
+  const playReveal = useSoundEffect(REVEAL_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 12);
   const points = session.result?.points ?? 0;
   const teams = session.setup.mode === 'teams';
@@ -239,8 +240,8 @@ function RevealPhase({ session }: { session: MizanSession }) {
   useEffect(() => {
     if (points === MIZAN_MAX_POINTS) hapticSuccess();
     else hapticImpact('medium');
-    return playVerdict();
-  }, [playVerdict, points]);
+    return playReveal();
+  }, [playReveal, points]);
 
   const headline =
     points === MIZAN_MAX_POINTS
@@ -287,7 +288,7 @@ function RevealPhase({ session }: { session: MizanSession }) {
 function FinalPhase({ session }: { session: MizanSession }) {
   const { rematch, clearSession } = useMizanSession();
   const [deckError, setDeckError] = useState(false);
-  const playWin = useSoundEffect(WIN_SOUND, 0.72);
+  const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 16);
   const teams = session.setup.mode === 'teams';
   const max = togetherMaxScore(session);

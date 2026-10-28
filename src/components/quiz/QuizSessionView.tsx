@@ -14,6 +14,7 @@ import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { ReportCardButton } from '../session/ReportCardButton';
@@ -72,8 +73,8 @@ function Question({ session }: { session: QuizSession }) {
   const revealed = session.phase === 'answer_reveal';
   const last = session.questionIndex + 1 >= session.questions.length;
   const enter = useEnterAnimation(session.questionIndex, 12);
-  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.6);
-  const playIncorrect = useSoundEffect(INCORRECT_SOUND, 0.55);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, SOUND_VOLUME.cue);
+  const playIncorrect = useSoundEffect(INCORRECT_SOUND, SOUND_VOLUME.cue);
 
   if (!question) return null;
 

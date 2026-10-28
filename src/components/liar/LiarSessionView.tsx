@@ -16,6 +16,7 @@ import {
 import { useLiarSession } from '../../domain/liar/SessionContext';
 import type { LiarSession } from '../../domain/liar/types';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import {
   duration,
@@ -186,7 +187,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
   const fade = useRef(new Animated.Value(0)).current;
   const revealScale = useRef(new Animated.Value(0.96)).current;
   const reduced = useReducedMotion();
-  const playReveal = useSoundEffect(REVEAL_SOUND, 0.5);
+  const playReveal = useSoundEffect(REVEAL_SOUND, SOUND_VOLUME.soft);
 
   useEffect(() => {
     const sub = AppState.addEventListener('change', (state) => {
@@ -564,9 +565,9 @@ function ResultPhase({ session }: { session: LiarSession }) {
   const topVotes = summary.reduce((max, row) => Math.max(max, row.count), 0);
   const enter = useEnterAnimation(1, 20);
   const [deckExhausted, setDeckExhausted] = useState(false);
-  const playVerdict = useSoundEffect(VERDICT_SOUND, 0.62);
-  const playGroupWin = useSoundEffect(WIN_SOUND, 0.72);
-  const playLiarWin = useSoundEffect(LOSS_SOUND, 0.64);
+  const playVerdict = useSoundEffect(VERDICT_SOUND, SOUND_VOLUME.result);
+  const playGroupWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
+  const playLiarWin = useSoundEffect(LOSS_SOUND, SOUND_VOLUME.result);
 
   useEffect(() => {
     const stopVerdict = playVerdict();

@@ -40,6 +40,7 @@ import { hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
@@ -257,8 +258,8 @@ function TurnReadyPhase({ session }: { session: MesobSession }) {
 function PlayingPhase({ session }: { session: MesobSession }) {
   const { apply, clearSession } = useMesobSession();
   const paused = session.phase === 'paused';
-  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.62);
-  const playTick = useSoundEffect(TICK_SOUND, 0.58);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, SOUND_VOLUME.cue);
+  const playTick = useSoundEffect(TICK_SOUND, SOUND_VOLUME.soft);
   const rule = MESOB_ROUND_RULES[session.round];
   const slip = slipById(session, session.currentSlipId);
 
@@ -367,7 +368,7 @@ function PlayingPhase({ session }: { session: MesobSession }) {
 
 function TurnSummaryPhase({ session }: { session: MesobSession }) {
   const { apply, clearSession } = useMesobSession();
-  const playTimeUp = useSoundEffect(TIME_UP_SOUND, 0.78);
+  const playTimeUp = useSoundEffect(TIME_UP_SOUND, SOUND_VOLUME.result);
   const team = teamLabel(session.activeTeam);
 
   useEffect(() => playTimeUp(), [playTimeUp]);
@@ -413,7 +414,7 @@ function TurnSummaryPhase({ session }: { session: MesobSession }) {
 
 function FinalPhase({ session }: { session: MesobSession }) {
   const { rematch, clearSession } = useMesobSession();
-  const playWin = useSoundEffect(WIN_SOUND, 0.72);
+  const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
   const enter = useEnterAnimation(1, 16);
   const headline =
     session.winner === 'tie'

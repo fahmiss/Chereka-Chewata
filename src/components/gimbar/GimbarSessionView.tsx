@@ -32,6 +32,7 @@ import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
 import { leaders, Standings } from '../session/Scoreboards';
@@ -49,12 +50,16 @@ const ACCENT = color.gameGimbar;
 const STAGES = ['ready', 'play', 'summary', 'result'] as const;
 const FLASH_MS = 650;
 const CORRECT_SOUND = require('../../../assets/sounds/taboo-correct.wav');
-const PASS_SOUND = require('../../../assets/sounds/quiz-incorrect.wav');
+const PASS_SOUND = require('../../../assets/sounds/gimbar-pass.wav');
+const COUNT_SOUND = require('../../../assets/sounds/most-likely-count.wav');
+const GO_SOUND = require('../../../assets/sounds/most-likely-point.wav');
 const TICK_SOUND = require('../../../assets/sounds/taboo-last-three.wav');
 const TIME_UP_SOUND = require('../../../assets/sounds/taboo-time-up.wav');
 
 void preload(CORRECT_SOUND);
 void preload(PASS_SOUND);
+void preload(COUNT_SOUND);
+void preload(GO_SOUND);
 void preload(TICK_SOUND);
 void preload(TIME_UP_SOUND);
 
@@ -172,17 +177,21 @@ function PlacingCountdown({ name, onDone }: { name: string; onDone: () => void }
   const [count, setCount] = useState(3);
   const onDoneRef = useRef(onDone);
   onDoneRef.current = onDone;
+  const playCount = useSoundEffect(COUNT_SOUND, SOUND_VOLUME.cue);
+  const playGo = useSoundEffect(GO_SOUND, SOUND_VOLUME.result);
   useSessionKeepAwake();
 
   useEffect(() => {
     if (count <= 0) {
+      playGo();
       onDoneRef.current();
       return;
     }
+    playCount();
     hapticImpact(count === 1 ? 'medium' : 'light');
     const id = setTimeout(() => setCount((value) => value - 1), 1000);
     return () => clearTimeout(id);
-  }, [count]);
+  }, [count, playCount, playGo]);
 
   return (
     <LandscapeStage background={color.background}>
@@ -201,9 +210,9 @@ function PlayingPhase({ session }: { session: GimbarSession }) {
   const tilt = useTiltActive(session);
   const [flash, setFlash] = useState<GimbarResult | null>(null);
   const flashTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.62);
-  const playPass = useSoundEffect(PASS_SOUND, 0.4);
-  const playTick = useSoundEffect(TICK_SOUND, 0.58);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, SOUND_VOLUME.cue);
+  const playPass = useSoundEffect(PASS_SOUND, SOUND_VOLUME.soft);
+  const playTick = useSoundEffect(TICK_SOUND, SOUND_VOLUME.soft);
   const name = getGimbarPlayerName(session, currentGuesserId(session));
 
   useSessionKeepAwake(!paused);
@@ -359,7 +368,7 @@ function PlayingPhase({ session }: { session: GimbarSession }) {
 
 function SummaryPhase({ session }: { session: GimbarSession }) {
   const { apply, clearSession } = useGimbarSession();
-  const playTimeUp = useSoundEffect(TIME_UP_SOUND, 0.78);
+  const playTimeUp = useSoundEffect(TIME_UP_SOUND, SOUND_VOLUME.result);
   const name = getGimbarPlayerName(session, currentGuesserId(session));
   const last = session.turnIndex + 1 >= session.totalTurns;
   const correct = turnCorrectCount(session);

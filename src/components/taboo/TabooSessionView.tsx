@@ -12,6 +12,7 @@ import {
 import { useTabooSession } from '../../domain/taboo/SessionContext';
 import type { TabooSession, TeamId } from '../../domain/taboo/types';
 import { useEnterAnimation } from '../../theme/motion';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
@@ -163,10 +164,10 @@ function PlayingPhase({ session }: { session: TabooSession }) {
   const [locked, setLocked] = useState(false);
   const lockTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const paused = session.phase === 'paused';
-  const playWarning = useSoundEffect(WARNING_SOUND, 0.62);
-  const playTick = useSoundEffect(TICK_SOUND, 0.58);
-  const playCorrect = useSoundEffect(CORRECT_SOUND, 0.62);
-  const playViolation = useSoundEffect(VIOLATION_SOUND, 0.64);
+  const playWarning = useSoundEffect(WARNING_SOUND, SOUND_VOLUME.cue);
+  const playTick = useSoundEffect(TICK_SOUND, SOUND_VOLUME.soft);
+  const playCorrect = useSoundEffect(CORRECT_SOUND, SOUND_VOLUME.cue);
+  const playViolation = useSoundEffect(VIOLATION_SOUND, SOUND_VOLUME.cue);
 
   useEffect(() => {
     setLeft(total);
@@ -368,7 +369,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
 function TurnSummaryPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
   const team = teamLabel(session.activeTeam);
-  const playTimeUp = useSoundEffect(TIME_UP_SOUND, 0.78);
+  const playTimeUp = useSoundEffect(TIME_UP_SOUND, SOUND_VOLUME.result);
 
   useEffect(() => playTimeUp(), [playTimeUp]);
 

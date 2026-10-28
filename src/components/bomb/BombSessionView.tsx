@@ -1,5 +1,4 @@
 import { router } from 'expo-router';
-import { useAudioPlayer } from 'expo-audio';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useRef } from 'react';
 import { Animated, AppState, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -8,8 +7,9 @@ import { currentBombCard, getBombPlayerName } from '../../domain/bomb/machine';
 import { useBombSession } from '../../domain/bomb/SessionContext';
 import type { BombSession } from '../../domain/bomb/types';
 import { useSettings } from '../../domain/settings/SettingsContext';
-import { prepareGameAudio } from '../../theme/audio';
 import { hapticImpact } from '../../theme/haptics';
+import { SOUND_VOLUME } from '../../theme/soundLevels';
+import { useLoopingSound, useSoundEffect } from '../../theme/useSoundEffect';
 import { easeInOut, easeOut, useEnterAnimation, useReducedMotion } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
@@ -188,37 +188,9 @@ function ReadyPhase({ session }: { session: BombSession }) {
 
 function PlayingPhase({ session }: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
-  const { settings } = useSettings();
   const starter = getBombPlayerName(session, session.startingPlayerId);
   const enter = useEnterAnimation(1, 12);
   const fuseAnimation = useFuseAnimation();
-  const fusePlayer = useAudioPlayer(FUSE_SOUND, { updateInterval: 1_000 });
-
-  useEffect(() => {
-    let active = true;
-    // The bundled track is longer than every possible fuse, avoiding the
-    // audible restart seam some native players add to looped WAV files.
-    fusePlayer.loop = false;
-    fusePlayer.volume = 0.34;
-
-    if (settings.soundEnabled) {
-      void prepareGameAudio()
-        .then(async () => {
-          await fusePlayer.seekTo(0);
-          if (active) fusePlayer.play();
-        })
-        .catch(() => undefined);
-    } else {
-      fusePlayer.pause();
-      void fusePlayer.seekTo(0);
-    }
-
-    return () => {
-      active = false;
-      fusePlayer.pause();
-      void fusePlayer.seekTo(0);
-    };
-  }, [fusePlayer, settings.soundEnabled]);
 
   useEffect(() => {
     if (!session.fuseEndsAt) return;
@@ -293,28 +265,12 @@ function PlayingPhase({ session }: { session: BombSession }) {
 
 function ExplodedPhase(_: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
-  const { settings } = useSettings();
   const copyEnter = useEnterAnimation(2, 8);
   const explosionAnimation = useExplosionAnimation();
-  const explosionPlayer = useAudioPlayer(EXPLOSION_SOUND);
 
   useEffect(() => {
     hapticImpact('medium');
-    if (!settings.soundEnabled) return;
-
-    let active = true;
-    explosionPlayer.volume = 0.9;
-    void prepareGameAudio()
-      .then(async () => {
-        await explosionPlayer.seekTo(0);
-        if (active) explosionPlayer.play();
-      })
-      .catch(() => undefined);
-    return () => {
-      active = false;
-      explosionPlayer.pause();
-    };
-  }, [explosionPlayer, settings.soundEnabled]);
+  }, []);
 
   return (
     <SessionShell
@@ -367,7 +323,30 @@ function ExplodedPhase(_: { session: BombSession }) {
   );
 }
 
+/**
+ * Fuse and explosion live here rather than in their phases, so both sounds
+ * are loaded before the round starts: the fuse ticks the instant it is lit
+ * and the boom is ready the moment the hidden timer runs out.
+ */
+function useBombSounds(phase: BombSession['phase']) {
+  const { settings } = useSettings();
+  const fuse = useLoopingSound(FUSE_SOUND, SOUND_VOLUME.ambient);
+  const playExplosion = useSoundEffect(EXPLOSION_SOUND, SOUND_VOLUME.result);
+
+  useEffect(() => {
+    if (phase !== 'playing') return;
+    fuse.start();
+    return () => fuse.stop();
+  }, [fuse, phase, settings.soundEnabled]);
+
+  useEffect(() => {
+    if (phase !== 'exploded') return;
+    return playExplosion();
+  }, [phase, playExplosion]);
+}
+
 export function BombSessionView({ session }: { session: BombSession }) {
+  useBombSounds(session.phase);
   switch (session.phase) {
     case 'ready': return <ReadyPhase session={session} />;
     case 'playing': return <PlayingPhase session={session} />;

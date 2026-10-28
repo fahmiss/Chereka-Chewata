@@ -4,7 +4,7 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-27._
+_Last updated: 2026-10-28._
 
 ---
 
@@ -66,6 +66,24 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Sound pass: loudness, web playback, signatures, Bomb fixes (2026-10-28)
+
+- Web sounds now play through one Web Audio context unlocked by the first
+  tap (`src/theme/webAudio.ts`, `useSoundEffect.web.ts`). Timer-fired sounds
+  (Bomb explosion, time-up, countdown beats, results) were being dropped by
+  mobile Safari's tap-only rule for `<audio>`.
+- Bomb: fuse and explosion load with the session, so the fuse ticks the
+  instant it is lit and the boom always plays. Fuse is now a 4-second loop
+  (179 KB, was 36 s / 779 KB) whose loop point sits on a tick.
+- Every WAV normalized to one loudness per role; code volumes use
+  `SOUND_VOLUME` roles instead of per-call numbers.
+- Gimbar: pass is a whoosh (was the Quiz wrong-answer buzz) and the
+  forehead 3-2-1 has beats. Mizan's reveal has its own masinko-and-krar cue.
+- Each game except Impostor opens with a signature motif. All new sounds are
+  synthesized in `scripts/generate-sound-kit.mjs` (krar, kebero, washint,
+  tsenatsel and masinko models on qenet scales), so nothing needs licensing.
+  Re-run that script after any other sound script; it also normalizes.
 
 ### New-game fixes and mascots (2026-10-27)
 
