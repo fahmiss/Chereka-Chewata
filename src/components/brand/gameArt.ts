@@ -40,7 +40,18 @@ export const GAME_ART: Partial<Record<GameId, GameArtSet>> = {
     half: { source: require('../../../assets/illustrations/bomb-half.jpg'), aspect: 1 },
   },
   gimbar: {
+    wide: { source: require('../../../assets/illustrations/gimbar.jpg'), aspect: WIDE },
     half: { source: require('../../../assets/illustrations/gimbar-half.jpg'), aspect: 1 },
+  },
+  would_you_rather: {
+    wide: {
+      source: require('../../../assets/illustrations/would_you_rather.jpg'),
+      aspect: 1050 / 591,
+    },
+    half: {
+      source: require('../../../assets/illustrations/would_you_rather-half.jpg'),
+      aspect: 1,
+    },
   },
   whos_the_liar: {
     wide: { source: require('../../../assets/illustrations/whos_the_liar.jpg'), aspect: WIDE },
