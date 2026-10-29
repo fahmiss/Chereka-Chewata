@@ -36,7 +36,7 @@ export default function SettingsScreen() {
   const font = uiFont ? { fontFamily: uiFont } : null;
 
   return (
-    <Screen accent={color.brandPrimary} intensity={0.8}>
+    <Screen edges={['top']} accent={color.brandPrimary} intensity={0.8}>
       <ScrollView
         contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
         showsVerticalScrollIndicator={false}

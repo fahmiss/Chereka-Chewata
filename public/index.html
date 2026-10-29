@@ -33,6 +33,17 @@
         flex: 1;
       }
 
+      /* Home-screen launch with a black-translucent status bar: iOS resolves
+         100% to the screen minus the status bar, leaving a dead band at the
+         bottom. 100vh is the full screen there. Browser tabs keep 100%. */
+      @media all and (display-mode: standalone) {
+        html,
+        body,
+        #root {
+          height: 100vh;
+        }
+      }
+
       /* The shared phone is a game surface, not selectable page copy. */
       #root {
         -webkit-user-select: none;

@@ -32,8 +32,9 @@ export const color = {
 } as const;
 
 export const font = {
-  displayLatin: 'Outfit',
-  bodyLatin: 'PlusJakartaSans',
+  // Redesign 2026-10-29: Bricolage replaced Outfit / Plus Jakarta Sans.
+  displayLatin: 'BricolageGrotesque',
+  bodyLatin: 'BricolageGrotesque',
   ethiopic: 'NotoSansEthiopic',
   utility: 'SpaceMono',
   /**

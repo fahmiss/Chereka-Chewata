@@ -9,7 +9,7 @@ import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
-import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
@@ -194,8 +194,7 @@ function Result({ session }: { session: WouldRatherSession }) {
       }
     >
       <Animated.View style={[styles.ended, enter]}>
-        <MoonFace expression="delighted" size={96} />
-        <Text style={[type.displayLg, styles.endedTitle]}>That’s a wrap</Text>
+        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" />
         <Text style={[type.body, styles.hint]}>
           You settled {session.playedCount} dilemma
           {session.playedCount === 1 ? '' : 's'}. Nobody got to stay neutral.

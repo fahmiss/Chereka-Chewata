@@ -17,6 +17,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
@@ -293,14 +294,17 @@ function Result({ session }: { session: QuizSession }) {
         contentContainerStyle={styles.result}
         showsVerticalScrollIndicator={false}
       >
-        <MoonFace expression="quiz" size={96} />
-        <Text style={[type.displayLg, styles.centerTitle]}>
-          {compete
-            ? winners.length > 1
-              ? 'It’s a tie!'
-              : `${winners[0]?.displayName ?? 'Winner'} wins!`
-            : 'That’s the round!'}
-        </Text>
+        <ResultHero
+          scene="celebrate"
+          accent={ACCENT}
+          title={
+            compete
+              ? winners.length > 1
+                ? 'It’s a tie!'
+                : `${winners[0]?.displayName ?? 'Winner'} wins!`
+              : 'That’s the round!'
+          }
+        />
 
         {compete ? (
           <View style={styles.leaderboard}>

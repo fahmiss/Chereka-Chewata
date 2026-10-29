@@ -26,6 +26,7 @@ import {
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
@@ -865,10 +866,11 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
         <Animated.View style={[styles.winnerBlock, enter]}>
-          <MoonFace expression={crewWon ? 'delighted' : 'secret'} size={96} />
-          <Text style={[type.displayLg, { color: color.textPrimary }]}>
-            {crewWon ? 'Crew wins' : pluralImpostors ? 'Impostors win' : 'Impostor wins'}
-          </Text>
+          <ResultHero
+            scene={crewWon ? 'caught' : 'celebrate'}
+            accent={ACCENT}
+            title={crewWon ? 'Crew wins' : pluralImpostors ? 'Impostors win' : 'Impostor wins'}
+          />
           <Text style={[type.body, styles.winnerSub]}>
             {pluralImpostors ? 'Impostors' : 'Impostor'}:{' '}
             <Text style={{ color: accent }}>{impostorNames}</Text>

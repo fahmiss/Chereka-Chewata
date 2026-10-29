@@ -80,7 +80,7 @@ export default function PlayersScreen() {
   };
 
   return (
-    <Screen accent={color.brandPrimary} intensity={0.8}>
+    <Screen edges={['top']} accent={color.brandPrimary} intensity={0.8}>
       <ScrollView
         contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
         keyboardShouldPersistTaps="handled"

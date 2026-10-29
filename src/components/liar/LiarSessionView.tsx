@@ -28,6 +28,7 @@ import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
@@ -622,10 +623,11 @@ function ResultPhase({ session }: { session: LiarSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
         <Animated.View style={[styles.winnerBlock, enter]}>
-          <MoonFace expression={groupWon ? 'delighted' : 'secret'} size={96} />
-          <Text style={[type.displayLg, { color: color.textPrimary }]}>
-            {groupWon ? 'Group wins' : 'Liar wins'}
-          </Text>
+          <ResultHero
+            scene={groupWon ? 'caught' : 'celebrate'}
+            accent={ACCENT}
+            title={groupWon ? 'Group wins' : 'Liar wins'}
+          />
           <Text style={[type.body, styles.winnerSub]}>
             Liar: <Text style={{ color: accent }}>{liarName}</Text>
           </Text>

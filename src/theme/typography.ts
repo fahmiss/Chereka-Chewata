@@ -9,35 +9,32 @@
 
 import type { TextStyle } from 'react-native';
 
+/**
+ * Bricolage Grotesque carries both the display and body roles since the
+ * 2026-10-29 redesign (Outfit / Plus Jakarta Sans retired). The role names
+ * stay so every screen picks the new face up without call-site changes.
+ * Bricolage tops out at 800, so `black` maps to ExtraBold.
+ */
+const BRICOLAGE = {
+  regular: 'BricolageGrotesque_400Regular',
+  medium: 'BricolageGrotesque_500Medium',
+  semibold: 'BricolageGrotesque_600SemiBold',
+  bold: 'BricolageGrotesque_700Bold',
+  extrabold: 'BricolageGrotesque_800ExtraBold',
+} as const;
+
 export const family = {
-  display: {
-    regular: 'Outfit_400Regular',
-    medium: 'Outfit_500Medium',
-    semibold: 'Outfit_600SemiBold',
-    bold: 'Outfit_700Bold',
-    extrabold: 'Outfit_800ExtraBold',
-    black: 'Outfit_900Black',
-  },
-  body: {
-    regular: 'PlusJakartaSans_400Regular',
-    medium: 'PlusJakartaSans_500Medium',
-    semibold: 'PlusJakartaSans_600SemiBold',
-    bold: 'PlusJakartaSans_700Bold',
-    extrabold: 'PlusJakartaSans_800ExtraBold',
-  },
+  display: { ...BRICOLAGE, black: BRICOLAGE.extrabold },
+  body: BRICOLAGE,
   mono: {
     regular: 'SpaceMono_400Regular',
     bold: 'SpaceMono_700Bold',
   },
-  /** Brush caps — logo voice and game titles only, never running text. */
+  /** Brush caps — logo voice, game titles and big reveal moments only. */
   brush: {
     regular: 'Knewave_400Regular',
   },
-  grotesque: {
-    medium: 'BricolageGrotesque_500Medium',
-    semibold: 'BricolageGrotesque_600SemiBold',
-    bold: 'BricolageGrotesque_700Bold',
-  },
+  grotesque: BRICOLAGE,
   ethiopic: {
     regular: 'NotoSansEthiopic_400Regular',
     medium: 'NotoSansEthiopic_500Medium',
@@ -114,12 +111,12 @@ export const type = {
     lineHeight: 22,
     letterSpacing: -0.2,
   },
-  /** Tracked-out mono — the utility voice for eyebrows, steps, counts. */
+  /** Tracked-out caps for section labels — same voice as the home screen. */
   eyebrow: {
-    fontFamily: family.mono.bold,
-    fontSize: 11,
-    lineHeight: 14,
-    letterSpacing: 2.4,
+    fontFamily: family.grotesque.semibold,
+    fontSize: 12,
+    lineHeight: 16,
+    letterSpacing: 2,
     textTransform: 'uppercase',
   },
   mono: {

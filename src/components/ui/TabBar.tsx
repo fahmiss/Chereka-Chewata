@@ -25,8 +25,13 @@ export function useTabBarClearance() {
   return barBottom(insets.bottom) + BAR_HEIGHT + space[4];
 }
 
+/**
+ * Sits just inside the home-indicator zone, like a system floating bar,
+ * rather than a full inset above it. Capped so an unusually large reported
+ * inset can never strand the bar mid-screen.
+ */
 function barBottom(safeBottom: number) {
-  return Math.max(safeBottom, space[3]);
+  return Math.max(Math.min(safeBottom, 34) - 8, space[3]);
 }
 
 /**
@@ -43,8 +48,8 @@ export function TabBar({ state, descriptors, navigation, insets }: BottomTabBarP
       {/* Content dissolves under the bar instead of being cut off by it. */}
       <LinearGradient
         pointerEvents="none"
-        colors={[alpha(color.void, 0), alpha(color.void, 0.9)]}
-        style={[styles.fade, { height: bottom + BAR_HEIGHT + space[8] }]}
+        colors={[alpha(color.void, 0), alpha(color.void, 0.75)]}
+        style={[styles.fade, { height: bottom + BAR_HEIGHT + space[4] }]}
       />
       <View style={[styles.bar, { bottom }]}>
         {state.routes.map((route, index) => {

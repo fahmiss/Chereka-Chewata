@@ -30,6 +30,7 @@ import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { PlayerPicker } from '../session/PlayerPicker';
@@ -373,10 +374,11 @@ function ResultPhase({ session }: { session: WinkKillerSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
         <Animated.View style={[styles.center, enter]}>
-          <MoonFace expression={citizensWon ? 'delighted' : 'caught'} size={96} />
-          <Text style={[type.displayLg, styles.titleCenter]}>
-            {citizensWon ? 'Citizens win' : killers.length > 1 ? 'Killers win' : 'Killer wins'}
-          </Text>
+          <ResultHero
+            scene={citizensWon ? 'caught' : 'celebrate'}
+            accent={ACCENT}
+            title={citizensWon ? 'Citizens win' : killers.length > 1 ? 'Killers win' : 'Killer wins'}
+          />
           <Text style={[type.body, styles.secondaryCenter]}>
             {killers.length > 1 ? 'Killers' : 'Killer'}:{' '}
             <Text style={{ color: color.dangerUrgency }}>{killers.join(' & ')}</Text>

@@ -35,6 +35,13 @@ const darkCanvas = `
 html, body, #root {
   background-color: #0D0B1C;
 }
+/* Home-screen launch with a black-translucent status bar: iOS resolves 100%
+   to the screen minus the status bar. 100vh is the full screen there. */
+@media all and (display-mode: standalone) {
+  html, body, #root {
+    height: 100vh;
+  }
+}
 #root {
   -webkit-user-select: none;
   user-select: none;

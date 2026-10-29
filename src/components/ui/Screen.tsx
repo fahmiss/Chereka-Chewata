@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, type Edge } from 'react-native-safe-area-context';
 import { color, overlay, radius, touchTarget } from '../../theme/tokens';
 import { Backdrop } from './Backdrop';
 import { Icon, type IconName } from './Icon';
@@ -12,14 +12,22 @@ type ScreenProps = {
   accent?: string;
   intensity?: number;
   style?: StyleProp<ViewStyle>;
+  /** Tab screens drop 'bottom' so content runs under the floating tab bar. */
+  edges?: Edge[];
 };
 
 /** Every screen sits on the same lit room so navigation feels continuous. */
-export function Screen({ children, accent, intensity, style }: ScreenProps) {
+export function Screen({
+  children,
+  accent,
+  intensity,
+  style,
+  edges = ['top', 'bottom'],
+}: ScreenProps) {
   return (
     <View style={styles.root}>
       <Backdrop accent={accent} intensity={intensity} />
-      <SafeAreaView style={[styles.safe, style]} edges={['top', 'bottom']}>
+      <SafeAreaView style={[styles.safe, style]} edges={edges}>
         {children}
       </SafeAreaView>
     </View>

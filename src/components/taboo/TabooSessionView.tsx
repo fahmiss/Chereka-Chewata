@@ -19,6 +19,7 @@ import { family, type } from '../../theme/typography';
 import { SessionShell, TABOO_STAGES } from '../session/SessionShell';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
@@ -482,11 +483,7 @@ function FinalPhase({ session }: { session: TabooSession }) {
       }
     >
       <Animated.View style={[styles.finalBlock, enter]}>
-        <MoonFace
-          expression={session.winner === 'tie' ? 'ready' : 'delighted'}
-          size={96}
-        />
-        <Text style={[type.displayLg, { color: color.textPrimary }]}>{winner}</Text>
+        <ResultHero scene="celebrate" accent={ACCENT} title={winner} />
         <ScoreStrip session={session} />
       </Animated.View>
 

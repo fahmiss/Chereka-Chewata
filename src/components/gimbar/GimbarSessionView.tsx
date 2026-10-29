@@ -35,6 +35,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { leaders, Standings } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
 import { useCountdown, useSessionKeepAwake } from '../session/useCountdown';
@@ -476,8 +477,7 @@ function FinalPhase({ session }: { session: GimbarSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.finalScroll}>
         <Animated.View style={[styles.finalHead, enter]}>
-          <MoonFace expression={top.length ? 'delighted' : 'ready'} size={96} />
-          <Text style={[type.displayLg, styles.title]}>{headline}</Text>
+          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
         </Animated.View>
         <Standings rows={rows} accent={ACCENT} />
       </ScrollView>

@@ -1,16 +1,12 @@
+import { BricolageGrotesque_400Regular } from '@expo-google-fonts/bricolage-grotesque/400Regular';
 import { BricolageGrotesque_500Medium } from '@expo-google-fonts/bricolage-grotesque/500Medium';
 import { BricolageGrotesque_600SemiBold } from '@expo-google-fonts/bricolage-grotesque/600SemiBold';
 import { BricolageGrotesque_700Bold } from '@expo-google-fonts/bricolage-grotesque/700Bold';
+import { BricolageGrotesque_800ExtraBold } from '@expo-google-fonts/bricolage-grotesque/800ExtraBold';
 import { Knewave_400Regular } from '@expo-google-fonts/knewave/400Regular';
 import { NotoSansEthiopic_400Regular } from '@expo-google-fonts/noto-sans-ethiopic/400Regular';
 import { NotoSansEthiopic_500Medium } from '@expo-google-fonts/noto-sans-ethiopic/500Medium';
 import { NotoSansEthiopic_700Bold } from '@expo-google-fonts/noto-sans-ethiopic/700Bold';
-import { Outfit_600SemiBold } from '@expo-google-fonts/outfit/600SemiBold';
-import { Outfit_700Bold } from '@expo-google-fonts/outfit/700Bold';
-import { Outfit_800ExtraBold } from '@expo-google-fonts/outfit/800ExtraBold';
-import { Outfit_900Black } from '@expo-google-fonts/outfit/900Black';
-import { PlusJakartaSans_400Regular } from '@expo-google-fonts/plus-jakarta-sans/400Regular';
-import { PlusJakartaSans_600SemiBold } from '@expo-google-fonts/plus-jakarta-sans/600SemiBold';
 import { SpaceMono_400Regular } from '@expo-google-fonts/space-mono/400Regular';
 import { SpaceMono_700Bold } from '@expo-google-fonts/space-mono/700Bold';
 import { useFonts } from 'expo-font';
@@ -43,18 +39,15 @@ import { color } from '../src/theme/tokens';
 import { hydrateContentHistory } from '../src/storage/contentHistory';
 
 const APP_FONTS = {
-  Outfit_600SemiBold,
-  Outfit_700Bold,
-  Outfit_800ExtraBold,
-  Outfit_900Black,
-  PlusJakartaSans_400Regular,
-  PlusJakartaSans_600SemiBold,
-  SpaceMono_400Regular,
-  SpaceMono_700Bold,
-  Knewave_400Regular,
+  BricolageGrotesque_400Regular,
   BricolageGrotesque_500Medium,
   BricolageGrotesque_600SemiBold,
   BricolageGrotesque_700Bold,
+  BricolageGrotesque_800ExtraBold,
+  Knewave_400Regular,
+  // Timers and scores only — numbers that must not shift width as they tick.
+  SpaceMono_400Regular,
+  SpaceMono_700Bold,
   // The Ethiopic wordmark remains part of the brand even in English-only mode.
   NotoSansEthiopic_500Medium,
   ...(featureFlags.amharicInterface || featureFlags.amharicContent

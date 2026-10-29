@@ -21,7 +21,7 @@ import { color, overlay, space } from '../../src/theme/tokens';
 import { family } from '../../src/theme/typography';
 
 const GUTTER = space[4];
-const WORDMARK_WIDTH = 176;
+const WORDMARK_WIDTH = 200;
 /** The cast band is cropped a little top and bottom so the hero stays short. */
 const CAST_HEIGHT = 92;
 
@@ -90,26 +90,25 @@ export default function HomeScreen() {
   let cardIndex = 1;
 
   return (
-    <Screen accent={color.brandPrimary}>
+    <Screen edges={['top']} accent={color.brandPrimary}>
       <ScrollView
         contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
         showsVerticalScrollIndicator={false}
       >
         <Animated.View style={hero}>
-          <View style={styles.heroTop}>
-            <View style={styles.brand}>
-              <Image
-                source={WORDMARK.source}
-                style={styles.wordmark}
-                resizeMode="contain"
-                accessible
-                accessibilityRole="header"
-                accessibilityLabel="Chereka Chewata"
-              />
-              <Text style={[styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>
-                {t('home.tagline')}
-              </Text>
-            </View>
+          {/* Centred over the symmetric cast band: brand on top, crew below. */}
+          <View style={styles.brand}>
+            <Image
+              source={WORDMARK.source}
+              style={styles.wordmark}
+              resizeMode="contain"
+              accessible
+              accessibilityRole="header"
+              accessibilityLabel="Chereka Chewata"
+            />
+            <Text style={[styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('home.tagline')}
+            </Text>
           </View>
 
           <View
@@ -202,30 +201,26 @@ const styles = StyleSheet.create({
     paddingHorizontal: GUTTER,
     gap: space[3],
   },
-  heroTop: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    paddingTop: space[2],
-  },
   brand: {
-    flex: 1,
+    alignItems: 'center',
     gap: space[1],
+    paddingTop: space[2],
   },
   wordmark: {
     width: WORDMARK_WIDTH,
     height: WORDMARK_WIDTH / WORDMARK.aspect,
-    marginLeft: -space[1],
   },
   tagline: {
     color: color.textSecondary,
     fontFamily: family.grotesque.medium,
     fontSize: 14,
     lineHeight: 20,
+    textAlign: 'center',
   },
   cast: {
     marginLeft: -GUTTER,
-    marginTop: space[1],
+    // Tucks under the tagline so centring doesn't make the hero taller.
+    marginTop: -space[1],
   },
   sectionHead: {
     flexDirection: 'row',

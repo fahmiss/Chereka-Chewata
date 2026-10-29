@@ -42,7 +42,7 @@ import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { TeamRoster, TeamScoreStrip } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
@@ -453,8 +453,7 @@ function FinalPhase({ session }: { session: MesobSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
         <Animated.View style={[styles.finalHead, enter]}>
-          <MoonFace expression={session.winner === 'tie' ? 'ready' : 'delighted'} size={96} />
-          <Text style={[type.displayLg, styles.title]}>{headline}</Text>
+          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
         </Animated.View>
         <TeamScoreStrip scores={session.scores} activeTeam={null} accent={ACCENT} />
         <Surface contentStyle={styles.card}>

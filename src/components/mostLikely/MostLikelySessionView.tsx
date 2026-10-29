@@ -17,7 +17,7 @@ import { ReportCardButton } from '../session/ReportCardButton';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
-import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 
 const ACCENT = color.gameMostLikely;
 const STAGES = ['prompt', 'point', 'discuss', 'result'] as const;
@@ -237,8 +237,7 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
       }
     >
       <Animated.View style={[styles.ended, enter]}>
-        <MoonFace expression="delighted" size={96} />
-        <Text style={[type.displayLg, { color: color.textPrimary }]}>That’s a wrap</Text>
+        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" />
         <Text style={[type.body, styles.hint]}>
           You played {session.playedCount} prompt{session.playedCount === 1 ? '' : 's'}.
           Compare answers, then move on.

@@ -211,7 +211,7 @@ function HalfArt({ game, width, height, ground }: ArtProps & { width: number }) 
   );
 }
 
-function StatChip({ icon, label }: { icon: IconName; label: string }) {
+export function StatChip({ icon, label }: { icon: IconName; label: string }) {
   return (
     <View style={styles.chip}>
       <Icon name={icon} size={13} color={color.textSecondary} strokeWidth={2.2} />

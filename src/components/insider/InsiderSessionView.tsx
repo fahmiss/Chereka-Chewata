@@ -30,6 +30,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { MetaChip } from '../ui/Chip';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
@@ -437,8 +438,7 @@ function ResultPhase({ session }: { session: InsiderSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
         <Animated.View style={[styles.center, enter]}>
-          <MoonFace expression={caught ? 'delighted' : 'secret'} size={96} />
-          <Text style={[type.displayLg, styles.titleCenter]}>{headline}</Text>
+          <ResultHero scene={caught ? 'caught' : 'celebrate'} accent={ACCENT} title={headline} />
           <Text style={[type.body, styles.secondaryCenter]}>{detail}</Text>
         </Animated.View>
 

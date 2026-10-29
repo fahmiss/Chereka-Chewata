@@ -10,6 +10,27 @@ _Last updated: 2026-10-29._
 
 ## Open
 
+### Game screens redesign (2026-10-29)
+- [x] Type: Bricolage now carries the display/body roles app-wide
+      (`src/theme/typography.ts`); eyebrows moved off Space Mono, which is
+      kept for timers/scores only. Outfit + Plus Jakarta Sans uninstalled
+- [x] Game details: full-bleed scene hero, brush title, numbered steps in
+      the game colour, honey Play button
+- [ ] Shared in-game moments: pass-the-phone, secret reveal, timer ring,
+      results headline (brush) — restyle once, covers all 12 games
+- [ ] Setup screens: Players-tab look for the players step, new surfaces
+- [x] Results headers: shared `ResultHero` (cast scene band + brush
+      headline) replaces the mascot on all 11 results screens. `caught` when
+      the group exposes someone (Impostor, Liar, Wink Killer, Insider),
+      `celebrate` for every other ending
+- [ ] In-round screens stay type-led (no cast art): restyle the remaining
+      MoonFace uses (secret, timer, Bomb fuse, pass-the-phone) with brush
+      type, game colour and motion
+- [ ] Verify on iPhone home-screen web app: gap under the tab bar. Cause:
+      black-translucent standalone mode sizes `height: 100%` to screen minus
+      status bar; fixed with a `display-mode: standalone` 100vh rule in
+      `public/index.html` + `app/+html.tsx` (can't be emulated in Chrome)
+
 ### Players tab + bottom nav (2026-10-29)
 Floating tab bar (Home · Players · Settings) in `app/(tabs)/`, custom
 `TabBar`. Players tab edits the saved group (`chereka.players.lastGroup.v1`);

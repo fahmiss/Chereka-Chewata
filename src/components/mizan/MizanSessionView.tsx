@@ -27,7 +27,7 @@ import { alpha, color, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
+import { ResultHero } from '../session/ResultHero';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { TeamScoreStrip } from '../session/Scoreboards';
@@ -342,8 +342,7 @@ function FinalPhase({ session }: { session: MizanSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
         <Animated.View style={[styles.revealHead, enter]}>
-          <MoonFace expression="delighted" size={96} />
-          <Text style={[type.displayLg, styles.title]}>{headline}</Text>
+          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
           <Text style={[type.body, styles.secondaryCenter]}>{verdict}</Text>
         </Animated.View>
         {teams ? (

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import Svg, {
   Circle,
@@ -25,7 +25,11 @@ type Props = {
  * Rendered once per screen, statically — no animation, no per-frame cost.
  */
 export function Backdrop({ accent = color.brandMystery, intensity = 1 }: Props) {
-  const { width, height } = useWindowDimensions();
+  // Measure the space actually filled rather than trusting the window size:
+  // an iOS home-screen web app reports a window shorter than the screen.
+  const window = useWindowDimensions();
+  const [size, setSize] = useState({ width: window.width, height: window.height });
+  const { width, height } = size;
 
   // Deterministic dust — a fixed seed keeps stars from jumping between renders.
   const stars = useMemo(() => {
@@ -43,7 +47,14 @@ export function Backdrop({ accent = color.brandMystery, intensity = 1 }: Props) 
   }, []);
 
   return (
-    <View style={StyleSheet.absoluteFill} pointerEvents="none">
+    <View
+      style={StyleSheet.absoluteFill}
+      pointerEvents="none"
+      onLayout={(event) => {
+        const { width: w, height: h } = event.nativeEvent.layout;
+        if (w !== width || h !== height) setSize({ width: w, height: h });
+      }}
+    >
       <Svg width={width} height={height} style={StyleSheet.absoluteFill}>
         <Defs>
           <LinearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
