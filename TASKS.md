@@ -17,6 +17,12 @@ Bricolage Grotesque, illustrated `GameCard`s, cast hero band). Still open:
       Wide cuts in `<game>.jpg`, two-up cuts in `<game>-half.jpg`; mapped in
       `GAME_ART` (`src/components/brand/gameArt.ts`). The moon-mascot
       fallback in `GameCard` now only covers future games
+- [x] Per-game colour identity (2026-10-29): scenes are graded toward each
+      game's accent at export (shadows/mid-tones only, faces keep lamp warmth)
+      and cards carry a stronger accent ground, glow and border
+- [ ] Better colour identity: regenerate scenes with the coloured light baked
+      in ("the whole room is lit by <accent> light; only faces catch warm
+      lamp light") — punchier than the export grade
 - [ ] Wordmark is still a mockup crop (360px) — swap in the original logo file
 - [ ] Carry the new type + card language to setup / session screens (still
       Outfit + Plus Jakarta Sans)

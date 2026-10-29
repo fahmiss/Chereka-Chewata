@@ -49,7 +49,10 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
   const accent = game.accent;
   const wide = variant === 'wide';
   const height = wide ? WIDE_HEIGHT : HALF_HEIGHT;
-  const ground = mix(color.background, accent, 0.16 * (TINT_STRENGTH[game.id] ?? 1));
+  const tint = TINT_STRENGTH[game.id] ?? 1;
+  // Strong enough that each card reads as its game's colour at a glance —
+  // the art is graded toward the same accent at export.
+  const ground = mix(color.background, accent, 0.3 * tint);
   const locked = !game.playable;
 
   // Half cards have ~150pt for both chips; the icons already say "players"
@@ -61,7 +64,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
 
   return (
     <Animated.View
-      style={[styles.shell, !wide && styles.half, glow(accent, 0.22, 18), enter]}
+      style={[styles.shell, !wide && styles.half, glow(accent, 0.34, 20), enter]}
       onLayout={(event) => setWidth(event.nativeEvent.layout.width)}
     >
       <PressableScale
@@ -77,7 +80,16 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
         onPress={onPress}
         haptic="medium"
         scaleTo={0.97}
-        style={[styles.card, { height, backgroundColor: ground }, locked && styles.locked]}
+        style={[
+          styles.card,
+          {
+            height,
+            backgroundColor: ground,
+            borderColor: alpha(accent, 0.22),
+            borderTopColor: alpha(accent, 0.45),
+          },
+          locked && styles.locked,
+        ]}
       >
         {wide ? (
           <WideArt game={game} height={height} ground={ground} />
@@ -221,8 +233,6 @@ const styles = StyleSheet.create({
     borderRadius: radius.medium,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: overlay.hairline,
-    borderTopColor: overlay.hairlineTop,
   },
   locked: {
     opacity: 0.72,
