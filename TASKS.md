@@ -10,6 +10,17 @@ _Last updated: 2026-10-29._
 
 ## Open
 
+### Players tab + bottom nav (2026-10-29)
+Floating tab bar (Home · Players · Settings) in `app/(tabs)/`, custom
+`TabBar`. Players tab edits the saved group (`chereka.players.lastGroup.v1`);
+opening any game seats it, and starting a game still writes back to it.
+- [ ] Spec §14.1 says Settings opens from a top-right icon; it is now a tab
+      by product decision — update PRODUCT_SPEC when the nav settles
+- [ ] Quick Play centre button (random game with the saved players) — the
+      planned swap for the Settings tab
+- [ ] Device check: tab bar over the home indicator on iPhone, keyboard
+      behaviour on the Players add row (Android)
+
 ### Home redesign follow-ups (2026-10-29)
 Home is rebuilt on the new design (brush titles in Knewave, labels in
 Bricolage Grotesque, illustrated `GameCard`s, cast hero band). Still open:

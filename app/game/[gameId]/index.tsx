@@ -1,4 +1,5 @@
 import { router, useLocalSearchParams } from 'expo-router';
+import { useEffect } from 'react';
 import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { GAME_MOON_EXPRESSION } from '../../../src/components/brand/gameMoonExpression';
 import { MoonFace } from '../../../src/components/brand/MoonFace';
@@ -6,6 +7,7 @@ import { MetaChip, Pill } from '../../../src/components/ui/Chip';
 import { PrimaryButton } from '../../../src/components/ui/PrimaryButton';
 import { IconButton, Screen } from '../../../src/components/ui/Screen';
 import { getGame } from '../../../src/domain/games';
+import { useGameSetup } from '../../../src/domain/useGameSetup';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, radius, space } from '../../../src/theme/tokens';
 import { type } from '../../../src/theme/typography';
@@ -77,6 +79,13 @@ export default function GameDetailsScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
   const game = getGame(String(gameId));
   const enter = useEnterAnimation(0, 16);
+  const { useLastGroup: seatSavedPlayers } = useGameSetup(String(gameId));
+
+  // The Players tab is the table: opening a game seats that group. Games
+  // that need more players than are saved keep their defaults.
+  useEffect(() => {
+    void seatSavedPlayers();
+  }, [gameId]);
 
   if (!game) {
     return (

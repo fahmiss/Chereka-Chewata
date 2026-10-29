@@ -115,7 +115,8 @@ export function QuizSetupProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
   const useLastGroup = useCallback(async () => {
-    const group = lastGroup ?? (await loadLastPlayerGroup());
+    // Always read storage: the Players tab can change the group at any time.
+    const group = await loadLastPlayerGroup();
     if (!group || group.length < QUIZ_MIN_PLAYERS) return false;
     const players = group.slice(0, QUIZ_MAX_PLAYERS);
     setLastGroup(players);

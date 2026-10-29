@@ -116,7 +116,8 @@ export function BombSetupProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
   const useLastGroup = useCallback(async () => {
-    const group = lastGroup ?? (await loadLastPlayerGroup());
+    // Always read storage: the Players tab can change the group at any time.
+    const group = await loadLastPlayerGroup();
     if (!group || group.length < BOMB_MIN_PLAYERS) return false;
     const players = group.slice(0, BOMB_MAX_PLAYERS);
     setLastGroup(players);

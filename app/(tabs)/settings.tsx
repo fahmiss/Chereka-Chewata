@@ -1,18 +1,19 @@
-import { router } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { MoonFace } from '../src/components/brand/MoonFace';
-import { featureFlags } from '../src/config/features';
-import { Dialog } from '../src/components/ui/Dialog';
-import { IconButton, Screen } from '../src/components/ui/Screen';
-import { SecondaryButton } from '../src/components/ui/SecondaryButton';
-import { Segmented, Toggle } from '../src/components/ui/Selectable';
-import { Surface } from '../src/components/ui/Surface';
-import { useSettings } from '../src/domain/settings/SettingsContext';
-import type { ContentLanguage, InterfaceLanguage } from '../src/domain/settings/types';
-import { useT } from '../src/i18n';
-import { color, space } from '../src/theme/tokens';
-import { family, type } from '../src/theme/typography';
+import { MoonFace } from '../../src/components/brand/MoonFace';
+import { featureFlags } from '../../src/config/features';
+import { Dialog } from '../../src/components/ui/Dialog';
+import { Screen } from '../../src/components/ui/Screen';
+import { useTabBarClearance } from '../../src/components/ui/TabBar';
+import { TabHeader } from '../../src/components/ui/TabHeader';
+import { SecondaryButton } from '../../src/components/ui/SecondaryButton';
+import { Segmented, Toggle } from '../../src/components/ui/Selectable';
+import { Surface } from '../../src/components/ui/Surface';
+import { useSettings } from '../../src/domain/settings/SettingsContext';
+import type { ContentLanguage, InterfaceLanguage } from '../../src/domain/settings/types';
+import { useT } from '../../src/i18n';
+import { color, space } from '../../src/theme/tokens';
+import { family, type } from '../../src/theme/typography';
 
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
@@ -27,6 +28,7 @@ export default function SettingsScreen() {
     resetCardHistory,
   } = useSettings();
   const { t, uiFont } = useT();
+  const clearance = useTabBarClearance();
   const [resetVisible, setResetVisible] = useState(false);
   const [resetDone, setResetDone] = useState(false);
   const [privacyVisible, setPrivacyVisible] = useState(false);
@@ -35,12 +37,11 @@ export default function SettingsScreen() {
 
   return (
     <Screen accent={color.brandPrimary} intensity={0.8}>
-      <View style={styles.nav}>
-        <IconButton name="arrowLeft" label={t('common.back')} onPress={() => router.back()} />
-      </View>
-
-      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-        <Text style={[type.displayLg, styles.title, font]}>{t('settings.title')}</Text>
+      <ScrollView
+        contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
+        showsVerticalScrollIndicator={false}
+      >
+        <TabHeader title={t('settings.title')} />
 
         {featureFlags.languageSelection ? (
           <Surface contentStyle={styles.card}>
@@ -190,18 +191,10 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-  nav: {
-    paddingHorizontal: space[6],
-    paddingTop: space[2],
-  },
   content: {
-    paddingHorizontal: space[6],
-    paddingTop: space[6],
-    paddingBottom: space[10],
+    paddingHorizontal: space[4],
+    paddingTop: space[4],
     gap: space[5],
-  },
-  title: {
-    color: color.textPrimary,
   },
   card: {
     padding: space[5],

@@ -128,7 +128,8 @@ export function LiarSetupProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const useLastGroup = useCallback(async () => {
-    const group = lastGroup ?? (await loadLastPlayerGroup());
+    // Always read storage: the Players tab can change the group at any time.
+    const group = await loadLastPlayerGroup();
     if (!group || group.length < LIAR_MIN_PLAYERS) return false;
     setLastGroup(group);
     setSetup((prev) => ({ ...prev, players: group }));

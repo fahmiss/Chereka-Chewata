@@ -2,6 +2,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Player } from '../domain/impostor/types';
 import { storageKeys } from './keys';
 
+/** The biggest table any game seats (Wink Killer). */
+export const SAVED_PLAYERS_MAX = 30;
+
 export async function loadLastPlayerGroup(): Promise<Player[] | null> {
   try {
     const raw = await AsyncStorage.getItem(storageKeys.lastPlayerGroup);

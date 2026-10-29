@@ -120,6 +120,7 @@ export default function RootLayout() {
                                 >
                                   <Stack.Screen name="index" options={{ animation: 'fade' }} />
                                   <Stack.Screen name="language" options={{ animation: 'fade' }} />
+                                  <Stack.Screen name="(tabs)" options={{ animation: 'fade' }} />
                                   <Stack.Screen
                                     name="session/[sessionId]"
                                     options={{ animation: 'fade', gestureEnabled: false }}

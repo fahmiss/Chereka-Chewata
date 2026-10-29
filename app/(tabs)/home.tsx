@@ -9,15 +9,16 @@ import Svg, {
   Rect,
   Stop,
 } from 'react-native-svg';
-import { GAME_ART, HERO_CAST, WORDMARK } from '../src/components/brand/gameArt';
-import { GameCard } from '../src/components/ui/GameCard';
-import { Screen, IconButton } from '../src/components/ui/Screen';
-import { GAMES, getGame, type GameCatalogEntry, type GameId } from '../src/domain/games';
-import { useT } from '../src/i18n';
-import { loadLastPlayedGame } from '../src/storage/lastPlayedGame';
-import { useEnterAnimation } from '../src/theme/motion';
-import { color, overlay, space } from '../src/theme/tokens';
-import { family } from '../src/theme/typography';
+import { GAME_ART, HERO_CAST, WORDMARK } from '../../src/components/brand/gameArt';
+import { GameCard } from '../../src/components/ui/GameCard';
+import { Screen } from '../../src/components/ui/Screen';
+import { useTabBarClearance } from '../../src/components/ui/TabBar';
+import { GAMES, getGame, type GameCatalogEntry, type GameId } from '../../src/domain/games';
+import { useT } from '../../src/i18n';
+import { loadLastPlayedGame } from '../../src/storage/lastPlayedGame';
+import { useEnterAnimation } from '../../src/theme/motion';
+import { color, overlay, space } from '../../src/theme/tokens';
+import { family } from '../../src/theme/typography';
 
 const GUTTER = space[4];
 const WORDMARK_WIDTH = 176;
@@ -66,6 +67,7 @@ function tonightsPick(): GameCatalogEntry {
 export default function HomeScreen() {
   const { t, uiFont } = useT();
   const { width } = useWindowDimensions();
+  const clearance = useTabBarClearance();
   const hero = useEnterAnimation(0, 16);
   const rows = useMemo(gridRows, []);
   const pick = useMemo(tonightsPick, []);
@@ -89,7 +91,10 @@ export default function HomeScreen() {
 
   return (
     <Screen accent={color.brandPrimary}>
-      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
+        showsVerticalScrollIndicator={false}
+      >
         <Animated.View style={hero}>
           <View style={styles.heroTop}>
             <View style={styles.brand}>
@@ -105,11 +110,6 @@ export default function HomeScreen() {
                 {t('home.tagline')}
               </Text>
             </View>
-            <IconButton
-              name="settings"
-              label={t('common.settings')}
-              onPress={() => router.push('/settings')}
-            />
           </View>
 
           <View
@@ -200,7 +200,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   content: {
     paddingHorizontal: GUTTER,
-    paddingBottom: space[12],
     gap: space[3],
   },
   heroTop: {
