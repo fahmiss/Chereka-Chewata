@@ -11,6 +11,9 @@ export const en = {
   'home.tagline': 'One phone. Pass it. Play together.',
   'home.play': 'Play',
   'home.comingNext': 'Coming next',
+  'home.allGames': 'All games',
+  'home.tonightsPick': "Tonight's pick",
+  'home.playAgain': 'Play again',
 
   'language.title': 'Choose how the app talks — and which language the cards use.',
   'language.interface': 'Interface',

@@ -36,6 +36,12 @@ export const font = {
   bodyLatin: 'PlusJakartaSans',
   ethiopic: 'NotoSansEthiopic',
   utility: 'SpaceMono',
+  /**
+   * Home redesign (2026-10-29), additive: hand-painted brush caps for the
+   * logo voice and game titles only; a characterful grotesque for labels.
+   */
+  brush: 'Knewave',
+  grotesque: 'BricolageGrotesque',
 } as const;
 
 export const radius = {
@@ -93,6 +99,19 @@ export function alpha(hex: string, value: number): string {
   const g = (int >> 8) & 255;
   const b = int & 255;
   return `rgba(${r},${g},${b},${value})`;
+}
+
+/** Opaque blend of two 6-digit hexes — `amount` 0 is `from`, 1 is `to`. */
+export function mix(from: string, to: string, amount: number): string {
+  const a = parseInt(from.replace('#', ''), 16);
+  const b = parseInt(to.replace('#', ''), 16);
+  const channel = (shift: number) => {
+    const x = (a >> shift) & 255;
+    const y = (b >> shift) & 255;
+    return Math.round(x + (y - x) * amount);
+  };
+  const hex = (channel(16) << 16) | (channel(8) << 8) | channel(0);
+  return `#${hex.toString(16).padStart(6, '0')}`;
 }
 
 /** Coloured bloom under a raised element — reads as light, not as a drop shadow. */

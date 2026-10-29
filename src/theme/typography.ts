@@ -29,6 +29,15 @@ export const family = {
     regular: 'SpaceMono_400Regular',
     bold: 'SpaceMono_700Bold',
   },
+  /** Brush caps — logo voice and game titles only, never running text. */
+  brush: {
+    regular: 'Knewave_400Regular',
+  },
+  grotesque: {
+    medium: 'BricolageGrotesque_500Medium',
+    semibold: 'BricolageGrotesque_600SemiBold',
+    bold: 'BricolageGrotesque_700Bold',
+  },
   ethiopic: {
     regular: 'NotoSansEthiopic_400Regular',
     medium: 'NotoSansEthiopic_500Medium',

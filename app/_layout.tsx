@@ -1,3 +1,7 @@
+import { BricolageGrotesque_500Medium } from '@expo-google-fonts/bricolage-grotesque/500Medium';
+import { BricolageGrotesque_600SemiBold } from '@expo-google-fonts/bricolage-grotesque/600SemiBold';
+import { BricolageGrotesque_700Bold } from '@expo-google-fonts/bricolage-grotesque/700Bold';
+import { Knewave_400Regular } from '@expo-google-fonts/knewave/400Regular';
 import { NotoSansEthiopic_400Regular } from '@expo-google-fonts/noto-sans-ethiopic/400Regular';
 import { NotoSansEthiopic_500Medium } from '@expo-google-fonts/noto-sans-ethiopic/500Medium';
 import { NotoSansEthiopic_700Bold } from '@expo-google-fonts/noto-sans-ethiopic/700Bold';
@@ -47,6 +51,10 @@ const APP_FONTS = {
   PlusJakartaSans_600SemiBold,
   SpaceMono_400Regular,
   SpaceMono_700Bold,
+  Knewave_400Regular,
+  BricolageGrotesque_500Medium,
+  BricolageGrotesque_600SemiBold,
+  BricolageGrotesque_700Bold,
   // The Ethiopic wordmark remains part of the brand even in English-only mode.
   NotoSansEthiopic_500Medium,
   ...(featureFlags.amharicInterface || featureFlags.amharicContent

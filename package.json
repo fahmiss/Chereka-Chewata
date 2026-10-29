@@ -12,6 +12,8 @@
     "validate:content": "node scripts/validate-content.mjs"
   },
   "dependencies": {
+    "@expo-google-fonts/bricolage-grotesque": "^0.4.1",
+    "@expo-google-fonts/knewave": "^0.4.1",
     "@expo-google-fonts/noto-sans-ethiopic": "^0.4.2",
     "@expo-google-fonts/outfit": "^0.4.3",
     "@expo-google-fonts/plus-jakarta-sans": "^0.4.2",
