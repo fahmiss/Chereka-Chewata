@@ -78,14 +78,14 @@ build remains English-only.
 
 | Game | Cards |
 |---|---:|
-| Impostor | 318 words |
-| Who’s the Liar? | 216 question pairs |
-| Taboo | 388 cards |
-| Who’s Most Likely To | 250 prompts |
-| Would You Rather | 243 dilemmas |
-| Who’s Got the Bomb? | 146 categories |
-| Quiz | 218 questions |
-| Gimbar | 55 act-it-out cards + every Taboo and Impostor word (582 unique) |
+| Impostor | 336 words |
+| Who’s the Liar? | 226 question pairs |
+| Taboo | 406 cards |
+| Who’s Most Likely To | 262 prompts |
+| Would You Rather | 253 dilemmas |
+| Who’s Got the Bomb? | 156 categories |
+| Quiz | 233 questions |
+| Gimbar | 55 act-it-out cards + every Taboo and Impostor word (647 unique) |
 | Mesob | Player-written slips; optional top-up from the Gimbar deck |
 | Mizan | 77 spectrum cards |
 | Wink Killer | No cards — roles only |

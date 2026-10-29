@@ -9009,5 +9009,337 @@
     "category_id": "entertainment_pop_culture",
     "content_level": "family",
     "active": true
+  },
+  {
+    "id": "taboo_ethx_001",
+    "target_en": "Irreecha",
+    "forbidden_en": [
+      "Oromo",
+      "Thanksgiving",
+      "Water",
+      "Festival"
+    ],
+    "difficulty": "medium",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethx_002",
+    "target_en": "Gadaa",
+    "forbidden_en": [
+      "Oromo",
+      "Governance",
+      "Eight years",
+      "Generation"
+    ],
+    "difficulty": "hard",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethx_003",
+    "target_en": "Harar Jugol",
+    "forbidden_en": [
+      "Wall",
+      "Old city",
+      "Gate",
+      "Mosque"
+    ],
+    "difficulty": "medium",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethx_004",
+    "target_en": "Shamma",
+    "forbidden_en": [
+      "Cloth",
+      "Cotton",
+      "White",
+      "Weave"
+    ],
+    "difficulty": "medium",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethx_005",
+    "target_en": "Addis Light Rail",
+    "forbidden_en": [
+      "Train",
+      "City",
+      "Track",
+      "Station"
+    ],
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "taboo_ethx_006",
+    "target_en": "Fendika",
+    "forbidden_en": [
+      "Dance",
+      "Music",
+      "Azmari",
+      "Addis"
+    ],
+    "difficulty": "hard",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "taboo_now_001",
+    "target_en": "Rophnan",
+    "forbidden_en": [
+      "DJ",
+      "Producer",
+      "Electronic",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_002",
+    "target_en": "Betty G",
+    "forbidden_en": [
+      "Singer",
+      "UNHCR",
+      "Coke Studio",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_003",
+    "target_en": "Jemberu Demeke",
+    "forbidden_en": [
+      "Rapper",
+      "Producer",
+      "Tonic fusion",
+      "Esatu Se"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_004",
+    "target_en": "Kassmasse",
+    "forbidden_en": [
+      "Rapper",
+      "Addis",
+      "Hip-hop",
+      "1888"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_005",
+    "target_en": "Hana Girma",
+    "forbidden_en": [
+      "Singer",
+      "Music",
+      "Ethiopian",
+      "Stage"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_006",
+    "target_en": "Veronica Adane",
+    "forbidden_en": [
+      "Singer",
+      "Music",
+      "Ethiopian",
+      "Song"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_007",
+    "target_en": "Yared Negu",
+    "forbidden_en": [
+      "Singer",
+      "Music",
+      "Ethiopian",
+      "Song"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_008",
+    "target_en": "Abdu Kiar",
+    "forbidden_en": [
+      "Singer",
+      "Music",
+      "Ethiopian",
+      "Song"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_009",
+    "target_en": "Liya Kebede",
+    "forbidden_en": [
+      "Model",
+      "Fashion",
+      "Ethiopian",
+      "Humanitarian"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_010",
+    "target_en": "Ruth Negga",
+    "forbidden_en": [
+      "Actor",
+      "Loving",
+      "Oscar",
+      "Ethiopian-Irish"
+    ],
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_011",
+    "target_en": "Tyla",
+    "forbidden_en": [
+      "Water",
+      "South Africa",
+      "Singer",
+      "Dance"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "African",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_012",
+    "target_en": "Tems",
+    "forbidden_en": [
+      "Nigeria",
+      "Singer",
+      "Grammy",
+      "Love Me JeJe"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "African",
+      "Celebrity",
+      "Current"
+    ]
   }
 ]

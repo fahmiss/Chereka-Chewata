@@ -1258,5 +1258,115 @@
     "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "active": true
+  },
+  {
+    "id": "bomb_ethx_001",
+    "prompt_en": "Ethiopian UNESCO World Heritage sites",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_ethx_002",
+    "prompt_en": "Traditional Ethiopian musical instruments",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_ethx_003",
+    "prompt_en": "Ethiopian towns outside Addis Ababa",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_ethx_004",
+    "prompt_en": "Regional Ethiopian dishes",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "bomb_ethx_005",
+    "prompt_en": "Things relatives say when you try to leave",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Family",
+      "Funny"
+    ]
+  },
+  {
+    "id": "bomb_ethx_006",
+    "prompt_en": "Things you might hear in an Ethiopian song",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Funny"
+    ]
+  },
+  {
+    "id": "bomb_now_001",
+    "prompt_en": "Current Ethiopian singers",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "bomb_now_002",
+    "prompt_en": "African artists with international hits",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "African"
+    ]
+  },
+  {
+    "id": "bomb_now_003",
+    "prompt_en": "Celebrities with one-word stage names",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "bomb_now_004",
+    "prompt_en": "Things fans do at a concert",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
   }
 ]

@@ -2742,5 +2742,133 @@
     "tags": [
       "Ethiopian"
     ]
+  },
+  {
+    "id": "wyr_ethx_001",
+    "option_a_en": "Speak four Ethiopian languages fluently",
+    "option_b_en": "Play four Ethiopian instruments beautifully",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_ethx_002",
+    "option_a_en": "Take a road trip to Harar",
+    "option_b_en": "Take a road trip to Lalibela",
+    "intensity": "mild",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_ethx_003",
+    "option_a_en": "Know every Ethiopian proverb",
+    "option_b_en": "Know every Ethiopian dance",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_ethx_004",
+    "option_a_en": "Always get a seat on the minibus",
+    "option_b_en": "Always avoid traffic but have to walk the last kilometre",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "wyr_ethx_005",
+    "option_a_en": "Let your family read your group chats",
+    "option_b_en": "Let your friends hear every family voice note",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Funny"
+    ]
+  },
+  {
+    "id": "wyr_ethx_006",
+    "option_a_en": "Eat only fasting food for a month",
+    "option_b_en": "Eat no injera for a month",
+    "intensity": "mild",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "wyr_now_001",
+    "option_a_en": "Get front-row tickets to a Rophnan concert",
+    "option_b_en": "Meet Rophnan backstage for five minutes",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "wyr_now_002",
+    "option_a_en": "Record a song with Tems",
+    "option_b_en": "Perform live with Burna Boy",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "African"
+    ]
+  },
+  {
+    "id": "wyr_now_003",
+    "option_a_en": "Go viral on TikTok for a dance",
+    "option_b_en": "Go viral on YouTube for a comedy video",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "wyr_now_004",
+    "option_a_en": "Have Zendaya play you in a movie",
+    "option_b_en": "Have Taylor Swift write a song about you",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current"
+    ]
   }
 ]

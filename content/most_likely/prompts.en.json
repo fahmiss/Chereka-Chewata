@@ -2736,5 +2736,159 @@
     "tags": [
       "Ethiopian"
     ]
+  },
+  {
+    "id": "likely_ethx_001",
+    "prompt_en": "Who is most likely to turn “quick coffee” into a two-hour visit?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_ethx_002",
+    "prompt_en": "Who is most likely to have an Ethiopian proverb ready for every situation?",
+    "intensity": "mild",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_ethx_003",
+    "prompt_en": "Who is most likely to pack food for a trip that only takes twenty minutes?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Family",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_ethx_004",
+    "prompt_en": "Who is most likely to send a family voice note longer than a podcast?",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Family",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_ethx_005",
+    "prompt_en": "Who is most likely to know the right minibus route without checking?",
+    "intensity": "mild",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "likely_ethx_006",
+    "prompt_en": "Who is most likely to save relatives in their phone as “Auntie from Hawassa” instead of a name?",
+    "intensity": "mild",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Family",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_001",
+    "prompt_en": "Who is most likely to recognize a Rophnan song from the first two seconds?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_002",
+    "prompt_en": "Who is most likely to meet a celebrity and pretend to be completely calm?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_003",
+    "prompt_en": "Who is most likely to recreate a viral dance until everyone joins in?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_004",
+    "prompt_en": "Who is most likely to defend their favorite Ethiopian singer like a full-time lawyer?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_005",
+    "prompt_en": "Who is most likely to start a YouTube channel, post twice, and disappear?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Current",
+      "Funny"
+    ]
+  },
+  {
+    "id": "likely_now_006",
+    "prompt_en": "Who is most likely to know every celebrity update before the group chat does?",
+    "intensity": "mild",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "Funny"
+    ]
   }
 ]

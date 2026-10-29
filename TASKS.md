@@ -4,7 +4,7 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-28._
+_Last updated: 2026-10-29._
 
 ---
 
@@ -23,8 +23,8 @@ Every deck's Amharic is best-effort, not native-reviewed — including the 164
 taxonomy-fill items (2026-08-15), the 150 new Quiz questions, and the 82 new
 Bomb prompts (2026-10-15). Worth one pass by a native speaker before a store
 launch; Quiz answers and explanations are the most fact-sensitive.
-The 127 curated English-only cards added on 2026-10-16 also need translation
-and native review before Amharic or Mixed content returns.
+The 220 English-only cards added on 2026-10-16 and 2026-10-29 also need
+translation and native review before Amharic or Mixed content returns.
 
 ### Shared UI kit extraction (2026-08-04)
 Primary/secondary buttons and setup chrome exist. Extract player chips, toggle,
@@ -66,6 +66,30 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 ---
 
 ## Shipped
+
+### Current-generation celebrity content (2026-10-29)
+
+- Added 53 English-only items designed for younger/current players: 12 each
+  for Impostor and Taboo, 11 Quiz questions, 6 Most Likely prompts, 4 Liar
+  pairs, 4 Would You Rather dilemmas, and 4 Bomb prompts.
+- Ethiopian/current names include Rophnan, Betty G, Jemberu Demeke, Kassmasse,
+  Hana Girma, Veronica Adane, Yared Negu, Abdu Kiar, Liya Kebede, and Ruth
+  Negga, alongside recognizable African/global names such as Tyla, Tems,
+  Burna Boy, Zendaya, and Taylor Swift.
+- Quiz facts use artist, UN, Academy, Grammy, and Television Academy sources;
+  avoided gossip, follower counts, current chart positions, and relationships.
+- Per product direction, this pass remains English-only.
+
+### Ethiopian English content expansion (2026-10-29)
+
+- Added 40 English-only, Ethiopia-connected items across all seven core decks:
+  6 each for Impostor, Who’s the Liar, Taboo, Most Likely, Would You Rather,
+  and Bomb, plus 4 source-backed Quiz questions.
+- Broadened representation beyond the existing food/coffee cluster with Gadaa,
+  Irreecha, Harar Jugol, Tiya, Konso, languages, music, transport, markets,
+  family voice notes, proverbs, regional dishes, and everyday Addis humor.
+- Quiz additions use UNESCO sources and carry a 2026-10-29 verification date.
+- Per product direction, this pass did not add or change Amharic fields.
 
 ### Sound pass: loudness, web playback, signatures, Bomb fixes (2026-10-28)
 

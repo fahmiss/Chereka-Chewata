@@ -2542,5 +2542,132 @@
     "tags": [
       "Ethiopian"
     ]
+  },
+  {
+    "id": "liar_ethx_001",
+    "main_question_en": "Which Ethiopian language would you most like to learn?",
+    "liar_question_en": "Which Ethiopian language sounds most musical to you?",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_ethx_002",
+    "main_question_en": "Which Ethiopian landmark would make the best road trip?",
+    "liar_question_en": "Which Ethiopian landmark would you most like to photograph?",
+    "difficulty": "easy",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_ethx_003",
+    "main_question_en": "Which Ethiopian song gets everyone onto the dance floor?",
+    "liar_question_en": "Which Ethiopian song does everyone know the words to?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_ethx_004",
+    "main_question_en": "What is the best thing to buy at a local market?",
+    "liar_question_en": "What is the hardest thing to bargain for at a local market?",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_ethx_005",
+    "main_question_en": "Which Ethiopian holiday has the best food?",
+    "liar_question_en": "Which Ethiopian holiday has the best outfits?",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_ethx_006",
+    "main_question_en": "What gift do you bring when visiting family?",
+    "liar_question_en": "What snack do you bring home from a trip?",
+    "difficulty": "easy",
+    "category_id": "people_and_relationships",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Family"
+    ]
+  },
+  {
+    "id": "liar_now_001",
+    "main_question_en": "Which current Ethiopian artist would put on the best live show?",
+    "liar_question_en": "Which current Ethiopian artist would make the best collaboration?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "liar_now_002",
+    "main_question_en": "Which celebrity would leave you completely speechless?",
+    "liar_question_en": "Which celebrity would you be most relaxed meeting?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "liar_now_003",
+    "main_question_en": "Which Ethiopian artist has the most recognizable voice?",
+    "liar_question_en": "Which Ethiopian artist has the most recognizable style?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "liar_now_004",
+    "main_question_en": "Whose concert would you travel to another country to see?",
+    "liar_question_en": "Whose concert would you only attend with your closest friends?",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "friends",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current"
+    ]
   }
 ]

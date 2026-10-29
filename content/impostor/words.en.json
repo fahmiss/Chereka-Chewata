@@ -3489,5 +3489,247 @@
     "category_id": "sports",
     "content_level": "family",
     "active": true
+  },
+  {
+    "id": "imp_ethx_001",
+    "word_en": "Irreecha",
+    "hint_en": "Thanksgiving festival",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_ethx_002",
+    "word_en": "Gadaa",
+    "hint_en": "Oromo governance system",
+    "difficulty": "medium",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_ethx_003",
+    "word_en": "Harar Jugol",
+    "hint_en": "Historic walled city",
+    "difficulty": "medium",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_ethx_004",
+    "word_en": "Shamma",
+    "hint_en": "Traditional woven cloth",
+    "difficulty": "easy",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_ethx_005",
+    "word_en": "Addis Light Rail",
+    "hint_en": "City transport",
+    "difficulty": "easy",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "imp_ethx_006",
+    "word_en": "Fendika",
+    "hint_en": "Music and dance venue",
+    "difficulty": "medium",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Addis"
+    ]
+  },
+  {
+    "id": "imp_now_001",
+    "word_en": "Rophnan",
+    "hint_en": "Music producer and performer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_002",
+    "word_en": "Betty G",
+    "hint_en": "Singer and songwriter",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_003",
+    "word_en": "Jemberu Demeke",
+    "hint_en": "Rapper and producer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_004",
+    "word_en": "Kassmasse",
+    "hint_en": "Rapper and musician",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_005",
+    "word_en": "Hana Girma",
+    "hint_en": "Singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_006",
+    "word_en": "Veronica Adane",
+    "hint_en": "Singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_007",
+    "word_en": "Yared Negu",
+    "hint_en": "Singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_008",
+    "word_en": "Abdu Kiar",
+    "hint_en": "Singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_009",
+    "word_en": "Liya Kebede",
+    "hint_en": "Model and humanitarian",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_010",
+    "word_en": "Ruth Negga",
+    "hint_en": "Actor",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "imp_now_011",
+    "word_en": "Tyla",
+    "hint_en": "South African singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "African"
+    ]
+  },
+  {
+    "id": "imp_now_012",
+    "word_en": "Tems",
+    "hint_en": "Nigerian singer",
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Celebrity",
+      "Current",
+      "African"
+    ]
   }
 ]

@@ -7,19 +7,19 @@ Bundled decks live under [`content/`](content/). Loaders in [`src/content/`](src
 | Game | Path | Status |
 |---|---|---|
 | Impostor categories | `content/categories/impostor.json` | 9 categories with `name_am` |
-| Impostor words | `content/impostor/words.en.json` | 318 (latest 26 English-only) |
+| Impostor words | `content/impostor/words.en.json` | 336 (latest 44 English-only) |
 | Who’s the Liar categories | `content/categories/whos_the_liar.json` | 9 with `name_am` |
-| Who’s the Liar pairs | `content/whos_the_liar/pairs.en.json` | 216 (latest 15 English-only) |
+| Who’s the Liar pairs | `content/whos_the_liar/pairs.en.json` | 226 (latest 25 English-only) |
 | Taboo categories | `content/categories/taboo.json` | 10 with `name_am` |
-| Taboo cards | `content/taboo/cards.en.json` | 388 (latest 18 English-only) |
+| Taboo cards | `content/taboo/cards.en.json` | 406 (latest 36 English-only) |
 | Most Likely categories | `content/categories/most_likely.json` | 7 with `name_am` |
-| Most Likely prompts | `content/most_likely/prompts.en.json` | 250 (latest 25 English-only) |
+| Most Likely prompts | `content/most_likely/prompts.en.json` | 262 (latest 37 English-only) |
 | Would You Rather categories | `content/categories/would_you_rather.json` | 10 with `name_am` |
-| Would You Rather dilemmas | `content/would_you_rather/dilemmas.en.json` | 243 (latest 25 English-only) |
+| Would You Rather dilemmas | `content/would_you_rather/dilemmas.en.json` | 253 (latest 35 English-only) |
 | Bomb categories | `content/categories/bomb.json` | 9 with `name_am` |
-| Bomb category prompts | `content/bomb/cards.json` | 146 (latest 10 English-only) |
+| Bomb category prompts | `content/bomb/cards.json` | 156 (latest 20 English-only) |
 | Quiz categories | `content/categories/quiz.json` | 10 knowledge categories with `name_am` |
-| Quiz questions | `content/quiz/questions.json` | 218 (latest 8 English-only four-choice questions) |
+| Quiz questions | `content/quiz/questions.json` | 233 (latest 23 English-only four-choice questions) |
 
 ## Category taxonomy
 
@@ -80,9 +80,10 @@ subjects as well as living in `ethiopia_and_culture`.
 Settings / language gate: English, Amharic, Mixed.
 
 All seven games filter and display via `localizeText` / `localizeList` and `settings.contentLanguage`.
-The public build is currently English-only. The 2026-10-16 curated additions
-have no Amharic fields; translate and native-review them before enabling
-Amharic or Mixed content again.
+The public build is currently English-only. The curated additions from
+2026-10-16 plus the Ethiopian and current-generation expansions from
+2026-10-29 have no Amharic fields; translate and native-review them before
+enabling Amharic or Mixed content again.
 
 - **Amharic** prefers `*_am` fields (falls back to English if missing)
 - **Mixed** shows `አማርኛ · English` when both strings differ
