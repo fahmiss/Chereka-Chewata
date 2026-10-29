@@ -42,12 +42,25 @@ export const GAME_ART: Partial<Record<GameId, GameArtSet>> = {
   gimbar: {
     half: { source: require('../../../assets/illustrations/gimbar-half.jpg'), aspect: 1 },
   },
-  // Placeholder crop from the 2026-10-29 mockup until the real scene lands.
   whos_the_liar: {
-    half: {
-      source: require('../../../assets/illustrations/whos_the_liar.jpg'),
-      aspect: 161 / 184,
-    },
+    wide: { source: require('../../../assets/illustrations/whos_the_liar.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/whos_the_liar-half.jpg'), aspect: 1 },
+  },
+  quiz: {
+    wide: { source: require('../../../assets/illustrations/quiz.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/quiz-half.jpg'), aspect: 1 },
+  },
+  mesob: {
+    wide: { source: require('../../../assets/illustrations/mesob.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/mesob-half.jpg'), aspect: 1 },
+  },
+  wink_killer: {
+    wide: { source: require('../../../assets/illustrations/wink_killer.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/wink_killer-half.jpg'), aspect: 1 },
+  },
+  insider: {
+    wide: { source: require('../../../assets/illustrations/insider.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/insider-half.jpg'), aspect: 1 },
   },
 };
 

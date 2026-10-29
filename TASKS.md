@@ -13,12 +13,12 @@ _Last updated: 2026-10-29._
 ### Home redesign follow-ups (2026-10-29)
 Home is rebuilt on the new design (brush titles in Knewave, labels in
 Bricolage Grotesque, illustrated `GameCard`s, cast hero band). Still open:
-- [x] Real scenes for Impostor, Mizan, Taboo, Most Likely, Bomb, Gimbar and
-      the hero cast band (2026-10-29). Wide cuts in `<game>.jpg`, two-up cuts
-      in `<game>-half.jpg`; crops live in `GAME_ART` (`src/components/brand/gameArt.ts`)
-- [ ] Scenes still needed: Who's the Liar (current art is a mockup crop),
-      Would You Rather, Quiz, Mesob, Wink Killer, Insider. Cast is now Dawit,
-      Selam, Abel, Leila (hijab), Yonas
+- [x] Real scenes for every game except Would You Rather, plus the hero
+      cast band (2026-10-29). Wide cuts in `<game>.jpg`, two-up cuts in
+      `<game>-half.jpg`; mapped in `GAME_ART` (`src/components/brand/gameArt.ts`)
+- [ ] Would You Rather scene (Addis rooftop at night) — still on the mascot
+- [ ] Gimbar has only a square cut, so it never appears as Tonight's pick;
+      a 16:9 regen would fix that
 - [ ] Wordmark is still a mockup crop (360px) — swap in the original logo file
 - [ ] Carry the new type + card language to setup / session screens (still
       Outfit + Plus Jakarta Sans)
