@@ -26,6 +26,10 @@ const WIDE_HEIGHT = 150;
 const HALF_HEIGHT = 204;
 /** Half cards keep a clear band for the title; the art starts below it. */
 const HALF_ART_TOP = 40;
+/** How far into the art the title band's shade reaches — short, so faces near the top stay clear. */
+const HALF_SCRIM_FADE = 28;
+/** Cap on the wide art's left fade, so 16:9 scenes keep the faces on their left third. */
+const WIDE_FADE_MAX = 72;
 
 /**
  * Bomb's art is already the loudest red on the page, so its card ground is
@@ -42,7 +46,6 @@ const TINT_STRENGTH: Partial<Record<GameId, number>> = { bomb: 0.45 };
 export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) {
   const enter = useEnterAnimation(index, 14);
   const [width, setWidth] = useState(0);
-  const art = GAME_ART[game.id];
   const accent = game.accent;
   const wide = variant === 'wide';
   const height = wide ? WIDE_HEIGHT : HALF_HEIGHT;
@@ -119,7 +122,8 @@ type ArtProps = {
 
 /** Art pinned right at full card height, its left edge dissolving into the ground. */
 function WideArt({ game, height, ground }: ArtProps) {
-  const art = GAME_ART[game.id];
+  const set = GAME_ART[game.id];
+  const art = set?.wide ?? set?.half;
 
   if (!art) {
     return (
@@ -143,15 +147,21 @@ function WideArt({ game, height, ground }: ArtProps) {
         colors={[ground, alpha(ground, 0)]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
-        style={[styles.wideFade, { width: artWidth * 0.42 }]}
+        style={[styles.wideFade, { width: Math.min(artWidth * 0.42, WIDE_FADE_MAX) }]}
       />
     </View>
   );
 }
 
-/** Art fills the card width below the title band; scrims keep both ends legible. */
-function HalfArt({ game, width, ground }: ArtProps & { width: number }) {
-  const art = GAME_ART[game.id];
+/**
+ * Art covers the window below the title band, top-aligned and centred
+ * horizontally; scrims keep both ends legible.
+ */
+function HalfArt({ game, width, height, ground }: ArtProps & { width: number }) {
+  const set = GAME_ART[game.id];
+  const art = set?.half ?? set?.wide;
+  const windowHeight = height - HALF_ART_TOP;
+  const imageWidth = art ? Math.max(width, windowHeight * art.aspect) : 0;
 
   return (
     <>
@@ -159,7 +169,14 @@ function HalfArt({ game, width, ground }: ArtProps & { width: number }) {
         width > 0 ? (
           <Image
             source={art.source}
-            style={[styles.halfImage, { width, height: width / art.aspect }]}
+            style={[
+              styles.halfImage,
+              {
+                width: imageWidth,
+                height: imageWidth / art.aspect,
+                left: (width - imageWidth) / 2,
+              },
+            ]}
             resizeMode="cover"
           />
         ) : null
@@ -171,7 +188,7 @@ function HalfArt({ game, width, ground }: ArtProps & { width: number }) {
       )}
       <LinearGradient
         colors={[ground, ground, alpha(ground, 0)]}
-        locations={[0, 0.5, 1]}
+        locations={[0, HALF_ART_TOP / (HALF_ART_TOP + HALF_SCRIM_FADE), 1]}
         style={styles.topScrim}
       />
       <LinearGradient
@@ -237,7 +254,6 @@ const styles = StyleSheet.create({
   halfImage: {
     position: 'absolute',
     top: HALF_ART_TOP,
-    left: 0,
   },
   /** Centred between the title band and the chip row. */
   halfMascot: {
@@ -260,7 +276,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    height: HALF_ART_TOP + 40,
+    height: HALF_ART_TOP + HALF_SCRIM_FADE,
   },
   bottomScrim: {
     position: 'absolute',

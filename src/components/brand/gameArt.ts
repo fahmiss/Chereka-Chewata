@@ -8,30 +8,52 @@ export type GameArt = {
 };
 
 /**
- * Illustrated scene per game — the "game moment", drawn in the shared cast
- * style. Games without an entry fall back to their MoonFace mascot.
- *
- * Placeholder crops from the 2026-10-29 home mockup; replace each with a
- * text-free @3x export when the final illustrations land.
+ * One scene per game, cut two ways: `wide` for full-row cards (action in the
+ * right two-thirds, title on the dark left) and `half` for the two-up grid
+ * (square window under the title). Either cut stands in for the other; games
+ * with neither fall back to their MoonFace mascot.
  */
-export const GAME_ART: Partial<Record<GameId, GameArt>> = {
-  impostor: { source: require('../../../assets/illustrations/impostor.jpg'), aspect: 375 / 224 },
-  mizan: { source: require('../../../assets/illustrations/mizan.jpg'), aspect: 396 / 212 },
-  whos_the_liar: {
-    source: require('../../../assets/illustrations/whos_the_liar.jpg'),
-    aspect: 161 / 184,
+export type GameArtSet = {
+  wide?: GameArt;
+  half?: GameArt;
+};
+
+const WIDE = 1200 / 675;
+
+export const GAME_ART: Partial<Record<GameId, GameArtSet>> = {
+  impostor: {
+    wide: { source: require('../../../assets/illustrations/impostor.jpg'), aspect: WIDE },
   },
-  taboo: { source: require('../../../assets/illustrations/taboo.jpg'), aspect: 166 / 184 },
+  mizan: {
+    wide: { source: require('../../../assets/illustrations/mizan.jpg'), aspect: 1104 / 883 },
+  },
+  taboo: {
+    wide: { source: require('../../../assets/illustrations/taboo.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/taboo-half.jpg'), aspect: 1 },
+  },
   most_likely: {
-    source: require('../../../assets/illustrations/most_likely.jpg'),
-    aspect: 153 / 194,
+    wide: { source: require('../../../assets/illustrations/most_likely.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/most_likely-half.jpg'), aspect: 1 },
   },
-  bomb: { source: require('../../../assets/illustrations/bomb.jpg'), aspect: 171 / 193 },
+  bomb: {
+    wide: { source: require('../../../assets/illustrations/bomb.jpg'), aspect: WIDE },
+    half: { source: require('../../../assets/illustrations/bomb-half.jpg'), aspect: 1 },
+  },
+  gimbar: {
+    half: { source: require('../../../assets/illustrations/gimbar-half.jpg'), aspect: 1 },
+  },
+  // Placeholder crop from the 2026-10-29 mockup until the real scene lands.
+  whos_the_liar: {
+    half: {
+      source: require('../../../assets/illustrations/whos_the_liar.jpg'),
+      aspect: 161 / 184,
+    },
+  },
 };
 
 export const HERO_CAST: GameArt = {
   source: require('../../../assets/illustrations/hero-cast.jpg'),
-  aspect: 710 / 190,
+  aspect: 1090 / 234,
 };
 
 export const WORDMARK: GameArt = {

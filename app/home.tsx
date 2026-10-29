@@ -49,10 +49,14 @@ function gridRows(): GameCatalogEntry[][] {
   return rows.filter((row) => row.length > 0);
 }
 
-/** One illustrated game per day, never the card that already opens the grid. */
+/**
+ * One game per day with a wide scene, never one that already has a wide card
+ * in the grid — the same big scene twice on one screen reads as a mistake.
+ */
 function tonightsPick(): GameCatalogEntry {
+  const wideInGrid = new Set(ROWS.filter((row) => row.length === 1).flat());
   const pool = GAMES.filter(
-    (game) => game.playable && GAME_ART[game.id] && game.id !== ROWS[0][0],
+    (game) => game.playable && GAME_ART[game.id]?.wide && !wideInGrid.has(game.id),
   );
   const now = new Date();
   const day = Math.floor((now.getTime() - now.getTimezoneOffset() * 60_000) / 86_400_000);

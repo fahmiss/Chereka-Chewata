@@ -13,13 +13,13 @@ _Last updated: 2026-10-29._
 ### Home redesign follow-ups (2026-10-29)
 Home is rebuilt on the new design (brush titles in Knewave, labels in
 Bricolage Grotesque, illustrated `GameCard`s, cast hero band). Still open:
-- [ ] Replace placeholder art in `assets/illustrations/` — crops lifted from
-      the mockup, ~1–2x density, so soft on 3x phones. Need text-free @3x
-      exports: hero cast band, wordmark (transparent PNG), and one scene per game
-- [ ] Illustrations for the six games still on the moon-mascot fallback:
-      Would You Rather, Quiz, Gimbar, Mesob, Wink Killer, Insider
-- [ ] Bomb art: smoky charcoal scene with the fuse as the only bright point
-      (current crop is full red, so the smoky card ground barely shows)
+- [x] Real scenes for Impostor, Mizan, Taboo, Most Likely, Bomb, Gimbar and
+      the hero cast band (2026-10-29). Wide cuts in `<game>.jpg`, two-up cuts
+      in `<game>-half.jpg`; crops live in `GAME_ART` (`src/components/brand/gameArt.ts`)
+- [ ] Scenes still needed: Who's the Liar (current art is a mockup crop),
+      Would You Rather, Quiz, Mesob, Wink Killer, Insider. Cast is now Dawit,
+      Selam, Abel, Leila (hijab), Yonas
+- [ ] Wordmark is still a mockup crop (360px) — swap in the original logo file
 - [ ] Carry the new type + card language to setup / session screens (still
       Outfit + Plus Jakarta Sans)
 - [ ] Device check: Knewave line height / slant clipping on Android
