@@ -55,6 +55,7 @@ export default function CategoriesScreen() {
     setup,
     toggleCategory,
     selectAllCategories,
+    setCategoryIds,
     validation,
     accent,
     isLiar,
@@ -133,6 +134,9 @@ export default function CategoriesScreen() {
               });
 
   const totalCards = countFor(setup.categoryIds);
+  // Select all doubles as Clear all once everything is on, so picking a
+  // single category doesn't mean tapping every other one off first.
+  const allSelected = categories.every((category) => setup.categoryIds.includes(category.id));
   const categoryLabel = (category: { name_en: string; name_am?: string }) =>
     localizeText(isAmharic ? 'am' : 'en', {
       en: category.name_en,
@@ -156,8 +160,8 @@ export default function CategoriesScreen() {
           <Text style={[type.mono, styles.tallyLabel]}>cards in the deck</Text>
         </View>
         <SecondaryButton
-          label={t('setup.selectAll')}
-          onPress={selectAllCategories}
+          label={allSelected ? t('setup.clearAll') : t('setup.selectAll')}
+          onPress={allSelected ? () => setCategoryIds([]) : selectAllCategories}
           style={styles.selectAll}
         />
       </View>

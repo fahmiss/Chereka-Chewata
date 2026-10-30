@@ -10,8 +10,6 @@ export const am: Record<MessageKey, string> = {
   "common.gotIt": "ገባኝ",
   "common.end": "አቁም",
   "common.home": "መነሻ",
-  "tabs.home": "መነሻ",
-  "tabs.players": "ተጫዋቾች",
 
   "players.eyebrow": "ተጫዋቾች",
   "players.title": "ዛሬ ማታ ማን ይጫወታል?",
@@ -100,6 +98,7 @@ export const am: Record<MessageKey, string> = {
   "setup.reviewSubtitle": "አንድ ስልክ። በጥንቃቄ አስተላልፍ።",
   "setup.startGame": "ገዋታ ጀምር",
   "setup.selectAll": "ሁሉንም ምረጥ",
+  "setup.clearAll": "ሁሉንም አጽዳ",
   "session.endTitle": "ገዋታውን አቁም?",
   "session.endMessage": "ይህ ዙር ይጠፋል። ሚስጥሮች ይጸዳሉ።",
   "session.endConfirm": "ገዋታ አቁም",

@@ -15,7 +15,7 @@ export default function Root({ children }: PropsWithChildren) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
         />
-        <meta name="theme-color" content="#0D0B1C" />
+        <meta name="theme-color" content="#110D0A" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -33,7 +33,7 @@ export default function Root({ children }: PropsWithChildren) {
 
 const darkCanvas = `
 html, body, #root {
-  background-color: #0D0B1C;
+  background-color: #110D0A;
 }
 /* Home-screen launch with a black-translucent status bar: iOS resolves 100%
    to the screen minus the status bar. 100vh is the full screen there. */

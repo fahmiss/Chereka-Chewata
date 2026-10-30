@@ -24,7 +24,7 @@ type Props = {
  *
  * Rendered once per screen, statically — no animation, no per-frame cost.
  */
-export function Backdrop({ accent = color.brandMystery, intensity = 1 }: Props) {
+export function Backdrop({ accent = color.brandPrimary, intensity = 1 }: Props) {
   // Measure the space actually filled rather than trusting the window size:
   // an iOS home-screen web app reports a window shorter than the screen.
   const window = useWindowDimensions();

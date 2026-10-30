@@ -7,6 +7,8 @@ export type GameCatalogEntry = {
   id: GameId;
   name: string;
   tagline: string;
+  /** Short punchline for the home card — the tagline stays for the details screen. */
+  hook: string;
   playerCountLabel: string;
   sessionLengthLabel: string;
   accent: string;
@@ -21,6 +23,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'impostor',
     name: 'Impostor',
     tagline: 'Find the player who does not know the secret word.',
+    hook: 'One of you is faking it. Find them.',
     playerCountLabel: '3–15 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.impostor,
@@ -31,6 +34,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'whos_the_liar',
     name: "Who's the Liar?",
     tagline: 'One player answers a different question. Spot them.',
+    hook: 'Spot the lie. Call them out.',
     playerCountLabel: '3–15 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.whos_the_liar,
@@ -41,6 +45,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'taboo',
     name: 'Taboo',
     tagline: 'Help your team guess the word without saying the forbidden clues.',
+    hook: 'Describe it without saying it.',
     playerCountLabel: '4–20 players',
     sessionLengthLabel: '~15 min',
     accent: gameAccent.taboo,
@@ -51,6 +56,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'most_likely',
     name: "Who's Most Likely To",
     tagline: 'Read a prompt and point to the person who fits it best.',
+    hook: 'Everyone points. No take-backs.',
     playerCountLabel: '3+ players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.most_likely,
@@ -61,6 +67,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'bomb',
     name: "Who's Got the Bomb?",
     tagline: 'Name an answer, pass the phone, and hope the hidden fuse keeps ticking.',
+    hook: 'Answer fast. Pass faster.',
     playerCountLabel: '2–15 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.bomb,
@@ -71,6 +78,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'would_you_rather',
     name: 'Would You Rather',
     tagline: 'Pick between two difficult choices and defend your answer.',
+    hook: 'Tough choices. Loud arguments.',
     playerCountLabel: '2+ players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.would_you_rather,
@@ -81,6 +89,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'quiz',
     name: 'Quiz',
     tagline: 'Answer four-choice trivia casually or compete for the top score.',
+    hook: 'Who really knows the most?',
     playerCountLabel: '2+ players',
     sessionLengthLabel: '~10–20 min',
     accent: gameAccent.quiz,
@@ -91,6 +100,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'gimbar',
     name: 'Gimbar',
     tagline: 'Hold the phone to your forehead while friends act, hum and describe.',
+    hook: 'Guess the word on your forehead.',
     playerCountLabel: '2–20 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.gimbar,
@@ -101,6 +111,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'mesob',
     name: 'Mesob',
     tagline: 'Fill the basket with names, then guess them three ways: talk, one word, act.',
+    hook: 'Three rounds. Same names. Chaos.',
     playerCountLabel: '4–20 players',
     sessionLengthLabel: '~20 min',
     accent: gameAccent.mesob,
@@ -111,6 +122,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'mizan',
     name: 'Mizan',
     tagline: 'One clue, one hidden point on a scale. Read each other’s minds.',
+    hook: 'Read minds on a sliding scale.',
     playerCountLabel: '2–20 players',
     sessionLengthLabel: '~15 min',
     accent: gameAccent.mizan,
@@ -121,6 +133,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'wink_killer',
     name: 'Wink Killer',
     tagline: 'A secret killer strikes with a wink. Catch them before the room empties.',
+    hook: 'One wink can kill. Watch closely.',
     playerCountLabel: '4–30 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.wink_killer,
@@ -131,6 +144,7 @@ export const GAMES: GameCatalogEntry[] = [
     id: 'insider',
     name: 'Insider',
     tagline: 'Guess the secret word with yes/no questions, then expose who already knew it.',
+    hook: 'Someone already knows the answer.',
     playerCountLabel: '4–12 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.insider,

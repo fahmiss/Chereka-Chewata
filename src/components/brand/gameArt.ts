@@ -75,9 +75,10 @@ export const GAME_ART: Partial<Record<GameId, GameArtSet>> = {
   },
 };
 
-export const HERO_CAST: GameArt = {
-  source: require('../../../assets/illustrations/hero-cast.jpg'),
-  aspect: 1090 / 234,
+/** Home hero: the living room with the cast on the couch, room above for the logo. */
+export const HERO_HOME: GameArt = {
+  source: require('../../../assets/illustrations/hero-home.jpg'),
+  aspect: 1170 / 1341,
 };
 
 /** Primary logo (2026-10-30 final art), transparent PNG. */

@@ -34,15 +34,15 @@ _Last updated: 2026-10-29._
       status bar; fixed with a `display-mode: standalone` 100vh rule in
       `public/index.html` + `app/+html.tsx` (can't be emulated in Chrome)
 
-### Players tab + bottom nav (2026-10-29)
-Floating tab bar (Home · Players · Settings) in `app/(tabs)/`, custom
-`TabBar`. Players tab edits the saved group (`chereka.players.lastGroup.v1`);
-opening any game seats it, and starting a game still writes back to it.
-- [x] PRODUCT_SPEC §14.1 updated for the Home · Players · Settings bar
-- [ ] Quick Play centre button (random game with the saved players) — the
-      planned swap for the Settings tab
-- [ ] Device check: tab bar over the home indicator on iPhone, keyboard
-      behaviour on the Players add row (Android)
+### Home v2 + palette (2026-10-30)
+- [x] Tab bar removed: Players and Settings open from Home header icons
+      (count badge on Players) and push with a back button; spec §14.1 updated
+- [x] Full-bleed home hero (`hero-home.jpg`), compact Play again / Tonight's
+      pick row, a short `hook` line on every game card
+- [x] Espresso neutrals replace the violet-tinted darks (`tokens.ts`,
+      splash, web shell, manifest). App icon tile stays navy by design.
+      If it doesn't land, next option is a near-neutral warm charcoal
+- [ ] Players saved-group screen: device check of keyboard on the add row
 
 ### Home redesign follow-ups (2026-10-29)
 Home is rebuilt on the new design (brush titles in Knewave, labels in

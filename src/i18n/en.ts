@@ -8,8 +8,6 @@ export const en = {
   'common.end': 'End',
   'common.home': 'Home',
 
-  'tabs.home': 'Home',
-  'tabs.players': 'Players',
 
   'players.eyebrow': 'Players',
   'players.title': "Who's playing tonight?",
@@ -108,6 +106,7 @@ export const en = {
   'setup.reviewSubtitle': 'One phone. Pass it carefully.',
   'setup.startGame': 'Start game',
   'setup.selectAll': 'Select all',
+  'setup.clearAll': 'Clear all',
 
   'session.endTitle': 'End game?',
   'session.endMessage': 'This round will be lost. Secrets are cleared.',

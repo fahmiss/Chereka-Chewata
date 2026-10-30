@@ -22,8 +22,8 @@ type Props = {
   onPress: () => void;
 };
 
-const WIDE_HEIGHT = 150;
-const HALF_HEIGHT = 204;
+const WIDE_HEIGHT = 160;
+const HALF_HEIGHT = 224;
 /** Half cards keep a clear band for the title; the art starts below it. */
 const HALF_ART_TOP = 40;
 /** How far into the art the title band's shade reaches — short, so faces near the top stay clear. */
@@ -85,8 +85,8 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
           {
             height,
             backgroundColor: ground,
-            borderColor: alpha(accent, 0.22),
-            borderTopColor: alpha(accent, 0.45),
+            borderColor: alpha(accent, 0.32),
+            borderTopColor: alpha(accent, 0.6),
           },
           locked && styles.locked,
         ]}
@@ -108,9 +108,20 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
             >
               {game.name}
             </Text>
+            {wide ? (
+              <Text style={styles.hook} numberOfLines={2}>
+                {game.hook}
+              </Text>
+            ) : null}
           </View>
 
-          <View style={styles.chips}>
+          <View style={styles.bottomBlock}>
+            {!wide ? (
+              <Text style={[styles.hook, styles.halfHook]} numberOfLines={2}>
+                {game.hook}
+              </Text>
+            ) : null}
+            <View style={styles.chips}>
             {locked ? (
               <StatChip icon="lock" label="Soon" />
             ) : (
@@ -119,6 +130,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
                 <StatChip icon="clock" label={length} />
               </>
             )}
+            </View>
           </View>
         </View>
       </PressableScale>
@@ -204,7 +216,7 @@ function HalfArt({ game, width, height, ground }: ArtProps & { width: number }) 
         style={styles.topScrim}
       />
       <LinearGradient
-        colors={[alpha(color.void, 0), alpha(color.void, 0.7)]}
+        colors={[alpha(color.void, 0), alpha(color.void, 0.85)]}
         style={styles.bottomScrim}
       />
     </>
@@ -293,7 +305,24 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    height: 64,
+    // Tall enough to sit under the hook as well as the chips.
+    height: 96,
+  },
+  bottomBlock: {
+    gap: space[2],
+  },
+  hook: {
+    color: color.textPrimary,
+    fontFamily: family.grotesque.medium,
+    fontSize: 13,
+    lineHeight: 17,
+    marginTop: space[1],
+    textShadowColor: alpha(color.void, 0.8),
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 6,
+  },
+  halfHook: {
+    marginTop: 0,
   },
   content: {
     flex: 1,

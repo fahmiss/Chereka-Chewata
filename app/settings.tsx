@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { WORDMARK } from '../../src/components/brand/gameArt';
-import { featureFlags } from '../../src/config/features';
-import { Dialog } from '../../src/components/ui/Dialog';
-import { Screen } from '../../src/components/ui/Screen';
-import { useTabBarClearance } from '../../src/components/ui/TabBar';
-import { TabHeader } from '../../src/components/ui/TabHeader';
-import { SecondaryButton } from '../../src/components/ui/SecondaryButton';
-import { Segmented, Toggle } from '../../src/components/ui/Selectable';
-import { Surface } from '../../src/components/ui/Surface';
-import { useSettings } from '../../src/domain/settings/SettingsContext';
-import type { ContentLanguage, InterfaceLanguage } from '../../src/domain/settings/types';
-import { useT } from '../../src/i18n';
-import { color, space } from '../../src/theme/tokens';
-import { family, type } from '../../src/theme/typography';
+import { WORDMARK } from '../src/components/brand/gameArt';
+import { featureFlags } from '../src/config/features';
+import { Dialog } from '../src/components/ui/Dialog';
+import { Screen } from '../src/components/ui/Screen';
+import { PageHeader } from '../src/components/ui/PageHeader';
+import { SecondaryButton } from '../src/components/ui/SecondaryButton';
+import { Segmented, Toggle } from '../src/components/ui/Selectable';
+import { Surface } from '../src/components/ui/Surface';
+import { useSettings } from '../src/domain/settings/SettingsContext';
+import type { ContentLanguage, InterfaceLanguage } from '../src/domain/settings/types';
+import { useT } from '../src/i18n';
+import { color, space } from '../src/theme/tokens';
+import { family, type } from '../src/theme/typography';
 
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
@@ -28,7 +27,6 @@ export default function SettingsScreen() {
     resetCardHistory,
   } = useSettings();
   const { t, uiFont } = useT();
-  const clearance = useTabBarClearance();
   const [resetVisible, setResetVisible] = useState(false);
   const [resetDone, setResetDone] = useState(false);
   const [privacyVisible, setPrivacyVisible] = useState(false);
@@ -36,12 +34,12 @@ export default function SettingsScreen() {
   const font = uiFont ? { fontFamily: uiFont } : null;
 
   return (
-    <Screen edges={['top']} accent={color.brandPrimary} intensity={0.8}>
+    <Screen accent={color.brandPrimary} intensity={0.8}>
       <ScrollView
-        contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
+        contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        <TabHeader title={t('settings.title')} />
+        <PageHeader title={t('settings.title')} />
 
         {featureFlags.languageSelection ? (
           <Surface contentStyle={styles.card}>
@@ -197,7 +195,8 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   content: {
     paddingHorizontal: space[4],
-    paddingTop: space[4],
+    paddingTop: space[2],
+    paddingBottom: space[10],
     gap: space[5],
   },
   card: {

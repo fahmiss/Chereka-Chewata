@@ -1,8 +1,10 @@
+import { router } from 'expo-router';
 import type { ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useT } from '../../i18n';
 import { color, space } from '../../theme/tokens';
 import { family } from '../../theme/typography';
+import { IconButton } from './Screen';
 
 type Props = {
   eyebrow?: string;
@@ -12,19 +14,25 @@ type Props = {
   action?: ReactNode;
 };
 
-/** Page heading for the top-level tabs — same voice as the home screen labels. */
-export function TabHeader({ eyebrow, title, subtitle, action }: Props) {
-  const { uiFont } = useT();
+/**
+ * Heading for screens opened from the home header (Players, Settings): a back
+ * button, then the page title in the same voice as the home screen labels.
+ */
+export function PageHeader({ eyebrow, title, subtitle, action }: Props) {
+  const { t, uiFont } = useT();
   const font = uiFont ? { fontFamily: uiFont } : null;
 
   return (
     <View style={styles.root}>
-      {eyebrow || action ? (
-        <View style={styles.topRow}>
-          {eyebrow ? <Text style={[styles.eyebrow, font]}>{eyebrow}</Text> : <View />}
-          {action}
-        </View>
-      ) : null}
+      <View style={styles.topRow}>
+        <IconButton
+          name="arrowLeft"
+          label={t('common.back')}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/home'))}
+        />
+        {action}
+      </View>
+      {eyebrow ? <Text style={[styles.eyebrow, font]}>{eyebrow}</Text> : null}
       <Text style={[styles.title, font]}>{title}</Text>
       {subtitle ? <Text style={[styles.subtitle, font]}>{subtitle}</Text> : null}
     </View>
@@ -39,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    minHeight: 24,
+    marginBottom: space[3],
   },
   eyebrow: {
     color: color.brandPrimary,

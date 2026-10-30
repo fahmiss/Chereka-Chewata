@@ -1,25 +1,24 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useRef, useState } from 'react';
 import { Animated, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { Dialog } from '../../src/components/ui/Dialog';
-import { Icon } from '../../src/components/ui/Icon';
-import { PressableScale } from '../../src/components/ui/PressableScale';
-import { Screen } from '../../src/components/ui/Screen';
-import { useTabBarClearance } from '../../src/components/ui/TabBar';
-import { TabHeader } from '../../src/components/ui/TabHeader';
-import type { Player } from '../../src/domain/impostor/types';
-import { createId } from '../../src/domain/shared/utils';
-import { useT } from '../../src/i18n';
+import { Dialog } from '../src/components/ui/Dialog';
+import { Icon } from '../src/components/ui/Icon';
+import { PressableScale } from '../src/components/ui/PressableScale';
+import { Screen } from '../src/components/ui/Screen';
+import { PageHeader } from '../src/components/ui/PageHeader';
+import type { Player } from '../src/domain/impostor/types';
+import { createId } from '../src/domain/shared/utils';
+import { useT } from '../src/i18n';
 import {
   loadLastPlayerGroup,
   SAVED_PLAYERS_MAX,
   saveLastPlayerGroup,
-} from '../../src/storage/players';
-import { useEnterAnimation } from '../../src/theme/motion';
-import { seatColor } from '../../src/theme/seats';
-import { alpha, color, glow, overlay, radius, space } from '../../src/theme/tokens';
-import { family } from '../../src/theme/typography';
-import { GlyphDisk } from '../../src/components/ui/GlyphDisk';
+} from '../src/storage/players';
+import { useEnterAnimation } from '../src/theme/motion';
+import { seatColor } from '../src/theme/seats';
+import { alpha, color, glow, overlay, radius, space } from '../src/theme/tokens';
+import { family } from '../src/theme/typography';
+import { GlyphDisk } from '../src/components/ui/GlyphDisk';
 
 
 /**
@@ -28,7 +27,6 @@ import { GlyphDisk } from '../../src/components/ui/GlyphDisk';
  */
 export default function PlayersScreen() {
   const { t, uiFont } = useT();
-  const clearance = useTabBarClearance();
   const [players, setPlayers] = useState<Player[] | null>(null);
   const [draft, setDraft] = useState('');
   const [clearVisible, setClearVisible] = useState(false);
@@ -66,14 +64,14 @@ export default function PlayersScreen() {
   };
 
   return (
-    <Screen edges={['top']} accent={color.brandPrimary} intensity={0.8}>
+    <Screen accent={color.brandPrimary} intensity={0.8}>
       <ScrollView
-        contentContainerStyle={[styles.content, { paddingBottom: clearance }]}
+        contentContainerStyle={styles.content}
         keyboardShouldPersistTaps="handled"
         automaticallyAdjustKeyboardInsets
         showsVerticalScrollIndicator={false}
       >
-        <TabHeader
+        <PageHeader
           eyebrow={t('players.eyebrow')}
           title={t('players.title')}
           subtitle={t('players.subtitle')}
@@ -258,7 +256,8 @@ function PlayerRow({ index, name, label, removeLabel, onChange, onRemove }: RowP
 const styles = StyleSheet.create({
   content: {
     paddingHorizontal: space[4],
-    paddingTop: space[4],
+    paddingTop: space[2],
+    paddingBottom: space[10],
     gap: space[4],
   },
   clear: {

@@ -4,10 +4,13 @@
  */
 
 export const color = {
-  void: '#080714',
-  background: '#0D0B1C',
-  surface: '#1B1533',
-  surfaceRaised: '#241C43',
+  // Espresso neutrals (2026-10-30): warm coffee-ceremony darks replace the
+  // violet-tinted ones, which read as a generic dark-mode default. Game
+  // accents are unchanged.
+  void: '#0A0806',
+  background: '#110D0A',
+  surface: '#1D1612',
+  surfaceRaised: '#28201A',
   textPrimary: '#F6EFE2',
   textSecondary: 'rgba(246,239,226,0.72)',
   textMuted: 'rgba(246,239,226,0.52)',
@@ -90,7 +93,7 @@ export const overlay = {
   /** Glass fills, layered over the backdrop rather than painted flat. */
   glass: 'rgba(255,255,255,0.045)',
   glassStrong: 'rgba(255,255,255,0.08)',
-  scrim: 'rgba(8,7,20,0.72)',
+  scrim: 'rgba(10,8,6,0.72)',
 } as const;
 
 /** Hex + alpha → rgba string. Accepts the 6-digit hexes in this file. */
@@ -127,8 +130,8 @@ export function glow(hex: string, opacity = 0.4, radius = 20) {
 }
 
 export const elevation = {
-  card: glow('#050310', 0.5, 18),
-  raised: glow('#050310', 0.6, 26),
+  card: glow('#050302', 0.5, 18),
+  raised: glow('#050302', 0.6, 26),
 } as const;
 
 export type GameAccentKey =

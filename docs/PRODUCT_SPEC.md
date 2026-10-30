@@ -1306,13 +1306,13 @@ These do not block initial development:
 
 The MVP should feel playable within seconds. Do not use a mandatory account, long onboarding carousel, social feed, or complex bottom navigation.
 
-Top-level structure (updated 2026-10-30): a small floating tab bar with three destinations.
+Top-level structure (updated 2026-10-30): Home is the only persistent screen; there is no tab bar.
 
-- **Home:** game library, Tonight's pick, and the play-again action
-- **Players:** the saved table. Names are entered once; every game's setup starts from this group, and starting a game writes its players back
-- **Settings:** language, sound, vibration, accessibility, and legal information
+- **Home:** full-bleed hero, a compact Play again / Tonight's pick row, and the game library
+- **Players:** opens from the people icon in the Home header (with a count badge once names are saved). The saved table: names are entered once; every game's setup starts from this group, and starting a game writes its players back
+- **Settings:** opens from the gear icon in the Home header — language, sound, vibration, accessibility, and legal information
 
-The bar appears only on these three screens. Game details, setup and live sessions open over it, so it never offers a one-tap exit from gameplay (see §14.2). Packs, if they ship, open as a secondary screen rather than a fourth tab. A centre **Quick Play** action (random game with the saved players) is the planned replacement for the Settings tab, with Settings moving back behind an icon.
+Players and Settings push over Home with a back button. Packs, if they ship, open the same way. A bottom bar is only worth reintroducing if a third frequent action appears (e.g. a centre **Quick Play** button).
 
 ## 14.2 Global navigation rules
 
