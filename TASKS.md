@@ -55,6 +55,8 @@ _Last updated: 2026-10-29._
       reading in `src/components/gimbar/useTilt.ts`, then flip it back
 - [x] Mizan teams: team members listed under each score (psychic lit),
       handoff note names the guessing teammates
+- [x] Taboo + Mesob: every team scoreboard lists its players (describer lit);
+      separate roster blocks removed, `TeamRoster` deleted
 - [x] Home grid: Bomb takes the wide slot; order re-shuffled so warm cards
       (Liar, Taboo, Bomb) never touch
 - [ ] Players saved-group screen: device check of keyboard on the add row

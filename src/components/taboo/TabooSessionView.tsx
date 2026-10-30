@@ -25,6 +25,7 @@ import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { TeamScoreStrip } from '../session/Scoreboards';
 
 const ACCENT = color.gameTaboo;
 const LOCK_MS = 420;
@@ -59,50 +60,18 @@ function stageFor(phase: TabooSession['phase']): string {
   }
 }
 
+/** Scores with each team's players listed underneath; the describer is lit. */
 function ScoreStrip({ session }: { session: TabooSession }) {
+  const names = (team: TeamId) => teamPlayerIds(session, team).map((id) => getPlayerName(session, id));
+  const describerId = currentDescriberId(session);
   return (
-    <View style={styles.scoreStrip}>
-      <ScorePill
-        label="A"
-        score={session.scores.a}
-        active={session.activeTeam === 'a'}
-      />
-      <Text style={[type.mono, styles.scoreVs]}>vs</Text>
-      <ScorePill
-        label="B"
-        score={session.scores.b}
-        active={session.activeTeam === 'b'}
-      />
-    </View>
-  );
-}
-
-function ScorePill({
-  label,
-  score,
-  active,
-}: {
-  label: string;
-  score: number;
-  active: boolean;
-}) {
-  return (
-    <View
-      style={[
-        styles.scorePill,
-        active && {
-          borderColor: alpha(ACCENT, 0.55),
-          backgroundColor: alpha(ACCENT, 0.16),
-        },
-      ]}
-    >
-      <Text style={[type.eyebrow, { color: active ? ACCENT : color.textMuted }]}>
-        Team {label}
-      </Text>
-      <Text style={[type.displayMd, { color: active ? ACCENT : color.textPrimary }]}>
-        {score}
-      </Text>
-    </View>
+    <TeamScoreStrip
+      scores={session.scores}
+      activeTeam={session.activeTeam}
+      accent={ACCENT}
+      members={{ a: names('a'), b: names('b') }}
+      highlightName={describerId ? getPlayerName(session, describerId) : undefined}
+    />
   );
 }
 
@@ -140,18 +109,6 @@ function RoundReadyPhase({ session }: { session: TabooSession }) {
             Only this player should see the card. Sit a watcher beside them if you want.
           </Text>
         </Surface>
-        <View style={styles.roster}>
-          {(['a', 'b'] as TeamId[]).map((teamId) => (
-            <View key={teamId} style={styles.rosterCol}>
-              <Text style={[type.eyebrow, styles.rosterLabel]}>{teamLabel(teamId)}</Text>
-              {teamPlayerIds(session, teamId).map((id) => (
-                <Text key={id} style={[type.bodySm, styles.rosterName]}>
-                  {getPlayerName(session, id)}
-                </Text>
-              ))}
-            </View>
-          ))}
-        </View>
       </Animated.View>
     </SessionShell>
   );
@@ -520,23 +477,6 @@ const styles = StyleSheet.create({
   readyBody: {
     gap: space[4],
   },
-  scoreStrip: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: space[3],
-  },
-  scorePill: {
-    flex: 1,
-    borderRadius: radius.medium,
-    borderWidth: 1,
-    borderColor: color.borderSubtle,
-    backgroundColor: overlay.glass,
-    padding: space[3],
-    gap: 2,
-  },
-  scoreVs: {
-    color: color.textMuted,
-  },
   describerCard: {
     padding: space[5],
     gap: space[2],
@@ -546,21 +486,6 @@ const styles = StyleSheet.create({
   },
   hint: {
     color: color.textSecondary,
-  },
-  roster: {
-    flexDirection: 'row',
-    gap: space[4],
-  },
-  rosterCol: {
-    flex: 1,
-    gap: space[1],
-  },
-  rosterLabel: {
-    color: color.textMuted,
-    marginBottom: space[1],
-  },
-  rosterName: {
-    color: color.textPrimary,
   },
   playTop: {
     gap: space[2],

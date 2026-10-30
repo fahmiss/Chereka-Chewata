@@ -93,42 +93,6 @@ function TeamPill({
   );
 }
 
-/** Team rosters side by side; the given player is highlighted. */
-export function TeamRoster({
-  teams,
-  nameOf,
-  highlightId,
-  accent,
-}: {
-  teams: Record<TeamId, string[]>;
-  nameOf: (playerId: string) => string;
-  highlightId?: string | null;
-  accent: string;
-}) {
-  return (
-    <View style={styles.roster}>
-      {(['a', 'b'] as TeamId[]).map((team) => (
-        <View key={team} style={styles.rosterCol}>
-          <Text style={[type.eyebrow, styles.rosterLabel]}>{teamLabel(team)}</Text>
-          {teams[team].map((id) => (
-            <Text
-              key={id}
-              style={[
-                type.bodySm,
-                styles.rosterName,
-                id === highlightId && { color: accent, fontFamily: family.body.semibold },
-              ]}
-              numberOfLines={1}
-            >
-              {nameOf(id)}
-            </Text>
-          ))}
-        </View>
-      ))}
-    </View>
-  );
-}
-
 export type StandingRow = { id: string; name: string; score: number };
 
 /** Ranked list; ties share a rank. */
@@ -199,10 +163,12 @@ export function leaders(rows: StandingRow[]): StandingRow[] {
 const styles = StyleSheet.create({
   strip: {
     flexDirection: 'row',
-    alignItems: 'center',
+    // Stretch so both pills match height when their member lists differ.
+    alignItems: 'stretch',
     gap: space[3],
   },
   vs: {
+    alignSelf: 'center',
     color: color.textMuted,
   },
   pill: {
@@ -218,21 +184,6 @@ const styles = StyleSheet.create({
   pillMembers: {
     color: color.textSecondary,
     marginTop: space[1],
-  },
-  roster: {
-    flexDirection: 'row',
-    gap: space[4],
-  },
-  rosterCol: {
-    flex: 1,
-    gap: space[1],
-  },
-  rosterLabel: {
-    color: color.textMuted,
-    marginBottom: space[1],
-  },
-  rosterName: {
-    color: color.textSecondary,
   },
   standings: {
     gap: space[2],

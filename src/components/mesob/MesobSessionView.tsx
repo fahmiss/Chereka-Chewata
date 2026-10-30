@@ -22,6 +22,7 @@ import {
   expireTurn,
   fillFromDeck,
   getMesobPlayerName,
+  teamIds,
   isDuplicateSlip,
   markCorrect,
   markSkip,
@@ -44,7 +45,7 @@ import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
-import { TeamRoster, TeamScoreStrip } from '../session/Scoreboards';
+import { TeamScoreStrip } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
 import { useCountdown, useSessionKeepAwake } from '../session/useCountdown';
 import { Icon } from '../ui/Icon';
@@ -85,6 +86,28 @@ function EntryHandoff({ session }: { session: MesobSession }) {
       note="You'll write a few slips in private. Keep them secret until the game."
       onReady={() => apply(beginEntry)}
       onEndGame={() => endGame(clearSession)}
+    />
+  );
+}
+
+/** Team scores with each side's players underneath; the describer is lit. */
+function MesobScores({
+  session,
+  activeTeam,
+}: {
+  session: MesobSession;
+  activeTeam: MesobSession['activeTeam'] | null;
+}) {
+  const names = (team: 'a' | 'b') =>
+    teamIds(session, team).map((id) => getMesobPlayerName(session, id));
+  const describerId = currentDescriberId(session);
+  return (
+    <TeamScoreStrip
+      scores={session.scores}
+      activeTeam={activeTeam}
+      accent={ACCENT}
+      members={{ a: names('a'), b: names('b') }}
+      highlightName={describerId ? getMesobPlayerName(session, describerId) : undefined}
     />
   );
 }
@@ -200,7 +223,7 @@ function RoundIntroPhase({ session }: { session: MesobSession }) {
     >
       <Animated.View style={[styles.stack, enter]}>
         {session.round > 1 ? (
-          <TeamScoreStrip scores={session.scores} activeTeam={null} accent={ACCENT} />
+          <MesobScores session={session} activeTeam={null} />
         ) : null}
         <Surface accent={ACCENT} active contentStyle={styles.card}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>
@@ -242,14 +265,8 @@ function TurnReadyPhase({ session }: { session: MesobSession }) {
       footer={<PrimaryButton label={`Start ${seconds}s`} icon="clock" onPress={() => apply(beginTurn)} />}
     >
       <Animated.View style={[styles.stack, enter]}>
-        <TeamScoreStrip scores={session.scores} activeTeam={session.activeTeam} accent={ACCENT} />
+        <MesobScores session={session} activeTeam={session.activeTeam} />
         <Text style={[type.mono, styles.secondary]}>{session.basket.length} slips left this round</Text>
-        <TeamRoster
-          teams={{ a: session.teamA, b: session.teamB }}
-          nameOf={(id) => getMesobPlayerName(session, id)}
-          highlightId={describerId}
-          accent={ACCENT}
-        />
       </Animated.View>
     </SessionShell>
   );
@@ -388,7 +405,7 @@ function TurnSummaryPhase({ session }: { session: MesobSession }) {
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label="Next team" icon="chevronRight" onPress={() => apply(confirmTurn)} />}
     >
-      <TeamScoreStrip scores={session.scores} activeTeam={session.activeTeam} accent={ACCENT} />
+      <MesobScores session={session} activeTeam={session.activeTeam} />
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.guessList}>
         {session.turnGuessed.map((slipId) => (
           <PressableScale
@@ -455,7 +472,7 @@ function FinalPhase({ session }: { session: MesobSession }) {
         <Animated.View style={[styles.finalHead, enter]}>
           <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
         </Animated.View>
-        <TeamScoreStrip scores={session.scores} activeTeam={null} accent={ACCENT} />
+        <MesobScores session={session} activeTeam={null} />
         <Surface contentStyle={styles.card}>
           <Text style={[type.eyebrow, styles.secondary]}>What was in the mesob</Text>
           <Text style={[type.body, styles.secondary]}>
