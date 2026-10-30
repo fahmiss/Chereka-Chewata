@@ -80,7 +80,14 @@ export const HERO_CAST: GameArt = {
   aspect: 1090 / 234,
 };
 
+/** Primary logo (2026-10-30 final art), transparent PNG. */
 export const WORDMARK: GameArt = {
   source: require('../../../assets/illustrations/wordmark.png'),
-  aspect: 360 / 178,
+  aspect: 1154 / 609,
+};
+
+/** Crescent + sparks brand mark on transparent — the app icon's symbol. */
+export const BRAND_MARK: GameArt = {
+  source: require('../../../assets/splash-logo.png'),
+  aspect: 1,
 };

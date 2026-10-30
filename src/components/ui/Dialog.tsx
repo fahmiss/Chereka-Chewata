@@ -3,11 +3,17 @@ import { Animated, Modal, Pressable, StyleSheet, Text, View } from 'react-native
 import { duration, easeOut, useReducedMotion } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
-import { MoonFace, type MoonExpression } from '../brand/MoonFace';
+import type { MoonExpression } from '../brand/MoonFace';
 import { Icon, type IconName } from './Icon';
 import { PrimaryButton, type ButtonTone } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
 import { Surface } from './Surface';
+
+/** Mood of the old mascot expressions, expressed as a line icon. */
+const MOON_ICON: Partial<Record<MoonExpression, IconName>> = {
+  caught: 'alert',
+  ready: 'smile',
+};
 
 type Props = {
   visible: boolean;
@@ -97,18 +103,20 @@ export function Dialog({
           ]}
         >
           <Surface accent={accent} active contentStyle={styles.card}>
-            {moon ? (
-              <MoonFace expression={moon} size={56} glow={false} />
-            ) : (
-              <View
-                style={[
-                  styles.badge,
-                  { backgroundColor: alpha(accent, 0.16), borderColor: alpha(accent, 0.4) },
-                ]}
-              >
-                <Icon name={icon} size={24} color={accent} strokeWidth={1.9} />
-              </View>
-            )}
+            <View
+              style={[
+                styles.badge,
+                { backgroundColor: alpha(accent, 0.16), borderColor: alpha(accent, 0.4) },
+              ]}
+            >
+              {/* `moon` is kept for call-site compatibility; it now picks an icon. */}
+              <Icon
+                name={moon ? (MOON_ICON[moon] ?? 'smile') : icon}
+                size={24}
+                color={accent}
+                strokeWidth={1.9}
+              />
+            </View>
             <Text style={[type.titleLg, styles.title]}>{title}</Text>
             {message ? <Text style={[type.body, styles.message]}>{message}</Text> : null}
             <View style={styles.actions}>

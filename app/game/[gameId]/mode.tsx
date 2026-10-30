@@ -1,6 +1,5 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Animated, StyleSheet, Text, View } from 'react-native';
-import { MoonFace } from '../../../src/components/brand/MoonFace';
 import { Icon, type IconName } from '../../../src/components/ui/Icon';
 import { PressableScale } from '../../../src/components/ui/PressableScale';
 import { IconButton, Screen } from '../../../src/components/ui/Screen';
@@ -9,6 +8,7 @@ import type { QuizPlayMode } from '../../../src/domain/quiz/types';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../../src/theme/tokens';
 import { type } from '../../../src/theme/typography';
+import { GlyphDisk } from '../../../src/components/ui/GlyphDisk';
 
 const MODES: {
   id: QuizPlayMode;
@@ -58,7 +58,7 @@ export default function QuizModeScreen() {
         showsVerticalScrollIndicator={false}
         style={enter}
       >
-        <MoonFace expression="quiz" size={92} />
+        <GlyphDisk icon="question" accent={color.gameQuiz} size={92} />
         <View style={styles.heading}>
           <Text style={[type.eyebrow, { color: color.gameQuiz }]}>QUIZ</Text>
           <Text style={[type.displayLg, styles.title]}>How do you want to play?</Text>

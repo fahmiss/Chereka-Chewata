@@ -16,7 +16,6 @@ import { alpha, color, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
@@ -24,6 +23,7 @@ import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const ACCENT = color.gameQuiz;
 const STAGES = ['ready', 'question', 'reveal', 'result'] as const;
@@ -54,7 +54,7 @@ function Ready({ session }: { session: QuizSession }) {
       footer={<PrimaryButton label="Begin Quiz" icon="checkCircle" onPress={dispatch.begin} />}
     >
       <Animated.View style={[styles.center, enter]}>
-        <MoonFace expression="quiz" size={108} />
+        <GlyphDisk icon="question" accent={ACCENT} size={108} />
         <Text style={[type.displayLg, styles.centerTitle]}>Ready for Quiz?</Text>
         <Text style={[type.body, styles.centerBody]}>
           {compete

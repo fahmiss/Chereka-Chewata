@@ -1,7 +1,6 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useRef, useState } from 'react';
 import { Animated, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { MoonFace } from '../../src/components/brand/MoonFace';
 import { Dialog } from '../../src/components/ui/Dialog';
 import { Icon } from '../../src/components/ui/Icon';
 import { PressableScale } from '../../src/components/ui/PressableScale';
@@ -17,24 +16,11 @@ import {
   saveLastPlayerGroup,
 } from '../../src/storage/players';
 import { useEnterAnimation } from '../../src/theme/motion';
+import { seatColor } from '../../src/theme/seats';
 import { alpha, color, glow, overlay, radius, space } from '../../src/theme/tokens';
 import { family } from '../../src/theme/typography';
+import { GlyphDisk } from '../../src/components/ui/GlyphDisk';
 
-/** Each seat borrows a game colour, so the list reads as people, not a form. */
-const SEAT_COLORS = [
-  color.gameImpostor,
-  color.gameLiar,
-  color.gameMostLikely,
-  color.gameTaboo,
-  color.gameWouldRather,
-  color.gameQuiz,
-  color.gameMizan,
-  color.gameWinkKiller,
-  color.gameGimbar,
-  color.gameMesob,
-  color.gameInsider,
-  color.gameBomb,
-];
 
 /**
  * The saved table. Every game's setup starts from this group, and starting a
@@ -108,7 +94,7 @@ export default function PlayersScreen() {
 
         {players && list.length === 0 ? (
           <View style={styles.empty}>
-            <MoonFace expression="pointing" size={96} />
+            <GlyphDisk icon="users" accent={color.brandPrimary} size={96} />
             <Text style={[styles.emptyTitle, font]}>{t('players.emptyTitle')}</Text>
             <Text style={[styles.emptyBody, font]}>{t('players.emptyBody')}</Text>
           </View>
@@ -218,7 +204,7 @@ type RowProps = {
 function PlayerRow({ index, name, label, removeLabel, onChange, onRemove }: RowProps) {
   const [focused, setFocused] = useState(false);
   const enter = useEnterAnimation(index);
-  const seat = SEAT_COLORS[index % SEAT_COLORS.length]!;
+  const seat = seatColor(index);
   const initial = name.trim().charAt(0).toUpperCase() || String(index + 1);
 
   return (

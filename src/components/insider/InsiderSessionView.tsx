@@ -29,7 +29,6 @@ import { alpha, color, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { MetaChip } from '../ui/Chip';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
@@ -42,6 +41,7 @@ import { Icon } from '../ui/Icon';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const ACCENT = color.gameInsider;
 const STAGES = ['roles', 'quiz', 'vote', 'result'] as const;
@@ -87,7 +87,7 @@ function MasterIntroPhase({ session }: { session: InsiderSession }) {
       footer={<PrimaryButton label="Deal secret roles" icon="eye" onPress={() => apply(startReveals)} />}
     >
       <Animated.View style={[styles.center, enter]}>
-        <MoonFace expression="detective" size={110} />
+        <GlyphDisk icon="search" accent={ACCENT} />
         <Text style={[type.body, styles.secondaryCenter]}>
           Everyone, the Master included, now sees a private role card.
         </Text>

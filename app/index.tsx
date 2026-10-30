@@ -1,11 +1,11 @@
 import { Redirect } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { MoonFace } from '../src/components/brand/MoonFace';
+import { Image, StyleSheet, View } from 'react-native';
 import { featureFlags } from '../src/config/features';
 import { useSettings } from '../src/domain/settings/SettingsContext';
 import { hasCompletedLanguageGate } from '../src/storage/onboarding';
 import { color } from '../src/theme/tokens';
+import { BRAND_MARK } from '../src/components/brand/gameArt';
 
 /**
  * Splash lands here. First launch → language gate. Returning users → Home.
@@ -32,7 +32,7 @@ export default function Index() {
   if (!ready || (featureFlags.languageSelection && gateDone === null)) {
     return (
       <View style={styles.boot}>
-        <MoonFace expression="loading" size={96} />
+        <Image source={BRAND_MARK.source} style={{ width: 96, height: 96 }} resizeMode="contain" />
       </View>
     );
   }

@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { alpha, color, radius, space } from '../../theme/tokens';
-import { type } from '../../theme/typography';
+import { family, type } from '../../theme/typography';
 import { Backdrop } from './Backdrop';
 import { Icon } from './Icon';
 import { PrimaryButton } from './PrimaryButton';
@@ -24,6 +24,8 @@ type Props = {
   primaryDisabled?: boolean;
   footerNote?: string;
   accent?: string;
+  /** Brush lettering for the title — used when the title is the game's name. */
+  brushTitle?: boolean;
 };
 
 /**
@@ -42,6 +44,7 @@ export function SetupScreen({
   primaryDisabled,
   footerNote,
   accent = color.gameImpostor,
+  brushTitle,
 }: Props) {
   return (
     <View style={styles.root}>
@@ -65,7 +68,9 @@ export function SetupScreen({
           ) : null}
 
           <View style={styles.heading}>
-            <Text style={[type.displayLg, styles.title]}>{title}</Text>
+            <Text style={brushTitle ? styles.brushTitle : [type.displayLg, styles.title]}>
+              {title}
+            </Text>
             {subtitle ? <Text style={[type.body, styles.subtitle]}>{subtitle}</Text> : null}
           </View>
         </View>
@@ -105,7 +110,7 @@ const styles = StyleSheet.create({
   },
   safe: {
     flex: 1,
-    paddingHorizontal: space[6],
+    paddingHorizontal: space[4],
   },
   top: {
     gap: space[4],
@@ -132,6 +137,15 @@ const styles = StyleSheet.create({
   title: {
     color: color.textPrimary,
   },
+  brushTitle: {
+    color: color.textPrimary,
+    fontFamily: family.brush.regular,
+    fontSize: 38,
+    lineHeight: 44,
+    textTransform: 'uppercase',
+    // Knewave leans right; the slack keeps the last glyph from clipping.
+    paddingRight: 6,
+  },
   subtitle: {
     color: color.textSecondary,
   },
@@ -149,8 +163,8 @@ const styles = StyleSheet.create({
   },
   footerScrim: {
     position: 'absolute',
-    left: -space[6],
-    right: -space[6],
+    left: -space[4],
+    right: -space[4],
     bottom: '100%',
     height: space[8],
   },

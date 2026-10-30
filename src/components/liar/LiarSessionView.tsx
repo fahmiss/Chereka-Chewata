@@ -27,7 +27,6 @@ import {
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
@@ -37,6 +36,8 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
 import { ReportCardButton } from '../session/ReportCardButton';
+import { PassPhoneCard } from '../session/PassPhoneCard';
+import { HoldCore } from '../session/HoldToReveal';
 
 const ACCENT = color.gameLiar;
 const LIAR_STAGES = ['reveal', 'answers', 'vote', 'result'] as const;
@@ -129,7 +130,6 @@ function HandoffPhase({
   const playerId =
     kind === 'reveal' ? currentRevealPlayerId(session) : currentVoterId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
-  const enter = useEnterAnimation(1, 20);
   const total =
     kind === 'reveal' ? session.setup.players.length : session.voteOrder.length;
   const index = (kind === 'reveal' ? session.revealIndex : session.voteIndex) + 1;
@@ -150,22 +150,7 @@ function HandoffPhase({
         />
       }
     >
-      <Animated.View style={[styles.handoff, enter]}>
-        <MoonFace expression="secret" size={72} glow={false} />
-        <Text style={[type.numeric, styles.handoffCount]}>
-          {String(index).padStart(2, '0')} / {String(total).padStart(2, '0')}
-        </Text>
-        <Text style={[type.eyebrow, styles.handoffLabel]}>Hand the phone to</Text>
-        <Text style={styles.handoffName} numberOfLines={2} adjustsFontSizeToFit>
-          {name}
-        </Text>
-        <View style={styles.handoffNote}>
-          <Icon name="eye" size={16} color={color.textMuted} />
-          <Text style={[type.bodySm, styles.handoffNoteText]}>
-            Face the screen away from the table. Nobody else should see.
-          </Text>
-        </View>
-      </Animated.View>
+      <PassPhoneCard name={name} index={index} total={total} accent={ACCENT} />
     </SessionShell>
   );
 }
@@ -355,7 +340,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
                 />
               </Svg>
               <View style={styles.holdCoreCenter} pointerEvents="none">
-                <MoonFace expression="secret" size={110} />
+                <HoldCore accent={ACCENT} progress={hold} />
               </View>
             </View>
             <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
@@ -729,18 +714,6 @@ export function LiarSessionView({ session }: { session: LiarSession }) {
 }
 
 const styles = StyleSheet.create({
-  handoff: {
-    flex: 1,
-    justifyContent: 'center',
-    gap: space[3],
-  },
-  handoffCount: {
-    color: ACCENT,
-    marginBottom: space[2],
-  },
-  handoffLabel: {
-    color: color.textMuted,
-  },
   handoffIdentity: {
     gap: space[4],
   },
@@ -753,23 +726,6 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(ACCENT, 0.14),
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  handoffName: {
-    color: color.textPrimary,
-    fontFamily: family.display.black,
-    fontSize: 56,
-    lineHeight: 58,
-    letterSpacing: -2.4,
-  },
-  handoffNote: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: space[2],
-    marginTop: space[3],
-  },
-  handoffNoteText: {
-    color: color.textMuted,
-    flex: 1,
   },
   secretCard: {
     flex: 1,

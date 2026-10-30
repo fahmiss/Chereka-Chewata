@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
-import { Animated, Easing, StyleSheet, View } from 'react-native';
+import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
 import Svg, { Circle, Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
 import { useReducedMotion } from '../../theme/motion';
 import { color } from '../../theme/tokens';
-import { MoonFace } from './MoonFace';
+import { BRAND_MARK } from './gameArt';
 
 type Props = {
   /** Fonts + first content are ready — fade the overlay out. */
@@ -12,7 +12,8 @@ type Props = {
 
 const GLOW_SIZE = 320;
 // Matches the native launch screen's imageWidth (app.json expo-splash-screen
-// config) so the JS overlay lands on an identical frame — no pop-in flash.
+// config) and uses the same file, so the JS overlay lands on an identical
+// frame — no pop-in flash.
 const MASCOT_SIZE = 150;
 
 // Scattered across the full screen (percent-based), not just around the mascot —
@@ -238,7 +239,12 @@ export function AnimatedSplash({ ready }: Props) {
         />
 
         <Animated.View style={{ transform: [{ translateY }, { rotate }, { scale: bounce }] }}>
-          <MoonFace expression="ready" size={MASCOT_SIZE} />
+          <Image
+            source={BRAND_MARK.source}
+            style={{ width: MASCOT_SIZE, height: MASCOT_SIZE }}
+            resizeMode="contain"
+            accessibilityIgnoresInvertColors
+          />
         </Animated.View>
       </View>
     </Animated.View>

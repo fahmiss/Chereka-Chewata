@@ -13,13 +13,13 @@ import { useLoopingSound, useSoundEffect } from '../../theme/useSoundEffect';
 import { easeInOut, easeOut, useEnterAnimation, useReducedMotion } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
-import { MoonFace } from '../brand/MoonFace';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const ACCENT = color.gameBomb;
 const STAGES = ['ready', 'pass', 'boom'] as const;
@@ -167,7 +167,7 @@ function ReadyPhase({ session }: { session: BombSession }) {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.readyBody}>
         <Animated.View style={enter}>
           <Surface accent={ACCENT} active contentStyle={styles.categoryCard}>
-            <MoonFace expression="bomb" size={86} />
+            <GlyphDisk icon="bomb" accent={ACCENT} size={86} />
             <Text style={[type.eyebrow, { color: ACCENT }]}>Category</Text>
             <Text
               style={[
@@ -230,7 +230,7 @@ function PlayingPhase({ session }: { session: BombSession }) {
         <View style={styles.fuseHero}>
           <Animated.View style={[styles.fuseRing, fuseAnimation.ring]} />
           <Animated.View style={fuseAnimation.mascot}>
-            <MoonFace expression="bomb" size={174} />
+            <GlyphDisk icon="bomb" accent={ACCENT} size={160} />
           </Animated.View>
           <View style={styles.liveBadge}>
             <Animated.View style={[styles.liveDot, { opacity: fuseAnimation.ring.opacity }]} />

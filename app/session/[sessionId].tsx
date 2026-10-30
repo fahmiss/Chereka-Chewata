@@ -1,7 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { lazy, Suspense, useEffect, useRef, type ReactNode } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { MoonFace } from '../../src/components/brand/MoonFace';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { SessionControlsProvider } from '../../src/components/session/SessionControlsContext';
 import { Icon } from '../../src/components/ui/Icon';
 import { PrimaryButton } from '../../src/components/ui/PrimaryButton';
@@ -25,6 +24,7 @@ import { SOUND_VOLUME } from '../../src/theme/soundLevels';
 import { alpha, color, radius, space } from '../../src/theme/tokens';
 import { useSoundEffect } from '../../src/theme/useSoundEffect';
 import { type } from '../../src/theme/typography';
+import { BRAND_MARK } from '../../src/components/brand/gameArt';
 
 const BombSessionView = lazy(() =>
   import('../../src/components/bomb/BombSessionView').then((module) => ({
@@ -211,7 +211,7 @@ function withSessionControls<TSetup>(
 function SessionLoading() {
   return (
     <Screen accent={color.brandPrimary} style={styles.loading}>
-      <MoonFace expression="loading" size={96} />
+      <Image source={BRAND_MARK.source} style={{ width: 96, height: 96 }} resizeMode="contain" />
     </Screen>
   );
 }

@@ -1,8 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { Redirect, router } from 'expo-router';
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { MoonFace } from '../src/components/brand/MoonFace';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { featureFlags } from '../src/config/features';
 import { OptionRow } from '../src/components/ui/Selectable';
 import { PrimaryButton } from '../src/components/ui/PrimaryButton';
@@ -13,6 +12,7 @@ import { translate } from '../src/i18n';
 import { markLanguageGateComplete } from '../src/storage/onboarding';
 import { color, space } from '../src/theme/tokens';
 import { family, type } from '../src/theme/typography';
+import { WORDMARK } from '../src/components/brand/gameArt';
 
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
@@ -50,8 +50,12 @@ export default function LanguageGateScreen() {
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.brand}>
-            <MoonFace expression="ready" size={88} />
-            <Text style={styles.wordmark}>CHEREKA</Text>
+            <Image
+              source={WORDMARK.source}
+              style={{ width: 220, height: 220 / WORDMARK.aspect }}
+              resizeMode="contain"
+              accessibilityLabel="Chereka Chewata"
+            />
             <Text style={styles.amharic}>{AMHARIC}</Text>
             <Text style={[type.body, styles.subtitle, uiFont ? { fontFamily: uiFont } : null]}>
               {t('language.title')}
@@ -139,12 +143,6 @@ const styles = StyleSheet.create({
   brand: {
     alignItems: 'center',
     gap: space[2],
-  },
-  wordmark: {
-    color: color.textPrimary,
-    fontFamily: family.display.black,
-    fontSize: 34,
-    letterSpacing: 4,
   },
   amharic: {
     color: color.brandPrimary,

@@ -1306,13 +1306,13 @@ These do not block initial development:
 
 The MVP should feel playable within seconds. Do not use a mandatory account, long onboarding carousel, social feed, or complex bottom navigation.
 
-Recommended top-level structure:
+Top-level structure (updated 2026-10-30): a small floating tab bar with three destinations.
 
-- **Home:** game library and continue/replay actions
-- **Packs:** optional content browsing and filtering
+- **Home:** game library, Tonight's pick, and the play-again action
+- **Players:** the saved table. Names are entered once; every game's setup starts from this group, and starting a game writes its players back
 - **Settings:** language, sound, vibration, accessibility, and legal information
 
-For the earliest build, Home may be the only persistent main screen. Packs can open as a secondary screen, and Settings can open from a top-right icon. This keeps the first implementation simple while preserving a scalable structure.
+The bar appears only on these three screens. Game details, setup and live sessions open over it, so it never offers a one-tap exit from gameplay (see §14.2). Packs, if they ship, open as a secondary screen rather than a fourth tab. A centre **Quick Play** action (random game with the saved players) is the planned replacement for the Settings tab, with Settings moving back behind an icon.
 
 ## 14.2 Global navigation rules
 

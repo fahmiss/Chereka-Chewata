@@ -34,7 +34,6 @@ import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { leaders, Standings } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
@@ -46,6 +45,7 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
 import { useMotionAvailable, useTilt } from './useTilt';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const ACCENT = color.gameGimbar;
 const STAGES = ['ready', 'play', 'summary', 'result'] as const;
@@ -278,7 +278,7 @@ function PlayingPhase({ session }: { session: GimbarSession }) {
         }
       >
         <View style={styles.centerFill}>
-          <MoonFace expression="timer" size={96} />
+          <GlyphDisk icon="pause" accent={ACCENT} size={96} />
           <Text style={[type.body, styles.muted]}>The card stays hidden until you resume.</Text>
         </View>
       </SessionShell>

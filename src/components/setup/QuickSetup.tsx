@@ -59,6 +59,7 @@ export function QuickSetup({
     <SetupScreen
       stepLabel="Quick setup"
       title={title}
+      brushTitle
       subtitle={subtitle}
       accent={accent}
       primaryLabel="Start game"

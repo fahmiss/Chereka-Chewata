@@ -9,10 +9,10 @@ import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const REVEAL_SOUND = require('../../../assets/sounds/secret-reveal.wav');
 void preload(REVEAL_SOUND);
@@ -145,7 +145,7 @@ export function HoldToReveal({
     }).start();
   };
 
-  const cardAccent = unlocked ? color.brandPrimary : accent;
+  const cardAccent = accent;
 
   return (
     <PressableScale
@@ -203,7 +203,7 @@ export function HoldToReveal({
               />
             </Svg>
             <View style={styles.holdCore} pointerEvents="none">
-              <MoonFace expression="secret" size={110} />
+              <HoldCore accent={accent} progress={hold} />
             </View>
           </View>
           <Text style={[type.eyebrow, styles.eyebrow]}>{label}</Text>
@@ -216,6 +216,22 @@ export function HoldToReveal({
         </Animated.View>
       )}
     </PressableScale>
+  );
+}
+
+/**
+ * Centre of the hold ring: the hidden-eye disk in the game colour, swelling
+ * as the finger holds so the press feels like it is pushing something open.
+ */
+export function HoldCore({ accent, progress }: { accent: string; progress: Animated.Value }) {
+  return (
+    <Animated.View
+      style={{
+        transform: [{ scale: progress.interpolate({ inputRange: [0, 1], outputRange: [1, 1.14] }) }],
+      }}
+    >
+      <GlyphDisk icon="eyeOff" accent={accent} size={112} />
+    </Animated.View>
   );
 }
 

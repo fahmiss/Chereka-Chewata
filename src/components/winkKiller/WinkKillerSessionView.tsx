@@ -29,7 +29,6 @@ import { color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
@@ -40,6 +39,7 @@ import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { GlyphDisk } from '../ui/GlyphDisk';
 
 const ACCENT = color.gameWinkKiller;
 const STAGES = ['roles', 'play', 'result'] as const;
@@ -159,7 +159,7 @@ function DetectiveAnnouncePhase({ session }: { session: WinkKillerSession }) {
       footer={<PrimaryButton label="Start playing" icon="eye" onPress={() => apply(startPlay)} />}
     >
       <Animated.View style={[styles.center, enter]}>
-        <MoonFace expression="detective" size={110} />
+        <GlyphDisk icon="search" accent={ACCENT} />
       </Animated.View>
     </SessionShell>
   );
@@ -328,7 +328,10 @@ function AccuseResultPhase({ session }: { session: WinkKillerSession }) {
       }
     >
       <Animated.View style={[styles.center, enter]}>
-        <MoonFace expression={accusation.correct ? 'caught' : 'secret'} size={110} />
+        <GlyphDisk
+          icon={accusation.correct ? 'target' : 'close'}
+          accent={accusation.correct ? ACCENT : color.dangerUrgency}
+        />
         <Text style={[type.displayLg, styles.titleCenter]}>{title}</Text>
         <Text style={[type.body, styles.secondaryCenter]}>{body}</Text>
       </Animated.View>

@@ -16,16 +16,19 @@ _Last updated: 2026-10-29._
       kept for timers/scores only. Outfit + Plus Jakarta Sans uninstalled
 - [x] Game details: full-bleed scene hero, brush title, numbered steps in
       the game colour, honey Play button
-- [ ] Shared in-game moments: pass-the-phone, secret reveal, timer ring,
-      results headline (brush) — restyle once, covers all 12 games
-- [ ] Setup screens: Players-tab look for the players step, new surfaces
+- [x] Shared in-game moments (2026-10-30): `PassPhoneCard` (seat-coloured
+      initial, brush name, progress pips), `HoldCore` on every hold-to-reveal,
+      timers in the game colour, `GlyphDisk` for Bomb, detective intros, Quiz
+      intro, pause and verdicts. Reveals stay in the game colour (not honey)
+- [x] Setup screens: brush game title on Quick Setup, 16pt gutters, players
+      step rows match the Players tab; "Last group" is now "Saved players"
 - [x] Results headers: shared `ResultHero` (cast scene band + brush
       headline) replaces the mascot on all 11 results screens. `caught` when
       the group exposes someone (Impostor, Liar, Wink Killer, Insider),
       `celebrate` for every other ending
-- [ ] In-round screens stay type-led (no cast art): restyle the remaining
-      MoonFace uses (secret, timer, Bomb fuse, pass-the-phone) with brush
-      type, game colour and motion
+- [x] Mascot removed from every in-game, dialog, loading, language and
+      Players screen. `MoonFace` remains only as the art fallback in
+      `GameCard` / game details for future games, and `MoonMark` is unused
 - [ ] Verify on iPhone home-screen web app: gap under the tab bar. Cause:
       black-translucent standalone mode sizes `height: 100%` to screen minus
       status bar; fixed with a `display-mode: standalone` 100vh rule in
@@ -35,8 +38,7 @@ _Last updated: 2026-10-29._
 Floating tab bar (Home · Players · Settings) in `app/(tabs)/`, custom
 `TabBar`. Players tab edits the saved group (`chereka.players.lastGroup.v1`);
 opening any game seats it, and starting a game still writes back to it.
-- [ ] Spec §14.1 says Settings opens from a top-right icon; it is now a tab
-      by product decision — update PRODUCT_SPEC when the nav settles
+- [x] PRODUCT_SPEC §14.1 updated for the Home · Players · Settings bar
 - [ ] Quick Play centre button (random game with the saved players) — the
       planned swap for the Settings tab
 - [ ] Device check: tab bar over the home indicator on iPhone, keyboard
@@ -55,7 +57,9 @@ Bricolage Grotesque, illustrated `GameCard`s, cast hero band). Still open:
 - [ ] Better colour identity: regenerate scenes with the coloured light baked
       in ("the whole room is lit by <accent> light; only faces catch warm
       lamp light") — punchier than the export grade
-- [ ] Wordmark is still a mockup crop (360px) — swap in the original logo file
+- [x] Final logo + icon (2026-10-30): transparent wordmark, crescent mark
+      rebuilt onto every icon size (iOS 1024, Android adaptive + monochrome,
+      splash, favicon, PWA 192/512, apple-touch 180); manifest bumped to v=3
 - [ ] Carry the new type + card language to setup / session screens (still
       Outfit + Plus Jakarta Sans)
 - [ ] Device check: Knewave line height / slant clipping on Android

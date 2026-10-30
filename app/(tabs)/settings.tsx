@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { MoonFace } from '../../src/components/brand/MoonFace';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { WORDMARK } from '../../src/components/brand/gameArt';
 import { featureFlags } from '../../src/config/features';
 import { Dialog } from '../../src/components/ui/Dialog';
 import { Screen } from '../../src/components/ui/Screen';
@@ -127,8 +127,12 @@ export default function SettingsScreen() {
         </Surface>
 
         <View style={styles.brand}>
-          <MoonFace expression="ready" size={64} />
-          <Text style={styles.wordmark}>CHEREKA CHEWATA</Text>
+          <Image
+            source={WORDMARK.source}
+            style={styles.wordmark}
+            resizeMode="contain"
+            accessibilityLabel="Chereka Chewata"
+          />
           <Text style={styles.amharic}>{AMHARIC}</Text>
           <Text style={[type.bodySm, styles.languageComingSoon]}>
             {t('settings.languageComingSoon')}
@@ -216,11 +220,8 @@ const styles = StyleSheet.create({
     paddingTop: space[4],
   },
   wordmark: {
-    color: color.textPrimary,
-    fontFamily: family.display.black,
-    fontSize: 15,
-    letterSpacing: 3,
-    marginTop: space[2],
+    width: 150,
+    height: 150 / WORDMARK.aspect,
   },
   amharic: {
     color: color.brandPrimary,

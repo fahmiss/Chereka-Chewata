@@ -18,7 +18,6 @@ import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell, TABOO_STAGES } from '../session/SessionShell';
 import { ReportCardButton } from '../session/ReportCardButton';
-import { MoonFace } from '../brand/MoonFace';
 import { ResultHero } from '../session/ResultHero';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
@@ -297,7 +296,6 @@ function PlayingPhase({ session }: { session: TabooSession }) {
           accessibilityLabel={paused ? `Timer paused at ${left} seconds` : `${left} seconds remaining`}
         >
           <View style={styles.timerReadout}>
-            <MoonFace expression="timer" size={56} />
             <Text style={[styles.timerDigits, urgent && styles.timerDigitsUrgent]}>
               {String(Math.max(left, 0)).padStart(2, '0')}
             </Text>

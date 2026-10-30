@@ -14,7 +14,8 @@ import { QUIZ_MAX_PLAYERS, QUIZ_MIN_PLAYERS } from '../../../../src/domain/quiz/
 import { useT } from '../../../../src/i18n';
 import { useEnterAnimation } from '../../../../src/theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../../../src/theme/tokens';
-import { type } from '../../../../src/theme/typography';
+import { seatColor } from '../../../../src/theme/seats';
+import { family, type } from '../../../../src/theme/typography';
 
 type RowProps = {
   index: number;
@@ -35,6 +36,8 @@ function PlayerRow({
 }: RowProps) {
   const [focused, setFocused] = useState(false);
   const enter = useEnterAnimation(index);
+  // Same colour this seat wears on the Players tab and the pass-the-phone screen.
+  const seat = seatColor(index);
 
   return (
     <Animated.View
@@ -42,15 +45,21 @@ function PlayerRow({
         styles.playerRow,
         enter,
         {
-          borderColor: focused ? alpha(accent, 0.6) : color.borderSubtle,
+          borderColor: focused ? alpha(accent, 0.6) : overlay.hairline,
+          borderTopColor: focused ? alpha(accent, 0.6) : overlay.hairlineTop,
           backgroundColor: focused ? alpha(accent, 0.1) : overlay.glass,
         },
         focused ? glow(accent, 0.25, 14) : null,
       ]}
     >
-      <View style={styles.seat}>
-        <Text style={[type.numeric, styles.seatText]}>
-          {String(index + 1).padStart(2, '0')}
+      <View
+        style={[
+          styles.seat,
+          { backgroundColor: alpha(seat, 0.18), borderColor: alpha(seat, 0.45) },
+        ]}
+      >
+        <Text style={[styles.seatText, { color: seat }]}>
+          {name.trim().charAt(0).toUpperCase() || String(index + 1)}
         </Text>
       </View>
 
@@ -62,7 +71,7 @@ function PlayerRow({
         placeholder={`Player ${index + 1}`}
         placeholderTextColor={color.textMuted}
         selectTextOnFocus
-        style={[type.titleMd, styles.input]}
+        style={styles.input}
         autoCapitalize="words"
         maxLength={24}
         accessibilityLabel={`Player ${index + 1} name`}
@@ -187,13 +196,13 @@ export default function PlayerSetupScreen() {
       <View style={styles.quickRow}>
         <SecondaryButton
           label="Player 1, 2…"
-          icon="users"
+          icon="refresh"
           onPress={fillDefaultNames}
           style={styles.half}
         />
         <SecondaryButton
-          label="Last group"
-          icon="refresh"
+          label="Saved players"
+          icon="users"
           onPress={() => {
             void useLastGroup();
           }}
@@ -258,15 +267,23 @@ const styles = StyleSheet.create({
     minHeight: 60,
   },
   seat: {
-    width: 30,
+    width: 36,
+    height: 36,
+    borderRadius: radius.pill,
+    borderWidth: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   seatText: {
-    color: color.textMuted,
+    fontFamily: family.grotesque.bold,
+    fontSize: 15,
+    lineHeight: 18,
   },
   input: {
     flex: 1,
     color: color.textPrimary,
+    fontFamily: family.grotesque.medium,
+    fontSize: 17,
     paddingVertical: space[3],
   },
   rowActions: {
