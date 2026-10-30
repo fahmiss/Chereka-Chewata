@@ -1,5 +1,4 @@
 import { router } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useRef } from 'react';
 import { Animated, AppState, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { localizeText } from '../../content/localize';
@@ -7,12 +6,13 @@ import { currentBombCard, getBombPlayerName } from '../../domain/bomb/machine';
 import { useBombSession } from '../../domain/bomb/SessionContext';
 import type { BombSession } from '../../domain/bomb/types';
 import { useSettings } from '../../domain/settings/SettingsContext';
-import { hapticImpact } from '../../theme/haptics';
+import { hapticHeavy } from '../../theme/haptics';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useLoopingSound, useSoundEffect } from '../../theme/useSoundEffect';
 import { easeInOut, easeOut, useEnterAnimation, useReducedMotion } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import Svg, { Circle, Defs, Path, RadialGradient, Stop } from 'react-native-svg';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
@@ -25,7 +25,6 @@ const ACCENT = color.gameBomb;
 const STAGES = ['ready', 'pass', 'boom'] as const;
 const FUSE_SOUND = require('../../../assets/sounds/bomb-fuse.wav');
 const EXPLOSION_SOUND = require('../../../assets/sounds/bomb-explosion.wav');
-const EXPLOSION_ART = require('../../../assets/mascot/moon-bomb-explosion.png');
 
 function endGame(clearSession: () => void) {
   router.replace('/home');
@@ -91,13 +90,44 @@ function useFuseAnimation() {
         { scale: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.94, 1.08] }) },
       ],
     },
-    mascot: {
+    bomb: {
       transform: [
         { translateX: tremble.interpolate({ inputRange: [-1, 1], outputRange: [-2.5, 2.5] }) },
         { rotate: tremble.interpolate({ inputRange: [-1, 1], outputRange: ['-1deg', '1deg'] }) },
       ],
     },
   };
+}
+
+/** Twelve spark rays, alternating long and short, around the centre. */
+const RAYS = Array.from({ length: 12 }, (_, i) => {
+  const a = (i / 12) * Math.PI * 2;
+  const inner = 0.24;
+  const outer = i % 2 ? 0.42 : 0.49;
+  const spread = 0.09;
+  const pt = (r: number, d: number) =>
+    `${(0.5 + Math.cos(a + d) * r).toFixed(3)} ${(0.5 + Math.sin(a + d) * r).toFixed(3)}`;
+  return `M${pt(inner, -spread)} L${pt(outer, 0)} L${pt(inner, spread)} Z`;
+});
+
+/** The blast drawn in Bomb's colours — no art, so it can't go stale. */
+function Blast() {
+  return (
+    <Svg width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid slice">
+      <Defs>
+        <RadialGradient id="blastCore" cx="0.5" cy="0.5" r="0.5">
+          <Stop offset="0" stopColor="#FFF2D6" stopOpacity={1} />
+          <Stop offset="0.28" stopColor={color.brandPrimary} stopOpacity={1} />
+          <Stop offset="0.6" stopColor={ACCENT} stopOpacity={0.85} />
+          <Stop offset="1" stopColor={color.void} stopOpacity={0} />
+        </RadialGradient>
+      </Defs>
+      {RAYS.map((d, i) => (
+        <Path key={i} d={d} fill={i % 2 ? color.brandPrimary : ACCENT} opacity={0.9} />
+      ))}
+      <Circle cx={0.5} cy={0.5} r={0.36} fill="url(#blastCore)" />
+    </Svg>
+  );
 }
 
 function useExplosionAnimation() {
@@ -131,10 +161,27 @@ function useExplosionAnimation() {
   }, [flash, impact, reducedMotion]);
 
   return {
-    artwork: {
+    blast: {
       opacity: impact,
       transform: [
-        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [0.94, 1] }) },
+        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [0.4, 1] }) },
+      ],
+    },
+    word: {
+      opacity: impact,
+      transform: [
+        { scale: impact.interpolate({ inputRange: [0, 0.7, 1], outputRange: [2.2, 0.92, 1] }) },
+        { rotate: '-6deg' },
+      ],
+    },
+    shake: {
+      transform: [
+        {
+          translateX: impact.interpolate({
+            inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
+            outputRange: [0, -10, 8, -5, 3, 0],
+          }),
+        },
       ],
     },
     flash: { opacity: flash },
@@ -229,7 +276,7 @@ function PlayingPhase({ session }: { session: BombSession }) {
       <Animated.View style={[styles.playingBody, enter]}>
         <View style={styles.fuseHero}>
           <Animated.View style={[styles.fuseRing, fuseAnimation.ring]} />
-          <Animated.View style={fuseAnimation.mascot}>
+          <Animated.View style={fuseAnimation.bomb}>
             <GlyphDisk icon="bomb" accent={ACCENT} size={160} />
           </Animated.View>
           <View style={styles.liveBadge}>
@@ -269,7 +316,7 @@ function ExplodedPhase(_: { session: BombSession }) {
   const explosionAnimation = useExplosionAnimation();
 
   useEffect(() => {
-    hapticImpact('medium');
+    hapticHeavy();
   }, []);
 
   return (
@@ -289,29 +336,24 @@ function ExplodedPhase(_: { session: BombSession }) {
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.explodedScroll}>
         <View style={styles.explodedBody}>
-          <View style={[styles.explosionShadow, glow(color.dangerUrgency, 0.38, 30)]}>
+          <Animated.View
+            style={[styles.explosionShadow, glow(ACCENT, 0.45, 34), explosionAnimation.shake]}
+          >
             <View style={styles.explosionClip}>
-              <Animated.Image
-                source={EXPLOSION_ART}
-                resizeMode="cover"
-                style={[styles.explosionArtwork, explosionAnimation.artwork]}
-                accessibilityLabel="The Chereka moon surprised by an explosion"
-              />
-              <LinearGradient
-                pointerEvents="none"
-                colors={['transparent', alpha(color.void, 0.08), alpha(color.void, 0.82)]}
-                locations={[0.48, 0.7, 1]}
-                style={StyleSheet.absoluteFill}
-              />
+              <Animated.View style={[StyleSheet.absoluteFill, explosionAnimation.blast]}>
+                <Blast />
+              </Animated.View>
               <Animated.View
                 pointerEvents="none"
                 style={[styles.explosionFlash, explosionAnimation.flash]}
               />
-              <View style={styles.boomOverlay}>
-                <Text style={styles.boomText}>BOOM!</Text>
-              </View>
+              <Animated.View style={[styles.boomOverlay, explosionAnimation.word]}>
+                <Text style={styles.boomText} accessibilityRole="header">
+                  BOOM!
+                </Text>
+              </Animated.View>
             </View>
-          </View>
+          </Animated.View>
 
           <Animated.View style={[styles.explosionCopy, copyEnter]}>
             <Text style={[type.displayMd, styles.explosionTitle]}>Who had the phone?</Text>
@@ -375,11 +417,10 @@ const styles = StyleSheet.create({
   explodedScroll: { flexGrow: 1, justifyContent: 'center', paddingBottom: space[4] },
   explodedBody: { alignItems: 'center', justifyContent: 'center', gap: space[5] },
   explosionShadow: { width: '100%', aspectRatio: 1, borderRadius: radius.extraLarge },
-  explosionClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(color.dangerUrgency, 0.58), backgroundColor: color.surface },
-  explosionArtwork: { width: '100%', height: '100%' },
+  explosionClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(ACCENT, 0.58), backgroundColor: color.void },
   explosionFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
-  boomOverlay: { position: 'absolute', left: 0, right: 0, bottom: space[5], alignItems: 'center' },
-  boomText: { color: color.dangerUrgency, fontFamily: family.display.black, fontSize: 48, lineHeight: 52, letterSpacing: 2.4, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 3 }, textShadowRadius: 12 },
+  boomOverlay: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
+  boomText: { ...type.brushHero, fontSize: 84, lineHeight: 96, color: color.textPrimary, paddingHorizontal: 8, textShadowColor: alpha(color.void, 0.9), textShadowOffset: { width: 0, height: 4 }, textShadowRadius: 14 },
   explosionCopy: { alignItems: 'center', gap: space[2] },
   explosionTitle: { color: color.textPrimary, textAlign: 'center' },
 });

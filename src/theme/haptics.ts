@@ -13,6 +13,12 @@ export function hapticImpact(style: 'light' | 'medium' | 'selection' = 'light') 
       ));
 }
 
+/** The one big hit — Bomb going off. */
+export function hapticHeavy() {
+  if (!getSettingsSnapshot().vibrationEnabled) return;
+  void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+}
+
 export function hapticSuccess() {
   if (!getSettingsSnapshot().vibrationEnabled) return;
   void Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);

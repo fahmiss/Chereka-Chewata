@@ -2604,14 +2604,16 @@ Motion:
 
 Illustration:
 
-- Soft 3D rendered moon mascot (nightcap character) is approved for hero,
-  empty, loading, result, and marketing moments.
-- Keep the primary logo mark (`MoonMark`) flat and geometric — app icon and
-  favicon stay silhouette-first; the 3D character is not the logo.
-- Mascot may appear in onboarding, empty states, loading, pass-the-phone,
-  results, and marketing — not as dense navigation chrome or tiny list glyphs.
-- Prefer expression / pose alone at small sizes; drop held props when the UI
-  already labels the state.
+Updated 2026-10-30 — the 3D moon mascot is retired.
+
+- Illustrated cast scenes (Dawit, Selam, Abel, Leila, Yonas; bold ink, painterly
+  cel shading, night, warm lamp light) carry the home hero, game cards, game
+  details and results. Each game's art is graded toward its accent colour.
+- In-round screens are type-led: Knewave brush caps, the game colour, motion and
+  haptics. No character art while a round is running.
+- The brand mark is the brush crescent with sparks (app icon, favicon, splash);
+  the primary logo is the brush "Chereka Chewata" wordmark.
+- Games without art yet fall back to their line icon on a lit disk (`GlyphDisk`).
 - Avoid horror cues or generic Ethiopian clichés.
 
 ## 18.9 Accessibility lock

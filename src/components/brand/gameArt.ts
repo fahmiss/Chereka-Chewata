@@ -11,7 +11,7 @@ export type GameArt = {
  * One scene per game, cut two ways: `wide` for full-row cards (action in the
  * right two-thirds, title on the dark left) and `half` for the two-up grid
  * (square window under the title). Either cut stands in for the other; games
- * with neither fall back to their MoonFace mascot.
+ * with neither fall back to their icon on a GlyphDisk.
  */
 export type GameArtSet = {
   wide?: GameArt;

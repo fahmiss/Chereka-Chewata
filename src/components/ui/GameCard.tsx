@@ -6,10 +6,9 @@ import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, mix, overlay, radius, space } from '../../theme/tokens';
 import { family } from '../../theme/typography';
 import { GAME_ART } from '../brand/gameArt';
-import { GAME_MOON_EXPRESSION } from '../brand/gameMoonExpression';
-import { MoonFace } from '../brand/MoonFace';
 import { Icon, type IconName } from './Icon';
 import { PressableScale } from './PressableScale';
+import { GlyphDisk } from './GlyphDisk';
 
 type Props = {
   game: GameCatalogEntry;
@@ -152,8 +151,7 @@ function WideArt({ game, height, ground }: ArtProps) {
   if (!art) {
     return (
       <View style={[styles.wideMascot, { height }]}>
-        <View style={[styles.halo, { backgroundColor: alpha(game.accent, 0.2) }]} />
-        <MoonFace expression={GAME_MOON_EXPRESSION[game.id]} size={112} />
+        <GlyphDisk icon={game.icon} accent={game.accent} size={96} />
       </View>
     );
   }
@@ -206,8 +204,7 @@ function HalfArt({ game, width, height, ground }: ArtProps & { width: number }) 
         ) : null
       ) : (
         <View style={styles.halfMascot}>
-          <View style={[styles.halo, { backgroundColor: alpha(game.accent, 0.2) }]} />
-          <MoonFace expression={GAME_MOON_EXPRESSION[game.id]} size={112} />
+          <GlyphDisk icon={game.icon} accent={game.accent} size={96} />
         </View>
       )}
       <LinearGradient
@@ -286,12 +283,6 @@ const styles = StyleSheet.create({
     right: 0,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  halo: {
-    position: 'absolute',
-    width: 120,
-    height: 120,
-    borderRadius: radius.pill,
   },
   topScrim: {
     position: 'absolute',

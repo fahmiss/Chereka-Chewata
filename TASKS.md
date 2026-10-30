@@ -57,6 +57,10 @@ _Last updated: 2026-10-29._
       handoff note names the guessing teammates
 - [x] Taboo + Mesob: every team scoreboard lists its players (describer lit);
       separate roster blocks removed, `TeamRoster` deleted
+- [x] Moon mascot retired (2026-10-30): Bomb explosion is a drawn spark
+      burst + brush BOOM! with shake and a heavy haptic; art fallbacks use
+      `GlyphDisk`; `MoonFace`, `MoonMark`, `gameMoonExpression` and
+      `assets/mascot/` (21 files, 4.3 MB) deleted; spec §18.8 rewritten
 - [x] Home grid: Bomb takes the wide slot; order re-shuffled so warm cards
       (Liar, Taboo, Bomb) never touch
 - [ ] Players saved-group screen: device check of keyboard on the add row

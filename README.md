@@ -1,7 +1,7 @@
 # Chereka Chewata
 
 <p align="center">
-  <img src="assets/mascot/moon-ready.png" alt="Chereka Chewata moon mascot" width="160" />
+  <img src="assets/illustrations/wordmark.png" alt="Chereka Chewata" width="320" />
 </p>
 
 > Pass the phone. Start the chaos. — ጨረቃ ጨዋታ

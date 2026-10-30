@@ -3,23 +3,23 @@ import { Animated, Modal, Pressable, StyleSheet, Text, View } from 'react-native
 import { duration, easeOut, useReducedMotion } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
-import type { MoonExpression } from '../brand/MoonFace';
 import { Icon, type IconName } from './Icon';
 import { PrimaryButton, type ButtonTone } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
 import { Surface } from './Surface';
 
-/** Mood of the old mascot expressions, expressed as a line icon. */
-const MOON_ICON: Partial<Record<MoonExpression, IconName>> = {
+/** Dialog moods, each drawn as a line icon on the badge. */
+const MOOD_ICON = {
   caught: 'alert',
   ready: 'smile',
-};
+} as const satisfies Record<string, IconName>;
 
 type Props = {
   visible: boolean;
   icon?: IconName;
   /** Soft 3D mascot — when set, replaces the Lucide badge icon. */
-  moon?: MoonExpression;
+  /** Mood shortcut: picks the badge icon. Kept under its old name for call sites. */
+  moon?: keyof typeof MOOD_ICON;
   accent?: string;
   title: string;
   message?: string;
@@ -111,7 +111,7 @@ export function Dialog({
             >
               {/* `moon` is kept for call-site compatibility; it now picks an icon. */}
               <Icon
-                name={moon ? (MOON_ICON[moon] ?? 'smile') : icon}
+                name={moon ? MOOD_ICON[moon] : icon}
                 size={24}
                 color={accent}
                 strokeWidth={1.9}

@@ -12,8 +12,6 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GAME_ART } from '../../../src/components/brand/gameArt';
-import { GAME_MOON_EXPRESSION } from '../../../src/components/brand/gameMoonExpression';
-import { MoonFace } from '../../../src/components/brand/MoonFace';
 import { Pill } from '../../../src/components/ui/Chip';
 import { StatChip } from '../../../src/components/ui/GameCard';
 import { PrimaryButton } from '../../../src/components/ui/PrimaryButton';
@@ -23,6 +21,8 @@ import { useGameSetup } from '../../../src/domain/useGameSetup';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, mix, radius, space } from '../../../src/theme/tokens';
 import { family, type } from '../../../src/theme/typography';
+import { GlyphDisk } from '../../../src/components/ui/GlyphDisk';
+import { Icon } from '../../../src/components/ui/Icon';
 
 /** Tall enough that the scene reads as a place, not a thumbnail. */
 const HERO_HEIGHT = 340;
@@ -206,7 +206,7 @@ export default function GameDetailsScreen() {
           />
         ) : (
           <View style={styles.soonBox}>
-            <MoonFace expression="comingSoon" size={48} />
+            <Icon name="lock" size={20} color={color.textMuted} />
             <Text style={[type.button, styles.soonLabel]}>Coming soon</Text>
           </View>
         )}
@@ -240,8 +240,7 @@ function Hero({ game, ground }: { game: GameCatalogEntry; ground: string }) {
         />
       ) : (
         <View style={styles.heroMascot}>
-          <View style={[styles.heroHalo, { backgroundColor: alpha(game.accent, 0.2) }]} />
-          <MoonFace expression={GAME_MOON_EXPRESSION[game.id]} size={140} />
+          <GlyphDisk icon={game.icon} accent={game.accent} size={128} />
         </View>
       )}
       {/* Status bar and back button stay legible over bright scenes. */}
@@ -277,13 +276,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: space[10],
-  },
-  heroHalo: {
-    position: 'absolute',
-    width: 180,
-    height: 180,
-    borderRadius: radius.pill,
-    marginTop: space[10],
   },
   heroTopScrim: {
     position: 'absolute',
