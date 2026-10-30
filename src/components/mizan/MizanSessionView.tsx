@@ -64,9 +64,26 @@ function SpectrumLabels({ session }: { session: MizanSession }) {
   );
 }
 
+/** "Abel", "Abel and Leila", "Abel, Leila and Yonas". */
+function listNames(names: string[]): string {
+  if (names.length <= 1) return names.join('');
+  return `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+}
+
 function ScoreLine({ session }: { session: MizanSession }) {
   if (session.setup.mode === 'teams') {
-    return <TeamScoreStrip scores={session.scores} activeTeam={session.activeTeam} accent={ACCENT} />;
+    const names = (team: 'a' | 'b') =>
+      teamIds(session, team).map((id) => getMizanPlayerName(session, id));
+    return (
+      <TeamScoreStrip
+        scores={session.scores}
+        activeTeam={session.activeTeam}
+        accent={ACCENT}
+        // Who's on which side, so the table knows whose turn it is to guess.
+        members={{ a: names('a'), b: names('b') }}
+        highlightName={getMizanPlayerName(session, currentPsychicId(session))}
+      />
+    );
   }
   return (
     <Text style={[type.mono, styles.secondary]}>
@@ -80,6 +97,13 @@ function HandoffPhase({ session }: { session: MizanSession }) {
   const psychic = getMizanPlayerName(session, currentPsychicId(session));
   const teams = session.setup.mode === 'teams';
   const team = teamIds(session, session.activeTeam);
+  const psychicId = currentPsychicId(session);
+  const teammates = team.filter((id) => id !== psychicId).map((id) => getMizanPlayerName(session, id));
+  // Teams: say who's on the guessing side, so nobody has to remember the split.
+  const note =
+    teams && teammates.length
+      ? `Only ${psychic} sees the target. ${teamLabel(session.activeTeam)} guesses with ${listNames(teammates)}.`
+      : 'Only the psychic sees the target. Everyone else, look away from the screen.';
   return (
     <PassPhoneHandoff
       name={psychic}
@@ -90,7 +114,7 @@ function HandoffPhase({ session }: { session: MizanSession }) {
       eyebrow={teams ? `${teamLabel(session.activeTeam)} · Psychic` : 'Psychic'}
       stage="peek"
       stages={STAGES}
-      note="Only the psychic sees the target. Everyone else, look away from the screen."
+      note={note}
       readyLabel="I'm the psychic"
       onReady={() => apply(beginPeek)}
       onEndGame={() => endGame(clearSession)}

@@ -1,4 +1,3 @@
-import { Platform } from 'react-native';
 import { getGimbarCategories } from '../../content/gimbar';
 import { createGameSession } from '../shared/createGameSession';
 import { createPlayerSetup } from '../shared/createPlayerSetup';
@@ -12,7 +11,9 @@ import {
 } from './types';
 
 /** Browsers report device motion inconsistently, so web starts on tap. */
-export const GIMBAR_TILT_SUPPORTED = Platform.OS !== 'web';
+// Paused 2026-10-30: tilt did not register on device. Tap halves are the
+// only control until it's fixed; flip back to `Platform.OS !== 'web'` then.
+export const GIMBAR_TILT_SUPPORTED: boolean = false;
 
 export function defaultGimbarSetup(): GimbarSetup {
   return {

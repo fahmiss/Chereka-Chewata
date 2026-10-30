@@ -383,7 +383,7 @@ function SummaryPhase({ session }: { session: GimbarSession }) {
       stages={STAGES}
       title={`${name} got ${correct}`}
       subtitle={
-        session.plays.length ? 'Tap a card to fix a misread tilt.' : 'No cards this turn.'
+        session.plays.length ? 'Tap a card to fix a mistake.' : 'No cards this turn.'
       }
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}

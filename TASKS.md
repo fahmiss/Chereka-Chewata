@@ -49,8 +49,14 @@ _Last updated: 2026-10-29._
       `type.brushHero` / `type.brushTitle`; Most Likely strips the repeated
       "Who is most likely to" from English prompts
 - [x] Language gate restyled (still behind `featureFlags.languageSelection`)
-- [ ] Device check: Gimbar forehead card (landscape + tilt) and Mizan dial
-      were not seen in a render
+- [x] Gimbar + Mizan checked on device (2026-10-30)
+- [ ] Gimbar tilt doesn't register on device — paused via
+      `GIMBAR_TILT_SUPPORTED = false` (tap halves only); fix the motion
+      reading in `src/components/gimbar/useTilt.ts`, then flip it back
+- [x] Mizan teams: team members listed under each score (psychic lit),
+      handoff note names the guessing teammates
+- [x] Home grid: Bomb takes the wide slot; order re-shuffled so warm cards
+      (Liar, Taboo, Bomb) never touch
 - [ ] Players saved-group screen: device check of keyboard on the add row
 
 ### Home redesign follow-ups (2026-10-29)

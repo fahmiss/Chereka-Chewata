@@ -66,7 +66,7 @@ const STEPS: Record<string, string[]> = {
   gimbar: [
     'The guesser holds the phone sideways on their forehead, screen facing the room.',
     'Everyone else acts, hums and describes the word on screen — just never says it.',
-    'Tilt down when you get it, tilt up to pass. Every player takes a turn; most cards wins.',
+    'Tap the right side when you get it, the left side to pass. Every player takes a turn; most cards wins.',
   ],
   mesob: [
     'Everyone secretly drops a few names or things into the mesob. Then split into two teams.',

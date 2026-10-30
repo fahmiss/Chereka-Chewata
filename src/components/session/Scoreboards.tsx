@@ -5,21 +5,43 @@ import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 
-/** Team A vs Team B, with the team on turn lit in the game accent. */
+/**
+ * Team A vs Team B, with the team on turn lit in the game accent. Pass
+ * `members` to list who is on each side under the score.
+ */
 export function TeamScoreStrip({
   scores,
   activeTeam,
   accent,
+  members,
+  highlightName,
 }: {
   scores: Record<TeamId, number>;
   activeTeam: TeamId | null;
   accent: string;
+  members?: Record<TeamId, string[]>;
+  /** A name to light up inside the member list (e.g. the current psychic). */
+  highlightName?: string;
 }) {
   return (
     <View style={styles.strip}>
-      <TeamPill team="a" score={scores.a} active={activeTeam === 'a'} accent={accent} />
+      <TeamPill
+        team="a"
+        score={scores.a}
+        active={activeTeam === 'a'}
+        accent={accent}
+        members={members?.a}
+        highlightName={highlightName}
+      />
       <Text style={[type.mono, styles.vs]}>vs</Text>
-      <TeamPill team="b" score={scores.b} active={activeTeam === 'b'} accent={accent} />
+      <TeamPill
+        team="b"
+        score={scores.b}
+        active={activeTeam === 'b'}
+        accent={accent}
+        members={members?.b}
+        highlightName={highlightName}
+      />
     </View>
   );
 }
@@ -29,11 +51,15 @@ function TeamPill({
   score,
   active,
   accent,
+  members,
+  highlightName,
 }: {
   team: TeamId;
   score: number;
   active: boolean;
   accent: string;
+  members?: string[];
+  highlightName?: string;
 }) {
   return (
     <View
@@ -46,6 +72,23 @@ function TeamPill({
         {teamLabel(team)}
       </Text>
       <Text style={[type.displayMd, { color: active ? accent : color.textPrimary }]}>{score}</Text>
+      {members?.length ? (
+        <Text style={[type.bodySm, styles.pillMembers]} numberOfLines={3}>
+          {members.map((name, index) => (
+            <Text
+              key={`${name}-${index}`}
+              style={
+                active && name === highlightName
+                  ? { color: accent, fontFamily: family.body.bold }
+                  : null
+              }
+            >
+              {index > 0 ? ', ' : ''}
+              {name}
+            </Text>
+          ))}
+        </Text>
+      ) : null}
     </View>
   );
 }
@@ -171,6 +214,10 @@ const styles = StyleSheet.create({
     paddingVertical: space[3],
     paddingHorizontal: space[4],
     gap: 2,
+  },
+  pillMembers: {
+    color: color.textSecondary,
+    marginTop: space[1],
   },
   roster: {
     flexDirection: 'row',
