@@ -1,7 +1,8 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { Redirect, router } from 'expo-router';
 import { useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { featureFlags } from '../src/config/features';
 import { OptionRow } from '../src/components/ui/Selectable';
 import { PrimaryButton } from '../src/components/ui/PrimaryButton';
@@ -10,9 +11,12 @@ import { useSettings } from '../src/domain/settings/SettingsContext';
 import type { ContentLanguage, InterfaceLanguage } from '../src/domain/settings/types';
 import { translate } from '../src/i18n';
 import { markLanguageGateComplete } from '../src/storage/onboarding';
-import { color, space } from '../src/theme/tokens';
+import { alpha, color, space } from '../src/theme/tokens';
 import { family, type } from '../src/theme/typography';
-import { WORDMARK } from '../src/components/brand/gameArt';
+import { HERO_HOME, WORDMARK } from '../src/components/brand/gameArt';
+
+/** The room, cropped to a band: the first thing a new player sees. */
+const HERO_HEIGHT = 300;
 
 const AMHARIC = '\u1328\u1228\u1243 \u1328\u12CB\u1273';
 
@@ -30,6 +34,8 @@ export default function LanguageGateScreen() {
   // Preview copy in the language being chosen before persist.
   const t = (key: Parameters<typeof translate>[1]) => translate(interfaceLanguage, key);
   const uiFont = interfaceLanguage === 'am' ? family.ethiopic.medium : undefined;
+  const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
 
   const onContinue = async () => {
     setLanguages(interfaceLanguage, contentLanguage);
@@ -42,17 +48,35 @@ export default function LanguageGateScreen() {
   }
 
   return (
-    <Screen accent={color.brandPrimary}>
+    // Top edge by hand so the room runs under the status bar.
+    <Screen accent={color.brandPrimary} edges={['bottom']}>
       <View style={styles.root}>
         <ScrollView
           style={styles.scroll}
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
+          <View style={[styles.hero, { height: HERO_HEIGHT + insets.top }]}>
+            <Image
+              source={HERO_HOME.source}
+              style={{ width, height: width / HERO_HOME.aspect }}
+              resizeMode="cover"
+              accessibilityElementsHidden
+            />
+            <LinearGradient
+              colors={[alpha(color.void, 0.65), alpha(color.void, 0)]}
+              style={styles.heroTopScrim}
+            />
+            <LinearGradient
+              colors={[alpha(color.background, 0), color.background]}
+              style={styles.heroBottomFade}
+            />
+          </View>
+
           <View style={styles.brand}>
             <Image
               source={WORDMARK.source}
-              style={{ width: 220, height: 220 / WORDMARK.aspect }}
+              style={{ width: 230, height: 230 / WORDMARK.aspect }}
               resizeMode="contain"
               accessibilityLabel="Chereka Chewata"
             />
@@ -91,21 +115,21 @@ export default function LanguageGateScreen() {
               description={t('language.contentEn')}
               selected={contentLanguage === 'en'}
               onPress={() => setContentLanguage('en')}
-              accent={color.gameImpostor}
+              accent={color.brandPrimary}
             />
             <OptionRow
               title={t('language.amharic')}
               description={t('language.contentAm')}
               selected={contentLanguage === 'am'}
               onPress={() => setContentLanguage('am')}
-              accent={color.gameImpostor}
+              accent={color.brandPrimary}
             />
             <OptionRow
               title={t('language.mixed')}
               description={t('language.contentMixed')}
               selected={contentLanguage === 'mixed'}
               onPress={() => setContentLanguage('mixed')}
-              accent={color.gameImpostor}
+              accent={color.brandPrimary}
             />
           </View>
         </ScrollView>
@@ -130,19 +154,38 @@ export default function LanguageGateScreen() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    paddingHorizontal: space[6],
   },
   scroll: {
     flex: 1,
   },
   scrollContent: {
-    paddingTop: space[8],
+    paddingHorizontal: space[4],
     paddingBottom: space[6],
     gap: space[6],
+  },
+  hero: {
+    marginHorizontal: -space[4],
+    overflow: 'hidden',
+  },
+  heroTopScrim: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 120,
+  },
+  heroBottomFade: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: 140,
   },
   brand: {
     alignItems: 'center',
     gap: space[2],
+    // The logo sits on the faded foot of the room.
+    marginTop: -110,
   },
   amharic: {
     color: color.brandPrimary,
@@ -150,7 +193,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   subtitle: {
-    color: color.textSecondary,
+    color: color.textPrimary,
     textAlign: 'center',
     marginTop: space[2],
   },
@@ -161,13 +204,14 @@ const styles = StyleSheet.create({
     color: color.textMuted,
   },
   footer: {
+    paddingHorizontal: space[4],
     paddingTop: space[3],
     paddingBottom: space[3],
   },
   footerScrim: {
     position: 'absolute',
-    left: -space[6],
-    right: -space[6],
+    left: 0,
+    right: 0,
     bottom: '100%',
     height: space[8],
   },

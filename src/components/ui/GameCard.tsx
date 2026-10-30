@@ -109,7 +109,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
               {game.name}
             </Text>
             {wide ? (
-              <Text style={styles.hook} numberOfLines={2}>
+              <Text style={[styles.hook, styles.wideHook]} numberOfLines={2}>
                 {game.hook}
               </Text>
             ) : null}
@@ -117,7 +117,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
 
           <View style={styles.bottomBlock}>
             {!wide ? (
-              <Text style={[styles.hook, styles.halfHook]} numberOfLines={2}>
+              <Text style={[styles.hook, styles.halfHook]} numberOfLines={1}>
                 {game.hook}
               </Text>
             ) : null}
@@ -338,6 +338,10 @@ const styles = StyleSheet.create({
   },
   wideTitleBlock: {
     maxWidth: '58%',
+  },
+  wideHook: {
+    // The art starts fading in around here; keep the hook on the dark side.
+    maxWidth: '82%',
   },
   eyebrow: {
     color: color.brandPrimary,

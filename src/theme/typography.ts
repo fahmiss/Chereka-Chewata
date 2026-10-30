@@ -125,6 +125,24 @@ export const type = {
     lineHeight: 18,
     letterSpacing: 0.2,
   },
+  /**
+   * Brush caps for the word the whole table reads (Taboo target, Bomb
+   * category, Gimbar card). Knewave leans right — give it a little
+   * horizontal padding where it sits flush.
+   */
+  brushHero: {
+    fontFamily: family.brush.regular,
+    fontSize: 44,
+    lineHeight: 52,
+    textTransform: 'uppercase',
+  },
+  /** Brush caps for in-round headlines (prompt lead-ins, turns, spectrum ends). */
+  brushTitle: {
+    fontFamily: family.brush.regular,
+    fontSize: 24,
+    lineHeight: 30,
+    textTransform: 'uppercase',
+  },
   numeric: {
     fontFamily: family.mono.bold,
     fontSize: 15,

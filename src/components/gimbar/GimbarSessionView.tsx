@@ -30,7 +30,7 @@ import {
 import type { GimbarResult, GimbarSession } from '../../domain/gimbar/types';
 import { hapticImpact, hapticSuccess } from '../../theme/haptics';
 import { useEnterAnimation } from '../../theme/motion';
-import { alpha, color, overlay, radius, space } from '../../theme/tokens';
+import { alpha, color, mix, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
@@ -290,7 +290,7 @@ function PlayingPhase({ session }: { session: GimbarSession }) {
       ? alpha(color.success, 0.92)
       : flash === 'pass'
         ? alpha(color.brandPrimary, 0.92)
-        : color.background;
+        : mix(color.background, ACCENT, 0.2);
   const urgent = leftSeconds <= 10;
   const text = session.currentCard ? cardText(session, session.currentCard) : '';
 
@@ -593,19 +593,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: space[4],
   },
   cardText: {
+    ...type.brushHero,
     color: color.textPrimary,
-    fontFamily: family.display.black,
-    fontSize: 72,
-    lineHeight: 78,
-    letterSpacing: -2,
+    fontSize: 76,
+    lineHeight: 88,
     textAlign: 'center',
+    paddingHorizontal: 6,
+    textShadowColor: alpha(ACCENT, 0.45),
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 18,
   },
   flashText: {
+    ...type.brushHero,
     color: color.void,
-    fontFamily: family.display.black,
-    fontSize: 80,
-    lineHeight: 86,
+    fontSize: 84,
+    lineHeight: 96,
     textAlign: 'center',
+    paddingHorizontal: 6,
   },
   tapLayer: {
     ...StyleSheet.absoluteFill,

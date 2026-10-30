@@ -20,6 +20,14 @@ import { Surface } from '../ui/Surface';
 import { ResultHero } from '../session/ResultHero';
 
 const ACCENT = color.gameMostLikely;
+
+/**
+ * Every English prompt opens with "Who is most likely to"; the card already
+ * says that in brush above, so show only the rest. Other languages pass through.
+ */
+function promptBody(text: string): string {
+  return text.replace(/^who is most likely to\s+/i, '');
+}
 const STAGES = ['prompt', 'point', 'discuss', 'result'] as const;
 const COUNT_SOUND = require('../../../assets/sounds/most-likely-count.wav');
 const POINT_SOUND = require('../../../assets/sounds/most-likely-point.wav');
@@ -93,7 +101,7 @@ function PromptCard({ session }: { session: MostLikelySession }) {
     >
       <Animated.View style={[styles.body, enter]}>
         <Surface accent={ACCENT} active contentStyle={styles.promptCard}>
-          <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
+          <Text style={styles.leadIn}>Who’s most likely to…</Text>
           <Text
             style={[
               styles.promptText,
@@ -101,10 +109,12 @@ function PromptCard({ session }: { session: MostLikelySession }) {
             ]}
           >
             {prompt
-              ? localizeText(session.contentLanguage, {
-                  en: prompt.prompt_en,
-                  am: prompt.prompt_am,
-                })
+              ? promptBody(
+                  localizeText(session.contentLanguage, {
+                    en: prompt.prompt_en,
+                    am: prompt.prompt_am,
+                  }),
+                )
               : ''}
           </Text>
         </Surface>
@@ -149,7 +159,7 @@ function CountdownPrompt({ session }: { session: MostLikelySession }) {
   const prompt = currentPrompt(session);
   return (
     <Surface accent={ACCENT} active contentStyle={styles.countdownPrompt}>
-      <Text style={[type.eyebrow, { color: ACCENT }]}>Who’s most likely to…</Text>
+      <Text style={[styles.leadIn, styles.countdownLeadIn]}>Who’s most likely to…</Text>
       <Text
         style={[
           styles.countdownPromptText,
@@ -157,10 +167,12 @@ function CountdownPrompt({ session }: { session: MostLikelySession }) {
         ]}
       >
         {prompt
-          ? localizeText(session.contentLanguage, {
-              en: prompt.prompt_en,
-              am: prompt.prompt_am,
-            })
+          ? promptBody(
+              localizeText(session.contentLanguage, {
+                en: prompt.prompt_en,
+                am: prompt.prompt_am,
+              }),
+            )
           : ''}
       </Text>
     </Surface>
@@ -265,9 +277,18 @@ const styles = StyleSheet.create({
     minHeight: 220,
     justifyContent: 'center',
   },
+  leadIn: {
+    ...type.brushTitle,
+    color: ACCENT,
+    paddingRight: 4,
+  },
+  countdownLeadIn: {
+    fontSize: 18,
+    lineHeight: 24,
+  },
   promptText: {
     color: color.textPrimary,
-    fontFamily: family.display.bold,
+    fontFamily: family.display.extrabold,
     fontSize: 30,
     lineHeight: 38,
     letterSpacing: -0.6,

@@ -82,7 +82,9 @@ function DilemmaCard({ session }: { session: WouldRatherSession }) {
           chosen={chosen}
           onPress={() => dispatch.chooseSide('a')}
         />
-        <Text style={[type.numeric, styles.or]}>OR</Text>
+        <View style={styles.orBadge} accessibilityElementsHidden>
+          <Text style={styles.orText}>OR</Text>
+        </View>
         <Option
           side="b"
           label="OPTION B"
@@ -238,6 +240,9 @@ const styles = StyleSheet.create({
   },
   optionText: {
     color: color.textPrimary,
+    fontFamily: family.display.extrabold,
+    fontSize: 22,
+    lineHeight: 28,
   },
   tick: {
     width: 24,
@@ -249,9 +254,25 @@ const styles = StyleSheet.create({
   rejected: {
     opacity: 0.45,
   },
-  or: {
-    color: color.textMuted,
-    textAlign: 'center',
+  orBadge: {
+    alignSelf: 'center',
+    width: 56,
+    height: 56,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: alpha(color.textPrimary, 0.2),
+    backgroundColor: color.surfaceRaised,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // Overlap both option cards so the badge reads as the hinge between them.
+    marginVertical: -space[5],
+    zIndex: 1,
+    ...glow(color.void, 0.6, 14),
+  },
+  orText: {
+    ...type.brushTitle,
+    color: color.textPrimary,
+    paddingRight: 2,
   },
   hint: {
     color: color.textSecondary,

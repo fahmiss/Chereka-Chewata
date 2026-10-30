@@ -28,6 +28,13 @@ import { GlyphDisk } from '../ui/GlyphDisk';
 const ACCENT = color.gameQuiz;
 const STAGES = ['ready', 'question', 'reveal', 'result'] as const;
 const LETTERS = ['A', 'B', 'C', 'D'] as const;
+/** Quiz-show colour per answer slot, so the table can call "the green one". */
+const LETTER_COLORS = [
+  color.gameImpostor,
+  color.gameWouldRather,
+  color.gameMostLikely,
+  color.gameTaboo,
+] as const;
 const CORRECT_SOUND = require('../../../assets/sounds/quiz-correct.wav');
 const INCORRECT_SOUND = require('../../../assets/sounds/quiz-incorrect.wav');
 
@@ -120,9 +127,9 @@ function Question({ session }: { session: QuizSession }) {
     >
       <Animated.View style={[styles.questionWrap, enter]}>
         {player ? (
-          <Text style={[type.titleLg, styles.turn]}>{player.displayName}’s turn</Text>
+          <Text style={styles.turn}>{player.displayName}’s turn</Text>
         ) : null}
-        <Text style={[type.mono, styles.meta]}>
+        <Text style={[type.label, styles.meta]}>
           {getCategoryName(question.category_id, session.contentLanguage)} · {question.difficulty}
         </Text>
         <Text
@@ -149,6 +156,7 @@ function Question({ session }: { session: QuizSession }) {
               key={answer.id}
               answer={answer}
               letter={LETTERS[index]!}
+              slotColor={LETTER_COLORS[index % LETTER_COLORS.length]!}
               language={session.contentLanguage}
               revealed={revealed}
               selected={selected?.id === answer.id}
@@ -202,6 +210,7 @@ function Question({ session }: { session: QuizSession }) {
 function AnswerCard({
   answer,
   letter,
+  slotColor,
   language,
   revealed,
   selected,
@@ -209,6 +218,7 @@ function AnswerCard({
 }: {
   answer: QuizAnswer;
   letter: string;
+  slotColor: string;
   language: QuizSession['contentLanguage'];
   revealed: boolean;
   selected: boolean;
@@ -216,7 +226,7 @@ function AnswerCard({
 }) {
   const correct = revealed && answer.correct;
   const incorrectSelection = revealed && selected && !answer.correct;
-  const tint = correct ? color.success : incorrectSelection ? color.dangerUrgency : ACCENT;
+  const tint = correct ? color.success : incorrectSelection ? color.dangerUrgency : slotColor;
 
   return (
     <PressableScale
@@ -228,13 +238,27 @@ function AnswerCard({
       scaleTo={0.985}
       style={[
         styles.answer,
-        { borderColor: alpha(tint, correct || incorrectSelection || selected ? 0.75 : 0.24) },
+        { borderColor: alpha(tint, correct || incorrectSelection || selected ? 0.85 : 0.32) },
         (correct || incorrectSelection || selected) && { backgroundColor: alpha(tint, 0.13) },
         revealed && !correct && !selected ? styles.dimmed : null,
       ]}
     >
-      <View style={[styles.letter, { borderColor: alpha(tint, 0.55) }]}>
-        <Text style={[type.numeric, { color: tint }]}>{letter}</Text>
+      <View
+        style={[
+          styles.letter,
+          selected || correct || incorrectSelection
+            ? { backgroundColor: tint, borderColor: tint }
+            : { backgroundColor: alpha(tint, 0.16), borderColor: alpha(tint, 0.6) },
+        ]}
+      >
+        <Text
+          style={[
+            styles.letterText,
+            { color: selected || correct || incorrectSelection ? color.void : tint },
+          ]}
+        >
+          {letter}
+        </Text>
       </View>
       <Text
         style={[
@@ -382,8 +406,10 @@ const styles = StyleSheet.create({
     minHeight: 0,
   },
   turn: {
+    ...type.brushTitle,
     color: ACCENT,
     marginBottom: space[1],
+    paddingRight: 4,
   },
   meta: {
     color: color.textMuted,
@@ -392,7 +418,9 @@ const styles = StyleSheet.create({
   },
   questionText: {
     color: color.textPrimary,
-    lineHeight: 30,
+    fontFamily: family.display.extrabold,
+    fontSize: 24,
+    lineHeight: 31,
     marginBottom: space[4],
   },
   answers: {
@@ -415,12 +443,19 @@ const styles = StyleSheet.create({
     gap: space[3],
   },
   letter: {
-    width: 34,
-    height: 34,
-    borderRadius: radius.small,
-    borderWidth: 1,
+    width: 38,
+    height: 38,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  letterText: {
+    ...type.brushTitle,
+    fontSize: 20,
+    lineHeight: 26,
+    // Knewave leans right; nudge back to the optical centre.
+    marginLeft: -2,
   },
   answerText: {
     color: color.textPrimary,

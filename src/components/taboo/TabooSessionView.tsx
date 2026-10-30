@@ -343,6 +343,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               card.forbidden_am,
             ).map((word) => (
               <View key={word} style={styles.forbiddenChip}>
+                <Icon name="close" size={12} color={color.dangerUrgency} strokeWidth={3} />
                 <Text
                   style={[
                     type.label,
@@ -632,11 +633,12 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   target: {
-    color: color.textPrimary,
-    fontFamily: family.display.black,
-    fontSize: 44,
-    lineHeight: 48,
-    letterSpacing: -1.5,
+    ...type.brushHero,
+    color: ACCENT,
+    paddingHorizontal: 4,
+    textShadowColor: alpha(ACCENT, 0.45),
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 18,
   },
   forbiddenLabel: {
     color: color.dangerUrgency,
@@ -648,6 +650,9 @@ const styles = StyleSheet.create({
     gap: space[2],
   },
   forbiddenChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: radius.pill,

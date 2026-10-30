@@ -3,7 +3,7 @@ import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Animated, Image, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { HERO_HOME, WORDMARK } from '../src/components/brand/gameArt';
+import { GAME_ART, HERO_HOME, WORDMARK } from '../src/components/brand/gameArt';
 import { GameCard } from '../src/components/ui/GameCard';
 import { Icon, type IconName } from '../src/components/ui/Icon';
 import { PressableScale } from '../src/components/ui/PressableScale';
@@ -18,8 +18,11 @@ import { family } from '../src/theme/typography';
 
 const GUTTER = space[4];
 const WORDMARK_WIDTH = 190;
-/** Cap so tall phones don't spend the whole first screen on the scene. */
-const HERO_MAX_HEIGHT = 470;
+/** About 40% of a phone screen: room for the logo, the cast, and the moon. */
+const HERO_RATIO = 0.86;
+const HERO_MAX_HEIGHT = 380;
+/** Share of the crop taken from the top (the rest from the table below). */
+const HERO_TOP_CROP = 0.6;
 /** How far the feature row rides up over the foot of the scene. */
 const FEATURE_OVERLAP = 64;
 
@@ -83,7 +86,9 @@ export default function HomeScreen() {
     }, []),
   );
 
-  const heroHeight = Math.min(width / HERO_HOME.aspect, HERO_MAX_HEIGHT);
+  const imageHeight = width / HERO_HOME.aspect;
+  const heroHeight = Math.min(width * HERO_RATIO, HERO_MAX_HEIGHT, imageHeight);
+  const heroOffset = -(imageHeight - heroHeight) * HERO_TOP_CROP;
   let cardIndex = 1;
 
   return (
@@ -96,7 +101,7 @@ export default function HomeScreen() {
         <View style={[styles.hero, { height: heroHeight }]}>
           <Image
             source={HERO_HOME.source}
-            style={{ width, height: width / HERO_HOME.aspect }}
+            style={{ width, height: imageHeight, marginTop: heroOffset }}
             resizeMode="cover"
             accessibilityElementsHidden
           />
@@ -217,6 +222,7 @@ type FeatureRowProps = {
  */
 function FeatureRow({ game, eyebrow, icon, actionLabel, onPress }: FeatureRowProps) {
   const accent = game.accent;
+  const art = GAME_ART[game.id]?.half ?? GAME_ART[game.id]?.wide;
   return (
     <PressableScale
       accessibilityRole="button"
@@ -227,20 +233,25 @@ function FeatureRow({ game, eyebrow, icon, actionLabel, onPress }: FeatureRowPro
       style={[
         styles.feature,
         {
-          backgroundColor: mix(color.background, accent, 0.22),
+          // Warm surface with a touch of the game colour — not a grey slab.
+          backgroundColor: mix(color.surface, accent, 0.14),
           borderColor: alpha(accent, 0.35),
           borderTopColor: alpha(accent, 0.6),
         },
         glow(accent, 0.3, 20),
       ]}
     >
-      <View
-        style={[
-          styles.featureIcon,
-          { backgroundColor: alpha(accent, 0.16), borderColor: alpha(accent, 0.4) },
-        ]}
-      >
-        <Icon name={icon} size={22} color={accent} strokeWidth={2.1} />
+      <View style={[styles.featureThumb, { borderColor: alpha(accent, 0.5) }]}>
+        {art ? (
+          <Image source={art.source} style={styles.featureThumbImage} resizeMode="cover" />
+        ) : (
+          <Icon name={icon} size={22} color={accent} strokeWidth={2.1} />
+        )}
+        {art ? (
+          <View style={[styles.featureThumbBadge, { backgroundColor: accent }]}>
+            <Icon name={icon} size={11} color={color.void} strokeWidth={2.6} />
+          </View>
+        ) : null}
       </View>
       <View style={styles.featureCopy}>
         <Text style={[styles.featureEyebrow, { color: accent }]}>{eyebrow}</Text>
@@ -347,11 +358,27 @@ const styles = StyleSheet.create({
     borderRadius: radius.large,
     borderWidth: 1,
   },
-  featureIcon: {
-    width: 48,
-    height: 48,
+  featureThumb: {
+    width: 56,
+    height: 56,
     borderRadius: radius.medium,
-    borderWidth: 1,
+    borderWidth: 1.5,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: color.surfaceRaised,
+  },
+  featureThumbImage: {
+    width: '100%',
+    height: '100%',
+  },
+  featureThumbBadge: {
+    position: 'absolute',
+    right: 3,
+    bottom: 3,
+    width: 18,
+    height: 18,
+    borderRadius: radius.pill,
     alignItems: 'center',
     justifyContent: 'center',
   },

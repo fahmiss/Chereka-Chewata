@@ -54,10 +54,10 @@ function SpectrumLabels({ session }: { session: MizanSession }) {
   const { left, right } = spectrumEnds(session);
   return (
     <View style={styles.ends}>
-      <Text style={[type.titleMd, styles.endLeft]} numberOfLines={3}>
+      <Text style={[styles.end, styles.endLeft]} numberOfLines={3}>
         ← {left}
       </Text>
-      <Text style={[type.titleMd, styles.endRight]} numberOfLines={3}>
+      <Text style={[styles.end, styles.endRight]} numberOfLines={3}>
         {right} →
       </Text>
     </View>
@@ -402,14 +402,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: space[4],
   },
-  endLeft: {
-    color: color.textPrimary,
+  end: {
+    ...type.brushTitle,
+    fontSize: 22,
+    lineHeight: 28,
     flex: 1,
   },
-  endRight: {
+  endLeft: {
     color: color.textPrimary,
-    flex: 1,
+  },
+  endRight: {
+    color: ACCENT,
     textAlign: 'right',
+    paddingRight: 3,
   },
   secondary: {
     color: color.textSecondary,

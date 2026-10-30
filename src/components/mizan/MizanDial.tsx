@@ -135,7 +135,7 @@ export function MizanDial({ accent, target, needle, onChange }: Props) {
                     y={label.y + 5}
                     fill={band.points === 4 ? color.void : color.textPrimary}
                     fontSize={14}
-                    fontFamily={family.mono.bold}
+                    fontFamily={family.grotesque.bold}
                     textAnchor="middle"
                   >
                     {band.points}
@@ -155,7 +155,7 @@ export function MizanDial({ accent, target, needle, onChange }: Props) {
                 strokeWidth={4}
                 strokeLinecap="round"
               />
-              <Circle cx={needlePoint.x} cy={needlePoint.y} r={9} fill={color.brandPrimary} />
+              <Circle cx={needlePoint.x} cy={needlePoint.y} r={9} fill={accent} />
             </G>
           ) : null}
           <Circle cx={cx} cy={cy} r={12} fill={color.surfaceRaised} stroke={alpha(accent, 0.6)} />

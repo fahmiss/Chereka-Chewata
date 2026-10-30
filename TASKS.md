@@ -42,6 +42,15 @@ _Last updated: 2026-10-29._
 - [x] Espresso neutrals replace the violet-tinted darks (`tokens.ts`,
       splash, web shell, manifest). App icon tile stays navy by design.
       If it doesn't land, next option is a near-neutral warm charcoal
+- [x] Home polish: hero ~40% of screen, art thumbnail in the pick row,
+      one-line card hooks
+- [x] In-round cards restyled (Taboo, Bomb, Most Likely, Would You Rather,
+      Quiz, Gimbar, Mizan): brush hero words in the game colour via
+      `type.brushHero` / `type.brushTitle`; Most Likely strips the repeated
+      "Who is most likely to" from English prompts
+- [x] Language gate restyled (still behind `featureFlags.languageSelection`)
+- [ ] Device check: Gimbar forehead card (landscape + tilt) and Mizan dial
+      were not seen in a render
 - [ ] Players saved-group screen: device check of keyboard on the add row
 
 ### Home redesign follow-ups (2026-10-29)
