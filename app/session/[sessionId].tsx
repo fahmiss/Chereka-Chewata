@@ -17,6 +17,7 @@ import { useInsiderSession } from '../../src/domain/insider/context';
 import { useMesobSession } from '../../src/domain/mesob/context';
 import { useMizanSession } from '../../src/domain/mizan/context';
 import { useWinkKillerSession } from '../../src/domain/winkKiller/context';
+import { useEwnetSession } from '../../src/domain/ewnetWeysSaks/context';
 import type { GameId } from '../../src/domain/games';
 import { GAME_HOW_TO_PLAY } from '../../src/domain/howToPlay';
 import { useT } from '../../src/i18n';
@@ -86,6 +87,11 @@ const WinkKillerSessionView = lazy(() =>
 const InsiderSessionView = lazy(() =>
   import('../../src/components/insider/InsiderSessionView').then((module) => ({
     default: module.InsiderSessionView,
+  })),
+);
+const EwnetWeysSaksSessionView = lazy(() =>
+  import('../../src/components/ewnetWeysSaks/EwnetWeysSaksSessionView').then((module) => ({
+    default: module.EwnetWeysSaksSessionView,
   })),
 );
 
@@ -168,6 +174,7 @@ export default function SessionScreen() {
   const mizan = useMizanSession();
   const winkKiller = useWinkKillerSession();
   const insider = useInsiderSession();
+  const ewnet = useEwnetSession();
   const { t, uiFont } = useT();
   const font = uiFont ? { fontFamily: uiFont } : null;
 
@@ -270,6 +277,14 @@ export default function SessionScreen() {
       <InsiderSessionView session={insider.session} />,
     );
   }
+  if (ewnet.session && ewnet.session.sessionId === sessionId) {
+    return withSessionControls(
+      'ewnet_weys_saks',
+      ewnet.session.setup,
+      ewnet.startSession,
+      <EwnetWeysSaksSessionView session={ewnet.session} />,
+    );
+  }
 
   return (
     <Screen accent={color.brandPrimary} style={styles.fallback}>
@@ -294,6 +309,7 @@ export default function SessionScreen() {
           mizan.clearSession();
           winkKiller.clearSession();
           insider.clearSession();
+          ewnet.clearSession();
           router.replace('/home');
         }}
       />

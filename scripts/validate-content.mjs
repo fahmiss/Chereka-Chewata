@@ -8,6 +8,7 @@ const decks = [
   ['Would You Rather', 'content/would_you_rather/dilemmas.en.json', 'content/categories/would_you_rather.json', ['option_a_en', 'option_b_en']],
   ["Who's Got the Bomb", 'content/bomb/cards.json', 'content/categories/bomb.json', ['prompt_en']],
   ['Gimbar (own cards)', 'content/gimbar/cards.en.json', 'content/categories/gimbar.json', ['text_en']],
+  ['Ewnet weys Saks', 'content/ewnet_weys_saks/questions.en.json', 'content/categories/ewnet_weys_saks.json', ['question_en', 'answer_en', 'explanation_en', 'source_name', 'source_url']],
 ];
 
 let failed = false;

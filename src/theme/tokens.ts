@@ -32,6 +32,7 @@ export const color = {
   gameMizan: '#2EC4C4',
   gameWinkKiller: '#B8E05A',
   gameInsider: '#9DB4FF',
+  gameEwnetWeysSaks: '#FF6F61',
 } as const;
 
 export const font = {
@@ -146,7 +147,8 @@ export type GameAccentKey =
   | 'mesob'
   | 'mizan'
   | 'wink_killer'
-  | 'insider';
+  | 'insider'
+  | 'ewnet_weys_saks';
 
 export const gameAccent: Record<GameAccentKey, string> = {
   impostor: color.gameImpostor,
@@ -161,4 +163,5 @@ export const gameAccent: Record<GameAccentKey, string> = {
   mizan: color.gameMizan,
   wink_killer: color.gameWinkKiller,
   insider: color.gameInsider,
+  ewnet_weys_saks: color.gameEwnetWeysSaks,
 };

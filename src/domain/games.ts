@@ -151,6 +151,17 @@ export const GAMES: GameCatalogEntry[] = [
     icon: 'search',
     playable: true,
   },
+  {
+    id: 'ewnet_weys_saks',
+    name: 'Ewnet weys Saks',
+    tagline: 'Invent believable answers, find the truth, and score when your friends fall for your bluff.',
+    hook: 'Sell the lie. Find the truth.',
+    playerCountLabel: '3–8 players',
+    sessionLengthLabel: '~15 min',
+    accent: gameAccent.ewnet_weys_saks,
+    icon: 'pencil',
+    playable: true,
+  },
 ];
 
 export function getGame(id: string): GameCatalogEntry | undefined {

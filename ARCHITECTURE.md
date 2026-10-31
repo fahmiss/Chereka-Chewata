@@ -197,6 +197,30 @@ stateDiagram-v2
 
 ---
 
+## Ewnet weys Saks lifecycle
+
+Ewnet weys Saks is a private pass-the-phone bluffing game. The sourced fact,
+player-written bluffs, answer authorship, votes, and scores remain in the
+in-memory session provider and never enter route parameters or persistent
+storage.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Question
+    Question --> BluffHandoff
+    BluffHandoff --> BluffEntry
+    BluffEntry --> BluffHandoff : next player
+    BluffEntry --> VoteHandoff : all bluffs submitted
+    VoteHandoff --> VoteSelect
+    VoteSelect --> VoteHandoff : next player
+    VoteSelect --> Reveal : all votes submitted
+    Reveal --> Question : next round
+    Reveal --> Final : last round
+```
+
+Players cannot vote for their own bluff. Finding the truth earns two points;
+each player fooled by a bluff earns its author one point.
+
 ## Content model
 
 Bundled JSON under `content/` for the offline MVP. Shape follows the product spec §8.

@@ -4,11 +4,19 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-29._
+_Last updated: 2026-10-31._
 
 ---
 
 ## Open
+
+### Ewnet weys Saks vertical slice (2026-10-31)
+
+- [x] Original sourced fact deck with 30 offline questions across seven categories
+- [x] 3–8 player setup with 5 / 7 / 10 round choices
+- [x] Private bluff entry, duplicate/truth protection, private voting, scoring and final leaderboard
+- [x] Original cast illustration matching the current Chereka art direction
+- [ ] Expand to 100+ reviewed questions and add Amharic content after native-language review
 
 ### Game screens redesign (2026-10-29)
 - [x] Type: Bricolage now carries the display/body roles app-wide

@@ -1,0 +1,9 @@
+[
+  { "id": "ethiopia_and_culture", "name_en": "Ethiopia & Culture", "sort_order": 10, "active": true },
+  { "id": "animals_and_nature", "name_en": "Animals & Nature", "sort_order": 20, "active": true },
+  { "id": "science_technology", "name_en": "Science & Technology", "sort_order": 30, "active": true },
+  { "id": "geography_places", "name_en": "Geography & Places", "sort_order": 40, "active": true },
+  { "id": "history", "name_en": "Strange History", "sort_order": 50, "active": true },
+  { "id": "food_and_drink", "name_en": "Food & Drink", "sort_order": 60, "active": true },
+  { "id": "words_and_language", "name_en": "Words & Language", "sort_order": 70, "active": true }
+]

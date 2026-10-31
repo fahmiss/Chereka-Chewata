@@ -2791,3 +2791,32 @@ Key references consulted:
 - https://www.whostheliar.com/
 - https://pickmeupgame.com/blogs/pick-me-up-blog/how-to-play-who-s-most-likely-to-game-rules-and-party-setup
 - https://wouldyourather.app/how-to-play-would-you-rather/
+
+# 22. Game Thirteen: Ewnet weys Saks
+
+## 22.1 Concept
+
+Every player privately writes a believable false answer to an unusual factual
+question. The app mixes those bluffs with the verified true answer, then passes
+the phone for private voting. The reveal credits every bluff author and explains
+the fact.
+
+## 22.2 Players and setup
+
+- 3–8 named players
+- 5, 7, or 10 rounds
+- Multi-select factual categories
+- Bundled English questions; offline play
+
+## 22.3 Round flow and scoring
+
+1. Show the shared question without its answer.
+2. Pass the phone so every player enters one private bluff.
+3. Reject blank, duplicate, or exact-real-answer submissions.
+4. Mix the truth with all bluffs and pass the phone for private voting.
+5. A player cannot vote for their own bluff.
+6. Award +2 for choosing the truth and +1 to a bluff author per player fooled.
+7. Reveal the truth, explanation, bluff authors, and points before the next round.
+
+All questions require provenance metadata. Facts, submissions, answer authorship,
+votes, and scores remain in in-memory session state and never route parameters.

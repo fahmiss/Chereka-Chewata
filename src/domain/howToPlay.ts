@@ -68,6 +68,11 @@ export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
     'Phase 1: ask yes/no questions and find the word before time runs out.',
     'Phase 2: one of you already knew it — vote to catch the Insider.',
   ],
+  ewnet_weys_saks: [
+    'Everyone privately writes a believable fake answer to the same question.',
+    'The real answer is mixed with the bluffs. Pass the phone and vote privately.',
+    'Earn 2 points for finding the truth and 1 point each time someone picks your bluff.',
+  ],
 };
 
 export function getHowToPlay(gameId: string): string[] | null {

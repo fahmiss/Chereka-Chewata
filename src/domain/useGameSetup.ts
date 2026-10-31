@@ -22,6 +22,9 @@ import { MIZAN_MAX_PLAYERS, MIZAN_MIN_PLAYERS } from './mizan/types';
 import type { ContentLanguage, ContentLevel } from './shared/types';
 import { useWinkKillerSetup } from './winkKiller/context';
 import { WINK_MAX_PLAYERS, WINK_MIN_PLAYERS } from './winkKiller/types';
+import { useEwnetSetup } from './ewnetWeysSaks/context';
+import { EWNET_MAX_PLAYERS, EWNET_MIN_PLAYERS } from './ewnetWeysSaks/types';
+import { countEwnetQuestions, getEwnetCategories } from '../content/ewnetWeysSaks';
 
 type CardCountQuery = {
   categoryIds: string[];
@@ -73,6 +76,12 @@ export const GAME_SETUP_SPECS: Record<string, GameSetupSpec> = {
     getCategories: getImpostorCategories,
     countCards: countInsiderWords,
   },
+  ewnet_weys_saks: {
+    minPlayers: EWNET_MIN_PLAYERS,
+    maxPlayers: EWNET_MAX_PLAYERS,
+    getCategories: getEwnetCategories,
+    countCards: countEwnetQuestions,
+  },
 };
 
 /**
@@ -92,6 +101,7 @@ export function useGameSetup(gameId: string | undefined) {
   const mizan = useMizanSetup();
   const winkKiller = useWinkKillerSetup();
   const insider = useInsiderSetup();
+  const ewnet = useEwnetSetup();
   const game = getGame(String(gameId ?? ''));
   const spec = GAME_SETUP_SPECS[String(gameId ?? '')] ?? null;
   const extra =
@@ -105,6 +115,8 @@ export function useGameSetup(gameId: string | undefined) {
             ? winkKiller
             : gameId === 'insider'
               ? insider
+              : gameId === 'ewnet_weys_saks'
+                ? ewnet
               : null;
 
   const isLiar = gameId === 'whos_the_liar';

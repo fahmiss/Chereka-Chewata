@@ -64,6 +64,8 @@ import {
   WINK_DETECTIVE_MIN_PLAYERS,
   WINK_TWO_KILLERS_MIN_PLAYERS,
 } from '../../../../src/domain/winkKiller/types';
+import { countEwnetQuestions, getEwnetCategories } from '../../../../src/content/ewnetWeysSaks';
+import { useEwnetSession, useEwnetSetup } from '../../../../src/domain/ewnetWeysSaks/context';
 
 type Player = { id: string; displayName: string };
 
@@ -82,6 +84,7 @@ export default function ReviewScreen() {
   if (id === 'mizan') return <MizanQuickSetup gameId={id} />;
   if (id === 'wink_killer') return <WinkKillerQuickSetup gameId={id} />;
   if (id === 'insider') return <InsiderQuickSetup gameId={id} />;
+  if (id === 'ewnet_weys_saks') return <EwnetQuickSetup gameId={id} />;
   return <ImpostorQuickSetup gameId={id} />;
 }
 
@@ -106,6 +109,7 @@ function useStartGame() {
   const mizan = useMizanSession();
   const winkKiller = useWinkKillerSession();
   const insider = useInsiderSession();
+  const ewnet = useEwnetSession();
 
   return (
     keep:
@@ -120,7 +124,8 @@ function useStartGame() {
       | 'mesob'
       | 'mizan'
       | 'winkKiller'
-      | 'insider',
+      | 'insider'
+      | 'ewnet',
   ) => {
     if (keep !== 'impostor') impostor.clearSession();
     if (keep !== 'liar') liar.clearSession();
@@ -134,7 +139,79 @@ function useStartGame() {
     if (keep !== 'mizan') mizan.clearSession();
     if (keep !== 'winkKiller') winkKiller.clearSession();
     if (keep !== 'insider') insider.clearSession();
+    if (keep !== 'ewnet') ewnet.clearSession();
   };
+}
+
+/* ------------------------------------------------------------------ *
+ * Ewnet weys Saks
+ * ------------------------------------------------------------------ */
+
+function EwnetQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameEwnetWeysSaks;
+  const { setup, validation, persistPlayers, patchOptions } = useEwnetSetup();
+  const { startSession, clearError } = useEwnetSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+  const totalCategories = getEwnetCategories().length;
+  const cardCount = countEwnetQuestions({
+    categoryIds: setup.categoryIds,
+    contentLevels: setup.contentLevels,
+    contentLanguage: settings.contentLanguage,
+  });
+  const canStart = validation.playersOk && validation.categoriesOk && cardCount > 0;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('ewnet');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) {
+      setStartError(result.error);
+      return;
+    }
+    void saveLastPlayedGame('ewnet_weys_saks');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Ewnet weys Saks"
+      subtitle="Write convincing lies, vote for the truth, and earn points when friends believe you."
+      canStart={canStart}
+      footerNote={startNote(canStart, cardCount)}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => { void onStart(); }}
+      links={[
+        playersLink(gameId, setup.players),
+        categoriesLink(gameId, setup.categoryIds.length, totalCategories, cardCount, 'questions'),
+      ]}
+      controls={
+        <QuickControls>
+          <QuickControlBlock
+            icon="layers"
+            title="Rounds"
+            hint="Every round includes one bluff and one vote from every player."
+            accent={accent}
+          >
+            <Segmented<5 | 7 | 10>
+              accent={accent}
+              value={setup.roundCount}
+              onChange={(roundCount) => patchOptions({ roundCount })}
+              options={[
+                { value: 5, label: '5' },
+                { value: 7, label: '7' },
+                { value: 10, label: '10' },
+              ]}
+            />
+          </QuickControlBlock>
+        </QuickControls>
+      }
+    />
+  );
 }
 
 /* ------------------------------------------------------------------ *
