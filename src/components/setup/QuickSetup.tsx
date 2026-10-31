@@ -1,5 +1,8 @@
 import { router, type Href } from 'expo-router';
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { GameExample, type ExampleGame } from './GameExample';
+import { SecondaryButton } from '../ui/SecondaryButton';
 import { StyleSheet, Text, View } from 'react-native';
 import { alpha, color, radius, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
@@ -33,6 +36,7 @@ type Props = {
   onStart: () => void;
   startError: string | null;
   onClearError: () => void;
+  example?: ExampleGame;
 };
 
 /**
@@ -54,7 +58,20 @@ export function QuickSetup({
   onStart,
   startError,
   onClearError,
+  example,
 }: Props) {
+  const [seenExample, setSeenExample] = useState(false);
+  const [exampleOpen, setExampleOpen] = useState(false);
+  const [startAfterExample, setStartAfterExample] = useState(false);
+  useEffect(() => {
+    let active = true;
+    if (example) void AsyncStorage.getItem(`chereka.example.${example}.v1`).then((value) => { if (active) setSeenExample(value === 'seen'); }).catch(() => undefined);
+    return () => { active = false; };
+  }, [example]);
+  const start = () => {
+    if (example && !seenExample) { setStartAfterExample(true); setExampleOpen(true); }
+    else onStart();
+  };
   return (
     <SetupScreen
       stepLabel="Quick setup"
@@ -65,7 +82,7 @@ export function QuickSetup({
       primaryLabel="Start game"
       primaryDisabled={!canStart}
       footerNote={footerNote}
-      onPrimary={onStart}
+      onPrimary={start}
     >
       <Surface contentStyle={styles.links}>
         {links.map((link, index) => (
@@ -77,6 +94,13 @@ export function QuickSetup({
       </Surface>
 
       {controls}
+      {example ? <SecondaryButton label="See a practice example" icon="book" onPress={() => { setStartAfterExample(false); setExampleOpen(true); }} /> : null}
+      {example && exampleOpen ? <GameExample game={example} accent={accent} startAfter={startAfterExample} onDismiss={() => setExampleOpen(false)} onComplete={() => {
+        setExampleOpen(false);
+        setSeenExample(true);
+        void AsyncStorage.setItem(`chereka.example.${example}.v1`, 'seen').catch(() => undefined);
+        if (startAfterExample) onStart();
+      }} /> : null}
 
       {more ? (
         <Surface contentStyle={styles.links}>

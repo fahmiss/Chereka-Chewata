@@ -2804,7 +2804,7 @@ the fact.
 ## 22.2 Players and setup
 
 - 3–8 named players
-- 5, 7, or 10 rounds
+- 3 (Quick), 5, 7, or 10 rounds, capped to the number of unique matching facts
 - Multi-select factual categories
 - Bundled English questions; offline play
 
@@ -2812,10 +2812,12 @@ the fact.
 
 1. Show the shared question without its answer.
 2. Pass the phone so every player enters one private bluff.
-3. Reject blank, duplicate, or exact-real-answer submissions.
+3. Reject blank or duplicate bluff submissions. A submission matching the truth
+   is merged into the real answer, without confirming correctness during entry.
 4. Mix the truth with all bluffs and pass the phone for private voting.
 5. A player cannot vote for their own bluff.
-6. Award +2 for choosing the truth and +1 to a bluff author per player fooled.
+6. Award +2 for submitting or choosing the truth, at most once per player per
+   round, and +1 to a bluff author per player fooled.
 7. Reveal the truth, explanation, bluff authors, and points before the next round.
 
 All questions require provenance metadata. Facts, submissions, answer authorship,
@@ -2841,11 +2843,26 @@ group yes/no questions to discover who or what they are.
 1. Every player privately memorizes all other identities.
 2. The active player asks one yes/no question.
 3. Yes keeps the turn; No passes to the next active player.
-4. A player may buzz, say one guess aloud, then reveal their identity.
+4. A player may buzz and say one guess aloud. The group, which already knows
+   the identity, judges Correct or Wrong without displaying the answer.
 5. A correct guess places them in the finish order. A wrong guess consumes one
-   chance and passes the turn; after two misses, their identity is revealed and
-   they are out.
+   chance and passes the turn while the identity stays hidden; after a correct
+   guess or two misses, their identity is revealed. After two misses they
+   are out.
 6. Continue until every player has solved their identity or is out.
 
 Assignments, reveal progress, remaining chances, and results stay in in-memory
 session state and never route parameters.
+
+## 23.4 Usability and shared session behavior (2026-10-31)
+
+- Private identity review requires a fresh handoff and hold-to-reveal. It never
+  shows the viewer's assignment or consumes a question or chance.
+- Competitive Quiz uses 3, 5 or 10 rounds per player. Every seat receives the
+  same difficulty within each round, and the opening seat rotates on rematch.
+- The shared menu explicitly says **Restart entire game** and confirms that
+  scores and round progress will reset. It does not promise a round-only reset.
+- Mizan, Mesob and Insider offer skippable practice examples before first play,
+  with replay available in Quick Setup.
+- Private bluff entry, voting and Mesob slip entry are concealed on background.
+  Returning players must confirm their name before resuming; drafts stay in memory.

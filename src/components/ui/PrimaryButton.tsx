@@ -57,7 +57,7 @@ export function PrimaryButton({
       <View style={[styles.sheen, { backgroundColor: alpha('#FFFFFF', 0.45) }]} />
       <View style={styles.row}>
         {icon ? <Icon name={icon} size={19} color={palette.ink} strokeWidth={2.4} /> : null}
-        <Text style={[type.button, { color: palette.ink }]} numberOfLines={1}>
+        <Text style={[type.button, { color: palette.ink, flexShrink: 1, textAlign: 'center' }]}>
           {label}
         </Text>
       </View>
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,
+    paddingVertical: 12,
   },
   sheen: {
     position: 'absolute',

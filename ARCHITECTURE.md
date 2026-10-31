@@ -238,13 +238,18 @@ stateDiagram-v2
     Ask --> Ask : Yes
     Ask --> Ask : No / next player
     Ask --> Guess : player buzzes
-    Guess --> Ask : wrong, chances remain
-    Guess --> Ask : correct / next player
-    Guess --> Final : no active players remain
+    Guess --> GuessResult : group verdict, answer stays hidden
+    GuessResult --> Ask : first miss / next player
+    GuessResult --> Ask : solved or out / next player
+    GuessResult --> Final : no active players remain
 ```
 
 The reveal deliberately excludes the viewer's own assignment. Every identity
 ships with a compact fact sheet so the other players can answer consistently.
+The first wrong verdict never renders the assignment. `guess_result` records
+the verdict in the machine and reveals the identity only for solved/out players.
+`PrivateScreenGuard` conceals private input and voting on background while
+preserving local drafts and selections. Returning requires named-owner confirmation.
 
 ## Content model
 

@@ -1,4 +1,4 @@
-import { pickQuizQuestions } from '../../content/quiz';
+import { pickCompetitiveQuizQuestions, pickQuizQuestions } from '../../content/quiz';
 import { recordPlayed } from '../../storage/contentHistory';
 import {
   createId,
@@ -52,7 +52,7 @@ export function selectedQuizAnswer(session: QuizSession): QuizAnswer | null {
 
 export function createQuizSession(
   setup: QuizSetup,
-  options: { contentLanguage?: ContentLanguage; sessionId?: string } = {},
+  options: { contentLanguage?: ContentLanguage; sessionId?: string; openingPlayerIndex?: number } = {},
 ): QuizSession | { error: string } {
   if (!setup.categoryIds.length) return { error: 'Pick at least one category.' };
   if (
@@ -69,7 +69,10 @@ export function createQuizSession(
   }
 
   const contentLanguage = options.contentLanguage ?? 'en';
-  const questions = pickQuizQuestions({
+  const questions = setup.playMode === 'compete' ? pickCompetitiveQuizQuestions({
+    categoryIds: setup.categoryIds, difficulty: setup.difficulty, contentLanguage,
+    players: setup.players.length, rounds: setup.roundsPerPlayer ?? 5,
+  }) : pickQuizQuestions({
     categoryIds: setup.categoryIds,
     difficulty: setup.difficulty,
     contentLanguage,
@@ -84,7 +87,8 @@ export function createQuizSession(
     phase: 'ready',
     questions,
     questionIndex: 0,
-    currentPlayerIndex: 0,
+    currentPlayerIndex: options.openingPlayerIndex ?? 0,
+    openingPlayerIndex: options.openingPlayerIndex ?? 0,
     currentAnswers: shuffledAnswers(questions[0]!),
     selectedAnswerId: null,
     scores: Object.fromEntries(setup.players.map((player) => [player.id, 0])),
@@ -156,5 +160,6 @@ export function rematchQuiz(session: QuizSession): QuizSession | { error: string
   return createQuizSession(session.setup, {
     contentLanguage: session.contentLanguage,
     sessionId: session.sessionId,
+    openingPlayerIndex: session.setup.playMode === 'compete' ? (session.openingPlayerIndex + 1) % session.setup.players.length : 0,
   });
 }

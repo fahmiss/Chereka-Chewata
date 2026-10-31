@@ -47,6 +47,7 @@ import { ResultHero } from '../session/ResultHero';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { TeamScoreStrip } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
+import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { useCountdown, useSessionKeepAwake } from '../session/useCountdown';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
@@ -489,7 +490,7 @@ export function MesobSessionView({ session }: { session: MesobSession }) {
     case 'entry_handoff':
       return <EntryHandoff session={session} />;
     case 'entry':
-      return <EntryPhase key={session.entryIndex} session={session} />;
+      return <PrivateScreenGuard key={session.entryIndex} name={getMesobPlayerName(session, currentWriterId(session) ?? '')} accent={ACCENT}><EntryPhase session={session} /></PrivateScreenGuard>;
     case 'round_intro':
       return <RoundIntroPhase session={session} />;
     case 'turn_ready':

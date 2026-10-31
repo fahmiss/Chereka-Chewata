@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import {
   Animated,
   Pressable,
+  StyleSheet,
   type PressableProps,
   type StyleProp,
   type ViewStyle,
@@ -27,6 +28,7 @@ export function PressableScale({
   scaleTo = 0.97,
   haptic = 'light',
   onPressIn,
+  onPressOut,
   onPress,
   disabled,
   children,
@@ -34,6 +36,16 @@ export function PressableScale({
 }: Props) {
   const scale = useRef(new Animated.Value(1)).current;
   const reduced = useReducedMotion();
+  const flat = StyleSheet.flatten(style) ?? {};
+  const outer: ViewStyle = {};
+  const inner = { ...flat };
+  const layoutKeys = ['flex', 'flexGrow', 'flexShrink', 'flexBasis', 'alignSelf', 'width', 'minWidth', 'maxWidth', 'height', 'minHeight', 'maxHeight', 'margin', 'marginHorizontal', 'marginVertical', 'marginTop', 'marginBottom', 'marginLeft', 'marginRight', 'marginStart', 'marginEnd', 'position', 'top', 'bottom', 'left', 'right', 'zIndex', 'aspectRatio'] as const;
+  for (const key of layoutKeys) {
+    if (flat[key] !== undefined) {
+      Object.assign(outer, { [key]: flat[key] });
+      delete inner[key];
+    }
+  }
 
   const spring = (toValue: number) =>
     Animated.spring(scale, {
@@ -46,14 +58,16 @@ export function PressableScale({
 
   return (
     <Pressable
+      style={outer}
       disabled={disabled}
       onPressIn={(event) => {
         if (!reduced) spring(scaleTo);
         onPressIn?.(event);
       }}
-      onPressOut={() => {
+      onPressOut={(event) => {
         if (!reduced) spring(1);
         else scale.setValue(1);
+        onPressOut?.(event);
       }}
       onPress={(event) => {
         if (haptic !== 'none') hapticImpact(haptic);
@@ -61,7 +75,7 @@ export function PressableScale({
       }}
       {...rest}
     >
-      <Animated.View style={[style, { transform: [{ scale }] }]}>{children}</Animated.View>
+      <Animated.View style={[{ flexGrow: 1 }, inner, { transform: [{ scale }] }]}>{children}</Animated.View>
     </Pressable>
   );
 }

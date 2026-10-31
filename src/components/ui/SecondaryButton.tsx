@@ -37,7 +37,6 @@ export function SecondaryButton({
         {icon ? <Icon name={icon} size={18} color={color.textPrimary} /> : null}
         <Text
           style={[type.button, styles.label, quiet && styles.quietLabel]}
-          numberOfLines={1}
         >
           {label}
         </Text>
@@ -57,6 +56,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,
+    paddingVertical: 12,
   },
   quiet: {
     backgroundColor: 'transparent',
@@ -78,6 +78,8 @@ const styles = StyleSheet.create({
   },
   label: {
     color: color.textPrimary,
+    flexShrink: 1,
+    textAlign: 'center',
   },
   quietLabel: {
     color: color.textSecondary,

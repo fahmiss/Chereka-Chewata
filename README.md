@@ -92,8 +92,8 @@ build remains English-only.
 | Mizan | 77 spectrum cards |
 | Wink Killer | No cards — roles only |
 | Insider | Impostor word deck |
-| Ewnet weys Saks | 30 sourced fact questions |
-| Man Negn? | 40 identities across Ethiopian icons, people, characters, animals, things, and places |
+| Ewnet weys Saks | 80 sourced fact questions; unique within a match |
+| Man Negn? | 80 identities across Ethiopian icons, people, characters, animals, things, and places |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.
@@ -163,6 +163,7 @@ can use a local development build; Expo Go may also work for supported flows.
 ```bash
 npm run typecheck
 npm run validate:content
+npm run test:party-rules
 npx expo export -p web
 ```
 

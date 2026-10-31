@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useRef } from 'react';
-import { Animated, AppState, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Animated, AppState, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { localizeText } from '../../content/localize';
 import { currentBombCard, getBombPlayerName } from '../../domain/bomb/machine';
 import { useBombSession } from '../../domain/bomb/SessionContext';
@@ -12,7 +12,6 @@ import { useLoopingSound, useSoundEffect } from '../../theme/useSoundEffect';
 import { easeInOut, easeOut, useEnterAnimation, useReducedMotion } from '../../theme/motion';
 import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
-import Svg, { Circle, Defs, Path, RadialGradient, Stop } from 'react-native-svg';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
@@ -37,7 +36,9 @@ function localizedPrompt(session: BombSession): string {
   return localizeText(session.contentLanguage, { en: card.prompt_en, am: card.prompt_am });
 }
 
-function useFuseAnimation() {
+const TOO_HOT_ART = require('../../../assets/illustrations/tikus-dinich-too-hot.jpg');
+
+function useHeatAnimation() {
   const reducedMotion = useReducedMotion();
   const pulse = useRef(new Animated.Value(0)).current;
   const tremble = useRef(new Animated.Value(0)).current;
@@ -99,38 +100,7 @@ function useFuseAnimation() {
   };
 }
 
-/** Twelve spark rays, alternating long and short, around the centre. */
-const RAYS = Array.from({ length: 12 }, (_, i) => {
-  const a = (i / 12) * Math.PI * 2;
-  const inner = 0.24;
-  const outer = i % 2 ? 0.42 : 0.49;
-  const spread = 0.09;
-  const pt = (r: number, d: number) =>
-    `${(0.5 + Math.cos(a + d) * r).toFixed(3)} ${(0.5 + Math.sin(a + d) * r).toFixed(3)}`;
-  return `M${pt(inner, -spread)} L${pt(outer, 0)} L${pt(inner, spread)} Z`;
-});
-
-/** The blast drawn in Bomb's colours — no art, so it can't go stale. */
-function Blast() {
-  return (
-    <Svg width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid slice">
-      <Defs>
-        <RadialGradient id="blastCore" cx="0.5" cy="0.5" r="0.5">
-          <Stop offset="0" stopColor="#FFF2D6" stopOpacity={1} />
-          <Stop offset="0.28" stopColor={color.brandPrimary} stopOpacity={1} />
-          <Stop offset="0.6" stopColor={ACCENT} stopOpacity={0.85} />
-          <Stop offset="1" stopColor={color.void} stopOpacity={0} />
-        </RadialGradient>
-      </Defs>
-      {RAYS.map((d, i) => (
-        <Path key={i} d={d} fill={i % 2 ? color.brandPrimary : ACCENT} opacity={0.9} />
-      ))}
-      <Circle cx={0.5} cy={0.5} r={0.36} fill="url(#blastCore)" />
-    </Svg>
-  );
-}
-
-function useExplosionAnimation() {
+function useTooHotAnimation() {
   const reducedMotion = useReducedMotion();
   const impact = useRef(new Animated.Value(0)).current;
   const flash = useRef(new Animated.Value(0.72)).current;
@@ -161,16 +131,16 @@ function useExplosionAnimation() {
   }, [flash, impact, reducedMotion]);
 
   return {
-    blast: {
+    scene: {
       opacity: impact,
       transform: [
-        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [0.4, 1] }) },
+        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [0.94, 1] }) },
       ],
     },
     word: {
       opacity: impact,
       transform: [
-        { scale: impact.interpolate({ inputRange: [0, 0.7, 1], outputRange: [2.2, 0.92, 1] }) },
+        { scale: impact.interpolate({ inputRange: [0, 0.7, 1], outputRange: [1.25, 0.96, 1] }) },
         { rotate: '-6deg' },
       ],
     },
@@ -198,14 +168,14 @@ function ReadyPhase({ session }: { session: BombSession }) {
     <SessionShell
       eyebrow={`Round ${session.roundNumber}`}
       title={`${starter} starts`}
-      subtitle="Read the category, then start the hidden fuse."
+      subtitle="Read the category, then heat the potato. The ending time stays hidden."
       stage="ready"
       stages={STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
-          <PrimaryButton label="Light the fuse" icon="flame" onPress={dispatch.startBomb} />
+          <PrimaryButton label="Heat the potato" icon="flame" onPress={dispatch.startBomb} />
           <SecondaryButton label="Skip category" onPress={dispatch.skipCard} />
           {card ? <ReportCardButton game="bomb" cardId={card.id} onReported={dispatch.skipCard} /> : null}
         </>
@@ -214,7 +184,7 @@ function ReadyPhase({ session }: { session: BombSession }) {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.readyBody}>
         <Animated.View style={enter}>
           <Surface accent={ACCENT} active contentStyle={styles.categoryCard}>
-            <GlyphDisk icon="bomb" accent={ACCENT} size={86} />
+            <GlyphDisk icon="potato" accent={ACCENT} size={86} />
             <Text style={[type.eyebrow, { color: ACCENT }]}>Category</Text>
             <Text
               style={[
@@ -237,7 +207,7 @@ function PlayingPhase({ session }: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
   const starter = getBombPlayerName(session, session.startingPlayerId);
   const enter = useEnterAnimation(1, 12);
-  const fuseAnimation = useFuseAnimation();
+  const heatAnimation = useHeatAnimation();
 
   useEffect(() => {
     if (!session.fuseEndsAt) return;
@@ -274,14 +244,14 @@ function PlayingPhase({ session }: { session: BombSession }) {
       onEndGame={() => endGame(clearSession)}
     >
       <Animated.View style={[styles.playingBody, enter]}>
-        <View style={styles.fuseHero}>
-          <Animated.View style={[styles.fuseRing, fuseAnimation.ring]} />
-          <Animated.View style={fuseAnimation.bomb}>
-            <GlyphDisk icon="bomb" accent={ACCENT} size={160} />
+        <View style={styles.heatHero}>
+          <Animated.View style={[styles.heatRing, heatAnimation.ring]} />
+          <Animated.View style={heatAnimation.bomb}>
+            <GlyphDisk icon="potato" accent={ACCENT} size={160} />
           </Animated.View>
           <View style={styles.liveBadge}>
-            <Animated.View style={[styles.liveDot, { opacity: fuseAnimation.ring.opacity }]} />
-            <Text style={[type.mono, styles.liveBadgeText]}>FUSE LIT</Text>
+            <Animated.View style={[styles.liveDot, { opacity: heatAnimation.ring.opacity }]} />
+            <Text style={[type.mono, styles.liveBadgeText]}>POTATO HOT</Text>
           </View>
         </View>
 
@@ -313,7 +283,7 @@ function PlayingPhase({ session }: { session: BombSession }) {
 function ExplodedPhase(_: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
   const copyEnter = useEnterAnimation(2, 8);
-  const explosionAnimation = useExplosionAnimation();
+  const tooHotAnimation = useTooHotAnimation();
 
   useEffect(() => {
     hapticHeavy();
@@ -337,26 +307,27 @@ function ExplodedPhase(_: { session: BombSession }) {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.explodedScroll}>
         <View style={styles.explodedBody}>
           <Animated.View
-            style={[styles.explosionShadow, glow(ACCENT, 0.45, 34), explosionAnimation.shake]}
+            style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.shake]}
           >
-            <View style={styles.explosionClip}>
-              <Animated.View style={[StyleSheet.absoluteFill, explosionAnimation.blast]}>
-                <Blast />
+            <View style={styles.tooHotClip}>
+              <Animated.View style={[StyleSheet.absoluteFill, tooHotAnimation.scene]}>
+                <Image source={TOO_HOT_ART} resizeMode="cover" style={StyleSheet.absoluteFill} />
               </Animated.View>
               <Animated.View
                 pointerEvents="none"
-                style={[styles.explosionFlash, explosionAnimation.flash]}
+                style={[styles.tooHotFlash, tooHotAnimation.flash]}
               />
-              <Animated.View style={[styles.boomOverlay, explosionAnimation.word]}>
-                <Text style={styles.boomText} accessibilityRole="header">
-                  BOOM!
+              <Animated.View style={[styles.tooHotOverlay, tooHotAnimation.word]}>
+                <Text style={styles.tooHotText} accessibilityRole="header">
+                  TOO HOT!
                 </Text>
+                <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
               </Animated.View>
             </View>
           </Animated.View>
 
           <Animated.View style={[styles.explosionCopy, copyEnter]}>
-            <Text style={[type.displayMd, styles.explosionTitle]}>Who had the phone?</Text>
+            <Text style={[type.displayMd, styles.explosionTitle]}>Who was holding the phone?</Text>
             <Text style={[type.body, styles.passHint]}>That player loses this round.</Text>
           </Animated.View>
         </View>
@@ -401,8 +372,8 @@ const styles = StyleSheet.create({
   categoryCard: { minHeight: 250, padding: space[6], alignItems: 'center', justifyContent: 'center', gap: space[3] },
   category: { ...type.brushHero, fontSize: 36, lineHeight: 44, color: ACCENT, textAlign: 'center', paddingHorizontal: 4 },
   playingBody: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: space[4] },
-  fuseHero: { width: 190, height: 184, alignItems: 'center', justifyContent: 'center' },
-  fuseRing: { position: 'absolute', width: 156, height: 156, borderRadius: radius.pill, backgroundColor: alpha(color.dangerUrgency, 0.22), borderWidth: 1, borderColor: alpha(color.dangerUrgency, 0.6) },
+  heatHero: { width: 190, height: 184, alignItems: 'center', justifyContent: 'center' },
+  heatRing: { position: 'absolute', width: 156, height: 156, borderRadius: radius.pill, backgroundColor: alpha(ACCENT, 0.2), borderWidth: 1, borderColor: alpha(ACCENT, 0.55) },
   liveBadge: { position: 'absolute', bottom: 0, flexDirection: 'row', alignItems: 'center', gap: 7, paddingHorizontal: 12, paddingVertical: 7, borderRadius: radius.pill, backgroundColor: color.surfaceRaised, borderWidth: 1, borderColor: alpha(color.dangerUrgency, 0.45) },
   liveDot: { width: 9, height: 9, borderRadius: radius.pill, backgroundColor: color.dangerUrgency },
   liveBadgeText: { color: color.dangerUrgency, fontSize: 11, letterSpacing: 1.2 },
@@ -416,11 +387,12 @@ const styles = StyleSheet.create({
   passHint: { color: color.textSecondary, textAlign: 'center' },
   explodedScroll: { flexGrow: 1, justifyContent: 'center', paddingBottom: space[4] },
   explodedBody: { alignItems: 'center', justifyContent: 'center', gap: space[5] },
-  explosionShadow: { width: '100%', aspectRatio: 1, borderRadius: radius.extraLarge },
-  explosionClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(ACCENT, 0.58), backgroundColor: color.void },
-  explosionFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
-  boomOverlay: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
-  boomText: { ...type.brushHero, fontSize: 84, lineHeight: 96, color: color.textPrimary, paddingHorizontal: 8, textShadowColor: alpha(color.void, 0.9), textShadowOffset: { width: 0, height: 4 }, textShadowRadius: 14 },
+  tooHotShadow: { width: '100%', aspectRatio: 1672 / 941, borderRadius: radius.extraLarge },
+  tooHotClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(ACCENT, 0.58), backgroundColor: color.void },
+  tooHotFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
+  tooHotOverlay: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: space[3], backgroundColor: alpha(color.void, 0.12) },
+  tooHotText: { ...type.brushHero, fontSize: 52, lineHeight: 58, color: color.textPrimary, paddingHorizontal: 8, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 4 }, textShadowRadius: 14 },
+  tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, marginTop: -4, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 2 }, textShadowRadius: 8 },
   explosionCopy: { alignItems: 'center', gap: space[2] },
   explosionTitle: { color: color.textPrimary, textAlign: 'center' },
 });

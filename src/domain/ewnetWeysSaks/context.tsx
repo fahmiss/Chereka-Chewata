@@ -11,7 +11,7 @@ export function defaultEwnetSetup(): EwnetSetup {
     categoryIds: getEwnetCategories().map((category) => category.id),
     contentLevels: ['family', 'friends'],
     spicyAcknowledged: false,
-    roundCount: 5,
+    roundCount: 3,
   };
 }
 

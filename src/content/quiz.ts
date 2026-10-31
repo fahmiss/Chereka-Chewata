@@ -81,3 +81,28 @@ export function countQuizQuestions(options: {
 }): number {
   return getQuizQuestions(options).length;
 }
+
+/** Every seat receives the same difficulty in a competitive round. */
+export function pickCompetitiveQuizQuestions(options: {
+  categoryIds: string[];
+  difficulty: QuizDifficultyFilter;
+  contentLanguage: ContentLanguage;
+  players: number;
+  rounds: number;
+}): QuizQuestion[] {
+  const difficulties = (['easy', 'medium', 'hard'] as const).filter((difficulty) =>
+    (options.difficulty === 'mixed' || options.difficulty === difficulty) &&
+    countQuizQuestions({ ...options, difficulty }) > 0,
+  );
+  if (!difficulties.length) return [];
+  const pools = new Map(difficulties.map((difficulty) => [difficulty, pickQuizQuestions({ ...options, difficulty, count: options.players * options.rounds })]));
+  const used = new Map<string, number>();
+  const result: QuizQuestion[] = [];
+  for (let round = 0; round < options.rounds; round += 1) {
+    const difficulty = difficulties[round % difficulties.length]!;
+    const index = used.get(difficulty) ?? 0;
+    result.push(...pools.get(difficulty)!.slice(index, index + options.players));
+    used.set(difficulty, index + options.players);
+  }
+  return result;
+}

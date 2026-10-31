@@ -1,6 +1,7 @@
 import { pickManNegnIdentities } from '../../content/manNegn';
 import { createId } from '../shared/utils';
 import type { ContentLanguage } from '../shared/types';
+import { recordPlayed } from '../../storage/contentHistory';
 import { MAN_NEGN_MAX_PLAYERS, MAN_NEGN_MIN_PLAYERS, type ManNegnSession, type ManNegnSetup } from './types';
 
 export function createManNegnSession(setup: ManNegnSetup, contentLanguage: ContentLanguage = 'en', excludedIdentityIds: string[] = []): ManNegnSession | { error: string } {
@@ -11,10 +12,11 @@ export function createManNegnSession(setup: ManNegnSetup, contentLanguage: Conte
   if (deck.length < setup.players.length) return { error: 'Not enough identities match this setup.' };
   const assignments = Object.fromEntries(setup.players.map((player, index) => [player.id, deck[index]!]));
   const ids = setup.players.map((player) => player.id);
+  recordPlayed('man_negn', deck.map((item) => item.id));
   return {
     sessionId: createId('sess'), setup, contentLanguage, phase: 'handoff', assignments,
-    revealIndex: 0, activePlayerId: ids[0]!, lives: Object.fromEntries(ids.map((id) => [id, 2])),
-    statuses: Object.fromEntries(ids.map((id) => [id, 'playing'])), finishOrder: [],
+    revealIndex: 0, activePlayerId: ids[0]!, turnQuestions: 0, lives: Object.fromEntries(ids.map((id) => [id, 2])),
+    statuses: Object.fromEntries(ids.map((id) => [id, 'playing'])), finishOrder: [], lastGuess: null,
     excludedIdentityIds: [...excludedIdentityIds, ...deck.map((item) => item.id)],
   };
 }
@@ -45,12 +47,25 @@ function nextPlayerId(session: ManNegnSession, afterId: string) {
   return afterId;
 }
 
-export function answerYes(session: ManNegnSession): ManNegnSession { return session.phase === 'play' ? session : session; }
+export function answerYes(session: ManNegnSession): ManNegnSession {
+  return session.phase === 'play' ? { ...session, turnQuestions: session.turnQuestions + 1 } : session;
+}
 export function answerNo(session: ManNegnSession): ManNegnSession {
-  return session.phase === 'play' ? { ...session, activePlayerId: nextPlayerId(session, session.activePlayerId) } : session;
+  return session.phase === 'play'
+    ? { ...session, activePlayerId: nextPlayerId(session, session.activePlayerId), turnQuestions: 0 }
+    : session;
 }
 export function startGuess(session: ManNegnSession): ManNegnSession { return session.phase === 'play' ? { ...session, phase: 'guess' } : session; }
 export function cancelGuess(session: ManNegnSession): ManNegnSession { return session.phase === 'guess' ? { ...session, phase: 'play' } : session; }
+export function startReview(session: ManNegnSession): ManNegnSession {
+  return session.phase === 'play' ? { ...session, phase: 'review_handoff' } : session;
+}
+export function revealReview(session: ManNegnSession): ManNegnSession {
+  return session.phase === 'review_handoff' ? { ...session, phase: 'review' } : session;
+}
+export function finishReview(session: ManNegnSession): ManNegnSession {
+  return session.phase === 'review' ? { ...session, phase: 'play' } : session;
+}
 
 export function resolveGuess(session: ManNegnSession, correct: boolean): ManNegnSession {
   if (session.phase !== 'guess') return session;
@@ -60,8 +75,11 @@ export function resolveGuess(session: ManNegnSession, correct: boolean): ManNegn
   const finishOrder = [...session.finishOrder];
   if (correct) { statuses[id] = 'solved'; finishOrder.push(id); }
   else { lives[id] = Math.max(0, lives[id] - 1); if (lives[id] === 0) statuses[id] = 'out'; }
-  const remaining = session.setup.players.filter((p) => statuses[p.id] === 'playing');
-  if (!remaining.length) return { ...session, lives, statuses, finishOrder, phase: 'result' };
-  const updated = { ...session, lives, statuses, finishOrder };
-  return { ...updated, activePlayerId: nextPlayerId(updated, id), phase: 'play' };
+  return { ...session, lives, statuses, finishOrder, lastGuess: { playerId: id, correct }, phase: 'guess_result' };
+}
+
+export function continueAfterGuess(session: ManNegnSession): ManNegnSession {
+  if (session.phase !== 'guess_result') return session;
+  if (!activePlayers(session).length) return { ...session, phase: 'result' };
+  return { ...session, activePlayerId: nextPlayerId(session, session.activePlayerId), turnQuestions: 0, lastGuess: null, phase: 'play' };
 }

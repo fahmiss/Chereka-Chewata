@@ -162,9 +162,9 @@ export function SessionShell({
             visible={restartVisible}
             icon="refresh"
             accent={color.dangerUrgency}
-            title="Restart round?"
-            message="The current round will be discarded. New cards, roles, or teams may be drawn from the same setup."
-            confirmLabel="Restart round"
+            title="Restart entire game?"
+            message="All scores and round progress will reset. Players and setup choices stay the same. New cards, roles, or teams may be drawn."
+            confirmLabel="Restart entire game"
             confirmTone="danger"
             onConfirm={() => {
               setRestartVisible(false);

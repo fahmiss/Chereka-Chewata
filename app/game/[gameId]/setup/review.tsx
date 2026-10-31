@@ -227,7 +227,7 @@ function EwnetQuickSetup({ gameId }: { gameId: string }) {
       title="Ewnet weys Saks"
       subtitle="Write convincing lies, vote for the truth, and earn points when friends believe you."
       canStart={canStart}
-      footerNote={startNote(canStart, cardCount)}
+      footerNote={canStart && cardCount < setup.roundCount ? `${cardCount} unique rounds available. Add categories for a longer match.` : startNote(canStart, cardCount)}
       startError={startError}
       onClearError={() => setStartError(null)}
       onStart={() => { void onStart(); }}
@@ -243,11 +243,12 @@ function EwnetQuickSetup({ gameId }: { gameId: string }) {
             hint="Every round includes one bluff and one vote from every player."
             accent={accent}
           >
-            <Segmented<5 | 7 | 10>
+            <Segmented<3 | 5 | 7 | 10>
               accent={accent}
               value={setup.roundCount}
               onChange={(roundCount) => patchOptions({ roundCount })}
               options={[
+                { value: 3, label: '3 · Quick' },
                 { value: 5, label: '5' },
                 { value: 7, label: '7' },
                 { value: 10, label: '10' },
@@ -278,6 +279,7 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
     difficulty: setup.difficulty,
     contentLanguage: settings.contentLanguage,
   });
+  const plannedQuestions = setup.playMode === 'compete' ? setup.players.length * setup.roundsPerPlayer : setup.questionCount;
   const canStart = validation.playersOk && validation.categoriesOk && questionCount > 0;
 
   const onStart = async () => {
@@ -329,7 +331,7 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
           ? 'No questions match these categories and difficulty.'
           : !validation.playersOk
             ? 'Add 2–12 named players before starting Compete.'
-            : questionCount < setup.questionCount
+            : questionCount < plannedQuestions
               ? `${questionCount} unique questions match; the deck will recycle safely.`
               : undefined
       }
@@ -360,11 +362,16 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
           <QuickDivider />
           <QuickControlBlock
             icon="layers"
-            title="Questions"
-            hint="Total questions for the whole session."
+            title={setup.playMode === 'compete' ? 'Rounds per player' : 'Questions'}
+            hint={setup.playMode === 'compete' ? `${setup.roundsPerPlayer} questions each · ${setup.roundsPerPlayer * setup.players.length} total. Each round uses the same difficulty for everyone.` : 'Total questions for the whole session.'}
             accent={accent}
           >
-            <Segmented<10 | 20 | 30>
+            {setup.playMode === 'compete' ? <Segmented<3 | 5 | 10>
+              accent={accent}
+              value={setup.roundsPerPlayer}
+              onChange={(roundsPerPlayer) => patchOptions({ roundsPerPlayer })}
+              options={[{ value: 3, label: '3' }, { value: 5, label: '5' }, { value: 10, label: '10' }]}
+            /> : <Segmented<10 | 20 | 30>
               accent={accent}
               value={setup.questionCount}
               onChange={(questionCount) => patchOptions({ questionCount })}
@@ -373,7 +380,7 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
                 { value: 20, label: '20' },
                 { value: 30, label: '30' },
               ]}
-            />
+            />}
           </QuickControlBlock>
         </QuickControls>
       }
@@ -423,7 +430,7 @@ function BombQuickSetup({ gameId }: { gameId: string }) {
     <QuickSetup
       accent={accent}
       title="Tikus Dinich"
-      subtitle="Say a valid answer, then pass the phone before the hidden fuse explodes."
+      subtitle="Say a valid answer, then pass the hot potato before it becomes too hot."
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}
       startError={startError}
@@ -1114,6 +1121,7 @@ function MesobQuickSetup({ gameId }: { gameId: string }) {
     <QuickSetup
       accent={accent}
       title="Mesob"
+      example="mesob"
       subtitle="Two random teams. Everyone writes slips in private, then three rounds with the same slips."
       canStart={canStart}
       footerNote={canStart ? undefined : 'Add 4–20 named players before starting.'}
@@ -1207,6 +1215,7 @@ function MizanQuickSetup({ gameId }: { gameId: string }) {
     <QuickSetup
       accent={accent}
       title="Mizan"
+      example="mizan"
       subtitle="One clue, one hidden point between two opposites. Read each other's minds."
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}
@@ -1394,6 +1403,7 @@ function InsiderQuickSetup({ gameId }: { gameId: string }) {
     <QuickSetup
       accent={accent}
       title="Insider"
+      example="insider"
       subtitle="Twenty questions against the clock, with a hidden helper among you."
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}

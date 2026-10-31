@@ -83,7 +83,7 @@ export function SessionMenu({
             {canRestart ? (
               <>
                 <View style={styles.divider} />
-                <SecondaryButton label="Restart round" icon="refresh" onPress={onRestart} />
+                <SecondaryButton label="Restart entire game" icon="refresh" onPress={onRestart} />
               </>
             ) : null}
 

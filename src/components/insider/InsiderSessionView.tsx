@@ -35,6 +35,7 @@ import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { PlayerPicker } from '../session/PlayerPicker';
 import { SessionShell } from '../session/SessionShell';
+import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { useCountdown, useSessionKeepAwake } from '../session/useCountdown';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
@@ -506,7 +507,7 @@ export function InsiderSessionView({ session }: { session: InsiderSession }) {
     case 'voting_handoff':
       return <HandoffPhase session={session} kind="vote" />;
     case 'voting_select':
-      return <VotingSelectPhase session={session} />;
+      return <PrivateScreenGuard name={getInsiderPlayerName(session, currentVoterId(session) ?? '')} accent={ACCENT}><VotingSelectPhase session={session} /></PrivateScreenGuard>;
     case 'result':
       return <ResultPhase session={session} />;
     default:

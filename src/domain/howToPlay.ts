@@ -34,14 +34,14 @@ export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
     'Tap the one the room agreed on, then move to the next dilemma.',
   ],
   bomb: [
-    'Read the category and start the hidden fuse.',
+    'Read the category and heat the potato. Its ending time stays completely hidden.',
     'Say a new valid answer (no repeats), then pass the phone.',
-    'Whoever holds the phone when it explodes loses the round.',
+    'Whoever holds the phone when the potato becomes too hot loses the round.',
   ],
   quiz: [
     'Each question has four choices. Pick one, then reveal the answer and a short explanation.',
     'Pass & Play is casual — no scores, just pass the phone.',
-    'Compete uses named players, turns, and a leaderboard.',
+    'Compete gives everyone the same number of questions, with matched difficulty each round. The starter rotates on rematch.',
   ],
   gimbar: [
     'The guesser holds the phone sideways on their forehead, screen facing the room.',
@@ -69,14 +69,14 @@ export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
     'Phase 2: one of you already knew it — vote to catch the Insider.',
   ],
   ewnet_weys_saks: [
-    'Everyone privately writes a believable fake answer to the same question.',
+    'Everyone privately writes a believable bluff, or submits the real answer if they know it.',
     'The real answer is mixed with the bluffs. Pass the phone and vote privately.',
-    'Earn 2 points for finding the truth and 1 point each time someone picks your bluff.',
+    'Earn 2 points for submitting or choosing the truth, once per round, and 1 point each time someone picks your bluff.',
   ],
   man_negn: [
     "Pass the phone. Each player privately memorizes everyone else's identity — never their own.",
-    'On your turn, ask one yes/no question. Yes lets you ask again; No passes the turn.',
-    'Buzz to make one guess. A wrong guess costs a chance; solve yours before both chances are gone.',
+    'On your turn, ask one yes/no question. Yes lets you ask again; No passes the turn. Use Review the others if you forget.',
+    'Say one guess aloud. The group taps Correct or Wrong while your identity stays hidden. Reveal only after a correct guess or your final miss.',
   ],
 };
 

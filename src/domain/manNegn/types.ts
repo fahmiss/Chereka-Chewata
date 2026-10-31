@@ -12,7 +12,15 @@ export type ManNegnIdentity = {
 };
 
 export type ManNegnStatus = 'playing' | 'solved' | 'out';
-export type ManNegnPhase = 'handoff' | 'reveal' | 'play' | 'guess' | 'result';
+export type ManNegnPhase =
+  | 'handoff'
+  | 'reveal'
+  | 'play'
+  | 'review_handoff'
+  | 'review'
+  | 'guess'
+  | 'guess_result'
+  | 'result';
 
 export type ManNegnSession = {
   sessionId: string;
@@ -22,6 +30,9 @@ export type ManNegnSession = {
   assignments: Record<string, ManNegnIdentity>;
   revealIndex: number;
   activePlayerId: string;
+  /** Number of Yes answers earned by the active player during this turn. */
+  turnQuestions: number;
+  lastGuess: { playerId: string; correct: boolean } | null;
   lives: Record<string, number>;
   statuses: Record<string, ManNegnStatus>;
   finishOrder: string[];

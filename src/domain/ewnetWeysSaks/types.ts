@@ -15,7 +15,7 @@ export type EwnetQuestion = {
 };
 
 export type EwnetSetup = BasePlayerSetup & {
-  roundCount: 5 | 7 | 10;
+  roundCount: 3 | 5 | 7 | 10;
 };
 
 export type EwnetPhase =
@@ -44,6 +44,7 @@ export type EwnetSession = {
   bluffOrder: string[];
   bluffIndex: number;
   bluffs: Record<string, string>;
+  knownTruthIds: string[];
   answers: EwnetAnswer[];
   voteOrder: string[];
   voteIndex: number;

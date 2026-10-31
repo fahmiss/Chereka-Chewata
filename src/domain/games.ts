@@ -66,12 +66,12 @@ export const GAMES: GameCatalogEntry[] = [
   {
     id: 'bomb',
     name: 'Tikus Dinich',
-    tagline: 'Name an answer, pass the phone, and hope the hidden fuse keeps ticking.',
-    hook: 'Answer. Pass. Boom.',
+    tagline: 'Name an answer, pass the hot potato, and hope it stays warm a little longer.',
+    hook: 'Answer. Pass. Too hot!',
     playerCountLabel: '2–15 players',
     sessionLengthLabel: '~10 min',
     accent: gameAccent.bomb,
-    icon: 'bomb',
+    icon: 'potato',
     playable: true,
   },
   {

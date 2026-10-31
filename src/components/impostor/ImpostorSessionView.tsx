@@ -28,6 +28,7 @@ import { family, type } from '../../theme/typography';
 import { ResultHero } from '../session/ResultHero';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
+import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { MetaChip } from '../ui/Chip';
 import { Dialog } from '../ui/Dialog';
@@ -937,7 +938,7 @@ export function ImpostorSessionView({ session }: { session: ImpostorSession }) {
     case 'voting_handoff':
       return <HandoffPhase session={session} kind="vote" />;
     case 'voting_select':
-      return <VotingSelectPhase session={session} />;
+      return <PrivateScreenGuard name={getPlayerName(session, currentVoterId(session) ?? '')} accent={ACCENT}><VotingSelectPhase session={session} /></PrivateScreenGuard>;
     case 'accusation':
       return <AccusationPhase session={session} />;
     case 'final_guess':

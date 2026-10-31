@@ -27,6 +27,7 @@ import {
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
+import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { ResultHero } from '../session/ResultHero';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
@@ -705,7 +706,7 @@ export function LiarSessionView({ session }: { session: LiarSession }) {
     case 'voting_handoff':
       return <HandoffPhase session={session} kind="vote" />;
     case 'voting_select':
-      return <VotingSelectPhase session={session} />;
+      return <PrivateScreenGuard name={getPlayerName(session, currentVoterId(session) ?? '')} accent={ACCENT}><VotingSelectPhase session={session} /></PrivateScreenGuard>;
     case 'result':
       return <ResultPhase session={session} />;
     default:

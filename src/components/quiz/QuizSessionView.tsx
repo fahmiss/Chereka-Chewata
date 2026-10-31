@@ -65,7 +65,7 @@ function Ready({ session }: { session: QuizSession }) {
         <Text style={[type.displayLg, styles.centerTitle]}>Ready for Quiz?</Text>
         <Text style={[type.body, styles.centerBody]}>
           {compete
-            ? `${session.setup.players.length} players · ${session.questions.length} total questions · +1 for each correct answer`
+            ? `${session.setup.players.length} players · ${session.setup.roundsPerPlayer} questions each · +1 for each correct answer. Everyone gets the same difficulty each round.`
             : `${session.questions.length} questions · answer, reveal, then pass the phone`}
         </Text>
       </Animated.View>

@@ -28,6 +28,13 @@ for (const [name, path, categoriesPath, required] of decks) {
     if (!(card.content_level in levels)) { console.error(`${path}: invalid level ${card.content_level}`); failed = true; }
     else levels[card.content_level] += 1;
     if (required.includes('forbidden_en') && (!Array.isArray(card.forbidden_en) || card.forbidden_en.length < 3)) { console.error(`${path}: ${card.id} needs at least 3 forbidden words`); failed = true; }
+    if (required.includes('facts_en') && (!Array.isArray(card.facts_en) || card.facts_en.length < 3 || card.facts_en.some((fact) => typeof fact !== 'string' || !fact.trim()))) { console.error(`${path}: ${card.id} needs at least 3 non-empty facts`); failed = true; }
+    if (required.includes('source_url') && !/^https:\/\//.test(card.source_url)) { console.error(`${path}: ${card.id} needs an HTTPS source URL`); failed = true; }
+  }
+  const displayField = required.includes('name_en') ? 'name_en' : required.includes('question_en') ? 'question_en' : null;
+  if (displayField) {
+    const texts = cards.map((card) => card[displayField]?.trim().toLocaleLowerCase());
+    if (new Set(texts).size !== texts.length) { console.error(`${path}: duplicate ${displayField}`); failed = true; }
   }
   console.log(`${name}: ${cards.length} cards · family ${levels.family} · friends ${levels.friends} · spicy ${levels.spicy}`);
 }

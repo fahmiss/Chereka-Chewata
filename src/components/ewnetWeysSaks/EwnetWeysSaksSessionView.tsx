@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
   KeyboardAvoidingView,
+  Linking,
   Platform,
   ScrollView,
   StyleSheet,
@@ -38,6 +39,8 @@ import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
+import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
+import { ReportCardButton } from '../session/ReportCardButton';
 
 const ACCENT = color.gameEwnetWeysSaks;
 const STAGES = ['bluff', 'vote', 'truth', 'result'] as const;
@@ -56,10 +59,10 @@ function Intro({ session }: { session: EwnetSession }) {
       stage="bluff"
       stages={STAGES}
       title="Make the lie believable"
-      subtitle="Everyone writes one fake answer. The truth will be mixed in after the phone goes around."
+      subtitle="Write a believable bluff, or submit the truth if you know it. All answers are checked after the phone goes around."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
-      footer={<PrimaryButton label="Start writing bluffs" icon="pencil" onPress={() => apply(startBluffs)} />}
+      footer={<PrimaryButton label="Write answers" icon="pencil" onPress={() => apply(startBluffs)} />}
     >
       <Surface accent={ACCENT} active contentStyle={styles.questionCard}>
         <MetaChip icon="question" label="Question" tint={ACCENT} />
@@ -82,7 +85,7 @@ function Handoff({ session, kind }: { session: EwnetSession; kind: 'bluff' | 'vo
       eyebrow={kind === 'bluff' ? 'Private bluff' : 'Private vote'}
       stage={kind === 'bluff' ? 'bluff' : 'vote'}
       stages={STAGES}
-      note={kind === 'bluff' ? 'Others should not see your fake answer.' : 'Others should not see your choice.'}
+      note={kind === 'bluff' ? 'Keep your submitted answer private.' : 'Others should not see your choice.'}
       onReady={() => apply(readyForPrivateStep)}
       onEndGame={() => endGame(clearSession)}
     />
@@ -103,17 +106,18 @@ function BluffEntry({ session }: { session: EwnetSession }) {
     apply((current) => submitBluff(current, value));
   };
   return (
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.flex}>
     <SessionShell
-      eyebrow="Your fake answer"
+      eyebrow="Your private answer"
       stage="bluff"
       stages={STAGES}
       title={ewnetPlayerName(session, playerId)}
-      subtitle="Write something plausible enough to fool your friends. Keep it short."
+      subtitle="Write a convincing bluff, or submit the truth if you know it. A true submission earns 2 points at the reveal, once only."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
-      footer={<PrimaryButton label="Lock my bluff" icon="lock" disabled={!value.trim()} onPress={submit} />}
+      footer={<PrimaryButton label="Lock my answer" icon="lock" disabled={!value.trim()} onPress={submit} />}
     >
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.flex}>
+      <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={styles.entryScroll}>
         <Surface contentStyle={styles.entryCard}>
           <Text style={[type.titleMd, styles.entryQuestion]}>{currentQuestion(session).question_en}</Text>
           <TextInput
@@ -124,22 +128,23 @@ function BluffEntry({ session }: { session: EwnetSession }) {
               setError(null);
             }}
             onSubmitEditing={submit}
-            placeholder="Type a convincing fake answer…"
+            placeholder="Type a bluff or the truth…"
             placeholderTextColor={color.textMuted}
             maxLength={60}
             returnKeyType="done"
             style={styles.input}
-            accessibilityLabel="Your fake answer"
+            accessibilityLabel="Your private answer"
           />
           <View style={styles.inputMeta}>
             <Text style={[type.bodySm, { color: error ? color.dangerUrgency : color.textMuted }]}>
-              {error ?? 'The real answer is hidden.'}
+              {error ?? 'We check your answer only at the reveal.'}
             </Text>
             <Text style={[type.mono, styles.count]}>{value.length}/60</Text>
           </View>
         </Surface>
-      </KeyboardAvoidingView>
+      </ScrollView>
     </SessionShell>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -215,6 +220,8 @@ function RoundResult({ session }: { session: EwnetSession }) {
       }
     >
       <ScrollView contentContainerStyle={styles.resultList} showsVerticalScrollIndicator={false}>
+        <Standings rows={ewnetStandings(session).map((p) => ({ id: p.id, name: p.displayName, score: p.score }))} accent={ACCENT} />
+        {session.knownTruthIds.length ? <Text style={[type.body, styles.resultQuestion]}>Already knew it: {session.knownTruthIds.map((id) => ewnetPlayerName(session, id)).join(', ')}. Each earns 2 points for submitting the truth; no extra truth-vote bonus.</Text> : null}
         <Text style={[type.body, styles.resultQuestion]}>{question.question_en}</Text>
         {session.answers.map((answer) => {
           const fooled = fooledCount(session, answer.id);
@@ -239,6 +246,8 @@ function RoundResult({ session }: { session: EwnetSession }) {
             </Surface>
           );
         })}
+        <ReportCardButton game="ewnet_weys_saks" cardId={question.id} />
+        {question.source_url ? <SecondaryButton label={`Source: ${question.source_name ?? 'Read more'}`} quiet onPress={() => { void Linking.openURL(question.source_url!).catch(() => undefined); }} /> : null}
       </ScrollView>
     </SessionShell>
   );
@@ -281,9 +290,9 @@ export function EwnetWeysSaksSessionView({ session }: { session: EwnetSession })
   switch (session.phase) {
     case 'round_intro': return <Intro session={session} />;
     case 'bluff_handoff': return <Handoff session={session} kind="bluff" />;
-    case 'bluff_entry': return <BluffEntry session={session} />;
+    case 'bluff_entry': return <PrivateScreenGuard name={ewnetPlayerName(session, currentBlufferId(session))} accent={ACCENT}><BluffEntry session={session} /></PrivateScreenGuard>;
     case 'vote_handoff': return <Handoff session={session} kind="vote" />;
-    case 'vote_select': return <Vote session={session} />;
+    case 'vote_select': return <PrivateScreenGuard name={ewnetPlayerName(session, currentVoterId(session))} accent={ACCENT}><Vote session={session} /></PrivateScreenGuard>;
     case 'round_result': return <RoundResult session={session} />;
     case 'final': return <Final session={session} />;
   }
@@ -291,6 +300,7 @@ export function EwnetWeysSaksSessionView({ session }: { session: EwnetSession })
 
 const styles = StyleSheet.create({
   flex: { flex: 1 },
+  entryScroll: { paddingBottom: space[4] },
   questionCard: { padding: space[6], gap: space[5] },
   question: { color: color.textPrimary, lineHeight: 38 },
   muted: { color: color.textMuted },

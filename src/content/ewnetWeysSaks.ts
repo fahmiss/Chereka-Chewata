@@ -2,7 +2,7 @@ import categoriesJson from '../../content/categories/ewnet_weys_saks.json';
 import questionsJson from '../../content/ewnet_weys_saks/questions.en.json';
 import type { ContentLanguage, ContentLevel } from '../domain/shared/types';
 import type { EwnetQuestion } from '../domain/ewnetWeysSaks/types';
-import { shuffle } from '../domain/shared/utils';
+import { prioritizeFresh, reportedIds } from '../storage/contentHistory';
 
 export type EwnetCategory = {
   id: string;
@@ -31,7 +31,7 @@ export function getEwnetQuestions({
   contentLanguage: ContentLanguage;
 }): EwnetQuestion[] {
   return questions.filter(
-    (item) => categoryIds.includes(item.category_id) && contentLevels.includes(item.content_level),
+    (item) => categoryIds.includes(item.category_id) && contentLevels.includes(item.content_level) && !reportedIds('ewnet_weys_saks').has(item.id),
   );
 }
 
@@ -45,7 +45,5 @@ export function buildEwnetDeck(
 ): EwnetQuestion[] {
   const eligible = getEwnetQuestions(query);
   if (!eligible.length) return [];
-  const deck: EwnetQuestion[] = [];
-  while (deck.length < roundCount) deck.push(...shuffle(eligible));
-  return deck.slice(0, roundCount);
+  return prioritizeFresh(eligible, 'ewnet_weys_saks').slice(0, roundCount);
 }

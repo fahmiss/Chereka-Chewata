@@ -10,6 +10,19 @@ _Last updated: 2026-10-31._
 
 ## Open
 
+### Gameplay audit implementation (2026-10-31)
+
+- [x] Man Negn: group adjudication keeps identity hidden after a first miss
+- [x] Quiz: equal rounds per player, matched difficulty and rotating rematch starter
+- [x] Shared full-reset control explicitly says Restart entire game and warns about lost scores
+- [x] Ewnet: unique fact decks, history/report filtering, known-truth submission scoring and 3-round quick mode
+- [x] Shared button layout and wrapping for narrow screens
+- [x] Skippable/replayable Mizan, Mesob and Insider practice examples
+- [x] Background privacy cover for Ewnet entry/votes, other private votes and Mesob slip entry
+- [x] Expand Ewnet and Man Negn to 80 entries each; add fact provenance and stronger validation
+- [ ] Native-speaker review before enabling any new Amharic content
+- Discovery/home changes and device/offline/audio-pipeline work excluded from this batch by request.
+
 ### Man Negn vertical slice (2026-10-31)
 
 - [x] 2–5 player setup with six offline identity categories

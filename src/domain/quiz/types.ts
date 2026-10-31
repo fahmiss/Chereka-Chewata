@@ -46,6 +46,7 @@ export type QuizSetup = {
   categoryIds: string[];
   difficulty: QuizDifficultyFilter;
   questionCount: 10 | 20 | 30;
+  roundsPerPlayer: 3 | 5 | 10;
   /** Shared setup compatibility only; Quiz difficulty is not a maturity level. */
   contentLevels: QuizCompatibilityContentLevel[];
   spicyAcknowledged: boolean;
@@ -68,6 +69,7 @@ export type QuizSession = {
   questions: QuizQuestion[];
   questionIndex: number;
   currentPlayerIndex: number;
+  openingPlayerIndex: number;
   currentAnswers: QuizAnswer[];
   selectedAnswerId: string | null;
   scores: Record<string, number>;
@@ -85,6 +87,7 @@ export function defaultQuizSetup(players?: QuizPlayer[]): QuizSetup {
     categoryIds: [],
     difficulty: 'mixed',
     questionCount: 20,
+    roundsPerPlayer: 5,
     contentLevels: ['family'],
     spicyAcknowledged: false,
   };
