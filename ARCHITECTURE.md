@@ -221,6 +221,31 @@ stateDiagram-v2
 Players cannot vote for their own bluff. Finding the truth earns two points;
 each player fooled by a bluff earns its author one point.
 
+---
+
+## Man Negn lifecycle
+
+Man Negn assigns one identity per player inside `ManNegnSessionProvider`.
+Assignments, private reveal progress, lives, and finish order never enter route
+parameters or persistent storage.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Handoff
+    Handoff --> Reveal
+    Reveal --> Handoff : next player
+    Reveal --> Ask : everyone has seen the others
+    Ask --> Ask : Yes
+    Ask --> Ask : No / next player
+    Ask --> Guess : player buzzes
+    Guess --> Ask : wrong, chances remain
+    Guess --> Ask : correct / next player
+    Guess --> Final : no active players remain
+```
+
+The reveal deliberately excludes the viewer's own assignment. Every identity
+ships with a compact fact sheet so the other players can answer consistently.
+
 ## Content model
 
 Bundled JSON under `content/` for the offline MVP. Shape follows the product spec §8.

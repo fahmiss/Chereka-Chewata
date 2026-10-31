@@ -9,6 +9,7 @@ const decks = [
   ["Who's Got the Bomb", 'content/bomb/cards.json', 'content/categories/bomb.json', ['prompt_en']],
   ['Gimbar (own cards)', 'content/gimbar/cards.en.json', 'content/categories/gimbar.json', ['text_en']],
   ['Ewnet weys Saks', 'content/ewnet_weys_saks/questions.en.json', 'content/categories/ewnet_weys_saks.json', ['question_en', 'answer_en', 'explanation_en', 'source_name', 'source_url']],
+  ['Man Negn', 'content/man_negn/identities.en.json', 'content/categories/man_negn.json', ['name_en', 'facts_en']],
 ];
 
 let failed = false;

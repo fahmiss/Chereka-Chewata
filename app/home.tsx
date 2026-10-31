@@ -32,13 +32,14 @@ const FEATURE_OVERLAP = 64;
  */
 const ROWS: GameId[][] = [
   ['impostor'],
-  ['whos_the_liar', 'most_likely'],
+  ['whos_the_liar', 'gimbar'],
   ['would_you_rather', 'insider'],
   // Bomb takes the wide slot: its long name and wide fuse scene suit it.
   ['bomb'],
   ['mizan', 'quiz'],
-  ['taboo', 'wink_killer'],
-  ['gimbar', 'mesob'],
+  ['taboo', 'man_negn'],
+  ['wink_killer'],
+  ['most_likely', 'mesob'],
 ];
 
 function gridRows(): GameCatalogEntry[][] {

@@ -73,6 +73,11 @@ export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
     'The real answer is mixed with the bluffs. Pass the phone and vote privately.',
     'Earn 2 points for finding the truth and 1 point each time someone picks your bluff.',
   ],
+  man_negn: [
+    "Pass the phone. Each player privately memorizes everyone else's identity — never their own.",
+    'On your turn, ask one yes/no question. Yes lets you ask again; No passes the turn.',
+    'Buzz to make one guess. A wrong guess costs a chance; solve yours before both chances are gone.',
+  ],
 };
 
 export function getHowToPlay(gameId: string): string[] | null {

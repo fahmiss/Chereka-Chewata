@@ -2820,3 +2820,32 @@ the fact.
 
 All questions require provenance metadata. Facts, submissions, answer authorship,
 votes, and scores remain in in-memory session state and never route parameters.
+
+# 23. Game Fourteen: Man Negn? — ማን ነኝ?
+
+## 23.1 Concept
+
+Each player receives a hidden identity. During a private pass-the-phone reveal,
+they see every other player's identity but never their own. Players then ask the
+group yes/no questions to discover who or what they are.
+
+## 23.2 Players and setup
+
+- 2–5 named players
+- Multi-select identity categories
+- Two guess chances per player
+- Bundled English identities and fact sheets; fully offline
+
+## 23.3 Turn flow
+
+1. Every player privately memorizes all other identities.
+2. The active player asks one yes/no question.
+3. Yes keeps the turn; No passes to the next active player.
+4. A player may buzz, say one guess aloud, then reveal their identity.
+5. A correct guess places them in the finish order. A wrong guess consumes one
+   chance and passes the turn; after two misses, their identity is revealed and
+   they are out.
+6. Continue until every player has solved their identity or is out.
+
+Assignments, reveal progress, remaining chances, and results stay in in-memory
+session state and never route parameters.

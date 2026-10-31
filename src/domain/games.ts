@@ -162,6 +162,17 @@ export const GAMES: GameCatalogEntry[] = [
     icon: 'pencil',
     playable: true,
   },
+  {
+    id: 'man_negn',
+    name: 'Man Negn?',
+    tagline: "See everyone else's identity, then discover your own with yes/no questions.",
+    hook: 'Everyone knows but you.',
+    playerCountLabel: '2–5 players',
+    sessionLengthLabel: '~15 min',
+    accent: gameAccent.man_negn,
+    icon: 'question',
+    playable: true,
+  },
 ];
 
 export function getGame(id: string): GameCatalogEntry | undefined {

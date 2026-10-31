@@ -10,6 +10,14 @@ _Last updated: 2026-10-31._
 
 ## Open
 
+### Man Negn vertical slice (2026-10-31)
+
+- [x] 2–5 player setup with six offline identity categories
+- [x] Private pass-the-phone reveal that hides each player's own identity
+- [x] Yes/No turn loop, two-chance guessing, elimination, and finish order
+- [x] Adaptive wide and square original artwork
+- [ ] Expand the identity deck after playtesting and add reviewed Amharic facts
+
 ### Ewnet weys Saks vertical slice (2026-10-31)
 
 - [x] Original sourced fact deck with 30 offline questions across seven categories

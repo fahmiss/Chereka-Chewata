@@ -25,6 +25,9 @@ import { WINK_MAX_PLAYERS, WINK_MIN_PLAYERS } from './winkKiller/types';
 import { useEwnetSetup } from './ewnetWeysSaks/context';
 import { EWNET_MAX_PLAYERS, EWNET_MIN_PLAYERS } from './ewnetWeysSaks/types';
 import { countEwnetQuestions, getEwnetCategories } from '../content/ewnetWeysSaks';
+import { countManNegnIdentities, getManNegnCategories } from '../content/manNegn';
+import { useManNegnSetup } from './manNegn/context';
+import { MAN_NEGN_MAX_PLAYERS, MAN_NEGN_MIN_PLAYERS } from './manNegn/types';
 
 type CardCountQuery = {
   categoryIds: string[];
@@ -82,6 +85,12 @@ export const GAME_SETUP_SPECS: Record<string, GameSetupSpec> = {
     getCategories: getEwnetCategories,
     countCards: countEwnetQuestions,
   },
+  man_negn: {
+    minPlayers: MAN_NEGN_MIN_PLAYERS,
+    maxPlayers: MAN_NEGN_MAX_PLAYERS,
+    getCategories: getManNegnCategories,
+    countCards: countManNegnIdentities,
+  },
 };
 
 /**
@@ -102,6 +111,7 @@ export function useGameSetup(gameId: string | undefined) {
   const winkKiller = useWinkKillerSetup();
   const insider = useInsiderSetup();
   const ewnet = useEwnetSetup();
+  const manNegn = useManNegnSetup();
   const game = getGame(String(gameId ?? ''));
   const spec = GAME_SETUP_SPECS[String(gameId ?? '')] ?? null;
   const extra =
@@ -117,6 +127,8 @@ export function useGameSetup(gameId: string | undefined) {
               ? insider
               : gameId === 'ewnet_weys_saks'
                 ? ewnet
+              : gameId === 'man_negn'
+                ? manNegn
               : null;
 
   const isLiar = gameId === 'whos_the_liar';

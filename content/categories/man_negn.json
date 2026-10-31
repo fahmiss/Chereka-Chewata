@@ -1,0 +1,8 @@
+[
+  { "id": "ethiopian_icons", "name_en": "Ethiopian Icons", "sort_order": 1, "active": true },
+  { "id": "world_famous", "name_en": "World Famous", "sort_order": 2, "active": true },
+  { "id": "characters", "name_en": "Characters & Legends", "sort_order": 3, "active": true },
+  { "id": "animals", "name_en": "Animals", "sort_order": 4, "active": true },
+  { "id": "things", "name_en": "Food & Things", "sort_order": 5, "active": true },
+  { "id": "places", "name_en": "Places", "sort_order": 6, "active": true }
+]

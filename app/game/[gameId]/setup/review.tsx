@@ -66,6 +66,8 @@ import {
 } from '../../../../src/domain/winkKiller/types';
 import { countEwnetQuestions, getEwnetCategories } from '../../../../src/content/ewnetWeysSaks';
 import { useEwnetSession, useEwnetSetup } from '../../../../src/domain/ewnetWeysSaks/context';
+import { countManNegnIdentities, getManNegnCategories } from '../../../../src/content/manNegn';
+import { useManNegnSession, useManNegnSetup } from '../../../../src/domain/manNegn/context';
 
 type Player = { id: string; displayName: string };
 
@@ -85,6 +87,7 @@ export default function ReviewScreen() {
   if (id === 'wink_killer') return <WinkKillerQuickSetup gameId={id} />;
   if (id === 'insider') return <InsiderQuickSetup gameId={id} />;
   if (id === 'ewnet_weys_saks') return <EwnetQuickSetup gameId={id} />;
+  if (id === 'man_negn') return <ManNegnQuickSetup gameId={id} />;
   return <ImpostorQuickSetup gameId={id} />;
 }
 
@@ -110,6 +113,7 @@ function useStartGame() {
   const winkKiller = useWinkKillerSession();
   const insider = useInsiderSession();
   const ewnet = useEwnetSession();
+  const manNegn = useManNegnSession();
 
   return (
     keep:
@@ -125,7 +129,8 @@ function useStartGame() {
       | 'mizan'
       | 'winkKiller'
       | 'insider'
-      | 'ewnet',
+      | 'ewnet'
+      | 'manNegn',
   ) => {
     if (keep !== 'impostor') impostor.clearSession();
     if (keep !== 'liar') liar.clearSession();
@@ -140,7 +145,48 @@ function useStartGame() {
     if (keep !== 'winkKiller') winkKiller.clearSession();
     if (keep !== 'insider') insider.clearSession();
     if (keep !== 'ewnet') ewnet.clearSession();
+    if (keep !== 'manNegn') manNegn.clearSession();
   };
+}
+
+/* ------------------------------------------------------------------ *
+ * Man Negn?
+ * ------------------------------------------------------------------ */
+
+function ManNegnQuickSetup({ gameId }: { gameId: string }) {
+  const accent = getGame(gameId)?.accent ?? color.gameManNegn;
+  const { setup, validation, persistPlayers } = useManNegnSetup();
+  const { startSession, clearError } = useManNegnSession();
+  const { settings } = useSettings();
+  const clearOthers = useStartGame();
+  const [startError, setStartError] = useState<string | null>(null);
+  const totalCategories = getManNegnCategories().length;
+  const cardCount = countManNegnIdentities({ categoryIds: setup.categoryIds, contentLevels: setup.contentLevels, contentLanguage: settings.contentLanguage });
+  const canStart = validation.playersOk && validation.categoriesOk && cardCount >= setup.players.length;
+
+  const onStart = async () => {
+    clearError();
+    clearOthers('manNegn');
+    await persistPlayers();
+    const result = startSession(setup);
+    if ('error' in result) { setStartError(result.error); return; }
+    void saveLastPlayedGame('man_negn');
+    router.replace(`/session/${result.session.sessionId}`);
+  };
+
+  return (
+    <QuickSetup
+      accent={accent}
+      title="Man Negn?"
+      subtitle="See everyone else's secret identity, then discover your own with yes/no questions."
+      canStart={canStart}
+      footerNote={canStart ? 'Each player gets two chances to guess.' : 'Add 2–5 named players and choose categories with enough identities.'}
+      startError={startError}
+      onClearError={() => setStartError(null)}
+      onStart={() => { void onStart(); }}
+      links={[playersLink(gameId, setup.players), categoriesLink(gameId, setup.categoryIds.length, totalCategories, cardCount, 'identities')]}
+    />
+  );
 }
 
 /* ------------------------------------------------------------------ *

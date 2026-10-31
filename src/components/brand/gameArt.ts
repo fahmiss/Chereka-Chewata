@@ -77,6 +77,10 @@ export const GAME_ART: Partial<Record<GameId, GameArtSet>> = {
     wide: { source: require('../../../assets/illustrations/ewnet_weys_saks.jpg'), aspect: 1536 / 1024 },
     half: { source: require('../../../assets/illustrations/ewnet_weys_saks-half.jpg'), aspect: 1 },
   },
+  man_negn: {
+    wide: { source: require('../../../assets/illustrations/man_negn.jpg'), aspect: 1672 / 941 },
+    half: { source: require('../../../assets/illustrations/man_negn-half.jpg'), aspect: 1 },
+  },
 };
 
 /** Home hero: the living room with the cast on the couch, room above for the logo. */

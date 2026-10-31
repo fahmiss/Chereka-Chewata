@@ -27,7 +27,7 @@ connection to start; offline support is currently provided by native builds.
 
 ## Current status
 
-- All thirteen games are playable end to end.
+- All fourteen games are playable end to end.
 - Public interface and gameplay content are currently English-only.
 - Family and Friends start selected in social games; Spicy is shown as Coming soon.
 - Amharic and Mixed decks remain in the repository behind feature flags for a later native-reviewed release.
@@ -52,6 +52,7 @@ connection to start; offline support is currently provided by native builds.
 | **Wink Killer** | The phone deals a secret Killer who strikes with a wink | 4–30 | Yes |
 | **Insider** | Yes/no questions against the clock, then catch who already knew | 4–12 | Yes |
 | **Ewnet weys Saks** | Write believable fake answers, then find the truth | 3–8 | Yes |
+| **Man Negn?** | See everyone else's identity and discover your own | 2–5 | Yes |
 
 The familiar game names are temporary. Localized names can land later without
 changing the underlying mechanics.
@@ -92,6 +93,7 @@ build remains English-only.
 | Wink Killer | No cards — roles only |
 | Insider | Impostor word deck |
 | Ewnet weys Saks | 30 sourced fact questions |
+| Man Negn? | 40 identities across Ethiopian icons, people, characters, animals, things, and places |
 
 Decks live under `content/` and are validated before release. See
 [`CONTENT.md`](CONTENT.md) before adding or editing cards.
