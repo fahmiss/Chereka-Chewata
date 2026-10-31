@@ -43,7 +43,7 @@ connection to start; offline support is currently provided by native builds.
 | **Who’s the Liar?** | One player answers a different question; spot them | 3–15 | Yes |
 | **Taboo** | Timed team word explanation with forbidden clues | 4–20 | Teams |
 | **Who’s Most Likely To** | Read a prompt and point at the same time | 3+ | Optional |
-| **Who’s Got the Bomb?** | Give category answers while passing a hidden fuse | 2–15 | Yes |
+| **Tikus Dinich** | Give category answers while passing a hidden fuse | 2–15 | Yes |
 | **Would You Rather** | Choose between two difficult options and debate | 2+ | No |
 | **Quiz** | Four-choice trivia in casual Pass & Play or scored Compete mode | 2+ | Compete only |
 | **Gimbar** | Heads-up charades: phone on the forehead, tilt or tap to score | 2–20 | Yes |
@@ -85,7 +85,7 @@ build remains English-only.
 | Taboo | 406 cards |
 | Who’s Most Likely To | 262 prompts |
 | Would You Rather | 253 dilemmas |
-| Who’s Got the Bomb? | 156 categories |
+| Tikus Dinich | 156 categories |
 | Quiz | 233 questions |
 | Gimbar | 55 act-it-out cards + every Taboo and Impostor word (647 unique) |
 | Mesob | Player-written slips; optional top-up from the Gimbar deck |

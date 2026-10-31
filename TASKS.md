@@ -300,7 +300,7 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
   the table, and the next action is Choose the Liar (or Start private voting).
 - Who’s Most Likely To keeps the prompt on screen through the 3-2-1-POINT
   countdown.
-- Who’s Got the Bomb no longer pauses the fuse. The deadline is wall-clock, so
+- Tikus Dinich no longer pauses the fuse. The deadline is wall-clock, so
   backgrounding the app cannot stall the explosion.
 
 ### English-only public build + session/home P1 pass (2026-10-15)
@@ -416,7 +416,7 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 - Fixed `src/content/categories.ts` (`getCategoryName`) to include Bomb's
   categories — it previously covered the other five games only.
 
-### Who’s Got the Bomb? sixth playable game (2026-08-07)
+### Tikus Dinich sixth playable game (2026-08-07)
 
 - Added a low-friction named-player hot-potato flow: public category, random
   starter, short hidden randomized fuse, and physical answer-and-pass play.

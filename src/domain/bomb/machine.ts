@@ -29,7 +29,7 @@ export function createBombSession(
   contentLanguage: ContentLanguage = 'en',
 ): BombSession | { error: string } {
   if (setup.players.length < BOMB_MIN_PLAYERS || setup.players.length > BOMB_MAX_PLAYERS) {
-    return { error: `Who's Got the Bomb needs ${BOMB_MIN_PLAYERS}–${BOMB_MAX_PLAYERS} players.` };
+    return { error: `Tikus Dinich needs ${BOMB_MIN_PLAYERS}–${BOMB_MAX_PLAYERS} players.` };
   }
   if (setup.players.some((player) => !player.displayName.trim())) {
     return { error: 'Every player needs a name.' };

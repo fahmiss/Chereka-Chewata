@@ -100,7 +100,7 @@ Implementation:
 - Active round: `SessionContext` + `app/session/[sessionId].tsx` → `ImpostorSessionView` (phase switch, not separate secret routes)
 - Screens must not invent parallel status flags outside the machine.
 
-## Who’s Got the Bomb? lifecycle
+## Tikus Dinich lifecycle
 
 The category prompt and randomly chosen starter are public, but the randomized
 fuse deadline remains only in session state. Players pass the phone physically;

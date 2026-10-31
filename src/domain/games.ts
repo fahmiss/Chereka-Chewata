@@ -65,7 +65,7 @@ export const GAMES: GameCatalogEntry[] = [
   },
   {
     id: 'bomb',
-    name: "Who's Got the Bomb?",
+    name: 'Tikus Dinich',
     tagline: 'Name an answer, pass the phone, and hope the hidden fuse keeps ticking.',
     hook: 'Answer. Pass. Boom.',
     playerCountLabel: '2–15 players',

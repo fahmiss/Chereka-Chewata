@@ -6,7 +6,7 @@ const decks = [
   ['Taboo', 'content/taboo/cards.en.json', 'content/categories/taboo.json', ['target_en', 'forbidden_en']],
   ["Who's Most Likely", 'content/most_likely/prompts.en.json', 'content/categories/most_likely.json', ['prompt_en']],
   ['Would You Rather', 'content/would_you_rather/dilemmas.en.json', 'content/categories/would_you_rather.json', ['option_a_en', 'option_b_en']],
-  ["Who's Got the Bomb", 'content/bomb/cards.json', 'content/categories/bomb.json', ['prompt_en']],
+  ['Tikus Dinich', 'content/bomb/cards.json', 'content/categories/bomb.json', ['prompt_en']],
   ['Gimbar (own cards)', 'content/gimbar/cards.en.json', 'content/categories/gimbar.json', ['text_en']],
   ['Ewnet weys Saks', 'content/ewnet_weys_saks/questions.en.json', 'content/categories/ewnet_weys_saks.json', ['question_en', 'answer_en', 'explanation_en', 'source_name', 'source_url']],
   ['Man Negn', 'content/man_negn/identities.en.json', 'content/categories/man_negn.json', ['name_en', 'facts_en']],

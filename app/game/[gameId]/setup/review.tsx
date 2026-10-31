@@ -382,7 +382,7 @@ function QuizQuickSetup({ gameId }: { gameId: string }) {
 }
 
 /* ------------------------------------------------------------------ *
- * Who's Got the Bomb?
+ * Tikus Dinich
  * ------------------------------------------------------------------ */
 
 function BombQuickSetup({ gameId }: { gameId: string }) {
@@ -422,7 +422,7 @@ function BombQuickSetup({ gameId }: { gameId: string }) {
   return (
     <QuickSetup
       accent={accent}
-      title="Who's Got the Bomb?"
+      title="Tikus Dinich"
       subtitle="Say a valid answer, then pass the phone before the hidden fuse explodes."
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}

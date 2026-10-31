@@ -89,7 +89,7 @@ enabling Amharic or Mixed content again.
 - **Mixed** shows `አማርኛ · English` when both strings differ
 - Ethiopic typefaces apply when content language is am/mixed
 
-## Adding Who’s Got the Bomb? prompts
+## Adding Tikus Dinich prompts
 
 Each card is a category broad enough to produce several quick spoken answers:
 

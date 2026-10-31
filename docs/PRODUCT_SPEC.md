@@ -18,7 +18,7 @@ Chereka Chewata includes these seven playable games:
 3. **Taboo**
 4. **Who’s Most Likely To**
 5. **Would You Rather**
-6. **Who’s Got the Bomb?**
+6. **Tikus Dinich**
 7. **Quiz**
 
 ### Why these seven
@@ -32,7 +32,7 @@ Together, they cover the main types of social party-game play:
 | Taboo | Fast word explanation | Yes | Yes | Teams, family, friends |
 | Who’s Most Likely To | Group voting and conversation | No by default | No | Friends, coworkers, family |
 | Would You Rather | Forced choices and debate | No by default | No | Any group |
-| Who’s Got the Bomb? | Fast category answers and hot-potato tension | Yes | Hidden fuse | Friends, family, mixed groups |
+| Tikus Dinich | Fast category answers and hot-potato tension | Yes | Hidden fuse | Friends, family, mixed groups |
 | Quiz | Four-choice trivia: casual passing or scored round-robin play | Optional | No | Friends, family, mixed groups |
 
 This is enough variety for an MVP without creating too many systems at once.
@@ -81,7 +81,7 @@ Player names are required for:
 
 - Impostor
 - Who’s the Liar?
-- Who’s Got the Bomb?
+- Tikus Dinich
 - Quiz Compete
 - Optional scored versions of Taboo
 - Optional host-led versions of Who’s Most Likely To
@@ -115,7 +115,7 @@ turn either one off. Quiz continues to use knowledge difficulty instead.
 
 Every gameplay screen should provide:
 
-- Pause when a timer is active, except Who’s Got the Bomb, whose hidden fuse never pauses
+- Pause when a timer is active, except Tikus Dinich, whose hidden fuse never pauses
 - Skip card
 - Report card
 - End game
@@ -1264,7 +1264,7 @@ The app should never force experienced players to read the full rules before pla
 
 Unless user testing gives strong evidence otherwise:
 
-- The seven playable games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, Would You Rather, Who’s Got the Bomb?, and Quiz.
+- The seven playable games are Impostor, Who’s the Liar?, Taboo, Who’s Most Likely To, Would You Rather, Tikus Dinich, and Quiz.
 - All games are designed for one shared phone.
 - No account is required.
 - Offline play is required.
@@ -2646,7 +2646,7 @@ Step 7 is complete. The design system is sufficiently locked to begin the Impost
 
 ---
 
-# 19. Game Six: Who’s Got the Bomb?
+# 19. Game Six: Tikus Dinich
 
 ## 19.1 Familiar game concept
 
@@ -2781,7 +2781,7 @@ Key references consulted:
 - Common Who’s Most Likely To rules using simultaneous pointing and no required winner.
 - Common Would You Rather rules using two forced choices and optional explanation or debate.
 - Splash’s public listing and common hot-potato word games for the category,
-  answer, pass, and hidden-explosion loop used by Who’s Got the Bomb?.
+  answer, pass, and hidden-explosion loop used by Tikus Dinich.
 
 ### Reference links
 
