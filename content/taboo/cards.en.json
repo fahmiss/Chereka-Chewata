@@ -9341,5 +9341,366 @@
       "Celebrity",
       "Current"
     ]
+  },
+  {
+    "id": "taboo_now_013",
+    "target_en": "Eshetu Melese",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_014",
+    "target_en": "Yuti Nass",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_015",
+    "target_en": "Master Abinet",
+    "forbidden_en": [
+      "TikTok",
+      "Master",
+      "Creator",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_016",
+    "target_en": "Comedian Yasino",
+    "forbidden_en": [
+      "TikTok",
+      "Comedy",
+      "Funny",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_017",
+    "target_en": "Lij Dawud",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_018",
+    "target_en": "Tonkosu",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_019",
+    "target_en": "Bertemios",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_020",
+    "target_en": "Rache Tesfaye",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_021",
+    "target_en": "Musse Solomon",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_022",
+    "target_en": "Jon Daniel",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_023",
+    "target_en": "Janiy Gebru",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_024",
+    "target_en": "Dani Royal",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_025",
+    "target_en": "Mercury Habtamu",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_026",
+    "target_en": "Nebil Nur",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_027",
+    "target_en": "Miss Leyu",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_028",
+    "target_en": "Beki4Kilo",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Viral",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_029",
+    "target_en": "Getachew Sweatbox",
+    "forbidden_en": [
+      "TikTok",
+      "Creator",
+      "Sweat",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_030",
+    "target_en": "Sedo Martial",
+    "forbidden_en": [
+      "Martial",
+      "Arts",
+      "TikTok",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
+  },
+  {
+    "id": "taboo_now_031",
+    "target_en": "Johnny Jiujitsu",
+    "forbidden_en": [
+      "Jiu-jitsu",
+      "Martial",
+      "TikTok",
+      "Ethiopian"
+    ],
+    "difficulty": "easy",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
   }
 ]

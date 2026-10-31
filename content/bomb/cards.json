@@ -1368,5 +1368,17 @@
       "Current",
       "Funny"
     ]
+  },
+  {
+    "id": "bomb_now_005",
+    "prompt_en": "Ethiopian TikTokers",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian",
+      "Celebrity",
+      "Current"
+    ]
   }
 ]

@@ -18,6 +18,7 @@ import { useMesobSession } from '../../src/domain/mesob/context';
 import { useMizanSession } from '../../src/domain/mizan/context';
 import { useWinkKillerSession } from '../../src/domain/winkKiller/context';
 import type { GameId } from '../../src/domain/games';
+import { GAME_HOW_TO_PLAY } from '../../src/domain/howToPlay';
 import { useT } from '../../src/i18n';
 import { saveLastPlayedGame } from '../../src/storage/lastPlayedGame';
 import { SOUND_VOLUME } from '../../src/theme/soundLevels';
@@ -88,69 +89,6 @@ const InsiderSessionView = lazy(() =>
   })),
 );
 
-const SESSION_RULES: Record<GameId, string[]> = {
-  impostor: [
-    'Everyone sees the same secret word except the Impostor.',
-    'Give one short clue each without saying, spelling, or translating the word.',
-    'Discuss and accuse one player. A caught Impostor gets one final guess.',
-  ],
-  whos_the_liar: [
-    'Most players see one question; the Liar sees a different one.',
-    'Answer briefly without repeating or revealing the question.',
-    'Discuss, accuse one player, then reveal both questions.',
-  ],
-  taboo: [
-    'Describe the target without saying any forbidden word.',
-    'Mark Correct, Skip, or Violation before moving to the next card.',
-    'Teams alternate equal turns; the first team to the target score wins.',
-  ],
-  most_likely: [
-    'Read the prompt aloud.',
-    'On POINT, everyone points to one person at the same time.',
-    'Discuss the choice, then continue to the next prompt.',
-  ],
-  would_you_rather: [
-    'Read both options aloud.',
-    'Everyone chooses a side before the group reveals its answer.',
-    'Defend the choice, debate, then continue.',
-  ],
-  bomb: [
-    'Read the category, give one valid answer, and pass the phone.',
-    'Do not repeat an answer already used in the round.',
-    'The player holding the phone when the hidden fuse explodes loses the round.',
-  ],
-  quiz: [
-    'Choose one of four answers before revealing the result.',
-    'Pass & Play is casual; Compete rotates named players and keeps score.',
-    'Read the explanation, then continue to the next question.',
-  ],
-  gimbar: [
-    'The guesser holds the phone sideways on their forehead, screen facing the room.',
-    'Everyone else acts, hums and describes the card without saying it.',
-    'Tilt down (or tap right) for got it, tilt up (or tap left) to pass. Most cards wins.',
-  ],
-  mesob: [
-    'Everyone secretly writes slips for the mesob. Two teams take timed turns.',
-    'Round 1: describe freely. Round 2: one word only. Round 3: act it out, no sounds.',
-    'The same slips come back every round. Most slips guessed over three rounds wins.',
-  ],
-  mizan: [
-    'Two opposites sit on a dial, like Mild ← → Spicy. Only the psychic sees the hidden target.',
-    'The psychic says one clue for that spot, e.g. “Grandma’s mitmita” for near Spicy.',
-    'Guessers drag the needle; closer earns 4, 3 or 2. In Teams, the other side can steal 1 by calling left or right.',
-  ],
-  wink_killer: [
-    'Everyone secretly checks their role. One player is the Killer.',
-    'The Killer winks at victims; a winked player counts to five, then falls.',
-    'Accuse the Killer to win. A wrong accuser is out. With a Detective, only they accuse.',
-  ],
-  insider: [
-    'The Master knows the word and answers only Yes, No or I don’t know.',
-    'Find the word with yes/no questions before time runs out, or everyone loses.',
-    'Then vote: one player secretly knew the word all along. Catch the Insider.',
-  ],
-};
-
 /**
  * A short motif that opens each game, so every game is recognisable by ear.
  * Impostor stays silent by design (playtested: quiet reveals read better).
@@ -201,7 +139,7 @@ function withSessionControls<TSetup>(
 
   const signature = SIGNATURE_SOUNDS[gameId];
   return (
-    <SessionControlsProvider rules={SESSION_RULES[gameId]} onRestartRound={restart}>
+    <SessionControlsProvider rules={GAME_HOW_TO_PLAY[gameId]} onRestartRound={restart}>
       {signature ? <SignatureCue source={signature} /> : null}
       <Suspense fallback={<SessionLoading />}>{child}</Suspense>
     </SessionControlsProvider>

@@ -17,6 +17,7 @@ import { StatChip } from '../../../src/components/ui/GameCard';
 import { PrimaryButton } from '../../../src/components/ui/PrimaryButton';
 import { IconButton, Screen } from '../../../src/components/ui/Screen';
 import { getGame, type GameCatalogEntry } from '../../../src/domain/games';
+import { getHowToPlay } from '../../../src/domain/howToPlay';
 import { useGameSetup } from '../../../src/domain/useGameSetup';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, mix, radius, space } from '../../../src/theme/tokens';
@@ -26,69 +27,6 @@ import { Icon } from '../../../src/components/ui/Icon';
 
 /** Tall enough that the scene reads as a place, not a thumbnail. */
 const HERO_HEIGHT = 340;
-
-const STEPS: Record<string, string[]> = {
-  impostor: [
-    'Everyone sees the same secret word — except the Impostor.',
-    'Take turns giving one short clue. Never say the word.',
-    'Argue, vote, then let a caught Impostor guess the word.',
-  ],
-  whos_the_liar: [
-    'Everyone gets a question privately — one player got a different one.',
-    'Answer aloud in order. Do not read your question out loud.',
-    'Argue it out, then tap who the group thinks is the Liar.',
-  ],
-  taboo: [
-    'Split into two teams. One describer sees the word and the forbidden list.',
-    'Get teammates to guess before time runs out — without saying banned words.',
-    'Correct +1, violation −1. First team to the target score wins.',
-  ],
-  most_likely: [
-    'Read a “Who is most likely to…” prompt aloud.',
-    'Countdown together — then everyone points at once.',
-    'Laugh, argue, next prompt. No scores required.',
-  ],
-  would_you_rather: [
-    'Read both choices out loud. No neutral answers allowed.',
-    'Argue it out — everyone has to defend a side.',
-    'Tap the one the room agreed on, then move to the next dilemma.',
-  ],
-  bomb: [
-    'Read the category and start the hidden fuse.',
-    'Say a new valid answer, then immediately pass the phone to the next player.',
-    'Whoever holds the phone when it explodes loses the round.',
-  ],
-  quiz: [
-    'Choose Pass & Play for quick no-score trivia, or Compete for named players and points.',
-    'Pick one of four answers, then reveal the correct choice and explanation.',
-    'Pass the phone between casual questions, or follow round-robin turns to a leaderboard.',
-  ],
-  gimbar: [
-    'The guesser holds the phone sideways on their forehead, screen facing the room.',
-    'Everyone else acts, hums and describes the word on screen — just never says it.',
-    'Tap the right side when you get it, the left side to pass. Every player takes a turn; most cards wins.',
-  ],
-  mesob: [
-    'Everyone secretly drops a few names or things into the mesob. Then split into two teams.',
-    'Round 1: describe freely. Round 2: one word only. Round 3: act it out in silence.',
-    'The same slips return every round, so jokes build. Most slips guessed wins.',
-  ],
-  mizan: [
-    'Each round shows two opposites on a dial, like Mild ← → Spicy. A hidden target sits somewhere between them.',
-    'Only the psychic sees where. If it sits near Spicy, they might say one clue: “Grandma’s mitmita.”',
-    'Everyone else drags the needle to where they think the target is. Closer scores more: 4, 3 or 2.',
-  ],
-  wink_killer: [
-    'The phone secretly deals roles. One player is the Killer.',
-    'The Killer winks at victims; when winked, count to five, then fall dramatically.',
-    'Think you saw it? Accuse. Catch the Killer before they clear the room.',
-  ],
-  insider: [
-    'The Master knows the secret word and answers only Yes, No or I don’t know.',
-    'Find the word together with yes/no questions before the clock runs out.',
-    'One player knew the word all along. Vote to catch the Insider.',
-  ],
-};
 
 export default function GameDetailsScreen() {
   const { gameId } = useLocalSearchParams<{ gameId: string }>();
@@ -112,7 +50,7 @@ export default function GameDetailsScreen() {
     );
   }
 
-  const steps = STEPS[game.id] ?? null;
+  const steps = getHowToPlay(game.id);
   const ground = mix(color.background, game.accent, 0.14);
   const returnToGames = () => {
     if (router.canGoBack()) {

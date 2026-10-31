@@ -121,8 +121,8 @@ export const GAMES: GameCatalogEntry[] = [
   {
     id: 'mizan',
     name: 'Mizan',
-    tagline: 'One clue, one hidden point on a scale. Read each other’s minds.',
-    hook: 'Read minds on a dial.',
+    tagline: 'Read each other’s minds on a scale between two opposites.',
+    hook: 'One clue. Find the spot.',
     playerCountLabel: '2–20 players',
     sessionLengthLabel: '~15 min',
     accent: gameAccent.mizan,
