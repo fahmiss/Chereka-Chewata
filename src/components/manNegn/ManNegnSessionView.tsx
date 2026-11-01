@@ -22,6 +22,7 @@ import { type } from '../../theme/typography';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
 import { PrimaryButton } from '../ui/PrimaryButton';
@@ -213,9 +214,9 @@ function Result({ session }: { session: ManNegnSession }) {
   const { rematch, clearSession } = useManNegnSession();
   const solved = session.finishOrder;
   const out = session.setup.players.filter((p) => session.statuses[p.id] === 'out');
-  return <SessionShell eyebrow="Finished" stage="result" stages={STAGES} accent={ACCENT} onEndGame={() => endGame(clearSession)} footer={<><PrimaryButton label="Play again" icon="refresh" onPress={() => rematch()} /><View style={styles.buttonRow}><View style={styles.half}><SecondaryButton label="Change setup" onPress={() => { clearSession(); router.replace('/game/man_negn/setup/review'); }} /></View><View style={styles.half}><SecondaryButton label="Home" onPress={() => endGame(clearSession)} /></View></View></>}>
+  return <SessionShell eyebrow="Finished" stage="result" stages={STAGES} accent={ACCENT} onEndGame={() => endGame(clearSession)} footer={<ResultActions gameId="man_negn" onPlayAgain={() => rematch()} onLeave={clearSession} />}>
     <ScrollView contentContainerStyle={styles.resultStack} showsVerticalScrollIndicator={false}>
-      <ResultHero scene="celebrate" accent={ACCENT} title="Identity revealed!" />
+      <ResultHero scene="celebrate" accent={ACCENT} title={solved[0] ? `${playerName(session, solved[0])} finished first` : 'Nobody solved it'} detail={solved.length ? `${solved.length} of ${session.setup.players.length} players guessed their identity correctly. The finish order follows who solved first.` : 'Everyone used both guesses. All identities are revealed below.'} />
       {solved.map((id, index) => <Surface key={id} active={index === 0} accent={ACCENT} contentStyle={styles.resultRow}><Text style={[type.numeric, { color: ACCENT }]}>#{index + 1}</Text><View style={styles.resultCopy}><Text style={[type.bodyStrong, styles.primary]}>{playerName(session, id)}</Text><Text style={[type.bodySm, styles.muted]}>{session.assignments[id]!.name_en}</Text></View></Surface>)}
       {out.map((player) => <Surface key={player.id} contentStyle={styles.resultRow}><Text style={[type.label, styles.muted]}>OUT</Text><View style={styles.resultCopy}><Text style={[type.bodyStrong, styles.primary]}>{player.displayName}</Text><Text style={[type.bodySm, styles.muted]}>{session.assignments[player.id]!.name_en}</Text></View></Surface>)}
     </ScrollView>

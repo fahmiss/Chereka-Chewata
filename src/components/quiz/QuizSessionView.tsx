@@ -17,6 +17,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { Icon } from '../ui/Icon';
@@ -285,7 +286,6 @@ function AnswerCard({
 function Result({ session }: { session: QuizSession }) {
   const { dispatch, clearSession } = useQuizSession();
   const compete = session.setup.playMode === 'compete';
-  const enter = useEnterAnimation(0, 18);
   const played = session.correctCount + session.incorrectCount;
   const accuracy = played ? Math.round((session.correctCount / played) * 100) : 0;
   const leaderboard = session.setup.players
@@ -301,21 +301,10 @@ function Result({ session }: { session: QuizSession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <View style={styles.footer}>
-          <PrimaryButton label="Play again" icon="refresh" onPress={dispatch.rematch} />
-          <SecondaryButton
-            label="Change setup"
-            onPress={() => {
-              clearSession();
-              router.replace('/game/quiz/setup/review');
-            }}
-          />
-          <SecondaryButton label="Home" icon="home" onPress={() => leaveQuiz(clearSession)} />
-        </View>
+        <ResultActions gameId="quiz" onPlayAgain={dispatch.rematch} onLeave={clearSession} />
       }
     >
       <Animated.ScrollView
-        style={enter}
         contentContainerStyle={styles.result}
         showsVerticalScrollIndicator={false}
       >
@@ -329,6 +318,11 @@ function Result({ session }: { session: QuizSession }) {
                 : `${winners[0]?.displayName ?? 'Winner'} wins!`
               : 'That’s the round!'
           }
+          detail={compete
+            ? winners.length > 1
+              ? `${winners.map((player) => player.displayName).join(', ')} share the top score: ${topScore} point${topScore === 1 ? '' : 's'}.`
+              : `${winners[0]?.displayName ?? 'The winner'} finished ahead with ${topScore} correct answer${topScore === 1 ? '' : 's'}.`
+            : `${session.correctCount} of ${played} questions answered correctly together — ${accuracy}% group accuracy.`}
         />
 
         {compete ? (

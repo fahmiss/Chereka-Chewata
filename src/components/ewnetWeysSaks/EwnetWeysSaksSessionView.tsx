@@ -31,6 +31,7 @@ import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { Standings } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
 import { MetaChip } from '../ui/Chip';
@@ -271,19 +272,16 @@ function Final({ session }: { session: EwnetSession }) {
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
-        <>
-          <PrimaryButton label="Play again" icon="refresh" onPress={() => rematch()} />
-          <SecondaryButton label="Back home" icon="home" quiet onPress={() => endGame(clearSession)} />
-        </>
+        <ResultActions gameId="ewnet_weys_saks" onPlayAgain={() => rematch()} onLeave={clearSession} />
       }
     >
       <ScrollView contentContainerStyle={styles.finalContent} showsVerticalScrollIndicator={false}>
         <ResultHero
           scene="celebrate"
           accent={ACCENT}
-          title={winners.length > 1 ? `${winners.join(' & ')} tie!` : `${winners[0] ?? 'Nobody'} wins!`}
+          title={winners.length > 1 ? 'It’s a tie!' : `${winners[0] ?? 'Nobody'} wins!`}
+          detail={`${winners.length > 1 ? `${winners.join(', ')} share the highest score` : 'Highest score'}: ${top} points after ${session.deck.length} rounds of finding the truth and fooling friends.`}
         />
-        <Text style={[type.body, styles.finalSubtitle]}>{top} points after {session.deck.length} rounds</Text>
         <Standings rows={rows} accent={ACCENT} />
       </ScrollView>
     </SessionShell>

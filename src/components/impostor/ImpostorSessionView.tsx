@@ -26,6 +26,8 @@ import {
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
+import { impostorResultReason } from '../../domain/shared/resultReasons';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
@@ -795,7 +797,6 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
     .join(', ');
   const summary = voteSummary(session);
   const topVotes = summary.reduce((max, row) => Math.max(max, row.count), 0);
-  const enter = useEnterAnimation(1, 20);
   const [deckExhausted, setDeckExhausted] = useState(false);
 
   return (
@@ -805,48 +806,22 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
       accent={accent}
       onEndGame={undefined}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again"
-            icon="refresh"
-            onPress={() => {
-              const next = dispatch.rematch();
-              if (!next) setDeckExhausted(true);
-            }}
-          />
-          <View style={styles.resultActions}>
-            <SecondaryButton
-              label="Change setup"
-              onPress={() => {
-                clearSession();
-                router.replace('/game/impostor/setup/review');
-              }}
-              style={styles.half}
-            />
-            <SecondaryButton
-              label="Another game"
-              onPress={() => {
-                clearSession();
-                router.replace('/home');
-              }}
-              style={styles.half}
-            />
-          </View>
-        </>
+        <ResultActions gameId="impostor" onPlayAgain={() => { if (!dispatch.rematch()) setDeckExhausted(true); }} onLeave={clearSession} />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
-        <Animated.View style={[styles.winnerBlock, enter]}>
+        <View style={styles.winnerBlock}>
           <ResultHero
             scene={crewWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
             title={crewWon ? 'Crew wins' : pluralImpostors ? 'Impostors win' : 'Impostor wins'}
+            detail={impostorResultReason(session)}
           />
           <Text style={[type.body, styles.winnerSub]}>
             {pluralImpostors ? 'Impostors' : 'Impostor'}:{' '}
             <Text style={{ color: accent }}>{impostorNames}</Text>
           </Text>
-        </Animated.View>
+        </View>
 
         <Surface accent={color.brandPrimary} active contentStyle={styles.wordCard}>
           <Text style={[type.eyebrow, { color: color.brandPrimary }]}>Secret word</Text>

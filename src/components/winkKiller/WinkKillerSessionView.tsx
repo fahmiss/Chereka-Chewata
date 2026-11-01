@@ -30,6 +30,8 @@ import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
+import { winkResultReason } from '../../domain/shared/resultReasons';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { PlayerPicker } from '../session/PlayerPicker';
@@ -350,7 +352,6 @@ function ResultPhase({ session }: { session: WinkKillerSession }) {
   const citizensWon = session.winner === 'citizens';
   const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
   const playLoss = useSoundEffect(LOSS_SOUND, SOUND_VOLUME.result);
-  const enter = useEnterAnimation(1, 16);
   const killers = killerIds(session).map((id) => getWinkPlayerName(session, id));
 
   useEffect(() => (citizensWon ? playWin() : playLoss()), [citizensWon, playLoss, playWin]);
@@ -362,37 +363,22 @@ function ResultPhase({ session }: { session: WinkKillerSession }) {
       stages={STAGES}
       accent={citizensWon ? color.success : ACCENT}
       footer={
-        <>
-          <PrimaryButton label="Play again" icon="refresh" onPress={() => rematch()} />
-          <View style={styles.row}>
-            <View style={styles.half}>
-              <SecondaryButton
-                label="Change setup"
-                onPress={() => {
-                  clearSession();
-                  router.replace('/game/wink_killer/setup/review');
-                }}
-              />
-            </View>
-            <View style={styles.half}>
-              <SecondaryButton label="Home" onPress={() => endGame(clearSession)} />
-            </View>
-          </View>
-        </>
+        <ResultActions gameId="wink_killer" onPlayAgain={() => rematch()} onLeave={clearSession} />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
-        <Animated.View style={[styles.center, enter]}>
+        <View style={styles.resultHead}>
           <ResultHero
             scene={citizensWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
             title={citizensWon ? 'Citizens win' : killers.length > 1 ? 'Killers win' : 'Killer wins'}
+            detail={winkResultReason(session)}
           />
           <Text style={[type.body, styles.secondaryCenter]}>
             {killers.length > 1 ? 'Killers' : 'Killer'}:{' '}
             <Text style={{ color: color.dangerUrgency }}>{killers.join(' & ')}</Text>
           </Text>
-        </Animated.View>
+        </View>
         {session.outIds.length ? (
           <Surface contentStyle={styles.card}>
             <Text style={[type.eyebrow, styles.muted]}>Out, in order</Text>
@@ -478,6 +464,7 @@ export function WinkKillerSessionView({ session }: { session: WinkKillerSession 
 }
 
 const styles = StyleSheet.create({
+  resultHead: { gap: space[3], alignItems: 'center' },
   focusHeadline: { color: ACCENT, fontSize: 36, lineHeight: 44, textAlign: 'center', paddingHorizontal: space[1], paddingVertical: space[3] },
   stack: {
     gap: space[4],

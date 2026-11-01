@@ -10,6 +10,7 @@ import { family, type } from '../../theme/typography';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
@@ -168,7 +169,6 @@ function Option({
 
 function Result({ session }: { session: WouldRatherSession }) {
   const { dispatch, clearSession } = useWouldRatherSession();
-  const enter = useEnterAnimation(1, 16);
 
   return (
     <SessionShell
@@ -179,29 +179,12 @@ function Result({ session }: { session: WouldRatherSession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <View style={styles.footer}>
-          <PrimaryButton label="Play again" icon="refresh" onPress={dispatch.rematch} />
-          <SecondaryButton
-            label="Change setup"
-            onPress={() => {
-              clearSession();
-              router.replace('/game/would_you_rather/setup/review');
-            }}
-          />
-          <SecondaryButton
-            label="Choose another game"
-            onPress={() => endGame(clearSession)}
-          />
-        </View>
+        <ResultActions gameId="would_you_rather" onPlayAgain={dispatch.rematch} onLeave={clearSession} />
       }
     >
-      <Animated.View style={[styles.ended, enter]}>
-        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" />
-        <Text style={[type.body, styles.hint]}>
-          You settled {session.playedCount} dilemma
-          {session.playedCount === 1 ? '' : 's'}. Nobody got to stay neutral.
-        </Text>
-      </Animated.View>
+      <View style={styles.ended}>
+        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" detail={session.playedCount ? `${session.playedCount} dilemma${session.playedCount === 1 ? '' : 's'} settled by the group. Every choice gave you something to debate.` : 'No dilemmas settled this session. Try a fresh set together.'} />
+      </View>
     </SessionShell>
   );
 }

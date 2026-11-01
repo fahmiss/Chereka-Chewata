@@ -29,6 +29,8 @@ import { family, type } from '../../theme/typography';
 import { SessionShell } from '../session/SessionShell';
 import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
+import { liarResultReason } from '../../domain/shared/resultReasons';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
@@ -553,7 +555,6 @@ function ResultPhase({ session }: { session: LiarSession }) {
   const liarName = getPlayerName(session, session.liarPlayerId);
   const summary = voteSummary(session);
   const topVotes = summary.reduce((max, row) => Math.max(max, row.count), 0);
-  const enter = useEnterAnimation(1, 20);
   const [deckExhausted, setDeckExhausted] = useState(false);
   const playVerdict = useSoundEffect(VERDICT_SOUND, SOUND_VOLUME.result);
   const playGroupWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
@@ -580,47 +581,21 @@ function ResultPhase({ session }: { session: LiarSession }) {
       accent={accent}
       onEndGame={undefined}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again"
-            icon="refresh"
-            onPress={() => {
-              const next = dispatch.rematch();
-              if (!next) setDeckExhausted(true);
-            }}
-          />
-          <View style={styles.resultActions}>
-            <SecondaryButton
-              label="Change setup"
-              onPress={() => {
-                clearSession();
-                router.replace('/game/whos_the_liar/setup/review');
-              }}
-              style={styles.half}
-            />
-            <SecondaryButton
-              label="Another game"
-              onPress={() => {
-                clearSession();
-                router.replace('/home');
-              }}
-              style={styles.half}
-            />
-          </View>
-        </>
+        <ResultActions gameId="whos_the_liar" onPlayAgain={() => { if (!dispatch.rematch()) setDeckExhausted(true); }} onLeave={clearSession} />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.resultScroll}>
-        <Animated.View style={[styles.winnerBlock, enter]}>
+        <View style={styles.winnerBlock}>
           <ResultHero
             scene={groupWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
             title={groupWon ? 'Group wins' : 'Liar wins'}
+            detail={liarResultReason(session)}
           />
           <Text style={[type.body, styles.winnerSub]}>
             Liar: <Text style={{ color: accent }}>{liarName}</Text>
           </Text>
-        </Animated.View>
+        </View>
 
         <Surface accent={color.brandPrimary} active contentStyle={styles.questionCard}>
           <Text style={[type.eyebrow, { color: color.brandPrimary }]}>Common question</Text>

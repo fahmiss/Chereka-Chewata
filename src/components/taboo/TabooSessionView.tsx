@@ -19,6 +19,8 @@ import { family, type } from '../../theme/typography';
 import { SessionShell, TABOO_STAGES } from '../session/SessionShell';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
+import { tabooResultReason } from '../../domain/shared/resultReasons';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
@@ -403,51 +405,28 @@ function FinalPhase({ session }: { session: TabooSession }) {
       : session.winner
         ? `${teamLabel(session.winner)} wins`
         : 'Game over';
-  const enter = useEnterAnimation(1, 16);
 
   return (
     <SessionShell
       eyebrow="Final"
+      scrollable
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
       accent={ACCENT}
       footer={
-        <>
-          <PrimaryButton
-            label="Rematch (new teams)"
-            icon="refresh"
-            onPress={() => {
-              if (!dispatch.rematch()) setDeckError(true);
-            }}
-          />
-          <SecondaryButton
-            label="Same teams again"
-            onPress={() => {
-              if (!dispatch.rematchKeepTeams()) setDeckError(true);
-            }}
-          />
-          <View style={styles.resultActions}>
-            <SecondaryButton
-              label="Change setup"
-              onPress={() => {
-                clearSession();
-                router.replace('/game/taboo/setup/review');
-              }}
-              style={styles.half}
-            />
-            <SecondaryButton
-              label="Home"
-              onPress={() => endGame(clearSession)}
-              style={styles.half}
-            />
-          </View>
-        </>
+        <ResultActions
+          gameId="taboo"
+          onPlayAgain={() => { if (!dispatch.rematch()) setDeckError(true); }}
+          onLeave={clearSession}
+          replayHint="Play again shuffles teams and deals fresh cards."
+          alternateReplay={{ label: 'Play with the same teams', onPress: () => { if (!dispatch.rematchKeepTeams()) setDeckError(true); } }}
+        />
       }
     >
-      <Animated.View style={[styles.finalBlock, enter]}>
-        <ResultHero scene="celebrate" accent={ACCENT} title={winner} />
+      <View style={styles.finalBlock}>
+        <ResultHero scene="celebrate" accent={ACCENT} title={winner} detail={tabooResultReason(session)} />
         <ScoreStrip session={session} />
-      </Animated.View>
+      </View>
 
       <Dialog
         visible={deckError}

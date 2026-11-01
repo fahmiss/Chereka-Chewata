@@ -33,6 +33,30 @@ const domain = (name) => load(resolve(root, `src/domain/${name}/machine.ts`));
 const players = (count) => Array.from({ length: count }, (_, i) => ({ id: `p${i}`, displayName: `Player ${i + 1}` }));
 const base = { players: players(2), categoryIds: ['animals'], contentLevels: ['family'], spicyAcknowledged: false };
 
+// Result explanations must match distinct endings, especially draws and give-up.
+const reasons = load(resolve(root, 'src/domain/shared/resultReasons.ts'));
+const resultBase = { setup: { players: players(4) }, accusedPlayerId: null };
+assert.match(reasons.impostorResultReason({ ...resultBase, winner: 'crew' }), /caught every Impostor/);
+assert.match(reasons.impostorResultReason({ ...resultBase, winner: 'impostor' }), /could not agree/);
+assert.match(reasons.impostorResultReason({ ...resultBase, winner: 'impostor', accusedPlayerId: 'p1', accusedIsImpostor: false }), /Player 2 was innocent/);
+assert.match(reasons.impostorResultReason({ ...resultBase, winner: 'impostor', accusedPlayerId: 'p1', accusedIsImpostor: true }), /correctly guessed/);
+assert.match(reasons.liarResultReason({ ...resultBase, winner: 'group' }), /different question/);
+assert.match(reasons.liarResultReason({ ...resultBase, winner: 'liar' }), /could not agree/);
+assert.match(reasons.liarResultReason({ ...resultBase, winner: 'liar', accusedPlayerId: 'p1' }), /Player 2 had the common question/);
+const unsolved = reasons.insiderResult({ ...resultBase, winner: 'nobody' });
+assert.equal(unsolved.title, 'Word not found');
+assert.doesNotMatch(unsolved.detail, /time ran out|timer expired/i, 'Give-up and timeout share one machine outcome');
+assert.match(reasons.insiderResult({ ...resultBase, winner: 'commons' }).detail, /Master and the Commons win/);
+assert.match(reasons.insiderResult({ ...resultBase, winner: 'insider', accusedPlayerId: 'p1' }).detail, /Player 2 was innocent/);
+assert.match(reasons.winkResultReason({ winner: 'citizens' }), /Every Killer/);
+assert.match(reasons.winkResultReason({ winner: 'killers', setup: { detective: true }, detectiveGuessesLeft: 0 }), /every guess/);
+assert.match(reasons.winkResultReason({ winner: 'killers', setup: { detective: true }, detectiveGuessesLeft: 2 }), /No Citizens remained/);
+assert.match(reasons.winkResultReason({ winner: 'killers', setup: { detective: false } }), /one Citizen left/);
+const draw = { winner: 'tie', scores: { a: 9, b: 4 }, turnsCompleted: { a: 2, b: 1 } };
+assert.match(reasons.tabooResultReason(draw), /before both teams could finish equal turns/);
+assert.match(reasons.tabooResultReason({ ...draw, scores: { a: 9, b: 9 }, turnsCompleted: { a: 2, b: 2 } }), /Both teams finished on 9/);
+console.log('PASS Results: accurate caught, escaped, give-up, detective and draw explanations');
+
 const mn = domain('manNegn');
 let man = mn.createManNegnSession(base);
 assert.ok(!('error' in man));

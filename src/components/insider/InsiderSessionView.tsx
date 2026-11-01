@@ -30,6 +30,8 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
+import { insiderResult } from '../../domain/shared/resultReasons';
 import { MetaChip } from '../ui/Chip';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
@@ -389,7 +391,6 @@ function ResultPhase({ session }: { session: InsiderSession }) {
   const playVerdict = useSoundEffect(VERDICT_SOUND, SOUND_VOLUME.result);
   const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
   const playLoss = useSoundEffect(LOSS_SOUND, SOUND_VOLUME.result);
-  const enter = useEnterAnimation(1, 16);
   const insider = getInsiderPlayerName(session, session.insiderId);
   const caught = session.winner === 'commons';
   const summary = insiderVoteSummary(session);
@@ -408,16 +409,7 @@ function ResultPhase({ session }: { session: InsiderSession }) {
     };
   }, [caught, playLoss, playVerdict, playWin]);
 
-  const headline =
-    session.winner === 'nobody' ? 'Time ran out' : caught ? 'Insider caught!' : 'Insider wins';
-  const detail =
-    session.winner === 'nobody'
-      ? 'Nobody found the word, so everyone loses.'
-      : caught
-        ? 'The Master and the Commons win.'
-        : session.accusedPlayerId
-          ? `${getInsiderPlayerName(session, session.accusedPlayerId)} was innocent.`
-          : 'The group could not agree.';
+  const { title: headline, detail } = insiderResult(session);
 
   return (
     <SessionShell
@@ -426,36 +418,11 @@ function ResultPhase({ session }: { session: InsiderSession }) {
       stages={STAGES}
       accent={caught ? color.success : ACCENT}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again (next Master)"
-            icon="refresh"
-            onPress={() => {
-              if (!rematch()) setDeckError(true);
-            }}
-          />
-          <View style={styles.row}>
-            <View style={styles.half}>
-              <SecondaryButton
-                label="Change setup"
-                onPress={() => {
-                  clearSession();
-                  router.replace('/game/insider/setup/review');
-                }}
-              />
-            </View>
-            <View style={styles.half}>
-              <SecondaryButton label="Home" onPress={() => endGame(clearSession)} />
-            </View>
-          </View>
-        </>
+        <ResultActions gameId="insider" onPlayAgain={() => { if (!rematch()) setDeckError(true); }} onLeave={clearSession} replayHint="New word · next Master." />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
-        <Animated.View style={[styles.center, enter]}>
-          <ResultHero scene={caught ? 'caught' : 'celebrate'} accent={ACCENT} title={headline} />
-          <Text style={[type.body, styles.secondaryCenter]}>{detail}</Text>
-        </Animated.View>
+        <ResultHero scene={caught ? 'caught' : 'celebrate'} accent={ACCENT} title={headline} detail={detail} />
 
         <Surface accent={ACCENT} active contentStyle={styles.card}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>Insider</Text>

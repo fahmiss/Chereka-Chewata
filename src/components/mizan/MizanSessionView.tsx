@@ -28,6 +28,7 @@ import { type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { TeamScoreStrip } from '../session/Scoreboards';
@@ -323,7 +324,6 @@ function FinalPhase({ session }: { session: MizanSession }) {
   const { rematch, clearSession } = useMizanSession();
   const [deckError, setDeckError] = useState(false);
   const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
-  const enter = useEnterAnimation(1, 16);
   const teams = session.setup.mode === 'teams';
   const max = togetherMaxScore(session);
 
@@ -349,36 +349,13 @@ function FinalPhase({ session }: { session: MizanSession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again"
-            icon="refresh"
-            onPress={() => {
-              if (!rematch()) setDeckError(true);
-            }}
-          />
-          <View style={styles.row}>
-            <View style={styles.half}>
-              <SecondaryButton
-                label="Change setup"
-                onPress={() => {
-                  clearSession();
-                  router.replace('/game/mizan/setup/review');
-                }}
-              />
-            </View>
-            <View style={styles.half}>
-              <SecondaryButton label="Home" onPress={() => endGame(clearSession)} />
-            </View>
-          </View>
-        </>
+        <ResultActions gameId="mizan" onPlayAgain={() => { if (!rematch()) setDeckError(true); }} onLeave={clearSession} />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
-        <Animated.View style={[styles.revealHead, enter]}>
-          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
-          <Text style={[type.body, styles.secondaryCenter]}>{verdict}</Text>
-        </Animated.View>
+        <ResultHero scene="celebrate" accent={ACCENT} title={headline} detail={teams
+          ? `Final score: ${session.scores.a}–${session.scores.b} (Team A–Team B), after equal turns. The leading team reached the target of ${session.setup.pointsToWin}.`
+          : `${session.scores.a} of ${max} possible points across ${session.setup.rounds} rounds. ${verdict}`} />
         {teams ? (
           <>
             <TeamScoreStrip scores={session.scores} activeTeam={null} accent={ACCENT} />

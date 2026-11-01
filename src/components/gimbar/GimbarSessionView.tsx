@@ -35,6 +35,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { leaders, Standings } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
 import { useCountdown, useSessionKeepAwake } from '../session/useCountdown';
@@ -437,13 +438,12 @@ function FinalPhase({ session }: { session: GimbarSession }) {
   const [deckError, setDeckError] = useState(false);
   const rows = gimbarStandings(session);
   const top = leaders(rows);
-  const enter = useEnterAnimation(1, 16);
   const headline =
     top.length === 0
       ? 'No points this time'
       : top.length === 1
         ? `${top[0]!.name} wins`
-        : `${top.map((row) => row.name).join(' & ')} tie`;
+        : 'It’s a tie';
 
   return (
     <SessionShell
@@ -452,35 +452,13 @@ function FinalPhase({ session }: { session: GimbarSession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again"
-            icon="refresh"
-            onPress={() => {
-              if (!rematch()) setDeckError(true);
-            }}
-          />
-          <View style={styles.row}>
-            <View style={styles.half}>
-              <SecondaryButton
-                label="Change setup"
-                onPress={() => {
-                  clearSession();
-                  router.replace('/game/gimbar/setup/review');
-                }}
-              />
-            </View>
-            <View style={styles.half}>
-              <SecondaryButton label="Home" onPress={() => endGame(clearSession)} />
-            </View>
-          </View>
-        </>
+        <ResultActions gameId="gimbar" onPlayAgain={() => { if (!rematch()) setDeckError(true); }} onLeave={clearSession} />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.finalScroll}>
-        <Animated.View style={[styles.finalHead, enter]}>
-          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
-        </Animated.View>
+        <ResultHero scene="celebrate" accent={ACCENT} title={headline} detail={top.length
+          ? `${top.length > 1 ? `${top.map((row) => row.name).join(', ')} share the highest total` : 'Highest total'}: ${top[0]!.score} correctly guessed card${top[0]!.score === 1 ? '' : 's'}.`
+          : 'Nobody guessed a card correctly this match. Try a fresh set together.'} />
         <Standings rows={rows} accent={ACCENT} />
       </ScrollView>
 

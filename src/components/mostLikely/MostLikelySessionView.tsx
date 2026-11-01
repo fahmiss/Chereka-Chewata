@@ -18,6 +18,7 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 
 const ACCENT = color.gameMostLikely;
 
@@ -212,7 +213,6 @@ function CountdownPhase({ session }: { session: MostLikelySession }) {
 
 function EndedPhase({ session }: { session: MostLikelySession }) {
   const { dispatch, clearSession } = useMostLikelySession();
-  const enter = useEnterAnimation(1, 16);
 
   return (
     <SessionShell
@@ -223,37 +223,12 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <>
-          <PrimaryButton
-            label="Play again"
-            icon="refresh"
-            onPress={() => dispatch.rematch()}
-          />
-          <View style={styles.row}>
-            <SecondaryButton
-              label="Change setup"
-              onPress={() => {
-                clearSession();
-                router.replace('/game/most_likely/setup/review');
-              }}
-              style={styles.half}
-            />
-            <SecondaryButton
-              label="Home"
-              onPress={() => endGame(clearSession)}
-              style={styles.half}
-            />
-          </View>
-        </>
+        <ResultActions gameId="most_likely" onPlayAgain={dispatch.rematch} onLeave={clearSession} />
       }
     >
-      <Animated.View style={[styles.ended, enter]}>
-        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" />
-        <Text style={[type.body, styles.hint]}>
-          You played {session.playedCount} prompt{session.playedCount === 1 ? '' : 's'}.
-          Compare answers, then move on.
-        </Text>
-      </Animated.View>
+      <View style={styles.ended}>
+        <ResultHero scene="celebrate" accent={ACCENT} title="That’s a wrap" detail={session.playedCount ? `${session.playedCount} prompt${session.playedCount === 1 ? '' : 's'} completed together. Everyone’s picks are part of the fun.` : 'No prompts completed this session. Try a fresh set together.'} />
+      </View>
     </SessionShell>
   );
 }

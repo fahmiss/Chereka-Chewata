@@ -1,7 +1,8 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Animated, Image, StyleSheet, Text, View } from 'react-native';
+import { useResultReveal } from '../../theme/motion';
 import { alpha, color, glow, overlay, radius, space } from '../../theme/tokens';
-import { family } from '../../theme/typography';
+import { family, type } from '../../theme/typography';
 
 export type ResultScene = 'caught' | 'celebrate';
 
@@ -15,19 +16,22 @@ type Props = {
   scene: ResultScene;
   accent: string;
   title: string;
+  detail?: string;
 };
 
 /**
- * End-of-round header shared by every game: the cast scene as a lit band,
- * washed in the game's colour from below, then a brush headline. Seen once
- * per round, so it can be loud — in-round screens stay type-led.
+ * Outcome and explanation are immediately readable, followed by the existing
+ * cast artwork with a brief reveal. No score/count-up animation lives here.
  */
-export function ResultHero({ scene, accent, title }: Props) {
+export function ResultHero({ scene, accent, title, detail }: Props) {
+  const reveal = useResultReveal();
   return (
     <View style={styles.root}>
+      <Text style={styles.title} accessibilityRole="header">{title}</Text>
+      {detail ? <Text style={[type.body, styles.detail]}>{detail}</Text> : null}
       {/* Glow on the outer view: iOS clips shadows on a view that crops. */}
-      <View
-        style={[styles.bandShell, glow(accent, 0.3, 22)]}
+      <Animated.View
+        style={[styles.bandShell, glow(accent, 0.3, 22), reveal]}
         accessibilityElementsHidden
         importantForAccessibility="no-hide-descendants"
       >
@@ -39,10 +43,7 @@ export function ResultHero({ scene, accent, title }: Props) {
             style={StyleSheet.absoluteFill}
           />
         </View>
-      </View>
-      <Text style={styles.title} accessibilityRole="header">
-        {title}
-      </Text>
+      </Animated.View>
     </View>
   );
 }
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: radius.large,
   },
+  detail: { color: color.textSecondary, textAlign: 'center' },
   band: {
     width: '100%',
     aspectRatio: 4 / 3,
@@ -80,6 +82,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     // Knewave leans right; the slack keeps the last glyph from clipping.
     paddingHorizontal: 6,
-    marginTop: space[2],
+    paddingVertical: space[1],
   },
 });

@@ -44,6 +44,7 @@ import { family, type } from '../../theme/typography';
 import { SOUND_VOLUME } from '../../theme/soundLevels';
 import { useSoundEffect } from '../../theme/useSoundEffect';
 import { ResultHero } from '../session/ResultHero';
+import { ResultActions } from '../session/ResultActions';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
 import { TeamScoreStrip } from '../session/Scoreboards';
 import { SessionShell } from '../session/SessionShell';
@@ -439,7 +440,6 @@ function TurnSummaryPhase({ session }: { session: MesobSession }) {
 function FinalPhase({ session }: { session: MesobSession }) {
   const { rematch, clearSession } = useMesobSession();
   const playWin = useSoundEffect(WIN_SOUND, SOUND_VOLUME.result);
-  const enter = useEnterAnimation(1, 16);
   const headline =
     session.winner === 'tie'
       ? 'It’s a tie'
@@ -456,29 +456,13 @@ function FinalPhase({ session }: { session: MesobSession }) {
       stages={STAGES}
       accent={ACCENT}
       footer={
-        <>
-          <PrimaryButton label="Play again (new slips)" icon="refresh" onPress={() => rematch()} />
-          <View style={styles.row}>
-            <View style={styles.half}>
-              <SecondaryButton
-                label="Change setup"
-                onPress={() => {
-                  clearSession();
-                  router.replace('/game/mesob/setup/review');
-                }}
-              />
-            </View>
-            <View style={styles.half}>
-              <SecondaryButton label="Home" onPress={() => endGame(clearSession)} />
-            </View>
-          </View>
-        </>
+        <ResultActions gameId="mesob" onPlayAgain={() => rematch()} onLeave={clearSession} replayHint="New slips and shuffled teams." />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
-        <Animated.View style={[styles.finalHead, enter]}>
-          <ResultHero scene="celebrate" accent={ACCENT} title={headline} />
-        </Animated.View>
+        <ResultHero scene="celebrate" accent={ACCENT} title={headline} detail={session.winner === 'tie'
+          ? `Both teams guessed ${session.scores.a} slips across the three rounds.`
+          : `${session.winner === 'a' || session.winner === 'b' ? teamLabel(session.winner) : 'The leading team'} guessed the most slips across all three rounds. Final score: ${session.scores.a}–${session.scores.b} (Team A–Team B).`} />
         <MesobScores session={session} activeTeam={null} />
         <Surface contentStyle={styles.card}>
           <Text style={[type.eyebrow, styles.secondary]}>What was in the mesob</Text>

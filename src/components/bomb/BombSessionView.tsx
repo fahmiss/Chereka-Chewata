@@ -14,6 +14,7 @@ import { alpha, color, glow, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
 import { ReportCardButton } from '../session/ReportCardButton';
 import { SessionShell } from '../session/SessionShell';
+import { ResultActions } from '../session/ResultActions';
 import { Icon } from '../ui/Icon';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
@@ -115,13 +116,13 @@ function useTooHotAnimation() {
     const animation = Animated.parallel([
       Animated.timing(impact, {
         toValue: 1,
-        duration: 260,
+        duration: 180,
         easing: easeOut,
         useNativeDriver: true,
       }),
       Animated.timing(flash, {
         toValue: 0,
-        duration: 220,
+        duration: 140,
         easing: easeOut,
         useNativeDriver: true,
       }),
@@ -280,7 +281,6 @@ function PlayingPhase({ session }: { session: BombSession }) {
 
 function ExplodedPhase(_: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
-  const copyEnter = useEnterAnimation(2, 8);
   const tooHotAnimation = useTooHotAnimation();
 
   useEffect(() => {
@@ -295,15 +295,15 @@ function ExplodedPhase(_: { session: BombSession }) {
       accent={color.dangerUrgency}
       onEndGame={() => endGame(clearSession)}
       footer={
-        <PrimaryButton
-          label="New round"
-          icon="refresh"
-          onPress={dispatch.continueAfterExplosion}
-        />
+        <ResultActions gameId="bomb" onPlayAgain={dispatch.continueAfterExplosion} onLeave={clearSession} replayHint="New category · random starter." />
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.explodedScroll}>
         <View style={styles.explodedBody}>
+          <View style={styles.explosionCopy}>
+            <Text style={[type.displayMd, styles.explosionTitle]}>Who was holding the phone?</Text>
+            <Text style={[type.body, styles.passHint]}>That player loses this round.</Text>
+          </View>
           <Animated.View
             style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.shake]}
           >
@@ -324,10 +324,6 @@ function ExplodedPhase(_: { session: BombSession }) {
             </View>
           </Animated.View>
 
-          <Animated.View style={[styles.explosionCopy, copyEnter]}>
-            <Text style={[type.displayMd, styles.explosionTitle]}>Who was holding the phone?</Text>
-            <Text style={[type.body, styles.passHint]}>That player loses this round.</Text>
-          </Animated.View>
         </View>
       </ScrollView>
     </SessionShell>

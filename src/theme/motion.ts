@@ -85,6 +85,33 @@ export function useEnterAnimation(index = 0, distance = 12) {
   };
 }
 
+/** Brief artwork reveal. Outcomes and numbers stay immediately readable. */
+export function useResultReveal() {
+  const reduced = useReducedMotion();
+  const progress = useRef(new Animated.Value(reduced ? 1 : 0)).current;
+
+  useEffect(() => {
+    if (reduced) {
+      progress.setValue(1);
+      return;
+    }
+    progress.setValue(0);
+    const animation = Animated.timing(progress, {
+      toValue: 1,
+      duration: 180,
+      easing: easeOut,
+      useNativeDriver: true,
+    });
+    animation.start();
+    return () => animation.stop();
+  }, [progress, reduced]);
+
+  return {
+    opacity: progress,
+    transform: [{ translateY: progress.interpolate({ inputRange: [0, 1], outputRange: [6, 0] }) }],
+  };
+}
+
 /** Smoothly animates a 0–1 progress value when `value` changes. */
 export function useProgress(value: number, length = 1) {
   const reduced = useReducedMotion();
