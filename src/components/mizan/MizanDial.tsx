@@ -93,8 +93,12 @@ export function MizanDial({ accent, target, needle, onChange }: Props) {
       onMoveShouldSetPanResponder: () => !!onChangeRef.current,
       onPanResponderTerminationRequest: () => false,
       onPanResponderGrant: (event) => {
-        measure();
-        update(event.nativeEvent.pageX, event.nativeEvent.pageY);
+        const { pageX, pageY } = event.nativeEvent;
+        // Scrolling can move the dial without another onLayout event.
+        wrapRef.current?.measureInWindow((x, y) => {
+          origin.current = { x, y };
+          update(pageX, pageY);
+        });
       },
       onPanResponderMove: (event) => update(event.nativeEvent.pageX, event.nativeEvent.pageY),
     });

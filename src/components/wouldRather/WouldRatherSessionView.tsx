@@ -44,6 +44,9 @@ function DilemmaCard({ session }: { session: WouldRatherSession }) {
       stage={chosen ? 'discuss' : 'choose'}
       stages={STAGES}
       accent={ACCENT}
+      scrollable
+      centerContent
+      instruction={chosen ? 'Tap the other choice if the room changes its mind.' : 'Debate it, then tap the choice your group agrees on.'}
       onEndGame={() => endGame(clearSession)}
       // Same slots in both states so the card above never shifts once tapped.
       footer={
@@ -101,11 +104,6 @@ function DilemmaCard({ session }: { session: WouldRatherSession }) {
           chosen={chosen}
           onPress={() => dispatch.chooseSide('b')}
         />
-        <Text style={[type.bodySm, styles.hint]}>
-          {chosen
-            ? 'Tap the other one if the room changes its mind.'
-            : 'Argue it out, then tap the one you agreed on.'}
-        </Text>
       </Animated.View>
     </SessionShell>
   );
@@ -175,6 +173,8 @@ function Result({ session }: { session: WouldRatherSession }) {
   return (
     <SessionShell
       eyebrow="Session complete"
+      scrollable
+      centerContent
       stage="result"
       stages={STAGES}
       accent={ACCENT}
@@ -216,12 +216,12 @@ const styles = StyleSheet.create({
     gap: space[3],
   },
   body: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     gap: space[3],
   },
   option: {
-    padding: space[6],
+    padding: space[5],
     borderWidth: 1,
     borderRadius: radius.large,
     backgroundColor: alpha(color.surfaceRaised, 0.72),
@@ -241,8 +241,8 @@ const styles = StyleSheet.create({
   optionText: {
     color: color.textPrimary,
     fontFamily: family.display.extrabold,
-    fontSize: 22,
-    lineHeight: 28,
+    fontSize: 26,
+    lineHeight: 33,
   },
   tick: {
     width: 24,

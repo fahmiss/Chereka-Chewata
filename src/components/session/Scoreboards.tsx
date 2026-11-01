@@ -15,6 +15,7 @@ export function TeamScoreStrip({
   accent,
   members,
   highlightName,
+  compact = false,
 }: {
   scores: Record<TeamId, number>;
   activeTeam: TeamId | null;
@@ -22,6 +23,7 @@ export function TeamScoreStrip({
   members?: Record<TeamId, string[]>;
   /** A name to light up inside the member list (e.g. the current psychic). */
   highlightName?: string;
+  compact?: boolean;
 }) {
   return (
     <View style={styles.strip}>
@@ -32,6 +34,7 @@ export function TeamScoreStrip({
         accent={accent}
         members={members?.a}
         highlightName={highlightName}
+        compact={compact}
       />
       <Text style={[type.mono, styles.vs]}>vs</Text>
       <TeamPill
@@ -41,6 +44,7 @@ export function TeamScoreStrip({
         accent={accent}
         members={members?.b}
         highlightName={highlightName}
+        compact={compact}
       />
     </View>
   );
@@ -53,6 +57,7 @@ function TeamPill({
   accent,
   members,
   highlightName,
+  compact,
 }: {
   team: TeamId;
   score: number;
@@ -60,6 +65,7 @@ function TeamPill({
   accent: string;
   members?: string[];
   highlightName?: string;
+  compact: boolean;
 }) {
   return (
     <View
@@ -68,10 +74,12 @@ function TeamPill({
         active && { borderColor: alpha(accent, 0.55), backgroundColor: alpha(accent, 0.16) },
       ]}
     >
-      <Text style={[type.eyebrow, { color: active ? accent : color.textMuted }]}>
-        {teamLabel(team)}
-      </Text>
-      <Text style={[type.displayMd, { color: active ? accent : color.textPrimary }]}>{score}</Text>
+      <View style={[styles.pillHead, compact && styles.compactHead]}>
+        <Text style={[type.eyebrow, compact && styles.compactLabel, { color: active ? accent : color.textMuted }]}>
+          {teamLabel(team)}
+        </Text>
+        <Text style={[compact ? type.numeric : type.displayMd, { color: active ? accent : color.textPrimary }]}>{score}</Text>
+      </View>
       {members?.length ? (
         <Text style={[type.bodySm, styles.pillMembers]} numberOfLines={3}>
           {members.map((name, index) => (
@@ -161,6 +169,9 @@ export function leaders(rows: StandingRow[]): StandingRow[] {
 }
 
 const styles = StyleSheet.create({
+  pillHead: { gap: 2 },
+  compactHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: space[2] },
+  compactLabel: { letterSpacing: 0.6, flexShrink: 1 },
   strip: {
     flexDirection: 'row',
     // Stretch so both pills match height when their member lists differ.

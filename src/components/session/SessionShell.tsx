@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
-import { Animated, BackHandler, StyleSheet, Text, View } from 'react-native';
+import { Animated, BackHandler, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useT } from '../../i18n';
 import { useEnterAnimation } from '../../theme/motion';
 import { color, overlay, radius, space } from '../../theme/tokens';
@@ -21,6 +21,13 @@ type Props = {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
+  /** Keep turn details quiet when the card, dial or player list is the focus. */
+  headingStyle?: 'display' | 'context';
+  /** Short action guidance stays beside the fixed controls. */
+  instruction?: string;
+  /** Use for public content; private reveal containers manage their own scroll. */
+  scrollable?: boolean;
+  centerContent?: boolean;
   /** Active stage id — must appear in `stages`. */
   stage?: string;
   /** Ordered stage ids for the progress rail. */
@@ -44,6 +51,10 @@ export function SessionShell({
   eyebrow,
   title,
   subtitle,
+  headingStyle = 'display',
+  instruction,
+  scrollable = false,
+  centerContent = false,
   stage,
   stages = DEDUCTION_STAGES,
   accent = color.gameImpostor,
@@ -113,17 +124,31 @@ export function SessionShell({
         ) : null}
 
         {title ? (
-          <Animated.View style={[styles.heading, enter]}>
-            <Text style={[type.displayLg, styles.title]}>{title}</Text>
+          <Animated.View style={[styles.heading, headingStyle === 'context' && styles.contextHeading, enter]}>
+            <Text style={[headingStyle === 'context' ? type.titleLg : type.displayLg, styles.title]}>{title}</Text>
             {subtitle ? (
-              <Text style={[type.body, styles.subtitle]}>{subtitle}</Text>
+              <Text style={[headingStyle === 'context' ? type.bodySm : type.body, styles.subtitle]}>{subtitle}</Text>
             ) : null}
           </Animated.View>
         ) : null}
 
-        <View style={styles.body}>{children}</View>
+        <View style={styles.body}>
+          {scrollable ? (
+            <ScrollView
+              style={styles.scroll}
+              contentContainerStyle={[styles.scrollContent, centerContent && styles.centeredContent]}
+              showsVerticalScrollIndicator={false}
+              keyboardShouldPersistTaps="handled"
+            >
+              {children}
+            </ScrollView>
+          ) : children}
+        </View>
 
-        {footer ? <View style={styles.footer}>{footer}</View> : null}
+        {footer || instruction ? <View style={styles.footer}>
+          {instruction ? <View style={styles.instruction}><Text style={[type.bodySm, styles.instructionText]}>{instruction}</Text></View> : null}
+          {footer}
+        </View> : null}
       </View>
 
       {onEndGame ? (
@@ -208,6 +233,8 @@ const styles = StyleSheet.create({
   },
   eyebrowPill: {
     paddingVertical: 6,
+    flex: 1,
+    paddingRight: space[3],
   },
   menuButton: {
     flexDirection: 'row',
@@ -230,6 +257,10 @@ const styles = StyleSheet.create({
     marginTop: space[5],
     gap: space[2],
   },
+  contextHeading: {
+    marginTop: space[4],
+    gap: space[1],
+  },
   title: {
     color: color.textPrimary,
   },
@@ -238,8 +269,14 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
+    minHeight: 0,
     paddingTop: space[5],
   },
+  scroll: { flex: 1 },
+  scrollContent: { flexGrow: 1, paddingBottom: space[2] },
+  centeredContent: { justifyContent: 'center' },
+  instruction: { minHeight: 40, justifyContent: 'center' },
+  instructionText: { color: color.textSecondary, textAlign: 'center' },
   footer: {
     gap: space[3],
     paddingBottom: space[3],

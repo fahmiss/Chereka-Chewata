@@ -1,6 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, AppState, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { getCategoryName } from '../../content/categories';
@@ -32,7 +32,7 @@ import { PrivateScreenGuard } from '../session/PrivateScreenGuard';
 import { AnimatedSvgCircle } from '../ui/AnimatedSvgCircle';
 import { MetaChip } from '../ui/Chip';
 import { Dialog } from '../ui/Dialog';
-import { Icon, type IconName } from '../ui/Icon';
+import { Icon } from '../ui/Icon';
 import { PressableScale } from '../ui/PressableScale';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
@@ -54,33 +54,6 @@ function endGame(clearSession: () => void) {
 /* ------------------------------------------------------------------ *
  * Shared pieces
  * ------------------------------------------------------------------ */
-
-/** Centred instruction block with an icon — the recurring "table" screen. */
-function Brief({
-  icon,
-  children,
-  accent = ACCENT,
-}: {
-  icon: IconName;
-  children: ReactNode;
-  accent?: string;
-}) {
-  const enter = useEnterAnimation(1, 16);
-
-  return (
-    <Animated.View style={[styles.brief, enter]}>
-      <View
-        style={[
-          styles.briefIcon,
-          { backgroundColor: alpha(accent, 0.14), borderColor: alpha(accent, 0.3) },
-        ]}
-      >
-        <Icon name={icon} size={26} color={accent} strokeWidth={1.8} />
-      </View>
-      {children}
-    </Animated.View>
-  );
-}
 
 function PlayerChoice({
   name,
@@ -400,6 +373,7 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
       eyebrow={`Private reveal · ${session.revealIndex + 1}/${total}`}
       stage="reveal"
       title={name}
+      headingStyle="context"
       accent={cardAccent}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -482,9 +456,10 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
             <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
           </View>
         ) : (
-          <Animated.View
+          <Animated.ScrollView
+            contentContainerStyle={styles.secretScrollContent}
             style={[
-              styles.secretInner,
+              styles.secretScroll,
               {
                 opacity: fade,
                 transform: [{ scale: revealScale }],
@@ -501,8 +476,8 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
               {impostor ? 'You are the' : 'Secret word'}
             </Text>
             <Text
-              style={[styles.secretWord, { color: color.textPrimary }, !impostor && secretFont]}
-              numberOfLines={2}
+              style={[styles.secretWord, { color: color.textPrimary }, impostor && styles.impostorWord, !impostor && secretFont]}
+              numberOfLines={impostor ? 1 : undefined}
               adjustsFontSizeToFit
             >
               {impostor ? 'IMPOSTOR' : secretWord}
@@ -514,7 +489,7 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
                   : 'Blend in. Find the word.'
                 : secretHint}
             </Text>
-          </Animated.View>
+          </Animated.ScrollView>
         )}
       </PressableScale>
     </SessionShell>
@@ -532,7 +507,8 @@ function CluesPhase({ session }: { session: ImpostorSession }) {
       eyebrow={secondCycle ? 'Clues · Round 2' : 'Clues'}
       stage="clues"
       title={`${name} starts`}
-      subtitle={
+      headingStyle="context"
+      instruction={
         secondCycle
           ? 'One Impostor remains. Give one new short clue each.'
           : 'One short clue each, in order. Leave the phone on the table.'
@@ -546,7 +522,7 @@ function CluesPhase({ session }: { session: ImpostorSession }) {
         />
       }
     >
-      <Text style={[type.body, styles.clueRule]}>
+      <Text style={[type.bodySm, styles.clueRule]}>
         Don’t say the secret word, spell it, translate it, or rhyme with it.
       </Text>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.orderList}>
@@ -583,6 +559,9 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
       eyebrow="Discussion"
       stage="discuss"
       title={secondCycle ? 'Find the remaining Impostor' : 'Talk it out'}
+      headingStyle="context"
+      scrollable={!timer}
+      centerContent={!timer}
       onEndGame={() => endGame(clearSession)}
       footer={
         timer ? null : (
@@ -606,7 +585,8 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
           />
         </View>
       ) : (
-        <Brief icon="megaphone">
+        <View style={styles.discussionFocus}>
+          <Text style={[type.brushHero, styles.focusHeadline]}>{secondCycle ? 'WHO’S\nLEFT?' : 'WHO’S\nFAKING?'}</Text>
           <Text style={[type.body, styles.briefText]}>
             {secondCycle
               ? 'The first Impostor is out. Discuss the new clues and find their hidden teammate.'
@@ -614,7 +594,7 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
               ? 'When you’re ready, each player votes privately on this phone.'
               : 'Argue in the room. When the group agrees, tap who you’re accusing.'}
           </Text>
-        </Brief>
+        </View>
       )}
     </SessionShell>
   );
@@ -629,7 +609,8 @@ function GroupAccusePhase({ session }: { session: ImpostorSession }) {
       eyebrow="Group decision"
       stage="vote"
       title="Who is the group accusing?"
-      subtitle="Tap the player your group chose."
+      headingStyle="context"
+      instruction="Select the player your group suspects, then confirm."
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
@@ -685,7 +666,9 @@ function VotingSelectPhase({ session }: { session: ImpostorSession }) {
     <SessionShell
       eyebrow={session.runoffRound > 0 ? 'Runoff vote' : 'Private vote'}
       stage="vote"
-      title={`${name}, who is ${session.eliminatedImpostorIds.length ? 'the remaining' : 'the'} Impostor?`}
+      title={`${name}’s private vote`}
+      headingStyle="context"
+      instruction={`Choose ${session.eliminatedImpostorIds.length ? 'the remaining' : 'the'} Impostor, then confirm your vote.`}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
@@ -771,6 +754,10 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
       eyebrow="Final guess"
       stage="vote"
       title={`${name} guesses`}
+      headingStyle="context"
+      scrollable
+      centerContent
+      instruction="Say one word aloud. The group confirms whether it matches."
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
@@ -787,14 +774,12 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
         </>
       }
     >
-      <Brief icon="megaphone">
-        <Text style={[type.body, styles.briefText]}>
-          Say the word. The group decides.
-        </Text>
+      <View style={styles.discussionFocus}>
+        <Text style={[type.brushHero, styles.focusHeadline]}>{'GUESS\nTHE WORD'}</Text>
         {session.setup.showCategoryToImpostor ? (
           <MetaChip icon="layers" label={`Category: ${categoryName}`} />
         ) : null}
-      </Brief>
+      </View>
     </SessionShell>
   );
 }
@@ -967,19 +952,6 @@ const styles = StyleSheet.create({
   },
 
   /* shared brief */
-  brief: {
-    flex: 1,
-    justifyContent: 'center',
-    gap: space[4],
-  },
-  briefIcon: {
-    width: 56,
-    height: 56,
-    borderRadius: radius.medium,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   briefText: {
     color: color.textSecondary,
     fontSize: 18,
@@ -995,7 +967,7 @@ const styles = StyleSheet.create({
   /* reveal */
   secretCard: {
     flex: 1,
-    minHeight: 360,
+    minHeight: 260,
     borderRadius: radius.extraLarge,
     borderWidth: 1,
     overflow: 'hidden',
@@ -1011,6 +983,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
   },
+  secretScroll: { flex: 1, width: '100%' },
+  secretScrollContent: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', gap: space[5], paddingVertical: space[2] },
+  impostorWord: { fontSize: 36, lineHeight: 42, letterSpacing: -1 },
+  discussionFocus: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', gap: space[5], paddingVertical: space[4] },
+  focusHeadline: { color: ACCENT, fontSize: 40, lineHeight: 50, textAlign: 'center', paddingHorizontal: space[1] },
   holdWrap: {
     width: HOLD_RING,
     height: HOLD_RING,

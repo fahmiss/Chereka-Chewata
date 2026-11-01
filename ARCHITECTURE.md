@@ -153,6 +153,12 @@ Implementation:
 
 ### Private handoff pattern (shared)
 
+`SessionShell` supports opt-in public-content scrolling and compact context
+headings. Action guidance and footer controls remain outside that scroll.
+Private role/question cards scroll inside their reveal container when needed;
+the existing hold, hide, background concealment and in-memory state rules still
+apply. Layout changes do not advance turns or alter scoring.
+
 Used by Impostor role reveal, Who’s the Liar question reveal, and private voting:
 
 1. **Pass screen** — show player name only; no secrets.

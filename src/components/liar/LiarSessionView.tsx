@@ -267,6 +267,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
       stage="reveal"
       stages={LIAR_STAGES}
       title={name}
+      headingStyle="context"
       accent={cardAccent}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -347,9 +348,10 @@ function RevealPhase({ session }: { session: LiarSession }) {
             <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
           </View>
         ) : (
-          <Animated.View
+          <Animated.ScrollView
+            contentContainerStyle={styles.secretScrollContent}
             style={[
-              styles.secretInner,
+              styles.secretScroll,
               { opacity: fade, transform: [{ scale: revealScale }] },
             ]}
           >
@@ -362,15 +364,13 @@ function RevealPhase({ session }: { session: LiarSession }) {
                   ? { fontFamily: family.ethiopic.medium }
                   : null,
               ]}
-              numberOfLines={5}
-              adjustsFontSizeToFit
             >
               {question}
             </Text>
             <Text style={[type.body, styles.secretHint]}>
               Answer aloud later. Do not read the question out loud.
             </Text>
-          </Animated.View>
+          </Animated.ScrollView>
         )}
       </PressableScale>
     </SessionShell>
@@ -421,7 +421,8 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
       stage="answers"
       stages={LIAR_STAGES}
       title={`${name} starts`}
-      subtitle="One concise answer each, in order. Leave the phone on the table."
+      headingStyle="context"
+      instruction="Give one concise answer each, then discuss who got a different question."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -459,7 +460,8 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
       stage="vote"
       stages={LIAR_STAGES}
       title="Who is the group accusing?"
-      subtitle="Tap the player your group chose."
+      headingStyle="context"
+      instruction="Select the player your group suspects, then confirm."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -513,7 +515,8 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
       stage="vote"
       stages={LIAR_STAGES}
       title={name}
-      subtitle="Tap who you think got a different question."
+      headingStyle="context"
+      instruction="Choose who got a different question, then lock your vote."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -730,7 +733,7 @@ const styles = StyleSheet.create({
   },
   secretCard: {
     flex: 1,
-    minHeight: 360,
+    minHeight: 260,
     borderRadius: radius.extraLarge,
     borderWidth: 1,
     overflow: 'hidden',
@@ -744,6 +747,8 @@ const styles = StyleSheet.create({
     gap: space[5],
     width: '100%',
   },
+  secretScroll: { flex: 1, width: '100%' },
+  secretScrollContent: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', gap: space[4], paddingVertical: space[2] },
   holdWrap: {
     width: HOLD_RING,
     height: HOLD_RING,

@@ -58,8 +58,9 @@ function Intro({ session }: { session: EwnetSession }) {
       eyebrow={`Round ${session.roundIndex + 1} of ${session.deck.length}`}
       stage="bluff"
       stages={STAGES}
-      title="Make the lie believable"
-      subtitle="Write a believable bluff, or submit the truth if you know it. All answers are checked after the phone goes around."
+      scrollable
+      centerContent
+      instruction="Write a believable bluff, or submit the truth if you know it. Keep possible answers private."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label="Write answers" icon="pencil" onPress={() => apply(startBluffs)} />}
@@ -112,7 +113,8 @@ function BluffEntry({ session }: { session: EwnetSession }) {
       stage="bluff"
       stages={STAGES}
       title={ewnetPlayerName(session, playerId)}
-      subtitle="Write a convincing bluff, or submit the truth if you know it. A true submission earns 2 points at the reveal, once only."
+      headingStyle="context"
+      instruction="Submit a bluff or the truth. A true submission earns 2 points at the reveal, once only."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label="Lock my answer" icon="lock" disabled={!value.trim()} onPress={submit} />}
@@ -158,7 +160,8 @@ function Vote({ session }: { session: EwnetSession }) {
       stage="vote"
       stages={STAGES}
       title={ewnetPlayerName(session, currentVoterId(session))}
-      subtitle="One answer is true. The others were written by your friends. You cannot pick your own."
+      headingStyle="context"
+      instruction="Find the true answer. You cannot choose your own bluff."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -208,7 +211,7 @@ function RoundResult({ session }: { session: EwnetSession }) {
       stage="truth"
       stages={STAGES}
       title="The truth is out"
-      subtitle={question.explanation_en}
+      headingStyle="context"
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -220,10 +223,8 @@ function RoundResult({ session }: { session: EwnetSession }) {
       }
     >
       <ScrollView contentContainerStyle={styles.resultList} showsVerticalScrollIndicator={false}>
-        <Standings rows={ewnetStandings(session).map((p) => ({ id: p.id, name: p.displayName, score: p.score }))} accent={ACCENT} />
-        {session.knownTruthIds.length ? <Text style={[type.body, styles.resultQuestion]}>Already knew it: {session.knownTruthIds.map((id) => ewnetPlayerName(session, id)).join(', ')}. Each earns 2 points for submitting the truth; no extra truth-vote bonus.</Text> : null}
         <Text style={[type.body, styles.resultQuestion]}>{question.question_en}</Text>
-        {session.answers.map((answer) => {
+        {[...session.answers].sort((a, b) => Number(b.isTruth) - Number(a.isTruth)).map((answer) => {
           const fooled = fooledCount(session, answer.id);
           return (
             <Surface
@@ -233,7 +234,7 @@ function RoundResult({ session }: { session: EwnetSession }) {
               contentStyle={styles.resultAnswer}
             >
               <View style={styles.resultTop}>
-                <Text style={[type.titleMd, styles.answerText]}>{answer.text}</Text>
+                <Text style={[type.titleMd, styles.answerText, answer.isTruth && styles.truthAnswer]}>{answer.text}</Text>
                 <MetaChip
                   icon={answer.isTruth ? 'checkCircle' : 'users'}
                   label={answer.isTruth ? 'TRUE' : `${fooled} fooled`}
@@ -243,9 +244,13 @@ function RoundResult({ session }: { session: EwnetSession }) {
               <Text style={[type.bodySm, styles.muted]}>
                 {answer.isTruth ? 'The real answer · truth voters earn 2' : `Written by ${ewnetPlayerName(session, answer.authorId)} · +${fooled}`}
               </Text>
+              {answer.isTruth ? <Text style={[type.body, styles.explanation]}>{question.explanation_en}</Text> : null}
             </Surface>
           );
         })}
+        {session.knownTruthIds.length ? <Text style={[type.body, styles.resultQuestion]}>Already knew it: {session.knownTruthIds.map((id) => ewnetPlayerName(session, id)).join(', ')}. Each earns 2 points for submitting the truth; no extra truth-vote bonus.</Text> : null}
+        <Text style={[type.eyebrow, styles.muted]}>Standings</Text>
+        <Standings rows={ewnetStandings(session).map((p) => ({ id: p.id, name: p.displayName, score: p.score }))} accent={ACCENT} />
         <ReportCardButton game="ewnet_weys_saks" cardId={question.id} />
         {question.source_url ? <SecondaryButton label={`Source: ${question.source_name ?? 'Read more'}`} quiet onPress={() => { void Linking.openURL(question.source_url!).catch(() => undefined); }} /> : null}
       </ScrollView>
@@ -263,7 +268,6 @@ function Final({ session }: { session: EwnetSession }) {
       eyebrow="Final scores"
       stage="result"
       stages={STAGES}
-      title="Best bluffer, best detective"
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -302,10 +306,10 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   entryScroll: { paddingBottom: space[4] },
   questionCard: { padding: space[6], gap: space[5] },
-  question: { color: color.textPrimary, lineHeight: 38 },
+  question: { color: color.textPrimary, lineHeight: 34 },
   muted: { color: color.textMuted },
   entryCard: { padding: space[5], gap: space[4] },
-  entryQuestion: { color: color.textSecondary },
+  entryQuestion: { color: color.textPrimary, fontSize: 22, lineHeight: 29 },
   input: {
     minHeight: 72,
     borderRadius: radius.medium,
@@ -321,7 +325,7 @@ const styles = StyleSheet.create({
   inputMeta: { flexDirection: 'row', justifyContent: 'space-between', gap: space[3] },
   count: { color: color.textMuted },
   answerList: { gap: space[3], paddingBottom: space[6] },
-  voteQuestion: { color: color.textPrimary, marginBottom: space[2] },
+  voteQuestion: { color: color.textPrimary, fontSize: 22, lineHeight: 29, marginBottom: space[2] },
   answerOption: {
     minHeight: 64,
     flexDirection: 'row',
@@ -336,6 +340,8 @@ const styles = StyleSheet.create({
   answerText: { color: color.textPrimary, flex: 1 },
   resultList: { gap: space[3], paddingBottom: space[6] },
   resultQuestion: { color: color.textSecondary, marginBottom: space[2] },
+  truthAnswer: { color: color.success, fontSize: 26, lineHeight: 33 },
+  explanation: { color: color.textSecondary },
   resultAnswer: { padding: space[4], gap: space[2] },
   resultTop: { flexDirection: 'row', alignItems: 'center', gap: space[3] },
   finalContent: { gap: space[5], paddingBottom: space[6] },

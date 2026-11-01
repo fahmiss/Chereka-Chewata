@@ -70,7 +70,7 @@ function listNames(names: string[]): string {
   return `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
 }
 
-function ScoreLine({ session }: { session: MizanSession }) {
+function ScoreLine({ session, compact = false }: { session: MizanSession; compact?: boolean }) {
   if (session.setup.mode === 'teams') {
     const names = (team: 'a' | 'b') =>
       teamIds(session, team).map((id) => getMizanPlayerName(session, id));
@@ -79,6 +79,7 @@ function ScoreLine({ session }: { session: MizanSession }) {
         scores={session.scores}
         activeTeam={session.activeTeam}
         accent={ACCENT}
+        compact={compact}
         // Who's on which side, so the table knows whose turn it is to guess.
         members={{ a: names('a'), b: names('b') }}
         highlightName={getMizanPlayerName(session, currentPsychicId(session))}
@@ -133,6 +134,7 @@ function PeekPhase({ session }: { session: MizanSession }) {
       stage="peek"
       stages={STAGES}
       title={psychic}
+      headingStyle="context"
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -152,13 +154,13 @@ function PeekPhase({ session }: { session: MizanSession }) {
         onUnlock={unlock}
         resetKey={`${session.turnNumber}-${session.spectrum.id}`}
       >
-        <View style={styles.peekInner}>
+        <ScrollView style={styles.peekScroll} contentContainerStyle={styles.peekInner} showsVerticalScrollIndicator={false}>
           <MizanDial accent={ACCENT} target={session.target} />
           <SpectrumLabels session={session} />
           <Text style={[type.bodySm, styles.secondaryCenter]}>
             Give one clue that sits where the bright wedge is. Then hide the screen.
           </Text>
-        </View>
+        </ScrollView>
       </HoldToReveal>
     </SessionShell>
   );
@@ -175,10 +177,13 @@ function GuessPhase({ session }: { session: MizanSession }) {
       stage="guess"
       stages={STAGES}
       title={`${psychic}, give your clue`}
-      subtitle={
+      headingStyle="context"
+      scrollable
+      centerContent
+      instruction={
         teams
-          ? 'One clue, out loud. Their team drags the needle; the psychic stays quiet after that.'
-          : 'One clue, out loud. Everyone else drags the needle together.'
+          ? 'Hear one clue, then the guessing team moves the needle. The psychic stays quiet.'
+          : 'Hear one clue, then everyone else moves the needle together.'
       }
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
@@ -203,7 +208,7 @@ function GuessPhase({ session }: { session: MizanSession }) {
       }
     >
       <View style={styles.stack}>
-        <ScoreLine session={session} />
+        <ScoreLine session={session} compact />
         <MizanDial
           accent={ACCENT}
           needle={session.guess}
@@ -225,7 +230,10 @@ function CallPhase({ session }: { session: MizanSession }) {
       stage="guess"
       stages={STAGES}
       title="Left or right?"
-      subtitle={`${opponents}: is the real target left or right of the needle? Right call scores 1.`}
+      headingStyle="context"
+      instruction={`${opponents}: is the hidden target left or right of the needle? A correct call earns 1 point.`}
+      scrollable
+      centerContent
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -246,7 +254,7 @@ function CallPhase({ session }: { session: MizanSession }) {
       }
     >
       <View style={styles.stack}>
-        <ScoreLine session={session} />
+        <ScoreLine session={session} compact />
         <MizanDial accent={ACCENT} needle={session.guess} />
         <SpectrumLabels session={session} />
       </View>
@@ -289,6 +297,8 @@ function RevealPhase({ session }: { session: MizanSession }) {
   return (
     <SessionShell
       eyebrow="Reveal"
+      scrollable
+      centerContent
       stage="reveal"
       stages={STAGES}
       accent={ACCENT}
@@ -303,7 +313,7 @@ function RevealPhase({ session }: { session: MizanSession }) {
         </Animated.View>
         <MizanDial accent={ACCENT} target={session.target} needle={session.guess} />
         <SpectrumLabels session={session} />
-        {teams ? <ScoreLine session={session} /> : null}
+        {teams ? <ScoreLine session={session} compact /> : null}
       </View>
     </SessionShell>
   );
@@ -413,6 +423,7 @@ export function MizanSessionView({ session }: { session: MizanSession }) {
 }
 
 const styles = StyleSheet.create({
+  peekScroll: { flex: 1, width: '100%' },
   stack: {
     gap: space[4],
     paddingBottom: space[4],
@@ -428,8 +439,8 @@ const styles = StyleSheet.create({
   },
   end: {
     ...type.brushTitle,
-    fontSize: 22,
-    lineHeight: 28,
+    fontSize: 19,
+    lineHeight: 25,
     flex: 1,
   },
   endLeft: {

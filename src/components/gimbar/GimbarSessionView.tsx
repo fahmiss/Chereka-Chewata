@@ -139,7 +139,10 @@ function ReadyPhase({ session }: { session: GimbarSession }) {
       stage="ready"
       stages={STAGES}
       title={`${name} guesses`}
-      subtitle="Hold the phone sideways on your forehead, screen facing the room. Everyone else acts, hums and describes."
+      headingStyle="context"
+      instruction="Screen facing the room. Everyone else acts, hums and describes."
+      scrollable
+      centerContent
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -151,6 +154,7 @@ function ReadyPhase({ session }: { session: GimbarSession }) {
       }
     >
       <Animated.View style={[styles.readyBody, enter]}>
+        <Text style={[type.brushHero, styles.readyHeadline]}>PHONE TO{ '\n' }FOREHEAD</Text>
         <Surface accent={ACCENT} active contentStyle={styles.readyCard}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>Controls</Text>
           <ControlsHint tilt={tilt} />
@@ -164,9 +168,7 @@ function ReadyPhase({ session }: { session: GimbarSession }) {
           </Text>
         </Surface>
         {session.turnIndex > 0 ? (
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <Standings rows={standings} accent={ACCENT} />
-          </ScrollView>
+          <Standings rows={standings} accent={ACCENT} />
         ) : null}
       </Animated.View>
     </SessionShell>
@@ -537,9 +539,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   readyBody: {
-    flex: 1,
+    flexGrow: 1,
+    justifyContent: 'center',
     gap: space[4],
   },
+  readyHeadline: { color: ACCENT, fontSize: 36, lineHeight: 44, textAlign: 'center', paddingHorizontal: space[1], paddingVertical: space[2] },
   readyCard: {
     padding: space[5],
     gap: space[3],

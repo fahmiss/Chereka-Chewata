@@ -2862,6 +2862,14 @@ session state and never route parameters.
   context above a large purple brush “Who am I?” focal point. Keep instructions
   concise, Yes/No guidance next to the controls, and the existing button styles.
   The main content scrolls on smaller screens; essential actions remain below it.
+- Gameplay hierarchy across the remaining games (2026-11-01): the question,
+  clue, dial, role or player choices lead; turn details use compact headings.
+  Put concise action guidance beside the controls. Public content and long
+  private role/question cards may scroll, with confirm/hide controls kept outside
+  the scroll area. Timed word games keep readable words ahead of timer decoration.
+- Mizan uses compact team-score context during guessing. Ewnet reveals the
+  truth and explanation before the other answers and standings. Gimbar keeps
+  its existing landscape tap halves; Tikus Dinich never exposes ending-time cues.
 - Competitive Quiz uses 3, 5 or 10 rounds per player. Every seat receives the
   same difficulty within each round, and the opening seat rotates on rematch.
 - The shared menu explicitly says **Restart entire game** and confirms that

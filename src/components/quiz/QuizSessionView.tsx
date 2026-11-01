@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { preload } from 'expo-audio';
-import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Animated, StyleSheet, Text, View } from 'react-native';
 import { getCategoryName } from '../../content/categories';
 import { localizeText } from '../../content/localize';
 import {
@@ -54,6 +54,8 @@ function Ready({ session }: { session: QuizSession }) {
   return (
     <SessionShell
       eyebrow={compete ? 'Compete' : 'Pass & Play'}
+      scrollable
+      centerContent
       stage="ready"
       stages={STAGES}
       accent={ACCENT}
@@ -106,6 +108,7 @@ function Question({ session }: { session: QuizSession }) {
   return (
     <SessionShell
       eyebrow={`Question ${session.questionIndex + 1} of ${session.questions.length}`}
+      instruction={revealed ? undefined : 'Tap one answer to reveal the result.'}
       stage={revealed ? 'reveal' : 'question'}
       stages={STAGES}
       accent={ACCENT}
@@ -125,9 +128,12 @@ function Question({ session }: { session: QuizSession }) {
         </View>
       ) : undefined}
     >
-      <Animated.View style={[styles.questionWrap, enter]}>
+      <Animated.ScrollView style={[styles.questionWrap, enter]} contentContainerStyle={styles.questionContent} showsVerticalScrollIndicator={false}>
         {player ? (
-          <Text style={styles.turn}>{player.displayName}’s turn</Text>
+          <View style={styles.turnRow}>
+            <Text style={styles.turn}>{player.displayName}’s turn</Text>
+            <Text style={[type.numeric, styles.meta]}>{session.scores[player.id] ?? 0} pts</Text>
+          </View>
         ) : null}
         <Text style={[type.label, styles.meta]}>
           {getCategoryName(question.category_id, session.contentLanguage)} · {question.difficulty}
@@ -145,12 +151,7 @@ function Question({ session }: { session: QuizSession }) {
           })}
         </Text>
 
-        <ScrollView
-          style={styles.answersScroll}
-          contentContainerStyle={styles.answers}
-          showsVerticalScrollIndicator={false}
-          bounces={false}
-        >
+        <View style={styles.answers}>
           {session.currentAnswers.map((answer, index) => (
             <AnswerCard
               key={answer.id}
@@ -201,8 +202,8 @@ function Question({ session }: { session: QuizSession }) {
               ) : null}
             </View>
           ) : null}
-        </ScrollView>
-      </Animated.View>
+        </View>
+      </Animated.ScrollView>
     </SessionShell>
   );
 }
@@ -387,7 +388,7 @@ const styles = StyleSheet.create({
     gap: space[2],
   },
   center: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     gap: space[4],
@@ -405,11 +406,13 @@ const styles = StyleSheet.create({
     flex: 1,
     minHeight: 0,
   },
+  questionContent: { paddingBottom: space[4] },
+  turnRow: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: space[3] },
   turn: {
-    ...type.brushTitle,
-    color: ACCENT,
-    marginBottom: space[1],
-    paddingRight: 4,
+    ...type.titleMd,
+    color: color.textPrimary,
+    marginBottom: space[2],
+    flex: 1,
   },
   meta: {
     color: color.textMuted,
@@ -419,17 +422,13 @@ const styles = StyleSheet.create({
   questionText: {
     color: color.textPrimary,
     fontFamily: family.display.extrabold,
-    fontSize: 24,
-    lineHeight: 31,
+    fontSize: 26,
+    lineHeight: 34,
     marginBottom: space[4],
   },
   answers: {
     gap: space[3],
     paddingBottom: space[3],
-  },
-  answersScroll: {
-    flex: 1,
-    minHeight: 0,
   },
   answer: {
     minHeight: 64,

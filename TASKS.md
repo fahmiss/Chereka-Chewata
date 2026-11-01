@@ -10,6 +10,18 @@ _Last updated: 2026-11-01._
 
 ## Open
 
+### Gameplay layout consistency (2026-11-01)
+
+- [x] Carry the approved hierarchy to the other 13 games: gameplay content leads, turn details stay compact, and concise instructions sit beside the actions
+- [x] Add opt-in scrolling/centering to SessionShell while keeping footer controls outside the content scroll
+- [x] Quiz: scroll questions and answer choices together; keep the active player and score compact
+- [x] Mizan: compact team scores, scrollable dial layouts and private peek, and remeasure drag origin after scrolling
+- [x] Ewnet: emphasize questions and voting choices; show the truth and its explanation before bluffs and standings
+- [x] Taboo/Mesob: compact timers, clearer action groups, readable central words/slips and smaller-screen scrolling
+- [x] Deduction games: quieter voter/turn headers, stronger public activity headlines, and scrollable private role/question content
+- [x] Keep Gimbar's landscape tap controls and Tikus Dinich's hidden deadline, constant sounds and surprise ending intact
+- [x] Browser walkthrough of the 13 updated games, including Quiz/Ewnet scoring, Mesob/Taboo controls, deduction handoffs, and targeted 320 × 568 private-card/dial checks; type check and web export pass
+
 ### Approved Man Negn layout (2026-11-01)
 
 - [x] Apply the approved gameplay preview: compact player/guess context, large purple brush “Who am I?”, concise instructions, and Yes/No guidance beside the actions

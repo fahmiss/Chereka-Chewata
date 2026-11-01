@@ -140,6 +140,7 @@ function EntryPhase({ session }: { session: MesobSession }) {
       stage="fill"
       stages={STAGES}
       title={`${name}, add ${count}`}
+      headingStyle="context"
       subtitle="Names, places or things the whole room could guess. Famous people, family jokes, foods."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
@@ -217,6 +218,7 @@ function RoundIntroPhase({ session }: { session: MesobSession }) {
       stage="play"
       stages={STAGES}
       title={rule.title}
+      scrollable
       subtitle={rule.rule}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
@@ -260,7 +262,10 @@ function TurnReadyPhase({ session }: { session: MesobSession }) {
       stage="play"
       stages={STAGES}
       title={`${teamLabel(session.activeTeam)}: ${name}`}
-      subtitle={`${rule.rule} Only ${name} looks at the phone.`}
+      headingStyle="context"
+      instruction={`Only ${name} looks at the phone. ${rule.rule}`}
+      scrollable
+      centerContent
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label={`Start ${seconds}s`} icon="clock" onPress={() => apply(beginTurn)} />}
@@ -308,6 +313,7 @@ function PlayingPhase({ session }: { session: MesobSession }) {
   return (
     <SessionShell
       eyebrow={paused ? 'Paused' : `Round ${session.round} · ${rule.title}`}
+      instruction={paused ? 'The slip stays hidden until you resume.' : rule.rule}
       stage="play"
       stages={STAGES}
       accent={urgent ? color.dangerUrgency : ACCENT}
@@ -366,7 +372,7 @@ function PlayingPhase({ session }: { session: MesobSession }) {
         />
       </View>
 
-      <View style={styles.slipArea}>
+      <ScrollView style={styles.flex} showsVerticalScrollIndicator={false} contentContainerStyle={styles.slipArea}>
         <Surface accent={ACCENT} active contentStyle={styles.slipCard}>
           {paused ? (
             <Text style={[type.body, styles.secondary]}>Paused. The slip is hidden.</Text>
@@ -379,7 +385,7 @@ function PlayingPhase({ session }: { session: MesobSession }) {
             </>
           )}
         </Surface>
-      </View>
+      </ScrollView>
     </SessionShell>
   );
 }
@@ -566,8 +572,8 @@ const styles = StyleSheet.create({
   timerDigits: {
     color: color.textPrimary,
     fontFamily: family.mono.bold,
-    fontSize: 48,
-    lineHeight: 54,
+    fontSize: 32,
+    lineHeight: 38,
   },
   track: {
     height: 6,
@@ -582,22 +588,22 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   slipArea: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
+    paddingBottom: space[2],
   },
   slipCard: {
-    minHeight: 220,
+    minHeight: 180,
     padding: space[6],
     gap: space[3],
     alignItems: 'center',
     justifyContent: 'center',
   },
   slipText: {
+    ...type.brushHero,
     color: color.textPrimary,
-    fontFamily: family.display.black,
     fontSize: 44,
-    lineHeight: 50,
-    letterSpacing: -1.2,
+    lineHeight: 54,
     textAlign: 'center',
   },
   correctButton: {

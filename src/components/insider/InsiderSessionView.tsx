@@ -81,14 +81,17 @@ function MasterIntroPhase({ session }: { session: InsiderSession }) {
       eyebrow="The Master"
       stage="roles"
       stages={STAGES}
-      title={`${master} is the Master`}
-      subtitle="The Master knows the secret word and answers only Yes, No or I don't know. One other player secretly knows it too: the Insider."
+      scrollable
+      centerContent
+      instruction="The Master answers Yes, No or I don’t know. One secret Insider also knows the word."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label="Deal secret roles" icon="eye" onPress={() => apply(startReveals)} />}
     >
       <Animated.View style={[styles.center, enter]}>
-        <GlyphDisk icon="search" accent={ACCENT} />
+        <GlyphDisk icon="search" accent={ACCENT} size={72} />
+        <Text style={[type.brushHero, styles.focusHeadline]}>{master}</Text>
+        <Text style={[type.titleMd, styles.primary]}>is the Master</Text>
         <Text style={[type.body, styles.secondaryCenter]}>
           Everyone, the Master included, now sees a private role card.
         </Text>
@@ -128,6 +131,7 @@ function RevealPhase({ session }: { session: InsiderSession }) {
       stage="roles"
       stages={STAGES}
       title={getInsiderPlayerName(session, playerId)}
+      headingStyle="context"
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -144,6 +148,7 @@ function RevealPhase({ session }: { session: InsiderSession }) {
     >
       <HoldToReveal
         accent={ACCENT}
+        scrollable
         unlocked={unlocked}
         onUnlock={unlock}
         resetKey={session.revealIndex}
@@ -203,11 +208,14 @@ function QuizPhase({ session }: { session: InsiderSession }) {
 
   return (
     <SessionShell
-      eyebrow="Quiz"
+      eyebrow="Insider"
       stage="quiz"
       stages={STAGES}
-      title="Find the word"
-      subtitle={`Ask ${master} yes/no questions. ${master} holds the phone and taps when someone says the word.`}
+      title={`${master} is the Master`}
+      headingStyle="context"
+      scrollable
+      centerContent
+      instruction={`Ask ${master} yes/no questions. ${master} taps when someone says the word.`}
       accent={urgent ? color.dangerUrgency : ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -222,6 +230,7 @@ function QuizPhase({ session }: { session: InsiderSession }) {
       }
     >
       <View style={styles.center}>
+        <Text style={[type.brushHero, styles.focusHeadline]}>FIND THE{ '\n' }WORD</Text>
         <Text style={[styles.clock, urgent && { color: color.dangerUrgency }]}>
           {formatClock(leftSeconds)}
         </Text>
@@ -264,7 +273,10 @@ function DiscussionPhase({ session }: { session: InsiderSession }) {
       stage="vote"
       stages={STAGES}
       title="Now, who already knew?"
-      subtitle="Who steered too well? Who was suspiciously quiet? Discuss. The Master can be questioned but is never the Insider."
+      headingStyle="context"
+      scrollable
+      centerContent
+      instruction="Discuss who guided the questions suspiciously well. The Master can be questioned but is never the Insider."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -299,7 +311,8 @@ function GroupAccusePhase({ session }: { session: InsiderSession }) {
       stage="vote"
       stages={STAGES}
       title="Who is the Insider?"
-      subtitle="Tap the player your group chose."
+      headingStyle="context"
+      instruction="Select the player your group suspects, then confirm."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -345,7 +358,8 @@ function VotingSelectPhase({ session }: { session: InsiderSession }) {
       stage="vote"
       stages={STAGES}
       title={voterId ? getInsiderPlayerName(session, voterId) : 'Player'}
-      subtitle="Tap who you think secretly knew the word."
+      headingStyle="context"
+      instruction="Choose who secretly knew the word, then lock your vote."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -521,7 +535,7 @@ const styles = StyleSheet.create({
     paddingBottom: space[4],
   },
   center: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     gap: space[3],
@@ -562,9 +576,10 @@ const styles = StyleSheet.create({
   clock: {
     color: color.textPrimary,
     fontFamily: family.mono.bold,
-    fontSize: 72,
-    lineHeight: 80,
+    fontSize: 48,
+    lineHeight: 56,
   },
+  focusHeadline: { color: ACCENT, fontSize: 40, lineHeight: 49, textAlign: 'center', paddingHorizontal: space[1], paddingVertical: space[2] },
   row: {
     flexDirection: 'row',
     gap: space[3],

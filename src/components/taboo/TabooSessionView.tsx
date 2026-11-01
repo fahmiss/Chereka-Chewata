@@ -89,7 +89,10 @@ function RoundReadyPhase({ session }: { session: TabooSession }) {
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
       title={`${team}'s turn`}
-      subtitle={`${name} describes. Opposing team: watch for forbidden words.`}
+      headingStyle="context"
+      instruction="The other team watches for forbidden words. Only the describer sees the card."
+      scrollable
+      centerContent
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -175,6 +178,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
   return (
     <SessionShell
       eyebrow={paused ? 'Paused' : `${teamLabel(session.activeTeam)} playing`}
+      scrollable
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
       accent={urgent ? color.dangerUrgency : ACCENT}
@@ -216,7 +220,6 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               </Text>
             </PressableScale>
           </View>
-          {card ? <ReportCardButton game="taboo" cardId={card.id} onReported={() => withLock(dispatch.discardCard)} /> : null}
           <View style={styles.actionRow}>
             <PressableScale
               accessibilityRole="button"
@@ -239,6 +242,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               style={styles.half}
             />
           </View>
+          {card ? <ReportCardButton game="taboo" cardId={card.id} onReported={() => withLock(dispatch.discardCard)} /> : null}
         </>
       }
     >
@@ -336,7 +340,9 @@ function TurnSummaryPhase({ session }: { session: TabooSession }) {
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
       title={`${team} scored ${session.turnScore}`}
-      subtitle="Fix a mis-tap before continuing."
+      headingStyle="context"
+      instruction="Fix a mis-tap with −1 or +1 before continuing."
+      scrollable
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -497,7 +503,7 @@ const styles = StyleSheet.create({
     borderColor: alpha(ACCENT, 0.3),
     backgroundColor: alpha(ACCENT, 0.08),
     paddingHorizontal: space[4],
-    paddingTop: space[3],
+    paddingTop: space[2],
     paddingBottom: space[2],
     gap: space[2],
   },
@@ -511,15 +517,15 @@ const styles = StyleSheet.create({
   timerReadout: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     gap: space[3],
   },
   timerDigits: {
     color: color.textPrimary,
     fontFamily: family.mono.bold,
-    fontSize: 54,
-    lineHeight: 58,
-    letterSpacing: -2,
+    fontSize: 32,
+    lineHeight: 38,
+    letterSpacing: -1,
     fontVariant: ['tabular-nums'],
   },
   timerDigitsUrgent: {
@@ -617,9 +623,13 @@ const styles = StyleSheet.create({
   },
   actionLabel: {
     color: color.textPrimary,
+    flexShrink: 1,
+    textAlign: 'center',
   },
   actionLabelDark: {
     color: color.void,
+    flexShrink: 1,
+    textAlign: 'center',
   },
   dim: {
     opacity: 0.45,

@@ -110,6 +110,7 @@ function RevealPhase({ session }: { session: WinkKillerSession }) {
       stage="roles"
       stages={STAGES}
       title={getWinkPlayerName(session, playerId)}
+      headingStyle="context"
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -126,6 +127,7 @@ function RevealPhase({ session }: { session: WinkKillerSession }) {
     >
       <HoldToReveal
         accent={ACCENT}
+        scrollable
         unlocked={unlocked}
         onUnlock={unlock}
         resetKey={session.revealIndex}
@@ -152,14 +154,17 @@ function DetectiveAnnouncePhase({ session }: { session: WinkKillerSession }) {
       eyebrow="In the open"
       stage="play"
       stages={STAGES}
-      title={`${id ? getWinkPlayerName(session, id) : 'Player'} is the Detective`}
-      subtitle="Only the Detective may accuse, with 3 guesses. The Detective cannot be winked."
+      scrollable
+      centerContent
+      instruction="Only the Detective may accuse, with 3 guesses. The Detective cannot be winked."
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={<PrimaryButton label="Start playing" icon="eye" onPress={() => apply(startPlay)} />}
     >
       <Animated.View style={[styles.center, enter]}>
-        <GlyphDisk icon="search" accent={ACCENT} />
+        <GlyphDisk icon="search" accent={ACCENT} size={72} />
+        <Text style={[type.brushHero, styles.focusHeadline]}>{id ? getWinkPlayerName(session, id) : 'Player'}</Text>
+        <Text style={[type.titleMd, styles.primary]}>is the Detective</Text>
       </Animated.View>
     </SessionShell>
   );
@@ -172,13 +177,14 @@ function PlayPhase({ session }: { session: WinkKillerSession }) {
 
   return (
     <SessionShell
-      eyebrow={`${alive.length} still in`}
+      eyebrow="Wink Killer"
       stage="play"
       stages={STAGES}
-      title="Keep your eyes open"
-      subtitle={
+      title={`${alive.length} still in${detective ? ` · ${session.detectiveGuessesLeft} detective ${session.detectiveGuessesLeft === 1 ? 'guess' : 'guesses'} left` : ''}`}
+      headingStyle="context"
+      instruction={
         detective
-          ? `Winked? Count to five, then fall. Detective has ${session.detectiveGuessesLeft} ${session.detectiveGuessesLeft === 1 ? 'guess' : 'guesses'} left.`
+          ? 'Winked? Count to five, then fall. Only the Detective may accuse.'
           : 'Winked? Count to five, then fall. Sure who did it? Accuse. Wrong accusers are out.'
       }
       accent={ACCENT}
@@ -195,6 +201,8 @@ function PlayPhase({ session }: { session: WinkKillerSession }) {
       }
     >
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.stack}>
+        <Text style={[type.brushHero, styles.focusHeadline]}>{'KEEP YOUR\nEYES OPEN'}</Text>
+        <Text style={[type.bodySm, styles.secondaryCenter]}>Phone face down. Pick it up to mark someone out or accuse.</Text>
         <Surface accent={ACCENT} active contentStyle={styles.card}>
           <Text style={[type.eyebrow, { color: ACCENT }]}>Still in</Text>
           <Text style={[type.body, styles.primary]}>
@@ -231,9 +239,6 @@ function PlayPhase({ session }: { session: WinkKillerSession }) {
             <Text style={[type.bodySm, styles.muted]}>Marked someone by mistake? Tap Back in.</Text>
           </Surface>
         ) : null}
-        <Text style={[type.bodySm, styles.muted]}>
-          Put the phone face down in the middle. Pick it up only to mark someone out or accuse.
-        </Text>
       </ScrollView>
     </SessionShell>
   );
@@ -265,7 +270,8 @@ function PickPhase({
       stage="play"
       stages={STAGES}
       title={title}
-      subtitle={subtitle}
+      headingStyle="context"
+      instruction={subtitle}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -472,6 +478,7 @@ export function WinkKillerSessionView({ session }: { session: WinkKillerSession 
 }
 
 const styles = StyleSheet.create({
+  focusHeadline: { color: ACCENT, fontSize: 36, lineHeight: 44, textAlign: 'center', paddingHorizontal: space[1], paddingVertical: space[3] },
   stack: {
     gap: space[4],
     paddingBottom: space[4],

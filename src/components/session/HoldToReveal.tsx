@@ -53,6 +53,8 @@ type Props = {
   label?: string;
   /** Plays the shared reveal chime; Impostor-style silent games pass false. */
   sound?: boolean;
+  /** Long role descriptions can scroll without moving Hide and continue. */
+  scrollable?: boolean;
   children: ReactNode;
 };
 
@@ -64,6 +66,7 @@ export function HoldToReveal({
   resetKey,
   label = 'Hold to reveal',
   sound = true,
+  scrollable = false,
   children,
 }: Props) {
   const hold = useRef(new Animated.Value(0)).current;
@@ -208,6 +211,14 @@ export function HoldToReveal({
           </View>
           <Text style={[type.eyebrow, styles.eyebrow]}>{label}</Text>
         </View>
+      ) : scrollable ? (
+        <Animated.ScrollView
+          showsVerticalScrollIndicator={false}
+          style={[styles.revealScroll, { opacity: fade, transform: [{ scale: revealScale }] }]}
+          contentContainerStyle={styles.revealScrollContent}
+        >
+          {children}
+        </Animated.ScrollView>
       ) : (
         <Animated.View
           style={[styles.inner, { opacity: fade, transform: [{ scale: revealScale }] }]}
@@ -246,9 +257,11 @@ export function HoldHint({ text }: { text: string }) {
 }
 
 const styles = StyleSheet.create({
+  revealScroll: { flex: 1, width: '100%' },
+  revealScrollContent: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: space[6], gap: space[4] },
   card: {
     flex: 1,
-    minHeight: 340,
+    minHeight: 260,
     borderRadius: radius.extraLarge,
     borderWidth: 1,
     overflow: 'hidden',

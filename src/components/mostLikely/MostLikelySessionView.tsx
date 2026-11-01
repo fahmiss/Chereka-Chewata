@@ -73,6 +73,9 @@ function PromptCard({ session }: { session: MostLikelySession }) {
       stage={stageFor(phase)}
       stages={STAGES}
       accent={ACCENT}
+      scrollable
+      centerContent
+      instruction={pointed ? 'Argue it out. No official winner needed.' : 'Read aloud, then count down and point together.'}
       onEndGame={() => endGame(clearSession)}
       // Prompt and discussion keep matching action slots, so the card does not
       // jump when everyone starts arguing.
@@ -119,14 +122,6 @@ function PromptCard({ session }: { session: MostLikelySession }) {
           </Text>
         </Surface>
 
-        <Text
-          style={[type.bodySm, styles.hint]}
-          numberOfLines={2}
-        >
-          {pointed
-            ? 'Argue it out. No official winner needed.'
-            : 'Someone reads it aloud. Then everyone points at the same time.'}
-        </Text>
       </Animated.View>
     </SessionShell>
   );
@@ -200,6 +195,8 @@ function CountdownPhase({ session }: { session: MostLikelySession }) {
   return (
     <SessionShell
       eyebrow={value === 0 ? 'Point now' : 'Point together'}
+      scrollable
+      centerContent
       stage="point"
       stages={STAGES}
       accent={ACCENT}
@@ -220,6 +217,8 @@ function EndedPhase({ session }: { session: MostLikelySession }) {
   return (
     <SessionShell
       eyebrow="Session"
+      scrollable
+      centerContent
       stage={stageFor(session.phase)}
       stages={STAGES}
       accent={ACCENT}
@@ -267,7 +266,7 @@ export function MostLikelySessionView({ session }: { session: MostLikelySession 
 
 const styles = StyleSheet.create({
   body: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     gap: space[4],
   },
@@ -278,7 +277,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   leadIn: {
-    ...type.brushTitle,
+    ...type.titleMd,
     color: ACCENT,
     paddingRight: 4,
   },
@@ -300,9 +299,9 @@ const styles = StyleSheet.create({
     minHeight: 40,
   },
   countdownLayout: {
-    flex: 1,
-    justifyContent: 'space-between',
-    gap: space[3],
+    flexGrow: 1,
+    justifyContent: 'center',
+    gap: space[6],
     paddingBottom: space[2],
   },
   countdownPrompt: {
@@ -367,7 +366,7 @@ const styles = StyleSheet.create({
     marginTop: space[2],
   },
   ended: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     gap: space[4],

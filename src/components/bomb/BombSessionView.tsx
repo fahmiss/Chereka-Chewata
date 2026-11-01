@@ -168,7 +168,8 @@ function ReadyPhase({ session }: { session: BombSession }) {
     <SessionShell
       eyebrow={`Round ${session.roundNumber}`}
       title={`${starter} starts`}
-      subtitle="Read the category, then heat the potato. The ending time stays hidden."
+      headingStyle="context"
+      instruction="Give an answer, then pass the phone. The ending time stays hidden."
       stage="ready"
       stages={STAGES}
       accent={ACCENT}
@@ -191,8 +192,6 @@ function ReadyPhase({ session }: { session: BombSession }) {
                 styles.category,
                 session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
               ]}
-              numberOfLines={3}
-              adjustsFontSizeToFit
             >
               {localizedPrompt(session)}
             </Text>
@@ -238,23 +237,14 @@ function PlayingPhase({ session }: { session: BombSession }) {
   return (
     <SessionShell
       eyebrow="Live round"
+      scrollable
+      centerContent
       stage="pass"
       stages={STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
     >
       <Animated.View style={[styles.playingBody, enter]}>
-        <View style={styles.heatHero}>
-          <Animated.View style={[styles.heatRing, heatAnimation.ring]} />
-          <Animated.View style={heatAnimation.bomb}>
-            <GlyphDisk icon="potato" accent={ACCENT} size={160} />
-          </Animated.View>
-          <View style={styles.liveBadge}>
-            <Animated.View style={[styles.liveDot, { opacity: heatAnimation.ring.opacity }]} />
-            <Text style={[type.mono, styles.liveBadgeText]}>POTATO HOT</Text>
-          </View>
-        </View>
-
         <Surface accent={ACCENT} active style={styles.promptSurface} contentStyle={styles.promptCard}>
           <Text style={[type.eyebrow, styles.promptLabel]}>Your category</Text>
           <Text
@@ -262,12 +252,20 @@ function PlayingPhase({ session }: { session: BombSession }) {
               styles.playingCategory,
               session.contentLanguage !== 'en' ? { fontFamily: family.ethiopic.bold } : null,
             ]}
-            numberOfLines={3}
-            adjustsFontSizeToFit
           >
             {localizedPrompt(session)}
           </Text>
         </Surface>
+        <View style={styles.heatHero}>
+          <Animated.View style={[styles.heatRing, heatAnimation.ring]} />
+          <Animated.View style={heatAnimation.bomb}>
+            <GlyphDisk icon="potato" accent={ACCENT} size={120} />
+          </Animated.View>
+          <View style={styles.liveBadge}>
+            <Animated.View style={[styles.liveDot, { opacity: heatAnimation.ring.opacity }]} />
+            <Text style={[type.mono, styles.liveBadgeText]}>POTATO HOT</Text>
+          </View>
+        </View>
 
         <View style={styles.passRule}>
           <Text style={styles.passRuleStrong}>ONE ANSWER</Text>
@@ -371,9 +369,9 @@ const styles = StyleSheet.create({
   readyBody: { gap: space[5], paddingBottom: space[4] },
   categoryCard: { minHeight: 250, padding: space[6], alignItems: 'center', justifyContent: 'center', gap: space[3] },
   category: { ...type.brushHero, fontSize: 36, lineHeight: 44, color: ACCENT, textAlign: 'center', paddingHorizontal: 4 },
-  playingBody: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: space[4] },
-  heatHero: { width: 190, height: 184, alignItems: 'center', justifyContent: 'center' },
-  heatRing: { position: 'absolute', width: 156, height: 156, borderRadius: radius.pill, backgroundColor: alpha(ACCENT, 0.2), borderWidth: 1, borderColor: alpha(ACCENT, 0.55) },
+  playingBody: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', gap: space[5], paddingVertical: space[3] },
+  heatHero: { width: 150, height: 148, alignItems: 'center', justifyContent: 'center' },
+  heatRing: { position: 'absolute', width: 118, height: 118, borderRadius: radius.pill, backgroundColor: alpha(ACCENT, 0.2), borderWidth: 1, borderColor: alpha(ACCENT, 0.55) },
   liveBadge: { position: 'absolute', bottom: 0, flexDirection: 'row', alignItems: 'center', gap: 7, paddingHorizontal: 12, paddingVertical: 7, borderRadius: radius.pill, backgroundColor: color.surfaceRaised, borderWidth: 1, borderColor: alpha(color.dangerUrgency, 0.45) },
   liveDot: { width: 9, height: 9, borderRadius: radius.pill, backgroundColor: color.dangerUrgency },
   liveBadgeText: { color: color.dangerUrgency, fontSize: 11, letterSpacing: 1.2 },
