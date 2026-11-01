@@ -17,7 +17,7 @@ import {
   startReview,
 } from '../../domain/manNegn/machine';
 import type { ManNegnSession } from '../../domain/manNegn/types';
-import { alpha, color, radius, space } from '../../theme/tokens';
+import { color, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { HoldHint, HoldToReveal, useHoldReveal } from '../session/HoldToReveal';
 import { PassPhoneHandoff } from '../session/PassPhoneHandoff';
@@ -84,28 +84,53 @@ function Play({ session }: { session: ManNegnSession }) {
   const name = playerName(session, session.activePlayerId);
   const lives = session.lives[session.activePlayerId] ?? 0;
   return (
-    <SessionShell eyebrow="Ask one yes/no question" title={`${name}'s turn`} subtitle="The group answers using the two buttons below. Yes keeps this turn; No passes it." stage="ask" stages={STAGES} accent={ACCENT} onEndGame={() => endGame(clearSession)} footer={<>
-      <View style={styles.buttonRow}><View style={styles.half}><PrimaryButton label="Yes" icon="checkCircle" onPress={() => apply(answerYes)} /></View><View style={styles.half}><SecondaryButton label="No" onPress={() => apply(answerNo)} /></View></View>
-      <SecondaryButton label="Buzz to guess" icon="target" onPress={() => apply(startGuess)} />
-      <SecondaryButton label="Review the others" icon="eye" quiet onPress={() => apply(startReview)} />
-    </>}>
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.center}>
-        <View style={[styles.questionDisk, { backgroundColor: alpha(ACCENT, 0.15), borderColor: alpha(ACCENT, 0.45) }]}><Icon name="question" size={54} color={ACCENT} strokeWidth={1.8} /></View>
-        <Text style={[type.bodyStrong, styles.primary]}>Your identity is hidden</Text>
-        {session.turnQuestions > 0 ? (
-          <Surface accent={color.success} active contentStyle={styles.yesFeedback}>
-            <Icon name="checkCircle" size={20} color={color.success} />
-            <View style={styles.feedbackCopy}>
-              <Text style={[type.bodyStrong, { color: color.success }]}>Yes — keep asking</Text>
-              <Text style={[type.bodySm, styles.muted]}>
+    <SessionShell
+      eyebrow="Man Negn?"
+      stage="ask"
+      stages={STAGES}
+      accent={ACCENT}
+      onEndGame={() => endGame(clearSession)}
+      footer={
+        <>
+          <View style={styles.buttonRow}>
+            <View style={styles.half}><PrimaryButton label="Yes" icon="checkCircle" onPress={() => apply(answerYes)} /></View>
+            <View style={styles.half}><SecondaryButton label="No" onPress={() => apply(answerNo)} /></View>
+          </View>
+          <Text style={[type.bodySm, styles.answerHint]}>Yes: keep asking · No: next player</Text>
+          <SecondaryButton label="Buzz to guess" icon="target" onPress={() => apply(startGuess)} />
+          <SecondaryButton label="Review the others" icon="eye" quiet onPress={() => apply(startReview)} />
+        </>
+      }
+    >
+      <View style={styles.playContext}>
+        <Text style={[type.titleMd, styles.turnName]} accessibilityRole="header">{name}’s turn</Text>
+        <View style={styles.lives}>
+          <Icon name="target" size={15} color={ACCENT} />
+          <Text style={[type.bodySm, styles.guessesLeft]}>{lives} {lives === 1 ? 'guess' : 'guesses'} left</Text>
+        </View>
+      </View>
+      <ScrollView style={styles.playScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.playHero}>
+        <View style={styles.hiddenLabel}>
+          <Icon name="lock" size={14} color={color.textMuted} />
+          <Text style={[type.eyebrow, styles.hiddenText]}>Your identity is hidden</Text>
+        </View>
+        <Text style={[type.brushHero, styles.whoAmI]} accessibilityRole="header">{'WHO\nAM I?'}</Text>
+        <Text style={[type.titleLg, styles.askInstruction]}>Ask a yes/no question.</Text>
+        <View style={styles.playHint} accessibilityLiveRegion="polite">
+          {session.turnQuestions > 0 ? (
+            <>
+              <View style={styles.yesFeedback}>
+                <Icon name="checkCircle" size={18} color={color.success} />
+                <Text style={[type.bodyStrong, { color: color.success }]}>Yes — keep asking</Text>
+              </View>
+              <Text style={[type.bodySm, styles.mutedCenter]}>
                 {session.turnQuestions} Yes answer{session.turnQuestions === 1 ? '' : 's'} this turn
               </Text>
-            </View>
-          </Surface>
-        ) : (
-          <Text style={[type.body, styles.mutedCenter]}>Ask about type, place, appearance, job, or what your identity is known for.</Text>
-        )}
-        <View style={styles.lives}><Icon name="target" size={18} color={color.dangerUrgency} /><Text style={[type.label, styles.primary]}>{lives} guess{lives === 1 ? '' : 'es'} left</Text></View>
+            </>
+          ) : (
+            <Text style={[type.body, styles.playHintText]}>Start broad: person, place, object, or something else?</Text>
+          )}
+        </View>
       </ScrollView>
     </SessionShell>
   );
@@ -210,7 +235,20 @@ export function ManNegnSessionView({ session }: { session: ManNegnSession }) {
 
 const styles = StyleSheet.create({
   identityList: { gap: space[3], paddingVertical: space[2] }, identityCard: { padding: space[4], gap: space[1] }, identityHeading: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: space[2] }, identityStatus: { color: color.success }, primary: { color: color.textPrimary }, muted: { color: color.textMuted }, fact: { color: color.textSecondary, lineHeight: 20 },
-  center: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', gap: space[4], paddingHorizontal: space[4], paddingVertical: space[2] }, questionDisk: { width: 112, height: 112, borderRadius: radius.pill, borderWidth: 1, alignItems: 'center', justifyContent: 'center' }, mutedCenter: { color: color.textSecondary, textAlign: 'center' }, lives: { flexDirection: 'row', alignItems: 'center', gap: space[2] },
-  yesFeedback: { width: '100%', paddingHorizontal: space[4], paddingVertical: space[3], flexDirection: 'row', alignItems: 'center', gap: space[3] }, feedbackCopy: { flex: 1, gap: 2 },
+  playContext: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: space[3] },
+  turnName: { color: color.textPrimary, fontSize: 18, lineHeight: 24, flex: 1 },
+  lives: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  guessesLeft: { color: color.textSecondary, fontSize: 13, lineHeight: 18 },
+  playScroll: { flex: 1 },
+  playHero: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', paddingTop: space[6], paddingBottom: space[8] },
+  hiddenLabel: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7, marginBottom: space[6] },
+  hiddenText: { color: color.textMuted, letterSpacing: 1.6, flexShrink: 1, textAlign: 'center' },
+  whoAmI: { color: ACCENT, fontSize: 60, lineHeight: 69, textAlign: 'center', paddingHorizontal: space[2], paddingBottom: space[2] },
+  askInstruction: { color: color.textPrimary, textAlign: 'center', marginTop: space[5] },
+  playHint: { alignItems: 'center', justifyContent: 'center', gap: space[1], minHeight: 48, marginTop: space[2] },
+  playHintText: { color: color.textSecondary, fontSize: 15, lineHeight: 22, textAlign: 'center', maxWidth: 270 },
+  answerHint: { color: color.textMuted, textAlign: 'center', fontSize: 13, lineHeight: 18, marginTop: -2, marginBottom: 2 },
+  yesFeedback: { flexDirection: 'row', alignItems: 'center', gap: space[2] },
+  mutedCenter: { color: color.textSecondary, textAlign: 'center' },
   buttonRow: { flexDirection: 'row', gap: space[3] }, half: { flex: 1 }, revealCard: { minHeight: 260, padding: space[6], alignItems: 'center', justifyContent: 'center', gap: space[4] }, resultStack: { gap: space[3], paddingBottom: space[4] }, resultRow: { padding: space[4], flexDirection: 'row', alignItems: 'center', gap: space[4] }, resultCopy: { flex: 1, gap: 2 },
 });

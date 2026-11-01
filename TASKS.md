@@ -4,11 +4,16 @@ Working tracker for what's shipped and what's next. Check items off as they land
 and add new ones at the top of **Open** as they come up. Keep entries specific
 enough to act on (file/area + why), not vague.
 
-_Last updated: 2026-10-31._
+_Last updated: 2026-11-01._
 
 ---
 
 ## Open
+
+### Approved Man Negn layout (2026-11-01)
+
+- [x] Apply the approved gameplay preview: compact player/guess context, large purple brush “Who am I?”, concise instructions, and Yes/No guidance beside the actions
+- [x] Preserve existing buttons, Yes feedback, private review, and two-chance rules; keep the main content scrollable on smaller screens
 
 ### Gameplay audit implementation (2026-10-31)
 

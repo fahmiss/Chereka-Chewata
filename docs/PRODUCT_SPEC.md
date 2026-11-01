@@ -2858,6 +2858,10 @@ session state and never route parameters.
 
 - Private identity review requires a fresh handoff and hold-to-reveal. It never
   shows the viewer's assignment or consumes a question or chance.
+- Approved gameplay layout (2026-11-01): compact player and remaining-guesses
+  context above a large purple brush “Who am I?” focal point. Keep instructions
+  concise, Yes/No guidance next to the controls, and the existing button styles.
+  The main content scrolls on smaller screens; essential actions remain below it.
 - Competitive Quiz uses 3, 5 or 10 rounds per player. Every seat receives the
   same difficulty within each round, and the opening seat rotates on rematch.
 - The shared menu explicitly says **Restart entire game** and confirms that
