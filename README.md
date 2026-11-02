@@ -21,9 +21,16 @@ Android development. Native store releases are not published yet.
 To open the web app without browser controls, install the live site and launch
 it from its home-screen icon. On iPhone: Safari → Share → Add to Home Screen →
 turn on **Open as Web App** → Add. On Android: Chrome → menu → Install app (or
-Install and create shortcut). If an older shortcut opens the browser or shows
-a generic icon, remove it and install again. This web install still needs a
-connection to start; offline support is currently provided by native builds.
+Install and create shortcut).
+
+If the home-screen icon is a letter **C** (Safari’s fallback for Chereka), the
+shortcut was saved without a working touch icon. Delete that icon, open
+https://chereka-chewata.vercel.app in **Safari**, wait until the page finishes
+loading, then Add to Home Screen again — the preview must show the yellow moon
+before you tap Add. Old shortcuts never update themselves.
+
+This web install still needs a connection to start; offline support is currently
+provided by native builds.
 
 ## Current status
 

@@ -20,11 +20,11 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Chereka" />
-        <link rel="manifest" href="/manifest.webmanifest?v=4" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon-v4.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-v4.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=4" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-v5.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/chereka-180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/chereka-192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/chereka-512.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <ScrollViewStyleReset />
         <style dangerouslySetInnerHTML={{ __html: darkCanvas }} />
       </head>
