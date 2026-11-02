@@ -1,10 +1,8 @@
 [
   {
     "id": "wyr_eth_001",
-    "option_a_en": "Always arrive one hour early",
-    "option_b_en": "Always arrive thirty minutes late",
-    "option_a_am": "ሁልጊዜ አንድ ሰዓት ቀድመህ መድረስ",
-    "option_b_am": "ሁልጊዜ ሠላሳ ደቂቃ ዘግይተህ መድረስ",
+    "option_a_en": "Always host the family gathering at your house",
+    "option_b_en": "Always travel across town for every family gathering",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "active": true,
@@ -2870,5 +2868,37 @@
       "Celebrity",
       "Current"
     ]
+  },
+  {
+    "id": "wyr_eth_new_001",
+    "option_a_en": "Never miss an Ethiopian wedding invitation",
+    "option_b_en": "Never miss a Champions League final night",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_eth_new_002",
+    "option_a_en": "Only eat injera for a year",
+    "option_b_en": "Never eat injera for a year",
+    "category_id": "food_and_drink",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_new_001",
+    "option_a_en": "Have free flights forever but only to places your family chooses",
+    "option_b_en": "Pay for every trip but choose every destination yourself",
+    "category_id": "places_and_travel",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "wyr_new_002",
+    "option_a_en": "Be famous in your city and uncomfortable in public",
+    "option_b_en": "Be unknown everywhere and completely free",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "active": true
   }
 ]

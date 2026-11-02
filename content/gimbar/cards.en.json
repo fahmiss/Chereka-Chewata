@@ -548,5 +548,54 @@
     ],
     "content_level": "family",
     "active": true
+  },
+  {
+    "id": "gimbar_eth_new_001",
+    "text_en": "Jebena",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_eth_new_002",
+    "text_en": "Eskista",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_eth_new_003",
+    "text_en": "Injera",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_eth_new_004",
+    "text_en": "Teddy Afro",
+    "category_id": "entertainment_pop_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_eth_new_005",
+    "text_en": "Meskel",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_new_002",
+    "text_en": "Football",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "gimbar_new_003",
+    "text_en": "WhatsApp",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
   }
 ]

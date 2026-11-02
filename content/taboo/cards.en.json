@@ -1198,7 +1198,7 @@
     "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_places_051",
@@ -1221,7 +1221,7 @@
     "category_id": "places_and_travel",
     "content_level": "family",
     "difficulty": "hard",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_music_and_entertainment_052",
@@ -3043,7 +3043,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_129",
@@ -3089,7 +3089,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_131",
@@ -3112,7 +3112,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_132",
@@ -3135,7 +3135,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_133",
@@ -3158,7 +3158,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_134",
@@ -5790,7 +5790,7 @@
     "category_id": "entertainment_pop_culture",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_music_and_entertainment_244",
@@ -6273,7 +6273,7 @@
     "category_id": "places_and_travel",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_places_265",
@@ -6802,7 +6802,7 @@
     "category_id": "sports",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_288",
@@ -6940,7 +6940,7 @@
     "category_id": "sports",
     "content_level": "friends",
     "difficulty": "hard",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_294",
@@ -6963,7 +6963,7 @@
     "category_id": "sports",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_295",
@@ -6986,7 +6986,7 @@
     "category_id": "sports",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_sports_296",
@@ -7924,7 +7924,7 @@
     "category_id": "football",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_football_006",
@@ -8338,7 +8338,7 @@
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "taboo_ethiopia_004",
@@ -9701,6 +9701,267 @@
       "Ethiopian",
       "Celebrity",
       "Current"
+    ]
+  },
+  {
+    "id": "taboo_sports_new_001",
+    "target_en": "Badminton",
+    "forbidden_en": [
+      "Shuttlecock",
+      "Racket",
+      "Net",
+      "Smash",
+      "Court"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_002",
+    "target_en": "High jump",
+    "forbidden_en": [
+      "Bar",
+      "Jump",
+      "Athletics",
+      "Landing",
+      "Olympics"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_003",
+    "target_en": "Diving",
+    "forbidden_en": [
+      "Pool",
+      "Board",
+      "Water",
+      "Splash",
+      "Swim"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_004",
+    "target_en": "Gymnastics",
+    "forbidden_en": [
+      "Beam",
+      "Flip",
+      "Olympics",
+      "Routine",
+      "Vault"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_005",
+    "target_en": "Surfing",
+    "forbidden_en": [
+      "Wave",
+      "Board",
+      "Ocean",
+      "Beach",
+      "Ride"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_006",
+    "target_en": "Skateboard",
+    "forbidden_en": [
+      "Wheels",
+      "Trick",
+      "Ramp",
+      "Ride",
+      "Helmet"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_007",
+    "target_en": "Relay race",
+    "forbidden_en": [
+      "Baton",
+      "Team",
+      "Pass",
+      "Track",
+      "Sprint"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_008",
+    "target_en": "Finish line",
+    "forbidden_en": [
+      "End",
+      "Race",
+      "Win",
+      "Tape",
+      "Sprint"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_sports_new_009",
+    "target_en": "Helmet",
+    "forbidden_en": [
+      "Head",
+      "Protect",
+      "Safety",
+      "Bike",
+      "Hard"
+    ],
+    "category_id": "sports",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": true
+  },
+  {
+    "id": "taboo_ethiopia_new_001",
+    "target_en": "Ashenda",
+    "forbidden_en": [
+      "Tigray",
+      "Girls",
+      "Festival",
+      "Dance",
+      "Celebration"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_002",
+    "target_en": "Tej",
+    "forbidden_en": [
+      "Honey",
+      "Wine",
+      "Gesho",
+      "Drink",
+      "Alcohol"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": false,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_003",
+    "target_en": "Mitmita",
+    "forbidden_en": [
+      "Chili",
+      "Spice",
+      "Hot",
+      "Pepper",
+      "Berbere"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": false,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_004",
+    "target_en": "Kitfo",
+    "forbidden_en": [
+      "Beef",
+      "Raw",
+      "Mitmita",
+      "Meat",
+      "Gomen"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "easy",
+    "active": false,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_005",
+    "target_en": "Walia",
+    "forbidden_en": [
+      "Ibex",
+      "Simien",
+      "Goat",
+      "Horn",
+      "Mountain"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_007",
+    "target_en": "Demera",
+    "forbidden_en": [
+      "Meskel",
+      "Bonfire",
+      "Fire",
+      "Cross",
+      "September"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "taboo_ethiopia_new_008",
+    "target_en": "Senbet",
+    "forbidden_en": [
+      "Sunday",
+      "Church",
+      "Gathering",
+      "Lunch",
+      "Family"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
     ]
   }
 ]

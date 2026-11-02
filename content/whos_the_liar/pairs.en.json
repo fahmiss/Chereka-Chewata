@@ -125,17 +125,13 @@
   },
   {
     "id": "liar_addis_life_012",
-    "main_question_en": "Which café feels most like home?",
-    "main_question_am": "እንደ ቤት የሚሰማህ ካፌ የትኛው ነው?",
-    "liar_question_en": "Which café is only good for the Wi‑Fi?",
-    "liar_question_am": "ለዋይፋይ ብቻ ጥሩ የሆነው ካፌ የትኛው ነው?",
+    "main_question_en": "What is the most overrated food trend right now?",
+    "liar_question_en": "What is the most overrated café trend right now?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_013",
@@ -153,17 +149,13 @@
   },
   {
     "id": "liar_addis_life_014",
-    "main_question_en": "Which neighborhood would you move to next?",
-    "main_question_am": "ቀጥሎ ወደ የትኛው ሰፈር መዛወር ትፈልጋለህ?",
-    "liar_question_en": "Which neighborhood would you never live in?",
-    "liar_question_am": "በፍጹም የማትኖርበት ሰፈር የትኛው ነው?",
+    "main_question_en": "Which Ethiopian city would you never want to live in?",
+    "liar_question_en": "Which Ethiopian city would you move to tomorrow?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_015",
@@ -195,17 +187,13 @@
   },
   {
     "id": "liar_addis_life_017",
-    "main_question_en": "Which market do you trust most?",
-    "main_question_am": "በጣም የምታምነው ገበያ የትኛው ነው?",
-    "liar_question_en": "Which market do you only visit once?",
-    "liar_question_am": "አንድ ጊዜ ብቻ የምትሄድበት ገበያ የትኛው ነው?",
+    "main_question_en": "Which market do you only visit once?",
+    "liar_question_en": "Which market do you pretend to enjoy?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_018",
@@ -1172,31 +1160,23 @@
   },
   {
     "id": "liar_addis_life_099",
-    "main_question_en": "What is worth sitting in traffic for?",
-    "main_question_am": "ትራፊክ ላይ መቀመጥ የሚያስቆይ ምንድን ነው?",
-    "liar_question_en": "What is never worth the traffic?",
-    "liar_question_am": "በፍጹም ትራፊኩ የማያስቆይ ምንድን ነው?",
+    "main_question_en": "What is never worth the wait?",
+    "liar_question_en": "What is always worth the wait?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_100",
-    "main_question_en": "Which route do you know by heart?",
-    "main_question_am": "በልብ የምታውቀው መስመር የትኛው ነው?",
-    "liar_question_en": "Which route do you dread?",
-    "liar_question_am": "የምትፈራው መስመር የትኛው ነው?",
+    "main_question_en": "Which journey do you dread?",
+    "liar_question_en": "Which journey do you secretly enjoy?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_101",
@@ -1228,17 +1208,13 @@
   },
   {
     "id": "liar_addis_life_103",
-    "main_question_en": "Which neighbourhood would you move to?",
-    "main_question_am": "ወደ የትኛው ሰፈር መዛወር ትፈልጋለህ?",
-    "liar_question_en": "Which neighbourhood is overrated?",
-    "liar_question_am": "ከእውነት በላይ የሚነገርለት ሰፈር የትኛው ነው?",
+    "main_question_en": "Which Ethiopian city is overrated?",
+    "liar_question_en": "Which Ethiopian city is underrated?",
     "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_104",
@@ -1898,31 +1874,23 @@
   },
   {
     "id": "liar_addis_life_159",
-    "main_question_en": "Where in Addis is a perfect first date?",
-    "main_question_am": "በአዲስ አበባ ፍጹም የመጀመሪያ ቀን ቦታ የት ነው?",
-    "liar_question_en": "Where in Addis is a terrible first date?",
-    "liar_question_am": "በአዲስ አበባ መጥፎ የመጀመሪያ ቀን ቦታ የት ነው?",
+    "main_question_en": "Where is a terrible first date?",
+    "liar_question_en": "Where is a surprisingly good first date?",
     "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_addis_life_160",
-    "main_question_en": "Which café feels flirty after dark?",
-    "main_question_am": "ከጨለማ በኋላ ፍቅር የሚሰማው ካፌ የትኛው ነው?",
-    "liar_question_en": "Which café feels like a job interview?",
-    "liar_question_am": "እንደ የሥራ ቃለ መጠይቅ የሚሰማው ካፌ የትኛው ነው?",
+    "main_question_en": "Which social setting feels like a job interview?",
+    "liar_question_en": "Which social setting feels like a family meeting?",
     "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true,
-    "tags": [
-      "Addis"
-    ]
+    "tags": []
   },
   {
     "id": "liar_travel_161",
@@ -2119,10 +2087,8 @@
   },
   {
     "id": "liar_football_007",
-    "main_question_en": "What time do you watch football matches?",
-    "liar_question_en": "What time do you fall asleep during a match?",
-    "main_question_am": "የእግር ኳስ ጨዋታዎችን በስንት ሰዓት ትመለከታለህ?",
-    "liar_question_am": "በጨዋታ ወቅት በስንት ሰዓት ትተኛለህ?",
+    "main_question_en": "Which football club has the most loyal fans?",
+    "liar_question_en": "Which football club has the loudest fans?",
     "category_id": "football",
     "content_level": "friends",
     "difficulty": "medium",
@@ -2668,6 +2634,66 @@
     "tags": [
       "Celebrity",
       "Current"
+    ]
+  },
+  {
+    "id": "liar_eth_new_001",
+    "main_question_en": "Which Ethiopian holiday has the best food?",
+    "liar_question_en": "Which Ethiopian holiday has the best music?",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_eth_new_002",
+    "main_question_en": "Which Ethiopian dish do guests always ask for?",
+    "liar_question_en": "Which Ethiopian dish do guests pretend to like?",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_eth_new_003",
+    "main_question_en": "Which football club do Ethiopian fans argue about most?",
+    "liar_question_en": "Which football club do Ethiopian fans defend the hardest?",
+    "category_id": "football",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_eth_new_004",
+    "main_question_en": "What is the hardest part of a coffee ceremony for guests?",
+    "liar_question_en": "What is the best part of a coffee ceremony for guests?",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "liar_eth_new_005",
+    "main_question_en": "Which relative always starts the family debate?",
+    "liar_question_en": "Which relative always ends the family debate?",
+    "category_id": "people_and_relationships",
+    "content_level": "friends",
+    "difficulty": "medium",
+    "active": true,
+    "tags": [
+      "Ethiopian"
     ]
   }
 ]
