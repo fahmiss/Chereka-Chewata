@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Animated, AppState, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 import { localizeText } from '../../content/localize';
+import { useT } from '../../i18n';
 import {
   currentRevealPlayerId,
   currentVoterId,
@@ -130,6 +131,7 @@ function HandoffPhase({
   kind: 'reveal' | 'vote';
 }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const playerId =
     kind === 'reveal' ? currentRevealPlayerId(session) : currentVoterId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
@@ -138,14 +140,14 @@ function HandoffPhase({
   const index = (kind === 'reveal' ? session.revealIndex : session.voteIndex) + 1;
   return (
     <SessionShell
-      eyebrow={kind === 'reveal' ? 'Pass the phone' : 'Private vote'}
+      eyebrow={kind === 'reveal' ? t('session.passPhone') : t('liar.yourVote')}
       stage={kind === 'reveal' ? 'reveal' : 'vote'}
       stages={LIAR_STAGES}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label="I'm ready"
+          label={t('session.imReady')}
           icon="checkCircle"
           onPress={() =>
             kind === 'reveal' ? dispatch.readyToReveal() : dispatch.beginVoteSelect()
@@ -165,6 +167,7 @@ const HOLD_CIRC = 2 * Math.PI * HOLD_RADIUS;
 
 function RevealPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const [unlocked, setUnlocked] = useState(false);
   const playerId = currentRevealPlayerId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
@@ -265,7 +268,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow={`Private reveal · ${session.revealIndex + 1}/${total}`}
+      eyebrow={t('liar.privateReveal', { n: session.revealIndex + 1, total })}
       stage="reveal"
       stages={LIAR_STAGES}
       title={name}
@@ -275,7 +278,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
       footer={
         unlocked ? (
           <PrimaryButton
-            label="Hide and continue"
+            label={t('session.hideAndContinue')}
             icon="checkCircle"
             onPress={() => dispatch.hideRevealAndContinue()}
           />
@@ -283,7 +286,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
           <View style={styles.footerHintRow}>
             <Icon name="eye" size={15} color={color.textMuted} />
             <Text style={[type.bodySm, styles.footerHint]}>
-              Hold until the ring fills — then read your question.
+              {t('liar.holdHint')}
             </Text>
           </View>
         )
@@ -291,7 +294,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
     >
       <PressableScale
         accessibilityRole="button"
-        accessibilityLabel={unlocked ? 'Question shown' : 'Hold to reveal your question'}
+        accessibilityLabel={unlocked ? t('liar.questionShown') : t('liar.holdQuestion')}
         haptic="none"
         scaleTo={0.99}
         onPressIn={startHold}
@@ -347,7 +350,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
                 <HoldCore accent={ACCENT} progress={hold} />
               </View>
             </View>
-            <Text style={[type.eyebrow, styles.secretEyebrow]}>Hold to reveal</Text>
+            <Text style={[type.eyebrow, styles.secretEyebrow]}>{t('session.holdToReveal')}</Text>
           </View>
         ) : (
           <Animated.ScrollView
@@ -358,7 +361,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
             ]}
           >
             <Icon name="eye" size={30} color={cardAccent} strokeWidth={1.8} />
-            <Text style={[type.eyebrow, { color: alpha(cardAccent, 0.9) }]}>Your question</Text>
+            <Text style={[type.eyebrow, { color: alpha(cardAccent, 0.9) }]}>{t('liar.yourQuestion')}</Text>
             <Text
               style={[
                 styles.secretQuestion,
@@ -370,7 +373,7 @@ function RevealPhase({ session }: { session: LiarSession }) {
               {question}
             </Text>
             <Text style={[type.body, styles.secretHint]}>
-              Answer aloud later. Do not read the question out loud.
+              {t('liar.answerLater')}
             </Text>
           </Animated.ScrollView>
         )}
@@ -413,23 +416,24 @@ function OrderRow({
 
 function AnswerOrderPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const firstId = session.answerOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
   const privateVotes = session.setup.votingMode === 'private';
 
   return (
     <SessionShell
-      eyebrow="Answers"
+      eyebrow={t('liar.answers')}
       stage="answers"
       stages={LIAR_STAGES}
-      title={`${name} starts`}
+      title={t('liar.nameStarts', { name })}
       headingStyle="context"
-      instruction="Give one concise answer each, then discuss who got a different question."
+      instruction={t('liar.answerInstructions')}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label={privateVotes ? 'Start private voting' : 'Choose the Liar'}
+          label={privateVotes ? t('liar.startPrivateVoting') : t('liar.chooseLiar')}
           icon="target"
           onPress={() => dispatch.startVoting()}
         />
@@ -445,7 +449,7 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
           />
         ))}
         <Text style={[type.bodySm, styles.orderNote]}>
-          Do not paraphrase the question. Never ask what the exact question was.
+          {t('liar.answerRule')}
         </Text>
       </ScrollView>
     </SessionShell>
@@ -454,22 +458,23 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
 
 function GroupAccusePhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
     <SessionShell
-      eyebrow="Group decision"
+      eyebrow={t('liar.groupDecision')}
       stage="vote"
       stages={LIAR_STAGES}
-      title="Who is the group accusing?"
+      title={t('liar.whoAccusing')}
       headingStyle="context"
-      instruction="Select the player your group suspects, then confirm."
+      instruction={t('liar.selectSuspect')}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
           <PrimaryButton
-            label="Accuse this player"
+            label={t('liar.accusePlayer')}
             icon="target"
             disabled={!selected}
             onPress={() => {
@@ -477,7 +482,7 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
             }}
           />
           <SecondaryButton
-            label="Deadlock — Liar wins"
+            label={t('liar.deadlock')}
             quiet
             onPress={() => dispatch.resolveGroupDeadlock()}
           />
@@ -501,6 +506,7 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
 
 function VotingSelectPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const [selected, setSelected] = useState<string | null>(null);
   const voterId = currentVoterId(session);
   const name = voterId ? getPlayerName(session, voterId) : 'Player';
@@ -513,17 +519,17 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow={runoff ? 'Runoff vote' : 'Your vote'}
+      eyebrow={runoff ? t('liar.runoffVote') : t('liar.yourVote')}
       stage="vote"
       stages={LIAR_STAGES}
       title={name}
       headingStyle="context"
-      instruction="Choose who got a different question, then lock your vote."
+      instruction={t('liar.chooseDifferent')}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label="Lock vote"
+          label={t('liar.lockVote')}
           icon="lock"
           disabled={!selected}
           onPress={() => {
@@ -550,6 +556,7 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
 
 function ResultPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
+  const { t, interfaceLanguage } = useT();
   const groupWon = session.winner === 'group';
   const accent = groupWon ? color.success : ACCENT;
   const liarName = getPlayerName(session, session.liarPlayerId);
@@ -575,7 +582,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow="Result"
+      eyebrow={t('liar.result')}
       stage="result"
       stages={LIAR_STAGES}
       accent={accent}
@@ -589,16 +596,16 @@ function ResultPhase({ session }: { session: LiarSession }) {
           <ResultHero
             scene={groupWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
-            title={groupWon ? 'Group wins' : 'Liar wins'}
-            detail={liarResultReason(session)}
+            title={groupWon ? t('liar.groupWins') : t('liar.liarWins')}
+            detail={liarResultReason(session, interfaceLanguage)}
           />
           <Text style={[type.body, styles.winnerSub]}>
-            Liar: <Text style={{ color: accent }}>{liarName}</Text>
+            {t('liar.liarLabel')} <Text style={{ color: accent }}>{liarName}</Text>
           </Text>
         </View>
 
         <Surface accent={color.brandPrimary} active contentStyle={styles.questionCard}>
-          <Text style={[type.eyebrow, { color: color.brandPrimary }]}>Common question</Text>
+          <Text style={[type.eyebrow, { color: color.brandPrimary }]}>{t('liar.commonQuestion')}</Text>
           <Text
             style={[
               type.titleMd,
@@ -614,7 +621,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
         </Surface>
 
         <Surface accent={ACCENT} active contentStyle={styles.questionCard}>
-          <Text style={[type.eyebrow, { color: ACCENT }]}>Liar’s question</Text>
+          <Text style={[type.eyebrow, { color: ACCENT }]}>{t('liar.liarQuestion')}</Text>
           <Text
             style={[
               type.titleMd,
@@ -632,7 +639,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
         {summary.length > 0 ? (
           <Surface contentStyle={styles.votesCard}>
-            <Text style={[type.eyebrow, styles.votesLabel]}>Votes</Text>
+            <Text style={[type.eyebrow, styles.votesLabel]}>{t('liar.votes')}</Text>
             {summary.map((row) => (
               <View key={row.name} style={styles.voteRow}>
                 <Text style={[type.label, styles.voteName]} numberOfLines={1}>
@@ -661,9 +668,9 @@ function ResultPhase({ session }: { session: LiarSession }) {
         visible={deckExhausted}
         moon="caught"
         accent={color.brandPrimary}
-        title="Deck exhausted"
-        message="Every card in this deck has been used. Change categories or content level to keep playing."
-        confirmLabel="Got it"
+        title={t('liar.deckTitle')}
+        message={t('liar.deckBody')}
+        confirmLabel={t('common.gotIt')}
         confirmTone="honey"
         onConfirm={() => setDeckExhausted(false)}
       />
