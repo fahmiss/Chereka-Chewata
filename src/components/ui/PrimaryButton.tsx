@@ -1,5 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
+import { useT } from '../../i18n';
 import { alpha, color, radius, touchTarget } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { Icon, type IconName } from './Icon';
@@ -31,6 +32,7 @@ export function PrimaryButton({
   icon,
   style,
 }: Props) {
+  const { uiFontBold } = useT();
   const palette = TONES[tone];
 
   return (
@@ -57,7 +59,13 @@ export function PrimaryButton({
       <View style={[styles.sheen, { backgroundColor: alpha('#FFFFFF', 0.45) }]} />
       <View style={styles.row}>
         {icon ? <Icon name={icon} size={19} color={palette.ink} strokeWidth={2.4} /> : null}
-        <Text style={[type.button, { color: palette.ink, flexShrink: 1, textAlign: 'center' }]}>
+        <Text
+          style={[
+            type.button,
+            { color: palette.ink, flexShrink: 1, textAlign: 'center' },
+            uiFontBold ? { fontFamily: uiFontBold } : null,
+          ]}
+        >
           {label}
         </Text>
       </View>

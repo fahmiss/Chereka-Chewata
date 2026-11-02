@@ -1,3 +1,4 @@
+import { translate, type MessageKey } from '../i18n';
 import type { GameId } from './games';
 
 /**
@@ -6,7 +7,16 @@ import type { GameId } from './games';
  * identical so first-time and mid-game reads never disagree.
  *
  * Spec §11.1: about three short steps. Full rules can come later.
+ *
+ * Impostor steps live in i18n (`impostor.howTo.*`) so interface language
+ * can switch them. Other games still use this English table until translated.
  */
+const IMPOSTOR_HOW_TO_KEYS = [
+  'impostor.howTo.1',
+  'impostor.howTo.2',
+  'impostor.howTo.3',
+] as const satisfies readonly MessageKey[];
+
 export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
   impostor: [
     'Everyone sees the same secret word — except the Impostor.',
@@ -80,6 +90,12 @@ export const GAME_HOW_TO_PLAY: Record<GameId, string[]> = {
   ],
 };
 
-export function getHowToPlay(gameId: string): string[] | null {
+export function getHowToPlay(
+  gameId: string,
+  language: 'en' | 'am' = 'en',
+): string[] | null {
+  if (gameId === 'impostor') {
+    return IMPOSTOR_HOW_TO_KEYS.map((key) => translate(language, key));
+  }
   return GAME_HOW_TO_PLAY[gameId as GameId] ?? null;
 }

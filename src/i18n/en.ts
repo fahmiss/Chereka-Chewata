@@ -115,6 +115,34 @@ export const en = {
   'session.unavailableTitle': 'Session unavailable',
   'session.unavailableBody':
     'Secrets live only in memory, never in the link. Start a new game from Home.',
+
+  // Shared in-session chrome (Batch 2 — wired for Impostor first)
+  'session.passPhone': 'Pass the phone',
+  'session.imReady': "I'm ready",
+  'session.holdToReveal': 'Hold to reveal',
+  'session.hideAndContinue': 'Hide and continue',
+  'session.secretWord': 'Secret word',
+
+  // Impostor how-to + gameplay (Batch 2)
+  'impostor.howTo.1': 'Everyone sees the same secret word — except the Impostor.',
+  'impostor.howTo.2':
+    'Take turns giving one short clue. Never say, spell, or translate the word.',
+  'impostor.howTo.3':
+    'Argue, vote, then let a caught Impostor guess the word.',
+  'impostor.roleLabel': 'You are the',
+  'impostor.roleName': 'IMPOSTOR',
+  'impostor.roleNamePlural': 'Impostors',
+  'impostor.startDiscussion': 'Start discussion',
+  'impostor.talkItOut': 'Talk it out',
+  'impostor.whoAccusing': 'Who is the group accusing?',
+  'impostor.accusePlayer': 'Accuse this player',
+  'impostor.confirmVote': 'Confirm vote',
+  'impostor.finalGuess': 'Final guess',
+  'impostor.correct': 'Correct',
+  'impostor.incorrect': 'Incorrect',
+  'impostor.crewWins': 'Crew wins',
+  'impostor.impostorWins': 'Impostor wins',
+  'impostor.impostorsWin': 'Impostors win',
 } as const;
 
 export type MessageKey = keyof typeof en;

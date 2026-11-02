@@ -66,8 +66,10 @@ export function SessionShell({
   children,
   footer,
 }: Props) {
-  const { t } = useT();
+  const { t, uiFont, uiFontBold } = useT();
   const enter = useEnterAnimation(0, 12);
+  const font = uiFont ? { fontFamily: uiFont } : null;
+  const fontBold = uiFontBold ? { fontFamily: uiFontBold } : null;
   const stageIndex = stage ? stages.indexOf(stage) : -1;
   const [confirmVisible, setConfirmVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -97,7 +99,7 @@ export function SessionShell({
             <View
               style={styles.eyebrowPill}
             >
-              <Text style={[type.eyebrow, { color: accent }]}>{eyebrow}</Text>
+              <Text style={[type.eyebrow, { color: accent }, font]}>{eyebrow}</Text>
             </View>
           ) : (
             <View />
@@ -125,9 +127,25 @@ export function SessionShell({
 
         {title ? (
           <Animated.View style={[styles.heading, headingStyle === 'context' && styles.contextHeading, enter]}>
-            <Text style={[headingStyle === 'context' ? type.titleLg : type.displayLg, styles.title]}>{title}</Text>
+            <Text
+              style={[
+                headingStyle === 'context' ? type.titleLg : type.displayLg,
+                styles.title,
+                fontBold,
+              ]}
+            >
+              {title}
+            </Text>
             {subtitle ? (
-              <Text style={[headingStyle === 'context' ? type.bodySm : type.body, styles.subtitle]}>{subtitle}</Text>
+              <Text
+                style={[
+                  headingStyle === 'context' ? type.bodySm : type.body,
+                  styles.subtitle,
+                  font,
+                ]}
+              >
+                {subtitle}
+              </Text>
             ) : null}
           </Animated.View>
         ) : null}
@@ -146,7 +164,11 @@ export function SessionShell({
         </View>
 
         {footer || instruction ? <View style={styles.footer}>
-          {instruction ? <View style={styles.instruction}><Text style={[type.bodySm, styles.instructionText]}>{instruction}</Text></View> : null}
+          {instruction ? (
+            <View style={styles.instruction}>
+              <Text style={[type.bodySm, styles.instructionText, font]}>{instruction}</Text>
+            </View>
+          ) : null}
           {footer}
         </View> : null}
       </View>

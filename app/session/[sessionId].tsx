@@ -20,7 +20,7 @@ import { useWinkKillerSession } from '../../src/domain/winkKiller/context';
 import { useEwnetSession } from '../../src/domain/ewnetWeysSaks/context';
 import { useManNegnSession } from '../../src/domain/manNegn/context';
 import type { GameId } from '../../src/domain/games';
-import { GAME_HOW_TO_PLAY } from '../../src/domain/howToPlay';
+import { getHowToPlay } from '../../src/domain/howToPlay';
 import { useT } from '../../src/i18n';
 import { saveLastPlayedGame } from '../../src/storage/lastPlayedGame';
 import { SOUND_VOLUME } from '../../src/theme/soundLevels';
@@ -141,6 +141,7 @@ function withSessionControls<TSetup>(
   setup: TSetup,
   startSession: (setup: TSetup) => StartResult,
   child: ReactNode,
+  rules: string[],
 ) {
   const restart = () => {
     const result = startSession(setup);
@@ -151,7 +152,7 @@ function withSessionControls<TSetup>(
 
   const signature = SIGNATURE_SOUNDS[gameId];
   return (
-    <SessionControlsProvider rules={GAME_HOW_TO_PLAY[gameId]} onRestartRound={restart}>
+    <SessionControlsProvider rules={rules} onRestartRound={restart}>
       {signature ? <SignatureCue source={signature} /> : null}
       <Suspense fallback={<SessionLoading />}>{child}</Suspense>
     </SessionControlsProvider>
@@ -182,8 +183,9 @@ export default function SessionScreen() {
   const insider = useInsiderSession();
   const ewnet = useEwnetSession();
   const manNegn = useManNegnSession();
-  const { t, uiFont } = useT();
+  const { t, language, uiFont } = useT();
   const font = uiFont ? { fontFamily: uiFont } : null;
+  const rulesFor = (gameId: GameId) => getHowToPlay(gameId, language) ?? [];
 
   if (impostor.session && impostor.session.sessionId === sessionId) {
     return withSessionControls(
@@ -191,6 +193,7 @@ export default function SessionScreen() {
       impostor.session.setup,
       impostor.startSession,
       <ImpostorSessionView session={impostor.session} />,
+      rulesFor('impostor'),
     );
   }
 
@@ -200,6 +203,7 @@ export default function SessionScreen() {
       liar.session.setup,
       liar.startSession,
       <LiarSessionView session={liar.session} />,
+      rulesFor('whos_the_liar'),
     );
   }
 
@@ -209,6 +213,7 @@ export default function SessionScreen() {
       taboo.session.setup,
       taboo.startSession,
       <TabooSessionView session={taboo.session} />,
+      rulesFor('taboo'),
     );
   }
 
@@ -218,6 +223,7 @@ export default function SessionScreen() {
       mostLikely.session.setup,
       mostLikely.startSession,
       <MostLikelySessionView session={mostLikely.session} />,
+      rulesFor('most_likely'),
     );
   }
   if (wouldRather.session && wouldRather.session.sessionId === sessionId) {
@@ -226,6 +232,7 @@ export default function SessionScreen() {
       wouldRather.session.setup,
       wouldRather.startSession,
       <WouldRatherSessionView session={wouldRather.session} />,
+      rulesFor('would_you_rather'),
     );
   }
   if (bomb.session && bomb.session.sessionId === sessionId) {
@@ -234,6 +241,7 @@ export default function SessionScreen() {
       bomb.session.setup,
       bomb.startSession,
       <BombSessionView session={bomb.session} />,
+      rulesFor('bomb'),
     );
   }
   if (quiz.session && quiz.session.sessionId === sessionId) {
@@ -242,6 +250,7 @@ export default function SessionScreen() {
       quiz.session.setup,
       quiz.startSession,
       <QuizSessionView session={quiz.session} />,
+      rulesFor('quiz'),
     );
   }
   if (gimbar.session && gimbar.session.sessionId === sessionId) {
@@ -250,6 +259,7 @@ export default function SessionScreen() {
       gimbar.session.setup,
       gimbar.startSession,
       <GimbarSessionView session={gimbar.session} />,
+      rulesFor('gimbar'),
     );
   }
   if (mesob.session && mesob.session.sessionId === sessionId) {
@@ -258,6 +268,7 @@ export default function SessionScreen() {
       mesob.session.setup,
       mesob.startSession,
       <MesobSessionView session={mesob.session} />,
+      rulesFor('mesob'),
     );
   }
   if (mizan.session && mizan.session.sessionId === sessionId) {
@@ -266,6 +277,7 @@ export default function SessionScreen() {
       mizan.session.setup,
       mizan.startSession,
       <MizanSessionView session={mizan.session} />,
+      rulesFor('mizan'),
     );
   }
   if (winkKiller.session && winkKiller.session.sessionId === sessionId) {
@@ -274,6 +286,7 @@ export default function SessionScreen() {
       winkKiller.session.setup,
       winkKiller.startSession,
       <WinkKillerSessionView session={winkKiller.session} />,
+      rulesFor('wink_killer'),
     );
   }
   if (insider.session && insider.session.sessionId === sessionId) {
@@ -282,6 +295,7 @@ export default function SessionScreen() {
       insider.session.setup,
       insider.startSession,
       <InsiderSessionView session={insider.session} />,
+      rulesFor('insider'),
     );
   }
   if (ewnet.session && ewnet.session.sessionId === sessionId) {
@@ -290,6 +304,7 @@ export default function SessionScreen() {
       ewnet.session.setup,
       ewnet.startSession,
       <EwnetWeysSaksSessionView session={ewnet.session} />,
+      rulesFor('ewnet_weys_saks'),
     );
   }
   if (manNegn.session && manNegn.session.sessionId === sessionId) {
@@ -298,6 +313,7 @@ export default function SessionScreen() {
       manNegn.session.setup,
       manNegn.startSession,
       <ManNegnSessionView session={manNegn.session} />,
+      rulesFor('man_negn'),
     );
   }
 

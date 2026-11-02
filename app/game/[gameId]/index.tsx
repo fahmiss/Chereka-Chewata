@@ -19,6 +19,7 @@ import { IconButton, Screen } from '../../../src/components/ui/Screen';
 import { getGame, type GameCatalogEntry } from '../../../src/domain/games';
 import { getHowToPlay } from '../../../src/domain/howToPlay';
 import { useGameSetup } from '../../../src/domain/useGameSetup';
+import { useT } from '../../../src/i18n';
 import { useEnterAnimation } from '../../../src/theme/motion';
 import { alpha, color, mix, radius, space } from '../../../src/theme/tokens';
 import { family, type } from '../../../src/theme/typography';
@@ -33,6 +34,7 @@ export default function GameDetailsScreen() {
   const game = getGame(String(gameId));
   const enter = useEnterAnimation(0, 16);
   const insets = useSafeAreaInsets();
+  const { t, language, uiFont } = useT();
   const { useLastGroup: seatSavedPlayers } = useGameSetup(String(gameId));
 
   // The Players tab is the table: opening a game seats that group. Games
@@ -44,13 +46,15 @@ export default function GameDetailsScreen() {
   if (!game) {
     return (
       <Screen style={styles.notFound}>
-        <Text style={[type.displayMd, styles.title]}>Game not found</Text>
-        <PrimaryButton label="Back home" icon="home" onPress={() => router.replace('/home')} />
+        <Text style={[type.displayMd, styles.title, uiFont ? { fontFamily: uiFont } : null]}>
+          {t('game.notFound')}
+        </Text>
+        <PrimaryButton label={t('game.backHome')} icon="home" onPress={() => router.replace('/home')} />
       </Screen>
     );
   }
 
-  const steps = getHowToPlay(game.id);
+  const steps = getHowToPlay(game.id, language);
   const ground = mix(color.background, game.accent, 0.14);
   const returnToGames = () => {
     if (router.canGoBack()) {
@@ -86,11 +90,13 @@ export default function GameDetailsScreen() {
         </Animated.View>
 
         <View style={styles.steps}>
-          <Text style={[type.eyebrow, { color: game.accent }]}>How to play</Text>
+          <Text style={[type.eyebrow, { color: game.accent }, uiFont ? { fontFamily: uiFont } : null]}>
+            {t('game.howToPlay')}
+          </Text>
           {steps ? (
             steps.map((step, index) => (
               <View
-                key={step}
+                key={`${index}-${step.slice(0, 24)}`}
                 style={[
                   styles.step,
                   {
@@ -110,12 +116,14 @@ export default function GameDetailsScreen() {
                 >
                   <Text style={[styles.stepNumberText, { color: game.accent }]}>{index + 1}</Text>
                 </View>
-                <Text style={[type.body, styles.stepText]}>{step}</Text>
+                <Text style={[type.body, styles.stepText, uiFont ? { fontFamily: uiFont } : null]}>
+                  {step}
+                </Text>
               </View>
             ))
           ) : (
-            <Text style={[type.body, styles.stepText]}>
-              Full rules unlock when this game ships.
+            <Text style={[type.body, styles.stepText, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('game.rulesLater')}
             </Text>
           )}
         </View>

@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
+import { useT } from '../../i18n';
 import { color, overlay, radius, touchTarget } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { Icon, type IconName } from './Icon';
@@ -22,6 +23,7 @@ export function SecondaryButton({
   quiet = false,
   style,
 }: Props) {
+  const { uiFontBold } = useT();
   return (
     <PressableScale
       accessibilityRole="button"
@@ -36,7 +38,12 @@ export function SecondaryButton({
       <View style={styles.row}>
         {icon ? <Icon name={icon} size={18} color={color.textPrimary} /> : null}
         <Text
-          style={[type.button, styles.label, quiet && styles.quietLabel]}
+          style={[
+            type.button,
+            styles.label,
+            quiet && styles.quietLabel,
+            uiFontBold ? { fontFamily: uiFontBold } : null,
+          ]}
         >
           {label}
         </Text>
