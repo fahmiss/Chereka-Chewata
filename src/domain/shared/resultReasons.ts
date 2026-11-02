@@ -25,10 +25,10 @@ export function impostorResultReason(
   });
 }
 
-export function liarResultReason(session: LiarSession): string {
-  if (session.winner === 'group') return 'The group correctly identified the player with the different question.';
-  if (!session.accusedPlayerId) return 'The group could not agree on the Liar, so the Liar wins.';
-  return `${playerName(session.setup.players, session.accusedPlayerId)} had the common question. The Liar escaped the accusation.`;
+export function liarResultReason(session: LiarSession, language: 'en' | 'am' = 'en'): string {
+  if (session.winner === 'group') return translate(language, 'liar.reason.group');
+  if (!session.accusedPlayerId) return translate(language, 'liar.reason.deadlock');
+  return translate(language, 'liar.reason.innocent', { name: playerName(session.setup.players, session.accusedPlayerId) });
 }
 
 export function insiderResult(session: InsiderSession): { title: string; detail: string } {
