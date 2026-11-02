@@ -264,7 +264,6 @@ function ExplodedPhase(_: { session: BombSession }) {
               <Text style={styles.tooHotText} accessibilityRole="header">
                 TOO HOT!
               </Text>
-              <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
             </View>
           </View>
         </View>
@@ -339,7 +338,6 @@ const styles = StyleSheet.create({
   },
   tooHotCaption: { alignItems: 'center', gap: 2 },
   tooHotText: { ...type.brushHero, fontSize: 44, lineHeight: 50, color: color.textPrimary, textAlign: 'center', paddingHorizontal: 8 },
-  tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, textAlign: 'center' },
   explosionCopy: { alignItems: 'center', gap: space[2] },
   explosionTitle: { color: color.textPrimary, textAlign: 'center' },
 });
