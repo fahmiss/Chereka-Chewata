@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useRef } from 'react';
-import { Animated, AppState, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Animated, AppState, Image, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { localizeText } from '../../content/localize';
 import { currentBombCard, getBombPlayerName } from '../../domain/bomb/machine';
 import { useBombSession } from '../../domain/bomb/SessionContext';
@@ -38,6 +38,10 @@ function localizedPrompt(session: BombSession): string {
 }
 
 const TOO_HOT_ART = require('../../../assets/illustrations/tikus-dinich-too-hot.jpg');
+/** Public URL avoids RN-web require/layout bugs that left a blank black card on iOS Safari. */
+const TOO_HOT_SOURCE = Platform.OS === 'web'
+  ? { uri: '/too-hot.jpg' }
+  : TOO_HOT_ART;
 
 function useHeatAnimation() {
   const reducedMotion = useReducedMotion();
@@ -101,54 +105,28 @@ function useHeatAnimation() {
   };
 }
 
-function useTooHotAnimation() {
+function useTooHotCaption() {
   const reducedMotion = useReducedMotion();
-  const impact = useRef(new Animated.Value(0)).current;
-  const flash = useRef(new Animated.Value(0.72)).current;
+  const progress = useRef(new Animated.Value(reducedMotion ? 1 : 0)).current;
 
   useEffect(() => {
     if (reducedMotion) {
-      impact.setValue(1);
-      flash.setValue(0);
+      progress.setValue(1);
       return;
     }
-
-    const animation = Animated.parallel([
-      Animated.timing(impact, {
-        toValue: 1,
-        duration: 180,
-        easing: easeOut,
-        useNativeDriver: true,
-      }),
-      Animated.timing(flash, {
-        toValue: 0,
-        duration: 140,
-        easing: easeOut,
-        useNativeDriver: true,
-      }),
-    ]);
+    const animation = Animated.timing(progress, {
+      toValue: 1,
+      duration: 180,
+      easing: easeOut,
+      useNativeDriver: true,
+    });
     animation.start();
     return () => animation.stop();
-  }, [flash, impact, reducedMotion]);
+  }, [progress, reducedMotion]);
 
   return {
-    // Animate the frame only — nesting Image in absoluteFill+scale breaks on web.
-    frame: {
-      transform: [
-        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [1.03, 1] }) },
-        {
-          translateX: impact.interpolate({
-            inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
-            outputRange: [0, -8, 6, -4, 2, 0],
-          }),
-        },
-      ],
-    },
-    caption: {
-      opacity: impact,
-      transform: [{ translateY: impact.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }],
-    },
-    flash: { opacity: flash },
+    opacity: progress,
+    transform: [{ translateY: progress.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }],
   };
 }
 
@@ -274,7 +252,7 @@ function PlayingPhase({ session }: { session: BombSession }) {
 
 function ExplodedPhase(_: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
-  const tooHotAnimation = useTooHotAnimation();
+  const caption = useTooHotCaption();
 
   useEffect(() => {
     hapticHeavy();
@@ -298,30 +276,22 @@ function ExplodedPhase(_: { session: BombSession }) {
             <Text style={[type.body, styles.passHint]}>That player loses this round.</Text>
           </View>
           <View style={styles.tooHotBlock}>
-            <Animated.View
-              style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.frame]}
-            >
-              <View style={styles.tooHotClip}>
-                <Image
-                  source={TOO_HOT_ART}
-                  resizeMode="cover"
-                  accessibilityLabel="Friends recoiling from a glowing hot potato"
-                  style={styles.tooHotImage}
-                />
-                <Animated.View
-                  pointerEvents="none"
-                  style={[styles.tooHotFlash, tooHotAnimation.flash]}
-                />
-              </View>
-            </Animated.View>
-            <Animated.View style={[styles.tooHotCaption, tooHotAnimation.caption]}>
+            {/* Plain Image + aspectRatio on the image itself — no animated wrappers, no % height nesting. */}
+            <View style={[styles.tooHotFrame, glow(ACCENT, 0.45, 34)]}>
+              <Image
+                source={TOO_HOT_SOURCE}
+                resizeMode="cover"
+                accessibilityLabel="Friends recoiling from a glowing hot potato"
+                style={styles.tooHotImage}
+              />
+            </View>
+            <Animated.View style={[styles.tooHotCaption, caption]}>
               <Text style={styles.tooHotText} accessibilityRole="header">
                 TOO HOT!
               </Text>
               <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
             </Animated.View>
           </View>
-
         </View>
       </ScrollView>
     </SessionShell>
@@ -380,18 +350,18 @@ const styles = StyleSheet.create({
   explodedScroll: { flexGrow: 1, justifyContent: 'center', paddingBottom: space[4] },
   explodedBody: { alignItems: 'center', justifyContent: 'center', gap: space[5] },
   tooHotBlock: { width: '100%', gap: space[3], alignItems: 'center' },
-  tooHotShadow: { width: '100%', aspectRatio: 1672 / 941, borderRadius: radius.extraLarge },
-  tooHotClip: {
+  tooHotFrame: {
     width: '100%',
-    height: '100%',
-    overflow: 'hidden',
     borderRadius: radius.extraLarge,
+    overflow: 'hidden',
     borderWidth: 1,
     borderColor: alpha(ACCENT, 0.58),
     backgroundColor: color.void,
   },
-  tooHotImage: { width: '100%', height: '100%' },
-  tooHotFlash: { ...StyleSheet.absoluteFillObject, backgroundColor: '#FFF2D6' },
+  tooHotImage: {
+    width: '100%',
+    aspectRatio: 1672 / 941,
+  },
   tooHotCaption: { alignItems: 'center', gap: 2 },
   tooHotText: { ...type.brushHero, fontSize: 44, lineHeight: 50, color: color.textPrimary, textAlign: 'center', paddingHorizontal: 8 },
   tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, textAlign: 'center' },
