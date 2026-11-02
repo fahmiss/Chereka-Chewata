@@ -48,7 +48,7 @@
     "explanation_am": "ሁለት በ1 እና በራሱ ብቻ ይካፈላል፤ ብቸኛው ጥንድ ዋና ቁጥርም ነው።",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_general_003",
@@ -165,26 +165,18 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_general_008",
-    "question_en": "How many sides does a hexagon have?",
-    "question_am": "ሄክሳጎን ስንት ጎኖች አሉት?",
-    "correct_answer_en": "6",
-    "correct_answer_am": "6",
+    "question_en": "How many squares are on a standard chessboard?",
+    "correct_answer_en": "64",
     "incorrect_answers_en": [
-      "5",
-      "7",
-      "8"
+      "32",
+      "48",
+      "100"
     ],
-    "incorrect_answers_am": [
-      "5",
-      "7",
-      "8"
-    ],
-    "explanation_en": "'Hexa' means six; a hexagon has six sides.",
-    "explanation_am": "«ሄክሳ» ማለት ስድስት ነው፤ ሄክሳጎን ስድስት ጎኖች አሉት።",
+    "explanation_en": "A chessboard is an 8-by-8 grid of alternating squares.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
     "tags": [
@@ -194,7 +186,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_general_009",
@@ -590,7 +582,7 @@
     "tags": [
       "Ethiopian"
     ],
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_ethiopia_002",
@@ -809,7 +801,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_ethiopia_010",
@@ -2886,7 +2878,7 @@
     "tags": [
       "africa"
     ],
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_002",
@@ -2930,7 +2922,7 @@
     "explanation_am": "ካንቤራ በሲድኒና በሜልቦርን መካከል እንደ መግባቢያ ዋና ከተማ ተመረጠች።",
     "category_id": "geography_places",
     "difficulty": "medium",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_004",
@@ -3031,7 +3023,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_008",
@@ -3112,7 +3104,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_011",
@@ -3138,7 +3130,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_012",
@@ -3167,7 +3159,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_013",
@@ -3223,7 +3215,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_015",
@@ -3278,7 +3270,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_017",
@@ -3365,7 +3357,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_geo_020",
@@ -3445,7 +3437,7 @@
     "tags": [
       "Ethiopian"
     ],
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_food_002",
@@ -3613,7 +3605,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_food_009",
@@ -3694,7 +3686,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_food_012",
@@ -3749,7 +3741,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_food_014",
@@ -4633,7 +4625,7 @@
     "explanation_am": "ለፍላሚንጎዎች ከሚጠቀሙት የቡድን መጠሪያዎች አንዱ “ፍላምቦያንስ” ነው።",
     "category_id": "animals_and_nature",
     "difficulty": "hard",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_nature_006",
@@ -4681,7 +4673,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_nature_008",
@@ -4707,7 +4699,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_nature_009",
@@ -4785,7 +4777,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_nature_012",
@@ -5808,16 +5800,16 @@
   },
   {
     "id": "quiz_ethx_003",
-    "question_en": "According to UNESCO, how many mosques are inside Harar Jugol?",
-    "correct_answer_en": "82",
+    "question_en": "Which historic Ethiopian city is often called the City of Saints?",
+    "correct_answer_en": "Harar",
     "incorrect_answers_en": [
-      "32",
-      "52",
-      "102"
+      "Lalibela",
+      "Axum",
+      "Gondar"
     ],
-    "explanation_en": "UNESCO records 82 mosques and 102 shrines inside the historic walled city.",
+    "explanation_en": "Harar is a major historic center of Islamic culture in Ethiopia.",
     "category_id": "ethiopia_and_culture",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "tags": [
       "Ethiopian",
       "heritage"
@@ -5825,7 +5817,7 @@
     "source_name": "UNESCO World Heritage Centre",
     "source_url": "https://whc.unesco.org/en/list/1189",
     "source_license": "CC-BY-SA IGO 3.0",
-    "verified_at": "2026-10-29",
+    "verified_at": "2026-11-02",
     "active": true
   },
   {
@@ -6822,7 +6814,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_036",
     "question_en": "What fruit is traditionally used to make wine?",
     "correct_answer_en": "Grapes",
@@ -6972,7 +6964,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_044",
     "question_en": "What country is home to the kangaroo?",
     "correct_answer_en": "Australia",
@@ -6993,7 +6985,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_045",
     "question_en": "In what city is the Statue of Liberty located?",
     "correct_answer_en": "New York City",
@@ -7011,7 +7003,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_046",
     "question_en": "What is the largest continent?",
     "correct_answer_en": "Asia",
@@ -7065,7 +7057,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_049",
     "question_en": "What is the longest river in the world?",
     "correct_answer_en": "The Nile",
@@ -7083,7 +7075,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_050",
     "question_en": "Who invented the telephone?",
     "correct_answer_en": "Alexander Graham Bell",
@@ -7122,7 +7114,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_052",
     "question_en": "What ancient structures did the Egyptian pharaohs build as tombs?",
     "correct_answer_en": "The pyramids",
@@ -7199,19 +7191,19 @@
     "source_name": null,
     "source_url": null,
     "source_license": null,
-    "verified_at": null,
+    "verified_at": "2026-11-02",
     "active": true,
     "id": "quiz_pub_056",
-    "question_en": "What empire was Julius Caesar a part of?",
-    "correct_answer_en": "The Roman Empire",
+    "question_en": "Julius Caesar was a leader during which period of Roman history?",
+    "correct_answer_en": "The Roman Republic",
     "incorrect_answers_en": [
-      "The Greek Empire",
-      "The Ottoman Empire",
-      "The Persian Empire"
+      "The Roman Empire",
+      "The Byzantine Empire",
+      "The Holy Roman Empire"
     ],
-    "explanation_en": "Julius Caesar was a Roman general and statesman in the late Roman Republic, which led into the Empire.",
+    "explanation_en": "Caesar lived under the Republic; the Empire began after his death.",
     "category_id": "history",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "source_name": null,
@@ -7290,7 +7282,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true,
+    "active": false,
     "id": "quiz_pub_061",
     "question_en": "What famous ship was said to be “unsinkable”?",
     "correct_answer_en": "The Titanic",
@@ -8100,7 +8092,7 @@
     "explanation_en": "A rainbow is traditionally described as having seven colors, from red through violet.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8118,7 +8110,7 @@
     "explanation_en": "The yen is the official currency of Japan.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8154,7 +8146,7 @@
     "explanation_en": "Pure water freezes at zero degrees Celsius under standard atmospheric pressure.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8172,7 +8164,7 @@
     "explanation_en": "A standard guitar has six strings.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8190,7 +8182,7 @@
     "explanation_en": "The blue whale is the largest mammal and the largest known animal.",
     "category_id": "general_knowledge",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8667,7 +8659,7 @@
     "explanation_en": "The Eiffel Tower stands on the Champ de Mars in Paris.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8703,7 +8695,7 @@
     "explanation_en": "Rome has been the capital of unified Italy since 1871.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8739,7 +8731,7 @@
     "explanation_en": "Madrid is Spain's capital and largest city.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8850,7 +8842,7 @@
     "explanation_en": "Brasília became Brazil's capital in 1960.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8886,7 +8878,7 @@
     "explanation_en": "Italy's peninsula is famously shaped like a boot extending into the Mediterranean.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8904,7 +8896,7 @@
     "explanation_en": "Berlin is Germany's capital and largest city.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8922,7 +8914,7 @@
     "explanation_en": "La Paz, Bolivia, sits about 3,650 metres above sea level, higher than any other national seat of government.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -8976,7 +8968,7 @@
     "explanation_en": "Moscow is Russia's capital and largest city.",
     "category_id": "geography_places",
     "difficulty": "easy",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -10714,7 +10706,7 @@
     "explanation_en": "Traditional hummus is made mainly from cooked chickpeas blended with tahini.",
     "category_id": "food_and_drink",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -10768,7 +10760,7 @@
     "explanation_en": "Sauerkraut is finely cut cabbage fermented by lactic acid bacteria.",
     "category_id": "food_and_drink",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -10804,7 +10796,7 @@
     "explanation_en": "A traditional omelette is made by cooking beaten eggs in a pan.",
     "category_id": "food_and_drink",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11002,7 +10994,7 @@
     "explanation_en": "Earlier crescent pastries existed elsewhere, but the flaky croissant became an icon of French baking.",
     "category_id": "food_and_drink",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11038,7 +11030,7 @@
     "explanation_en": "Tomatoes lead world fruit production when botanical fruits are counted; bananas lead many sweet-fruit lists.",
     "category_id": "food_and_drink",
     "difficulty": "hard",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11110,7 +11102,7 @@
     "explanation_en": "Saffron is made from the dried stigmas of the Crocus sativus flower.",
     "category_id": "food_and_drink",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11128,7 +11120,7 @@
     "explanation_en": "A social group of lions is called a pride.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11146,7 +11138,7 @@
     "explanation_en": "The peregrine falcon reaches the highest recorded bird speeds during hunting dives.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11200,7 +11192,7 @@
     "explanation_en": "A group of crows is traditionally called a murder.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11272,7 +11264,7 @@
     "explanation_en": "A polar bear's skin is black beneath its translucent fur.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11290,7 +11282,7 @@
     "explanation_en": "Some land snails can remain dormant for up to three years during harsh conditions.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11326,7 +11318,7 @@
     "explanation_en": "Greenland sharks can live for several centuries, longer than almost any other vertebrate; some clams live even longer.",
     "category_id": "animals_and_nature",
     "difficulty": "hard",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11452,7 +11444,7 @@
     "explanation_en": "A family group of wolves is called a pack.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11470,7 +11462,7 @@
     "explanation_en": "Zebras are recognized by the unique black-and-white stripe patterns on their coats.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11506,7 +11498,7 @@
     "explanation_en": "Crabs are decapods with ten legs, including the pair that bears their claws.",
     "category_id": "animals_and_nature",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11524,7 +11516,7 @@
     "explanation_en": "Hippopotomonstrosesquippedaliophobia is a humorous term for the fear of long words.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11545,7 +11537,7 @@
     "explanation_en": "Properly sealed honey can remain edible for extremely long periods because microbes struggle to grow in it.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11566,7 +11558,7 @@
     "explanation_en": "Koala fingerprints have loops and whorls that closely resemble human fingerprints.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11608,7 +11600,7 @@
     "explanation_en": "Coulrophobia is the term commonly used for an intense fear of clowns.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11629,7 +11621,7 @@
     "explanation_en": "A slug has four sensory tentacles that are sometimes informally described as noses.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11650,7 +11642,7 @@
     "explanation_en": "A group of pugs is traditionally called a grumble.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11692,7 +11684,7 @@
     "explanation_en": "Every letter in \"typewriter\" appears on the top letter row of a QWERTY keyboard.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11713,7 +11705,7 @@
     "explanation_en": "Sphenopalatine ganglioneuralgia is the technical name commonly given to brain freeze.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11776,7 +11768,7 @@
     "explanation_en": "Triskaidekaphobia is the fear of the number 13.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11818,7 +11810,7 @@
     "explanation_en": "An octopus has three hearts and copper-based blood that appears blue.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11923,7 +11915,7 @@
     "explanation_en": "Nomophobia describes anxiety about being without access to a mobile phone.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -11944,7 +11936,7 @@
     "explanation_en": "A group of ferrets is traditionally called a business.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -12049,7 +12041,7 @@
     "explanation_en": "Arachnophobia is an intense fear of spiders and other arachnids.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -15319,7 +15311,7 @@
     "explanation_en": "Green is strongly associated with St. Patrick's Day and Ireland.",
     "category_id": "general_knowledge",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -19560,6 +19552,2140 @@
     "category_id": "movies_entertainment",
     "active": true,
     "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_005",
+    "question_en": "During an Ethiopian coffee ceremony, what is the first round of coffee traditionally called?",
+    "correct_answer_en": "Abol",
+    "incorrect_answers_en": [
+      "Tona",
+      "Bereka",
+      "Buna"
+    ],
+    "explanation_en": "Abol is traditionally followed by Tona and Bereka.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "coffee"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_006",
+    "question_en": "Which Ethiopian tradition features communal thanksgiving gatherings associated with the Oromo people?",
+    "correct_answer_en": "Irreecha",
+    "incorrect_answers_en": [
+      "Ashenda",
+      "Timket",
+      "Meskel"
+    ],
+    "explanation_en": "Irreecha is an Oromo thanksgiving festival.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_007",
+    "question_en": "Which city is especially associated with Ethiopia's Ashenda celebrations?",
+    "correct_answer_en": "Mekelle",
+    "incorrect_answers_en": [
+      "Jimma",
+      "Hawassa",
+      "Dire Dawa"
+    ],
+    "explanation_en": "Ashenda is celebrated by girls and women in Tigray.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "tigray"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_022",
+    "question_en": "Which ingredient is traditionally used to flavor tej?",
+    "correct_answer_en": "Gesho",
+    "incorrect_answers_en": [
+      "Korerima",
+      "Mitmita",
+      "Abish"
+    ],
+    "explanation_en": "Gesho is commonly used in Ethiopian honey wine.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "drink"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_022",
+    "question_en": "Which lake is shared by Ethiopia and Kenya?",
+    "correct_answer_en": "Lake Turkana",
+    "incorrect_answers_en": [
+      "Lake Tana",
+      "Lake Victoria",
+      "Lake Malawi"
+    ],
+    "explanation_en": "Lake Turkana extends into southern Ethiopia.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "lakes"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_022",
+    "question_en": "Which animal can regenerate lost arms and sometimes much of its body?",
+    "correct_answer_en": "Sea star",
+    "incorrect_answers_en": [
+      "Sea urchin",
+      "Jellyfish",
+      "Crab"
+    ],
+    "explanation_en": "Some sea stars can regrow lost arms.",
+    "difficulty": "medium",
+    "tags": [
+      "ocean"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_022",
+    "question_en": "Which invention is associated with Johannes Gutenberg in 15th-century Europe?",
+    "correct_answer_en": "Movable-type printing press",
+    "incorrect_answers_en": [
+      "Steam engine",
+      "Telephone",
+      "Telescope"
+    ],
+    "explanation_en": "Gutenberg helped revolutionize printing in Europe.",
+    "difficulty": "medium",
+    "tags": [
+      "invention"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_023",
+    "question_en": "Which element has the chemical symbol W?",
+    "correct_answer_en": "Tungsten",
+    "incorrect_answers_en": [
+      "Tin",
+      "Titanium",
+      "Tellurium"
+    ],
+    "explanation_en": "W comes from tungsten's alternative name, wolfram.",
+    "difficulty": "hard",
+    "tags": [
+      "science"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_022",
+    "question_en": "Which empire was ruled by Mansa Musa during his famous pilgrimage?",
+    "correct_answer_en": "Mali",
+    "incorrect_answers_en": [
+      "Songhai",
+      "Ghana",
+      "Aksumite"
+    ],
+    "explanation_en": "Mansa Musa ruled the wealthy Mali Empire.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "empire"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_023",
+    "question_en": "Which bird can dive at speeds exceeding 300 km/h?",
+    "correct_answer_en": "Peregrine falcon",
+    "incorrect_answers_en": [
+      "Golden eagle",
+      "Ostrich",
+      "Albatross"
+    ],
+    "explanation_en": "Peregrine falcons reach extraordinary speeds during hunting dives.",
+    "difficulty": "medium",
+    "tags": [
+      "birds"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Cultural / historical / geography references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_008",
+    "question_en": "During a traditional Ethiopian coffee ceremony, what is the second round called?",
+    "correct_answer_en": "Tona",
+    "incorrect_answers_en": [
+      "Abol",
+      "Bereka",
+      "Buna Qurs"
+    ],
+    "explanation_en": "Tona comes after Abol and before Bereka.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "coffee"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_009",
+    "question_en": "What is the eve of Timket traditionally called?",
+    "correct_answer_en": "Ketera",
+    "incorrect_answers_en": [
+      "Demera",
+      "Fasika",
+      "Enkutatash"
+    ],
+    "explanation_en": "Ketera is observed on the day before Timket.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "timket"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_010",
+    "question_en": "What is carried in ceremonial processions during Timket?",
+    "correct_answer_en": "A Tabot",
+    "incorrect_answers_en": [
+      "A Mesob",
+      "A ceremonial crown",
+      "A Jebena"
+    ],
+    "explanation_en": "Tabots represent the Ark of the Covenant.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "timket"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_011",
+    "question_en": "Which Ethiopian community celebrates Fichee-Chambalaalla as its New Year?",
+    "correct_answer_en": "Sidama",
+    "incorrect_answers_en": [
+      "Gurage",
+      "Afar",
+      "Harari"
+    ],
+    "explanation_en": "Fichee-Chambalaalla is the Sidama New Year celebration.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "sidama"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_012",
+    "question_en": "In the traditional Oromo Gadaa system, leadership changes approximately every how many years?",
+    "correct_answer_en": "Eight",
+    "incorrect_answers_en": [
+      "Four",
+      "Twelve",
+      "Sixteen"
+    ],
+    "explanation_en": "Gadaa leadership rotates every eight years.",
+    "difficulty": "hard",
+    "tags": [
+      "ethiopian",
+      "oromo",
+      "gadaa"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_013",
+    "question_en": "Which Ethiopian community celebrates the Shuwalid festival?",
+    "correct_answer_en": "Harari",
+    "incorrect_answers_en": [
+      "Sidama",
+      "Konso",
+      "Gedeo"
+    ],
+    "explanation_en": "Shuwalid is a traditional Harari religious and cultural celebration.",
+    "difficulty": "hard",
+    "tags": [
+      "ethiopian",
+      "harari"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_014",
+    "question_en": "Which Ethiopian cultural practice involves feeding someone a bite of food by hand?",
+    "correct_answer_en": "Gursha",
+    "incorrect_answers_en": [
+      "Eskista",
+      "Shilela",
+      "Woreb"
+    ],
+    "explanation_en": "Gursha is a familiar gesture of affection and hospitality.",
+    "difficulty": "easy",
+    "tags": [
+      "ethiopian",
+      "custom"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_015",
+    "question_en": "What is the traditional Ethiopian coffee-roasting pan called?",
+    "correct_answer_en": "Menkeshkesh",
+    "incorrect_answers_en": [
+      "Mitad",
+      "Mesob",
+      "Muketcha"
+    ],
+    "explanation_en": "Menkeshkesh is used to roast coffee beans.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "coffee"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_016",
+    "question_en": "What is the traditional Ethiopian handwoven cotton shawl commonly worn by women called?",
+    "correct_answer_en": "Netela",
+    "incorrect_answers_en": [
+      "Gabi",
+      "Kuta",
+      "Shamma"
+    ],
+    "explanation_en": "Netela is commonly worn during celebrations and religious occasions.",
+    "difficulty": "easy",
+    "tags": [
+      "ethiopian",
+      "clothing"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_017",
+    "question_en": "What does the final coffee ceremony round, Bereka, traditionally symbolize?",
+    "correct_answer_en": "Blessing",
+    "incorrect_answers_en": [
+      "Celebration",
+      "Friendship",
+      "Prosperity"
+    ],
+    "explanation_en": "Bereka is associated with a blessing.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "coffee"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_018",
+    "question_en": "Which traditional Ethiopian coffee-making tool is used to pound roasted beans?",
+    "correct_answer_en": "Muketcha",
+    "incorrect_answers_en": [
+      "Mitad",
+      "Rekebot",
+      "Sini"
+    ],
+    "explanation_en": "Muketcha is a traditional wooden mortar.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "coffee"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_019",
+    "question_en": "Which Ethiopian tradition uses the term 'Abba Gadaa' for a leader?",
+    "correct_answer_en": "Gadaa system",
+    "incorrect_answers_en": [
+      "Fichee-Chambalaalla",
+      "Timket",
+      "Shuwalid"
+    ],
+    "explanation_en": "Abba Gadaa is a leadership title in the Gadaa system.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopian",
+      "oromo",
+      "gadaa"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_020",
+    "question_en": "What traditional Sidama dish is associated with Fichee-Chambalaalla celebrations?",
+    "correct_answer_en": "Buurisame",
+    "incorrect_answers_en": [
+      "Kitfo",
+      "Chechebsa",
+      "Doro Wat"
+    ],
+    "explanation_en": "Buurisame is traditionally shared during Sidama New Year.",
+    "difficulty": "hard",
+    "tags": [
+      "ethiopian",
+      "sidama",
+      "food"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_ethx_021",
+    "question_en": "Which Ethiopian cultural landscape is recognized for traditional agroforestry with enset and coffee?",
+    "correct_answer_en": "Gedeo",
+    "incorrect_answers_en": [
+      "Konso",
+      "Bale",
+      "Simien"
+    ],
+    "explanation_en": "Gedeo communities maintain layered traditional agroforestry systems.",
+    "difficulty": "easy",
+    "tags": [
+      "ethiopian",
+      "gedeo"
+    ],
+    "category_id": "ethiopia_and_culture",
+    "active": true,
+    "source_name": "Ethiopian cultural traditions",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_023",
+    "question_en": "Which Ethiopian dish traditionally combines chopped tripe, liver, and meat?",
+    "correct_answer_en": "Dulet",
+    "incorrect_answers_en": [
+      "Kitfo",
+      "Tibs",
+      "Gored Gored"
+    ],
+    "explanation_en": "Dulet combines finely chopped meat and organ meats.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_024",
+    "question_en": "What is the main ingredient used to prepare Shiro?",
+    "correct_answer_en": "Chickpea flour",
+    "incorrect_answers_en": [
+      "Split peas",
+      "Barley flour",
+      "Ground lentils"
+    ],
+    "explanation_en": "Shiro is commonly made from ground roasted chickpeas.",
+    "difficulty": "easy",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_025",
+    "question_en": "Which Ethiopian dish is made from cracked wheat or barley cooked until tender?",
+    "correct_answer_en": "Kinche",
+    "incorrect_answers_en": [
+      "Genfo",
+      "Firfir",
+      "Chechebsa"
+    ],
+    "explanation_en": "Kinche is a traditional Ethiopian cracked-grain dish.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_026",
+    "question_en": "Which Ethiopian dish is made by breaking flatbread into pieces and mixing it with spiced butter?",
+    "correct_answer_en": "Chechebsa",
+    "incorrect_answers_en": [
+      "Ful",
+      "Beso",
+      "Atmit"
+    ],
+    "explanation_en": "Chechebsa combines torn flatbread with seasoned butter or oil.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_027",
+    "question_en": "Which Ethiopian dish commonly uses a thick porridge with a central well for spiced butter?",
+    "correct_answer_en": "Genfo",
+    "incorrect_answers_en": [
+      "Shiro",
+      "Kinche",
+      "Firfir"
+    ],
+    "explanation_en": "Genfo is traditionally served with spiced butter in the center.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_028",
+    "question_en": "What is the traditional Ethiopian porridge made from barley flour or other grain flour, often mixed with water?",
+    "correct_answer_en": "Beso",
+    "incorrect_answers_en": [
+      "Bula",
+      "Kocho",
+      "Kita"
+    ],
+    "explanation_en": "Beso is made from roasted barley flour and can be mixed into a drink or porridge.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_029",
+    "question_en": "Which ingredient gives traditional Ethiopian Mitmita much of its heat?",
+    "correct_answer_en": "Chili pepper",
+    "incorrect_answers_en": [
+      "Turmeric",
+      "Cinnamon",
+      "Black cumin"
+    ],
+    "explanation_en": "Mitmita is a hot spice blend based on chili peppers.",
+    "difficulty": "easy",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_030",
+    "question_en": "Which Ethiopian bread is commonly prepared as a simple flatbread cooked on a griddle?",
+    "correct_answer_en": "Kita",
+    "incorrect_answers_en": [
+      "Dabo Kolo",
+      "Himbasha",
+      "Kocho"
+    ],
+    "explanation_en": "Kita is a traditional Ethiopian pan-cooked flatbread.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "ethiopian"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_031",
+    "question_en": "What ingredient gives traditional hummus its rich, nutty flavor alongside chickpeas?",
+    "correct_answer_en": "Tahini",
+    "incorrect_answers_en": [
+      "Peanut butter",
+      "Cashew cream",
+      "Coconut milk"
+    ],
+    "explanation_en": "Tahini is a paste made from sesame seeds.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_032",
+    "question_en": "Which Korean side dish is traditionally made from fermented vegetables?",
+    "correct_answer_en": "Kimchi",
+    "incorrect_answers_en": [
+      "Japchae",
+      "Bibimbap",
+      "Tteokbokki"
+    ],
+    "explanation_en": "Kimchi is often prepared with fermented napa cabbage.",
+    "difficulty": "easy",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_033",
+    "question_en": "Which traditional North African food is made from small granules of semolina?",
+    "correct_answer_en": "Couscous",
+    "incorrect_answers_en": [
+      "Polenta",
+      "Bulgur",
+      "Risotto"
+    ],
+    "explanation_en": "Couscous is made from moistened semolina granules.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_034",
+    "question_en": "What cooking technique prepares ceviche using acidic citrus juice?",
+    "correct_answer_en": "Acid curing",
+    "incorrect_answers_en": [
+      "Smoking",
+      "Fermenting",
+      "Steaming"
+    ],
+    "explanation_en": "Citrus acid changes the texture of the seafood's proteins.",
+    "difficulty": "hard",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_035",
+    "question_en": "Which country is especially associated with Halloumi cheese?",
+    "correct_answer_en": "Cyprus",
+    "incorrect_answers_en": [
+      "Greece",
+      "Italy",
+      "France"
+    ],
+    "explanation_en": "Halloumi is a traditional cheese strongly associated with Cyprus.",
+    "difficulty": "medium",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_food_036",
+    "question_en": "Which Mexican sauce is famous for combining chili peppers with ingredients that can include chocolate?",
+    "correct_answer_en": "Mole poblano",
+    "incorrect_answers_en": [
+      "Salsa verde",
+      "Pico de gallo",
+      "Guacamole"
+    ],
+    "explanation_en": "Mole poblano combines chilies, spices, and often chocolate.",
+    "difficulty": "hard",
+    "tags": [
+      "food",
+      "international"
+    ],
+    "category_id": "food_and_drink",
+    "active": true,
+    "source_name": "Culinary tradition references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_023",
+    "question_en": "Which Ethiopian empress ruled from 1916 to 1930?",
+    "correct_answer_en": "Zewditu",
+    "incorrect_answers_en": [
+      "Taytu Betul",
+      "Mentewab",
+      "Tewabech Ali"
+    ],
+    "explanation_en": "Zewditu ruled before Haile Selassie became emperor.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "ethiopian"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_024",
+    "question_en": "Which Ethiopian emperor addressed the League of Nations after Italy's invasion?",
+    "correct_answer_en": "Haile Selassie",
+    "incorrect_answers_en": [
+      "Menelik II",
+      "Tewodros II",
+      "Yohannes IV"
+    ],
+    "explanation_en": "His 1936 speech challenged the world's response to aggression.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "ethiopian"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_025",
+    "question_en": "Which ruler was overthrown by the Derg in 1974?",
+    "correct_answer_en": "Haile Selassie",
+    "incorrect_answers_en": [
+      "Menelik II",
+      "Zewditu",
+      "Lij Iyasu"
+    ],
+    "explanation_en": "The 1974 revolution ended Ethiopia's imperial monarchy.",
+    "difficulty": "easy",
+    "tags": [
+      "history",
+      "ethiopian"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_026",
+    "question_en": "What disagreement helped trigger the conflict leading to the Battle of Adwa?",
+    "correct_answer_en": "Different versions of the Treaty of Wuchale",
+    "incorrect_answers_en": [
+      "Control of the Nile",
+      "Religious leadership",
+      "Succession to the throne"
+    ],
+    "explanation_en": "Italy claimed protectorate rights that Ethiopia rejected.",
+    "difficulty": "hard",
+    "tags": [
+      "history",
+      "ethiopian",
+      "adwa"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_027",
+    "question_en": "In which year did Ethiopia regain Addis Ababa from Italian occupation?",
+    "correct_answer_en": "1941",
+    "incorrect_answers_en": [
+      "1935",
+      "1945",
+      "1952"
+    ],
+    "explanation_en": "Haile Selassie returned to Addis Ababa in May 1941.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "ethiopian"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_028",
+    "question_en": "Which Ethiopian emperor's reign saw Ethiopia join the League of Nations in 1923?",
+    "correct_answer_en": "Zewditu",
+    "incorrect_answers_en": [
+      "Menelik II",
+      "Haile Selassie",
+      "Yohannes IV"
+    ],
+    "explanation_en": "Ethiopia joined during Zewditu's reign, with Ras Tafari as regent.",
+    "difficulty": "hard",
+    "tags": [
+      "history",
+      "ethiopian"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_029",
+    "question_en": "Which European city hosted the 1884–85 conference on colonial claims in Africa?",
+    "correct_answer_en": "Berlin",
+    "incorrect_answers_en": [
+      "London",
+      "Paris",
+      "Rome"
+    ],
+    "explanation_en": "European powers established rules for claiming African territory.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "african"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_030",
+    "question_en": "Which African kingdom built the famous stone ruins known as Great Zimbabwe?",
+    "correct_answer_en": "Kingdom of Zimbabwe",
+    "incorrect_answers_en": [
+      "Kingdom of Kongo",
+      "Kingdom of Aksum",
+      "Kingdom of Benin"
+    ],
+    "explanation_en": "The ruins were built by ancestors of Shona-speaking peoples.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "african"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_031",
+    "question_en": "Which European country looted the Benin Bronzes during an 1897 military expedition?",
+    "correct_answer_en": "Britain",
+    "incorrect_answers_en": [
+      "Portugal",
+      "France",
+      "Germany"
+    ],
+    "explanation_en": "British forces seized thousands of objects from Benin City.",
+    "difficulty": "hard",
+    "tags": [
+      "history",
+      "african"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_032",
+    "question_en": "Which African leader was imprisoned for 27 years before becoming president?",
+    "correct_answer_en": "Nelson Mandela",
+    "incorrect_answers_en": [
+      "Patrice Lumumba",
+      "Jomo Kenyatta",
+      "Kwame Nkrumah"
+    ],
+    "explanation_en": "Mandela became South Africa's president in 1994.",
+    "difficulty": "easy",
+    "tags": [
+      "history",
+      "african"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_033",
+    "question_en": "Which empire captured Constantinople in 1453?",
+    "correct_answer_en": "Ottoman Empire",
+    "incorrect_answers_en": [
+      "Roman Empire",
+      "Mongol Empire",
+      "Persian Empire"
+    ],
+    "explanation_en": "Sultan Mehmed II led the Ottoman conquest.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "world"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_034",
+    "question_en": "Who became the first woman to travel into space in 1963?",
+    "correct_answer_en": "Valentina Tereshkova",
+    "incorrect_answers_en": [
+      "Sally Ride",
+      "Mae Jemison",
+      "Svetlana Savitskaya"
+    ],
+    "explanation_en": "Tereshkova orbited Earth aboard Vostok 6.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "world"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_035",
+    "question_en": "Which event in 1962 brought the US and Soviet Union close to nuclear war?",
+    "correct_answer_en": "The Cuban Missile Crisis",
+    "incorrect_answers_en": [
+      "The Berlin Blockade",
+      "The Korean War",
+      "The Suez Crisis"
+    ],
+    "explanation_en": "Soviet missiles in Cuba triggered a tense standoff.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "world"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_history_036",
+    "question_en": "Which ancient civilization used knotted cords called quipu to record information?",
+    "correct_answer_en": "Inca",
+    "incorrect_answers_en": [
+      "Maya",
+      "Aztec",
+      "Ancient Egyptian"
+    ],
+    "explanation_en": "Inca administrators used knotted cords to record information.",
+    "difficulty": "medium",
+    "tags": [
+      "history",
+      "world"
+    ],
+    "category_id": "history",
+    "active": true,
+    "source_name": "Historical records / reference accounts",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_023",
+    "question_en": "In which Ethiopian region is the Sof Omar cave system located?",
+    "correct_answer_en": "Oromia",
+    "incorrect_answers_en": [
+      "Amhara",
+      "Afar",
+      "Tigray"
+    ],
+    "explanation_en": "The spectacular limestone caves are in the Bale area.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "ethiopia"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_024",
+    "question_en": "Which Ethiopian region is home to the active Erta Ale volcano?",
+    "correct_answer_en": "Afar",
+    "incorrect_answers_en": [
+      "Somali",
+      "Sidama",
+      "Amhara"
+    ],
+    "explanation_en": "Erta Ale is famous for its volcanic lava lake.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "ethiopia"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_025",
+    "question_en": "The Blue Nile Falls, also known as Tis Issat, are near which Ethiopian city?",
+    "correct_answer_en": "Bahir Dar",
+    "incorrect_answers_en": [
+      "Gondar",
+      "Hawassa",
+      "Jimma"
+    ],
+    "explanation_en": "The falls are located southeast of Bahir Dar.",
+    "difficulty": "easy",
+    "tags": [
+      "geography",
+      "ethiopia"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_026",
+    "question_en": "Which Ethiopian lake sits inside a volcanic crater near Ambo?",
+    "correct_answer_en": "Lake Wenchi",
+    "incorrect_answers_en": [
+      "Lake Langano",
+      "Lake Ziway",
+      "Lake Abijatta"
+    ],
+    "explanation_en": "Wenchi is a scenic crater lake in Oromia.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "ethiopia"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_027",
+    "question_en": "Which Ethiopian national park is known for the Awash River and nearby hot springs?",
+    "correct_answer_en": "Awash National Park",
+    "incorrect_answers_en": [
+      "Bale Mountains",
+      "Simien Mountains",
+      "Nech Sar"
+    ],
+    "explanation_en": "Awash National Park includes the river, waterfalls, and hot springs.",
+    "difficulty": "easy",
+    "tags": [
+      "geography",
+      "ethiopia"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_028",
+    "question_en": "Which country contains Lake Assal, Africa's lowest point on land?",
+    "correct_answer_en": "Djibouti",
+    "incorrect_answers_en": [
+      "Eritrea",
+      "Ethiopia",
+      "Sudan"
+    ],
+    "explanation_en": "Lake Assal lies more than 150 metres below sea level.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "africa"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_029",
+    "question_en": "In which African country is the Okavango Delta located?",
+    "correct_answer_en": "Botswana",
+    "incorrect_answers_en": [
+      "Zambia",
+      "Namibia",
+      "Zimbabwe"
+    ],
+    "explanation_en": "The Okavango forms a vast inland wetland in Botswana.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "africa"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_030",
+    "question_en": "Which African country is home to the Ngorongoro Crater?",
+    "correct_answer_en": "Tanzania",
+    "incorrect_answers_en": [
+      "Kenya",
+      "Uganda",
+      "Rwanda"
+    ],
+    "explanation_en": "The crater is famous for its exceptional wildlife.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "africa"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_031",
+    "question_en": "Which country is home to the ancient Namib Desert?",
+    "correct_answer_en": "Namibia",
+    "incorrect_answers_en": [
+      "Angola",
+      "Botswana",
+      "South Africa"
+    ],
+    "explanation_en": "The Namib is famous for towering red sand dunes.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "africa"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_032",
+    "question_en": "The unusual dragon blood trees of Socotra are found in which country?",
+    "correct_answer_en": "Yemen",
+    "incorrect_answers_en": [
+      "Oman",
+      "Somalia",
+      "Madagascar"
+    ],
+    "explanation_en": "Socotra is an island archipelago belonging to Yemen.",
+    "difficulty": "hard",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_033",
+    "question_en": "Which country is famous for Cappadocia's fairy chimneys and hot-air balloons?",
+    "correct_answer_en": "Turkey",
+    "incorrect_answers_en": [
+      "Greece",
+      "Georgia",
+      "Armenia"
+    ],
+    "explanation_en": "Cappadocia is known for unusual rock formations and balloon flights.",
+    "difficulty": "easy",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_034",
+    "question_en": "Where can you find Salar de Uyuni, the world's largest salt flat?",
+    "correct_answer_en": "Bolivia",
+    "incorrect_answers_en": [
+      "Chile",
+      "Peru",
+      "Argentina"
+    ],
+    "explanation_en": "Its wet surface can create a giant natural mirror.",
+    "difficulty": "hard",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_035",
+    "question_en": "Which country is home to the Galápagos Islands?",
+    "correct_answer_en": "Ecuador",
+    "incorrect_answers_en": [
+      "Colombia",
+      "Costa Rica",
+      "Panama"
+    ],
+    "explanation_en": "The islands helped inspire Darwin's work on evolution.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_036",
+    "question_en": "Which country contains the Suez Canal connecting the Mediterranean and Red Seas?",
+    "correct_answer_en": "Egypt",
+    "incorrect_answers_en": [
+      "Saudi Arabia",
+      "Jordan",
+      "Israel"
+    ],
+    "explanation_en": "The canal provides a shipping shortcut between Europe and Asia.",
+    "difficulty": "medium",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_geo_037",
+    "question_en": "Which two countries lie on opposite sides of the Strait of Malacca?",
+    "correct_answer_en": "Malaysia and Indonesia",
+    "incorrect_answers_en": [
+      "India and Sri Lanka",
+      "Japan and South Korea",
+      "Spain and Morocco"
+    ],
+    "explanation_en": "The strait is one of Asia's busiest shipping routes.",
+    "difficulty": "hard",
+    "tags": [
+      "geography",
+      "world"
+    ],
+    "category_id": "geography_places",
+    "active": true,
+    "source_name": "Geography / UNESCO / place references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_024",
+    "question_en": "What do Ethiopian wolves in the Bale Mountains mainly hunt?",
+    "correct_answer_en": "Rodents",
+    "incorrect_answers_en": [
+      "Mountain goats",
+      "Antelopes",
+      "Wild birds"
+    ],
+    "explanation_en": "Rodents make up most of the Ethiopian wolf's diet.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "ethiopia"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_025",
+    "question_en": "Which endangered Ethiopian animal is famous for its unusually thick, curved horns?",
+    "correct_answer_en": "Walia ibex",
+    "incorrect_answers_en": [
+      "Gelada",
+      "Ethiopian wolf",
+      "Bale monkey"
+    ],
+    "explanation_en": "Male Walia ibex have impressive backward-curving horns.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "ethiopia"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_026",
+    "question_en": "Which rare Ethiopian antelope is native to the Bale Mountains?",
+    "correct_answer_en": "Mountain nyala",
+    "incorrect_answers_en": [
+      "Impala",
+      "Springbok",
+      "Kudu"
+    ],
+    "explanation_en": "Mountain nyala live in Ethiopia's high-altitude habitats.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "ethiopia"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_027",
+    "question_en": "What is the main food of gelada monkeys?",
+    "correct_answer_en": "Grass",
+    "incorrect_answers_en": [
+      "Insects",
+      "Fruit",
+      "Fish"
+    ],
+    "explanation_en": "Geladas spend much of their day grazing on grass.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "ethiopia"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_028",
+    "question_en": "Which Ethiopian animal is especially known for living in bamboo forests?",
+    "correct_answer_en": "Bale monkey",
+    "incorrect_answers_en": [
+      "Walia ibex",
+      "Gelada",
+      "Ethiopian wolf"
+    ],
+    "explanation_en": "Bale monkeys rely heavily on bamboo habitats.",
+    "difficulty": "hard",
+    "tags": [
+      "animals",
+      "ethiopia"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_029",
+    "question_en": "Which animal produces cube-shaped droppings?",
+    "correct_answer_en": "Wombat",
+    "incorrect_answers_en": [
+      "Koala",
+      "Kangaroo",
+      "Tasmanian devil"
+    ],
+    "explanation_en": "Wombats produce uniquely cube-shaped droppings.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_030",
+    "question_en": "Which animal can sleep with one half of its brain at a time?",
+    "correct_answer_en": "Dolphin",
+    "incorrect_answers_en": [
+      "Elephant",
+      "Giraffe",
+      "Rabbit"
+    ],
+    "explanation_en": "Dolphins keep part of their brain awake while resting.",
+    "difficulty": "hard",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_031",
+    "question_en": "Which animal uses tools such as rocks to crack open shellfish?",
+    "correct_answer_en": "Sea otter",
+    "incorrect_answers_en": [
+      "Seal",
+      "Penguin",
+      "Walrus"
+    ],
+    "explanation_en": "Sea otters use rocks to break hard shells.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_032",
+    "question_en": "Which bird is famous for copying camera shutters and chainsaw sounds?",
+    "correct_answer_en": "Lyrebird",
+    "incorrect_answers_en": [
+      "Raven",
+      "Toucan",
+      "Kingfisher"
+    ],
+    "explanation_en": "Lyrebirds can imitate natural and human-made sounds.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_033",
+    "question_en": "Which animal has a tongue that can shoot out rapidly to catch insects?",
+    "correct_answer_en": "Chameleon",
+    "incorrect_answers_en": [
+      "Iguana",
+      "Tortoise",
+      "Gecko"
+    ],
+    "explanation_en": "Chameleons use their fast, sticky tongues to capture prey.",
+    "difficulty": "easy",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_034",
+    "question_en": "Which animal has a powerful electric discharge used for hunting?",
+    "correct_answer_en": "Electric eel",
+    "incorrect_answers_en": [
+      "Manta ray",
+      "Swordfish",
+      "Catfish"
+    ],
+    "explanation_en": "Electric eels stun prey using electric organs.",
+    "difficulty": "easy",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_035",
+    "question_en": "Which animal is known for males carrying developing young in a pouch?",
+    "correct_answer_en": "Seahorse",
+    "incorrect_answers_en": [
+      "Clownfish",
+      "Stingray",
+      "Angelfish"
+    ],
+    "explanation_en": "Male seahorses carry embryos until birth.",
+    "difficulty": "easy",
+    "tags": [
+      "animals",
+      "behavior"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_036",
+    "question_en": "Which tree is famous for storing large amounts of water in its trunk?",
+    "correct_answer_en": "Baobab",
+    "incorrect_answers_en": [
+      "Acacia",
+      "Eucalyptus",
+      "Cypress"
+    ],
+    "explanation_en": "Baobab trunks store water during dry periods.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "nature"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_037",
+    "question_en": "Which plant closes its leaves when touched?",
+    "correct_answer_en": "Mimosa pudica",
+    "incorrect_answers_en": [
+      "Aloe vera",
+      "Bamboo",
+      "Sunflower"
+    ],
+    "explanation_en": "Mimosa pudica folds its leaves in response to touch.",
+    "difficulty": "medium",
+    "tags": [
+      "animals",
+      "nature"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_nature_038",
+    "question_en": "Which natural phenomenon causes the ocean to glow blue at night?",
+    "correct_answer_en": "Bioluminescence",
+    "incorrect_answers_en": [
+      "Moonlight reflection",
+      "Salt crystals",
+      "Ocean currents"
+    ],
+    "explanation_en": "Some marine organisms produce light through chemical reactions.",
+    "difficulty": "hard",
+    "tags": [
+      "animals",
+      "nature"
+    ],
+    "category_id": "animals_and_nature",
+    "active": true,
+    "source_name": "Wildlife / nature references",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_024",
+    "question_en": "In which city is the Nobel Peace Prize awarded?",
+    "correct_answer_en": "Oslo",
+    "incorrect_answers_en": [
+      "Stockholm",
+      "Geneva",
+      "Copenhagen"
+    ],
+    "explanation_en": "The Peace Prize is awarded in Norway, unlike most Nobel Prizes.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "world"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_025",
+    "question_en": "Bluetooth technology was named after which historical figure?",
+    "correct_answer_en": "A Danish king",
+    "incorrect_answers_en": [
+      "A Swedish inventor",
+      "A German physicist",
+      "A British explorer"
+    ],
+    "explanation_en": "King Harald Bluetooth inspired the technology's name.",
+    "difficulty": "hard",
+    "tags": [
+      "general",
+      "inventions"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_026",
+    "question_en": "Which invention was inspired by plant burrs sticking to clothing?",
+    "correct_answer_en": "Velcro",
+    "incorrect_answers_en": [
+      "Safety pin",
+      "Zipper",
+      "Adhesive tape"
+    ],
+    "explanation_en": "Plant burrs inspired the hook-and-loop fastener.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "inventions"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_027",
+    "question_en": "Which chess piece can jump over other pieces?",
+    "correct_answer_en": "Knight",
+    "incorrect_answers_en": [
+      "Bishop",
+      "Rook",
+      "Queen"
+    ],
+    "explanation_en": "Knights can jump over pieces blocking their path.",
+    "difficulty": "easy",
+    "tags": [
+      "general",
+      "games"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_028",
+    "question_en": "Which popular board game developed from 'The Landlord's Game'?",
+    "correct_answer_en": "Monopoly",
+    "incorrect_answers_en": [
+      "Scrabble",
+      "Cluedo",
+      "Risk"
+    ],
+    "explanation_en": "Elizabeth Magie created The Landlord's Game in 1903.",
+    "difficulty": "hard",
+    "tags": [
+      "general",
+      "games"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_029",
+    "question_en": "How many dots are in a standard Braille cell?",
+    "correct_answer_en": "Six",
+    "incorrect_answers_en": [
+      "Four",
+      "Five",
+      "Eight"
+    ],
+    "explanation_en": "Six dots form the traditional Braille cell.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "everyday"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_030",
+    "question_en": "What color are aircraft flight recorders usually painted?",
+    "correct_answer_en": "Orange",
+    "incorrect_answers_en": [
+      "Black",
+      "Red",
+      "Yellow"
+    ],
+    "explanation_en": "Their bright color helps search teams locate them.",
+    "difficulty": "easy",
+    "tags": [
+      "general",
+      "everyday"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_031",
+    "question_en": "QR codes were originally developed for which industry?",
+    "correct_answer_en": "Automotive manufacturing",
+    "incorrect_answers_en": [
+      "Banking",
+      "Healthcare",
+      "Entertainment"
+    ],
+    "explanation_en": "QR codes helped track information on automotive production lines.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "inventions"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_032",
+    "question_en": "What was the original purpose of the Guinness Book of Records?",
+    "correct_answer_en": "To settle arguments in pubs",
+    "incorrect_answers_en": [
+      "To document scientific discoveries",
+      "To rank professional athletes",
+      "To promote tourism"
+    ],
+    "explanation_en": "It began as a way to settle pub debates.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "world"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_033",
+    "question_en": "What do the letters ISBN stand for?",
+    "correct_answer_en": "International Standard Book Number",
+    "incorrect_answers_en": [
+      "International Standard Business Network",
+      "International Serial Book Name",
+      "International Science Bibliography Number"
+    ],
+    "explanation_en": "ISBNs identify specific editions of books.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "everyday"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_034",
+    "question_en": "Which artist is credited with writing an early computer algorithm intended for a machine?",
+    "correct_answer_en": "Ada Lovelace",
+    "incorrect_answers_en": [
+      "Grace Hopper",
+      "Alan Turing",
+      "Charles Babbage"
+    ],
+    "explanation_en": "Lovelace described an algorithm for Babbage's Analytical Engine.",
+    "difficulty": "hard",
+    "tags": [
+      "general",
+      "world"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_035",
+    "question_en": "Which invention came from research into a weak, reusable adhesive?",
+    "correct_answer_en": "Post-it Notes",
+    "incorrect_answers_en": [
+      "Scotch tape",
+      "Super glue",
+      "Duct tape"
+    ],
+    "explanation_en": "A reusable adhesive eventually led to Post-it Notes.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "inventions"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_036",
+    "question_en": "What is the Japanese art of repairing broken pottery with lacquer and gold called?",
+    "correct_answer_en": "Kintsugi",
+    "incorrect_answers_en": [
+      "Origami",
+      "Ikebana",
+      "Sumi-e"
+    ],
+    "explanation_en": "Kintsugi highlights cracks instead of hiding them.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "world"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_037",
+    "question_en": "Which puzzle was invented by Hungarian professor Ernő Rubik?",
+    "correct_answer_en": "Rubik's Cube",
+    "incorrect_answers_en": [
+      "Sudoku",
+      "Tangram",
+      "Jigsaw puzzle"
+    ],
+    "explanation_en": "Rubik created his famous rotating cube in 1974.",
+    "difficulty": "easy",
+    "tags": [
+      "general",
+      "games"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_general_038",
+    "question_en": "Which civilization is credited with the earliest widely documented use of paper money?",
+    "correct_answer_en": "China",
+    "incorrect_answers_en": [
+      "Ancient Rome",
+      "Ancient Egypt",
+      "Mughal India"
+    ],
+    "explanation_en": "Paper money developed in China centuries before Europe.",
+    "difficulty": "medium",
+    "tags": [
+      "general",
+      "world"
+    ],
+    "category_id": "general_knowledge",
+    "active": true,
+    "source_name": "Nobel / Bluetooth SIG / DENSO / Guinness / ISBN / Perkins",
     "source_url": null,
     "source_license": null,
     "verified_at": "2026-11-02"
