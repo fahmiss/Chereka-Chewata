@@ -131,7 +131,7 @@ function HandoffPhase({
   kind: 'reveal' | 'vote';
 }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t } = useT();
   const playerId =
     kind === 'reveal' ? currentRevealPlayerId(session) : currentVoterId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
@@ -167,7 +167,7 @@ const HOLD_CIRC = 2 * Math.PI * HOLD_RADIUS;
 
 function RevealPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t } = useT();
   const [unlocked, setUnlocked] = useState(false);
   const playerId = currentRevealPlayerId(session);
   const name = playerId ? getPlayerName(session, playerId) : 'Player';
@@ -416,7 +416,7 @@ function OrderRow({
 
 function AnswerOrderPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t } = useT();
   const firstId = session.answerOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
   const privateVotes = session.setup.votingMode === 'private';
@@ -458,7 +458,7 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
 
 function GroupAccusePhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t } = useT();
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
@@ -506,7 +506,7 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
 
 function VotingSelectPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t } = useT();
   const [selected, setSelected] = useState<string | null>(null);
   const voterId = currentVoterId(session);
   const name = voterId ? getPlayerName(session, voterId) : 'Player';
@@ -556,7 +556,7 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
 
 function ResultPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, interfaceLanguage } = useT();
+  const { t, language } = useT();
   const groupWon = session.winner === 'group';
   const accent = groupWon ? color.success : ACCENT;
   const liarName = getPlayerName(session, session.liarPlayerId);
@@ -597,7 +597,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
             scene={groupWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
             title={groupWon ? t('liar.groupWins') : t('liar.liarWins')}
-            detail={liarResultReason(session, interfaceLanguage)}
+            detail={liarResultReason(session, language)}
           />
           <Text style={[type.body, styles.winnerSub]}>
             {t('liar.liarLabel')} <Text style={{ color: accent }}>{liarName}</Text>
