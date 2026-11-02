@@ -55,6 +55,22 @@ export default function GameDetailsScreen() {
   }
 
   const steps = getHowToPlay(game.id, language);
+  const gameName = game.id === 'whos_the_liar' ? t('liar.name') : game.name;
+  const tagline = game.id === 'impostor'
+    ? t('impostor.tagline')
+    : game.id === 'whos_the_liar'
+      ? t('liar.tagline')
+      : game.tagline;
+  const playerCountLabel = game.id === 'impostor'
+    ? t('impostor.players')
+    : game.id === 'whos_the_liar'
+      ? t('liar.players')
+      : game.playerCountLabel;
+  const sessionLengthLabel = game.id === 'impostor'
+    ? t('impostor.duration')
+    : game.id === 'whos_the_liar'
+      ? t('liar.duration')
+      : game.sessionLengthLabel;
   const ground = mix(color.background, game.accent, 0.14);
   const returnToGames = () => {
     if (router.canGoBack()) {
@@ -73,22 +89,25 @@ export default function GameDetailsScreen() {
         <Hero game={game} ground={ground} />
 
         <Animated.View style={[styles.intro, enter]}>
-          <Text style={styles.title} accessibilityRole="header">
-            {game.name}
+          <Text
+            style={[styles.title, game.id === 'whos_the_liar' && uiFont ? { fontFamily: uiFont } : null]}
+            accessibilityRole="header"
+          >
+            {gameName}
           </Text>
           <Text style={[type.body, styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>
-            {game.id === 'impostor' ? t('impostor.tagline') : game.tagline}
+            {tagline}
           </Text>
           <View style={styles.metaRow}>
             {game.playable ? (
               <>
                 <StatChip
                   icon="users"
-                  label={game.id === 'impostor' ? t('impostor.players') : game.playerCountLabel}
+                  label={playerCountLabel}
                 />
                 <StatChip
                   icon="clock"
-                  label={game.id === 'impostor' ? t('impostor.duration') : game.sessionLengthLabel}
+                  label={sessionLengthLabel}
                 />
               </>
             ) : (
@@ -149,7 +168,7 @@ export default function GameDetailsScreen() {
         />
         {game.playable ? (
           <PrimaryButton
-            label={`Play ${game.name}`}
+            label={t('game.playGame', { name: gameName })}
             // Every game opens on its ready-to-play overview — defaults are
             // already playable, so setup is opt-in rather than a journey.
             onPress={() =>

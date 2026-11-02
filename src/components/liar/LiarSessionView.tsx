@@ -433,7 +433,7 @@ function AnswerOrderPhase({ session }: { session: LiarSession }) {
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label={privateVotes ? t('liar.startPrivateVoting') : t('liar.chooseLiar')}
+          label={privateVotes ? t('impostor.startPrivateVoting') : t('liar.chooseLiar')}
           icon="target"
           onPress={() => dispatch.startVoting()}
         />
@@ -463,18 +463,18 @@ function GroupAccusePhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow={t('liar.groupDecision')}
+      eyebrow={t('impostor.groupDecision')}
       stage="vote"
       stages={LIAR_STAGES}
-      title={t('liar.whoAccusing')}
+      title={t('impostor.whoAccusing')}
       headingStyle="context"
-      instruction={t('liar.selectSuspect')}
+      instruction={t('impostor.selectSuspect')}
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
           <PrimaryButton
-            label={t('liar.accusePlayer')}
+            label={t('impostor.accusePlayer')}
             icon="target"
             disabled={!selected}
             onPress={() => {
@@ -519,7 +519,7 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow={runoff ? t('liar.runoffVote') : t('liar.yourVote')}
+      eyebrow={runoff ? t('impostor.runoffVote') : t('liar.yourVote')}
       stage="vote"
       stages={LIAR_STAGES}
       title={name}
@@ -582,7 +582,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
   return (
     <SessionShell
-      eyebrow={t('liar.result')}
+      eyebrow={t('impostor.result')}
       stage="result"
       stages={LIAR_STAGES}
       accent={accent}
@@ -639,7 +639,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
 
         {summary.length > 0 ? (
           <Surface contentStyle={styles.votesCard}>
-            <Text style={[type.eyebrow, styles.votesLabel]}>{t('liar.votes')}</Text>
+            <Text style={[type.eyebrow, styles.votesLabel]}>{t('impostor.votes')}</Text>
             {summary.map((row) => (
               <View key={row.name} style={styles.voteRow}>
                 <Text style={[type.label, styles.voteName]} numberOfLines={1}>

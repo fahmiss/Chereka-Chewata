@@ -45,7 +45,7 @@ const TINT_STRENGTH: Partial<Record<GameId, number>> = { bomb: 0.45 };
  */
 export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) {
   const enter = useEnterAnimation(index, 14);
-  const { t } = useT();
+  const { t, uiFont } = useT();
   const [width, setWidth] = useState(0);
   const accent = game.accent;
   const wide = variant === 'wide';
@@ -55,11 +55,24 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
   // the art is graded toward the same accent at export.
   const ground = mix(color.background, accent, 0.3 * tint);
   const locked = !game.playable;
-  const tagline = game.id === 'impostor' ? t('impostor.tagline') : game.tagline;
+  const gameName = game.id === 'whos_the_liar' ? t('liar.name') : game.name;
+  const tagline = game.id === 'impostor'
+    ? t('impostor.tagline')
+    : game.id === 'whos_the_liar'
+      ? t('liar.tagline')
+      : game.tagline;
   const playerCountLabel =
-    game.id === 'impostor' ? t('impostor.players') : game.playerCountLabel;
+    game.id === 'impostor'
+      ? t('impostor.players')
+      : game.id === 'whos_the_liar'
+        ? t('liar.players')
+        : game.playerCountLabel;
   const sessionLengthLabel =
-    game.id === 'impostor' ? t('impostor.duration') : game.sessionLengthLabel;
+    game.id === 'impostor'
+      ? t('impostor.duration')
+      : game.id === 'whos_the_liar'
+        ? t('liar.duration')
+        : game.sessionLengthLabel;
 
   // Half cards have ~150pt for both chips; the icons already say "players"
   // and the tilde, so the short forms keep them on one row.
@@ -79,7 +92,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
         accessibilityRole="button"
         accessibilityLabel={[
           eyebrow,
-          game.name,
+          gameName,
           tagline,
           locked ? 'Coming soon' : `${playerCountLabel}, ${sessionLengthLabel}`,
         ]
@@ -109,12 +122,16 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
           <View style={wide ? styles.wideTitleBlock : null}>
             {eyebrow ? <Text style={styles.eyebrow}>{eyebrow}</Text> : null}
             <Text
-              style={[styles.title, wide ? styles.wideTitle : styles.halfTitle]}
+              style={[
+                styles.title,
+                wide ? styles.wideTitle : styles.halfTitle,
+                game.id === 'whos_the_liar' && uiFont ? { fontFamily: uiFont } : null,
+              ]}
               numberOfLines={2}
               adjustsFontSizeToFit
               minimumFontScale={0.8}
             >
-              {game.name}
+              {gameName}
             </Text>
             {wide ? (
               <Text style={[styles.hook, styles.wideHook]} numberOfLines={2}>

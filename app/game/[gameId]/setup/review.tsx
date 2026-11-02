@@ -68,6 +68,7 @@ import { countEwnetQuestions, getEwnetCategories } from '../../../../src/content
 import { useEwnetSession, useEwnetSetup } from '../../../../src/domain/ewnetWeysSaks/context';
 import { countManNegnIdentities, getManNegnCategories } from '../../../../src/content/manNegn';
 import { useManNegnSession, useManNegnSetup } from '../../../../src/domain/manNegn/context';
+import { useT } from '../../../../src/i18n';
 
 type Player = { id: string; displayName: string };
 
@@ -629,6 +630,7 @@ function ImpostorQuickSetup({ gameId }: { gameId: string }) {
 
 function LiarQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameLiar;
+  const { t } = useT();
   const { setup, validation, persistPlayers, patchOptions } = useLiarSetup();
   const { startSession, clearError } = useLiarSession();
   const { settings } = useSettings();
@@ -664,7 +666,7 @@ function LiarQuickSetup({ gameId }: { gameId: string }) {
   return (
     <QuickSetup
       accent={accent}
-      title="Who's the Liar?"
+      title={t('liar.name')}
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}
       startError={startError}
