@@ -133,3 +133,15 @@ Large English-only additions across decks (no `*_am`) — already documented in 
 - Playtest Who's the Liar Ethiopia pairs with non-Addis groups.
 - Ewnet fact spot-checks against primary sources.
 - Gimbar / Bomb volume still below 30/category after this pass — further expansion later.
+
+## Revision follow-up
+
+After review feedback on `content/party-quality-audit`:
+
+1. Rewrote opposite-answer Liar pairs (`014`, `099`, plus `103`, `159`, `100`).
+2. Tagged EN-only rewritten cards with `pending_am` (no mismatched Amharic left behind).
+3. Replaced weak Bomb prompts; deactivated semantic dupes (Ethiopian dishes/cities, uni group-chat disappear).
+4. Confirmed no remaining Taboo target duplicates.
+5. Catalog order swap excluded from this branch for a content-only merge.
+
+**Merge readiness:** Ready after human skim of rewritten Liar English + `pending_am` translation queue.

@@ -131,7 +131,9 @@
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_013",
@@ -149,13 +151,15 @@
   },
   {
     "id": "liar_addis_life_014",
-    "main_question_en": "Which Ethiopian city would you never want to live in?",
-    "liar_question_en": "Which Ethiopian city would you move to tomorrow?",
+    "main_question_en": "Which Ethiopian city has the best food scene?",
+    "liar_question_en": "Which Ethiopian city has the best nightlife?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "medium",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_015",
@@ -193,7 +197,9 @@
     "content_level": "family",
     "difficulty": "medium",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_018",
@@ -1160,23 +1166,27 @@
   },
   {
     "id": "liar_addis_life_099",
-    "main_question_en": "What is never worth the wait?",
-    "liar_question_en": "What is always worth the wait?",
+    "main_question_en": "What is worth waiting in a long line for?",
+    "liar_question_en": "What is worth sitting in traffic for?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_100",
-    "main_question_en": "Which journey do you dread?",
-    "liar_question_en": "Which journey do you secretly enjoy?",
+    "main_question_en": "Which journey do you always prepare for carefully?",
+    "liar_question_en": "Which journey do you dread a little?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_101",
@@ -1208,13 +1218,15 @@
   },
   {
     "id": "liar_addis_life_103",
-    "main_question_en": "Which Ethiopian city is overrated?",
-    "liar_question_en": "Which Ethiopian city is underrated?",
+    "main_question_en": "Which Ethiopian city is most overrated?",
+    "liar_question_en": "Which Ethiopian city gets talked about the most?",
     "category_id": "ethiopia_and_culture",
     "content_level": "friends",
     "difficulty": "medium",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_104",
@@ -1874,13 +1886,15 @@
   },
   {
     "id": "liar_addis_life_159",
-    "main_question_en": "Where is a terrible first date?",
-    "liar_question_en": "Where is a surprisingly good first date?",
+    "main_question_en": "Where is a risky first date?",
+    "liar_question_en": "Where is a memorable first date?",
     "category_id": "ethiopia_and_culture",
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_addis_life_160",
@@ -1890,7 +1904,9 @@
     "content_level": "spicy",
     "difficulty": "medium",
     "active": true,
-    "tags": []
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_travel_161",
@@ -2092,7 +2108,10 @@
     "category_id": "football",
     "content_level": "friends",
     "difficulty": "medium",
-    "active": true
+    "active": true,
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "liar_football_008",
@@ -2645,7 +2664,8 @@
     "difficulty": "medium",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   },
   {
@@ -2657,7 +2677,8 @@
     "difficulty": "medium",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   },
   {
@@ -2669,7 +2690,8 @@
     "difficulty": "medium",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   },
   {
@@ -2681,7 +2703,8 @@
     "difficulty": "medium",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   },
   {
@@ -2693,7 +2716,8 @@
     "difficulty": "medium",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   }
 ]

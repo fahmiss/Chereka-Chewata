@@ -7,7 +7,8 @@
     "content_level": "family",
     "active": true,
     "tags": [
-      "Ethiopian"
+      "Ethiopian",
+      "pending_am"
     ]
   },
   {
@@ -2875,7 +2876,10 @@
     "option_b_en": "Never miss a Champions League final night",
     "category_id": "ethiopia_and_culture",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "wyr_eth_new_002",
@@ -2883,7 +2887,10 @@
     "option_b_en": "Never eat injera for a year",
     "category_id": "food_and_drink",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "wyr_new_001",
@@ -2891,7 +2898,10 @@
     "option_b_en": "Pay for every trip but choose every destination yourself",
     "category_id": "places_and_travel",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "pending_am"
+    ]
   },
   {
     "id": "wyr_new_002",
@@ -2899,6 +2909,9 @@
     "option_b_en": "Be unknown everywhere and completely free",
     "category_id": "people_and_relationships",
     "content_level": "friends",
-    "active": true
+    "active": true,
+    "tags": [
+      "pending_am"
+    ]
   }
 ]

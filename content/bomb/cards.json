@@ -1397,7 +1397,7 @@
   },
   {
     "id": "bomb_nature_new_003",
-    "prompt_en": "Birds people can name",
+    "prompt_en": "Animals with feathers",
     "category_id": "animals_and_nature",
     "content_level": "family",
     "active": true
@@ -1460,7 +1460,7 @@
   },
   {
     "id": "bomb_football_new_002",
-    "prompt_en": "Ways a football match can end",
+    "prompt_en": "African football clubs",
     "category_id": "football",
     "content_level": "family",
     "active": true
@@ -1484,7 +1484,7 @@
     "prompt_en": "Ethiopian dishes",
     "category_id": "food_and_drink",
     "content_level": "family",
-    "active": true
+    "active": false
   },
   {
     "id": "bomb_food_new_002",
@@ -1512,7 +1512,7 @@
     "prompt_en": "Ethiopian cities",
     "category_id": "places_and_travel",
     "content_level": "family",
-    "active": true
+    "active": false
   },
   {
     "id": "bomb_places_new_002",
@@ -1544,7 +1544,7 @@
   },
   {
     "id": "bomb_sport_new_006",
-    "prompt_en": "Reasons people stretch before exercise",
+    "prompt_en": "Sports played without a ball",
     "category_id": "sports",
     "content_level": "family",
     "active": true

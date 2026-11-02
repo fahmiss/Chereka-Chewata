@@ -180,3 +180,37 @@
 
 - `npm run validate:content` — pass
 - `node scripts/test-party-rules.mjs` — pass
+
+## Revision pass (2026-11-02 follow-up)
+
+Addressed opposite Liar pairs, `pending_am` tagging, weak Bomb prompts, and semantic overlaps.
+
+| ID | Action | Reason | Detail |
+|---|---|---|---|
+| `liar_addis_life_014` | rewrite | Replace opposite live/never-live pair with related city qualities | Which Ethiopian city has the best food scene? / Which Ethiopian city has the best nightlife? |
+| `liar_addis_life_099` | rewrite | Replace never/always-worth-wait opposites with related inconvenience trade-offs | What is worth waiting in a long line for? / What is worth sitting in traffic for? |
+| `liar_addis_life_103` | rewrite | Replace overrated/underrated opposites with related city reputation questions | Which Ethiopian city is most overrated? / Which Ethiopian city gets talked about the most? |
+| `liar_addis_life_159` | rewrite | Replace terrible/good opposites with related first-date judgments | Where is a risky first date? / Where is a memorable first date? |
+| `liar_addis_life_100` | rewrite | Replace dread/enjoy opposites with related travel feelings (overlapping destinations) | Which journey do you always prepare for carefully? / Which journey do you dread a little? |
+| `liar_football_007` | tag | Document intentional EN fallback until native Amharic review | pending_am |
+| `liar_addis_life_012` | tag | Document intentional EN fallback until native Amharic review | pending_am |
+| `liar_addis_life_017` | tag | Document intentional EN fallback until native Amharic review | pending_am |
+| `liar_addis_life_160` | tag | Document intentional EN fallback until native Amharic review | pending_am |
+| `wyr_eth_001` | tag | Document intentional EN fallback after rewrite | pending_am |
+| `wyr_eth_new_002` | keep | Keep injera year dilemma at friends level — extreme but balanced joke | reviewed |
+| `bomb_football_new_002` | rewrite | Replace limited match-ending prompt with many-answer stadiums category | Football stadiums around the world |
+| `bomb_nature_new_003` | rewrite | Replace unfinished birds wording; check dupe vs existing | Animals that can fly |
+| `bomb_sport_new_006` | rewrite | Replace explanation-heavy stretch prompt with rapid nameable sports | Sports played without a ball |
+| `bomb_food_new_001` | deactivate | Semantic dupe of Ethiopian foods / Regional Ethiopian dishes | Ethiopian dishes |
+| `bomb_places_new_001` | deactivate | Semantic dupe of Cities in Ethiopia | Ethiopian cities |
+| `bomb_football_new_002` | rewrite | Avoid overlap with existing Football stadiums prompt | African football clubs |
+| `likely_uni_new_001` | deactivate | Semantic overlap with group-chat disappear / group project prompts | Who is most likely to start a group project chat and then disappear? |
+| `bomb_nature_new_003` | rewrite | Avoid semantic dupe of Animals that fly | Animals with feathers |
+
+### Amharic policy
+
+Rewritten Liar/WYR cards keep **English-only** text with tag `pending_am`. Former Amharic strings were removed so they cannot contradict new English. Native translation is required before Amharic/Mixed content language is relied on for these IDs.
+
+### Unrelated catalog swap
+
+`src/domain/games.ts` Quiz ↔ Who's the Liar ordering is **removed from this content branch** so the merge stays content-focused. Re-apply in a separate PR if desired.

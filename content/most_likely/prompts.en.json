@@ -2917,6 +2917,6 @@
     "prompt_en": "Who is most likely to start a group project chat and then disappear?",
     "category_id": "school_and_work",
     "content_level": "friends",
-    "active": true
+    "active": false
   }
 ]
