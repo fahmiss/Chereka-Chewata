@@ -12,6 +12,8 @@ import type { GameId } from './games';
  * Impostor steps live in i18n (`impostor.howTo.*`) so interface language
  * can switch them. Other games still use this English table until translated.
  */
+const LIAR_HOW_TO_KEYS = ['liar.howTo.1', 'liar.howTo.2', 'liar.howTo.3'] as const satisfies readonly MessageKey[];
+
 const IMPOSTOR_HOW_TO_KEYS = [
   'impostor.howTo.1',
   'impostor.howTo.2',
@@ -98,5 +100,6 @@ export function getHowToPlay(
   if (gameId === 'impostor') {
     return IMPOSTOR_HOW_TO_KEYS.map((key) => translate(language, key));
   }
+  if (gameId === 'whos_the_liar') return LIAR_HOW_TO_KEYS.map(key => translate(language, key));
   return GAME_HOW_TO_PLAY[gameId as GameId] ?? null;
 }
