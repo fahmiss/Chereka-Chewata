@@ -1178,8 +1178,8 @@
   },
   {
     "id": "liar_addis_life_100",
-    "main_question_en": "Which journey do you always prepare for carefully?",
-    "liar_question_en": "Which journey do you dread a little?",
+    "main_question_en": "Which journey do you plan the most carefully?",
+    "liar_question_en": "Which journey do you pack the most carefully for?",
     "category_id": "ethiopia_and_culture",
     "content_level": "family",
     "difficulty": "easy",

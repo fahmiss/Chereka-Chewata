@@ -214,3 +214,38 @@ Rewritten Liar/WYR cards keep **English-only** text with tag `pending_am`. Forme
 ### Unrelated catalog swap
 
 `src/domain/games.ts` Quiz ↔ Who's the Liar ordering is **removed from this content branch** so the merge stays content-focused. Re-apply in a separate PR if desired.
+
+
+## Final live state (authoritative)
+
+Historical rows above may show intermediate wording from earlier passes. **These are the current active values on the branch:**
+
+### Who's the Liar (rewritten)
+
+| ID | Main | Liar | Status |
+|---|---|---|---|
+| `liar_addis_life_014` | Which Ethiopian city has the best food scene? | Which Ethiopian city has the best nightlife? | Keep |
+| `liar_addis_life_099` | What is worth waiting in a long line for? | What is worth sitting in traffic for? | Keep |
+| `liar_addis_life_100` | Which journey do you plan the most carefully? | Which journey do you pack the most carefully for? | Improved (closer answer overlap) |
+| `liar_addis_life_103` | Which Ethiopian city is most overrated? | Which Ethiopian city gets talked about the most? | Keep |
+| `liar_addis_life_159` | Where is a risky first date? | Where is a memorable first date? | Keep — playtest |
+| `liar_football_007` | Which football club has the most loyal fans? | Which football club has the loudest fans? | Keep |
+| `liar_addis_life_012` | What is the most overrated food trend right now? | What is the most overrated café trend right now? | Keep |
+| `liar_addis_life_017` | Which market do you only visit once? | Which market do you pretend to enjoy? | Keep |
+| `liar_addis_life_160` | Which social setting feels like a job interview? | Which social setting feels like a family meeting? | Keep |
+
+All of the above carry `pending_am` (English-only until native translation).
+
+### Bomb prompts (new IDs — current)
+
+| ID | Prompt | Active |
+|---|---|---|
+| `bomb_football_new_002` | African football clubs | yes |
+| `bomb_nature_new_003` | Animals with feathers | yes |
+| `bomb_sport_new_006` | Sports played without a ball | yes |
+| `bomb_food_new_001` | Ethiopian dishes | **no** (semantic dupe) |
+| `bomb_places_new_001` | Ethiopian cities | **no** (semantic dupe) |
+
+### Catalog order
+
+`src/domain/games.ts` matches `main` (Quiz ↔ Who's the Liar swap not included).

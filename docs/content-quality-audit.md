@@ -145,3 +145,7 @@ After review feedback on `content/party-quality-audit`:
 5. Catalog order swap excluded from this branch for a content-only merge.
 
 **Merge readiness:** Ready after human skim of rewritten Liar English + `pending_am` translation queue.
+
+## Final merge note
+
+Changelog refreshed to authoritative live wording. Liar `100` improved to plan/pack carefully (closer overlap). Branch approved for merge pending CI.
