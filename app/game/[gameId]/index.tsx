@@ -76,15 +76,23 @@ export default function GameDetailsScreen() {
           <Text style={styles.title} accessibilityRole="header">
             {game.name}
           </Text>
-          <Text style={[type.body, styles.tagline]}>{game.tagline}</Text>
+          <Text style={[type.body, styles.tagline, uiFont ? { fontFamily: uiFont } : null]}>
+            {game.id === 'impostor' ? t('impostor.tagline') : game.tagline}
+          </Text>
           <View style={styles.metaRow}>
             {game.playable ? (
               <>
-                <StatChip icon="users" label={game.playerCountLabel} />
-                <StatChip icon="clock" label={game.sessionLengthLabel} />
+                <StatChip
+                  icon="users"
+                  label={game.id === 'impostor' ? t('impostor.players') : game.playerCountLabel}
+                />
+                <StatChip
+                  icon="clock"
+                  label={game.id === 'impostor' ? t('impostor.duration') : game.sessionLengthLabel}
+                />
               </>
             ) : (
-              <Pill label="Soon" tint={color.textMuted} icon="lock" />
+              <Pill label={t('common.soon')} tint={color.textMuted} icon="lock" />
             )}
           </View>
         </Animated.View>

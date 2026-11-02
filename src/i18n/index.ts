@@ -1,27 +1,11 @@
 import { useMemo } from 'react';
 import { useSettings } from '../domain/settings/SettingsContext';
 import { family } from '../theme/typography';
-import { am } from './am';
-import { en, type MessageKey } from './en';
-
-const catalogs = { en, am } as const;
+import type { MessageKey } from './en';
+import { translate } from './translate';
 
 export type { MessageKey };
-
-export function translate(
-  language: 'en' | 'am',
-  key: MessageKey,
-  params?: Record<string, string | number>,
-): string {
-  const catalog = catalogs[language] ?? en;
-  let text: string = catalog[key] ?? en[key] ?? key;
-  if (params) {
-    for (const [name, value] of Object.entries(params)) {
-      text = text.replaceAll(`{${name}}`, String(value));
-    }
-  }
-  return text;
-}
+export { translate };
 
 /** Interface copy helper bound to Settings.interfaceLanguage. */
 export function useT() {

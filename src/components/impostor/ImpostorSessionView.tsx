@@ -139,6 +139,7 @@ function DiscussionTimer({
   onSkip: () => void;
   skipLabel: string;
 }) {
+  const { t, uiFont } = useT();
   const [left, setLeft] = useState(seconds);
   const progress = useRef(new Animated.Value(0)).current;
   const reduced = useReducedMotion();
@@ -203,13 +204,13 @@ function DiscussionTimer({
           <Text style={[styles.timerDigits, { color: tint }]}>
             {mm}:{ss}
           </Text>
-          <Text style={[type.eyebrow, styles.timerCaption]}>
-            {left <= 0 ? 'Time up' : 'Remaining'}
+          <Text style={[type.eyebrow, styles.timerCaption, uiFont ? { fontFamily: uiFont } : null]}>
+            {left <= 0 ? t('impostor.timeUp') : t('impostor.remaining')}
           </Text>
         </View>
       </View>
       <SecondaryButton
-        label={left <= 0 ? skipLabel : 'End discussion early'}
+        label={left <= 0 ? skipLabel : t('impostor.endDiscussionEarly')}
         onPress={onSkip}
       />
     </View>
@@ -375,7 +376,10 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
 
   return (
     <SessionShell
-      eyebrow={`Private reveal · ${session.revealIndex + 1}/${total}`}
+      eyebrow={t('impostor.privateReveal', {
+        n: session.revealIndex + 1,
+        total,
+      })}
       stage="reveal"
       title={name}
       headingStyle="context"
@@ -391,8 +395,8 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
         ) : (
           <View style={styles.footerHintRow}>
             <Icon name="eye" size={15} color={color.textMuted} />
-            <Text style={[type.bodySm, styles.footerHint]}>
-              Hold until the ring fills — then read your secret.
+            <Text style={[type.bodySm, styles.footerHint, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('impostor.holdHint')}
             </Text>
           </View>
         )
@@ -501,11 +505,18 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
             >
               {impostor ? t('impostor.roleName') : secretWord}
             </Text>
-            <Text style={[type.body, styles.secretHint, !impostor && secretFont]}>
+            <Text
+              style={[
+                type.body,
+                styles.secretHint,
+                !impostor && secretFont,
+                impostor && uiFont ? { fontFamily: uiFont } : null,
+              ]}
+            >
               {impostor
                 ? session.setup.showCategoryToImpostor
-                  ? `Category: ${categoryName}`
-                  : 'Blend in. Find the word.'
+                  ? t('impostor.category', { categoryName })
+                  : t('impostor.blendIn')
                 : secretHint}
             </Text>
           </Animated.ScrollView>
@@ -517,21 +528,21 @@ function RevealPhase({ session }: { session: ImpostorSession }) {
 
 function CluesPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
-  const { t } = useT();
+  const { t, uiFont } = useT();
   const firstId = session.clueOrder[0];
   const name = firstId ? getPlayerName(session, firstId) : 'Player';
   const secondCycle = session.eliminatedImpostorIds.length > 0;
 
   return (
     <SessionShell
-      eyebrow={secondCycle ? 'Clues · Round 2' : 'Clues'}
+      eyebrow={secondCycle ? t('impostor.cluesRound2') : t('impostor.clues')}
       stage="clues"
-      title={`${name} starts`}
+      title={t('impostor.nameStarts', { name })}
       headingStyle="context"
       instruction={
         secondCycle
-          ? 'One Impostor remains. Give one new short clue each.'
-          : 'One short clue each, in order. Leave the phone on the table.'
+          ? t('impostor.clueInstructionRound2')
+          : t('impostor.clueInstruction')
       }
       onEndGame={() => endGame(clearSession)}
       footer={
@@ -542,8 +553,8 @@ function CluesPhase({ session }: { session: ImpostorSession }) {
         />
       }
     >
-      <Text style={[type.bodySm, styles.clueRule]}>
-        Don’t say the secret word, spell it, translate it, or rhyme with it.
+      <Text style={[type.bodySm, styles.clueRule, uiFont ? { fontFamily: uiFont } : null]}>
+        {t('impostor.clueRule')}
       </Text>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.orderList}>
         {session.clueOrder.map((playerId, index) => (
@@ -569,17 +580,24 @@ function CluesPhase({ session }: { session: ImpostorSession }) {
 
 function DiscussionPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
-  const { t } = useT();
+  const { t, uiFont, uiFontBold } = useT();
   const timer = session.setup.discussionTimerSeconds;
   const privateVotes = session.setup.votingMode === 'private';
-  const nextLabel = privateVotes ? 'Start private voting' : 'Choose accused';
+  const nextLabel = privateVotes
+    ? t('impostor.startPrivateVoting')
+    : t('impostor.chooseAccused');
   const secondCycle = session.eliminatedImpostorIds.length > 0;
+  const discussBody = secondCycle
+    ? t('impostor.discussRound2')
+    : privateVotes
+      ? t('impostor.discussPrivate')
+      : t('impostor.discussGroup');
 
   return (
     <SessionShell
-      eyebrow="Discussion"
+      eyebrow={t('impostor.discussion')}
       stage="discuss"
-      title={secondCycle ? 'Find the remaining Impostor' : t('impostor.talkItOut')}
+      title={secondCycle ? t('impostor.findRemaining') : t('impostor.talkItOut')}
       headingStyle="context"
       scrollable={!timer}
       centerContent={!timer}
@@ -592,12 +610,8 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
     >
       {timer ? (
         <View style={styles.discussion}>
-          <Text style={[type.body, styles.discussionText]}>
-            {secondCycle
-              ? 'The first Impostor is out. Discuss the new clues and find their hidden teammate.'
-              : privateVotes
-              ? 'When you’re ready, each player votes privately on this phone.'
-              : 'Argue in the room. When the group agrees, tap who you’re accusing.'}
+          <Text style={[type.body, styles.discussionText, uiFont ? { fontFamily: uiFont } : null]}>
+            {discussBody}
           </Text>
           <DiscussionTimer
             seconds={timer}
@@ -607,13 +621,17 @@ function DiscussionPhase({ session }: { session: ImpostorSession }) {
         </View>
       ) : (
         <View style={styles.discussionFocus}>
-          <Text style={[type.brushHero, styles.focusHeadline]}>{secondCycle ? 'WHO’S\nLEFT?' : 'WHO’S\nFAKING?'}</Text>
-          <Text style={[type.body, styles.briefText]}>
-            {secondCycle
-              ? 'The first Impostor is out. Discuss the new clues and find their hidden teammate.'
-              : privateVotes
-              ? 'When you’re ready, each player votes privately on this phone.'
-              : 'Argue in the room. When the group agrees, tap who you’re accusing.'}
+          <Text
+            style={[
+              type.brushHero,
+              styles.focusHeadline,
+              uiFontBold ? { fontFamily: uiFontBold } : null,
+            ]}
+          >
+            {secondCycle ? t('impostor.whosLeft') : t('impostor.whosFaking')}
+          </Text>
+          <Text style={[type.body, styles.briefText, uiFont ? { fontFamily: uiFont } : null]}>
+            {discussBody}
           </Text>
         </View>
       )}
@@ -628,11 +646,11 @@ function GroupAccusePhase({ session }: { session: ImpostorSession }) {
 
   return (
     <SessionShell
-      eyebrow="Group decision"
+      eyebrow={t('impostor.groupDecision')}
       stage="vote"
       title={t('impostor.whoAccusing')}
       headingStyle="context"
-      instruction="Select the player your group suspects, then confirm."
+      instruction={t('impostor.selectSuspect')}
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
@@ -645,7 +663,7 @@ function GroupAccusePhase({ session }: { session: ImpostorSession }) {
             }}
           />
           <SecondaryButton
-            label="Deadlock — Impostor wins"
+            label={t('impostor.deadlock')}
             quiet
             onPress={() => dispatch.resolveGroupDeadlock()}
           />
@@ -687,11 +705,17 @@ function VotingSelectPhase({ session }: { session: ImpostorSession }) {
 
   return (
     <SessionShell
-      eyebrow={session.runoffRound > 0 ? 'Runoff vote' : 'Private vote'}
+      eyebrow={
+        session.runoffRound > 0 ? t('impostor.runoffVote') : t('impostor.privateVote')
+      }
       stage="vote"
-      title={`${name}’s private vote`}
+      title={t('impostor.namePrivateVote', { name })}
       headingStyle="context"
-      instruction={`Choose ${session.eliminatedImpostorIds.length ? 'the remaining' : 'the'} Impostor, then confirm your vote.`}
+      instruction={
+        session.eliminatedImpostorIds.length
+          ? t('impostor.chooseRemainingImpostor')
+          : t('impostor.chooseImpostor')
+      }
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
@@ -734,14 +758,14 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
 
   return (
     <SessionShell
-      eyebrow="Reveal"
+      eyebrow={t('impostor.reveal')}
       stage="vote"
       accent={accent}
       title={name}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label={caught ? t('impostor.finalGuess') : 'See result'}
+          label={caught ? t('impostor.finalGuess') : t('impostor.seeResult')}
           icon={caught ? 'target' : 'trophy'}
           onPress={() => dispatch.continueAfterAccusation()}
         />
@@ -750,18 +774,18 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
       <Animated.View style={[styles.verdict, enter]}>
         <GlyphDisk icon={caught ? 'mask' : 'close'} accent={accent} size={96} />
         <Text
-          style={[styles.verdictText, { color: accent }, caught && uiFont ? { fontFamily: uiFont } : null]}
+          style={[styles.verdictText, { color: accent }, uiFont ? { fontFamily: uiFont } : null]}
           adjustsFontSizeToFit
           numberOfLines={2}
         >
-          {caught ? t('impostor.roleName') : 'NOT THE IMPOSTOR'}
+          {caught ? t('impostor.roleName') : t('impostor.notTheImpostor')}
         </Text>
-        <Text style={[type.body, styles.verdictBody]}>
+        <Text style={[type.body, styles.verdictBody, uiFont ? { fontFamily: uiFont } : null]}>
           {caught
             ? anotherRemains
-              ? 'Caught. A correct guess wins; an incorrect guess starts round two for the remaining Impostor.'
-              : 'Caught — one chance to guess the secret word out loud.'
-            : 'The group accused an innocent player. The Impostor wins.'}
+              ? t('impostor.caughtRound2')
+              : t('impostor.caughtGuess')
+            : t('impostor.accusedInnocent')}
         </Text>
       </Animated.View>
     </SessionShell>
@@ -770,10 +794,10 @@ function AccusationPhase({ session }: { session: ImpostorSession }) {
 
 function FinalGuessPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
-  const { t } = useT();
+  const { t, uiFontBold } = useT();
   const name = session.accusedPlayerId
     ? getPlayerName(session, session.accusedPlayerId)
-    : 'Impostor';
+    : t('impostor.roleName');
   const categoryName = getCategoryName(session.word.category_id, session.contentLanguage);
   const totalImpostors = session.roles.filter((role) => role.role === 'impostor').length;
   const anotherRemains = session.eliminatedImpostorIds.length + 1 < totalImpostors;
@@ -782,11 +806,11 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
     <SessionShell
       eyebrow={t('impostor.finalGuess')}
       stage="vote"
-      title={`${name} guesses`}
+      title={t('impostor.nameGuesses', { name })}
       headingStyle="context"
       scrollable
       centerContent
-      instruction="Say one word aloud. The group confirms whether it matches."
+      instruction={t('impostor.guessInstruction')}
       onEndGame={() => endGame(clearSession)}
       footer={
         <>
@@ -796,7 +820,9 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
             onPress={() => dispatch.resolveFinalGuess(true)}
           />
           <SecondaryButton
-            label={anotherRemains ? 'Incorrect — round 2' : t('impostor.incorrect')}
+            label={
+              anotherRemains ? t('impostor.incorrectRound2') : t('impostor.incorrect')
+            }
             icon="close"
             onPress={() => dispatch.resolveFinalGuess(false)}
           />
@@ -804,9 +830,17 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
       }
     >
       <View style={styles.discussionFocus}>
-        <Text style={[type.brushHero, styles.focusHeadline]}>{'GUESS\nTHE WORD'}</Text>
+        <Text
+          style={[
+            type.brushHero,
+            styles.focusHeadline,
+            uiFontBold ? { fontFamily: uiFontBold } : null,
+          ]}
+        >
+          {t('impostor.guessTheWord')}
+        </Text>
         {session.setup.showCategoryToImpostor ? (
-          <MetaChip icon="layers" label={`Category: ${categoryName}`} />
+          <MetaChip icon="layers" label={t('impostor.category', { categoryName })} />
         ) : null}
       </View>
     </SessionShell>
@@ -815,7 +849,7 @@ function FinalGuessPhase({ session }: { session: ImpostorSession }) {
 
 function ResultPhase({ session }: { session: ImpostorSession }) {
   const { dispatch, clearSession } = useSession();
-  const { t, uiFont } = useT();
+  const { t, language, uiFont } = useT();
   const crewWon = session.winner === 'crew';
   const pluralImpostors = session.roles.filter((role) => role.role === 'impostor').length > 1;
   const accent = crewWon ? color.success : color.gameImpostor;
@@ -834,7 +868,7 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
 
   return (
     <SessionShell
-      eyebrow="Result"
+      eyebrow={t('impostor.result')}
       stage="result"
       accent={accent}
       onEndGame={undefined}
@@ -848,10 +882,10 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
             scene={crewWon ? 'caught' : 'celebrate'}
             accent={ACCENT}
             title={winTitle}
-            detail={impostorResultReason(session)}
+            detail={impostorResultReason(session, language)}
           />
           <Text style={[type.body, styles.winnerSub, uiFont ? { fontFamily: uiFont } : null]}>
-            {pluralImpostors ? t('impostor.roleNamePlural') : t('impostor.roleName')}:{' '}
+            {pluralImpostors ? t('impostor.resultLabelPlural') : t('impostor.resultLabel')}{' '}
             <Text style={{ color: accent }}>{impostorNames}</Text>
           </Text>
         </View>
@@ -878,7 +912,9 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
 
         {summary.length > 0 ? (
           <Surface contentStyle={styles.votesCard}>
-            <Text style={[type.eyebrow, styles.votesLabel]}>Votes</Text>
+            <Text style={[type.eyebrow, styles.votesLabel, uiFont ? { fontFamily: uiFont } : null]}>
+              {t('impostor.votes')}
+            </Text>
             {summary.map((row) => (
               <View key={row.name} style={styles.voteRow}>
                 <Text style={[type.label, styles.voteName]} numberOfLines={1}>
@@ -907,8 +943,8 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
         visible={deckExhausted}
         moon="caught"
         accent={color.brandPrimary}
-        title="Deck exhausted"
-        message="Every card in this deck has been used. Change categories or content level to keep playing."
+        title={t('impostor.deckExhaustedTitle')}
+        message={t('impostor.deckExhaustedBody')}
         confirmLabel={t('common.gotIt')}
         confirmTone="honey"
         onConfirm={() => setDeckExhausted(false)}

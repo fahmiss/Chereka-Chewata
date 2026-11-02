@@ -60,9 +60,9 @@ Same lines as in `docs/i18n-gameplay-strings-en.md` § Impostor (how-to + listed
 - `src/components/impostor/ImpostorSessionView.tsx` — Batch 2 UI strings via `useT()`  
 - Primary/Secondary buttons + SessionShell apply Ethiopic UI font when interface = Amharic  
 
-## Still English in Impostor (not in this batch)
+## Follow-up
 
-Private vote / runoff / clue instructions / discussion body copy / deadlock / NOT THE IMPOSTOR / vote tally chrome / etc. Leave until the next Impostor chrome pass or Liar/Taboo batches share keys.
+Remaining Impostor chrome is covered in **Batch 2B** — see `docs/i18n-batch2b-impostor.md`.
 
 ## Native review checklist
 

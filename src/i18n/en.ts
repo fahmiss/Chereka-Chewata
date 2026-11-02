@@ -143,6 +143,78 @@ export const en = {
   'impostor.crewWins': 'Crew wins',
   'impostor.impostorWins': 'Impostor wins',
   'impostor.impostorsWin': 'Impostors win',
+
+  // Impostor remaining gameplay UI (Batch 2B)
+  'impostor.tagline': 'Find the player who does not know the secret word.',
+  'impostor.players': '3–15 players',
+  'impostor.duration': '~10 min',
+  'impostor.privateReveal': 'Private reveal · {n}/{total}',
+  'impostor.holdHint': 'Hold until the ring fills — then read your secret.',
+  'impostor.category': 'Category: {categoryName}',
+  'impostor.blendIn': 'Blend in. Find the word.',
+  'impostor.clues': 'Clues',
+  'impostor.cluesRound2': 'Clues · Round 2',
+  'impostor.nameStarts': '{name} starts',
+  'impostor.clueInstruction':
+    'One short clue each, in order. Leave the phone on the table.',
+  'impostor.clueInstructionRound2':
+    'One Impostor remains. Give one new short clue each.',
+  'impostor.clueRule':
+    'Don’t say the secret word, spell it, translate it, or rhyme with it.',
+  'impostor.discussion': 'Discussion',
+  'impostor.findRemaining': 'Find the remaining Impostor',
+  'impostor.discussRound2':
+    'The first Impostor is out. Discuss the new clues and find their hidden teammate.',
+  'impostor.discussPrivate':
+    'When you’re ready, each player votes privately on this phone.',
+  'impostor.discussGroup':
+    'Argue in the room. When the group agrees, tap who you’re accusing.',
+  'impostor.whosFaking': "WHO’S\nFAKING?",
+  'impostor.whosLeft': "WHO’S\nLEFT?",
+  'impostor.timeUp': 'Time up',
+  'impostor.remaining': 'Remaining',
+  'impostor.endDiscussionEarly': 'End discussion early',
+  'impostor.startPrivateVoting': 'Start private voting',
+  'impostor.chooseAccused': 'Choose accused',
+  'impostor.groupDecision': 'Group decision',
+  'impostor.selectSuspect':
+    'Select the player your group suspects, then confirm.',
+  'impostor.deadlock': 'Deadlock — Impostor wins',
+  'impostor.privateVote': 'Private vote',
+  'impostor.runoffVote': 'Runoff vote',
+  'impostor.namePrivateVote': "{name}’s private vote",
+  'impostor.chooseImpostor': 'Choose the Impostor, then confirm your vote.',
+  'impostor.chooseRemainingImpostor':
+    'Choose the remaining Impostor, then confirm your vote.',
+  'impostor.votes': 'Votes',
+  'impostor.reveal': 'Reveal',
+  'impostor.notTheImpostor': 'NOT THE IMPOSTOR',
+  'impostor.caughtRound2':
+    'Caught. A correct guess wins; an incorrect guess starts round two for the remaining Impostor.',
+  'impostor.caughtGuess':
+    'Caught — one chance to guess the secret word out loud.',
+  'impostor.accusedInnocent':
+    'The group accused an innocent player. The Impostor wins.',
+  'impostor.seeResult': 'See result',
+  'impostor.nameGuesses': '{name} guesses',
+  'impostor.guessInstruction':
+    'Say one word aloud. The group confirms whether it matches.',
+  'impostor.guessTheWord': 'GUESS\nTHE WORD',
+  'impostor.incorrectRound2': 'Incorrect — round 2',
+  'impostor.result': 'Result',
+  'impostor.reason.crewCaught':
+    'The crew caught every Impostor, and the final word guess was wrong.',
+  'impostor.reason.deadlock':
+    'The group could not agree on an Impostor, so the Impostor side wins.',
+  'impostor.reason.guessCorrect':
+    'The caught Impostor correctly guessed the secret word.',
+  'impostor.reason.innocent':
+    '{name} was innocent. The Impostor escaped the accusation.',
+  'impostor.resultLabel': 'Impostor:',
+  'impostor.resultLabelPlural': 'Impostors:',
+  'impostor.deckExhaustedTitle': 'Deck exhausted',
+  'impostor.deckExhaustedBody':
+    'Every card in this deck has been used. Change categories or content level to keep playing.',
 } as const;
 
 export type MessageKey = keyof typeof en;

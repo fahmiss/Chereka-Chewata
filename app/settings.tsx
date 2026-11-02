@@ -132,9 +132,11 @@ export default function SettingsScreen() {
             accessibilityLabel="Chereka Chewata"
           />
           <Text style={styles.amharic}>{AMHARIC}</Text>
-          <Text style={[type.bodySm, styles.languageComingSoon]}>
-            {t('settings.languageComingSoon')}
-          </Text>
+          {featureFlags.languageSelection ? null : (
+            <Text style={[type.bodySm, styles.languageComingSoon]}>
+              {t('settings.languageComingSoon')}
+            </Text>
+          )}
         </View>
       </ScrollView>
 

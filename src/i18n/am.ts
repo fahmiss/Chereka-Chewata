@@ -148,4 +148,76 @@ export const am: Record<MessageKey, string> = {
   'impostor.crewWins': 'ቃሉን የሚያውቁት አሸነፉ!',
   'impostor.impostorWins': 'ኢምፖስተሩ አሸነፈ!',
   'impostor.impostorsWin': 'ኢምፖስተሮቹ አሸነፉ!',
+
+  // Impostor remaining gameplay UI (Batch 2B — proposed until native sign-off)
+  'impostor.tagline': 'ሚስጥራዊውን ቃል የማያውቀውን ተጫዋች ፈልጉ።',
+  'impostor.players': '3–15 ተጫዋቾች',
+  'impostor.duration': 'ወደ 10 ደቂቃ',
+  'impostor.privateReveal': 'በግል ይመልከቱ · {n}/{total}',
+  'impostor.holdHint': 'ክቡ እስኪሞላ ተጭነህ ቆይ። ከዚያ ሚስጥርህን እይ።',
+  'impostor.category': 'ምድብ፦ {categoryName}',
+  'impostor.blendIn': 'ሳትጠረጠር ተጫወት። ቃሉን ለማወቅ ሞክር።',
+  'impostor.clues': 'ፍንጮች',
+  'impostor.cluesRound2': 'ፍንጮች · 2ኛ ዙር',
+  'impostor.nameStarts': 'መጀመሪያ ተጫዋች፦ {name}',
+  'impostor.clueInstruction':
+    'እያንዳንዳችሁ በተራ አንድ አጭር ፍንጭ ስጡ። ስልኩን ጠረጴዛው ላይ አስቀምጡ።',
+  'impostor.clueInstructionRound2':
+    'አንድ ኢምፖስተር ቀርቷል። እያንዳንዳችሁ አንድ አዲስ አጭር ፍንጭ ስጡ።',
+  'impostor.clueRule':
+    'ሚስጥራዊውን ቃል አትናገሩ፣ ፊደል በፊደል አትጥሩት፣ አትተርጉሙት፣ ወይም በግጥም የሚመሳሰል ቃል አትጠቀሙ።',
+  'impostor.discussion': 'ውይይት',
+  'impostor.findRemaining': 'የቀረውን ኢምፖስተር ፈልጉ',
+  'impostor.discussRound2':
+    'የመጀመሪያው ኢምፖስተር ተይዟል። ስለ አዲሶቹ ፍንጮች ተወያዩና የቀረውን ኢምፖስተር ፈልጉ።',
+  'impostor.discussPrivate':
+    'ዝግጁ ስትሆኑ እያንዳንዱ ተጫዋች በዚህ ስልክ በሚስጥር ድምፅ ይስጥ።',
+  'impostor.discussGroup':
+    'አብራችሁ ተወያዩ። ቡድኑ ሲስማማ የጠረጠራችሁትን ተጫዋች ምረጡ።',
+  'impostor.whosFaking': 'ማን ነው የሚያስመስለው?',
+  'impostor.whosLeft': 'ማን ቀረ?',
+  'impostor.timeUp': 'ጊዜው አልቋል',
+  'impostor.remaining': 'የቀረው',
+  'impostor.endDiscussionEarly': 'ውይይቱን አሁን ጨርስ',
+  'impostor.startPrivateVoting': 'የሚስጥር ድምፅ መስጠት ጀምሩ',
+  'impostor.chooseAccused': 'የተጠረጠረውን ምረጥ',
+  'impostor.groupDecision': 'የቡድኑ ውሳኔ',
+  'impostor.selectSuspect':
+    'ቡድናችሁ የጠረጠረውን ተጫዋች ምረጡና አረጋግጡ።',
+  'impostor.deadlock': 'ቡድኑ መስማማት አልቻለም — ኢምፖስተሩ አሸነፈ!',
+  'impostor.privateVote': 'የሚስጥር ድምፅ',
+  'impostor.runoffVote': 'ዳግም ድምፅ መስጠት',
+  'impostor.namePrivateVote': 'የ{name} የሚስጥር ድምፅ',
+  'impostor.chooseImpostor': 'ኢምፖስተሩ ማን እንደሆነ ምረጥና ድምፅህን አረጋግጥ።',
+  'impostor.chooseRemainingImpostor':
+    'የቀረውን ኢምፖስተር ምረጥና ድምፅህን አረጋግጥ።',
+  'impostor.votes': 'ድምፆች',
+  'impostor.reveal': 'አሳይ',
+  'impostor.notTheImpostor': 'ኢምፖስተር አይደለም',
+  'impostor.caughtRound2':
+    'ኢምፖስተሩ ተይዟል። ቃሉን በትክክል ከገመተ ያሸንፋል። ከተሳሳተ ደግሞ የቀረውን ኢምፖስተር ለመፈለግ ሁለተኛው ዙር ይጀምራል።',
+  'impostor.caughtGuess':
+    'ኢምፖስተሩ ተይዟል! ሚስጥራዊውን ቃል ጮክ ብሎ ለመገመት አንድ እድል አለ።',
+  'impostor.accusedInnocent':
+    'ቡድኑ ኢምፖስተር ያልሆነ ተጫዋች መረጠ። ኢምፖስተሩ አሸነፈ።',
+  'impostor.seeResult': 'ውጤቱን እይ',
+  'impostor.nameGuesses': 'ቃሉን የሚገምተው፦ {name}',
+  'impostor.guessInstruction':
+    'አንድ ቃል ጮክ ብሎ መናገር አለበት። ቡድኑ ቃሉ ትክክል መሆኑን ያረጋግጣል።',
+  'impostor.guessTheWord': 'ቃሉን ገምት',
+  'impostor.incorrectRound2': 'ተሳስቷል — 2ኛ ዙር',
+  'impostor.result': 'ውጤት',
+  'impostor.reason.crewCaught':
+    'ቡድኑ ሁሉንም ኢምፖስተሮች ያዘ። የመጨረሻው የቃል ግምትም ተሳስቷል።',
+  'impostor.reason.deadlock':
+    'ቡድኑ ኢምፖስተሩ ማን እንደሆነ መስማማት አልቻለም። ስለዚህ የኢምፖስተሩ ቡድን አሸነፈ።',
+  'impostor.reason.guessCorrect':
+    'የተያዘው ኢምፖስተር ሚስጥራዊውን ቃል በትክክል ገመተ።',
+  'impostor.reason.innocent':
+    '{name} ኢምፖስተር አልነበረም። እውነተኛው ኢምፖስተር ሳይያዝ ቀረ።',
+  'impostor.resultLabel': 'ኢምፖስተር፦',
+  'impostor.resultLabelPlural': 'ኢምፖስተሮች፦',
+  'impostor.deckExhaustedTitle': 'ሁሉም ካርዶች አልቀዋል',
+  'impostor.deckExhaustedBody':
+    'የዚህ ስብስብ ካርዶች በሙሉ ተጠቅመዋል። መጫወታችሁን ለመቀጠል ምድቦችን ወይም የይዘት ደረጃውን ቀይሩ።',
 };

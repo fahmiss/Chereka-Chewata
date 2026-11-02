@@ -2,6 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { Animated, Image, StyleSheet, Text, View } from 'react-native';
 import type { GameCatalogEntry, GameId } from '../../domain/games';
+import { useT } from '../../i18n';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, glow, mix, overlay, radius, space } from '../../theme/tokens';
 import { family } from '../../theme/typography';
@@ -44,6 +45,7 @@ const TINT_STRENGTH: Partial<Record<GameId, number>> = { bomb: 0.45 };
  */
 export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) {
   const enter = useEnterAnimation(index, 14);
+  const { t } = useT();
   const [width, setWidth] = useState(0);
   const accent = game.accent;
   const wide = variant === 'wide';
@@ -53,13 +55,20 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
   // the art is graded toward the same accent at export.
   const ground = mix(color.background, accent, 0.3 * tint);
   const locked = !game.playable;
+  const tagline = game.id === 'impostor' ? t('impostor.tagline') : game.tagline;
+  const playerCountLabel =
+    game.id === 'impostor' ? t('impostor.players') : game.playerCountLabel;
+  const sessionLengthLabel =
+    game.id === 'impostor' ? t('impostor.duration') : game.sessionLengthLabel;
 
   // Half cards have ~150pt for both chips; the icons already say "players"
   // and the tilde, so the short forms keep them on one row.
   const players = wide
-    ? game.playerCountLabel
-    : game.playerCountLabel.replace(/\s*players?$/, '');
-  const length = wide ? game.sessionLengthLabel : game.sessionLengthLabel.replace(/^~/, '');
+    ? playerCountLabel
+    : playerCountLabel.replace(/\s*players?$/, '').replace(/\s*ተጫዋቾች$/, '');
+  const length = wide
+    ? sessionLengthLabel
+    : sessionLengthLabel.replace(/^~/, '').replace(/^ወደ\s*/, '');
 
   return (
     <Animated.View
@@ -71,8 +80,8 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
         accessibilityLabel={[
           eyebrow,
           game.name,
-          game.tagline,
-          locked ? 'Coming soon' : `${game.playerCountLabel}, ${game.sessionLengthLabel}`,
+          tagline,
+          locked ? 'Coming soon' : `${playerCountLabel}, ${sessionLengthLabel}`,
         ]
           .filter(Boolean)
           .join('. ')}

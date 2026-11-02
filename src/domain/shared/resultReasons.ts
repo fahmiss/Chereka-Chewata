@@ -1,3 +1,4 @@
+import { translate } from '../../i18n/translate';
 import type { ImpostorSession } from '../impostor/types';
 import type { LiarSession } from '../liar/types';
 import type { InsiderSession } from '../insider/types';
@@ -6,11 +7,22 @@ import type { TabooSession } from '../taboo/types';
 import { playerName, teamLabel } from './utils';
 
 /** Explain the resolved outcome without inventing a new score or win rule. */
-export function impostorResultReason(session: ImpostorSession): string {
-  if (session.winner === 'crew') return 'The crew caught every Impostor, and the final word guess was wrong.';
-  if (!session.accusedPlayerId) return 'The group could not agree on an Impostor, so the Impostor side wins.';
-  if (session.accusedIsImpostor) return 'The caught Impostor correctly guessed the secret word.';
-  return `${playerName(session.setup.players, session.accusedPlayerId)} was innocent. The Impostor escaped the accusation.`;
+export function impostorResultReason(
+  session: ImpostorSession,
+  language: 'en' | 'am' = 'en',
+): string {
+  if (session.winner === 'crew') {
+    return translate(language, 'impostor.reason.crewCaught');
+  }
+  if (!session.accusedPlayerId) {
+    return translate(language, 'impostor.reason.deadlock');
+  }
+  if (session.accusedIsImpostor) {
+    return translate(language, 'impostor.reason.guessCorrect');
+  }
+  return translate(language, 'impostor.reason.innocent', {
+    name: playerName(session.setup.players, session.accusedPlayerId),
+  });
 }
 
 export function liarResultReason(session: LiarSession): string {

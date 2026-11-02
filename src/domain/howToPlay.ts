@@ -1,4 +1,5 @@
-import { translate, type MessageKey } from '../i18n';
+import type { MessageKey } from '../i18n/en';
+import { translate } from '../i18n/translate';
 import type { GameId } from './games';
 
 /**
