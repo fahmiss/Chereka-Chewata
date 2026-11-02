@@ -105,30 +105,6 @@ function useHeatAnimation() {
   };
 }
 
-function useTooHotCaption() {
-  const reducedMotion = useReducedMotion();
-  const progress = useRef(new Animated.Value(reducedMotion ? 1 : 0)).current;
-
-  useEffect(() => {
-    if (reducedMotion) {
-      progress.setValue(1);
-      return;
-    }
-    const animation = Animated.timing(progress, {
-      toValue: 1,
-      duration: 180,
-      easing: easeOut,
-      useNativeDriver: true,
-    });
-    animation.start();
-    return () => animation.stop();
-  }, [progress, reducedMotion]);
-
-  return {
-    opacity: progress,
-    transform: [{ translateY: progress.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }],
-  };
-}
 
 function ReadyPhase({ session }: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
@@ -252,7 +228,6 @@ function PlayingPhase({ session }: { session: BombSession }) {
 
 function ExplodedPhase(_: { session: BombSession }) {
   const { dispatch, clearSession } = useBombSession();
-  const caption = useTooHotCaption();
 
   useEffect(() => {
     hapticHeavy();
@@ -285,12 +260,12 @@ function ExplodedPhase(_: { session: BombSession }) {
                 style={styles.tooHotImage}
               />
             </View>
-            <Animated.View style={[styles.tooHotCaption, caption]}>
+            <View style={styles.tooHotCaption}>
               <Text style={styles.tooHotText} accessibilityRole="header">
                 TOO HOT!
               </Text>
               <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
-            </Animated.View>
+            </View>
           </View>
         </View>
       </ScrollView>
