@@ -132,25 +132,21 @@ function useTooHotAnimation() {
   }, [flash, impact, reducedMotion]);
 
   return {
-    // Keep the party art fully visible — only scale/shake for impact.
-    scene: {
+    // Animate the frame only — nesting Image in absoluteFill+scale breaks on web.
+    frame: {
       transform: [
-        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [1.04, 1] }) },
+        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [1.03, 1] }) },
+        {
+          translateX: impact.interpolate({
+            inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
+            outputRange: [0, -8, 6, -4, 2, 0],
+          }),
+        },
       ],
     },
     caption: {
       opacity: impact,
       transform: [{ translateY: impact.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }],
-    },
-    shake: {
-      transform: [
-        {
-          translateX: impact.interpolate({
-            inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
-            outputRange: [0, -10, 8, -5, 3, 0],
-          }),
-        },
-      ],
     },
     flash: { opacity: flash },
   };
@@ -303,17 +299,15 @@ function ExplodedPhase(_: { session: BombSession }) {
           </View>
           <View style={styles.tooHotBlock}>
             <Animated.View
-              style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.shake]}
+              style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.frame]}
             >
               <View style={styles.tooHotClip}>
-                <Animated.View style={[StyleSheet.absoluteFill, tooHotAnimation.scene]}>
-                  <Image
-                    source={TOO_HOT_ART}
-                    resizeMode="cover"
-                    accessibilityLabel="Friends recoiling from a glowing hot potato"
-                    style={StyleSheet.absoluteFill}
-                  />
-                </Animated.View>
+                <Image
+                  source={TOO_HOT_ART}
+                  resizeMode="cover"
+                  accessibilityLabel="Friends recoiling from a glowing hot potato"
+                  style={styles.tooHotImage}
+                />
                 <Animated.View
                   pointerEvents="none"
                   style={[styles.tooHotFlash, tooHotAnimation.flash]}
@@ -387,8 +381,17 @@ const styles = StyleSheet.create({
   explodedBody: { alignItems: 'center', justifyContent: 'center', gap: space[5] },
   tooHotBlock: { width: '100%', gap: space[3], alignItems: 'center' },
   tooHotShadow: { width: '100%', aspectRatio: 1672 / 941, borderRadius: radius.extraLarge },
-  tooHotClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(ACCENT, 0.58), backgroundColor: color.void },
-  tooHotFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
+  tooHotClip: {
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    borderRadius: radius.extraLarge,
+    borderWidth: 1,
+    borderColor: alpha(ACCENT, 0.58),
+    backgroundColor: color.void,
+  },
+  tooHotImage: { width: '100%', height: '100%' },
+  tooHotFlash: { ...StyleSheet.absoluteFillObject, backgroundColor: '#FFF2D6' },
   tooHotCaption: { alignItems: 'center', gap: 2 },
   tooHotText: { ...type.brushHero, fontSize: 44, lineHeight: 50, color: color.textPrimary, textAlign: 'center', paddingHorizontal: 8 },
   tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, textAlign: 'center' },
