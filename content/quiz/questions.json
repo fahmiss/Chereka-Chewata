@@ -1189,7 +1189,7 @@
     ],
     "explanation_en": "Simba is the young lion who grows to reclaim Pride Rock.",
     "explanation_am": "ሲምባ አድጎ ፕራይድ ሮክን የሚመልሰው ወጣት አንበሳ ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true
   },
@@ -1211,7 +1211,7 @@
     ],
     "explanation_en": "T'Challa becomes Black Panther and rules the fictional nation of Wakanda.",
     "explanation_am": "ቲቻላ ብላክ ፓንተር ሆኖ ልብ ወለዷን ዋካንዳ ይገዛል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true
   },
@@ -1233,7 +1233,7 @@
     ],
     "explanation_en": "The Beatles formed in Liverpool, England, in 1960.",
     "explanation_am": "The Beatles በ1960 በእንግሊዝ ሊቨርፑል ተመሠረቱ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true
   },
@@ -1255,7 +1255,7 @@
     ],
     "explanation_en": "Tilahun Gessesse is one of Ethiopia's most celebrated twentieth-century singers.",
     "explanation_am": "ጥላሁን ገሠሠ ከኢትዮጵያ ታላላቅ የ20ኛው ክፍለ ዘመን ድምፃውያን አንዱ ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -1281,7 +1281,7 @@
     ],
     "explanation_en": "Hayao Miyazaki directed Spirited Away for Studio Ghibli.",
     "explanation_am": "ሃያኦ ሚያዛኪ Spirited Awayን ለስቱዲዮ ጊብሊ መርቶታል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "active": true
   },
@@ -1303,7 +1303,7 @@
     ],
     "explanation_en": "CGI means computer-generated imagery used to create or alter visuals.",
     "explanation_am": "CGI ምስሎችን ለመፍጠር ወይም ለመቀየር በኮምፒውተር የሚሠራ ቴክኖሎጂ ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "active": true
   },
@@ -1325,7 +1325,7 @@
     ],
     "explanation_en": "Olaf appears in Disney's Frozen (2013).",
     "explanation_am": "ኦላፍ በዲዝኒ ፍሮዘን (2013) ፊልም ውስጥ ይገኛል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -1354,7 +1354,7 @@
     ],
     "explanation_en": "SpongeBob is a yellow sea sponge who lives in a pineapple.",
     "explanation_am": "ስፖንጅቦብ በአናናስ ውስጥ የሚኖር ቢጫ የባሕር ስፖንጅ ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -1383,7 +1383,7 @@
     ],
     "explanation_en": "Harry Potter attends Hogwarts School of Witchcraft and Wizardry.",
     "explanation_am": "ሃሪ ፖተር በሆግዋርትስ የጥንቆላ ትምህርት ቤት ይማራል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "easy",
     "tags": [
       "books"
@@ -1412,7 +1412,7 @@
     ],
     "explanation_en": "Nemo and his father Marlin are orange-and-white clownfish.",
     "explanation_am": "ኒሞ እና አባቱ ማርሊን ብርቱካናማ እና ነጭ ክላውን ዓሣዎች ናቸው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -1441,7 +1441,7 @@
     ],
     "explanation_en": "Minnie first appeared alongside Mickey in 1928.",
     "explanation_am": "ሚኒ ከሚኪ ጋር ለመጀመሪያ ጊዜ በ1928 ታየች።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -1470,7 +1470,7 @@
     ],
     "explanation_en": "Mulatu blended Ethiopian scales with jazz and Latin rhythms.",
     "explanation_am": "ሙላቱ የኢትዮጵያ ቅኝቶችን ከጃዝ እና ከላቲን ምቶች ጋር አዋሐደ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -1500,7 +1500,7 @@
     ],
     "explanation_en": "Thriller (1982) is widely cited as the best-selling album of all time.",
     "explanation_am": "ትሪለር (1982) በታሪክ በብዛት የተሸጠ አልበም ተብሎ በሰፊው ይጠቀሳል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "music"
@@ -1529,7 +1529,7 @@
     ],
     "explanation_en": "Abel Makkonen Tesfaye was born in Toronto to Ethiopian parents.",
     "explanation_am": "አቤል መኮንን ተስፋዬ በቶሮንቶ ከኢትዮጵያውያን ወላጆች ተወለደ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -1559,7 +1559,7 @@
     ],
     "explanation_en": "Ratatouille (2007) stars Remy, a rat with a gift for cooking.",
     "explanation_am": "ራታቱይ (2007) የምግብ ማብሰል ተሰጥኦ ያለውን ሬሚ የተባለ አይጥ ያሳያል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "tags": [
       "film"
@@ -1588,7 +1588,7 @@
     ],
     "explanation_en": "Teddy Afro's full name is Tewodros Kassahun.",
     "explanation_am": "የቴዲ አፍሮ ሙሉ ስም ቴዎድሮስ ካሣሁን ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -1618,7 +1618,7 @@
     ],
     "explanation_en": "Spielberg directed Jaws (1975) and Jurassic Park (1993).",
     "explanation_am": "ስፒልበርግ ጃውስን (1975) እና ጁራሲክ ፓርክን (1993) አዘጋጀ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "film"
@@ -1647,7 +1647,7 @@
     ],
     "explanation_en": "Teza won prizes at the Venice Film Festival and FESPACO.",
     "explanation_am": "ጤዛ በቬኒስ የፊልም ፌስቲቫል እና በፌስፓኮ ሽልማቶችን አሸንፏል።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "Ethiopian",
@@ -1677,7 +1677,7 @@
     ],
     "explanation_en": "Star Wars, later subtitled A New Hope, premiered in May 1977.",
     "explanation_am": "ስታር ዋርስ (በኋላ «ኤ ኒው ሆፕ» ተብሏል) በሜይ 1977 ታየ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "film"
@@ -1706,7 +1706,7 @@
     ],
     "explanation_en": "Mozart's The Magic Flute premiered in Vienna in 1791.",
     "explanation_am": "የሞዛርት «ዘ ማጂክ ፍሉት» በ1791 በቪየና ታየ።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "tags": [
       "music"
@@ -1735,7 +1735,7 @@
     ],
     "explanation_en": "Game of Thrones adapts George R. R. Martin's A Song of Ice and Fire.",
     "explanation_am": "ጌም ኦፍ ትሮንስ የጆርጅ አር. አር. ማርቲንን «ኤ ሶንግ ኦፍ አይስ ኤንድ ፋየር» መጻሕፍት መሠረት ያደረገ ነው።",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "tv"
@@ -1766,7 +1766,7 @@
     "explanation_am": "አንድ ቡድን አንድ ግብ ጠባቂን ጨምሮ አሥራ አንድ ተጫዋቾችን ያሰልፋል።",
     "category_id": "football",
     "difficulty": "easy",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_002",
@@ -1857,7 +1857,7 @@
     "tags": [
       "Ethiopian"
     ],
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_006",
@@ -1905,7 +1905,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_008",
@@ -1931,7 +1931,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_009",
@@ -1957,7 +1957,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_010",
@@ -2012,7 +2012,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_012",
@@ -2042,7 +2042,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_013",
@@ -2071,7 +2071,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_014",
@@ -2129,7 +2129,7 @@
     "source_url": null,
     "source_license": null,
     "verified_at": null,
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_football_016",
@@ -5638,7 +5638,7 @@
     "source_name": "FIFA",
     "source_url": "https://www.fifa.com/en/articles/world-cup-finals-that-made-history",
     "verified_at": "2026-10-16",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_cur_002",
@@ -5655,7 +5655,7 @@
     "source_name": "Premier League",
     "source_url": "https://www.premierleague.com/en/news/59016",
     "verified_at": "2026-10-16",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_cur_003",
@@ -5672,7 +5672,7 @@
     "source_name": "Ballon d'Or",
     "source_url": "https://ballondor.com/fr/news/posts/le-palmares-complet-de-tous-les-ballon-dor",
     "verified_at": "2026-10-16",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_cur_004",
@@ -5709,7 +5709,7 @@
     "source_name": "IFAB",
     "source_url": "https://www.theifab.com/laws/2025-26/the-players/",
     "verified_at": "2026-10-16",
-    "active": true
+    "active": false
   },
   {
     "id": "quiz_cur_006",
@@ -5738,7 +5738,7 @@
       "Peter Jackson"
     ],
     "explanation_en": "James Cameron directed the 1997 movie Titanic.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "source_name": "Academy of Motion Picture Arts and Sciences",
     "source_url": "https://www.oscars.org/collection-highlights/titanic",
@@ -5860,7 +5860,7 @@
       "Nor"
     ],
     "explanation_en": "Rophnan’s debut album Reflection, also known as Netsabraq, introduced his Ethiopian electronic sound to a wider audience.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -5884,7 +5884,7 @@
       "Azmari pop"
     ],
     "explanation_en": "Jemberu Demeke describes his genre-bending approach as tonic fusion.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "tags": [
       "Ethiopian",
@@ -5908,7 +5908,7 @@
       "Bruktawit Kebede"
     ],
     "explanation_en": "Betty G was born Bruktawit Getahun.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -5932,7 +5932,7 @@
       "WHO"
     ],
     "explanation_en": "Betty G was appointed a UNHCR Goodwill Ambassador for Ethiopia in 2020.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -5955,7 +5955,7 @@
       "Warcraft"
     ],
     "explanation_en": "Ruth Negga was nominated for Best Actress for her performance in Loving.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "tags": [
       "Ethiopian",
@@ -5978,7 +5978,7 @@
       "Digital education"
     ],
     "explanation_en": "WHO appointed Liya Kebede as a Goodwill Ambassador for Maternal, Newborn and Child Health.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "Ethiopian",
@@ -6001,7 +6001,7 @@
       "Push 2 Start"
     ],
     "explanation_en": "Tyla won the inaugural Best African Music Performance Grammy with Water in 2024.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -6025,7 +6025,7 @@
       "Essence"
     ],
     "explanation_en": "Tems won the 2025 Grammy for Best African Music Performance with Love Me JeJe.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -6049,7 +6049,7 @@
       "I Told Them..."
     ],
     "explanation_en": "Burna Boy won his first Grammy with Twice as Tall.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "music",
@@ -6072,7 +6072,7 @@
       "Lexi"
     ],
     "explanation_en": "Zendaya plays Rue Bennett in Euphoria, a role that earned her two Lead Actress Emmys.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "television",
@@ -6095,7 +6095,7 @@
       "5"
     ],
     "explanation_en": "Taylor Swift is the first artist to win Album of the Year four times.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -6123,7 +6123,7 @@
       "Star Wars: The Force Awakens"
     ],
     "explanation_en": "James Cameron’s Avatar (2009) remains the top earner worldwide when totals are not adjusted for inflation, helped by later re-releases.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "tags": [
       "film"
@@ -6144,7 +6144,7 @@
       "Mad Men"
     ],
     "explanation_en": "Walter White is the chemistry-teacher-turned-meth-cook at the centre of Breaking Bad.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -6165,7 +6165,7 @@
       "Kate Winslet"
     ],
     "explanation_en": "Leonardo DiCaprio starred opposite Kate Winslet in James Cameron’s Titanic.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -6186,7 +6186,7 @@
       "The Rolling Stones"
     ],
     "explanation_en": "Queen released Bohemian Rhapsody in 1975; Freddie Mercury wrote it.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -6207,7 +6207,7 @@
       "SpongeBob SquarePants"
     ],
     "explanation_en": "The Simpsons premiered in 1989 and remains the longest-running U.S. animated series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -6228,7 +6228,7 @@
       "Sword of Gryffindor, Firebolt, and Pensieve"
     ],
     "explanation_en": "The Deathly Hallows are the Elder Wand, the Resurrection Stone, and the Cloak of Invisibility.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "tags": [
       "books"
@@ -6249,7 +6249,7 @@
       "2008"
     ],
     "explanation_en": "Apple unveiled the iPhone in January 2007 and released it in the U.S. that June.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "science_technology",
     "difficulty": "medium",
     "tags": [
       "tech"
@@ -6270,7 +6270,7 @@
       "Marlon Brando"
     ],
     "explanation_en": "Daniel Day-Lewis has three Best Actor Oscars — for My Left Foot, There Will Be Blood, and Lincoln.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "tags": [
       "film"
@@ -6291,7 +6291,7 @@
       "Luke’s Diner"
     ],
     "explanation_en": "The Friends gang regularly hangs out at Central Perk in New York City.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -6312,7 +6312,7 @@
       "Amazon Prime Video"
     ],
     "explanation_en": "Stranger Things is a Netflix original series created by the Duffer Brothers.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -6333,7 +6333,7 @@
       "Flute"
     ],
     "explanation_en": "A pianist is a musician who plays the piano.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -6354,7 +6354,7 @@
       "Alison Krauss"
     ],
     "explanation_en": "Beyoncé overtook previous record holders and currently holds the most Grammy wins of any artist.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "music",
@@ -6376,7 +6376,7 @@
       "Love Me Tender"
     ],
     "explanation_en": "Heartbreak Hotel topped the U.S. charts in 1956 and was Elvis’s first No. 1.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "tags": [
       "music"
@@ -6397,7 +6397,7 @@
       "Genesis"
     ],
     "explanation_en": "Both landmark albums were recorded by Pink Floyd.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -6418,7 +6418,7 @@
       "Canada"
     ],
     "explanation_en": "Adele Adkins was born in Tottenham, London, England.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -6440,7 +6440,7 @@
       "12"
     ],
     "explanation_en": "A standard major or minor scale spans an octave of eight named notes, counting the repeated tonic.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "tags": [
       "music"
@@ -6461,7 +6461,7 @@
       "Isle of Wight"
     ],
     "explanation_en": "Woodstock was held in August 1969 near Bethel, New York.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -6482,7 +6482,7 @@
       "Jay-Z"
     ],
     "explanation_en": "Eminem’s full name is Marshall Bruce Mathers III.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -6504,7 +6504,7 @@
       "Harpsichord"
     ],
     "explanation_en": "A modern concert pedal harp typically has 47 strings and 7 pedals.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "tags": [
       "music"
@@ -6525,7 +6525,7 @@
       "Franz Schubert"
     ],
     "explanation_en": "Beethoven gradually lost his hearing and still wrote major late works, including the Ninth Symphony.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -7615,7 +7615,7 @@
       "Christopher Marlowe"
     ],
     "explanation_en": "William Shakespeare wrote Romeo and Juliet in the 1590s.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "easy",
     "tags": [
       "books"
@@ -7636,7 +7636,7 @@
       "Roald Dahl"
     ],
     "explanation_en": "J.K. Rowling wrote the seven Harry Potter novels.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "easy",
     "tags": [
       "books"
@@ -7657,7 +7657,7 @@
       "Queen"
     ],
     "explanation_en": "The Beatles released Hey Jude in 1968.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music"
@@ -7678,7 +7678,7 @@
       "Katy Perry"
     ],
     "explanation_en": "Lady Gaga released Bad Romance in 2009.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -7700,7 +7700,7 @@
       "Billie Eilish"
     ],
     "explanation_en": "Taylor Swift’s Eras Tour celebrated her albums across her career eras.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -7723,7 +7723,7 @@
       "Solange"
     ],
     "explanation_en": "Beyoncé released Lemonade as a visual album in 2016.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "easy",
     "tags": [
       "music",
@@ -7745,7 +7745,7 @@
       "Ilvermorny"
     ],
     "explanation_en": "Harry Potter attends Hogwarts School of Witchcraft and Wizardry.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "easy",
     "tags": [
       "books"
@@ -7766,7 +7766,7 @@
       "Supernatural"
     ],
     "explanation_en": "Stranger Things follows kids in Hawkins, including Eleven.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -7787,7 +7787,7 @@
       "Amazon Prime Video"
     ],
     "explanation_en": "Squid Game is a Netflix original series from South Korea.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -7808,7 +7808,7 @@
       "Bob’s Burgers"
     ],
     "explanation_en": "The Simpsons premiered as a full series on Fox in 1989.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "tv"
@@ -7829,7 +7829,7 @@
       "Shrek"
     ],
     "explanation_en": "Woody is the cowboy doll in Pixar’s Toy Story.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7850,7 +7850,7 @@
       "Tony Stark"
     ],
     "explanation_en": "Spider-Man’s secret identity is Peter Parker.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7871,7 +7871,7 @@
       "Belle"
     ],
     "explanation_en": "Snow White lives with the seven dwarfs in the classic fairy tale and Disney film.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7892,7 +7892,7 @@
       "The Matrix"
     ],
     "explanation_en": "Jedi and Sith wield lightsabers in Star Wars.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7913,7 +7913,7 @@
       "Pac-Man"
     ],
     "explanation_en": "Mario collects mushrooms and often rescues Princess Peach.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "games"
@@ -7934,7 +7934,7 @@
       "Captain Phillips"
     ],
     "explanation_en": "Jack and Rose’s “I’m flying” scene is on the bow of the Titanic.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7955,7 +7955,7 @@
       "Blue Sky Studios"
     ],
     "explanation_en": "Toy Story (1995) was Pixar’s first feature film.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7976,7 +7976,7 @@
       "Han Solo"
     ],
     "explanation_en": "Luke’s father is Anakin Skywalker, later known as Darth Vader.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -7997,7 +7997,7 @@
       "Mark Ruffalo"
     ],
     "explanation_en": "Robert Downey Jr. portrayed Tony Stark / Iron Man in the MCU.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film",
@@ -8019,7 +8019,7 @@
       "Aliens"
     ],
     "explanation_en": "Avatar (2009) is set on Pandora among the Na’vi.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -8040,7 +8040,7 @@
       "Cast Away"
     ],
     "explanation_en": "In Forrest Gump, Forrest goes on a long cross-country run.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "tags": [
       "film"
@@ -8061,7 +8061,7 @@
       "Thailand"
     ],
     "explanation_en": "Bong Joon-ho’s Parasite is set in South Korea.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "tags": [
       "film"
@@ -8082,7 +8082,7 @@
       "Pocahontas"
     ],
     "explanation_en": "Princess Jasmine’s tiger companion in Aladdin is named Rajah.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "tags": [
       "film"
@@ -9393,7 +9393,7 @@
     "explanation_en": "A touchdown scores six points before any extra-point or conversion attempt.",
     "category_id": "football",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -9625,7 +9625,7 @@
     "explanation_en": "A referee shows a red card to send a player off for a serious offense.",
     "category_id": "football",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -9685,7 +9685,7 @@
     "explanation_en": "Soccer teams use a goalkeeper as the only player normally allowed to handle the ball within the penalty area.",
     "category_id": "football",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -9704,7 +9704,7 @@
       "Six"
     ],
     "explanation_en": "A standard violin has four strings tuned to G, D, A, and E.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9725,7 +9725,7 @@
       "Queen"
     ],
     "explanation_en": "The Beatles became widely known by the nickname \"The Fab Four.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9746,7 +9746,7 @@
       "Justin Timberlake"
     ],
     "explanation_en": "Michael Jackson earned the nickname \"King of Pop\" through his enormous influence on popular music.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9767,7 +9767,7 @@
       "Five"
     ],
     "explanation_en": "A quartet is an ensemble of four musicians.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9788,7 +9788,7 @@
       "Alto"
     ],
     "explanation_en": "Soprano is the highest standard female vocal range.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9809,7 +9809,7 @@
       "Johann Sebastian Bach"
     ],
     "explanation_en": "Beethoven composed the famous piano piece commonly known as \"Für Elise.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9830,7 +9830,7 @@
       "Percussion"
     ],
     "explanation_en": "Trumpets and trombones belong to the brass family because players produce sound by buzzing their lips.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9851,7 +9851,7 @@
       "Lady Gaga"
     ],
     "explanation_en": "Madonna is widely called the \"Queen of Pop\" for her long and influential career.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9872,7 +9872,7 @@
       "Slow"
     ],
     "explanation_en": "The Italian musical direction \"forte\" tells performers to play loudly.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9893,7 +9893,7 @@
       "Seven"
     ],
     "explanation_en": "A standard musical staff consists of five horizontal lines.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9914,7 +9914,7 @@
       "The clarinet"
     ],
     "explanation_en": "Louis Armstrong became famous for his virtuosic trumpet playing as well as his singing.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9935,7 +9935,7 @@
       "A quintet"
     ],
     "explanation_en": "An ensemble of three musicians is called a trio.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9956,7 +9956,7 @@
       "Bluegrass"
     ],
     "explanation_en": "Jazz developed in New Orleans from African American musical traditions in the late 19th and early 20th centuries.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9977,7 +9977,7 @@
       "The pattern of accents"
     ],
     "explanation_en": "Tempo describes how fast or slowly a piece of music is performed.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -9998,7 +9998,7 @@
       "Led Zeppelin"
     ],
     "explanation_en": "The Beatles released \"Abbey Road\" in 1969.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10019,7 +10019,7 @@
       "Countertenor"
     ],
     "explanation_en": "Bass is the lowest standard male singing range.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10040,7 +10040,7 @@
       "The saxophone"
     ],
     "explanation_en": "Bagpipes use air stored in a bag to sound their pipes and are strongly associated with Scotland.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10061,7 +10061,7 @@
       "Humming only the chorus"
     ],
     "explanation_en": "A cappella means voices perform without instrumental accompaniment.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10082,7 +10082,7 @@
       "Wolfgang Amadeus Mozart"
     ],
     "explanation_en": "Antonio Vivaldi composed the four violin concertos known as \"The Four Seasons.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10103,7 +10103,7 @@
       "The bar line"
     ],
     "explanation_en": "A clef assigns pitches to the lines and spaces of a musical staff.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10124,7 +10124,7 @@
       "Rihanna"
     ],
     "explanation_en": "Adele released \"Rolling in the Deep\" as a single from her album \"21.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10145,7 +10145,7 @@
       "The crash cymbal"
     ],
     "explanation_en": "A drummer operates the bass drum with a foot pedal to provide the kit's low, driving beat.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10166,7 +10166,7 @@
       "Hip-hop"
     ],
     "explanation_en": "Bob Marley brought Jamaican reggae music to a worldwide audience.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10187,7 +10187,7 @@
       "The guitar"
     ],
     "explanation_en": "The violin is a wooden string instrument played with a bow while resting beneath the chin.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10208,7 +10208,7 @@
       "Gradually getting faster"
     ],
     "explanation_en": "A crescendo directs musicians to increase the volume gradually.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10229,7 +10229,7 @@
       "Johann Sebastian Bach"
     ],
     "explanation_en": "Mozart was a celebrated 18th-century child prodigy who composed more than 40 symphonies.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10250,7 +10250,7 @@
       "Guardians of the Galaxy"
     ],
     "explanation_en": "The \"Star Wars\" films open with the words \"A long time ago in a galaxy far, far away.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10272,7 +10272,7 @@
       "A dinosaur"
     ],
     "explanation_en": "Woody is a pull-string cowboy doll in \"Toy Story.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10294,7 +10294,7 @@
       "Iron Man"
     ],
     "explanation_en": "Batman is commonly known as Gotham City's \"Caped Crusader.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10316,7 +10316,7 @@
       "The Big Bang Theory"
     ],
     "explanation_en": "\"Friends\" follows Ross, Rachel, Monica, Chandler, Joey, and Phoebe in New York City.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10338,7 +10338,7 @@
       "Back to the Future"
     ],
     "explanation_en": "\"May the Force be with you\" is an iconic phrase from the \"Star Wars\" films.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10360,7 +10360,7 @@
       "Latveria"
     ],
     "explanation_en": "Wakanda is the fictional African homeland of Black Panther.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10382,7 +10382,7 @@
       "Her gloves"
     ],
     "explanation_en": "Dorothy clicks the heels of her ruby slippers together to return home in the film.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10404,7 +10404,7 @@
       "Gill"
     ],
     "explanation_en": "Dory is the friendly blue tang whose short-term memory loss makes her forgetful.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10426,7 +10426,7 @@
       "Saving Private Ryan"
     ],
     "explanation_en": "Tom Hanks plays the title character who delivers the famous line in \"Forrest Gump.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10448,7 +10448,7 @@
       "Discovery One"
     ],
     "explanation_en": "The Nostromo is the commercial spacecraft whose crew encounters the alien in the first film.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10470,7 +10470,7 @@
       "Aliens"
     ],
     "explanation_en": "\"Jurassic Park\" uses genetic engineering to bring dinosaurs back to life.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10492,7 +10492,7 @@
       "Matt Damon"
     ],
     "explanation_en": "Leonardo DiCaprio plays Jack Dawson in \"Titanic.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10514,7 +10514,7 @@
       "Hamm"
     ],
     "explanation_en": "Buzz Lightyear is the space ranger toy who becomes Woody's close friend.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10536,7 +10536,7 @@
       "Pirates of the Caribbean"
     ],
     "explanation_en": "\"The Lord of the Rings\" follows a quest to destroy the One Ring in Mount Doom.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10558,7 +10558,7 @@
       "Orange"
     ],
     "explanation_en": "Shrek is a large green ogre.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10580,7 +10580,7 @@
       "Neither pill"
     ],
     "explanation_en": "Neo chooses the red pill and learns the truth about the Matrix.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10602,7 +10602,7 @@
       "The Big Bang Theory"
     ],
     "explanation_en": "Central Perk is the coffee shop where the main characters of \"Friends\" often gather.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10624,7 +10624,7 @@
       "Robin"
     ],
     "explanation_en": "Alfred Pennyworth is Bruce Wayne's trusted butler and confidant.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10646,7 +10646,7 @@
       "Finding Nemo"
     ],
     "explanation_en": "Simba sings \"Hakuna Matata\" with Timon the meerkat and Pumbaa the warthog in \"The Lion King.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10668,7 +10668,7 @@
       "Allan Quatermain"
     ],
     "explanation_en": "Indiana Jones is the fedora-wearing archaeologist and adventurer created for the Spielberg film series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -10690,7 +10690,7 @@
       "Han Solo"
     ],
     "explanation_en": "Captain Jack Sparrow is the eccentric pirate played by Johnny Depp in the film series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "easy",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12356,7 +12356,7 @@
       "George Eliot"
     ],
     "explanation_en": "Jane Austen published \"Pride and Prejudice\" in 1813.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12377,7 +12377,7 @@
       "Frankenstein"
     ],
     "explanation_en": "Sherlock Holmes first appears in Arthur Conan Doyle’s novel A Study in Scarlet.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12398,7 +12398,7 @@
       "William Faulkner"
     ],
     "explanation_en": "Ernest Hemingway wrote the novella \"The Old Man and the Sea.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12419,7 +12419,7 @@
       "Matthew"
     ],
     "explanation_en": "Genesis opens the Bible with its account of creation.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12440,7 +12440,7 @@
       "Margaret Atwood"
     ],
     "explanation_en": "George Orwell published the dystopian novel \"1984\" in 1949.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12461,7 +12461,7 @@
       "Herman Melville"
     ],
     "explanation_en": "Mark Twain wrote \"The Adventures of Tom Sawyer,\" which was published in 1876.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12482,7 +12482,7 @@
       "Peregrin Took"
     ],
     "explanation_en": "Bilbo Baggins is the hobbit who joins Thorin's quest in J.R.R. Tolkien's novel.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12503,7 +12503,7 @@
       "Ivan Turgenev"
     ],
     "explanation_en": "Leo Tolstoy wrote the epic novel \"War and Peace.\"",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12524,7 +12524,7 @@
       "A sea serpent"
     ],
     "explanation_en": "Moby Dick is the enormous white sperm whale pursued by Captain Ahab.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12545,7 +12545,7 @@
       "William Faulkner"
     ],
     "explanation_en": "F. Scott Fitzgerald published The Great Gatsby in 1925.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12566,7 +12566,7 @@
       "Inspector Morse"
     ],
     "explanation_en": "Agatha Christie created Belgian detective Hercule Poirot and his distinctive mustache.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12587,7 +12587,7 @@
       "Leo Tolstoy"
     ],
     "explanation_en": "Spanish author Miguel de Cervantes wrote Don Quixote.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12608,7 +12608,7 @@
       "Lucy"
     ],
     "explanation_en": "Alice follows the White Rabbit down a rabbit hole in Lewis Carroll’s Alice’s Adventures in Wonderland.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12629,7 +12629,7 @@
       "Ivan Turgenev"
     ],
     "explanation_en": "Fyodor Dostoevsky wrote Crime and Punishment, first published in 1866.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12650,7 +12650,7 @@
       "King Lear"
     ],
     "explanation_en": "Prince Hamlet is the title character of Shakespeare's tragedy Hamlet.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12671,7 +12671,7 @@
       "Truman Capote"
     ],
     "explanation_en": "J.D. Salinger wrote The Catcher in the Rye and its narrator, Holden Caulfield.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12692,7 +12692,7 @@
       "Horton"
     ],
     "explanation_en": "Rudyard Kipling’s curious elephant is The Elephant’s Child in the Just So Stories.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12713,7 +12713,7 @@
       "Brandon Sanderson"
     ],
     "explanation_en": "George R.R. Martin began the A Song of Ice and Fire fantasy series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12734,7 +12734,7 @@
       "George Eliot"
     ],
     "explanation_en": "Emily Brontë published Wuthering Heights in 1847.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12755,7 +12755,7 @@
       "Fern"
     ],
     "explanation_en": "Charlotte is the barn spider who befriends Wilbur in Charlotte's Web.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12776,7 +12776,7 @@
       "Plato"
     ],
     "explanation_en": "The ancient Greek epic The Odyssey is traditionally attributed to Homer.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12797,7 +12797,7 @@
       "Harry Potter and the Goblet of Fire"
     ],
     "explanation_en": "The first Harry Potter novel was published in the United States as Harry Potter and the Sorcerer's Stone.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12818,7 +12818,7 @@
       "Emily Brontë"
     ],
     "explanation_en": "Mary Shelley wrote Frankenstein while still a teenager.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12839,7 +12839,7 @@
       "Agatha Christie"
     ],
     "explanation_en": "Ian Fleming introduced British secret agent James Bond in the novel Casino Royale.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12860,7 +12860,7 @@
       "The Giver"
     ],
     "explanation_en": "Katniss Everdeen is the central character of Suzanne Collins's The Hunger Games.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12881,7 +12881,7 @@
       "J.D. Salinger"
     ],
     "explanation_en": "Harper Lee wrote the Pulitzer Prize-winning novel To Kill a Mockingbird.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12902,7 +12902,7 @@
       "Rosings Park"
     ],
     "explanation_en": "Longbourn is the Bennet family's estate in Pride and Prejudice.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12923,7 +12923,7 @@
       "John Webster"
     ],
     "explanation_en": "William Shakespeare wrote the tragedy Macbeth.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12944,7 +12944,7 @@
       "Fauvism"
     ],
     "explanation_en": "Pablo Picasso and Georges Braque pioneered Cubism in the early twentieth century.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12965,7 +12965,7 @@
       "The Metropolitan Museum of Art in New York"
     ],
     "explanation_en": "Leonardo da Vinci's Mona Lisa is displayed at the Louvre in Paris.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -12986,7 +12986,7 @@
       "Paul Gauguin"
     ],
     "explanation_en": "Vincent van Gogh painted The Starry Night in 1889.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13007,7 +13007,7 @@
       "Orange, green, and violet"
     ],
     "explanation_en": "Traditional painting theory identifies red, blue, and yellow as the three primary colors.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13028,7 +13028,7 @@
       "Max Ernst"
     ],
     "explanation_en": "Salvador Dalí painted the melting clocks in The Persistence of Memory.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13049,7 +13049,7 @@
       "Engraving"
     ],
     "explanation_en": "Calligraphy is the art of producing beautiful decorative handwriting.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13070,7 +13070,7 @@
       "Auguste Rodin"
     ],
     "explanation_en": "Michelangelo carved his marble statue David in the early sixteenth century.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13091,7 +13091,7 @@
       "Expressionism"
     ],
     "explanation_en": "Surrealism explores dreams and the unconscious through unexpected, illogical imagery.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13112,7 +13112,7 @@
       "Keith Haring"
     ],
     "explanation_en": "Andy Warhol made Pop Art icons from Campbell's soup cans and celebrity portraits.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13133,7 +13133,7 @@
       "Genre painting"
     ],
     "explanation_en": "A still life depicts arranged inanimate subjects such as fruit, flowers, or household objects.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13154,7 +13154,7 @@
       "Camille Pissarro"
     ],
     "explanation_en": "Claude Monet was an Impressionist renowned for his Water Lilies series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13175,7 +13175,7 @@
       "A mobile"
     ],
     "explanation_en": "A monolith is a structure or carving formed from one large piece of stone.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13196,7 +13196,7 @@
       "Orange"
     ],
     "explanation_en": "Adding white to red creates the lighter tint called pink.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13217,7 +13217,7 @@
       "Egon Schiele"
     ],
     "explanation_en": "Norwegian artist Edvard Munch created The Scream.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13238,7 +13238,7 @@
       "Wash"
     ],
     "explanation_en": "Impasto uses thick paint so brushstrokes or palette-knife marks remain raised.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13259,7 +13259,7 @@
       "An arrangement of objects"
     ],
     "explanation_en": "A self-portrait is an image an artist creates of themselves.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13280,7 +13280,7 @@
       "Romanticism"
     ],
     "explanation_en": "Impressionism emphasized changing light and scenes from modern everyday life.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13301,7 +13301,7 @@
       "Blue and yellow"
     ],
     "explanation_en": "In traditional paint mixing, combining red and blue produces purple.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13322,7 +13322,7 @@
       "Donatello"
     ],
     "explanation_en": "French sculptor Auguste Rodin created The Thinker.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13343,7 +13343,7 @@
       "Bonsai"
     ],
     "explanation_en": "Origami is the Japanese art of folding paper into decorative forms.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13364,7 +13364,7 @@
       "A mosaic made from glass tiles"
     ],
     "explanation_en": "A fresco is painted onto freshly applied wet plaster so the pigment bonds with the wall as it dries.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "hard",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13385,7 +13385,7 @@
       "Jan Steen"
     ],
     "explanation_en": "Dutch painter Johannes Vermeer created Girl with a Pearl Earring.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13406,7 +13406,7 @@
       "Texture"
     ],
     "explanation_en": "Composition is the way visual elements are arranged within an artwork.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13427,7 +13427,7 @@
       "Brown"
     ],
     "explanation_en": "Mixing yellow and red paint produces orange.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13448,7 +13448,7 @@
       "Water Lilies"
     ],
     "explanation_en": "Hokusai created the woodblock print The Great Wave off Kanagawa around 1831.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13469,7 +13469,7 @@
       "Engraving"
     ],
     "explanation_en": "A collage is made by attaching materials such as paper or fabric to a surface.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -13490,7 +13490,7 @@
       "The Cosquer cave paintings"
     ],
     "explanation_en": "The Lascaux caves in southwestern France contain celebrated prehistoric paintings.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14015,7 +14015,7 @@
       "Link"
     ],
     "explanation_en": "Mario is Nintendo's mustached plumber mascot and the star of the Super Mario games.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14036,7 +14036,7 @@
       "Palworld"
     ],
     "explanation_en": "Pokémon uses the slogan “Gotta catch 'em all!” for its collectible creatures.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14057,7 +14057,7 @@
       "Fortnite"
     ],
     "explanation_en": "Minecraft is the best-selling video game and centers on building in a block-based world.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14078,7 +14078,7 @@
       "Mario"
     ],
     "explanation_en": "Link is the recurring hero players control in The Legend of Zelda series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14099,7 +14099,7 @@
       "Hexominoes"
     ],
     "explanation_en": "Tetris pieces are tetrominoes, shapes formed from four connected squares.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14120,7 +14120,7 @@
       "Sega"
     ],
     "explanation_en": "Sony launched the original PlayStation console in 1994.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14141,7 +14141,7 @@
       "Yoshi"
     ],
     "explanation_en": "Luigi is Mario's green-clad brother in the Super Mario series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14162,7 +14162,7 @@
       "Shadow"
     ],
     "explanation_en": "Sonic the Hedgehog is Sega's blue, super-fast mascot.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14183,7 +14183,7 @@
       "Rings"
     ],
     "explanation_en": "Pac-Man clears mazes by eating dots and can briefly eat ghosts after consuming a Power Pellet.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14204,7 +14204,7 @@
       "Call of Duty: Warzone"
     ],
     "explanation_en": "Fortnite combines battle royale combat with building while a storm steadily shrinks the safe area.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14225,7 +14225,7 @@
       "Sega"
     ],
     "explanation_en": "Microsoft launched the original Xbox console in 2001.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14246,7 +14246,7 @@
       "An Enderman"
     ],
     "explanation_en": "Creepers approach players and explode when they get close.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14267,7 +14267,7 @@
       "Rosalina"
     ],
     "explanation_en": "Princess Peach is the Mushroom Kingdom ruler whom Mario most often sets out to rescue.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14288,7 +14288,7 @@
       "The Atari Lynx"
     ],
     "explanation_en": "Nintendo's Game Boy line made cartridge-based portable gaming a worldwide success.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14309,7 +14309,7 @@
       "Charmander"
     ],
     "explanation_en": "Pikachu is the Electric-type Mouse Pokémon best known as a first partner in the series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14330,7 +14330,7 @@
       "Gears of War"
     ],
     "explanation_en": "Master Chief is the armored Spartan protagonist of the Halo series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14351,7 +14351,7 @@
       "King K. Rool"
     ],
     "explanation_en": "Bowser is the turtle-like King of the Koopas and Mario's recurring enemy.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14372,7 +14372,7 @@
       "Blathers"
     ],
     "explanation_en": "Tom Nook is the raccoon-like businessman who runs shops and oversees loans or island services.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14393,7 +14393,7 @@
       "Dr. Mario"
     ],
     "explanation_en": "Tetris challenges players to arrange falling tetrominoes into complete horizontal lines.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14414,7 +14414,7 @@
       "Stars"
     ],
     "explanation_en": "Sonic collects rings, which also protect him from losing a life after a hit.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14435,7 +14435,7 @@
       "LEGO Worlds"
     ],
     "explanation_en": "Minecraft lets players gather block-based materials, build structures, and explore generated worlds.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14456,7 +14456,7 @@
       "King K. Rool"
     ],
     "explanation_en": "Donkey Kong debuted in Nintendo's 1981 arcade game by throwing barrels at Jumpman.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14477,7 +14477,7 @@
       "Diddy Kong Racing"
     ],
     "explanation_en": "Mario Kart puts Mario characters in item-filled kart races.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14498,7 +14498,7 @@
       "Square Enix"
     ],
     "explanation_en": "Nintendo developed and published the original The Legend of Zelda in 1986.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14519,7 +14519,7 @@
       "The Guardian Angels"
     ],
     "explanation_en": "Crewmates try to identify the impostors before sabotage and eliminations cost them the game.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14540,7 +14540,7 @@
       "Zumba Fitness"
     ],
     "explanation_en": "Just Dance is a rhythm-game franchise built around copying on-screen dance routines.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14561,7 +14561,7 @@
       "Devil May Cry"
     ],
     "explanation_en": "Kratos is the central warrior of God of War, battling gods from Greek and Norse mythology.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14582,7 +14582,7 @@
       "Watch Dogs"
     ],
     "explanation_en": "GTA is the standard abbreviation for Rockstar Games' Grand Theft Auto series.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14603,7 +14603,7 @@
       "The 1-Up Mushroom"
     ],
     "explanation_en": "The Super Mushroom transforms Small Mario into the larger Super Mario.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14624,7 +14624,7 @@
       "A CPU"
     ],
     "explanation_en": "NPC stands for non-player character, meaning a character controlled by the game rather than a player.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14645,7 +14645,7 @@
       "Triller"
     ],
     "explanation_en": "TikTok became globally known for short videos, music clips, and viral dance challenges.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14666,7 +14666,7 @@
       "The X-Men"
     ],
     "explanation_en": "Iron Man, Captain America, and Thor are core members of Marvel's Avengers.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14687,7 +14687,7 @@
       "The Flintstones"
     ],
     "explanation_en": "Homer, Marge, Bart, Lisa, and Maggie Simpson live in Springfield.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14708,7 +14708,7 @@
       "Newt Scamander"
     ],
     "explanation_en": "Harry Potter is the young wizard at the center of the film series alongside Ron and Hermione.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14729,7 +14729,7 @@
       "Adele"
     ],
     "explanation_en": "Beyoncé is widely nicknamed Queen Bey by fans and the media.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14750,7 +14750,7 @@
       "Flickr"
     ],
     "explanation_en": "Instagram is centered on sharing photos and videos and has long used a camera-inspired logo.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14771,7 +14771,7 @@
       "The Wheel of Time"
     ],
     "explanation_en": "Game of Thrones adapts George R.R. Martin's A Song of Ice and Fire novels.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14792,7 +14792,7 @@
       "Jonas Brothers"
     ],
     "explanation_en": "Harry Styles and Zayn Malik were both members of One Direction.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14813,7 +14813,7 @@
       "Tim Hortons"
     ],
     "explanation_en": "Starbucks uses a green siren, often described as a mermaid, as its logo.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14834,7 +14834,7 @@
       "Need for Speed"
     ],
     "explanation_en": "Fast & Furious combines high-speed cars with a recurring theme of loyalty to family.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14855,9 +14855,9 @@
       "Despacito"
     ],
     "explanation_en": "Psy's 2012 hit Gangnam Style became famous for its horse-riding dance.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
-    "active": true,
+    "active": false,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
     "source_url": "https://smallppt.com/blog/basics/trivia-questions-with-answers",
     "source_license": null,
@@ -14876,7 +14876,7 @@
       "The X Factor"
     ],
     "explanation_en": "America's Got Talent features a panel of judges who can send an act ahead with the Golden Buzzer.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14897,7 +14897,7 @@
       "The X-Men film series"
     ],
     "explanation_en": "The Marvel Cinematic Universe is Marvel Studios' interconnected superhero film and television franchise.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14918,7 +14918,7 @@
       "Mandopop"
     ],
     "explanation_en": "K-pop is the common name for South Korean popular music.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14939,7 +14939,7 @@
       "Stray Kids"
     ],
     "explanation_en": "RM, Jin, and Jungkook are three of the seven members of BTS.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14960,7 +14960,7 @@
       "The Real Housewives of Beverly Hills"
     ],
     "explanation_en": "Keeping Up with the Kardashians followed the personal and business lives of the Kardashian-Jenner family.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -14981,7 +14981,7 @@
       "Mickey Mouse"
     ],
     "explanation_en": "SpongeBob SquarePants is the talking sea sponge whose home is a pineapple in Bikini Bottom.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15002,7 +15002,7 @@
       "Billie Eilish"
     ],
     "explanation_en": "Taylor Swift released 1989 in 2014 and Midnights in 2022.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15023,7 +15023,7 @@
       "Signal"
     ],
     "explanation_en": "Snapchat became known for disappearing Snaps and its white ghost logo.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15044,7 +15044,7 @@
       "Elemental"
     ],
     "explanation_en": "Greta Gerwig's Barbie film became a major worldwide cultural event in 2023.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15065,7 +15065,7 @@
       "Sonic the Hedgehog"
     ],
     "explanation_en": "Pikachu is one of the best-known creatures in the Pokémon game, television, and film franchise.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15086,7 +15086,7 @@
       "The Grammy Awards"
     ],
     "explanation_en": "The Academy Awards honor films, and their winners receive statuettes commonly called Oscars.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15107,7 +15107,7 @@
       "Supernatural"
     ],
     "explanation_en": "Stranger Things follows supernatural events around Hawkins, Indiana, during the 1980s.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15128,7 +15128,7 @@
       "Audio-only podcasts"
     ],
     "explanation_en": "TikTok's main format is short-form video, often paired with music, effects, or challenges.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15149,7 +15149,7 @@
       "Nas"
     ],
     "explanation_en": "Rapper and entrepreneur Jay-Z married Beyoncé in 2008.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "music",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15170,7 +15170,7 @@
       "Wizard's Chess"
     ],
     "explanation_en": "Quidditch is the wizarding sport in which players fly on broomsticks.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "general_knowledge",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15191,7 +15191,7 @@
       "Encanto"
     ],
     "explanation_en": "Elsa performs Let It Go in Disney's Frozen.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15212,7 +15212,7 @@
       "Digimon Card Game"
     ],
     "explanation_en": "The Pokémon Trading Card Game centers on collecting and battling with cards based on Pokémon.",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "movies_entertainment",
     "difficulty": "medium",
     "active": true,
     "source_name": "SmallPPT — 500+ Trivia Questions With Answers",
@@ -15855,5 +15855,3713 @@
     "tags": [
       "holidays"
     ]
+  },
+  {
+    "id": "quiz_football_022",
+    "question_en": "Who is Arsenal's all-time leading goalscorer?",
+    "correct_answer_en": "Thierry Henry",
+    "incorrect_answers_en": [
+      "Ian Wright",
+      "Cliff Bastin",
+      "Robin van Persie"
+    ],
+    "explanation_en": "Arsenal legend with 228 goals.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league",
+      "arsenal"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_023",
+    "question_en": "Who is Manchester United's all-time leading goalscorer?",
+    "correct_answer_en": "Wayne Rooney",
+    "incorrect_answers_en": [
+      "Bobby Charlton",
+      "Cristiano Ronaldo",
+      "Denis Law"
+    ],
+    "explanation_en": "Scored a record 253 goals for Manchester United.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league",
+      "manchester_united"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_024",
+    "question_en": "Which midfielder is Chelsea's all-time leading goalscorer?",
+    "correct_answer_en": "Frank Lampard",
+    "incorrect_answers_en": [
+      "Eden Hazard",
+      "Didier Drogba",
+      "Gianfranco Zola"
+    ],
+    "explanation_en": "Chelsea's top scorer with 211 goals, despite being a midfielder.",
+    "difficulty": "medium",
+    "tags": [
+      "premier_league",
+      "chelsea"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_025",
+    "question_en": "Who holds the record for the most assists in Premier League history?",
+    "correct_answer_en": "Ryan Giggs",
+    "incorrect_answers_en": [
+      "David Beckham",
+      "Kevin De Bruyne",
+      "Cesc Fàbregas"
+    ],
+    "explanation_en": "The Premier League's all-time assist king with 162.",
+    "difficulty": "medium",
+    "tags": [
+      "premier_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_026",
+    "question_en": "Which Arsenal legend recorded 94 Premier League assists?",
+    "correct_answer_en": "Dennis Bergkamp",
+    "incorrect_answers_en": [
+      "Mesut Özil",
+      "Thierry Henry",
+      "Cesc Fàbregas"
+    ],
+    "explanation_en": "The Arsenal legend delivered 94 Premier League assists.",
+    "difficulty": "hard",
+    "tags": [
+      "premier_league",
+      "arsenal"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_027",
+    "question_en": "Which Chelsea legend finished his Premier League career with 102 assists?",
+    "correct_answer_en": "Frank Lampard",
+    "incorrect_answers_en": [
+      "Eden Hazard",
+      "Gianfranco Zola",
+      "Didier Drogba"
+    ],
+    "explanation_en": "Recorded 102 assists across his Premier League career.",
+    "difficulty": "hard",
+    "tags": [
+      "premier_league",
+      "chelsea"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_028",
+    "question_en": "Which two players each won three consecutive Premier League Golden Boots?",
+    "correct_answer_en": "Henry and Shearer",
+    "incorrect_answers_en": [
+      "Kane and Salah",
+      "Haaland and Rooney",
+      "Drogba and Ronaldo"
+    ],
+    "explanation_en": "Both won the Golden Boot three seasons in a row.",
+    "difficulty": "hard",
+    "tags": [
+      "premier_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_029",
+    "question_en": "Which two players have won the most Premier League Golden Boots, with four each?",
+    "correct_answer_en": "Thierry Henry and Mohamed Salah",
+    "incorrect_answers_en": [
+      "Shearer and Kane",
+      "Haaland and Agüero",
+      "Ronaldo and Salah"
+    ],
+    "explanation_en": "Both have four Premier League Golden Boots.",
+    "difficulty": "medium",
+    "tags": [
+      "premier_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_030",
+    "question_en": "Which Manchester City goalkeeper won four Premier League Golden Gloves?",
+    "correct_answer_en": "Joe Hart",
+    "incorrect_answers_en": [
+      "Ederson",
+      "David de Gea",
+      "Alisson Becker"
+    ],
+    "explanation_en": "Won four Golden Gloves with Manchester City.",
+    "difficulty": "medium",
+    "tags": [
+      "premier_league",
+      "manchester_city"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_031",
+    "question_en": "Who recorded a Premier League-record 21 assists in the 2025/26 season?",
+    "correct_answer_en": "Bruno Fernandes",
+    "incorrect_answers_en": [
+      "Kevin De Bruyne",
+      "Mohamed Salah",
+      "Cole Palmer"
+    ],
+    "explanation_en": "Set a new Premier League record with 21 assists in 2025/26.",
+    "difficulty": "medium",
+    "tags": [
+      "premier_league",
+      "manchester_united"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_032",
+    "question_en": "Which country did Lionel Messi lead to victory at the 2022 FIFA World Cup?",
+    "correct_answer_en": "Argentina",
+    "incorrect_answers_en": [
+      "Brazil",
+      "France",
+      "Portugal"
+    ],
+    "explanation_en": "Messi finally lifted the World Cup in Qatar in 2022.",
+    "difficulty": "easy",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_033",
+    "question_en": "Who scored a hat-trick in the 2022 World Cup final but still lost?",
+    "correct_answer_en": "Kylian Mbappé",
+    "incorrect_answers_en": [
+      "Lionel Messi",
+      "Neymar",
+      "Olivier Giroud"
+    ],
+    "explanation_en": "Scored a hat-trick in the final, but Argentina won.",
+    "difficulty": "easy",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_034",
+    "question_en": "Which Premier League club went an entire 38-game season unbeaten in 2003/04?",
+    "correct_answer_en": "Arsenal",
+    "incorrect_answers_en": [
+      "Chelsea",
+      "Manchester United",
+      "Liverpool"
+    ],
+    "explanation_en": "The Invincibles finished the 2003/04 league season unbeaten.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league",
+      "arsenal"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_035",
+    "question_en": "Which club did Cristiano Ronaldo score his famous Champions League bicycle kick against in 2018?",
+    "correct_answer_en": "Juventus",
+    "incorrect_answers_en": [
+      "Barcelona",
+      "Bayern Munich",
+      "Liverpool"
+    ],
+    "explanation_en": "Ronaldo's bicycle kick even earned applause from Juventus fans.",
+    "difficulty": "easy",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_036",
+    "question_en": "Which African country does Mohamed Salah represent internationally?",
+    "correct_answer_en": "Egypt",
+    "incorrect_answers_en": [
+      "Morocco",
+      "Senegal",
+      "Algeria"
+    ],
+    "explanation_en": "Salah is famously known as the Egyptian King.",
+    "difficulty": "easy",
+    "tags": [
+      "africa",
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_037",
+    "question_en": "Who scored Real Madrid's dramatic stoppage-time equalizer in the 2014 Champions League final?",
+    "correct_answer_en": "Sergio Ramos",
+    "incorrect_answers_en": [
+      "Cristiano Ronaldo",
+      "Gareth Bale",
+      "Karim Benzema"
+    ],
+    "explanation_en": "His 93rd-minute header saved Real Madrid in the final.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_038",
+    "question_en": "Who scored the winning goal for Real Madrid against Liverpool in the 2022 Champions League final?",
+    "correct_answer_en": "Vinícius Júnior",
+    "incorrect_answers_en": [
+      "Karim Benzema",
+      "Rodrygo",
+      "Luka Modrić"
+    ],
+    "explanation_en": "His goal secured Real Madrid's 14th European Cup.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_039",
+    "question_en": "In which year did Ethiopia win the Africa Cup of Nations?",
+    "correct_answer_en": "1962",
+    "incorrect_answers_en": [
+      "1957",
+      "1976",
+      "1982"
+    ],
+    "explanation_en": "Ethiopia beat Egypt 4–2 in Addis Ababa to win AFCON.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "ethiopia"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_040",
+    "question_en": "Who scored a spectacular bicycle kick against Liverpool in the 2018 Champions League final?",
+    "correct_answer_en": "Gareth Bale",
+    "incorrect_answers_en": [
+      "Cristiano Ronaldo",
+      "Karim Benzema",
+      "Sadio Mané"
+    ],
+    "explanation_en": "His bicycle kick helped Real Madrid beat Liverpool 3–1.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_041",
+    "question_en": "Who scored Real Madrid's famous volley in the 2002 Champions League final?",
+    "correct_answer_en": "Zinedine Zidane",
+    "incorrect_answers_en": [
+      "Raúl",
+      "Ronaldo Nazário",
+      "Luís Figo"
+    ],
+    "explanation_en": "His stunning left-footed volley won the 2002 final.",
+    "difficulty": "hard",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "Premier League / club and FIFA records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_042",
+    "question_en": "Which club is famously nicknamed the Red Devils?",
+    "correct_answer_en": "Manchester United",
+    "incorrect_answers_en": [
+      "Liverpool",
+      "Arsenal",
+      "AC Milan"
+    ],
+    "explanation_en": "Manchester United adopted the Red Devils nickname in the 1960s.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league",
+      "nicknames"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_043",
+    "question_en": "Which player is nicknamed CR7?",
+    "correct_answer_en": "Cristiano Ronaldo",
+    "incorrect_answers_en": [
+      "Ronaldo Nazário",
+      "Ronaldinho",
+      "Rivaldo"
+    ],
+    "explanation_en": "CR7 combines Cristiano Ronaldo's initials and famous shirt number.",
+    "difficulty": "easy",
+    "tags": [
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_044",
+    "question_en": "Which team won the Premier League in 2015/16 against 5000-to-1 odds?",
+    "correct_answer_en": "Leicester City",
+    "incorrect_answers_en": [
+      "Tottenham",
+      "Chelsea",
+      "Arsenal"
+    ],
+    "explanation_en": "Leicester pulled off one of football's greatest underdog victories.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_045",
+    "question_en": "Which club did Erling Haaland join in 2022?",
+    "correct_answer_en": "Manchester City",
+    "incorrect_answers_en": [
+      "Real Madrid",
+      "Liverpool",
+      "Bayern Munich"
+    ],
+    "explanation_en": "Haaland moved from Borussia Dortmund to Manchester City.",
+    "difficulty": "easy",
+    "tags": [
+      "transfers"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_046",
+    "question_en": "Which club did Neymar leave Barcelona to join in 2017?",
+    "correct_answer_en": "PSG",
+    "incorrect_answers_en": [
+      "Real Madrid",
+      "Manchester City",
+      "Chelsea"
+    ],
+    "explanation_en": "PSG signed Neymar for a world-record €222 million.",
+    "difficulty": "easy",
+    "tags": [
+      "transfers"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_047",
+    "question_en": "Which player is known for the 'Siuuu' celebration?",
+    "correct_answer_en": "Cristiano Ronaldo",
+    "incorrect_answers_en": [
+      "Mbappé",
+      "Haaland",
+      "Bellingham"
+    ],
+    "explanation_en": "Ronaldo's iconic celebration became famous around the world.",
+    "difficulty": "easy",
+    "tags": [
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_048",
+    "question_en": "Which country hosted the first World Cup in Africa?",
+    "correct_answer_en": "South Africa",
+    "incorrect_answers_en": [
+      "Morocco",
+      "Egypt",
+      "Nigeria"
+    ],
+    "explanation_en": "South Africa hosted the historic 2010 World Cup.",
+    "difficulty": "easy",
+    "tags": [
+      "world_cup",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_049",
+    "question_en": "Which club is associated with the famous 'You'll Never Walk Alone' anthem?",
+    "correct_answer_en": "Liverpool",
+    "incorrect_answers_en": [
+      "Chelsea",
+      "Arsenal",
+      "Manchester City"
+    ],
+    "explanation_en": "Anfield supporters famously sing it before matches.",
+    "difficulty": "easy",
+    "tags": [
+      "premier_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_050",
+    "question_en": "Which player is famously nicknamed 'The Egyptian King'?",
+    "correct_answer_en": "Mohamed Salah",
+    "incorrect_answers_en": [
+      "Omar Marmoush",
+      "Riyad Mahrez",
+      "Sadio Mané"
+    ],
+    "explanation_en": "Salah earned the nickname through his Liverpool performances.",
+    "difficulty": "easy",
+    "tags": [
+      "players",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_051",
+    "question_en": "Which country won the 2018 FIFA World Cup?",
+    "correct_answer_en": "France",
+    "incorrect_answers_en": [
+      "Croatia",
+      "Brazil",
+      "Germany"
+    ],
+    "explanation_en": "France defeated Croatia 4–2 in the final.",
+    "difficulty": "easy",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_052",
+    "question_en": "Who scored the winning goal in the 2010 World Cup final?",
+    "correct_answer_en": "Andrés Iniesta",
+    "incorrect_answers_en": [
+      "David Villa",
+      "Xavi",
+      "Fernando Torres"
+    ],
+    "explanation_en": "Iniesta's extra-time goal delivered Spain's first World Cup.",
+    "difficulty": "medium",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_053",
+    "question_en": "Which team famously beat Brazil 7–1 in the 2014 World Cup?",
+    "correct_answer_en": "Germany",
+    "incorrect_answers_en": [
+      "Argentina",
+      "Netherlands",
+      "France"
+    ],
+    "explanation_en": "Germany stunned Brazil in one of football's biggest shocks.",
+    "difficulty": "easy",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_054",
+    "question_en": "Who scored the famous 'Hand of God' goal?",
+    "correct_answer_en": "Diego Maradona",
+    "incorrect_answers_en": [
+      "Lionel Messi",
+      "Pelé",
+      "Ronaldo Nazário"
+    ],
+    "explanation_en": "Maradona scored it against England at the 1986 World Cup.",
+    "difficulty": "medium",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_055",
+    "question_en": "Which country did Zinedine Zidane represent?",
+    "correct_answer_en": "France",
+    "incorrect_answers_en": [
+      "Algeria",
+      "Morocco",
+      "Spain"
+    ],
+    "explanation_en": "Zidane helped France win the 1998 World Cup.",
+    "difficulty": "easy",
+    "tags": [
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_056",
+    "question_en": "Who scored Germany's winning goal in the 2014 World Cup final?",
+    "correct_answer_en": "Mario Götze",
+    "incorrect_answers_en": [
+      "Thomas Müller",
+      "Miroslav Klose",
+      "Toni Kroos"
+    ],
+    "explanation_en": "Götze scored the extra-time winner against Argentina.",
+    "difficulty": "medium",
+    "tags": [
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_057",
+    "question_en": "Which club won the 2012 Champions League final against Bayern Munich?",
+    "correct_answer_en": "Chelsea",
+    "incorrect_answers_en": [
+      "Barcelona",
+      "Manchester United",
+      "Real Madrid"
+    ],
+    "explanation_en": "Chelsea won their first Champions League after a penalty shootout.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_058",
+    "question_en": "Who scored Chelsea's late equalizer in the 2012 Champions League final?",
+    "correct_answer_en": "Didier Drogba",
+    "incorrect_answers_en": [
+      "Frank Lampard",
+      "Fernando Torres",
+      "Juan Mata"
+    ],
+    "explanation_en": "Drogba's header forced extra time against Bayern Munich.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_059",
+    "question_en": "Which club eliminated Barcelona with a famous 4–0 comeback in 2019?",
+    "correct_answer_en": "Liverpool",
+    "incorrect_answers_en": [
+      "Ajax",
+      "Juventus",
+      "Tottenham"
+    ],
+    "explanation_en": "Liverpool overturned a 3–0 first-leg defeat at Anfield.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_060",
+    "question_en": "Which team won the 2020 Champions League?",
+    "correct_answer_en": "Bayern Munich",
+    "incorrect_answers_en": [
+      "PSG",
+      "Barcelona",
+      "Manchester City"
+    ],
+    "explanation_en": "Bayern beat PSG 1–0 to complete their treble.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_061",
+    "question_en": "Which club won three consecutive Champions League titles from 2016 to 2018?",
+    "correct_answer_en": "Real Madrid",
+    "incorrect_answers_en": [
+      "Barcelona",
+      "Bayern Munich",
+      "AC Milan"
+    ],
+    "explanation_en": "Real Madrid achieved the historic three-peat under Zidane.",
+    "difficulty": "medium",
+    "tags": [
+      "champions_league"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_062",
+    "question_en": "Which African country reached the 2022 World Cup semifinals?",
+    "correct_answer_en": "Morocco",
+    "incorrect_answers_en": [
+      "Senegal",
+      "Ghana",
+      "Cameroon"
+    ],
+    "explanation_en": "Morocco became the first African World Cup semifinalist.",
+    "difficulty": "easy",
+    "tags": [
+      "africa",
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_063",
+    "question_en": "Which African player won the 1995 Ballon d'Or?",
+    "correct_answer_en": "George Weah",
+    "incorrect_answers_en": [
+      "Samuel Eto'o",
+      "Didier Drogba",
+      "Mohamed Salah"
+    ],
+    "explanation_en": "Weah became the first African Ballon d'Or winner.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_064",
+    "question_en": "Which country did Didier Drogba represent?",
+    "correct_answer_en": "Ivory Coast",
+    "incorrect_answers_en": [
+      "Ghana",
+      "Cameroon",
+      "Senegal"
+    ],
+    "explanation_en": "Drogba captained Ivory Coast and became a national icon.",
+    "difficulty": "easy",
+    "tags": [
+      "africa",
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_065",
+    "question_en": "Which African player famously played for Barcelona and Inter Milan?",
+    "correct_answer_en": "Samuel Eto'o",
+    "incorrect_answers_en": [
+      "Sadio Mané",
+      "Michael Essien",
+      "Victor Osimhen"
+    ],
+    "explanation_en": "Eto'o won the Champions League with both clubs.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "players"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_066",
+    "question_en": "Which African country reached the World Cup quarterfinals in 2010?",
+    "correct_answer_en": "Ghana",
+    "incorrect_answers_en": [
+      "Nigeria",
+      "Algeria",
+      "Egypt"
+    ],
+    "explanation_en": "Ghana came painfully close to Africa's first semifinal.",
+    "difficulty": "medium",
+    "tags": [
+      "africa",
+      "world_cup"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_067",
+    "question_en": "What is the nickname of Ethiopia's men's national football team?",
+    "correct_answer_en": "The Walias",
+    "incorrect_answers_en": [
+      "The Lions",
+      "The Falcons",
+      "The Warriors"
+    ],
+    "explanation_en": "The Walias are named after Ethiopia's endemic Walia ibex.",
+    "difficulty": "easy",
+    "tags": [
+      "ethiopia",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_068",
+    "question_en": "Which country did Ethiopia defeat in the 1962 AFCON final?",
+    "correct_answer_en": "Egypt",
+    "incorrect_answers_en": [
+      "Sudan",
+      "Ghana",
+      "Tunisia"
+    ],
+    "explanation_en": "Ethiopia beat Egypt 4–2 in Addis Ababa.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopia",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_069",
+    "question_en": "Who captained Ethiopia to its historic 1962 AFCON victory?",
+    "correct_answer_en": "Luciano Vassallo",
+    "incorrect_answers_en": [
+      "Mengistu Worku",
+      "Yidnekatchew Tessema",
+      "Girma Tekle"
+    ],
+    "explanation_en": "Vassallo lifted Ethiopia's only AFCON trophy.",
+    "difficulty": "hard",
+    "tags": [
+      "ethiopia",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_070",
+    "question_en": "Which country hosted the 1962 Africa Cup of Nations?",
+    "correct_answer_en": "Ethiopia",
+    "incorrect_answers_en": [
+      "Egypt",
+      "Sudan",
+      "Ghana"
+    ],
+    "explanation_en": "Ethiopia won the tournament in front of home fans.",
+    "difficulty": "medium",
+    "tags": [
+      "ethiopia",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_football_071",
+    "question_en": "In which year did Ethiopia return to AFCON after a 31-year absence?",
+    "correct_answer_en": "2013",
+    "incorrect_answers_en": [
+      "2008",
+      "2017",
+      "2021"
+    ],
+    "explanation_en": "The Walias returned to AFCON in South Africa.",
+    "difficulty": "hard",
+    "tags": [
+      "ethiopia",
+      "africa"
+    ],
+    "category_id": "football",
+    "active": true,
+    "source_name": "FIFA / UEFA / Premier League / CAF records",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_001",
+    "question_en": "Which Ethiopian artist released the album 'Tikur Sew'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Neway Debebe",
+      "Jah Lude"
+    ],
+    "explanation_en": "Teddy Afro released Tikur Sew in 2012.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_002",
+    "question_en": "What is the real name of Ethiopian singer Gigi?",
+    "correct_answer_en": "Ejigayehu Shibabaw",
+    "incorrect_answers_en": [
+      "Aster Aweke",
+      "Bezawork Asfaw",
+      "Hirut Bekele"
+    ],
+    "explanation_en": "Gigi is the stage name of Ejigayehu Shibabaw.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_003",
+    "question_en": "Which Ethiopian legend sang 'Ere Mela Mela'?",
+    "correct_answer_en": "Mahmoud Ahmed",
+    "incorrect_answers_en": [
+      "Neway Debebe",
+      "Teddy Afro",
+      "Tilahun Gessesse"
+    ],
+    "explanation_en": "Mahmoud Ahmed's classic became famous internationally.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_004",
+    "question_en": "What does 'Tizita' commonly mean in Ethiopian music?",
+    "correct_answer_en": "Nostalgia or memories",
+    "incorrect_answers_en": [
+      "Celebration",
+      "Victory",
+      "Friendship"
+    ],
+    "explanation_en": "Tizita expresses memories, longing, and nostalgia.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_005",
+    "question_en": "Which artist is known for the hit song 'Blinding Lights'?",
+    "correct_answer_en": "The Weeknd",
+    "incorrect_answers_en": [
+      "Drake",
+      "Bruno Mars",
+      "Justin Bieber"
+    ],
+    "explanation_en": "Blinding Lights became Spotify's most-streamed song.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_006",
+    "question_en": "Which artist released the hit song 'Shape of You'?",
+    "correct_answer_en": "Ed Sheeran",
+    "incorrect_answers_en": [
+      "Harry Styles",
+      "Shawn Mendes",
+      "Charlie Puth"
+    ],
+    "explanation_en": "Ed Sheeran released the global hit in 2017.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_007",
+    "question_en": "Which two artists collaborated on the hit song 'One Dance'?",
+    "correct_answer_en": "Drake and Wizkid",
+    "incorrect_answers_en": [
+      "Drake and Rihanna",
+      "Wizkid and Davido",
+      "Burna Boy and Tems"
+    ],
+    "explanation_en": "Drake's hit features Wizkid and vocals from Kyla.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_008",
+    "question_en": "Who sings the Ethiopian hit 'Das Tal (Ansaw)'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Neway Debebe",
+      "Abdu Kiar"
+    ],
+    "explanation_en": "One of Teddy Afro's popular 2026 releases.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_009",
+    "question_en": "Which artist released 'Shegiye'?",
+    "correct_answer_en": "Rophnan",
+    "incorrect_answers_en": [
+      "Kassmasse",
+      "Lij Michael",
+      "Yohana"
+    ],
+    "explanation_en": "One of Rophnan's best-known electronic music tracks.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_010",
+    "question_en": "Who sings 'Tameryalesh'?",
+    "correct_answer_en": "Gossaye Tesfaye",
+    "incorrect_answers_en": [
+      "Dawit Tsige",
+      "Abdu Kiar",
+      "Ephrem Tamiru"
+    ],
+    "explanation_en": "A popular love song by Gossaye Tesfaye.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_011",
+    "question_en": "Which Ethiopian singer released 'Nafkot'?",
+    "correct_answer_en": "Aster Aweke",
+    "incorrect_answers_en": [
+      "Gigi",
+      "Helen Berhe",
+      "Rahel Getu"
+    ],
+    "explanation_en": "Aster's song explores longing and missing someone.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_012",
+    "question_en": "Which Ethiopian artist is known for 'Lambadina'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Michael Belayneh",
+      "Gossaye Tesfaye",
+      "Eyob Mekonen"
+    ],
+    "explanation_en": "Lambadina is one of Teddy Afro's recognizable songs.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_013",
+    "question_en": "Which Ethiopian DJ and producer is known for Ethio-electronic music?",
+    "correct_answer_en": "Rophnan",
+    "incorrect_answers_en": [
+      "Jacky Gosee",
+      "Jah Lude",
+      "Ephrem Tamiru"
+    ],
+    "explanation_en": "Rophnan combines Ethiopian musical traditions with electronic beats.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_014",
+    "question_en": "Who sings the Ethiopian song 'Aschilosh'?",
+    "correct_answer_en": "Dawit Tsige",
+    "incorrect_answers_en": [
+      "Neway Debebe",
+      "Michael Belayneh",
+      "Abdu Kiar"
+    ],
+    "explanation_en": "Aschilosh is a popular song by Dawit Tsige.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_015",
+    "question_en": "Who released the song 'Erefi'?",
+    "correct_answer_en": "Bisrat Surafel",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Teddy Afro",
+      "Jacky Gosee"
+    ],
+    "explanation_en": "Erefi helped establish Bisrat Surafel among modern Ethiopian listeners.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_016",
+    "question_en": "Which artist released 'Sememene (GuReggae)'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Rophnan",
+      "Kassmasse",
+      "Gigi"
+    ],
+    "explanation_en": "A reggae-influenced song from Teddy Afro's 2026 releases.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_017",
+    "question_en": "Who sings 'Endatefash'?",
+    "correct_answer_en": "Eyob Mekonen",
+    "incorrect_answers_en": [
+      "Girma Tefera Kassa",
+      "Dawit Tsige",
+      "Tamrat Desta"
+    ],
+    "explanation_en": "Eyob is remembered for his soulful reggae-influenced music.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_018",
+    "question_en": "Which Ethiopian singer released 'Etie Mietie'?",
+    "correct_answer_en": "Abdu Kiar",
+    "incorrect_answers_en": [
+      "Tsehaye Yohannes",
+      "Neway Debebe",
+      "Gossaye Tesfaye"
+    ],
+    "explanation_en": "Etie Mietie is a well-known song by Abdu Kiar.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_019",
+    "question_en": "Which Ethiopian artist sings 'Sew Telamdo'?",
+    "correct_answer_en": "Gossaye Tesfaye",
+    "incorrect_answers_en": [
+      "Teddy Afro",
+      "Michael Belayneh",
+      "Ephrem Tamiru"
+    ],
+    "explanation_en": "Another recognizable song from Gossaye's catalogue.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_020",
+    "question_en": "Who sings 'Temeles'?",
+    "correct_answer_en": "Aster Aweke",
+    "incorrect_answers_en": [
+      "Helen Berhe",
+      "Gigi",
+      "Mikaya Behailu"
+    ],
+    "explanation_en": "Temeles is among Aster Aweke's well-known songs.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_021",
+    "question_en": "Which producer released 'Wegahta'?",
+    "correct_answer_en": "Rophnan",
+    "incorrect_answers_en": [
+      "Lij Michael",
+      "Kassmasse",
+      "Dagi D"
+    ],
+    "explanation_en": "Wegahta blends Rophnan's electronic production with Ethiopian influences.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_022",
+    "question_en": "Which Ethiopian singer is behind 'Chaw Tilina'?",
+    "correct_answer_en": "Esubalew Yetayew",
+    "incorrect_answers_en": [
+      "Bisrat Surafel",
+      "Ephrem Tamiru",
+      "Jacky Gosee"
+    ],
+    "explanation_en": "Chaw Tilina is a popular track by Esubalew.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_023",
+    "question_en": "Who sings 'Semay'?",
+    "correct_answer_en": "Helen Berhe",
+    "incorrect_answers_en": [
+      "Aster Aweke",
+      "Gigi",
+      "Rahel Getu"
+    ],
+    "explanation_en": "Semay is a popular Helen Berhe song.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_024",
+    "question_en": "Which Ethiopian artist released 'Atse Tewodros'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Tilahun Gessesse",
+      "Yehunie Belay"
+    ],
+    "explanation_en": "Teddy Afro often draws on Ethiopian history in his music.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_025",
+    "question_en": "Who sings 'Wib Nat'?",
+    "correct_answer_en": "Gossaye Tesfaye",
+    "incorrect_answers_en": [
+      "Dawit Tsige",
+      "Abdu Kiar",
+      "Eyob Mekonen"
+    ],
+    "explanation_en": "Wib Nat is part of Gossaye's popular song catalogue.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_026",
+    "question_en": "Which artist sings 'Bilillee'?",
+    "correct_answer_en": "Andualem Gosa",
+    "incorrect_answers_en": [
+      "Gutu Abera",
+      "Nigusuu Taammiraat",
+      "Hachalu Hundessa"
+    ],
+    "explanation_en": "Bilillee is an Oromo-language hit by Andualem Gosa.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_027",
+    "question_en": "Who released 'Lebe'?",
+    "correct_answer_en": "Helen Berhe",
+    "incorrect_answers_en": [
+      "Aster Aweke",
+      "Veronica Adane",
+      "Mikaya Behailu"
+    ],
+    "explanation_en": "Lebe is another recognizable Helen Berhe track.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_028",
+    "question_en": "Which Ethiopian singer released 'Mar Eske Tuwaf'?",
+    "correct_answer_en": "Teddy Afro",
+    "incorrect_answers_en": [
+      "Neway Debebe",
+      "Gossaye Tesfaye",
+      "Abdu Kiar"
+    ],
+    "explanation_en": "Its title references the famous Ethiopian novel Fikir Eske Mekabir.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_029",
+    "question_en": "Who sings 'Tihon Wey'?",
+    "correct_answer_en": "Bisrat Surafel",
+    "incorrect_answers_en": [
+      "Dawit Tsige",
+      "Tamrat Desta",
+      "Ephrem Tamiru"
+    ],
+    "explanation_en": "Tihon Wey is among Bisrat Surafel's popular tracks.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_030",
+    "question_en": "Which Ethiopian singer performs 'Yihe New Yegebagn'?",
+    "correct_answer_en": "Yosef Kassa",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Teddy Afro",
+      "Michael Belayneh"
+    ],
+    "explanation_en": "A widely listened-to song by Yosef Kassa.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_031",
+    "question_en": "Which Ethiopian artist sings 'Tama'?",
+    "correct_answer_en": "Yohana",
+    "incorrect_answers_en": [
+      "Rophnan",
+      "Kassmasse",
+      "Abdu Kiar"
+    ],
+    "explanation_en": "Tama is a well-known Yohana track.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_032",
+    "question_en": "Which group of artists made the 'Yehagere Lij' remix?",
+    "correct_answer_en": "Kassmasse, Danni Semma & Dagi",
+    "incorrect_answers_en": [
+      "Rophnan, Gigi & Teddy Afro",
+      "Yohana, Dawit Tsige & Abdu Kiar",
+      "Gossaye, Eyob & Neway"
+    ],
+    "explanation_en": "The remix brings together three Ethiopian hip-hop artists.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_033",
+    "question_en": "Which artist released 'Shake It Off'?",
+    "correct_answer_en": "Taylor Swift",
+    "incorrect_answers_en": [
+      "Ariana Grande",
+      "Dua Lipa",
+      "Katy Perry"
+    ],
+    "explanation_en": "Taylor released the upbeat pop hit in 2014.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_034",
+    "question_en": "Which K-pop group released the English-language hit 'Dynamite'?",
+    "correct_answer_en": "BTS",
+    "incorrect_answers_en": [
+      "BLACKPINK",
+      "EXO",
+      "TWICE"
+    ],
+    "explanation_en": "Dynamite became BTS's first Billboard Hot 100 number-one hit.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_035",
+    "question_en": "Which South Korean artist went viral with 'Gangnam Style'?",
+    "correct_answer_en": "PSY",
+    "incorrect_answers_en": [
+      "Jungkook",
+      "G-Dragon",
+      "Jimin"
+    ],
+    "explanation_en": "The music video became a worldwide internet phenomenon.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_036",
+    "question_en": "Who featured alongside Rihanna on 'Umbrella'?",
+    "correct_answer_en": "Jay-Z",
+    "incorrect_answers_en": [
+      "Drake",
+      "Kanye West",
+      "Eminem"
+    ],
+    "explanation_en": "Jay-Z appears on Rihanna's 2007 hit.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_037",
+    "question_en": "Who performed 'Waka Waka (This Time for Africa)'?",
+    "correct_answer_en": "Shakira",
+    "incorrect_answers_en": [
+      "Beyoncé",
+      "Jennifer Lopez",
+      "Rihanna"
+    ],
+    "explanation_en": "Shakira's song became the anthem of the 2010 World Cup.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_038",
+    "question_en": "Which Somali-Canadian artist released 'Wavin' Flag'?",
+    "correct_answer_en": "K'naan",
+    "incorrect_answers_en": [
+      "Burna Boy",
+      "Wizkid",
+      "Davido"
+    ],
+    "explanation_en": "The song became famous during the 2010 World Cup.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_039",
+    "question_en": "Which Nigerian artist released 'Last Last'?",
+    "correct_answer_en": "Burna Boy",
+    "incorrect_answers_en": [
+      "Wizkid",
+      "Davido",
+      "Rema"
+    ],
+    "explanation_en": "Last Last became a global Afrobeats hit in 2022.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_040",
+    "question_en": "Who joined Rema on the popular 'Calm Down' remix?",
+    "correct_answer_en": "Selena Gomez",
+    "incorrect_answers_en": [
+      "Tems",
+      "Ayra Starr",
+      "Rihanna"
+    ],
+    "explanation_en": "Their remix helped bring Afrobeats to a wider audience.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_041",
+    "question_en": "Which Nigerian singer featured Tems on 'Essence'?",
+    "correct_answer_en": "Wizkid",
+    "incorrect_answers_en": [
+      "Davido",
+      "Burna Boy",
+      "Asake"
+    ],
+    "explanation_en": "Essence became a worldwide Afrobeats favorite.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_042",
+    "question_en": "Which South African singer released 'Water'?",
+    "correct_answer_en": "Tyla",
+    "incorrect_answers_en": [
+      "Amaarae",
+      "Ayra Starr",
+      "Tiwa Savage"
+    ],
+    "explanation_en": "Water became a global hit through its viral dance challenge.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_043",
+    "question_en": "Which artist released 'Unavailable' featuring Musa Keys?",
+    "correct_answer_en": "Davido",
+    "incorrect_answers_en": [
+      "Wizkid",
+      "Burna Boy",
+      "Rema"
+    ],
+    "explanation_en": "Unavailable became a viral hit with a popular dance.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_044",
+    "question_en": "Which Nigerian singer released 'Lonely at the Top'?",
+    "correct_answer_en": "Asake",
+    "incorrect_answers_en": [
+      "Omah Lay",
+      "Fireboy DML",
+      "Rema"
+    ],
+    "explanation_en": "The track became one of Asake's biggest hits.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_045",
+    "question_en": "Who sings 'Single Ladies (Put a Ring on It)'?",
+    "correct_answer_en": "Beyoncé",
+    "incorrect_answers_en": [
+      "Rihanna",
+      "Alicia Keys",
+      "Ciara"
+    ],
+    "explanation_en": "Its iconic dance routine became a pop-culture phenomenon.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_046",
+    "question_en": "Which rapper released the diss track 'Not Like Us'?",
+    "correct_answer_en": "Kendrick Lamar",
+    "incorrect_answers_en": [
+      "Drake",
+      "J. Cole",
+      "Travis Scott"
+    ],
+    "explanation_en": "The track became central to Kendrick and Drake's 2024 feud.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_047",
+    "question_en": "Which Canadian rapper released 'God's Plan'?",
+    "correct_answer_en": "Drake",
+    "incorrect_answers_en": [
+      "The Weeknd",
+      "Tory Lanez",
+      "NAV"
+    ],
+    "explanation_en": "The music video features Drake giving away money and gifts.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_048",
+    "question_en": "Who released 'Bad Guy'?",
+    "correct_answer_en": "Billie Eilish",
+    "incorrect_answers_en": [
+      "Olivia Rodrigo",
+      "Lorde",
+      "Sabrina Carpenter"
+    ],
+    "explanation_en": "Bad Guy became Billie Eilish's first US number-one single.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_049",
+    "question_en": "Which singer released 'Kill Bill'?",
+    "correct_answer_en": "SZA",
+    "incorrect_answers_en": [
+      "Doja Cat",
+      "Summer Walker",
+      "H.E.R."
+    ],
+    "explanation_en": "The song's title references Quentin Tarantino's films.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_050",
+    "question_en": "Which two artists are credited on 'Uptown Funk'?",
+    "correct_answer_en": "Mark Ronson & Bruno Mars",
+    "incorrect_answers_en": [
+      "Drake & Rihanna",
+      "The Weeknd & Daft Punk",
+      "Justin Bieber & Usher"
+    ],
+    "explanation_en": "The funk-inspired hit dominated charts worldwide.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_051",
+    "question_en": "Which rapper features on Justin Bieber's debut hit 'Baby'?",
+    "correct_answer_en": "Ludacris",
+    "incorrect_answers_en": [
+      "Lil Wayne",
+      "Drake",
+      "Nicki Minaj"
+    ],
+    "explanation_en": "Ludacris delivers the rap verse on Bieber's 2010 hit.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_052",
+    "question_en": "Who sings the romantic hit 'Perfect'?",
+    "correct_answer_en": "Ed Sheeran",
+    "incorrect_answers_en": [
+      "Shawn Mendes",
+      "Sam Smith",
+      "Charlie Puth"
+    ],
+    "explanation_en": "Perfect became a popular song at weddings worldwide.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_053",
+    "question_en": "Which British band released 'Viva La Vida'?",
+    "correct_answer_en": "Coldplay",
+    "incorrect_answers_en": [
+      "Maroon 5",
+      "Imagine Dragons",
+      "OneRepublic"
+    ],
+    "explanation_en": "The song became one of Coldplay's signature hits.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_054",
+    "question_en": "Which electronic duo released 'Get Lucky' featuring Pharrell Williams?",
+    "correct_answer_en": "Daft Punk",
+    "incorrect_answers_en": [
+      "Swedish House Mafia",
+      "The Chainsmokers",
+      "Disclosure"
+    ],
+    "explanation_en": "Its funky guitar features Nile Rodgers.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_055",
+    "question_en": "Which rapper recorded 'Lose Yourself' for the film 8 Mile?",
+    "correct_answer_en": "Eminem",
+    "incorrect_answers_en": [
+      "50 Cent",
+      "Jay-Z",
+      "Dr. Dre"
+    ],
+    "explanation_en": "It won the Academy Award for Best Original Song.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_056",
+    "question_en": "Which artist released the album 'After Hours'?",
+    "correct_answer_en": "The Weeknd",
+    "incorrect_answers_en": [
+      "Drake",
+      "Post Malone",
+      "Justin Bieber"
+    ],
+    "explanation_en": "The 2020 album features Blinding Lights and Save Your Tears.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "international"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_057",
+    "question_en": "Who released the hit song 'Yelebe'?",
+    "correct_answer_en": "Haleluya Tekletsadik",
+    "incorrect_answers_en": [
+      "Veronica Adane",
+      "Helen Berhe",
+      "Rahel Getu"
+    ],
+    "explanation_en": "Haleluya Tekletsadik scored a major Ethiopian hit with Yelebe in 2025.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_058",
+    "question_en": "Who sings 'Alemdim'?",
+    "correct_answer_en": "Yared Negu",
+    "incorrect_answers_en": [
+      "Yohana",
+      "Bisrat Surafel",
+      "Abdu Kiar"
+    ],
+    "explanation_en": "Alemdim is one of Yared Negu's popular recent releases.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_059",
+    "question_en": "Which singer released 'Kante Lela'?",
+    "correct_answer_en": "Veronica Adane",
+    "incorrect_answers_en": [
+      "Aster Aweke",
+      "Melat Kelemework",
+      "Gigi"
+    ],
+    "explanation_en": "Veronica Adane released the popular 2025 song Kante Lela.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_060",
+    "question_en": "Who released 'Amoraw Kamora'?",
+    "correct_answer_en": "Aschalew Fetene",
+    "incorrect_answers_en": [
+      "Teddy Afro",
+      "Dawit Tsige",
+      "Gossaye Tesfaye"
+    ],
+    "explanation_en": "Aschalew Fetene, also known as Ardi, released Amoraw Kamora.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_061",
+    "question_en": "Who sings 'Zero'?",
+    "correct_answer_en": "Melat Kelemework",
+    "incorrect_answers_en": [
+      "Helen Berhe",
+      "Veronica Adane",
+      "Zeritu Kebede"
+    ],
+    "explanation_en": "Melat Kelemework's Zero was among Ethiopia's popular 2025 videos.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_062",
+    "question_en": "Which artist released 'Neger Neger'?",
+    "correct_answer_en": "Nati Ker",
+    "incorrect_answers_en": [
+      "Kassmasse",
+      "Yohana",
+      "Bisrat Surafel"
+    ],
+    "explanation_en": "Neger Neger is one of Nati Ker's notable recent tracks.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_063",
+    "question_en": "Who sings 'Yitalesh' featuring Samvod?",
+    "correct_answer_en": "Yohana",
+    "incorrect_answers_en": [
+      "Yared Negu",
+      "Abdu Kiar",
+      "Teddy Afro"
+    ],
+    "explanation_en": "Yohana collaborated with Samvod on the track Yitalesh.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_064",
+    "question_en": "Which singer released 'Bye Bye' in 2025?",
+    "correct_answer_en": "Abdu Kiar",
+    "incorrect_answers_en": [
+      "Neway Debebe",
+      "Eyob Mekonen",
+      "Jacky Gosee"
+    ],
+    "explanation_en": "Abdu Kiar released another popular track, Bye Bye, in 2025.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_065",
+    "question_en": "Who sings 'Men Aseba New'?",
+    "correct_answer_en": "Bisrat Surafel",
+    "incorrect_answers_en": [
+      "Gossaye Tesfaye",
+      "Tamrat Desta",
+      "Ephrem Tamiru"
+    ],
+    "explanation_en": "Men Aseba New is a modern Ethiopian song by Bisrat Surafel.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_066",
+    "question_en": "Who released 'Emwedshi Gonder' with several featured singers?",
+    "correct_answer_en": "Bamlak Getnet",
+    "incorrect_answers_en": [
+      "Teddy Afro",
+      "Yohana",
+      "Addis Legesse"
+    ],
+    "explanation_en": "Bamlak Getnet released the popular Gonder celebration song Emwedshi Gonder.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "modern"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_067",
+    "question_en": "Which Oromo artist is known for 'Maalan Jira'?",
+    "correct_answer_en": "Hachalu Hundessa",
+    "incorrect_answers_en": [
+      "Ali Birra",
+      "Gutu Abera",
+      "Andualem Gosa"
+    ],
+    "explanation_en": "Maalan Jira is one of Hachalu Hundessa's most recognized songs.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_068",
+    "question_en": "Who released the Oromo song 'Maarree'?",
+    "correct_answer_en": "Andualem Gosa",
+    "incorrect_answers_en": [
+      "Gutu Abera",
+      "Yosan Getahun",
+      "Nigusuu Taammiraat"
+    ],
+    "explanation_en": "Maarree became a popular Afaan Oromo track in 2025.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_069",
+    "question_en": "Which legendary Oromo singer performed 'Markato'?",
+    "correct_answer_en": "Ali Birra",
+    "incorrect_answers_en": [
+      "Hachalu Hundessa",
+      "Gutu Abera",
+      "Jambo Jote"
+    ],
+    "explanation_en": "Ali Birra, a pioneer of modern Oromo music, performed Markato.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_070",
+    "question_en": "Who sings the Oromo hit 'Anatu'?",
+    "correct_answer_en": "Gutu Abera",
+    "incorrect_answers_en": [
+      "Andualem Gosa",
+      "Yosan Getahun",
+      "Shukri Jamal"
+    ],
+    "explanation_en": "Anatu is one of Gutu Abera's recognizable songs.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_071",
+    "question_en": "Which Oromo singer released '3Obsaa'?",
+    "correct_answer_en": "Yosan Getahun",
+    "incorrect_answers_en": [
+      "Nigusuu Taammiraat",
+      "Jambo Jote",
+      "Ali Birra"
+    ],
+    "explanation_en": "Yosan Getahun released the Oromo song 3Obsaa.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_072",
+    "question_en": "Who sings 'Marartuu'?",
+    "correct_answer_en": "Shukri Jamal",
+    "incorrect_answers_en": [
+      "Hamelmal Abate",
+      "Keekiyyaa Badhaadhaa",
+      "Saliha Sami"
+    ],
+    "explanation_en": "Marartuu is a song by Shukri Jamal.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_073",
+    "question_en": "Which artist released 'Dafii Kootu'?",
+    "correct_answer_en": "Jambo Jote",
+    "incorrect_answers_en": [
+      "Ali Birra",
+      "Gutu Abera",
+      "Davo"
+    ],
+    "explanation_en": "Dafii Kootu is a recognizable track from Jambo Jote.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "oromo"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_074",
+    "question_en": "Who released the Tigrigna hit \"'Sey\"?",
+    "correct_answer_en": "Ephrem Amare",
+    "incorrect_answers_en": [
+      "Dawit Nega",
+      "Amanuel Yemane",
+      "Mesfin Berhanu"
+    ],
+    "explanation_en": "\"'Sey\" is one of Ephrem Amare's biggest Tigrigna songs.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_075",
+    "question_en": "Who sings 'Yebleni'loo'?",
+    "correct_answer_en": "Selamawit Yohannes",
+    "incorrect_answers_en": [
+      "Timnit Welday",
+      "Rahel Haile",
+      "Eden Gebreselassie"
+    ],
+    "explanation_en": "Yebleni'loo is a popular Tigrigna song by Selamawit Yohannes.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_076",
+    "question_en": "Which artist released 'Tewehade' in 2025?",
+    "correct_answer_en": "Mak Ezra",
+    "incorrect_answers_en": [
+      "Dawit Nega",
+      "Ephrem Amare",
+      "Nguse Abadi"
+    ],
+    "explanation_en": "Tewehade is one of Mak Ezra's popular Tigrigna releases.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_077",
+    "question_en": "Who sings 'Wenani'?",
+    "correct_answer_en": "Timnit Welday",
+    "incorrect_answers_en": [
+      "Selamawit Yohannes",
+      "Rahel Haile",
+      "Mahlet Gebregiorgis"
+    ],
+    "explanation_en": "Wenani is a well-known Timnit Welday track.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_078",
+    "question_en": "Which Tigrigna singer released 'Benetselay'?",
+    "correct_answer_en": "Dawit Nega",
+    "incorrect_answers_en": [
+      "Ephrem Amare",
+      "Amanuel Yemane",
+      "Solomon Haile"
+    ],
+    "explanation_en": "Benetselay is a popular song by Dawit Nega.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_079",
+    "question_en": "Who sings 'Niskila'?",
+    "correct_answer_en": "Amanuel Yemane",
+    "incorrect_answers_en": [
+      "Mesfin Berhanu",
+      "Nguse Abadi",
+      "Mak Ezra"
+    ],
+    "explanation_en": "Niskila is a Tigrigna release by Amanuel Yemane.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_080",
+    "question_en": "Which Tigrigna singer released 'Mizan' in 2025?",
+    "correct_answer_en": "Selamawit Yohannes",
+    "incorrect_answers_en": [
+      "Timnit Welday",
+      "Ephrem Amare",
+      "Rahel Haile"
+    ],
+    "explanation_en": "Selamawit Yohannes released the Tigrigna song Mizan in 2025.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "tigrigna"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_081",
+    "question_en": "What is the Ethiopian shoulder-shaking dance called?",
+    "correct_answer_en": "Eskista",
+    "incorrect_answers_en": [
+      "Gursha",
+      "Shilela",
+      "Guayla"
+    ],
+    "explanation_en": "Eskista is famous for its energetic shoulder movements.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "culture"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_082",
+    "question_en": "Which traditional Ethiopian instrument has a single bowed string?",
+    "correct_answer_en": "Masinko",
+    "incorrect_answers_en": [
+      "Krar",
+      "Washint",
+      "Kebero"
+    ],
+    "explanation_en": "The masinko is commonly played by traditional Ethiopian musicians.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "culture"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_083",
+    "question_en": "Which instrument is a traditional Ethiopian flute?",
+    "correct_answer_en": "Washint",
+    "incorrect_answers_en": [
+      "Begena",
+      "Kebero",
+      "Masinko"
+    ],
+    "explanation_en": "The washint is a traditional bamboo flute.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "culture"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_084",
+    "question_en": "What is an Ethiopian traditional singer and musical storyteller called?",
+    "correct_answer_en": "Azmari",
+    "incorrect_answers_en": [
+      "Dejazmach",
+      "Nebur Ed",
+      "Shimagile"
+    ],
+    "explanation_en": "Azmaris are known for singing and witty improvisation.",
+    "difficulty": "easy",
+    "tags": [
+      "music",
+      "ethiopian",
+      "culture"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_085",
+    "question_en": "Which singer is associated with the classic wedding song 'Yitbarek'?",
+    "correct_answer_en": "Mahmoud Ahmed",
+    "incorrect_answers_en": [
+      "Mulatu Astatke",
+      "Teddy Afro",
+      "Tilahun Gessesse"
+    ],
+    "explanation_en": "Yitbarek is a familiar Ethiopian wedding favorite by Mahmoud Ahmed.",
+    "difficulty": "medium",
+    "tags": [
+      "music",
+      "ethiopian",
+      "wedding"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_music_086",
+    "question_en": "Which singer performs the wedding favorite 'Wube Keremela'?",
+    "correct_answer_en": "Tsegaye Eshetu",
+    "incorrect_answers_en": [
+      "Abdu Kiar",
+      "Dawit Tsige",
+      "Neway Debebe"
+    ],
+    "explanation_en": "Wube Keremela is a lively Ethiopian wedding celebration song by Tsegaye Eshetu.",
+    "difficulty": "hard",
+    "tags": [
+      "music",
+      "ethiopian",
+      "wedding"
+    ],
+    "category_id": "music",
+    "active": true,
+    "source_name": "Artist catalogues / chart records / party quiz refs",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_001",
+    "question_en": "Which Ethiopian movie follows a young man named Joseph from Addis Ababa to America?",
+    "correct_answer_en": "Lambadina",
+    "incorrect_answers_en": [
+      "Yewendoch Guday",
+      "Difret",
+      "Sost Maezen"
+    ],
+    "explanation_en": "Lambadina follows Joseph's journey from Ethiopia to the United States.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_002",
+    "question_en": "Which Hollywood actress was an executive producer of the Ethiopian movie 'Difret'?",
+    "correct_answer_en": "Angelina Jolie",
+    "incorrect_answers_en": [
+      "Jennifer Lawrence",
+      "Sandra Bullock",
+      "Julia Roberts"
+    ],
+    "explanation_en": "Angelina Jolie supported the internationally acclaimed Ethiopian film.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_003",
+    "question_en": "Which Ethiopian film features a carpenter named Amero?",
+    "correct_answer_en": "Yewendoch Guday",
+    "incorrect_answers_en": [
+      "Difret",
+      "Lambadina",
+      "Teza"
+    ],
+    "explanation_en": "Amero is the main character in the romantic comedy Yewendoch Guday.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_004",
+    "question_en": "What is the real name of Professor in 'Money Heist'?",
+    "correct_answer_en": "Sergio Marquina",
+    "incorrect_answers_en": [
+      "Andres de Fonollosa",
+      "Agustin Ramos",
+      "Daniel Ramos"
+    ],
+    "explanation_en": "Sergio Marquina is the mastermind behind the heists.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "tv",
+      "streaming"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_005",
+    "question_en": "In 'Stranger Things', what is Eleven's favorite snack?",
+    "correct_answer_en": "Eggo waffles",
+    "incorrect_answers_en": [
+      "Pizza",
+      "Popcorn",
+      "Chocolate"
+    ],
+    "explanation_en": "Eleven's love for Eggo waffles became iconic.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "tv",
+      "streaming"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_006",
+    "question_en": "Which Ethiopian film tells the true-story-inspired journey of Hirut and lawyer Meaza?",
+    "correct_answer_en": "Difret",
+    "incorrect_answers_en": [
+      "Lambadina",
+      "Teza",
+      "Yewendoch Guday"
+    ],
+    "explanation_en": "Difret follows a young girl's fight for justice with lawyer Meaza.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_007",
+    "question_en": "Who directed the Ethiopian film 'Difret'?",
+    "correct_answer_en": "Zeresenay Berhane Mehari",
+    "incorrect_answers_en": [
+      "Haile Gerima",
+      "Theodros Teshome",
+      "Henok Ayele"
+    ],
+    "explanation_en": "Zeresenay Berhane Mehari directed Difret, a 2014 Sundance audience-award winner.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_008",
+    "question_en": "Who directed the Ethiopian romantic comedy 'Yewendoch Guday'?",
+    "correct_answer_en": "Henok Ayele",
+    "incorrect_answers_en": [
+      "Haile Gerima",
+      "Zeresenay Mehari",
+      "Theodros Teshome"
+    ],
+    "explanation_en": "Henok Ayele directed the popular Ethiopian comedy released in 2007.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": false,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_009",
+    "question_en": "Which film directed by Haile Gerima explores slavery and ancestral memory?",
+    "correct_answer_en": "Sankofa",
+    "incorrect_answers_en": [
+      "Difret",
+      "Lambadina",
+      "Abay vs Vegas"
+    ],
+    "explanation_en": "Sankofa (1993) explores slavery and ancestral memory.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_010",
+    "question_en": "Which Ethiopian film has 'Vegas' in its title?",
+    "correct_answer_en": "Abay vs Vegas",
+    "incorrect_answers_en": [
+      "Teza",
+      "Difret",
+      "Yewendoch Guday"
+    ],
+    "explanation_en": "The romantic comedy Abay vs Vegas connects Ethiopia with Las Vegas.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_011",
+    "question_en": "Which Ethiopian drama series includes characters Mesfin and Asnake?",
+    "correct_answer_en": "Sew Le Sew",
+    "incorrect_answers_en": [
+      "Money Heist",
+      "Eregnaye",
+      "Zemen"
+    ],
+    "explanation_en": "Sew Le Sew became a familiar Ethiopian television drama.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_012",
+    "question_en": "Which character in 'Sew Le Sew' is played by Mahder Assefa?",
+    "correct_answer_en": "Medhanit",
+    "incorrect_answers_en": [
+      "Mahlet",
+      "Liya",
+      "Maritu"
+    ],
+    "explanation_en": "Mahder Assefa portrays Medhanit in Sew Le Sew.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_013",
+    "question_en": "Who hosts the Ethiopian talk show 'Seifu on EBS'?",
+    "correct_answer_en": "Seifu Fantahun",
+    "incorrect_answers_en": [
+      "Eshetu Melese",
+      "Dereje Haile",
+      "Filfilu"
+    ],
+    "explanation_en": "Seifu's show combines interviews, comedy, and musical guests.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_014",
+    "question_en": "Which Ethiopian TV channel is especially known for Amharic-dubbed international dramas?",
+    "correct_answer_en": "Kana TV",
+    "incorrect_answers_en": [
+      "ESPN",
+      "CNN",
+      "Al Jazeera"
+    ],
+    "explanation_en": "Kana helped popularize dubbed international television dramas.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_015",
+    "question_en": "Which Ethiopian TV series features the character Inspector Frezer?",
+    "correct_answer_en": "Sew Le Sew",
+    "incorrect_answers_en": [
+      "Eregnaye",
+      "Zemen",
+      "Dana"
+    ],
+    "explanation_en": "Inspector Frezer appears in Sew Le Sew.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_016",
+    "question_en": "Which Ethiopian comedian and online creator uses the handle @comedian_eshetumelese?",
+    "correct_answer_en": "Eshetu Melese",
+    "incorrect_answers_en": [
+      "Seifu Fantahun",
+      "Filfilu",
+      "Yasino"
+    ],
+    "explanation_en": "Eshetu Melese shares comedy content with a large online audience.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "comedy"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_017",
+    "question_en": "Which Christopher Nolan movie explores dreams within dreams?",
+    "correct_answer_en": "Inception",
+    "incorrect_answers_en": [
+      "Tenet",
+      "Oppenheimer",
+      "Dunkirk"
+    ],
+    "explanation_en": "Inception explores shared dreams and shifting realities.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_018",
+    "question_en": "Which actor played the lead role in 'The Wolf of Wall Street'?",
+    "correct_answer_en": "Leonardo DiCaprio",
+    "incorrect_answers_en": [
+      "Brad Pitt",
+      "Christian Bale",
+      "Matt Damon"
+    ],
+    "explanation_en": "DiCaprio portrays stockbroker Jordan Belfort.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_019",
+    "question_en": "Which Netflix series follows Wednesday Addams at Nevermore Academy?",
+    "correct_answer_en": "Wednesday",
+    "incorrect_answers_en": [
+      "Stranger Things",
+      "The Umbrella Academy",
+      "The Sandman"
+    ],
+    "explanation_en": "Wednesday investigates mysteries at her unusual school.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "tv",
+      "streaming"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_020",
+    "question_en": "In 'Money Heist', what city name does the Professor's brother use?",
+    "correct_answer_en": "Berlin",
+    "incorrect_answers_en": [
+      "Rio",
+      "Denver",
+      "Oslo"
+    ],
+    "explanation_en": "Berlin is also known as Andres de Fonollosa.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "tv",
+      "streaming"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_021",
+    "question_en": "Who played the Joker in 'The Dark Knight'?",
+    "correct_answer_en": "Heath Ledger",
+    "incorrect_answers_en": [
+      "Joaquin Phoenix",
+      "Jared Leto",
+      "Jack Nicholson"
+    ],
+    "explanation_en": "Heath Ledger portrayed the Joker in the 2008 film.",
+    "difficulty": "easy",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_022",
+    "question_en": "Which Ethiopian actress played Enana in the series 'Eregnaye'?",
+    "correct_answer_en": "Sayat Demissie",
+    "incorrect_answers_en": [
+      "Mahder Assefa",
+      "Helen Bedlu",
+      "Marta Goitom"
+    ],
+    "explanation_en": "Sayat played Enana in the popular Ethiopian drama.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_023",
+    "question_en": "Which Ethiopian TV series is set around the fictional village of Abnet?",
+    "correct_answer_en": "Eregnaye",
+    "incorrect_answers_en": [
+      "Sew Le Sew",
+      "Zemen",
+      "Dana"
+    ],
+    "explanation_en": "Eregnaye explores village life and relationships in rural Ethiopia.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_024",
+    "question_en": "Which Ethiopian Olympic legend inspired the film 'Atletu'?",
+    "correct_answer_en": "Abebe Bikila",
+    "incorrect_answers_en": [
+      "Haile Gebrselassie",
+      "Kenenisa Bekele",
+      "Derartu Tulu"
+    ],
+    "explanation_en": "Atletu tells the story of the barefoot Olympic champion.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_025",
+    "question_en": "Which Ethiopian television drama began as part of a campaign empowering teenage girls?",
+    "correct_answer_en": "Yegna",
+    "incorrect_answers_en": [
+      "Eregnaye",
+      "Sew Le Sew",
+      "Zemen"
+    ],
+    "explanation_en": "Yegna combines entertainment with stories about young people's lives.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "ethiopian",
+      "tv"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_026",
+    "question_en": "In 'Prison Break', what is Michael Scofield's brother's name?",
+    "correct_answer_en": "Lincoln Burrows",
+    "incorrect_answers_en": [
+      "Fernando Sucre",
+      "Theodore Bagwell",
+      "Brad Bellick"
+    ],
+    "explanation_en": "Michael deliberately enters prison to rescue Lincoln.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "tv",
+      "international"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_027",
+    "question_en": "Which South Korean film became the first non-English-language film to win Best Picture at the Oscars?",
+    "correct_answer_en": "Parasite",
+    "incorrect_answers_en": [
+      "Train to Busan",
+      "Oldboy",
+      "The Handmaiden"
+    ],
+    "explanation_en": "Parasite made Oscar history in 2020.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "international",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_028",
+    "question_en": "In 'The Hunger Games', which district is Katniss Everdeen from?",
+    "correct_answer_en": "District 12",
+    "incorrect_answers_en": [
+      "District 1",
+      "District 4",
+      "District 7"
+    ],
+    "explanation_en": "Katniss volunteers to take her younger sister's place.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_029",
+    "question_en": "In 'Friends', who accidentally reveals that Ross is the father of Rachel's baby?",
+    "correct_answer_en": "A red sweater",
+    "incorrect_answers_en": [
+      "A pregnancy test",
+      "A wedding invitation",
+      "A photograph"
+    ],
+    "explanation_en": "The mysterious red sweater reveals Ross's connection to Rachel.",
+    "difficulty": "hard",
+    "tags": [
+      "entertainment",
+      "tv",
+      "international"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_030",
+    "question_en": "In 'Harry Potter', which object does Harry destroy using a basilisk fang?",
+    "correct_answer_en": "Tom Riddle's diary",
+    "incorrect_answers_en": [
+      "Marvolo Gaunt's ring",
+      "Slytherin's locket",
+      "Ravenclaw's diadem"
+    ],
+    "explanation_en": "The diary was one of Voldemort's Horcruxes.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
+  },
+  {
+    "id": "quiz_movies_031",
+    "question_en": "Which movie features a spinning top used to question whether reality is a dream?",
+    "correct_answer_en": "Inception",
+    "incorrect_answers_en": [
+      "The Matrix",
+      "Interstellar",
+      "Shutter Island"
+    ],
+    "explanation_en": "The ending leaves the top's final fate uncertain.",
+    "difficulty": "medium",
+    "tags": [
+      "entertainment",
+      "hollywood",
+      "film"
+    ],
+    "category_id": "movies_entertainment",
+    "active": true,
+    "source_name": "AFI / EBS / Kana / Ethiopian film & TV listings",
+    "source_url": null,
+    "source_license": null,
+    "verified_at": "2026-11-02"
   }
 ]
