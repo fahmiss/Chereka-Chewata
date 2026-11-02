@@ -132,18 +132,15 @@ function useTooHotAnimation() {
   }, [flash, impact, reducedMotion]);
 
   return {
+    // Keep the party art fully visible — only scale/shake for impact.
     scene: {
-      opacity: impact,
       transform: [
-        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [0.94, 1] }) },
+        { scale: impact.interpolate({ inputRange: [0, 1], outputRange: [1.04, 1] }) },
       ],
     },
-    word: {
+    caption: {
       opacity: impact,
-      transform: [
-        { scale: impact.interpolate({ inputRange: [0, 0.7, 1], outputRange: [1.25, 0.96, 1] }) },
-        { rotate: '-6deg' },
-      ],
+      transform: [{ translateY: impact.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }],
     },
     shake: {
       transform: [
@@ -304,25 +301,32 @@ function ExplodedPhase(_: { session: BombSession }) {
             <Text style={[type.displayMd, styles.explosionTitle]}>Who was holding the phone?</Text>
             <Text style={[type.body, styles.passHint]}>That player loses this round.</Text>
           </View>
-          <Animated.View
-            style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.shake]}
-          >
-            <View style={styles.tooHotClip}>
-              <Animated.View style={[StyleSheet.absoluteFill, tooHotAnimation.scene]}>
-                <Image source={TOO_HOT_ART} resizeMode="cover" style={StyleSheet.absoluteFill} />
-              </Animated.View>
-              <Animated.View
-                pointerEvents="none"
-                style={[styles.tooHotFlash, tooHotAnimation.flash]}
-              />
-              <Animated.View style={[styles.tooHotOverlay, tooHotAnimation.word]}>
-                <Text style={styles.tooHotText} accessibilityRole="header">
-                  TOO HOT!
-                </Text>
-                <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
-              </Animated.View>
-            </View>
-          </Animated.View>
+          <View style={styles.tooHotBlock}>
+            <Animated.View
+              style={[styles.tooHotShadow, glow(ACCENT, 0.45, 34), tooHotAnimation.shake]}
+            >
+              <View style={styles.tooHotClip}>
+                <Animated.View style={[StyleSheet.absoluteFill, tooHotAnimation.scene]}>
+                  <Image
+                    source={TOO_HOT_ART}
+                    resizeMode="cover"
+                    accessibilityLabel="Friends recoiling from a glowing hot potato"
+                    style={StyleSheet.absoluteFill}
+                  />
+                </Animated.View>
+                <Animated.View
+                  pointerEvents="none"
+                  style={[styles.tooHotFlash, tooHotAnimation.flash]}
+                />
+              </View>
+            </Animated.View>
+            <Animated.View style={[styles.tooHotCaption, tooHotAnimation.caption]}>
+              <Text style={styles.tooHotText} accessibilityRole="header">
+                TOO HOT!
+              </Text>
+              <Text style={[styles.tooHotAmharic, { fontFamily: family.ethiopic.bold }]}>ትኩስ!</Text>
+            </Animated.View>
+          </View>
 
         </View>
       </ScrollView>
@@ -381,12 +385,13 @@ const styles = StyleSheet.create({
   passHint: { color: color.textSecondary, textAlign: 'center' },
   explodedScroll: { flexGrow: 1, justifyContent: 'center', paddingBottom: space[4] },
   explodedBody: { alignItems: 'center', justifyContent: 'center', gap: space[5] },
+  tooHotBlock: { width: '100%', gap: space[3], alignItems: 'center' },
   tooHotShadow: { width: '100%', aspectRatio: 1672 / 941, borderRadius: radius.extraLarge },
   tooHotClip: { flex: 1, overflow: 'hidden', borderRadius: radius.extraLarge, borderWidth: 1, borderColor: alpha(ACCENT, 0.58), backgroundColor: color.void },
   tooHotFlash: { ...StyleSheet.absoluteFill, backgroundColor: '#FFF2D6' },
-  tooHotOverlay: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: space[3], backgroundColor: alpha(color.void, 0.12) },
-  tooHotText: { ...type.brushHero, fontSize: 52, lineHeight: 58, color: color.textPrimary, paddingHorizontal: 8, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 4 }, textShadowRadius: 14 },
-  tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, marginTop: -4, textShadowColor: alpha(color.void, 0.95), textShadowOffset: { width: 0, height: 2 }, textShadowRadius: 8 },
+  tooHotCaption: { alignItems: 'center', gap: 2 },
+  tooHotText: { ...type.brushHero, fontSize: 44, lineHeight: 50, color: color.textPrimary, textAlign: 'center', paddingHorizontal: 8 },
+  tooHotAmharic: { ...type.bodyStrong, fontSize: 18, color: color.brandPrimary, textAlign: 'center' },
   explosionCopy: { alignItems: 'center', gap: space[2] },
   explosionTitle: { color: color.textPrimary, textAlign: 'center' },
 });

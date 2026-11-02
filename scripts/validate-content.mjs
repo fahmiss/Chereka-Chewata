@@ -132,6 +132,15 @@ for (const [name, path, categoriesPath, required] of decks) {
         console.error(`${path}: ${card.id ?? label} active must be boolean`);
         failed = true;
       }
+      // Imported one-answer prompts used filler distractors + stub copy; keep them inactive.
+      if (
+        card.active === true &&
+        typeof card.explanation_en === 'string' &&
+        /^Correct answer:/i.test(card.explanation_en.trim())
+      ) {
+        console.error(`${path}: ${card.id ?? label} is active but still has a stub explanation — add real distractors and an explanation, or set active false`);
+        failed = true;
+      }
 
       for (const key of ['question_en', 'correct_answer_en']) {
         if (typeof card[key] !== 'string' || !card[key].trim()) {

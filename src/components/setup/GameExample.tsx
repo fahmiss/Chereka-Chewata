@@ -13,6 +13,19 @@ import { Surface } from '../ui/Surface';
 
 export type ExampleGame = 'mizan' | 'mesob' | 'insider';
 
+const MIZAN_TARGET = 75;
+
+function mizanResultCopy(guess: number): string {
+  const points = scoreGuess(MIZAN_TARGET, guess);
+  if (points >= MIZAN_BANDS[0].points) {
+    return `Your guess scores ${points} points — that’s the top score for a near-perfect hit.`;
+  }
+  if (points > 0) {
+    return `Your guess scores ${points} points. Land closer to the secret spot for more.`;
+  }
+  return 'Your guess scores 0 points. Land closer to the secret spot to earn points.';
+}
+
 const MESOB = [
   ['Describe', 'A traditional pot used to brew coffee during buna.', 'Explain freely without saying the name. The team guesses “Jebena”.'],
   ['One word', 'Coffee', 'The SAME slips return. Give just one word, then let your team remember the name.'],
@@ -37,11 +50,11 @@ export function GameExample({ game, accent, onComplete, onDismiss, startAfter }:
           <Text style={[type.eyebrow, { color: accent }]}>Practice only · {step + 1}/3</Text>
           <Text style={[type.displayMd, styles.primary]}>{game === 'mizan' ? ['One clue, one target', 'Now you guess', 'See how close you got'][step] : content[0]}</Text>
           {game === 'mizan' ? <>
-            <Text style={[type.body, styles.secondary]}>{step === 0 ? 'Only the psychic sees the target near Spicy. They give the clue “Mitmita”.' : step === 1 ? 'The target is hidden. Drag the needle to where “Mitmita” belongs on this scale.' : `Your guess scores ${scoreGuess(75, guess)} points. A closer guess earns more.`}</Text>
-            <MizanDial accent={accent} target={step === 1 ? undefined : 75} needle={step === 0 ? undefined : guess} onChange={step === 1 ? (value) => setGuess(Math.round(value)) : undefined} />
+            <Text style={[type.body, styles.secondary]}>{step === 0 ? 'Only the psychic sees the target near Spicy. They give the clue “Mitmita”.' : step === 1 ? 'The target is hidden. Drag the needle to where “Mitmita” belongs on this scale.' : mizanResultCopy(guess)}</Text>
+            <MizanDial accent={accent} target={step === 1 ? undefined : MIZAN_TARGET} needle={step === 0 ? undefined : guess} onChange={step === 1 ? (value) => setGuess(Math.round(value)) : undefined} />
             <View style={styles.ends}><Text style={[type.bodyStrong, styles.primary]}>Mild</Text><Text style={[type.bodyStrong, styles.primary]}>Spicy</Text></View>
             {step === 1 ? <View style={styles.ends}><SecondaryButton label="−5" onPress={() => setGuess(Math.max(0, guess - 5))} /><SecondaryButton label="+5" onPress={() => setGuess(Math.min(100, guess + 5))} /></View> : null}
-            {step === 2 ? <Text style={[type.body, styles.secondary]}>{MIZAN_BANDS.map((band) => `Within ${band.within}: ${band.points} points.`).join(' ')} Farther away: 0. In Teams, opponents also call left or right for a possible bonus point.</Text> : null}
+            {step === 2 ? <Text style={[type.body, styles.secondary]}>The colored bands are the score. Land in the center band for 4 points, the next band for 3, then 2. Outside the bands scores 0. In Teams, opponents also call left or right for a possible bonus point.</Text> : null}
           </> : <Surface active accent={accent} contentStyle={styles.card}>
             <Text style={[type.eyebrow, { color: accent }]}>{game === 'mesob' ? 'Same slip: Jebena' : 'Example round'}</Text>
             <Text style={[type.titleMd, styles.primary]}>{content[1]}</Text>
