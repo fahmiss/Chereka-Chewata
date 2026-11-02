@@ -564,7 +564,7 @@
     "prompt_am": "የእግር ኳስ ክለቦች",
     "category_id": "sports",
     "content_level": "family",
-    "active": true
+    "active": false
   },
   {
     "id": "bomb_sport_002",
@@ -572,7 +572,7 @@
     "prompt_am": "የእግር ኳስ ተጫዋቾች",
     "category_id": "sports",
     "content_level": "family",
-    "active": true
+    "active": false
   },
   {
     "id": "bomb_sport_003",
@@ -1380,5 +1380,180 @@
       "Celebrity",
       "Current"
     ]
+  },
+  {
+    "id": "bomb_sport_new_002",
+    "prompt_en": "Things athletes wear",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nature_new_001",
+    "prompt_en": "Animals found in Africa",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nature_new_003",
+    "prompt_en": "Animals with feathers",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nature_new_004",
+    "prompt_en": "Things you find in a forest",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_nature_new_005",
+    "prompt_en": "Pets people keep at home",
+    "category_id": "animals_and_nature",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_new_001",
+    "prompt_en": "Things found at an Ethiopian wedding",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_new_002",
+    "prompt_en": "Ethiopian breakfast foods",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_new_003",
+    "prompt_en": "Ethiopian holidays or festivals",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_new_004",
+    "prompt_en": "Things you might see at a coffee ceremony",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_eth_new_005",
+    "prompt_en": "Famous Ethiopian athletes",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_new_001",
+    "prompt_en": "Famous football goalkeepers",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_new_002",
+    "prompt_en": "African football clubs",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_new_003",
+    "prompt_en": "Things fans do at a match",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_football_new_004",
+    "prompt_en": "African national football teams",
+    "category_id": "football",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_food_new_001",
+    "prompt_en": "Ethiopian dishes",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": false
+  },
+  {
+    "id": "bomb_food_new_002",
+    "prompt_en": "Things you put in coffee",
+    "category_id": "food_and_drink",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_new_001",
+    "prompt_en": "Things people forget when traveling",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_day_new_002",
+    "prompt_en": "Things found inside a kitchen",
+    "category_id": "everyday_life",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_places_new_001",
+    "prompt_en": "Ethiopian cities",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": false
+  },
+  {
+    "id": "bomb_places_new_002",
+    "prompt_en": "Places you go on a weekend",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_places_new_003",
+    "prompt_en": "Things you pack in a suitcase",
+    "category_id": "places_and_travel",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_new_004",
+    "prompt_en": "Winter sports",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_new_005",
+    "prompt_en": "Sports that use a net",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_new_006",
+    "prompt_en": "Sports played without a ball",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
+  },
+  {
+    "id": "bomb_sport_new_007",
+    "prompt_en": "Famous Ethiopian runners",
+    "category_id": "sports",
+    "content_level": "family",
+    "active": true
   }
 ]

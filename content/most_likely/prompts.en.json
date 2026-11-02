@@ -2890,5 +2890,33 @@
       "Current",
       "Funny"
     ]
+  },
+  {
+    "id": "likely_eth_new_001",
+    "prompt_en": "Who is most likely to cry during a wedding toast?",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "likely_eth_new_002",
+    "prompt_en": "Who is most likely to eat the last piece of injera without asking?",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "likely_football_new_001",
+    "prompt_en": "Who is most likely to change the channel mid-conversation for a match?",
+    "category_id": "football",
+    "content_level": "friends",
+    "active": true
+  },
+  {
+    "id": "likely_uni_new_001",
+    "prompt_en": "Who is most likely to start a group project chat and then disappear?",
+    "category_id": "school_and_work",
+    "content_level": "friends",
+    "active": false
   }
 ]

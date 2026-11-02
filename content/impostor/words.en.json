@@ -1436,7 +1436,7 @@
     "hint_en": "Hoop sport",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true,
+    "active": false,
     "word_am": "ቅርጫት ኳስ",
     "hint_am": "የቀለበት ስፖርት"
   },
@@ -1447,7 +1447,7 @@
     "hint_en": "Racket sport",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true,
+    "active": false,
     "word_am": "ቴኒስ",
     "hint_am": "የራኬት ስፖርት"
   },
@@ -1458,14 +1458,14 @@
     "hint_en": "In the water",
     "difficulty": "easy",
     "content_level": "family",
-    "active": true,
+    "active": false,
     "word_am": "መዋኘት",
     "hint_am": "በውሃ ውስጥ"
   },
   {
     "id": "imp_ent_028",
     "word_en": "Camping",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "everyday_life",
     "hint_en": "Sleep outdoors",
     "difficulty": "easy",
     "content_level": "family",
@@ -1476,7 +1476,7 @@
   {
     "id": "imp_ent_029",
     "word_en": "Picnic",
-    "category_id": "entertainment_pop_culture",
+    "category_id": "everyday_life",
     "hint_en": "Outdoor meal",
     "difficulty": "easy",
     "content_level": "family",
@@ -4220,6 +4220,61 @@
       "Ethiopian",
       "Celebrity",
       "Current"
+    ]
+  },
+  {
+    "id": "imp_eth_new_001",
+    "word_en": "Ashenda",
+    "hint_en": "Tigray celebration",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_eth_new_003",
+    "word_en": "Mitmita",
+    "hint_en": "Hot spice blend",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_eth_new_005",
+    "word_en": "Walia ibex",
+    "hint_en": "Simien mountain goat",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_eth_new_006",
+    "word_en": "Gursha",
+    "hint_en": "Hand-fed bite",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
+    ]
+  },
+  {
+    "id": "imp_eth_new_007",
+    "word_en": "Fichee",
+    "hint_en": "Sidama New Year",
+    "category_id": "ethiopia_and_culture",
+    "content_level": "family",
+    "active": true,
+    "tags": [
+      "Ethiopian"
     ]
   }
 ]
