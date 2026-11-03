@@ -6,7 +6,6 @@ import { localizeList, localizeText } from '../../content/localize';
 import {
   currentDescriberId,
   getPlayerName,
-  teamLabel,
   teamPlayerIds,
 } from '../../domain/taboo/machine';
 import { useTabooSession } from '../../domain/taboo/SessionContext';
@@ -28,6 +27,7 @@ import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
 import { Surface } from '../ui/Surface';
 import { TeamScoreStrip } from '../session/Scoreboards';
+import { useT } from '../../i18n';
 
 const ACCENT = color.gameTaboo;
 const LOCK_MS = 420;
@@ -62,8 +62,13 @@ function stageFor(phase: TabooSession['phase']): string {
   }
 }
 
+function localizedTeamLabel(t: ReturnType<typeof useT>['t'], team: TeamId): string {
+  return team === 'a' ? t('taboo.teamA') : t('taboo.teamB');
+}
+
 /** Scores with each team's players listed underneath; the describer is lit. */
 function ScoreStrip({ session }: { session: TabooSession }) {
+  const { t } = useT();
   const names = (team: TeamId) => teamPlayerIds(session, team).map((id) => getPlayerName(session, id));
   const describerId = currentDescriberId(session);
   return (
@@ -73,33 +78,35 @@ function ScoreStrip({ session }: { session: TabooSession }) {
       accent={ACCENT}
       members={{ a: names('a'), b: names('b') }}
       highlightName={describerId ? getPlayerName(session, describerId) : undefined}
+      labels={{ a: t('taboo.teamA'), b: t('taboo.teamB') }}
     />
   );
 }
 
 function RoundReadyPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
+  const { t, uiFont } = useT();
   const describerId = currentDescriberId(session);
   const name = describerId ? getPlayerName(session, describerId) : 'Player';
-  const team = teamLabel(session.activeTeam);
+  const team = localizedTeamLabel(t, session.activeTeam);
   const seconds = session.isSuddenDeath ? 30 : session.setup.roundSeconds;
   const enter = useEnterAnimation(1, 16);
 
   return (
     <SessionShell
-      eyebrow={session.isSuddenDeath ? 'Sudden death' : 'Round ready'}
+      eyebrow={session.isSuddenDeath ? t('taboo.suddenDeath') : t('taboo.roundReady')}
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
-      title={`${team}'s turn`}
+      title={t('taboo.teamTurn', { team })}
       headingStyle="context"
-      instruction="The other team watches for forbidden words. Only the describer sees the card."
+      instruction={t('taboo.watcherInstruction')}
       scrollable
       centerContent
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
       footer={
         <PrimaryButton
-          label={`Start ${seconds}s`}
+          label={t('taboo.startSeconds', { seconds })}
           icon="clock"
           onPress={() => dispatch.beginPlaying()}
         />
@@ -108,11 +115,9 @@ function RoundReadyPhase({ session }: { session: TabooSession }) {
       <Animated.View style={[styles.readyBody, enter]}>
         <ScoreStrip session={session} />
         <Surface accent={ACCENT} active contentStyle={styles.describerCard}>
-          <Text style={[type.eyebrow, { color: ACCENT }]}>Describer</Text>
+          <Text style={[type.eyebrow, { color: ACCENT }, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.describer')}</Text>
           <Text style={[type.displayMd, styles.describerName]}>{name}</Text>
-          <Text style={[type.bodySm, styles.hint]}>
-            Only this player should see the card. Sit a watcher beside them if you want.
-          </Text>
+          <Text style={[type.bodySm, styles.hint, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.describerHint')}</Text>
         </Surface>
       </Animated.View>
     </SessionShell>
@@ -121,6 +126,7 @@ function RoundReadyPhase({ session }: { session: TabooSession }) {
 
 function PlayingPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
+  const { t, uiFont } = useT();
   const total = session.isSuddenDeath ? 30 : session.setup.roundSeconds;
   const [left, setLeft] = useState(total);
   const [locked, setLocked] = useState(false);
@@ -179,7 +185,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
 
   return (
     <SessionShell
-      eyebrow={paused ? 'Paused' : `${teamLabel(session.activeTeam)} playing`}
+      eyebrow={paused ? t('taboo.paused') : t('taboo.teamPlaying', { team: localizedTeamLabel(t, session.activeTeam) })}
       scrollable
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
@@ -190,7 +196,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
           <View style={styles.actionRow}>
             <PressableScale
               accessibilityRole="button"
-              accessibilityLabel="Correct"
+              accessibilityLabel={t('taboo.correct')}
               disabled={locked || paused || !card}
               onPress={() => withLock(() => {
                 playCorrect();
@@ -201,11 +207,11 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               style={[styles.actionBtn, styles.correctBtn, (locked || paused) && styles.dim]}
             >
               <Icon name="check" size={22} color={color.void} strokeWidth={2.8} />
-              <Text style={[type.button, styles.actionLabelDark]}>Correct</Text>
+              <Text style={[type.button, styles.actionLabelDark, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.correct')}</Text>
             </PressableScale>
             <PressableScale
               accessibilityRole="button"
-              accessibilityLabel="Skip"
+              accessibilityLabel={t('taboo.skip')}
               disabled={locked || paused || !card || skipsLeft <= 0}
               onPress={() => withLock(() => dispatch.markSkip())}
               haptic="selection"
@@ -217,15 +223,13 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               ]}
             >
               <Icon name="shuffle" size={20} color={color.textPrimary} strokeWidth={2.2} />
-              <Text style={[type.button, styles.actionLabel]}>
-                Skip ({skipsLeft})
-              </Text>
+              <Text style={[type.button, styles.actionLabel, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.skipCount', { n: skipsLeft })}</Text>
             </PressableScale>
           </View>
           <View style={styles.actionRow}>
             <PressableScale
               accessibilityRole="button"
-              accessibilityLabel="Violation"
+              accessibilityLabel={t('taboo.violation')}
               disabled={locked || paused || !card}
               onPress={() => withLock(() => {
                 playViolation();
@@ -236,10 +240,10 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               style={[styles.actionBtn, styles.violationBtn, (locked || paused) && styles.dim]}
             >
               <Icon name="alert" size={20} color={color.textPrimary} strokeWidth={2.2} />
-              <Text style={[type.button, styles.actionLabel]}>Violation</Text>
+              <Text style={[type.button, styles.actionLabel, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.violation')}</Text>
             </PressableScale>
             <SecondaryButton
-              label={paused ? 'Resume' : 'Pause'}
+              label={paused ? t('taboo.resume') : t('taboo.pause')}
               onPress={() => (paused ? dispatch.resumeTurn() : dispatch.pauseTurn())}
               style={styles.half}
             />
@@ -256,16 +260,16 @@ function PlayingPhase({ session }: { session: TabooSession }) {
             paused && styles.timerPaused,
           ]}
           accessible
-          accessibilityLabel={paused ? `Timer paused at ${left} seconds` : `${left} seconds remaining`}
+          accessibilityLabel={paused ? t('taboo.timerPaused', { seconds: left }) : t('taboo.timerRemaining', { seconds: left })}
         >
           <View style={styles.timerReadout}>
             <Text style={[styles.timerDigits, urgent && styles.timerDigitsUrgent]}>
               {String(Math.max(left, 0)).padStart(2, '0')}
             </Text>
             <View style={styles.timerCopy}>
-              <Text style={[type.eyebrow, styles.timerUnit]}>Seconds</Text>
-              {urgent && !paused ? <Text style={[type.eyebrow, styles.hurry]}>Hurry</Text> : null}
-              {paused ? <Text style={[type.eyebrow, styles.pausedLabel]}>Paused</Text> : null}
+              <Text style={[type.eyebrow, styles.timerUnit, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.seconds')}</Text>
+              {urgent && !paused ? <Text style={[type.eyebrow, styles.hurry, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.hurry')}</Text> : null}
+              {paused ? <Text style={[type.eyebrow, styles.pausedLabel, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.paused')}</Text> : null}
             </View>
           </View>
           <View style={styles.timerTrack}>
@@ -277,14 +281,12 @@ function PlayingPhase({ session }: { session: TabooSession }) {
             />
           </View>
         </View>
-        <Text style={[type.mono, styles.turnMeta]}>
-          +{session.turnCorrect} · skip {session.turnSkips} · foul {session.turnViolations}
-        </Text>
+        <Text style={[type.mono, styles.turnMeta, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.turnMeta', { correct: session.turnCorrect, skips: session.turnSkips, violations: session.turnViolations })}</Text>
       </View>
 
       {card ? (
         <Surface accent={ACCENT} active contentStyle={styles.card}>
-          <Text style={[type.eyebrow, { color: ACCENT }]}>Describe</Text>
+          <Text style={[type.eyebrow, { color: ACCENT }, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.describe')}</Text>
           <Text
             style={[
               styles.target,
@@ -298,7 +300,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
               am: card.target_am,
             })}
           </Text>
-          <Text style={[type.eyebrow, styles.forbiddenLabel]}>Don’t say</Text>
+          <Text style={[type.eyebrow, styles.forbiddenLabel, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.dontSay')}</Text>
           <View style={styles.forbiddenList}>
             {localizeList(
               session.contentLanguage,
@@ -323,7 +325,7 @@ function PlayingPhase({ session }: { session: TabooSession }) {
           </View>
         </Surface>
       ) : (
-        <Text style={[type.body, styles.hint]}>Deck exhausted this turn.</Text>
+        <Text style={[type.body, styles.hint, uiFont ? { fontFamily: uiFont } : null]}>{t('taboo.deckExhaustedTurn')}</Text>
       )}
     </SessionShell>
   );
@@ -331,19 +333,20 @@ function PlayingPhase({ session }: { session: TabooSession }) {
 
 function TurnSummaryPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
-  const team = teamLabel(session.activeTeam);
+  const { t, uiFont } = useT();
+  const team = localizedTeamLabel(t, session.activeTeam);
   const playTimeUp = useSoundEffect(TIME_UP_SOUND, SOUND_VOLUME.result);
 
   useEffect(() => playTimeUp(), [playTimeUp]);
 
   return (
     <SessionShell
-      eyebrow="Turn summary"
+      eyebrow={t('taboo.turnSummary')}
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
-      title={`${team} scored ${session.turnScore}`}
+      title={t('taboo.teamScored', { team, n: session.turnScore })}
       headingStyle="context"
-      instruction="Fix a mis-tap with −1 or +1 before continuing."
+      instruction={t('taboo.adjustInstruction')}
       scrollable
       accent={ACCENT}
       onEndGame={() => endGame(clearSession)}
@@ -354,7 +357,7 @@ function TurnSummaryPhase({ session }: { session: TabooSession }) {
             <SecondaryButton label="+1" onPress={() => dispatch.adjustTurnScore(1)} style={styles.half} />
           </View>
           <PrimaryButton
-            label="Next team"
+            label={t('taboo.nextTeam')}
             icon="chevronRight"
             onPress={() => dispatch.confirmTurnSummary()}
           />
@@ -363,10 +366,10 @@ function TurnSummaryPhase({ session }: { session: TabooSession }) {
     >
       <ScoreStrip session={session} />
       <Surface contentStyle={styles.summaryCard}>
-        <SummaryRow label="Correct" value={session.turnCorrect} />
-        <SummaryRow label="Skipped" value={session.turnSkips} />
-        <SummaryRow label="Violations" value={session.turnViolations} />
-        <SummaryRow label="Turn points" value={session.turnScore} accent />
+        <SummaryRow label={t('taboo.correct')} value={session.turnCorrect} fontFamily={uiFont} />
+        <SummaryRow label={t('taboo.skipped')} value={session.turnSkips} fontFamily={uiFont} />
+        <SummaryRow label={t('taboo.violations')} value={session.turnViolations} fontFamily={uiFont} />
+        <SummaryRow label={t('taboo.turnPoints')} value={session.turnScore} accent fontFamily={uiFont} />
       </Surface>
     </SessionShell>
   );
@@ -376,14 +379,16 @@ function SummaryRow({
   label,
   value,
   accent,
+  fontFamily,
 }: {
   label: string;
   value: number;
   accent?: boolean;
+  fontFamily?: string;
 }) {
   return (
     <View style={styles.summaryRow}>
-      <Text style={[type.body, styles.hint]}>{label}</Text>
+      <Text style={[type.body, styles.hint, fontFamily ? { fontFamily } : null]}>{label}</Text>
       <Text
         style={[
           type.displayMd,
@@ -398,17 +403,18 @@ function SummaryRow({
 
 function FinalPhase({ session }: { session: TabooSession }) {
   const { dispatch, clearSession } = useTabooSession();
+  const { t, language, uiFont } = useT();
   const [deckError, setDeckError] = useState(false);
   const winner =
     session.winner === 'tie'
-      ? 'It’s a tie'
+      ? t('taboo.tie')
       : session.winner
-        ? `${teamLabel(session.winner)} wins`
-        : 'Game over';
+        ? t('taboo.teamWins', { team: localizedTeamLabel(t, session.winner) })
+        : t('taboo.gameOver');
 
   return (
     <SessionShell
-      eyebrow="Final"
+      eyebrow={t('taboo.final')}
       scrollable
       stage={stageFor(session.phase)}
       stages={TABOO_STAGES}
@@ -418,13 +424,13 @@ function FinalPhase({ session }: { session: TabooSession }) {
           gameId="taboo"
           onPlayAgain={() => { if (!dispatch.rematch()) setDeckError(true); }}
           onLeave={clearSession}
-          replayHint="Play again shuffles teams and deals fresh cards."
-          alternateReplay={{ label: 'Play with the same teams', onPress: () => { if (!dispatch.rematchKeepTeams()) setDeckError(true); } }}
+          replayHint={t('taboo.replayHint')}
+          alternateReplay={{ label: t('taboo.sameTeams'), onPress: () => { if (!dispatch.rematchKeepTeams()) setDeckError(true); } }}
         />
       }
     >
       <View style={styles.finalBlock}>
-        <ResultHero scene="celebrate" accent={ACCENT} title={winner} detail={tabooResultReason(session)} />
+        <ResultHero scene="celebrate" accent={ACCENT} title={winner} detail={tabooResultReason(session, language)} uiFont={uiFont} />
         <ScoreStrip session={session} />
       </View>
 
@@ -432,9 +438,9 @@ function FinalPhase({ session }: { session: TabooSession }) {
         visible={deckError}
         moon="caught"
         accent={color.brandPrimary}
-        title="Could not rematch"
-        message="No cards match these categories and levels."
-        confirmLabel="Got it"
+        title={t('taboo.rematchFailed')}
+        message={t('taboo.noCards')}
+        confirmLabel={t('common.gotIt')}
         confirmTone="honey"
         onConfirm={() => setDeckError(false)}
       />

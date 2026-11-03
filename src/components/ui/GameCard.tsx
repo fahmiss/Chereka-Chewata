@@ -55,23 +55,33 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
   // the art is graded toward the same accent at export.
   const ground = mix(color.background, accent, 0.3 * tint);
   const locked = !game.playable;
-  const gameName = game.id === 'whos_the_liar' ? t('liar.name') : game.name;
+  const gameName = game.id === 'whos_the_liar'
+    ? t('liar.name')
+    : game.id === 'taboo'
+      ? t('taboo.name')
+      : game.name;
   const tagline = game.id === 'impostor'
     ? t('impostor.tagline')
     : game.id === 'whos_the_liar'
       ? t('liar.tagline')
+      : game.id === 'taboo'
+        ? t('taboo.tagline')
       : game.tagline;
   const playerCountLabel =
     game.id === 'impostor'
       ? t('impostor.players')
       : game.id === 'whos_the_liar'
         ? t('liar.players')
+        : game.id === 'taboo'
+          ? t('taboo.players')
         : game.playerCountLabel;
   const sessionLengthLabel =
     game.id === 'impostor'
       ? t('impostor.duration')
       : game.id === 'whos_the_liar'
         ? t('liar.duration')
+        : game.id === 'taboo'
+          ? t('taboo.duration')
         : game.sessionLengthLabel;
 
   // Half cards have ~150pt for both chips; the icons already say "players"
@@ -125,7 +135,7 @@ export function GameCard({ game, variant, eyebrow, index = 0, onPress }: Props) 
               style={[
                 styles.title,
                 wide ? styles.wideTitle : styles.halfTitle,
-                game.id === 'whos_the_liar' && uiFont ? { fontFamily: uiFont } : null,
+                (game.id === 'whos_the_liar' || game.id === 'taboo') && uiFont ? { fontFamily: uiFont } : null,
               ]}
               numberOfLines={2}
               adjustsFontSizeToFit

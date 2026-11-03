@@ -718,6 +718,7 @@ function LiarQuickSetup({ gameId }: { gameId: string }) {
 
 function TabooQuickSetup({ gameId }: { gameId: string }) {
   const accent = getGame(gameId)?.accent ?? color.gameTaboo;
+  const { t } = useT();
   const { setup, validation, persistPlayers, patchOptions } = useTabooSetup();
   const { startSession, clearError } = useTabooSession();
   const { settings } = useSettings();
@@ -753,7 +754,7 @@ function TabooQuickSetup({ gameId }: { gameId: string }) {
   return (
     <QuickSetup
       accent={accent}
-      title="Taboo"
+      title={t('taboo.name')}
       subtitle="Two random balanced teams. Change only what your group needs."
       canStart={canStart}
       footerNote={startNote(canStart, cardCount)}

@@ -55,21 +55,31 @@ export default function GameDetailsScreen() {
   }
 
   const steps = getHowToPlay(game.id, language);
-  const gameName = game.id === 'whos_the_liar' ? t('liar.name') : game.name;
+  const gameName = game.id === 'whos_the_liar'
+    ? t('liar.name')
+    : game.id === 'taboo'
+      ? t('taboo.name')
+      : game.name;
   const tagline = game.id === 'impostor'
     ? t('impostor.tagline')
     : game.id === 'whos_the_liar'
       ? t('liar.tagline')
+      : game.id === 'taboo'
+        ? t('taboo.tagline')
       : game.tagline;
   const playerCountLabel = game.id === 'impostor'
     ? t('impostor.players')
     : game.id === 'whos_the_liar'
       ? t('liar.players')
+      : game.id === 'taboo'
+        ? t('taboo.players')
       : game.playerCountLabel;
   const sessionLengthLabel = game.id === 'impostor'
     ? t('impostor.duration')
     : game.id === 'whos_the_liar'
       ? t('liar.duration')
+      : game.id === 'taboo'
+        ? t('taboo.duration')
       : game.sessionLengthLabel;
   const ground = mix(color.background, game.accent, 0.14);
   const returnToGames = () => {
@@ -90,7 +100,7 @@ export default function GameDetailsScreen() {
 
         <Animated.View style={[styles.intro, enter]}>
           <Text
-            style={[styles.title, game.id === 'whos_the_liar' && uiFont ? { fontFamily: uiFont } : null]}
+            style={[styles.title, (game.id === 'whos_the_liar' || game.id === 'taboo') && uiFont ? { fontFamily: uiFont } : null]}
             accessibilityRole="header"
           >
             {gameName}

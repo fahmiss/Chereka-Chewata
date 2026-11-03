@@ -17,18 +17,20 @@ type Props = {
   accent: string;
   title: string;
   detail?: string;
+  /** Ethiopic UI font when the supplied title/detail are localized. */
+  uiFont?: string;
 };
 
 /**
  * Outcome and explanation are immediately readable, followed by the existing
  * cast artwork with a brief reveal. No score/count-up animation lives here.
  */
-export function ResultHero({ scene, accent, title, detail }: Props) {
+export function ResultHero({ scene, accent, title, detail, uiFont }: Props) {
   const reveal = useResultReveal();
   return (
     <View style={styles.root}>
-      <Text style={styles.title} accessibilityRole="header">{title}</Text>
-      {detail ? <Text style={[type.body, styles.detail]}>{detail}</Text> : null}
+      <Text style={[styles.title, uiFont ? { fontFamily: uiFont } : null]} accessibilityRole="header">{title}</Text>
+      {detail ? <Text style={[type.body, styles.detail, uiFont ? { fontFamily: uiFont } : null]}>{detail}</Text> : null}
       {/* Glow on the outer view: iOS clips shadows on a view that crops. */}
       <Animated.View
         style={[styles.bandShell, glow(accent, 0.3, 22), reveal]}

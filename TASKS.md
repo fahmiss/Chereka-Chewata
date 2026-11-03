@@ -188,6 +188,17 @@ Icons + splash are branded. Skip EAS build profiles until a store submit is real
 
 ## Shipped
 
+### Taboo Amharic interface Batch 4 (2026-11-03)
+
+- Localized the Taboo catalog, how-to, round-ready, active timer/card controls,
+  turn summary, result explanations, replay actions, and empty states through
+  the existing `useT()` architecture.
+- Preserved team assignment, describer rotation, scoring, sudden death,
+  pause/resume, deck exhaustion, and rematch behavior; no content-deck files changed.
+- Added the mapping and native-review checklist in `docs/i18n-batch4-taboo.md`.
+- Typecheck, content validation, party-rule tests, and web export pass. Amharic
+  terminology and narrow-device layout still require native sign-off.
+
 ### Current-generation celebrity content (2026-10-29)
 
 - Added 53 English-only items designed for younger/current players: 12 each

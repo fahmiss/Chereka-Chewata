@@ -556,7 +556,7 @@ function VotingSelectPhase({ session }: { session: LiarSession }) {
 
 function ResultPhase({ session }: { session: LiarSession }) {
   const { dispatch, clearSession } = useLiarSession();
-  const { t, language } = useT();
+  const { t, language, uiFont } = useT();
   const groupWon = session.winner === 'group';
   const accent = groupWon ? color.success : ACCENT;
   const liarName = getPlayerName(session, session.liarPlayerId);
@@ -598,6 +598,7 @@ function ResultPhase({ session }: { session: LiarSession }) {
             accent={ACCENT}
             title={groupWon ? t('liar.groupWins') : t('liar.liarWins')}
             detail={liarResultReason(session, language)}
+            uiFont={uiFont}
           />
           <Text style={[type.body, styles.winnerSub]}>
             {t('liar.liarLabel')} <Text style={{ color: accent }}>{liarName}</Text>

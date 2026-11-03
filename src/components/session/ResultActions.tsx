@@ -5,6 +5,7 @@ import { color, space } from '../../theme/tokens';
 import { type } from '../../theme/typography';
 import { PrimaryButton } from '../ui/PrimaryButton';
 import { SecondaryButton } from '../ui/SecondaryButton';
+import { useT } from '../../i18n';
 
 type Props = {
   gameId: GameId;
@@ -16,16 +17,17 @@ type Props = {
 
 /** Same ending controls everywhere; leaving clears only the active session. */
 export function ResultActions({ gameId, onPlayAgain, onLeave, replayHint, alternateReplay }: Props) {
+  const { t, uiFont } = useT();
   return (
     <View style={styles.actions}>
-      {replayHint ? <Text style={[type.bodySm, styles.hint]}>{replayHint}</Text> : null}
-      <PrimaryButton label="Play again" icon="refresh" onPress={onPlayAgain} />
+      {replayHint ? <Text style={[type.bodySm, styles.hint, uiFont ? { fontFamily: uiFont } : null]}>{replayHint}</Text> : null}
+      <PrimaryButton label={t('common.playAgain')} icon="refresh" onPress={onPlayAgain} />
       <View style={styles.row}>
-        <SecondaryButton label="Change setup" style={styles.half} onPress={() => {
+        <SecondaryButton label={t('common.changeSetup')} style={styles.half} onPress={() => {
           router.replace({ pathname: '/game/[gameId]/setup/review', params: { gameId } });
           onLeave();
         }} />
-        <SecondaryButton label="Another game" style={styles.half} onPress={() => {
+        <SecondaryButton label={t('common.anotherGame')} style={styles.half} onPress={() => {
           router.replace('/home');
           onLeave();
         }} />

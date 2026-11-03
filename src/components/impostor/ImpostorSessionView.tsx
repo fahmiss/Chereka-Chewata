@@ -883,6 +883,7 @@ function ResultPhase({ session }: { session: ImpostorSession }) {
             accent={ACCENT}
             title={winTitle}
             detail={impostorResultReason(session, language)}
+            uiFont={uiFont}
           />
           <Text style={[type.body, styles.winnerSub, uiFont ? { fontFamily: uiFont } : null]}>
             {pluralImpostors ? t('impostor.resultLabelPlural') : t('impostor.resultLabel')}{' '}

@@ -4,7 +4,7 @@ import type { LiarSession } from '../liar/types';
 import type { InsiderSession } from '../insider/types';
 import type { WinkKillerSession } from '../winkKiller/types';
 import type { TabooSession } from '../taboo/types';
-import { playerName, teamLabel } from './utils';
+import { playerName } from './utils';
 
 /** Explain the resolved outcome without inventing a new score or win rule. */
 export function impostorResultReason(
@@ -56,13 +56,20 @@ export function winkResultReason(session: WinkKillerSession): string {
   return 'A Killer remained with no more than one Citizen left.';
 }
 
-export function tabooResultReason(session: TabooSession): string {
+export function tabooResultReason(
+  session: TabooSession,
+  language: 'en' | 'am' = 'en',
+): string {
   if (session.winner === 'tie') return session.turnsCompleted.a !== session.turnsCompleted.b
-    ? 'The deck ran out before both teams could finish equal turns. The match is a draw.'
-    : `Both teams finished on ${session.scores.a} points.`;
+    ? translate(language, 'taboo.reason.deckDraw')
+    : translate(language, 'taboo.reason.tie', { n: session.scores.a });
   if (session.winner) {
     const other = session.winner === 'a' ? 'b' : 'a';
-    return `${teamLabel(session.winner)} finished ahead, ${session.scores[session.winner]}–${session.scores[other]}, after equal turns.`;
+    return translate(language, 'taboo.reason.win', {
+      team: translate(language, session.winner === 'a' ? 'taboo.teamA' : 'taboo.teamB'),
+      a: session.scores[session.winner],
+      b: session.scores[other],
+    });
   }
-  return 'The match has ended.';
+  return translate(language, 'taboo.reason.ended');
 }

@@ -4,6 +4,7 @@ import { teamLabel } from '../../domain/shared/utils';
 import { useEnterAnimation } from '../../theme/motion';
 import { alpha, color, overlay, radius, space } from '../../theme/tokens';
 import { family, type } from '../../theme/typography';
+import { useT } from '../../i18n';
 
 /**
  * Team A vs Team B, with the team on turn lit in the game accent. Pass
@@ -16,6 +17,7 @@ export function TeamScoreStrip({
   members,
   highlightName,
   compact = false,
+  labels,
 }: {
   scores: Record<TeamId, number>;
   activeTeam: TeamId | null;
@@ -24,7 +26,9 @@ export function TeamScoreStrip({
   /** A name to light up inside the member list (e.g. the current psychic). */
   highlightName?: string;
   compact?: boolean;
+  labels?: Record<TeamId, string>;
 }) {
+  const { uiFont } = useT();
   return (
     <View style={styles.strip}>
       <TeamPill
@@ -35,6 +39,8 @@ export function TeamScoreStrip({
         members={members?.a}
         highlightName={highlightName}
         compact={compact}
+        label={labels?.a}
+        labelFontFamily={uiFont}
       />
       <Text style={[type.mono, styles.vs]}>vs</Text>
       <TeamPill
@@ -45,6 +51,8 @@ export function TeamScoreStrip({
         members={members?.b}
         highlightName={highlightName}
         compact={compact}
+        label={labels?.b}
+        labelFontFamily={uiFont}
       />
     </View>
   );
@@ -58,6 +66,8 @@ function TeamPill({
   members,
   highlightName,
   compact,
+  label,
+  labelFontFamily,
 }: {
   team: TeamId;
   score: number;
@@ -66,6 +76,8 @@ function TeamPill({
   members?: string[];
   highlightName?: string;
   compact: boolean;
+  label?: string;
+  labelFontFamily?: string;
 }) {
   return (
     <View
@@ -75,8 +87,8 @@ function TeamPill({
       ]}
     >
       <View style={[styles.pillHead, compact && styles.compactHead]}>
-        <Text style={[type.eyebrow, compact && styles.compactLabel, { color: active ? accent : color.textMuted }]}>
-          {teamLabel(team)}
+        <Text style={[type.eyebrow, compact && styles.compactLabel, { color: active ? accent : color.textMuted }, labelFontFamily ? { fontFamily: labelFontFamily } : null]}>
+          {label ?? teamLabel(team)}
         </Text>
         <Text style={[compact ? type.numeric : type.displayMd, { color: active ? accent : color.textPrimary }]}>{score}</Text>
       </View>
